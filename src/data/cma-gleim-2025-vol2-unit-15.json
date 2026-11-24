@@ -1373,7 +1373,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Given that the company produced 12,000 units with a total\nstandard cost for direct materials of $60,000, the standard\ncost must be $5.00 ($60,000 ÷ 12,000 units) per unit of\nfinished product. Because each unit of finished product\nrequires two units of direct materials, the standard unit cost for\ndirect materials must be $2.50.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم شركة ChemKing نظام تكاليف معيارية لتصنيع منتج واحد. وقد اشترت مخزونًا من المواد المباشرة يضم 35,000 وحدة بتكلفة $105,000، ويتطلب إنتاج كل وحدة من المنتج النهائي وحدتين من المواد المباشرة. أنتجت الشركة في نوفمبر 12,000 وحدة، وبلغت التكلفة المعيارية المسموح بها للمواد $60,000، بينما بلغ انحراف كمية المواد غير الملائم $2,500. ما السعر المعياري لوحدة واحدة من المواد المباشرة لدى ChemKing؟",
+    "choicesAr": [
+      "$2.00",
+      "$2.50",
+      "$3.00",
+      "$5.00"
+    ],
+    "explanationAr": "بما أن الشركة أنتجت 12,000 وحدة بتكلفة معيارية إجمالية للمواد المباشرة $60,000، فإن تكلفة المواد المعيارية لكل وحدة منتج تام هي $5.00 ($60,000 ÷ 12,000 وحدة). ولأن كل وحدة تامة تحتاج إلى وحدتين من المواد المباشرة، فإن السعر المعياري لوحدة المواد المباشرة يساوي $2.50."
   },
   {
     "unit": 15,
@@ -1390,7 +1398,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The company produced 12,000 units of output, each of which\nrequired two units of direct materials. Thus, the standard input\nallowed for direct materials was 24,000 units at a standard\ncost of $2.50 each [$60,000 ÷ (12,000 units of output × 2 units\nof direct materials)]. An unfavorable quantity variance signifies\nthat the actual quantity used was greater than the standard\ninput allowed. The direct materials quantity variance equals\nthe standard price per unit times the difference between actual\nand standard quantities. Consequently, because 1,000\n($2,500 U ÷ $2.50) additional units were used, the actual total\nquantity must have been 25,000 units (24,000 standard +\n1,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم شركة ChemKing نظام تكاليف معيارية لتصنيع منتج واحد. وقد اشترت مخزونًا من المواد المباشرة يضم 35,000 وحدة بتكلفة $105,000، ويتطلب إنتاج كل وحدة من المنتج النهائي وحدتين من المواد المباشرة. أنتجت الشركة في نوفمبر 12,000 وحدة، وبلغت التكلفة المعيارية المسموح بها للمواد $60,000، بينما بلغ انحراف كمية المواد غير الملائم $2,500. ما إجمالي وحدات المواد المباشرة المستخدمة لإنتاج نوفمبر لدى ChemKing؟",
+    "choicesAr": [
+      "12,000 وحدة.",
+      "12,500 وحدة.",
+      "23,000 وحدة.",
+      "25,000 وحدة."
+    ],
+    "explanationAr": "أنتجت الشركة 12,000 وحدة، ويتطلب كل منها وحدتين من المواد المباشرة. ولذلك تبلغ الكمية المعيارية المسموح بها 24,000 وحدة بسعر معياري $2.50 لكل وحدة [$60,000 ÷ (12,000 وحدة منتج × 2 وحدة مواد مباشرة)]. ويدل انحراف الكمية غير الملائم على أن الكمية الفعلية تجاوزت المسموح بها. ويساوي انحراف الكمية الفرق بين الكمية الفعلية والمعيارية مضروبًا في السعر المعياري. وبما أنه استُخدمت 1,000 وحدة إضافية ($2,500 انحراف غير ملائم ÷ $2.50)، فإن الكمية الفعلية الإجمالية هي 25,000 وحدة (24,000 معيارية + 1,000)."
   },
   {
     "unit": 15,
@@ -1407,7 +1423,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The standard price was $2.50 [$60,000 ÷ (12,000 units of\noutput × 2 units of direct materials)]. An unfavorable quantity\nvariance of $2,500 means that 1,000 ($2,500 U ÷ $2.50)\nadditional units were used, resulting in an actual total quantity\nof 25,000 units [(12,000 units of output × 2 units of direct\nmaterials) + 1,000]. Actual price was $3.00 ($105,000 total\ncost ÷ 35,000 units purchased). Consequently, the direct\nmaterials price variance is $12,500 unfavorable {AQ × (AP –\nSP) = [25,000 units × ($3.00 – $2.50)]}.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم شركة ChemKing نظام تكاليف معيارية لتصنيع منتج واحد. وقد اشترت مخزونًا من المواد المباشرة يضم 35,000 وحدة بتكلفة $105,000، ويتطلب إنتاج كل وحدة من المنتج النهائي وحدتين من المواد المباشرة. أنتجت الشركة في نوفمبر 12,000 وحدة، وبلغت التكلفة المعيارية المسموح بها للمواد $60,000، بينما بلغ انحراف كمية المواد غير الملائم $2,500. ما انحراف سعر المواد المباشرة للكميات المستخدمة في نوفمبر لدى ChemKing؟",
+    "choicesAr": [
+      "$2,500 غير ملائم.",
+      "$11,000 غير ملائم.",
+      "$12,500 غير ملائم.",
+      "$3,500 غير ملائم."
+    ],
+    "explanationAr": "كان السعر المعياري $2.50 [$60,000 ÷ (12,000 وحدة منتج × 2 وحدة مواد مباشرة)]. ويعني انحراف الكمية غير الملائم $2,500 استخدام 1,000 وحدة إضافية ($2,500 ÷ $2.50)، فتكون الكمية المستخدمة فعليًا 25,000 وحدة [(12,000 وحدة منتج × 2 وحدة مواد مباشرة) + 1,000]. وبلغ السعر الفعلي $3.00 ($105,000 إجمالي التكلفة ÷ 35,000 وحدة مشتراة). لذلك يبلغ انحراف سعر المواد المباشرة $12,500 غير ملائم {AQ × (AP − SP) = [25,000 وحدة × ($3.00 − $2.50)]}."
   },
   {
     "unit": 15,
@@ -1424,7 +1448,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A favorable materials price variance is the result of paying less\nthan the standard price for materials. An unfavorable materials\nusage variance is the result of using an excessive quantity of\nmaterials. If a purchasing manager were to buy substandard\nmaterials to achieve a favorable price variance, an\nunfavorable quantity variance could result from using an\nexcessive amount of poor quality materials.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما السبب الأرجح لظهور انحراف ملائم في سعر المواد يقترن بانحراف غير ملائم في كمية المواد المستخدمة؟",
+    "choicesAr": [
+      "مشكلات كفاءة الآلات.",
+      "تغير تشكيلة المنتجات المصنعة.",
+      "شراء واستخدام مواد بجودة أعلى من المعيار.",
+      "شراء مواد بجودة أقل من المستوى المعياري."
+    ],
+    "explanationAr": "ينشأ انحراف سعر المواد الملائم عند دفع سعر أقل من السعر المعياري، بينما يدل انحراف الاستخدام غير الملائم على استهلاك كمية مواد تتجاوز المعيار. فإذا اشترى مسؤول المشتريات مواد منخفضة الجودة للحصول على سعر مناسب، فقد يؤدي انخفاض جودتها إلى زيادة الهدر أو كمية المواد المستخدمة ومن ثم انحراف كمية غير ملائم."
   },
   {
     "unit": 15,
@@ -1441,7 +1473,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The materials purchase price variance equals the quantity\npurchased multiplied by the difference between the standard\nprice and the actual price, or $135 unfavorable [4,500 lbs. ×\n($.75 – $.72)].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم شركة نظام التكاليف المعيارية. ويسمح معيار كل وحدة منتج تام باستخدام 3 أرطال من البلاستيك بسعر $0.72 للرطل. وخلال ديسمبر اشترت الشركة 4,500 رطل بسعر $0.75 للرطل، واستخدمت 4,100 رطل لإنتاج 1,300 وحدة تامة. ما انحراف سعر شراء المواد خلال ديسمبر؟",
+    "choicesAr": [
+      "$117 غير ملائم.",
+      "$123 غير ملائم.",
+      "$135 غير ملائم.",
+      "$150 غير ملائم."
+    ],
+    "explanationAr": "يساوي انحراف سعر شراء المواد الكمية المشتراة مضروبة في الفرق بين السعر الفعلي والسعر المعياري. لذلك يبلغ الانحراف $135 غير ملائم [4,500 رطل × ($.75 − $.72)]."
   },
   {
     "unit": 15,
@@ -1458,7 +1498,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The direct materials purchase price variance may be isolated\nat the time of purchase or at the time of transfer to production.\nIt equals the actual quantity of materials purchased or\ntransferred times the difference between the standard and\nactual unit prices. Thus, a favorable direct materials purchase\nprice variance means that materials were purchased at a price\nless than the standard price. If the direct materials efficiency\n(quantity) variance is unfavorable, actual usage exceeds the\nstandard for the units produced.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "خططت شركة لإنتاج 3,000 وحدة من منتجها الوحيد Titactium في نوفمبر. وتستلزم المواصفات المعيارية للوحدة استخدام 6 أرطال من المواد بسعر $0.30 للرطل. وبلغ الإنتاج الفعلي 3,100 وحدة. وقد حسب المحاسب انحراف سعر شراء المواد المباشرة الملائم بمبلغ $380، وانحراف كمية المواد المباشرة غير الملائم بمبلغ $120. ما الاستنتاج الصحيح من هذه الانحرافات؟",
+    "choicesAr": [
+      "الكمية المشتراة من المواد أكبر من الكمية المستخدمة.",
+      "الكمية المستخدمة من المواد أكبر من الكمية المشتراة.",
+      "التكلفة الفعلية للمواد أقل من تكلفتها المعيارية.",
+      "الكمية الفعلية المستخدمة أقل من المسموح به معياريًا."
+    ],
+    "explanationAr": "يمكن احتساب انحراف سعر شراء المواد المباشرة عند الشراء أو عند تحويلها إلى الإنتاج. وهو يساوي الكمية المشتراة أو المحولة مضروبة في الفرق بين السعر المعياري والسعر الفعلي للوحدة. لذلك يدل انحراف السعر الملائم على شراء المواد بسعر أقل من المعيار. وإذا كان انحراف كفاءة المواد (الكمية) غير ملائم، فإن الاستخدام الفعلي يتجاوز الكمية المعيارية المسموح بها للإنتاج المحقق."
   },
   {
     "unit": 15,
@@ -1475,7 +1523,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A favorable price variance indicates that the materials were\npurchased at a price less than standard. The unfavorable\nquantity variance indicates that the quantity of materials used\nfor actual production exceeded the standard quantity for the\ngood units produced.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "خطط مصنع لإنتاج 5,000 وحدة من منتجه الوحيد في نوفمبر. وتتطلب المواصفات المعيارية للوحدة 10 أرطال من المواد بسعر $0.50 للرطل. وبلغ الإنتاج الفعلي 5,200 وحدة، وحسب المحاسب انحراف سعر شراء المواد الملائم بمبلغ $580 وانحراف كمية المواد غير الملائم بمبلغ $320. ماذا يمكن استنتاجه من هذه الانحرافات؟",
+    "choicesAr": [
+      "الكمية المشتراة من المواد أكبر من المستخدمة.",
+      "الكمية المستخدمة أكبر من المشتراة.",
+      "التكلفة الفعلية للمواد أقل من التكلفة المعيارية.",
+      "الاستخدام الفعلي للمواد أقل من الكمية المعيارية المسموح بها."
+    ],
+    "explanationAr": "يدل انحراف السعر الملائم على شراء المواد بسعر أقل من السعر المعياري. أما انحراف الكمية غير الملائم فيدل على أن كمية المواد المستخدمة في الإنتاج الفعلي تجاوزت الكمية المعيارية المسموح بها للوحدات الجيدة المنتجة."
   },
   {
     "unit": 15,
@@ -1492,7 +1548,15 @@
     ],
     "answerIndex": 3,
     "explanation": "An unfavorable materials quantity or usage (efficiency)\nvariance can be caused by a number of factors, including\nwaste, shrinkage, theft, poor performance by production\nworkers, nonskilled workers, or the purchase of below-\nstandard-quality materials by the purchasing department.\nChanges in product design can also affect the quantity of\nmaterials used. Sales volume of the product should not be a\ncontributing factor to a materials efficiency variance.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تعد انحرافات السعر والكفاءة أدوات مهمة لقياس الأداء داخل المنشأة. ويمكن أن ينتج انحراف كفاءة المواد عن جميع العوامل التالية باستثناء:",
+    "choicesAr": [
+      "أداء العمال الذين يستخدمون المواد.",
+      "تصرفات إدارة المشتريات.",
+      "تصميم المنتج.",
+      "حجم مبيعات المنتج."
+    ],
+    "explanationAr": "قد ينشأ انحراف كمية المواد أو كفاءة استخدامها غير الملائم عن الهدر أو الفاقد أو السرقة أو ضعف أداء عمال الإنتاج أو نقص مهاراتهم، أو عن شراء مواد أدنى من الجودة المعيارية بواسطة إدارة المشتريات. وقد تؤثر التعديلات في تصميم المنتج أيضًا على كمية المواد المستخدمة. أما حجم مبيعات المنتج فلا ينبغي أن يكون سببًا مباشرًا لانحراف كفاءة استخدام المواد."
   },
   {
     "unit": 15,
@@ -1509,7 +1573,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The materials efficiency variance is the difference between\nactual and standard quantities used in production, times the\nstandard price. An unfavorable materials efficiency variance is\nusually caused by wastage, shrinkage, or theft. Thus, it may\nbe the responsibility of the production department because\nexcess usage would occur while the materials are in that\ndepartment. In addition, industrial engineering may play a role\nbecause it is responsible for design of the production process.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في نظام التكاليف المعيارية، تقع مسؤولية انحرافات كفاءة المواد على:",
+    "choicesAr": [
+      "الإنتاج والهندسة الصناعية.",
+      "المشتريات والهندسة الصناعية.",
+      "المشتريات والمبيعات.",
+      "المبيعات والهندسة الصناعية."
+    ],
+    "explanationAr": "يساوي انحراف كفاءة المواد الفرق بين الكمية المستخدمة فعلًا والكمية المعيارية المسموح بها للإنتاج، مضروبًا في السعر المعياري. وقد ينشأ الانحراف غير الملائم عن الهدر أو الفاقد أو السرقة. لذلك قد تتحمله إدارة الإنتاج إذا حدث الاستهلاك الزائد أثناء وجود المواد لديها. كما قد تكون للهندسة الصناعية مسؤولية عن تصميم العملية الإنتاجية."
   },
   {
     "unit": 15,
@@ -1560,7 +1632,15 @@
     ],
     "answerIndex": 0,
     "explanation": "A direct materials price variance is the actual quantity used\ntimes the difference between the standard and actual prices. It\nis normally considered the responsibility of the purchasing\nmanager because no one else has an opportunity to influence\nthe price. In this case, the purchasing manager obtained the\ndiscount that led to the favorable price variance.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "استطاع مدير مشتريات شراء كمية كبيرة من المواد المباشرة من مورد جديد بسعر مخفض. وشعر مشرف المخزون بالقلق بسبب ازدحام المستودع وإعادة ترتيب بعض محتوياته. كما خشي نائب رئيس الإنتاج من جودة المواد المخفضة، لكن قسم الهندسة اختبرها وأكد ملاءمتها. وفي نهاية الشهر ظهرت انحرافات ملائمة في استخدام المواد المباشرة واستخدام العمل المباشر وسعر المواد المباشرة، وكانت انحرافات الاستخدام ناتجة فقط عن ارتفاع العائد من المواد الجديدة. من المسؤول عن انحراف سعر المواد المباشرة الملائم؟",
+    "choicesAr": [
+      "مدير المشتريات.",
+      "مشرف المخزون.",
+      "نائب رئيس الإنتاج.",
+      "مدير الهندسة."
+    ],
+    "explanationAr": "يساوي انحراف سعر المواد المباشرة الكمية الفعلية المستخدمة مضروبة في الفرق بين السعر المعياري والسعر الفعلي. وتُسند مسؤوليته عادة إلى مدير المشتريات، لأنه صاحب القدرة الأساسية على التأثير في سعر الشراء. وفي هذه الحالة كان الخصم الذي حصل عليه مدير المشتريات هو سبب الانحراف السعري الملائم."
   },
   {
     "unit": 15,
@@ -1577,7 +1657,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The production control supervisor has the most control over\nthe materials usage variance. The materials usage variance\nmeasures the excess amount of materials used over the\namount specified in the standards. The materials usage (or\nmaterials quantity) variance, when unfavorable, is often\nattributable to waste, shrinkage, or theft in the production\nareas. The excess usage occurs under the supervision of the\nproduction department.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الانحرافات التالية يمكن لمشرف الرقابة على الإنتاج التحكم فيه بدرجة أكبر؟",
+    "choicesAr": [
+      "انحراف سعر المواد.",
+      "انحراف استخدام المواد.",
+      "انحراف إنفاق التكاليف الصناعية غير المباشرة المتغيرة.",
+      "انحراف موازنة التكاليف الصناعية غير المباشرة الثابتة."
+    ],
+    "explanationAr": "يملك مشرف الرقابة على الإنتاج عادة التأثير الأكبر في انحراف استخدام المواد، الذي يقيس الكمية المستهلكة زيادة على الكمية المحددة بالمعايير. وغالبًا ما يرتبط الانحراف غير الملائم في الاستخدام بالهدر أو الفاقد أو السرقة في مناطق الإنتاج؛ ولذلك يقع الاستهلاك الزائد عادة تحت إشراف إدارة الإنتاج."
   },
   {
     "unit": 15,
@@ -1628,7 +1716,15 @@
     ],
     "answerIndex": 3,
     "explanation": "An unfavorable materials quantity variance is usually caused\nby waste, shrinkage, or theft. Alternatively, an unfavorable\nvariance could be attributable to the purchasing department’s\nnot buying the proper quality of materials in an attempt to\nachieve a favorable material price variance. Thus, either the\nproduction manager or the purchasing manager could be\nresponsible for a material usage variance.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في نظام التكاليف المعيارية، ينبغي أن يبدأ التحقيق في انحراف استخدام المواد غير الملائم لدى:",
+    "choicesAr": [
+      "مدير الإنتاج فقط.",
+      "مراقب المصنع فقط.",
+      "مدير المشتريات فقط.",
+      "مدير الإنتاج أو مدير المشتريات."
+    ],
+    "explanationAr": "ينشأ انحراف كمية المواد غير الملائم عادة عن الهدر أو الفاقد أو السرقة، وقد ينشأ أيضًا عن شراء مواد غير مناسبة الجودة بغرض تحقيق انحراف سعر ملائم. لذلك قد يكون مدير الإنتاج أو مدير المشتريات مسؤولًا عن انحراف استخدام المواد ويستحق الأمر مراجعة كل منهما وفق سبب الانحراف."
   },
   {
     "unit": 15,
@@ -1645,7 +1741,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The materials price variance is the difference between the\nstandard price and the actual price paid for materials. This\nvariance is usually the responsibility of the purchasing\ndepartment. Thus, the purchasing manager has an incentive\nto obtain the best price possible.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في نظام التكاليف المعيارية، تقع مسؤولية انحراف سعر المواد عادة على:",
+    "choicesAr": [
+      "مدير الإنتاج.",
+      "مدير محاسبة التكاليف.",
+      "مدير المبيعات.",
+      "مدير المشتريات."
+    ],
+    "explanationAr": "يقيس انحراف سعر المواد الفرق بين السعر المعياري والسعر الفعلي المدفوع عند شراء المواد. وتقع هذه المسؤولية عادة على إدارة المشتريات، لذلك يكون لدى مدير المشتريات حافز للحصول على أفضل سعر ممكن مع مراعاة جودة المواد."
   },
   {
     "unit": 15,
