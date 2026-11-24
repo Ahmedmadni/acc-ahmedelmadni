@@ -402,7 +402,7 @@ const wave10=new Map([
 ]);
 const q5=n=>rows.find(r=>r.section===5&&r.number===n);
 test("Unit 16 Wave 10: 129 drafts and 10 immutable transfer pricing sources",()=>{
- const localized=rows.filter(r=>r.stemAr!==undefined||r.choicesAr!==undefined||r.explanationAr!==undefined);
+ const localized=rows.filter(r=>(r.section<=4||(r.section===5&&r.number<=14))&&(r.stemAr!==undefined||r.choicesAr!==undefined||r.explanationAr!==undefined));
  assert.equal(localized.length,129);
  assert.deepEqual(localized.filter(r=>r.section===5).map(r=>r.number),[...wave10.keys()]);
  for(const [n,[page,index,hash]] of wave10){
@@ -436,4 +436,54 @@ test("Unit 16 Wave 10: bargaining range, idle capacity and scoring gates",()=>{
   assert.equal(held.stemAr,undefined);assert.equal(held.choicesAr,undefined);assert.equal(held.explanationAr,undefined);
   assert.ok(adapter.includes('"16.5.'+n+'"'));
  }
+});
+
+const wave11=new Map([
+ [15,[986,1,"d028547f"]],[16,[987,3,"bc00c895"]],[17,[988,3,"81b9f742"]],
+ [18,[989,2,"66c62bb2"]],[19,[990,0,"8264b857"]],[20,[991,0,"2d9ef3d7"]],
+ [23,[995,3,"df8797cf"]],[24,[995,2,"8cdc008d"]],[26,[997,3,"1b8264dc"]],
+ [27,[997,3,"4a48f232"]],[29,[1000,0,"5ec648cf"]],[30,[1001,0,"2d754b6f"]],
+ [31,[1002,3,"f2d9a07e"]],[32,[1003,1,"eb08e023"]],
+]);
+test("Unit 16 Wave 11: 143 drafts and 14 immutable transfer pricing sources",()=>{
+ const localized=rows.filter(r=>r.stemAr!==undefined||r.choicesAr!==undefined||r.explanationAr!==undefined);
+ assert.equal(localized.length,143);
+ assert.deepEqual(localized.filter(r=>r.section===5).map(r=>r.number),[...wave10.keys(),...wave11.keys()]);
+ assert.deepEqual([1,2,3,4,5].map(s=>localized.filter(r=>r.section===s).length),[49,11,48,11,24]);
+ for(const [n,[page,index,hash]] of wave11){
+  const r=q5(n);
+  assert.equal(r.page,page);assert.equal(r.answerIndex,index);
+  assert.equal(r.answerStatus,"source");assert.equal(r.sourceTextStatus,undefined);
+  assert.equal(fingerprint(JSON.stringify([r.stem,r.choices,r.explanation,r.answerIndex,r.page])),hash);
+  assert.equal(validateCmaTranslation({question:{en:r.stem},choices:{en:r.choices},explanation:{en:r.explanation}},
+   {question:r.stemAr,choices:r.choicesAr,explanation:r.explanationAr}).valid,true,String(n));
+  for(const [en,ar] of [[r.stem,r.stemAr],...r.choices.map((c,i)=>[c,r.choicesAr[i]]),[r.explanation,r.explanationAr]])
+   assert.deepEqual(cmaNumericTokens(ar),cmaNumericTokens(en),String(n));
+ }
+});
+test("Unit 16 Wave 11: transfer prices, capacity and complete hold inventory",()=>{
+ assert.equal(200+20,220);
+ assert.equal(4+1+(8-4-1),8);
+ assert.equal(18-9-8,1);
+ assert.ok(4500<=5000);
+ assert.equal(50+0,50);
+ assert.ok(.94<1);
+ assert.equal(15-11,4);
+ // Full cost does not assure optimal sourcing; external purchase can be below
+ // full cost yet above the incremental cost with sufficient idle capacity.
+ assert.ok(60<65&&60>50);
+ // External opportunity cost, not absorption cost, governs the seller's floor.
+ assert.ok(1300-400+400>1200);
+ for(const [n,expected] of [[15,"Transfer price"],[16,"Market price"],[17,"market price"],[18,"long term competitiveness"],[19,"Market-based"],[20,"supplying division"],[23,"Market-based"],[24,"commissions and collection costs"],[26,"easy to implement"],[27,"$8"],[29,"$50"],[30,"$11"],[31,"variable costs plus"],[32,"simple and quick"]])
+  assert.ok(q5(n).choices[q5(n).answerIndex].replace(/\s+/g," ").includes(expected),String(n));
+ const adapter=read("src/data/cma-questions-gleim-2025-vol2.ts");
+ for(const [n,page,index] of [[21,993,2],[22,994,3],[25,996,0],[28,999,0],[33,1003,1],[34,1005,2]]){
+  const held=q5(n);
+  assert.equal(held.page,page);assert.equal(held.answerIndex,index);
+  assert.equal(held.stemAr,undefined);assert.equal(held.choicesAr,undefined);assert.equal(held.explanationAr,undefined);
+  assert.ok(adapter.includes('"16.5.'+n+'"'));
+ }
+ const heldKeys=["1.4","1.19","1.42","1.46","2.10","3.9","3.10","3.11","3.26","3.30","3.43","3.53","4.9","5.1","5.2","5.3","5.13","5.21","5.22","5.25","5.28","5.33","5.34"];
+ assert.deepEqual(rows.filter(r=>!r.stemAr).map(r=>r.section+"."+r.number),heldKeys);
+ for(const id of heldKeys)assert.ok(adapter.includes('"16.'+id+'"'));
 });

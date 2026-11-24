@@ -3528,7 +3528,15 @@
     ],
     "answerIndex": 1,
     "explanation": "A transfer price is the price charged by one segment of an\norganization for a product or service supplied to another\nsegment of the same organization.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ماذا يسمى السعر الذي يحمله أحد أقسام الشركة لقسم آخر مقابل السلع أو الخدمات المقدمة؟",
+    "choicesAr": [
+      "سعر السوق.",
+      "سعر التحويل.",
+      "سعر التكلفة النقدية.",
+      "سعر البيع الاضطراري."
+    ],
+    "explanationAr": "سعر التحويل هو السعر الذي يحمله قطاع في المنشأة مقابل منتج أو خدمة يقدمها لقطاع آخر في المنشأة نفسها."
   },
   {
     "unit": 16,
@@ -3545,7 +3553,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Transfer prices should promote congruence of subunit goals\nwith those of the organization, subunit autonomy, and\nmanagerial effort. Although no rule exists for determining the\ntransfer price that meets these criteria in all situations, a\nstarting point is to calculate the sum of the additional outlay\ncosts and the opportunity cost to the supplier. Given no idle\ncapacity and a competitive external market (all goods\ntransferred internally can be sold externally), the sum of the\noutlay and opportunity costs will be the market price.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "من الناحية النظرية، ما الطريقة المثلى لتحديد سعر التحويل وفق ظروف السوق التنافسية وعدم وجود طاقة عاطلة؟",
+    "choicesAr": [
+      "تكلفة الموازنة المرنة.",
+      "التكلفة الإضافية.",
+      "التكلفة المقدرة مع هامش ربح أو بدونه.",
+      "سعر السوق."
+    ],
+    "explanationAr": "ينبغي أن تعزز أسعار التحويل توافق أهداف الوحدات مع أهداف المنشأة واستقلالية الوحدات والجهد الإداري. ولا توجد قاعدة تحقق هذه المعايير في جميع الحالات، لكن نقطة البداية هي مجموع التكاليف النقدية الإضافية وتكلفة الفرصة البديلة للمورد. وعند عدم وجود طاقة عاطلة ووجود سوق خارجية تنافسية (يمكن فيها بيع جميع السلع المحولة داخليًا إلى الخارج)، فإن مجموع التكلفة النقدية وتكلفة الفرصة البديلة يساوي سعر السوق، بافتراض عدم اختلاف تكاليف البيع والنقل."
   },
   {
     "unit": 16,
@@ -3562,7 +3578,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The optimal transfer price of a selling division should be set at\na point that will have the most desirable economic effect on\nthe firm as a whole while at the same time continuing to\nmotivate the management of every division to perform\nefficiently. The market price should be used as the transfer\nprice to avoid waste and maximize efficiency in a competitive\neconomy (an outside market in which all padding produced\ncan be sold). This price also measures the product’s\nprofitability and the division managers’ performance in a\ncompetitive environment.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لدى مصنع سجاد قسم تجزئة يتكون من متاجر تعرض علامته التجارية وعلامات أخرى، وقسم تصنيع ينتج السجاد والبطانات. وتوجد سوق خارجية لمواد بطانة السجاد يمكن بيع جميع البطانات المنتجة فيها. ما سعر التحويل المناسب للبطانات المحولة من قسم التصنيع إلى قسم التجزئة؟",
+    "choicesAr": [
+      "تكلفة الإنتاج المتغيرة لقسم التصنيع.",
+      "تكلفة الإنتاج المتغيرة لقسم التصنيع مضافًا إليها التكاليف الصناعية غير المباشرة الثابتة الموزعة.",
+      "تكلفة الإنتاج المتغيرة لقسم التصنيع مضافًا إليها تكاليف البيع والإدارة المتغيرة.",
+      "سعر السوق الذي يستطيع قسم التجزئة شراء البطانات به."
+    ],
+    "explanationAr": "ينبغي تحديد سعر التحويل الأمثل للقسم البائع عند مستوى يحقق أفضل أثر اقتصادي للمنشأة ككل مع استمرار تحفيز إدارات الأقسام على الكفاءة. ويستخدم سعر السوق وفق افتراضات المسألة لتجنب الهدر وتعظيم الكفاءة في بيئة تنافسية (سوق خارجية يمكن بيع جميع البطانات المنتجة فيها). كما يقيس هذا السعر ربحية المنتج وأداء مديري الأقسام في بيئة تنافسية."
   },
   {
     "unit": 16,
@@ -3579,7 +3603,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A transfer price is the price charged in an intercompany\ntransaction. Market-based prices provide market discipline\nbecause efficient internal suppliers will tend to prosper,\nthereby enhancing the overall long-term competitiveness of\nthe firm.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يشتري قسم التجميع النهائي في منشأة مكونات فرعية من قسم آخر هو قسم تصنيع المواد. ويجري تحديد السعر الذي سيحمله قسم تصنيع المواد لقسم التجميع النهائي، مع توافر أسعار سوق خارجية للمكونات. أي العبارات التالية أدق بشأن سعر التحويل المبني على السوق؟",
+    "choicesAr": [
+      "توفر أسعار التحويل المبنية على تكلفة الإنتاج الحدية حوافز لاستغلال الطاقة العاطلة.",
+      "توفر أسعار التحويل السوقية حافزًا لاستغلال الطاقة العاطلة.",
+      "تتعزز القدرة التنافسية العامة طويلة الأجل باستخدام سعر تحويل مبني على السوق.",
+      "تؤثر السياسة الداخلية للشركة في سعر التحويل السوقي أكثر من الطرق الأخرى."
+    ],
+    "explanationAr": "سعر التحويل هو السعر المحمل في معاملة بين الوحدات التابعة للمنشأة. وتوفر الأسعار المبنية على السوق انضباطًا تنافسيًا؛ إذ تميل الوحدات الموردة الداخلية الكفؤة إلى النجاح، مما يعزز القدرة التنافسية العامة طويلة الأجل للمنشأة."
   },
   {
     "unit": 16,
@@ -3596,7 +3628,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The optimal transfer price of a selling division should be set at\na point that will have the most desirable economic effect on\nthe firm as a whole while at the same time continuing to\nmotivate the management of every division to perform\nefficiently. Because the $220 transfer price selected is based\non the quoted external price (market), it is an example of\nmarket-based transfer pricing.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يبيع القسم الشرقي بضائع داخليًا للقسم الغربي في الشركة نفسها. ويبلغ السعر الخارجي المعلن في المنشورات الصناعية لمورد قريب من القسم الشرقي $200 للطن بالإضافة إلى النقل. وتبلغ تكلفة نقل البضائع إلى القسم الغربي $20 للطن. وتبلغ تكلفة السوق الفعلية التي يتحملها القسم الشرقي لشراء المواد المباشرة لإنتاج المنتج المحول $100 للطن، والعمل المباشر الفعلي $50 للطن، وتكاليف التخزين والمناولة الفعلية الأخرى $40. اختار رئيس الشركة سعر تحويل قدره $220. ما نوع هذا التسعير؟",
+    "choicesAr": [
+      "تسعير التحويل على أساس السوق.",
+      "تسعير التحويل على أساس التكلفة.",
+      "تسعير التحويل التفاوضي.",
+      "تسعير التحويل بالتكلفة مضافًا إليها 20%."
+    ],
+    "explanationAr": "ينبغي تحديد سعر التحويل الأمثل للقسم البائع عند مستوى يحقق أفضل أثر اقتصادي للمنشأة ككل مع استمرار تحفيز إدارة كل قسم على الكفاءة. ولأن سعر التحويل المختار البالغ $220 مبني على السعر الخارجي المعلن (سعر السوق)، فهو مثال لتسعير التحويل على أساس السوق."
   },
   {
     "unit": 16,
@@ -3613,7 +3653,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The outlay costs represent cash outflows related to the\nproduction and transfer of goods/services. The opportunity\ncosts are the maximum contribution forgone by the supplying\ndivision if the goods/services are sold internally. An\nopportunity cost will exist if the supplier has no idle capacity\nand an external market exists. Thus, this guideline should\npromote goal congruence (actions of the divisional manager\nbenefit the company and the division), a sustained high level\nof managerial effort (exertion toward a goal), and subunit\nautonomy (freedom in decision making). The guideline will\nvary depending on whether an external market exists and\nwhether the supplier has idle capacity.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تحتاج الشركات ذات الأقسام اللامركزية المستقلة التي تبيع سلعها وخدماتها داخليًا للأقسام الأخرى وخارجيًا في أسواق تنافسية إلى تحديد أسعار للسلع والخدمات المحولة داخليًا. وتضع الإدارة العليا عادة معايير لإدارة الأقسام، مثل توافق الأهداف واستقلالية الوحدات واستمرار مستوى مرتفع من الجهد الإداري. ما الأسلوب المتسق مع هذه المعايير لتحديد سعر التحويل؟",
+    "choicesAr": [
+      "التكلفة النقدية الإضافية للوحدة حتى نقطة التحويل مضافًا إليها تكلفة الفرصة البديلة للوحدة لدى القسم المورد.",
+      "التكلفة النقدية الإضافية للوحدة حتى نقطة التحويل مضافًا إليها تكلفة الفرصة البديلة للوحدة لدى القسم المشتري.",
+      "التكلفة الكلية للوحدة حتى نقطة التحويل مضافًا إليها نسبة هامش على التكلفة الكلية.",
+      "التكلفة المتغيرة للوحدة حتى نقطة التحويل."
+    ],
+    "explanationAr": "تمثل التكاليف النقدية التدفقات النقدية الخارجة المتعلقة بإنتاج السلع والخدمات وتحويلها. وتمثل تكلفة الفرصة البديلة أقصى هامش مساهمة يفقده القسم المورد عند البيع الداخلي. وتنشأ تكلفة فرصة بديلة إذا لم تتوافر طاقة عاطلة للمورد ووجدت سوق خارجية بديلة. ولذلك يفترض أن تعزز القاعدة توافق الأهداف (تستفيد الشركة والقسم من قرارات المدير) واستمرار الجهد الإداري (السعي نحو الهدف) واستقلالية الوحدات (حرية اتخاذ القرار). ويختلف تطبيق القاعدة بحسب وجود سوق خارجية وطاقة عاطلة لدى المورد."
   },
   {
     "unit": 16,
@@ -3664,7 +3712,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Requiring the manufacturing division to charge a market-\nbased transfer price forces the division to think competitively\nand keep costs under control.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم شركة تقارير القطاعات لجميع أقسامها اللامركزية. ولديها عدة منتجات تحول من قسم إلى أقسام أخرى. وترغب في تحفيز مدير القسم البائع على الإنتاج بكفاءة. بافتراض توافر الطرق التالية، ما طريقة تسعير التحويل المثلى لهذا الهدف؟",
+    "choicesAr": [
+      "سعر تحويل مبني على التكلفة باستخدام المبالغ الفعلية.",
+      "سعر تحويل مبني على التكلفة باستخدام المبالغ المقدرة.",
+      "سعر تحويل مبني على التكلفة المتغيرة باستخدام المبالغ الفعلية.",
+      "سعر تحويل مبني على السوق."
+    ],
+    "explanationAr": "إلزام قسم التصنيع بتحميل سعر تحويل مبني على السوق يدفعه إلى التفكير بصورة تنافسية والرقابة على تكاليفه، عند توافر سوق مناسبة."
   },
   {
     "unit": 16,
@@ -3681,7 +3737,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Sales commissions and collection costs on accounts\nreceivable are inevitable results of selling to outside\ncustomers. Without having to factor in these costs, a selling\ndivision has the ability to charge a lower price to an internal\ndivision.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يبيع قسم البلاستيك، وهو مركز ربح، منتجاته للعملاء الخارجيين ولمراكز ربح داخلية أخرى. أي الظروف التالية يبرر بيع منتج داخليًا لمركز ربح آخر بسعر أقل من سعر التحويل المبني على السوق؟",
+    "choicesAr": [
+      "وجود طاقة فائضة لدى الوحدة المشترية.",
+      "عمل الوحدة البائعة بكامل طاقتها.",
+      "إمكانية تجنب عمولات البيع المعتادة وتكاليف التحصيل.",
+      "تقييم مديري مراكز الربح على أساس الدخل التشغيلي للوحدة."
+    ],
+    "explanationAr": "ترتبط عمولات البيع وتكاليف تحصيل الذمم المدينة عادة بالمبيعات الخارجية. وعندما لا يتحمل القسم البائع هذه التكاليف في التحويل الداخلي، يمكنه تحميل القسم الداخلي سعرًا أقل."
   },
   {
     "unit": 16,
@@ -3715,7 +3779,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A cost-based transfer price is easy to implement since the\ncosts are already calculated for in the accounting records.\nThis method would not need negotiations or compromises on\nwhat the price should be set at since it is already determined\nby the full cost of materials, labor, and manufacturing\noverhead.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما إحدى مزايا استخدام سعر تحويل مبني على التكلفة؟",
+    "choicesAr": [
+      "مفيد لتقييم أداء الوحدات.",
+      "يحافظ على استقلالية الوحدات.",
+      "يحقق توافق الأهداف.",
+      "سهل التطبيق."
+    ],
+    "explanationAr": "يسهل تطبيق سعر التحويل المبني على التكلفة لأن التكاليف محسوبة بالفعل في السجلات المحاسبية. ولا تتطلب طريقة التكلفة الكلية تفاوضًا أو تسويات لتحديد السعر، إذ يستند إلى التكلفة الكلية للمواد والعمل والتكاليف الصناعية غير المباشرة."
   },
   {
     "unit": 16,
@@ -3732,7 +3804,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Eastern Division is operating at capacity and selling its\nproducts at the full market price to outsiders. Eastern\nDivision’s profitable work should not be abandoned to produce\nfor Western Division. The minimum price that a selling division\nis willing to accept is the sum of the incremental cost of\nproducing the unit so far plus the opportunity cost of selling\nthe unit internally.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تعمل شركة وفق هيكل لامركزي. ويخطط القسم الغربي لشراء مكوّن يحتاج إليه من القسم الشرقي الذي يعمل بكامل طاقته. ويتحمل القسم الشرقي تكاليف ذات صلة قدرها $4 لتصنيع المكوّن و$1 لشحن كل وحدة، ويمكنه بيع الوحدة خارجيًا بسعر $8. ويتحمل القسم الغربي تكاليف $9 للوحدة ويبيع المنتجات التامة بسعر $18 لكل وحدة. وفق القاعدة العامة لتسعير التحويل، ما الحد الأدنى لسعر التحويل للوحدة؟",
+    "choicesAr": [
+      "تكلفة تصنيع القسم الشرقي البالغة $4.",
+      "تكاليف تصنيع وشحن القسم الشرقي البالغة $5.",
+      "$7 لتقسيم الأرباح بالتساوي بين القسمين.",
+      "سعر البيع الخارجي البالغ $8."
+    ],
+    "explanationAr": "يعمل القسم الشرقي بكامل طاقته ويبيع منتجاته بالسعر السوقي الكامل للعملاء الخارجيين. ولا ينبغي التخلي عن نشاطه المربح للإنتاج للقسم الغربي دون تعويض. والحد الأدنى للسعر الذي يقبل به القسم البائع هو مجموع التكلفة الإضافية لإنتاج الوحدة وتحويلها وتكلفة الفرصة البديلة الناتجة عن بيعها داخليًا، بافتراض تساوي تكاليف الشحن في البيع الخارجي والتحويل الداخلي."
   },
   {
     "unit": 16,
@@ -3766,7 +3846,15 @@
     ],
     "answerIndex": 0,
     "explanation": "By allowing the buyer to purchase at the selling division’s\nvariable cost, unused production capacity will be utilized. This\nmethod should only be used when the selling division has\nexcess capacity. The minimum transfer price between the\nmanufacturing division and the assembly division is the unit\nvariable cost of $50.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لشركة قسم تصنيع ينتج لوحات الدوائر المطبوعة وقسم تجميع ينتج المنتجات النهائية. ولدى قسم التصنيع حاليًا طاقة كافية لإنتاج 5,000 لوحة إضافية. وتوجد سوق خارجية للوحات الدوائر. يبلغ سعر السوق للوحة الواحدة $80 وتكلفة البيع $10. وتبلغ تكلفة التصنيع الثابتة للوحة $15 وتكلفة الوحدة المتغيرة $50. ويخطط قسم التجميع لشراء 4,500 لوحة دوائر. وترى إدارة قسم التجميع أنها تستطيع الشراء من قسم التصنيع بسعر أقل لأن القسمين يخضعان لسيطرة الشركة نفسها. ما الحد الأدنى لسعر التحويل بين القسمين؟",
+    "choicesAr": [
+      "$50",
+      "$65",
+      "$70",
+      "$80"
+    ],
+    "explanationAr": "بإتاحة الشراء للمشتري بالتكلفة المتغيرة للقسم البائع، تستغل الطاقة الإنتاجية غير المستخدمة. ولا يستخدم هذا الأساس كحد أدنى إلا عند توافر طاقة فائضة كافية لدى البائع وعدم وجود تكلفة فرصة بديلة. والحد الأدنى لسعر التحويل بين قسمي التصنيع والتجميع هو التكلفة المتغيرة للوحدة البالغة $50."
   },
   {
     "unit": 16,
@@ -3783,7 +3871,15 @@
     ],
     "answerIndex": 0,
     "explanation": "To ensure overall goal congruence and maximize company\nprofitability, the transfer price should be at least equal to the\nvariable cost of production. This assumes that Segment A has\nexcess capacity, which it does.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لشركة قطاعان تشغيليان. ويعمل القطاع A بنسبة 70% من طاقته خلال السنتين الماضيتين. وينتج منتجًا واحدًا يبيعه للعملاء الخارجيين بسعر $17 للوحدة. وتبلغ التكاليف المتغيرة لإنتاج الوحدة $11 والتكاليف الصناعية غير المباشرة الثابتة الموزعة $3 للوحدة. ويشتري القطاع B المنتج نفسه من مورد خارجي بسعر $15. وتدرس الإدارة الحصول عليه من القطاع A. وإذا بدأ القطاع A تصنيع كمية كافية لتلبية احتياجات العملاء الخارجيين والقطاع B، فسيعمل بنسبة 94% من طاقته. ما الحد الأدنى للسعر الذي ينبغي للقطاع A تحميله للقطاع B؟",
+    "choicesAr": [
+      "$11 للوحدة.",
+      "$14 للوحدة.",
+      "$15 للوحدة.",
+      "$17 للوحدة."
+    ],
+    "explanationAr": "لتحقيق توافق الأهداف العامة وتعظيم ربحية الشركة، ينبغي ألا يقل سعر التحويل عن التكلفة المتغيرة للإنتاج في هذه الحالة. ويفترض ذلك توافر طاقة فائضة لدى القطاع A، وهو ما يتحقق وفق معطيات المسألة."
   },
   {
     "unit": 16,
@@ -3800,7 +3896,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The variable-cost-plus price is the price set by charging for\nvariable cost plus either a lump sum or an additional markup\nbut less than the full markup price. This permits top\nmanagement to enter the decision process and dictate that a\ndivision transfer at variable cost plus some appropriate\namount.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "قد يكون سعر التحويل المقترح سعرًا مبنيًا على التكلفة مضافًا إليها هامش. ما المقصود بسعر التكلفة المتغيرة مضافًا إليها هامش؟",
+    "choicesAr": [
+      "السعر في السوق المفتوحة.",
+      "سعر يمثل التدفقات النقدية الخارجة للقسم المورد مضافًا إليها هامش المساهمة الذي كان سيحققه القسم من بيع خارجي.",
+      "سعر يحدد عادة باستخدام طريقة التكاليف الاستيعابية.",
+      "سعر يحدد بتحميل التكاليف المتغيرة بالإضافة إلى مبلغ مقطوع أو هامش إضافي، ولكن دون بلوغ الهامش الكامل."
+    ],
+    "explanationAr": "سعر التكلفة المتغيرة مضافًا إليها هامش هو سعر يحدد بتحميل التكلفة المتغيرة بالإضافة إلى مبلغ مقطوع أو هامش إضافي دون بلوغ سعر الهامش الكامل. ويتيح ذلك للإدارة العليا التدخل في عملية القرار وتحديد سعر التحويل بالتكلفة المتغيرة مضافًا إليها مبلغ مناسب."
   },
   {
     "unit": 16,
@@ -3817,7 +3921,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Due to the nature of negotiations, both parties involved in the\ntransfer must discuss options and come to an agreement\nabout the appropriate transfer price. Thus, negotiated transfer\nprices take longer to implement than most other transfer\nprices.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم شركة أسعار تحويل تفاوضية بين الأقسام. أي مما يلي لا يعد ميزة لهذا النموذج؟",
+    "choicesAr": [
+      "تعزز توافق الأهداف.",
+      "بسيطة وسريعة التطبيق.",
+      "مفيدة في تقييم أداء الأقسام منفردة.",
+      "تسمح للأقسام باتخاذ قراراتها بنفسها."
+    ],
+    "explanationAr": "تقتضي طبيعة التفاوض أن يناقش الطرفان المشاركان في التحويل البدائل ويتوصلا إلى اتفاق بشأن سعر التحويل المناسب. ولذلك يستغرق تطبيق أسعار التحويل التفاوضية وقتًا أطول من معظم طرق التسعير الأخرى. ويظل توافق الأهداف ميزة محتملة لا نتيجة مضمونة."
   },
   {
     "unit": 16,
