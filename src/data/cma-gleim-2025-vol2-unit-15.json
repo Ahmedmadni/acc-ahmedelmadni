@@ -1106,7 +1106,15 @@
     ],
     "answerIndex": 3,
     "explanation": "At $2,000 revenue per resident, sales volume is at 200\nresidents ($400,000 ÷ $2,000). The flexible budget gives\nNursing a budget of $145,000 (200 residents × $300 cost per\nresident + $85,000). At an actual cost of $144,900, the\nvariance is favorable by $100. In addition, Dietary is given a\nflexible budget of $76,000 (200 residents × $180 cost per\nresident + $40,000). At an actual cost of $75,800, the variance\nis favorable by $200. Housekeeping is given a flexible budget\nof $68,000 (200 residents × $15 per resident + $65,000),\nresulting in an unfavorable variance of $29,800 (flexible\n$68,000 compared to actual of $97,800. Maintenance is given\na flexible budget of $34,600 (200 residents × $23 per\nresident + $30,000), resulting in an unfavorable variance of\n$24,600 (flexible $34,600 compared to actual $59,200).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "توفر دار رعاية إقامة لما يصل إلى 200 مقيم في مجتمع مساحته 4 أفدنة. وقد خالفت نتائج الشهر الماضي موازنة مارس، مما أثار قلق المديرة بشأن الحاجة إلى تسريح عاملين في أبريل. وتتقاضى الدار $2,000 لكل مقيم وفق الخطة، وتوزع مصروفاتها على التدبير المنزلي والصيانة والتغذية والتمريض. وتظهر البيانات الآتية:\nموازنة مارس:\nالإيرادات ($2,000 لكل مقيم × 180 مقيمًا)       $360,000\nالتدبير المنزلي ($65,000 + $15 لكل مقيم)       67,700\nالصيانة ($30,000 + $23 لكل مقيم)       34,140\nالتغذية ($40,000 + $180 لكل مقيم)       72,400\nالتمريض ($85,000 + $300 لكل مقيم)       139,000\nالربح التشغيلي       $ 46,760\nالنتائج الفعلية لمارس:\nالإيرادات       $400,000\nالتدبير المنزلي       97,800\nالصيانة       59,200\nالتغذية       75,800\nالتمريض       144,900\nالربح التشغيلي       $ 22,300\nأي العبارات الآتية صحيحة عند استخدام الموازنة المرنة؟",
+    "choicesAr": [
+      "حققت الأقسام الأربعة انحرافات غير ملائمة.",
+      "التمريض هو القسم صاحب أكبر انحراف غير ملائم.",
+      "انحراف الإيرادات ملائم.",
+      "انحرافا التدبير المنزلي والصيانة غير ملائمين."
+    ],
+    "explanationAr": "عند إيراد $2,000 لكل مقيم، بلغ عدد المقيمين فعليًا 200 ($400,000 ÷ $2,000). وتبلغ موازنة التمريض المرنة $145,000 (200 مقيم × $300 لكل مقيم + $85,000) مقابل تكلفة فعلية $144,900؛ أي انحراف ملائم $100. وتبلغ موازنة التغذية المرنة $76,000 (200 مقيم × $180 لكل مقيم + $40,000) مقابل تكلفة فعلية $75,800؛ أي انحراف ملائم $200. وتبلغ موازنة التدبير المنزلي $68,000 (200 مقيم × $15 لكل مقيم + $65,000)، مما يترتب عليه انحراف غير ملائم $29,800 (موازنة $68,000 مقابل مصروف فعلي $97,800). وتبلغ موازنة الصيانة المرنة $34,600 (200 مقيم × $23 لكل مقيم + $30,000)، لذا يكون الانحراف غير الملائم $24,600 (موازنة $34,600 مقابل مصروف فعلي $59,200)."
   },
   {
     "unit": 15,
@@ -1123,7 +1131,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Flexible budgeting adjusts for changes in volume of activity. It\ncan be adapted to any level of production. Budgeted levels of\nrevenues and expenses are based on actual quantities of\nproduction and standard costs.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تواجه منشأة صناعية مواسم ذروة في فصل الصيف والأسبوعين الأخيرين من فبراير. وتستأجر في تلك الفترات معدات إنتاج إضافية وتوظف عاملين مؤقتين بسبب ارتفاع الإنتاج. أي أساليب الموازنة أنسب لاحتياجاتها؟",
+    "choicesAr": [
+      "الموازنة الصفرية لاعتمادها على مدخلات المديرين.",
+      "موازنة المشروع لتوافر معلومات مالية مستقلة.",
+      "الموازنة المرنة لإمكان تعديلها وفق النشاط الفعلي.",
+      "الموازنة الثابتة لأنها تبين تغير مستويات المبيعات أو الإنتاج."
+    ],
+    "explanationAr": "تعدل الموازنة المرنة مبالغها عند تغير حجم النشاط، ويمكن تطبيقها على مستويات مختلفة من الإنتاج. وتستند الإيرادات والمصروفات المدرجة إلى كميات الإنتاج الفعلية والتكاليف المعيارية."
   },
   {
     "unit": 15,
@@ -1140,7 +1156,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A flexible budget adjusts for changes in the volume of activity.\nSales are at $10 per unit ($250,000 ÷ 25,000 units). Thus,\nsales would total $275,000 at a sales level of 27,500 units.\nManufacturing costs are 1/3 fixed, or $40,000 of fixed costs\n($120,000 ÷ 3). That leaves $80,000 of variable manufacturing\ncosts for 25,000 units, or $3.20 per unit. Multiplying the $3.20\nvariable cost by 27,500 units results in a total variable cost of\n$88,000. All other costs are fixed at $100,000. Thus, the\nincome is calculated as follows:\nSales                   $275,000\nFixed manufacturing        (40,000)\nVariable manufacturing (88,000)\nOther fixed costs        (100,000)\nBudgeted income       $ 47,000",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أظهرت الموازنة الرئيسية للشركة:\nالمبيعات (25,000 وحدة)       $250,000\nتكاليف التصنيع (1/3 منها ثابتة)       120,000\nتكاليف تشغيلية أخرى (جميعها ثابتة)       100,000\nإذا باعت الشركة فعليًا 27,500 وحدة، فما الربح التشغيلي في موازنتها المرنة؟",
+    "choicesAr": [
+      "$33,000",
+      "$43,000",
+      "$47,000",
+      "$51,000"
+    ],
+    "explanationAr": "تتكيف الموازنة المرنة مع حجم النشاط. يبلغ سعر البيع للوحدة $10 ($250,000 ÷ 25,000 وحدة)، ومن ثم تبلغ المبيعات $275,000 عند بيع 27,500 وحدة. وتمثل التكاليف الصناعية الثابتة 1/3 من الإجمالي، أي $40,000 ($120,000 ÷ 3)، فيتبقى $80,000 تكاليف صناعية متغيرة مقابل 25,000 وحدة، أي $3.20 للوحدة. وعند ضرب $3.20 في 27,500 وحدة تصبح التكاليف المتغيرة $88,000. وتبقى التكاليف التشغيلية الأخرى ثابتة عند $100,000. ويحسب الربح كما يلي:\nالمبيعات       $275,000\nتكاليف التصنيع الثابتة       (40,000)\nتكاليف التصنيع المتغيرة       (88,000)\nالتكاليف الثابتة الأخرى       (100,000)\nالربح التشغيلي المدرج       $ 47,000"
   },
   {
     "unit": 15,
@@ -1174,7 +1198,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The actual and budgeted results can be compared as follows:\nActual    Budgeted\nRevenue           $ 500,000 $ 495,000\nVariable cost      (150,000) (165,000)\nFixed cost         (125,000) (120,000)\nOperating income $ 225,000 $ 210,000\nBecause actual operating income was $15,000 higher than\nexpected, the total static budget variance is $15,000\nfavorable.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "قبل بداية الفترة توقعت الشركة X المصنعة للأثاث بيع 11,000 طاولة بسعر $45 لكل طاولة، وقدرت التكاليف المتغيرة الإجمالية بمبلغ $165,000 والثابتة بمبلغ $120,000. وبسبب نقص المواد استطاعت رفع سعر الوحدة لكنها باعت عددًا أقل. وفي نهاية الفترة باعت 10,000 طاولة بسعر $50 للطاولة، وكانت التكلفة المتغيرة الفعلية $15 لكل طاولة مباعة، وبلغت التكاليف الثابتة الفعلية $125,000. ما إجمالي انحراف الموازنة الثابتة؟",
+    "choicesAr": [
+      "انحراف غير ملائم قدره $15,000.",
+      "انحراف ملائم قدره $40,000.",
+      "انحراف ملائم قدره $15,000.",
+      "انحراف غير ملائم قدره $40,000."
+    ],
+    "explanationAr": "مقارنة النتائج الفعلية بالموازنة:\nالفعلي       المخطط\nالإيرادات       $ 500,000       $ 495,000\nالتكاليف المتغيرة       (150,000)       (165,000)\nالتكاليف الثابتة       (125,000)       (120,000)\nالربح التشغيلي       $ 225,000       $ 210,000\nلأن الربح التشغيلي الفعلي أعلى من المتوقع بمقدار $15,000، فإن انحراف الموازنة الثابتة ملائم بمبلغ $15,000."
   },
   {
     "unit": 15,
@@ -1191,7 +1223,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A flexible budget adjusts for changes in the volume of activity.\nThe company expects to make 206,400 units throughout the\nwhole year and expects a depreciation expense of $516,000\nfor the year. First, the expected number of units to be\nproduced in March must be determined. Since production is\nexpected to occur uniformly throughout the year, expected\nproduction for March is 17,200 units (206,400 units ÷\n12 months).\nNext, dividing the expected depreciation expense for the year\nby the number of units expected to be produced during the\nyear yields a depreciation expense of $2.50 per unit produced\n($516,000 ÷ 206,400 units).\nFinally, the flexible budget amount of depreciation expense for\nMarch is $43,000 ($2.50 budgeted depreciation expense per\nunit × 17,200 expected units to be produced in March).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتضمن الموازنة الرئيسية السنوية لشركة إنشاءات إهلاكًا بالقسط الثابت قدره $516,000 سنويًا، وحجم إنتاج مخططًا يبلغ 206,400 وحدة بالتساوي طوال السنة. وتبلغ الطاقة الإنتاجية 215,000 وحدة. وفي فبراير أنتجت الشركة 16,340 وحدة وسجلت إهلاكًا فعليًا قدره $40,500. وتستخدم الموازنة المرنة للرقابة على تكاليف التصنيع. ما مبلغ إهلاك مارس في الموازنة المرنة؟",
+    "choicesAr": [
+      "$39,216",
+      "$40,500",
+      "$40,850",
+      "$43,000"
+    ],
+    "explanationAr": "تتعدل الموازنات المرنة عند تغير النشاط. تتوقع الشركة إنتاج 206,400 وحدة خلال السنة، وإهلاكًا سنويًا قدره $516,000. أولًا يُحدد الإنتاج المخطط لمارس؛ ولأن الإنتاج موزع بالتساوي، يكون 17,200 وحدة (206,400 وحدة ÷ 12 شهرًا). ثم يُحسب معدل التوزيع الظاهر في حل المصدر بواقع $2.50 للوحدة ($516,000 ÷ 206,400 وحدة). ويبلغ الإهلاك المدرج لمارس $43,000 ($2.50 × 17,200 وحدة). توضيح مهني: استخدام معدل توزيع للوحدة هنا لا يجعل الإهلاك بالقسط الثابت تكلفة متغيرة؛ فالنتيجة نفسها تتحقق من توزيع الإهلاك السنوي على أشهر السنة."
   },
   {
     "unit": 15,
@@ -1208,7 +1248,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Flexible budgeting is the calculation of the quantity and cost of\ninputs that should have been consumed given the achieved\nlevel of production. To find the flexible budget operating\nincome, the budgeted sales price and the variable costs per\nunit at the actual level of sales are required. Budgeted\ncontribution margin per unit is $50 ($100 selling price – $50\nvariable costs). If 70 units were actually sold, the total flexible\nbudget contribution margin is $3,500 (70 units × $50). The\n$3,500 contribution margin less fixed costs of $2,000 results in\nflexible budget operating income of $1,500.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أعدت شركة موازنة رئيسية على أساس 100 وحدة مبيعات مخططة بسعر $100 للوحدة، وتكلفة متغيرة قدرها $50 للوحدة، وإجمالي تكاليف ثابتة $2,000. وبلغ حجم المبيعات الفعلي 70 وحدة. فما الربح التشغيلي في الموازنة المرنة؟",
+    "choicesAr": [
+      "$1,500",
+      "$3,000",
+      "$3,500",
+      "$5,000"
+    ],
+    "explanationAr": "تحدد الموازنة المرنة كميات وتكاليف الموارد التي كان ينبغي استهلاكها عند مستوى الإنتاج المحقق. ويُستخدم سعر البيع المخطط والتكلفة المتغيرة المعيارية للوحدة مع حجم المبيعات الفعلي لحساب الربح التشغيلي. يبلغ هامش المساهمة المخطط لكل وحدة $50 ($100 سعر البيع − $50 التكلفة المتغيرة). وعند بيع 70 وحدة يكون إجمالي هامش المساهمة $3,500 (70 وحدة × $50). وبطرح التكاليف الثابتة من هامش المساهمة $3,500 بمبلغ $2,000، ينتج ربح تشغيلي مرن قدره $1,500."
   },
   {
     "unit": 15,
@@ -1225,7 +1273,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Selling price per unit is €250 (€500,000 ÷ 2,000 units) and\nvariable cost per unit is €175 (€350,000 ÷ 2,000 units). The\ncompany sold 1,750 units; thus, the total sales revenue is\n€437,500 (€250 x 1,750 units) and total variable cost is\n€306,250 (€175 x 1,750 units). Hence, the operating income is\n€86,250 (€437,500 revenue – €306,250 variable cost –\n€45,000 fixed cost).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تضمنت موازنة شركة تصنيع وبيع 2,000 وحدة بإجمالي مبيعات €500,000، ومصروفات متغيرة €350,000، ومصروفات ثابتة €45,000. إذا باعت وأنتجت فعليًا 1,750 وحدة فقط خلال السنة، فما الربح التشغيلي في الموازنة المرنة؟",
+    "choicesAr": [
+      "€42,500",
+      "€86,250",
+      "€91,875",
+      "€105,000"
+    ],
+    "explanationAr": "سعر البيع للوحدة €250 (€500,000 ÷ 2,000 وحدة)، والتكلفة المتغيرة للوحدة €175 (€350,000 ÷ 2,000 وحدة). ولأن المنشأة باعت 1,750 وحدة، يبلغ إجمالي إيراد المبيعات €437,500 (€250 × 1,750 وحدة)، وإجمالي التكاليف المتغيرة €306,250 (€175 × 1,750 وحدة). ومن ثم يبلغ الربح التشغيلي €86,250 (€437,500 إيرادات − €306,250 تكاليف متغيرة − €45,000 تكاليف ثابتة)."
   },
   {
     "unit": 15,
@@ -1242,7 +1298,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The flexible budget provides for a cost of $1,000 per article\n($10,000,000 ÷ 10,000 articles). Each article should require 20\nhours of labor (200 hours ÷ 10 articles). Thus, the standard\nlabor rate is $50 per hour ($1,000 ÷ 20 hours), and total\nstandard variable labor cost is $9,500,000 (9,500 articles × 20\nhours × $50 per hour). Accordingly, total expected costs are\n$10,100,000 ($9,500,000 + $600,000 FC).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتخصص شركة Zazoo, Inc. في مراجعة وتحرير مقالات المجلات التقنية، وتستخدم المعايير التالية لتقييم الأداء:\nالتكاليف الصناعية غير المباشرة الثابتة السنوية لطاقة عادية قدرها 10,000 مقال تمت مراجعته وتحريره       $600,000\nالساعات المهنية المعيارية لكل 10 مقالات       200\nتكاليف العمل المعيارية في الموازنة المرنة لمعالجة 10,000 مقال       $10,000,000\nوتتعلق المعلومات التالية بعدد 9,500 مقال تمت مراجعته وتحريره فعليًا خلال السنة:\nإجمالي الساعات المهنية المستعملة       192,000\nالتكاليف المرنة       $9,120,000\nإجمالي التكلفة       $9,738,000\nما إجمالي التكلفة المخططة في الموازنة المرنة لمراجعة وتحرير 9,500 مقال؟",
+    "choicesAr": [
+      "$9,500,000",
+      "$10,070,000",
+      "$10,100,000",
+      "$10,570,000"
+    ],
+    "explanationAr": "تحدد الموازنة المرنة تكلفة معيارية قدرها $1,000 لكل مقال ($10,000,000 ÷ 10,000 مقالات). ويتطلب المقال الواحد 20 ساعة عمل (200 ساعة ÷ 10 مقالات). لذلك يبلغ معدل التكلفة المعياري للساعة $50 ($1,000 ÷ 20 ساعة). وتصل التكلفة المعيارية المتغيرة للعمل إلى $9,500,000 (9,500 مقال × 20 ساعة × $50 للساعة). وعليه يبلغ إجمالي التكاليف المتوقعة $10,100,000 ($9,500,000 + $600,000 تكلفة ثابتة)."
   },
   {
     "unit": 15,
@@ -1259,7 +1323,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Flexible budgeting consists of preparing a series of budgets\nfor many levels of sales. A flexible budget is designed to allow\nadjustment of the budget to the actual level of activity before\ncomparing the budgeted activity with actual results.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي منهج من مناهج إعداد الموازنات يعد أنسب لشركة تواجه قدرًا كبيرًا من عدم التأكد بشأن حجم المبيعات بالوحدات خلال السنة المقبلة؟",
+    "choicesAr": [
+      "الموازنة من أعلى إلى أسفل.",
+      "موازنة دورة حياة المنتج.",
+      "الموازنة الثابتة.",
+      "الموازنة المرنة."
+    ],
+    "explanationAr": "تتألف الموازنة المرنة من سلسلة موازنات لمستويات متعددة من المبيعات. ويمكن تعديلها لتتوافق مع مستوى النشاط الفعلي قبل مقارنة المبالغ المدرجة بالنتائج الحقيقية."
   },
   {
     "unit": 15,
@@ -1276,7 +1348,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The fixed costs of operating the offices will remain unchanged\nif the company operates 12 offices instead of 10. Thus, only\nthe incremental variable cost increase that results from\noperating 2 additional offices must be considered.\nThe total variable cost of operating 12 offices is determined by\nfinding the per-office variable cost rate and multiplying it by 12.\nVariable costs are $860,000 ($1,000,000 total costs –\n$140,000 fixed costs). Variable costs per office are thus\n$86,000 ($860,000 ÷ 10 offices). Therefore, the variable cost\nof operating 12 offices is $1,032,000. To find the total cost of\noperating 12 offices, the fixed costs must be added back,\nresulting in $1,172,000 ($1,032,000 + $140,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تدير شركة 10 مكاتب. وبلغ إجمالي تكلفة تشغيل المكاتب في السنة الماضية $1,000,000، منها $140,000 تكاليف ثابتة. وبافتراض ثبات الظروف الأخرى، ما إجمالي التكاليف المدرجة إذا زادت المكاتب إلى 12 مكتبًا؟",
+    "choicesAr": [
+      "$1,028,000",
+      "$1,032,000",
+      "$1,172,000",
+      "$1,200,000"
+    ],
+    "explanationAr": "تبقى التكاليف الثابتة لتشغيل المكاتب دون تغيير إذا شغلت الشركة 12 مكتبًا بدلًا من 10 مكاتب. لذا تجب مراعاة الزيادة في التكاليف المتغيرة الناجمة عن تشغيل 2 مكتب إضافي. وتُحسب التكلفة المتغيرة الإجمالية لتشغيل 12 مكتبًا بتحديد معدل التكلفة المتغيرة لكل مكتب وضربه في 12 مكتبًا. وتبلغ التكاليف المتغيرة $860,000 ($1,000,000 إجمالي التكلفة − $140,000 تكاليف ثابتة). وبذلك تبلغ التكلفة المتغيرة لكل مكتب $86,000 ($860,000 ÷ 10 مكاتب). وعليه تبلغ التكاليف المتغيرة لتشغيل 12 مكتبًا $1,032,000. ولحساب إجمالي تكلفة تشغيل 12 مكتبًا نضيف التكاليف الثابتة، فتصل التكلفة إلى $1,172,000 ($1,032,000 + $140,000)."
   },
   {
     "unit": 15,
