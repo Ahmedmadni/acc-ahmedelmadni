@@ -26,28 +26,24 @@ function fingerprint(value) {
     hash = Math.imul(hash ^ value.charCodeAt(i), 16777619);
   return (hash >>> 0).toString(16).padStart(8, "0");
 }
-test("Unit 15 Wave 4: 53 full Arabic drafts, with §1 16/16 and §2 37/39", () => {
+test("Unit 15 Wave 4: all 53 earlier Arabic source drafts remain complete after new cohorts", () => {
   assert.equal(records.length, 264);
-  const translated = records.filter(row =>
-    row.stemAr !== undefined || row.choicesAr !== undefined || row.explanationAr !== undefined);
-  assert.equal(translated.length, 53);
-  assert.equal(translated.filter(row => row.section === 1).length, 16);
-  assert.equal(translated.filter(row => row.section === 2).length, 37);
   const approved = new Set([
     ...Array.from({ length: 16 }, (_, n) => "1." + (n + 1)),
     ...Array.from({ length: 24 }, (_, n) => "2." + (n + 1)),
     ...Array.from({ length: 6 }, (_, n) => "2." + (n + 26)),
     ...Array.from({ length: 7 }, (_, n) => "2." + (n + 33)),
   ]);
-  assert.deepEqual(new Set(translated.map(id)), approved);
-  for (const row of records) {
+  assert.equal(approved.size, 53);
+  for (const row of records.filter(row => approved.has(id(row)))) {
     const complete = typeof row.stemAr === "string" && !!row.stemAr.trim() &&
       typeof row.explanationAr === "string" && !!row.explanationAr.trim() &&
       Array.isArray(row.choicesAr) && row.choicesAr.length === 4 &&
       row.choicesAr.every(v => typeof v === "string" && !!v.trim());
-    assert.equal(complete, approved.has(id(row)), "Incomplete/unexpected Arabic record " + id(row));
+    assert.ok(complete, "Earlier Arabic source record damaged: " + id(row));
   }
 });
+
 test("Unit 15 Wave 4: exact publisher text, page, answer order and numeric-token fidelity", () => {
   assert.equal(source.size, 10);
   for (const [n, [page, key, originalFingerprint]] of source) {
