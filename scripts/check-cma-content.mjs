@@ -978,10 +978,14 @@ for (const q of CMA_LOCAL_QUESTIONS) {
     `Question/unit mismatch: ${q.id}`,
   );
   check(!questionIds.has(q.id), `Duplicate question ID: ${q.id}`);
+  // A publisher can repeat a short lead-in such as "Flexible budgets"
+  // across distinct questions. Deduplicate by the complete English stem
+  // AND all four original ordered choices, not by stem alone.
+  const englishQuestionSignature = JSON.stringify([q.question.en, q.choices.en]);
   if (q.sourceLanguage !== "en")
-    check(!questionTexts.has(q.question.en), `Duplicate English question: ${q.id}`);
+    check(!questionTexts.has(englishQuestionSignature), `Duplicate English question with identical options: ${q.id}`);
   questionIds.add(q.id);
-  if (q.sourceLanguage !== "en") questionTexts.add(q.question.en);
+  if (q.sourceLanguage !== "en") questionTexts.add(englishQuestionSignature);
   check(
     q.track === "CMA" &&
       q.choices.ar.length === 4 &&
