@@ -608,6 +608,7 @@ const staticArabicVol2 = new Set([
   ...Array.from({length:7},(_,i)=>"15.2."+(i+33)),
   ...Array.from({length:26},(_,i)=>"15.3."+(i+1)),
   ...[27,28,29,30,31,33,34,35,36,40,41,42,43,44,45,46].map(n=>"15.3."+n),
+  ...[3,4,5,6,7,8,11,14,15,16,17,18,23,26,27,28,33,34,35].map(n=>"15.4."+n),
 ]);
 const vol2QuestionById = new Map(CMA_GLEIM_2025_VOL2_QUESTIONS.map(q=>[q.id,q]));
 for (const [key, original] of vol2Records) {
@@ -669,7 +670,7 @@ for (const [key, expectedPage] of pendingOriginalSourcePages) {
 console.log("Review gate: 19 unverified Unit 12 questions retain PDF page locators and English-only labels.");
 console.log("Verified Unit 13 Arabic educational drafts: 43/44 §1, 14/14 §2, 33/34 §3, 31/31 §4 (121/123 total); source-flagged §1 Q34 and §3 Q23 remain English-first.");
 console.log("Unit 14 source Arabic drafts: §1 5/8, §2 41/43, §3 18/19, §4 36/40, §5 34/34, §6 26/31; 160/175 Arabic educational drafts. Ten review-held drafts and 15 English-first records remain outside scored practice.");
-console.log("Unit 15 Arabic source drafts: §1 16/16, §2 37/39, §3 42/46; 95/264 complete Arabic drafts (36.0%). Remaining 169 English-first, including 6 blocked source-table/consistency questions.");
+console.log("Unit 15 Arabic source drafts: §1 16/16, §2 37/39, §3 42/46, §4 19/35; 114/264 (43.2%) complete educational Arabic drafts. Remaining 150 English-first, including 14 source review holds.");
 for (const [key,page,needle] of [
   ["15.2.25",596,"$1.360 U"],
   ["15.2.32",607,"Budgete\n"],
@@ -703,6 +704,23 @@ for (const [key, expectedPage, anomaly] of [
     "Unit 15 §3 ambiguous material variance source must remain English-only and unscored: "+key);
 }
 console.log("Unit 15 §3 source review gate: Q32, Q37, Q38, Q39 require original licensed 2025 page comparison and are unscored.");
+// §4 PDF table and variance-algebra quarantine. Source notes and answer keys
+// are preserved; the shared sourceLayoutReview property blocks graded use.
+for (const [number,page] of [[1,663],[2,663],[9,671],[10,671],
+                             [12,673],[19,680],[24,685],[32,693]]) {
+  const key="15.4."+number;
+  const original=vol2Records.get(key);
+  const mapped=vol2QuestionById.get(
+    "cma-gleim-2025-vol2-su15-s4-q"+String(number).padStart(3,"0"));
+  check(!!original && original.page===page &&
+    !original.stemAr && !original.choicesAr && !original.explanationAr &&
+    mapped?.sourcePage===page && mapped?.sourceLayoutReview===true &&
+    mapped?.sourceLanguage==="en" && mapped?.sourceArabicStatus===undefined &&
+    mapped?.answerIndex===original.answerIndex,
+    "Unit 15 labor source layout/variance algebra must remain unscored: "+key);
+}
+console.log("Unit 15 §4 review holds: Q1 Q2 Q9 Q10 Q12 Q19 Q24 Q32; requires original source page inspection.");
+
 
 // Original page layouts remain unverified: some explanations or stems contain
 // visibly broken PDF-extraction fragments. Keep records unchanged and unscored.

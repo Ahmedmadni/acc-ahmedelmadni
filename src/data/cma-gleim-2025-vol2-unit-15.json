@@ -2525,7 +2525,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Because direct labor for 9,000 units was budgeted at $81,000,\nthe unit direct labor cost is $9. Thus, the direct labor budget\nfor 8,500 units is $76,500, and the total direct labor variance is\n$1,275 ($77,775 – $76,500). Because the actual cost is\ngreater than the budgeted amounts, the $1,275 variance is\nunfavorable. Given that the actual time per unit (45 minutes)\nwas the same as that budgeted, no direct labor efficiency\nvariance was incurred. Hence, the entire $1,275 unfavorable\nvariance must be attributable to the direct labor rate (or price)\nvariance.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "كانت الموازنة الثابتة لشهر مايو مبنية على إنتاج 9,000 وحدة، بتكلفة مواد مباشرة $15 للوحدة. وخُطط للعمل المباشر بمعدل 45 دقيقة لكل وحدة، وبإجمالي تكلفة $81,000. وبلغ الإنتاج الفعلي 8,500 وحدة، بتكاليف مواد مباشرة $127,500 وتكاليف عمل مباشر $77,775. وظل معيار العمل المباشر عند 45 دقيقة للوحدة طوال الشهر. ماذا يبين تحليل انحرافات الأداء لشهر مايو؟",
+    "choicesAr": [
+      "انحراف استخدام مواد مباشرة ملائم بمبلغ $7,500.",
+      "انحراف كفاءة عمل مباشر ملائم بمبلغ $1,275.",
+      "انحراف كفاءة عمل مباشر غير ملائم بمبلغ $1,275.",
+      "انحراف سعر (معدل أجر) العمل المباشر غير ملائم بمبلغ $1,275."
+    ],
+    "explanationAr": "لأن تكلفة العمل المباشر المخططة لإنتاج 9,000 وحدة كانت $81,000، فإن تكلفة العمل المعيارية لكل وحدة تبلغ $9. ومن ثم تبلغ موازنة العمل المباشر لإنتاج 8,500 وحدة مبلغ $76,500. ويبلغ إجمالي انحراف العمل المباشر $1,275 ($77,775 − $76,500). ولأن التكلفة الفعلية أعلى من المدرجة في الموازنة يكون انحراف $1,275 غير ملائم. وبما أن الوقت الفعلي للوحدة البالغ 45 دقيقة يساوي الوقت المعياري، فلا يوجد انحراف كفاءة عمل مباشر. وبالتالي يرجع كامل مبلغ $1,275 غير الملائم إلى انحراف معدل أجر العمل المباشر."
   },
   {
     "unit": 15,
@@ -2542,7 +2550,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The direct labor price (rate) variance is the actual hours\nworked times the difference between the standard rate and\nthe actual rate paid. This difference may be attributable to\n(1) a change in labor rates since the establishment of the\nstandards, (2) using a single average standard rate despite\ndifferent rates earned among different employees,\n(3) assigning higher-paid workers to jobs estimated to require\nlower-paid workers (or vice versa), or (4) paying hourly rates,\nbut basing standards on piecework rates (or vice versa). The\ndifference should not be caused by a union contract approved\nbefore the budgeting cycle because such rates would have\nbeen incorporated into the standards.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في نظام التكاليف المعيارية، أي العوامل التالية لا يُعزى إليها عادةً انحراف سعر (معدل أجر) العمل المباشر؟",
+    "choicesAr": [
+      "عقود النقابات المعتمدة قبل دورة إعداد الموازنة.",
+      "توقعات معدلات الأجور.",
+      "استخدام معدل معياري متوسط واحد.",
+      "تكليف عمال ذوي مستويات مهارة مختلفة عما كان مخططًا."
+    ],
+    "explanationAr": "انحراف سعر (معدل أجر) العمل المباشر هو ساعات العمل الفعلية مضروبة في الفرق بين معدل الأجر المعياري والمعدل الفعلي. وقد ينتج الفرق عن (1) تغير معدلات الأجور بعد وضع المعايير، أو (2) اعتماد معدل معياري متوسط واحد رغم اختلاف أجور الموظفين، أو (3) تكليف عمال بأجور أعلى بأعمال خُطط لعمال أقل أجرًا أو العكس، أو (4) الدفع بالساعة مع بناء المعايير على أجر القطعة أو العكس. لكن عقد نقابيًا أُقر قبل إعداد الموازنة ينبغي أن تكون أجوره قد أُدرجت في المعايير، فلا يكون سببًا غير متوقع لهذا الانحراف."
   },
   {
     "unit": 15,
@@ -2559,7 +2575,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The labor efficiency variance is $980 ($9,800 – $8,820). It is\nthe difference between actual and standard hours multiplied\nby the standard labor rate.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أعد مدير الجدول التالي لتحليل تكاليف العمل المباشر للشهر:\nساعات فعلية بمعدل أجر فعلي      ساعات فعلية بمعدل معياري      ساعات معيارية بمعدل معياري\n$10,000      $9,800      $8,820\nإلى أي انحراف يشير المبلغ $980؟",
+    "choicesAr": [
+      "انحراف كفاءة العمل.",
+      "انحراف معدل أجر العمل.",
+      "انحراف حجم النشاط.",
+      "انحراف إنفاق العمل."
+    ],
+    "explanationAr": "يبلغ انحراف كفاءة العمل $980 ($9,800 − $8,820)، لأنه الفرق بين تكلفة الساعات الفعلية وتكلفة الساعات المعيارية عند معدل الأجر المعياري نفسه."
   },
   {
     "unit": 15,
@@ -2576,7 +2600,15 @@
     ],
     "answerIndex": 3,
     "explanation": "An unfavorable direct labor efficiency variance is normally\ncharged to the production manager, the person with the most\ncontrol over the amount and kinds of direct labor used.\nHowever, that individual is not responsible. (S)he was told to\nuse the nonconforming part that required extra labor time.\nThus, the variance should be charged to the vice president of\nproduction, the individual who most influenced the incurrence\nof the cost.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أفاد مشرف مراقبة المخزون بأن كمية كبيرة من قطعة سبق شراؤها لطلب خاص لم يكتمل ما زالت في المخزن، لأن العميل تخلف عن تنفيذ الطلب. ولا تُستخدم القطعة في أي من منتجات الشركة المعتادة. وبعد استشارة مهندسي الشركة، وافق نائب رئيس الإنتاج على إحلال هذه القطعة محل قطعة اعتيادية في منتج جديد، وأوضح المهندسون أن الإحلال ممكن بشرط تعديل القطعة. وتطلبت الوحدات المصنعة بالقطعة البديلة ساعات عمل مباشر إضافية، ما سبب انحراف كفاءة عمل مباشر غير ملائم في إدارة الإنتاج. إلى من ينبغي إسناد مسؤولية هذا الانحراف؟",
+    "choicesAr": [
+      "مدير المبيعات.",
+      "مشرف المخزون.",
+      "مدير الإنتاج.",
+      "نائب رئيس الإنتاج."
+    ],
+    "explanationAr": "عادةً ما يُحمّل انحراف كفاءة العمل المباشر غير الملائم إلى مدير الإنتاج، لأنه الأكثر قدرة على التحكم في كمية ونوع ساعات العمل المباشر المستخدمة. لكن مدير الإنتاج هنا لم يتخذ القرار المسبب للانحراف؛ فقد صدرت إليه تعليمات باستخدام قطعة غير مطابقة تتطلب وقتًا إضافيًا. لذلك ينبغي إسناد الانحراف إلى نائب رئيس الإنتاج، صاحب القرار الأكثر تأثيرًا في تحمل التكلفة."
   },
   {
     "unit": 15,
@@ -2593,7 +2625,15 @@
     ],
     "answerIndex": 1,
     "explanation": "An unfavorable direct labor efficiency variance indicates that\nactual hours exceeded standard hours. Too many hours may\nhave been used because of inefficiency on the part of\nemployees, excessive coffee breaks, machine down-time,\ninadequate materials, or materials of poor quality that required\nexcessive rework. An unfavorable direct materials usage\nvariance might be related to an unfavorable labor efficiency\nvariance. Working on a greater quantity of direct materials\nmay require more direct labor time.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "قد ينشأ انحراف غير ملائم في كفاءة العمل المباشر بسبب:",
+    "choicesAr": [
+      "انحراف إنفاق تكاليف صناعية غير مباشرة متغيرة غير ملائم.",
+      "انحراف استخدام مواد مباشرة غير ملائم.",
+      "انحراف حجم تكاليف صناعية غير مباشرة ثابتة غير ملائم.",
+      "انحراف إنفاق تكاليف صناعية غير مباشرة متغيرة ملائم."
+    ],
+    "explanationAr": "يدل انحراف كفاءة العمل المباشر غير الملائم على أن الساعات الفعلية تجاوزت الساعات المعيارية. وقد يرجع ذلك إلى ضعف كفاءة العاملين، أو فترات استراحة طويلة، أو توقف الآلات، أو نقص المواد، أو تدني جودتها بما يستلزم إعادة العمل. وقد يرتبط انحراف استخدام المواد المباشرة غير الملائم بانحراف كفاءة العمل؛ فمعالجة كمية أكبر من المواد قد تتطلب ساعات عمل إضافية."
   },
   {
     "unit": 15,
@@ -2610,7 +2650,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The labor efficiency variance is the standard cost per hour\ntimes the difference between standard and actual hour. The\nstandard labor rate is $50 per hour, and the standard time\nallowed for 9,500 articles is 190,000 hours (9,500 × 20).\nActual hours worked totaled 192,000. Thus, an unfavorable\nvariance of 2,000 hours occurred. The unfavorable labor\nefficiency variance is therefore $100,000 (2,000 hours × $50).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تختص شركة Zazoo, Inc. بمراجعة مقالات المجلات التقنية وتحريرها. وقد وضعت المعايير التالية لتقييم العاملين المهنيين:\nالتكاليف الصناعية غير المباشرة الثابتة السنوية المدرجة عند طاقة عادية قدرها 10,000 مقال مراجع ومحرر      $600,000\nساعات العمل المهني المعيارية لكل 10 مقالات      200\nموازنة مرنة لتكاليف العمل المعيارية لمعالجة 10,000 مقال      $10,000,000\nوتتعلق البيانات التالية بعدد 9,500 مقال جرت مراجعته وتحريره فعليًا خلال السنة:\nإجمالي الساعات المستخدمة من العاملين المهنيين      192,000\nالتكاليف المرنة      $9,120,000\nإجمالي التكلفة      $9,738,000\nما انحراف كفاءة العمل لدى Zazoo خلال السنة؟",
+    "choicesAr": [
+      "$100,000 غير ملائم.",
+      "$238,000 غير ملائم.",
+      "$380,000 ملائم.",
+      "$500,000 ملائم."
+    ],
+    "explanationAr": "يساوي انحراف كفاءة العمل معدل التكلفة المعياري للساعة مضروبًا في الفرق بين الساعات المعيارية والساعات الفعلية. ويبلغ معدل العمل المعياري $50 للساعة، بينما تبلغ الساعات المعيارية المسموح بها لمعالجة 9,500 مقال عدد 190,000 ساعة (9,500 × 20). وقد بلغت الساعات الفعلية 192,000 ساعة؛ أي بزيادة غير ملائمة قدرها 2,000 ساعة. ومن ثم يبلغ انحراف كفاءة العمل غير الملائم $100,000 (2,000 ساعة × $50)."
   },
   {
     "unit": 15,
@@ -2661,7 +2709,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The standard hours allowed were 2,000, and the labor\nefficiency variance was unfavorable; i.e., actual hours\nexceeded standard hours. Given that the variance was\n$1,600, 200 excess hours must have been worked.\n(SQ – AQ) × SP = Labor efficiency variance\n(2,000 hours – AQ) × $8 = –$1,600\n$16,000 – $8AQ = –$1,600\n–$8AQ = –$17,600\nAQ = 2,200 hours",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم شركة نظام التكاليف المعيارية. وفيما يلي بيانات العمل المباشر للمنتج B في أكتوبر:\nالساعات المعيارية المسموح بها للإنتاج الفعلي      2,000\nمعدل الأجر الفعلي للساعة      $8.40\nمعدل الأجر المعياري للساعة      $8.00\nانحراف كفاءة العمل      $1,600 غير ملائم\nما عدد ساعات العمل الفعلية؟",
+    "choicesAr": [
+      "1,800",
+      "1,810",
+      "2,190",
+      "2,200"
+    ],
+    "explanationAr": "بلغت الساعات المعيارية المسموح بها 2,000 ساعة، وكان انحراف كفاءة العمل غير ملائم، أي إن الساعات الفعلية تجاوزت المعيار. وبما أن الانحراف $1,600، فقد استُخدمت 200 ساعة إضافية.\n(الكمية المعيارية − الفعلية) × السعر المعياري = انحراف كفاءة العمل\n(2,000 ساعة − الساعات الفعلية) × $8 = −$1,600\n$16,000 − $8 × الساعات الفعلية = −$1,600\n−$8 × الساعات الفعلية = −$17,600\nالساعات الفعلية = 2,200 ساعة"
   },
   {
     "unit": 15,
@@ -2712,7 +2768,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The total direct labor variance can be isolated into the rate\nvariance and the efficiency variance. The labor rate variance\nequals the actual hours worked, times the standard rate minus\nthe actual rate. The actual rate was $8.70 ($27,840 ÷\n3,200 hours). Thus, the variance is $2,240 U [3,200 × ($8.00 –\n$8.70)].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "من المنتجات التي يصنعها مصنع أدوات الحدائق منشار سلسلة. ويبلغ معيار العمل المباشر لتجميع المنشار واختباره 2.5 ساعة بسعر $8 للساعة. وكان الإنتاج المخطط لأكتوبر 1,200 وحدة، بينما بلغ الإنتاج الفعلي 1,000 وحدة، وبلغت تكلفة العمل المباشر $27,840 عن 3,200 ساعة. ما انحراف معدل أجر العمل المباشر في أكتوبر؟",
+    "choicesAr": [
+      "$2,240 ملائم.",
+      "$2,240 غير ملائم.",
+      "$3,840 ملائم.",
+      "$5,600 غير ملائم."
+    ],
+    "explanationAr": "يمكن فصل انحراف العمل المباشر الإجمالي إلى انحراف معدل الأجر وانحراف الكفاءة. ويساوي انحراف معدل الأجر ساعات العمل الفعلية مضروبة في الفرق بين معدل الأجر المعياري والفعلي. وبلغ معدل الأجر الفعلي $8.70 ($27,840 ÷ 3,200 ساعة). لذا يبلغ الانحراف $2,240 غير ملائم [3,200 × ($8.00 − $8.70)]."
   },
   {
     "unit": 15,
@@ -2729,7 +2793,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The direct labor efficiency variance equals the standard hours\nminus the actual hours, times the standard rate. The standard\nhours are the number of standard labor hours required for the\nactual good output achieved. Actual labor hours equaled\n3,200, standard hours were 2,500 (1,000 units of output ×\n2.5 hours), and the standard direct labor rate was $8. Thus,\nthe labor efficiency variance was $5,600 U [(2,500 standard\nhours – 3,200 actual hours) × $8].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "من المنتجات التي يصنعها مصنع أدوات الحدائق منشار سلسلة. ويبلغ معيار العمل المباشر لتجميع المنشار واختباره 2.5 ساعة بسعر $8 للساعة. وكان الإنتاج المخطط لأكتوبر 1,200 وحدة، بينما بلغ الإنتاج الفعلي 1,000 وحدة، وبلغت تكلفة العمل المباشر $27,840 عن 3,200 ساعة. ما انحراف كفاءة العمل المباشر؟",
+    "choicesAr": [
+      "$2,240 غير ملائم.",
+      "$5,600 ملائم.",
+      "$5,600 غير ملائم.",
+      "$6,090 ملائم."
+    ],
+    "explanationAr": "يساوي انحراف كفاءة العمل المباشر الفرق بين الساعات المعيارية والساعات الفعلية مضروبًا في معدل الأجر المعياري. وتُحدد الساعات المعيارية وفق الإنتاج الجيد المحقق فعلًا. وبلغت الساعات الفعلية 3,200 ساعة، بينما بلغت الساعات المعيارية 2,500 (1,000 وحدة × 2.5 ساعة)، ومعدل الأجر المعياري $8. ولذلك بلغ انحراف الكفاءة $5,600 غير ملائم [(2,500 ساعة معيارية − 3,200 ساعة فعلية) × $8]."
   },
   {
     "unit": 15,
@@ -2746,7 +2818,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The direct labor efficiency variance equals the difference\nbetween the standard and actual amounts of labor hours times\nthe standard labor rate. The standard amount for the actual\noutput is 6,500 direct labor hours (1.25 DLH × 5,200 units).\nThe efficiency variance is therefore $1,200 U [(6,500 standard\nhours – 6,600 actual hours) × $12].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "حددت الشركة إجمالي تكلفة العمل المباشر المدرجة لشهر بمبلغ $75,000، بافتراض إنتاج 5,000 وحدة. واستُخدم معيار العمل المباشر التالي، المقاس بساعات العمل المباشر (DLH)، لإعداد الموازنة:\n1.25 ساعة عمل مباشر × $12.00/ساعة = $15.00 لكل وحدة منتجة\nوكانت النتائج الفعلية للشهر:\nالوحدات المنتجة فعليًا      5,200\nساعات العمل المباشر الفعلية      6,600\nتكلفة العمل المباشر الفعلية      $77,220\nما انحراف كفاءة العمل المباشر خلال الشهر؟",
+    "choicesAr": [
+      "$4,200 غير ملائم.",
+      "$3,000 غير ملائم.",
+      "$2,220 غير ملائم.",
+      "$1,200 غير ملائم."
+    ],
+    "explanationAr": "يساوي انحراف الكفاءة الفرق بين ساعات العمل المعيارية والفعلية مضروبًا في معدل الأجر المعياري. وتبلغ الساعات المعيارية المسموح بها للإنتاج الفعلي 6,500 ساعة (1.25 ساعة × 5,200 وحدة). ومن ثم يبلغ انحراف الكفاءة $1,200 غير ملائم [(6,500 ساعة معيارية − 6,600 ساعة فعلية) × $12]."
   },
   {
     "unit": 15,
@@ -2763,7 +2843,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The standard direct labor cost for 1,230 actual hours at $6 per\nhour equals $7,380. The rate variance of $246 was\nunfavorable, which means that the actual cost was $246\nhigher than the standard cost, or $7,626 ($7,380 + $246).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أنتجت شركة 600 وحدة من أحد منتجاتها في السنة الماضية. وكان معيار العمل المسموح به 2 ساعة لكل وحدة، بمعدل معياري $6 للساعة. وبلغت الساعات الفعلية 1,230 ساعة، وكان انحراف معدل الأجر $246 غير ملائم، وانحراف كفاءة العمل $180 غير ملائم. ما تكلفة العمل المباشر الفعلية للفترة؟",
+    "choicesAr": [
+      "$7,134",
+      "$7,200",
+      "$7,380",
+      "$7,626"
+    ],
+    "explanationAr": "تبلغ تكلفة العمل المباشر المعيارية للساعات الفعلية البالغة 1,230 ساعة عند معدل $6 للساعة مبلغ $7,380. ولأن انحراف معدل الأجر البالغ $246 غير ملائم، فإن التكلفة الفعلية تزيد بمبلغ $246 على التكلفة المعيارية للساعات الفعلية، فتساوي $7,626 ($7,380 + $246)."
   },
   {
     "unit": 15,
@@ -2780,7 +2868,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The direct labor efficiency variance equals the difference\nbetween the standard and actual amounts of labor hours times\nthe standard rate. The standard rate is $10 per hour. The\nactual amount of labor hours is 3,200 hours. The standard\namount of labor hours is 3,000 (2 hours × 1,500 units). Thus,\nthe direct labor efficiency variance is $2,000 [(3,000 – 3,200) ×\n$10]. The variance is unfavorable because more labor hours\nwere used than the standard.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تنتج شركة منتجًا واحدًا بتكلفة معيارية للعمل المباشر مقدارها 2 ساعة بسعر $10.00 للساعة. وخلال نوفمبر أُنتجت 1,500 وحدة تطلبت 3,200 ساعة بمعدل $10.25 للساعة. ما انحراف كفاءة العمل المباشر غير الملائم؟",
+    "choicesAr": [
+      "$2,050",
+      "$2,000",
+      "$1,250",
+      "$1,200"
+    ],
+    "explanationAr": "يساوي انحراف كفاءة العمل المباشر الفرق بين ساعات العمل المعيارية والفعلية مضروبًا في معدل الأجر المعياري. ويبلغ المعدل المعياري $10 للساعة، والساعات الفعلية 3,200 ساعة. أما الساعات المعيارية فتبلغ 3,000 ساعة (2 ساعة × 1,500 وحدة). لذا يبلغ انحراف الكفاءة $2,000 [(3,000 − 3,200) × $10]، وهو غير ملائم لأن الساعات الفعلية تجاوزت الساعات المعيارية."
   },
   {
     "unit": 15,
@@ -2865,7 +2961,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A favorable labor rate variance means the company is using\nlower-paid workers than what the standard-setters thought\nshould be used. These workers are apparently less\nexperienced or otherwise less skilled. As a result, the use of\nlower-paid workers may lead to an unfavorable labor efficiency\nvariance or an unfavorable materials usage variance as the\nlower-skilled workers require more hours or more materials\nthan would more skilled employees.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لدى شركة انحراف ملائم في سعر (معدل أجر) العمل المباشر. ما مصدر القلق الأكبر الذي قد تواجهه الشركة بسبب هذا الانحراف؟",
+    "choicesAr": [
+      "قد لا تستمر الظروف التي أدت إلى الانحراف الملائم مستقبلًا.",
+      "ربما لا يستخدم مدير الإنتاج الموارد البشرية بأعلى كفاءة ممكنة.",
+      "قد يؤدي السبب وراء هذا الانحراف الملائم إلى انحرافات أخرى غير ملائمة أكبر على امتداد سلسلة القيمة.",
+      "الإنتاج الفعلي أقل من الإنتاج المدرج في الموازنة."
+    ],
+    "explanationAr": "يعني انحراف معدل الأجر الملائم أن المنشأة تستخدم عمالًا يتقاضون أجورًا أقل مما توقع واضعو المعايير. وقد يكون هؤلاء العاملون أقل خبرة أو مهارة. وقد يؤدي استخدامهم إلى انحراف كفاءة عمل غير ملائم أو انحراف استخدام مواد غير ملائم لأنهم يحتاجون إلى ساعات عمل أو مواد أكثر مما يحتاجه العمال الأعلى مهارة."
   },
   {
     "unit": 15,
@@ -2916,7 +3020,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Any flexible budget variance for direct labor (or direct material)\ncan be subdivided into two component variances, the rate\n(price) variance and the efficiency (quantity, usage) variance.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم شركة التكاليف المعيارية والموازنة المرنة لتقييم العمل المباشر. ويمكن عادةً تقسيم انحراف الموازنة المرنة للعمل المباشر إلى أي انحرافين؟",
+    "choicesAr": [
+      "انحراف معدل أجر العمل المباشر وانحراف كفاءة العمل المباشر.",
+      "انحراف تكلفة العمل المباشر وانحراف حجم العمل المباشر.",
+      "انحراف معدل أجر العمل المباشر وانحراف حجم العمل المباشر.",
+      "انحراف تكلفة العمل المباشر وانحراف كفاءة العمل المباشر."
+    ],
+    "explanationAr": "يمكن تحليل أي انحراف للموازنة المرنة للعمل المباشر، وكذلك للمواد المباشرة، إلى انحرافين مكونين: انحراف المعدل (السعر)، وانحراف الكفاءة (الكمية أو الاستخدام)."
   },
   {
     "unit": 15,
@@ -2933,7 +3045,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The total variance for labor consists of a price (rate) variance\nand an efficiency (usage) variance. Since the total variance is\n$15,000 favorable, the price variance must be $33,000\nfavorable (–$18,000 + $33,000 = $15,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "حققت شركة انحراف عمل إجماليًا ملائمًا بمبلغ $15,000، وانحراف كفاءة عمل غير ملائم بمبلغ $18,000. كم يبلغ انحراف سعر (معدل أجر) العمل؟",
+    "choicesAr": [
+      "$3,000 ملائم.",
+      "$3,000 غير ملائم.",
+      "$33,000 ملائم.",
+      "$33,000 غير ملائم."
+    ],
+    "explanationAr": "يتكون إجمالي انحراف العمل من انحراف السعر (معدل الأجر) وانحراف الكفاءة (الاستخدام). وبما أن الانحراف الإجمالي $15,000 ملائم، يجب أن يكون انحراف السعر $33,000 ملائمًا، لأن (−$18,000 + $33,000 = $15,000)."
   },
   {
     "unit": 15,
@@ -2950,7 +3070,15 @@
     ],
     "answerIndex": 3,
     "explanation": "No variance by itself is either good or bad. Everything\ndepends on context and what can be revealed by the\ncomponent variances (if any) of a given variance. For\nexample, a favorable direct materials variance may reflect\nunrealistically pessimistic standards for materials usage, while\na favorable labor variance may reflect workers rushing the\nprocess and producing inferior goods.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أظهرت السجلات المحاسبية لشركة انحرافًا ملائمًا في كفاءة العمل للفترة المنتهية. أي تعليقات المسؤولين التالية تعكس فهمًا محدودًا لإجراءات التحقيق في الانحرافات؟\n1. «يمكن استخدام اختبارات إحصائية لتحديد ما إذا كان الانحراف يستدعي التحقيق».\n2. «لنفحصه؛ فقد تكون عملياتنا سليمة لكن معيار وقت العمل يحتاج إلى تعديل».\n3. «لا أؤمن بكل قواعد تحديد الانحرافات التي تستحق التحقيق؛ فالتقدير المهني السليم هو الأساس».\n4. «لا تقلقوا؛ فقد نشأ الانحراف من حدث عشوائي ويقع ضمن حدود النتائج المقبولة المحتملة».\n5. «لماذا القلق؟ الانحراف ملائم، فلنتجاهله».",
+    "choicesAr": [
+      "2 و5 فقط.",
+      "1 و3 و4 فقط.",
+      "4 و5 فقط.",
+      "5 فقط."
+    ],
+    "explanationAr": "لا يمكن وصف أي انحراف بأنه جيد أو سيئ لمجرد اتجاهه؛ بل يعتمد الحكم على السياق وعلى ما تكشفه الانحرافات المكونة. فقد يعكس انحراف مواد مباشر ملائم معايير استخدام متشائمة وغير واقعية، بينما قد يعكس انحراف عمل ملائم استعجال العمال في التنفيذ وإنتاج سلع أقل جودة. لذلك فمجرد كون الانحراف ملائمًا ليس مبررًا لتجاهله."
   },
   {
     "unit": 15,
@@ -3035,7 +3163,15 @@
     ],
     "answerIndex": 1,
     "explanation": "If the new employees are still learning the recipes, their\nrelatively unskilled labor is likely to result in excessive\nmaterials usage and labor inefficiency. An unfavorable\nmaterial quantity variance and an unfavorable labor efficiency\nvariance are indicated by the company’s analysis.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "شهد مطعم بيتزا مؤخرًا انخفاضًا في هامش الربح رغم ثبات المبيعات. وأظهر تحليل مدخلات التكاليف المباشرة النتائج التالية:\n• انحراف سعر مواد ملائم\n• انحراف كمية مواد غير ملائم\n• انحراف معدل أجر عمل ملائم\n• انحراف كفاءة عمل غير ملائم\nما السبب الأكثر احتمالًا لانخفاض هامش الربح؟",
+    "choicesAr": [
+      "رفع مورد الجبن أسعاره.",
+      "لا يزال الموظفون الجدد يتعلمون وصفات إعداد الطعام.",
+      "يتقاضى الموظفون أجورًا أعلى من المعدلات المعيارية المدرجة.",
+      "يعمل الموظفون ساعات أقل من الساعات المعيارية المدرجة."
+    ],
+    "explanationAr": "إذا كان الموظفون الجدد ما زالوا يتعلمون الوصفات، فإن قلة خبرتهم قد تؤدي إلى استخدام مواد أكثر من اللازم وضعف كفاءة العمل. وهذا يتسق مع انحراف كمية المواد غير الملائم وانحراف كفاءة العمل غير الملائم الظاهرين في التحليل."
   },
   {
     "unit": 15,
@@ -3052,7 +3188,15 @@
     ],
     "answerIndex": 0,
     "explanation": "An unfavorable labor rate variance is usually caused by\nassigning skilled workers to a production process when the\nstandard price calculation assumes that unskilled (and\ntherefore lower-paid) workers could complete the job. Thus,\nhiring less-skilled and lower-paid workers is unlikely to result in\nan unfavorable labor rate variance.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "وظفت منشأة صناعية مؤخرًا عددًا كبيرًا من العاملين استعدادًا لزيادة المشاريع القادمة. وبعد إنجاز المشاريع الأولى، وجد محاسبو الإدارة انحرافًا غير ملائم في معدل أجر العمل المباشر. أي التفسيرات التالية هو الأقل احتمالًا لسبب هذا الانحراف؟",
+    "choicesAr": [
+      "كان الموظفون الجدد أقل مهارة.",
+      "أدى اتفاق نقابي جديد إلى رفع أجور العمال.",
+      "استخدام عمال ذوي مهارات أعلى من المطلوب لأعمال أقل مهارة، ما رفع التكلفة.",
+      "تكلفة العمل الفعلية أعلى من التكلفة المعيارية."
+    ],
+    "explanationAr": "ينشأ انحراف معدل أجر العمل غير الملائم غالبًا عندما يُكلف عمال مهرة بعمليات إنتاجية تفترض المعايير أن عمالًا أقل مهارة وأجرًا يستطيعون تنفيذها. لذلك فإن توظيف عمال أقل مهارة وأجرًا لا يُتوقع أن يؤدي في حد ذاته إلى انحراف معدل أجر غير ملائم."
   },
   {
     "unit": 15,
@@ -3069,7 +3213,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A favorable labor rate variance is usually caused by assigning\nworkers with less skill to a job. However, a favorable rate\nvariance may be offset by an unfavorable efficiency variance\nor lower-quality products.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تسعى شركة XYZ إلى تخفيض تكاليف العمالة، ولذلك وظفت عمالًا أقل مهارة. ما النتيجة الأكثر احتمالًا لإسناد العمل إليهم؟",
+    "choicesAr": [
+      "منتجات أعلى جودة.",
+      "انحراف معدل أجر عمل غير ملائم.",
+      "إنجاز الأعمال في وقت أقصر.",
+      "انحراف كفاءة عمل غير ملائم."
+    ],
+    "explanationAr": "يحدث عادةً انحراف معدل أجر عمل ملائم عند تكليف عمال أقل مهارة بعمل معين؛ لكن قد يقابل هذا الانحراف الملائم انحراف كفاءة غير ملائم أو منتجات أقل جودة."
   },
   {
     "unit": 15,
