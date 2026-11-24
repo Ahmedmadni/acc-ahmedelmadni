@@ -848,7 +848,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A profit center is responsible for revenues and expenses but\nnot for the amount of capital invested. The managers control\nservices offered and hiring. Each office therefore is a profit\ncenter because its manager is responsible for revenues and\nexpenses.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتخصص منشأة Accountants for Hire في تقديم خدمات محاسبية لمجموعة واسعة من العملاء في مناطق جغرافية متعددة. وتتنوع الخدمات والمؤهلات المطلوبة من سوق محلية إلى أخرى. ولكل مكتب جغرافي مدير يتحكم في أنواع الخدمات المحاسبية المقدمة للعملاء وتعيين الموظفين اللازمين لتقديمها. ويحدد الرئيس التنفيذي مراكز المسؤولية المناسبة لإدارة الأداء في المنشأة. بناء على هذا السيناريو، ما أفضل نوع لمركز المسؤولية لكل مكتب جغرافي؟",
+    "choicesAr": [
+      "مركز تكلفة.",
+      "مركز استثمار.",
+      "مركز ربح.",
+      "مركز إيراد."
+    ],
+    "explanationAr": "مركز الربح مسؤول عن الإيرادات والمصروفات، لا مقدار رأس المال المستثمر. ويتحكم المديرون في الخدمات المقدمة والتعيينات. لذلك يعد كل مكتب مركز ربح لأن مديره مسؤول عن الإيرادات والمصروفات."
   },
   {
     "unit": 16,
@@ -865,7 +873,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Common costs are the cost of products, activities, facilities,\nservices, or operations shared by two or more cost objects.\nThey are indirect costs because they cannot be traced to a\nparticular cost object in an economically feasible manner.\nHence, they must be allocated.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "التكاليف المشتركة هي:",
+    "choicesAr": [
+      "تكاليف مباشرة.",
+      "تكاليف جارية.",
+      "تكاليف قابلة للرقابة.",
+      "تكاليف غير مباشرة."
+    ],
+    "explanationAr": "التكاليف المشتركة هي تكاليف المنتجات أو الأنشطة أو المرافق أو الخدمات أو العمليات التي يشترك فيها أكثر من غرض تكلفة. وهي تكاليف غير مباشرة لأنه لا يمكن تتبعها إلى غرض تكلفة معين بطريقة مجدية اقتصاديًا. ولذلك يلزم توزيعها."
   },
   {
     "unit": 16,
@@ -882,7 +898,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A profit center is a segment of a company responsible for both\nrevenues and expenses. A profit center has the authority to\nmake decisions concerning markets (revenues) and sources\nof supply (costs).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تدرج الإيرادات القابلة للرقابة في تقرير أداء أي من المركزين التاليين؟\nمركز الربح | مركز التكلفة",
+    "choicesAr": [
+      "لا | لا",
+      "لا | نعم",
+      "نعم | لا",
+      "نعم | نعم"
+    ],
+    "explanationAr": "مركز الربح قطاع من الشركة مسؤول عن الإيرادات والمصروفات معًا. ويتمتع بصلاحية اتخاذ القرارات المتعلقة بالأسواق (الإيرادات) ومصادر التوريد (التكاليف)."
   },
   {
     "unit": 16,
@@ -899,7 +923,15 @@
     ],
     "answerIndex": 0,
     "explanation": "A cost center is a responsibility center that is responsible for\ncosts only. This allows the management of the cost center to\nscrutinize costs more closely than if they were responsible for\nmore than just costs. As such, this represents an advantage of\na cost center rather than a disadvantage.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي لا يعد عيبًا محتملًا لمركز التكلفة؟",
+    "choicesAr": [
+      "زيادة الرقابة على التكاليف.",
+      "احتمال نقل التكاليف إلى مراكز أخرى.",
+      "احتمال تجاهل القضايا طويلة الأجل.",
+      "تعقيد توزيع تكاليف أقسام الخدمات على مراكز التكلفة."
+    ],
+    "explanationAr": "مركز التكلفة مركز مسؤولية عن التكاليف فقط. ويتيح ذلك لإدارته فحص التكاليف بدقة أكبر مما لو كانت مسؤولة عن أمور أخرى إلى جانب التكاليف. وهذا يمثل ميزة لمركز التكلفة وليس عيبًا."
   },
   {
     "unit": 16,
@@ -916,7 +948,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Investment centers are responsible for revenues, expenses,\nand invested capital. However, due to the fact that they\nusually represent only a subsidiary or division of a company,\nthey are not responsible for the overall firm’s earnings per\nshare.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "مركز الاستثمار مسؤول عن كل ما يلي باستثناء:",
+    "choicesAr": [
+      "الإيرادات.",
+      "ربحية السهم.",
+      "المصروفات.",
+      "رأس المال المستثمر."
+    ],
+    "explanationAr": "مراكز الاستثمار مسؤولة عن الإيرادات والمصروفات ورأس المال المستثمر. ولكنها عادة تمثل شركة تابعة أو قسمًا من الشركة، ولذلك لا تكون مسؤولة عن ربحية سهم المنشأة ككل."
   },
   {
     "unit": 16,
@@ -933,7 +973,15 @@
     ],
     "answerIndex": 0,
     "explanation": "A cost center is responsible for costs only. In this case, cost\ndrivers are the relevant performance measure and the\nmanager is not evaluated on revenue, profit, or invested\ncapital.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يُساءل مدير الإنتاج في شركة عن التحكم في التكاليف مع تصنيع منتجات عالية الجودة. كما يقدم توصيات لتحسين المعدات واستبدالها. وفي هذه السوق يتأثر العملاء بدرجة كبيرة بجودة المنتج. ما نوع مركز المسؤولية الذي يديره مدير الإنتاج؟",
+    "choicesAr": [
+      "مركز تكلفة.",
+      "مركز استثمار.",
+      "مركز ربح.",
+      "مركز إيراد."
+    ],
+    "explanationAr": "مركز التكلفة مسؤول عن التكاليف فقط. وفي هذه الحالة تكون محركات التكلفة مقياس الأداء الملائم، ولا يُقيّم المدير على الإيرادات أو الربح أو رأس المال المستثمر."
   },
   {
     "unit": 16,
@@ -950,7 +998,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The difficulty with common costs is that they are indirect costs\nwhose allocation may be arbitrary. A direct cause-and-effect\nrelationship between a common cost and the actions of the\ncost object to which it is allocated is desirable. Such a\nrelationship promotes acceptance of the allocation by\nmanagers who perceive the fairness of the procedure, but\nidentification of cause and effect may not be feasible.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "على أي أساس يرجح أن يتقبل المديرون توزيع التكاليف المشتركة؟",
+    "choicesAr": [
+      "السبب والنتيجة.",
+      "القدرة على تحمل التكلفة.",
+      "العدالة.",
+      "المنافع المتحققة."
+    ],
+    "explanationAr": "تكمن صعوبة التكاليف المشتركة في كونها تكاليف غير مباشرة قد يكون توزيعها اعتباطيًا. ومن المرغوب وجود علاقة سبب ونتيجة مباشرة بين التكلفة المشتركة وإجراءات غرض التكلفة الذي تحمل عليه. وتعزز هذه العلاقة قبول المديرين للتوزيع لإدراكهم عدالة الإجراء، لكن تحديد العلاقة السببية قد لا يكون ممكنًا."
   },
   {
     "unit": 16,
@@ -984,7 +1040,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Budgeted rates and standard hours allowed for output attained\n(i.e., flexible budgeting) for variable costs, and budgeted rates\nand capacity available for fixed costs, are the soundest bases\nfor allocating service department costs.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي طرق التوزيع التالية تحقق أفضل حافز لأقسام الإنتاج حتى لا تقلل تقديرات استخدامها المخطط للخدمات في بداية فترة الموازنة، وتدفع أقسام الخدمات إلى كفاءة التكلفة؟",
+    "choicesAr": [
+      "استخدام المعدلات والساعات الفعلية لكل من التكاليف الثابتة والمتغيرة.",
+      "استخدام المعدلات المقدرة والساعات المعيارية المسموح بها للإنتاج المحقق للتكاليف المتغيرة، والمعدلات المقدرة والطاقة المتاحة للتكاليف الثابتة.",
+      "استخدام المعدلات والكميات المبنية على المتوسطات التاريخية طويلة الأجل لكل من التكاليف المتغيرة والثابتة.",
+      "استخدام مبلغ إجمالي مقدر بناء على تقديرات أقسام الإنتاج لكل من التكاليف المتغيرة والثابتة."
+    ],
+    "explanationAr": "تعد المعدلات المقدرة والساعات المعيارية المسموح بها للإنتاج المحقق (أي الموازنة المرنة) للتكاليف المتغيرة، والمعدلات المقدرة والطاقة المتاحة للتكاليف الثابتة، من أكثر الأسس ملاءمة لتوزيع تكاليف أقسام الخدمات."
   },
   {
     "unit": 16,
@@ -1001,7 +1065,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Basing the allocation of service department cost on\nanticipated usage forces using department managers to\nrealistically assess their projected needs. Waiting until actual\nusage levels are known unfairly penalizes departments that\nhad unforeseen emergency needs arise.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ركّب مستشفى نظام حاسوب جديدًا صُمم وأُنشئ على أساس ساعات الاستخدام المتوقعة التي تحتاجها أقسام المستشفى المختلفة وفق توقعات مديريها. وجميع تكاليف تشغيل النظام تقريبًا ثابتة. ما الطريقة الأكثر انتظامًا ومنطقية لتوزيع تكاليف النظام الجديد على الأقسام؟",
+    "choicesAr": [
+      "التوزيع بالتساوي على الأقسام.",
+      "حسب عدد ساعات الاستخدام المتوقعة.",
+      "حسب الاستخدام الفعلي لكل قسم.",
+      "حسب الإيرادات التي يحققها كل قسم."
+    ],
+    "explanationAr": "إن توزيع تكاليف قسم الخدمات على أساس الاستخدام المتوقع يدفع مديري الأقسام المستفيدة إلى تقييم احتياجاتهم المتوقعة بواقعية. أما الانتظار حتى معرفة الاستخدام الفعلي فقد يحمّل بصورة غير عادلة الأقسام التي ظهرت لديها احتياجات طارئة غير متوقعة."
   },
   {
     "unit": 16,
@@ -1018,7 +1090,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Under the stand-alone method, the common cost is allocated\nto each cost object on a proportionate basis. Because each\ndepartment is going to share the new equipment equally, each\ndepartment should be allocated 50% of the cost.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "اشترى القسم المالي جهاز نسخ ملونًا جديدًا مقابل $10,000 للمساعدة في إعداد التقارير المطلوبة. وكان قسم تقنية المعلومات يخطط لشراء جهاز مماثل مقابل $10,000 إضافية، لكنه أدرك أن موارد الجهاز الذي اشتراه القسم المالي تكفي لاستخدام القسمين بالتساوي. لتوزيع التكلفة المشتركة للمعدات بعدالة، ينبغي للمراقب المالي استخدام:",
+    "choicesAr": [
+      "طريقة التكلفة الإضافية وتحميل $10,000 على القسم المالي.",
+      "طريقة التكلفة المستقلة وتحميل $5,000 على كل قسم.",
+      "طريقة مجمل الربح الثابت وتحميل $5,000 على كل قسم.",
+      "طريقة صافي القيمة القابلة للتحقق وتحميل $10,000 على القسم المالي."
+    ],
+    "explanationAr": "وفق طريقة التكلفة المستقلة توزع التكلفة المشتركة على كل غرض تكلفة على أساس نسبي. ولأن القسمين سيشتركان في استخدام المعدات الجديدة بالتساوي، ينبغي تحميل كل قسم 50% من التكلفة."
   },
   {
     "unit": 16,
@@ -1052,7 +1132,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Under the stand-alone method, the common costs are\nallocated by weighting the costs of each user as a separate\nentity. The common cost is allocated to each cost object on a\nproportionate basis.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "إذا وزعت شركة التكاليف المشتركة بترجيح تكلفة كل مستخدم كما لو كان كيانًا مستقلًا، فأي طرق توزيع التكاليف تستخدم؟",
+    "choicesAr": [
+      "طريقة التكلفة الإضافية.",
+      "الطريقة التبادلية.",
+      "طريقة التكلفة المستقلة.",
+      "طريقة التوزيع التنازلي."
+    ],
+    "explanationAr": "وفق طريقة التكلفة المستقلة، توزع التكاليف المشتركة بترجيح تكلفة كل مستخدم كما لو كان كيانًا مستقلًا. وتحمل التكلفة المشتركة على كل غرض تكلفة بنسبة محددة."
   },
   {
     "unit": 16,
@@ -1069,7 +1157,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Long-term cost per unit is a business metric that represents\nthe average cost per unit of output over the long run. Whether\ncost allocations are included in the calculation of long-term\ncost per unit or not will not affect the fairness of the common\ncost allocation. Therefore, it will not affect the performance\nevaluation.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عند تقييم الأداء في حالة توزيع التكاليف المشتركة على قطاعات الأعمال، ينبغي مراعاة جميع المسائل التالية باستثناء:",
+    "choicesAr": [
+      "عدم إدراج التكاليف الموزعة في حساب تكلفة الوحدة طويلة الأجل.",
+      "عدم خضوع التكاليف المشتركة لرقابة مديري القطاعات.",
+      "إمكانية تأثر التوزيع بمحركات التكلفة التي تستخدمها قطاعات أخرى.",
+      "احتمال عدم وجود علاقة سبب ونتيجة بين التكلفة الموزعة وعمليات القطاع."
+    ],
+    "explanationAr": "تكلفة الوحدة طويلة الأجل مقياس أعمال يمثل متوسط تكلفة وحدة المخرجات على المدى الطويل. وسواء أدرجت التكاليف الموزعة في حساب تكلفة الوحدة طويلة الأجل أم لا، فإن ذلك في حد ذاته لا يؤثر في عدالة توزيع التكلفة المشتركة. ومن ثم لا يؤثر في تقييم الأداء وفق سياق السؤال."
   },
   {
     "unit": 16,
@@ -1086,7 +1182,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Using the incremental cost allocation method, the amount\nallocated to Division 3 would be the costs of Divisions 1 and 2\nsubtracted from the total cost. Therefore, the amount allocated\nto Division 3 would be $10,700 ($480,700 – $325,000 –\n$145,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تدير شركة مراكز ربح منفصلة، يبيع كل منها منتجًا مميزًا. ويستأجر كل قسم حاليًا مستودعه الخاص وفق البيانات التالية:\nالقسم | التكلفة السنوية | المساحة المطلوبة بالقدم المربع\nالقسم 1 | $325,000 | 65,000\nالقسم 2 | 145,000 | 30,000\nالقسم 3 | 30,000 | 5,000\nأمام الشركة فرصة لاستئجار مستودع مساحته 110,000 قدم مربع مقابل $480,700 سنويًا. وستشترك الأقسام جميعها في استخدامه، مع تخصيص المساحة الإضافية غير المستخدمة للنمو المتوقع للقسم 3. إذا استخدمت الشركة طريقة توزيع التكلفة الإضافية لتوزيع تكلفة المستودع الكبير البالغة $480,700، فما المبلغ المحمل على القسم 3؟",
+    "choicesAr": [
+      "$10,700",
+      "$24,035",
+      "$28,842",
+      "$65,550"
+    ],
+    "explanationAr": "باستخدام طريقة توزيع التكلفة الإضافية، يكون المبلغ المحمل على القسم 3 هو إجمالي التكلفة مطروحًا منه تكاليف القسمين 1 و2. وبالتالي يكون المبلغ المحمل على القسم 3 هو $10,700 ($480,700 – $325,000 – $145,000)."
   },
   {
     "unit": 16,
@@ -1103,7 +1207,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Controllable costs can be affected by the efforts of a manager.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "التكاليف القابلة للرقابة هي التكاليف التي:",
+    "choicesAr": [
+      "تقرر الإدارة تحملها في الفترة الحالية لتحقيق أهداف بخلاف تنفيذ طلبات العملاء.",
+      "يرجح أن تتأثر بمقدار الاهتمام الذي يوليها إياه مدير محدد.",
+      "تتغير إجمالًا استجابة لتغيرات صغيرة في معدل استخدام الطاقة.",
+      "لا تتأثر بالقرارات الإدارية الحالية."
+    ],
+    "explanationAr": "التكاليف القابلة للرقابة يمكن أن تتأثر بجهود المدير."
   },
   {
     "unit": 16,
@@ -1120,7 +1232,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Controllable expenses are directly regulated by a manager of\na responsibility center at a given level of production within a\ngiven time span.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "المصروف القابل للرقابة:",
+    "choicesAr": [
+      "مصروف مستقبلي متوقع يختلف بين البدائل المختلفة.",
+      "مصروف لا يختلف مبلغه الفعلي عادة عن المبلغ المعياري (المقدر).",
+      "مصروف يمكن التأثير فيه مباشرة عند مستوى معين من السلطة الإدارية خلال فترة زمنية محددة.",
+      "مصروف يبقى شبه متغير في مجموعه ضمن النطاق الملائم خلال فترة محددة."
+    ],
+    "explanationAr": "يتحكم مدير مركز المسؤولية مباشرة في المصروفات القابلة للرقابة عند مستوى إنتاج معين وخلال فترة زمنية محددة."
   },
   {
     "unit": 16,
@@ -1137,7 +1257,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The most effective way to encourage more use of a service is\nto keep the user from having to bear the cost of the service.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ترغب إدارة شركة في تشجيع جميع الأقسام الأخرى على الاستعانة بالقسم القانوني عندما تستدعي الظروف ذلك. لتحقيق هذا الهدف، ينبغي أن تكون تكاليف القسم القانوني:",
+    "choicesAr": [
+      "موزعة على المستخدمين حسب التكلفة الفعلية للساعات المستخدمة.",
+      "موزعة على المستخدمين حسب التكلفة المقدرة للساعات المستخدمة فعليًا.",
+      "موزعة على المستخدمين حسب التكلفة المعيارية لنوع الخدمة المقدمة.",
+      "متحملة كمصروف عام على مستوى الشركة."
+    ],
+    "explanationAr": "من أكثر الطرق فعالية لتشجيع زيادة استخدام خدمة ما عدم تحميل المستخدم تكلفة تلك الخدمة."
   },
   {
     "unit": 16,
@@ -1154,7 +1282,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The Financial Consulting Division has the fewest employees.\nUsing that as the basis for allocation would therefore be the\nmost advantageous.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لدى منشأة ضريبية أقسام الامتثال والتخطيط الضريبي والاستشارات المالية. بناء على بيانات الأقسام التالية، أي أسس توزيع مصروفات الشركة المشتركة يرجح أن يكون الأقل تأثيرًا سلوكيًا سلبيًا على مدير قسم الاستشارات المالية؟\nالبيان | الامتثال | التخطيط الضريبي | الاستشارات المالية\nالإيرادات | $4,500,000 | $6,000,000 | $4,500,000\nالمصروفات المتغيرة | 1,500,000 | 3,750,000 | 2,250,000\nعدد الموظفين | 68 | 76 | 56",
+    "choicesAr": [
+      "الإيرادات.",
+      "هامش المساهمة.",
+      "التوزيع بالتساوي.",
+      "عدد الموظفين."
+    ],
+    "explanationAr": "يضم قسم الاستشارات المالية أقل عدد من الموظفين. ولذلك يكون استخدام عدد الموظفين أساسًا للتوزيع هو الأكثر ملاءمة لمصلحته."
   },
   {
     "unit": 16,
