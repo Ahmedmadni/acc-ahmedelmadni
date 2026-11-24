@@ -76,6 +76,8 @@ jobs:
         run: node --test scripts/tests/cma-unit15-arabic-wave8.test.mjs
       - name: CMA Unit 15 wave 9 completed direct labor and mix-yield Arabic release checks
         run: node --test scripts/tests/cma-unit15-arabic-wave9.test.mjs
+      - name: CMA Unit 16 responsibility accounting Arabic source checks
+        run: node --test scripts/tests/cma-unit16-arabic-wave1.test.mjs
       - name: CMA browser-only translation and external fallback tests
         run: node --test scripts/tests/cma-translation-browser.test.mjs
       - name: CMA on-site Part 2 bank regression tests
