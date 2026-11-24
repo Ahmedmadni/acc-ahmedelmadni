@@ -316,8 +316,8 @@ const wave14=new Map([
  [63,[782,3,"e4758869"]],[64,[783,2,"ebe2a6e2"]],[65,[784,3,"bdcbd68f"]],
  [66,[784,3,"a5ef67cb"]],[67,[785,3,"33942315"]],
 ]);
-test("Unit 15 Wave 14: 192 drafts and 11 immutable overhead sources",()=>{
- const localized=rows.filter(r=>r.stemAr!==undefined||r.choicesAr!==undefined||r.explanationAr!==undefined);
+test("Unit 15 Wave 14: preserve 192 earlier drafts and 11 immutable overhead sources",()=>{
+ const localized=rows.filter(r=>r.section<=6&&(r.stemAr!==undefined||r.choicesAr!==undefined||r.explanationAr!==undefined));
  assert.equal(localized.length,192);
  assert.deepEqual(localized.filter(r=>r.section===6).map(r=>r.number),Array.from({length:67},(_,i)=>i+1).filter(n=>![28,53,58,61].includes(n)));
  for(const [n,[page,index,hash]] of wave14){
@@ -349,6 +349,49 @@ test("Unit 15 Wave 14: independent calculations and ambiguous-source holds",()=>
  for(const [n,page] of [[58,776],[61,780]]){
   const held=q(6,n);
   assert.equal(held.page,page); assert.equal(held.answerIndex,0);
+  assert.equal(held.stemAr,undefined); assert.equal(held.choicesAr,undefined); assert.equal(held.explanationAr,undefined);
+ }
+});
+
+const wave15=new Map([
+ ["7.14",[802,2,"953e5e21"]],["7.15",[803,3,"f68ac305"]],["7.16",[804,1,"58d0f38a"]],
+ ["7.17",[805,1,"44e4b003"]],["7.18",[806,2,"5dc488f2"]],
+ ["8.1",[808,3,"66b971b3"]],["8.3",[810,3,"661e32ec"]],["8.4",[811,3,"6157d350"]],
+ ["8.5",[812,2,"40a2f67a"]],["8.12",[823,3,"6a4c3488"]],
+]);
+test("Unit 15 Wave 15: 202 drafts and 10 immutable combined/sales variance sources",()=>{
+ const localized=rows.filter(r=>r.stemAr!==undefined||r.choicesAr!==undefined||r.explanationAr!==undefined);
+ assert.equal(localized.length,202);
+ assert.deepEqual(localized.filter(r=>r.section===7).map(r=>r.number),[14,15,16,17,18]);
+ assert.deepEqual(localized.filter(r=>r.section===8).map(r=>r.number),[1,3,4,5,12]);
+ for(const [id,[page,index,hash]] of wave15){
+  const [s,n]=id.split(".").map(Number),r=q(s,n);
+  assert.equal(r.page,page); assert.equal(r.answerIndex,index);
+  assert.equal(r.answerStatus,"source"); assert.equal(r.sourceTextStatus,undefined);
+  assert.equal(fingerprint(JSON.stringify([r.stem,r.choices,r.explanation,r.answerIndex,r.page])),hash);
+  assert.equal(validateCmaTranslation({question:{en:r.stem},choices:{en:r.choices},explanation:{en:r.explanation}},
+   {question:r.stemAr,choices:r.choicesAr,explanation:r.explanationAr}).valid,true,id);
+  for(const [en,ar] of [[r.stem,r.stemAr],...r.choices.map((c,i)=>[c,r.choicesAr[i]]),[r.explanation,r.explanationAr]])
+   assert.deepEqual(cmaNumericTokens(ar),cmaNumericTokens(en),id);
+ }
+});
+test("Unit 15 Wave 15: materiality and sales variance decomposition",()=>{
+ const investigate=(budget,actual)=>Math.abs(actual-budget)>Math.max(1000,budget*.1);
+ assert.equal(investigate(100000,89000),true);
+ assert.equal(investigate(50000,54000),false);
+ assert.equal(investigate(10000,9000),false);
+ assert.equal(q(7,17).answerIndex,1);
+ const volume=(1200-1000)*20,price=1200*(52-50),cost=1200*(30-31);
+ assert.equal(volume,4000); assert.equal(price,2400); assert.equal(cost,-1200);
+ assert.equal(1200*(52-31)-1000*(50-30),volume+price+cost);
+ const marketSize=12500,budgetMarketSize=10000,actualShare=.12,budgetShare=.10,ucm=20;
+ const share=Math.round((actualShare-budgetShare)*marketSize*ucm);
+ const size=budgetShare*(marketSize-budgetMarketSize)*ucm;
+ assert.equal(share,5000); assert.equal(size,5000);
+ assert.equal((marketSize*actualShare-budgetMarketSize*budgetShare)*ucm,share+size);
+ assert.equal(q(8,12).answerIndex,3);
+ for(const [s,n] of [...Array.from({length:13},(_,i)=>[7,i+1]),...[2,6,7,8,9,10,11,23].map(n=>[8,n])]){
+  const held=q(s,n);
   assert.equal(held.stemAr,undefined); assert.equal(held.choicesAr,undefined); assert.equal(held.explanationAr,undefined);
  }
 });

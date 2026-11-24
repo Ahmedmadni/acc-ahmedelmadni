@@ -5430,7 +5430,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Material usage and labor efficiency variances both result from\na deviation in the quantity of input from what was budgeted.\nThey can be either directly or indirectly related. For instance, a\nreduction in the amount of material used may be compensated\nfor by an increase in the amount of labor. By the same token,\na reduction in overall activity on the production line may result\nin a decrease in both factors.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي زوج من الانحرافات التالية الواردة في تقرير الموازنة المرنة يُرجح أن تكون بينهما علاقة؟",
+    "choicesAr": [
+      "انحراف سعر المواد وانحراف كفاءة التكاليف الصناعية غير المباشرة المتغيرة.",
+      "انحراف معدل أجر العمل وانحراف كفاءة التكاليف الصناعية غير المباشرة المتغيرة.",
+      "انحراف استخدام المواد وانحراف كفاءة العمل.",
+      "انحراف كفاءة العمل وانحراف حجم التكاليف الصناعية غير المباشرة الثابتة."
+    ],
+    "explanationAr": "ينشأ كل من انحراف استخدام المواد وانحراف كفاءة العمل عن اختلاف كمية المدخلات عن الكمية المقدرة. وقد يرتبطان بصورة مباشرة أو غير مباشرة. فمثلًا قد يقابل انخفاض كمية المواد المستخدمة زيادة في العمل اللازم. وبالمثل قد يؤدي انخفاض النشاط الإجمالي على خط الإنتاج إلى انخفاض كلا العاملين."
   },
   {
     "unit": 15,
@@ -5447,7 +5455,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The direct labor price variance is a function of contracts\nworked out with the union before the production period begins.\nSimilarly, the material price variance is a measure of\npurchasing efficiency, not that of the production manager.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم شركة التنسيق التالي لعرض نتائج الأداء على مديري الإنتاج:\nالبيان | فعلي الشهر | موازنة الشهر | انحراف السعر | انحراف الكمية\nالمواد المباشرة | $10,000 | $12,000 | $1,000 ملائم | $1,000 ملائم\nالعمل المباشر | 20,000 | 19,500 | 500 ملائم | 1,000 غير ملائم\nالتكاليف الصناعية غير المباشرة المتغيرة | 4,000 | 4,000 | 100 غير ملائم | 100 ملائم\nالتكاليف الصناعية غير المباشرة الثابتة | 12,000 | 12,200 | 200 ملائم\nوحدات المبيعات | 50,000 | 52,000\nقد يسبب هذا التنسيق التباسًا لمدير الإنتاج؛ لماذا؟",
+    "choicesAr": [
+      "لا تظهر المعلومات التراكمية منذ بداية السنة.",
+      "لا يظهر انحراف حجم التكاليف الصناعية غير المباشرة الثابتة.",
+      "ينبغي إدراج تفاصيل أكثر لبنود التكاليف الصناعية غير المباشرة المتغيرة.",
+      "يتضمن التقرير انحرافات تقع خارج نطاق سيطرة مدير الإنتاج ومعرفته."
+    ],
+    "explanationAr": "يتأثر انحراف معدل أجر العمل المباشر بالعقود المبرمة مع النقابة قبل بدء فترة الإنتاج. وبالمثل، يقيس انحراف سعر المواد كفاءة الشراء وليس كفاءة مدير الإنتاج في سياق المسألة."
   },
   {
     "unit": 15,
@@ -5464,7 +5480,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Lower-skilled workers tend to be less efficient, which would\ngive rise to an unfavorable labor efficiency variance and\npossibly an unfavorable materials quantity variance.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "خلال فترة معينة، حققت شركة انحراف كمية مواد ملائمًا وانحراف كفاءة عمل مباشر ملائمًا وانحراف حجم تكاليف صناعية غير مباشرة ثابتة ملائمًا. أي العوامل التالية لا يُرجح أن يكون سببًا في تحقيق الانحرافات الثلاثة مجتمعة؟",
+    "choicesAr": [
+      "شراء مواد أعلى جودة.",
+      "استخدام عمالة أقل مهارة.",
+      "شراء آلات أكثر كفاءة.",
+      "زيادة الإشراف على الإنتاج."
+    ],
+    "explanationAr": "تميل العمالة الأقل مهارة إلى انخفاض الكفاءة، مما يؤدي إلى انحراف كفاءة عمل غير ملائم، وربما إلى انحراف كمية مواد غير ملائم أيضًا."
   },
   {
     "unit": 15,
@@ -5481,7 +5505,15 @@
     ],
     "answerIndex": 1,
     "explanation": "For materials, because the dollar variance is $11,000 and\n10% of budget is $10,000, the dollar variance is the applicable\ntest. Because $11,000 > $10,000, the materials variance\nmeets the test and should be investigated. For direct labor,\nsince the dollar variance is $4,000 and 10% of budget is\n$5,000, the percentage variance is the applicable test.\nBecause $4,000 < $5,000, the labor variance fails the test and\nshould not be investigated.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتبع شركة سياسة قائمة على التكلفة والمنفعة للتحقيق في أي انحراف يتجاوز $1,000 أو 10% من الموازنة، أيهما أكبر. وأظهرت النتائج الفعلية للشهر السابق ما يلي:\nالبيان | الموازنة | الفعلي\nالمواد الخام | $100,000 | $89,000\nالعمل المباشر | 50,000 | 54,000\nفي أي انحراف ينبغي للشركة التحقيق؟",
+    "choicesAr": [
+      "لا انحراف المواد ولا انحراف العمل.",
+      "انحراف المواد فقط.",
+      "انحراف العمل فقط.",
+      "انحراف المواد والعمل معًا."
+    ],
+    "explanationAr": "بالنسبة إلى المواد، يبلغ الانحراف النقدي $11,000 وتبلغ 10% من الموازنة $10,000، لذا تُقارن قيمة الانحراف بالحد المطلوب. وبما أن $11,000 أكبر من $10,000، فإن انحراف المواد يستوفي المعيار ويجب التحقيق فيه. أما العمل المباشر، فيبلغ الانحراف النقدي $4,000 وتبلغ 10% من الموازنة $5,000، لذا يُطبق الحد النسبي. وبما أن $4,000 أقل من $5,000، فلا يستوفي انحراف العمل المعيار ولا يلزم التحقيق فيه وفق هذه السياسة."
   },
   {
     "unit": 15,
@@ -5498,7 +5530,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Lower-quality, lower-cost materials indicate a favorable direct\nmaterials variance, and higher than expected rework costs\nindicate an unfavorable direct labor variance.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أبلغت شركة عن المعلومات التالية المتعلقة بالتكاليف المعيارية والفعلية:\nالبيان | التكاليف الفعلية | إجمالي الانحراف\nالمواد المباشرة | $19,250 | $900 ملائم\nالعمل المباشر | $17,600 | $800 غير ملائم\nأي مما يلي يفسر على أفضل وجه كلا الانحرافين؟",
+    "choicesAr": [
+      "تعديل اتفاقية المفاوضة الجماعية بما أدى إلى ارتفاع معدلات الأجر بالساعة.",
+      "أدى منحنى التعلم إلى زيادة كفاءة الإنتاج.",
+      "أدت مواد أقل جودة وأقل تكلفة إلى تكاليف إعادة تشغيل أعلى من المتوقع.",
+      "ارتفاع غير متوقع في تكاليف الكهرباء."
+    ],
+    "explanationAr": "تشير المواد الأقل جودة والأقل تكلفة إلى احتمال انحراف مواد مباشرة ملائم، بينما تشير تكاليف إعادة التشغيل الأعلى من المتوقع إلى انحراف عمل مباشر غير ملائم."
   },
   {
     "unit": 15,
@@ -5515,7 +5555,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Variance analysis can be used to judge the effectiveness of\nselling departments. If sales differ from the amount budgeted,\nthe difference may be attributable to either the sales price\nvariance or the sales volume (quantity) variance. Changes in\nunit selling prices may account for the entire variance if the\nactual quantity sold equals the quantity budgeted. None of the\nrevenue variance is attributed to the sales volume variance\nbecause no such variance exists when a flexible budget is\nused. The flexible budget is based on the level of sales at\nactual volume.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عند تحليل عمليات الشركة، وجد المراقب المالي انحراف إيرادات ملائمًا بالموازنة المرنة قدره $250,000. وحُسب الانحراف بمقارنة النتائج الفعلية بالموازنة المرنة. ما العامل الذي يمكنه تفسير الانحراف بالكامل؟",
+    "choicesAr": [
+      "إجمالي انحراف الموازنة المرنة.",
+      "إجمالي انحراف حجم المبيعات.",
+      "إجمالي انحراف الموازنة الثابتة.",
+      "التغيرات في أسعار بيع الوحدة."
+    ],
+    "explanationAr": "يمكن استخدام تحليل الانحرافات لتقييم فعالية أقسام المبيعات. فإذا اختلفت المبيعات عن المقدرة، فقد يعزى الفرق إلى انحراف سعر المبيعات أو انحراف حجم (كمية) المبيعات. وقد تفسر تغيرات أسعار بيع الوحدة كامل الانحراف عندما تتساوى الكميات المقارنة. ولا يُعزى أي جزء من انحراف الإيرادات هنا إلى انحراف حجم المبيعات، لأن المقارنة بالموازنة المرنة تتم عند مستوى حجم المبيعات الفعلي نفسه."
   },
   {
     "unit": 15,
@@ -5549,7 +5597,15 @@
     ],
     "answerIndex": 3,
     "explanation": "If a firm’s sales differ from the amount budgeted, the\ndifference could be attributable either to the sales price\nvariance or the sales volume variance. The sales volume\nvariance is the change in contribution margin caused by the\ndifference between the actual and budgeted sales volumes.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما الانحراف الذي ينشأ فقط بسبب اختلاف الكمية المباعة فعليًا عن الكمية المخطط بيعها؟",
+    "choicesAr": [
+      "انحراف الموازنة الثابتة.",
+      "زيادة الموازنة الشاملة.",
+      "انحراف مزيج المبيعات.",
+      "انحراف حجم المبيعات."
+    ],
+    "explanationAr": "إذا اختلفت مبيعات المنشأة عن المبيعات المقدرة، فقد يعزى الفرق إلى انحراف سعر المبيعات أو انحراف حجم المبيعات. ويمثل انحراف حجم المبيعات التغير في هامش المساهمة الناشئ عن الفرق بين حجم المبيعات الفعلي والمقدر."
   },
   {
     "unit": 15,
@@ -5566,7 +5622,15 @@
     ],
     "answerIndex": 3,
     "explanation": "For a single-product company, the sales volume variance is\nthe difference between the actual and budgeted sales\nquantities times the budgeted UCM. If the company sells two\nor more products, the difference between the actual and\nbudgeted product mixes must be considered. In that case, the\nsales volume variance equals the difference between (1)\nactual total unit sales times the budgeted weighted-average\nUCM for the actual mix and (2) budgeted total unit sales times\nthe budgeted weighted-average UCM for the planned mix.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يعتمد انحراف حجم المبيعات جزئيًا على هامش المساهمة للوحدة (UCM). كيف يُحسب في شركة تبيع منتجًا واحدًا؟",
+    "choicesAr": [
+      "الفرق بين حجم المبيعات الفعلي وحجم المبيعات بالموازنة الشاملة، مضروبًا في هامش المساهمة الفعلي للوحدة.",
+      "الفرق بين حجم المبيعات بالموازنة المرنة والحجم الفعلي، مضروبًا في هامش مساهمة الوحدة بالموازنة الشاملة.",
+      "الفرق بين حجم المبيعات بالموازنة المرنة والموازنة الشاملة، مضروبًا في هامش المساهمة الفعلي للوحدة.",
+      "الفرق بين حجم المبيعات بالموازنة المرنة والموازنة الشاملة، مضروبًا في هامش مساهمة الوحدة بالموازنة الشاملة."
+    ],
+    "explanationAr": "في شركة تبيع منتجًا واحدًا، يساوي انحراف حجم المبيعات الفرق بين كميات المبيعات الفعلية والمقدرة مضروبًا في هامش المساهمة المقدر للوحدة. وإذا باعت الشركة منتجين أو أكثر، فيجب مراعاة الفرق بين مزيج المنتجات الفعلي والمقدر. وفي هذه الحالة يساوي انحراف حجم المبيعات الفرق بين (1) إجمالي الوحدات المباعة فعليًا مضروبًا في المتوسط المرجح المقدر لهامش مساهمة الوحدة وفق المزيج الفعلي، و(2) إجمالي الوحدات المقدرة مضروبًا في المتوسط المرجح المقدر لهامش مساهمة الوحدة وفق المزيج المخطط."
   },
   {
     "unit": 15,
@@ -5583,7 +5647,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The sales volume variance can be divided into the sales\nquantity variance and the sales mix variance. The sales\nquantity variance is the change in contribution margin caused\nby the difference between actual and budgeted volume,\nassuming that budgeted sales mix, unit variable costs, and\nunit sales prices are constant. Thus, it equals the sales\nvolume variance when the sales mix variance is zero. In a\nmultiproduct firm, the sales mix variance is a variance caused\nby a sales mix that differs from that budgeted. For example,\neven when the sales quantity is exactly as budgeted, an\nunfavorable sales mix variance can be caused by greater\nsales of a low-contribution product at the expense of lower\nsales of a high-contribution product.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بالنسبة إلى شركة تنتج أكثر من منتج، إلى أي انحرافين إضافيين يمكن تقسيم انحراف حجم المبيعات؟",
+    "choicesAr": [
+      "انحراف سعر المبيعات وانحراف الموازنة المرنة.",
+      "انحراف مزيج المبيعات وانحراف سعر المبيعات.",
+      "انحراف كمية المبيعات وانحراف مزيج المبيعات.",
+      "انحراف مزيج المبيعات وانحراف حجم الإنتاج."
+    ],
+    "explanationAr": "يمكن تقسيم انحراف حجم المبيعات إلى انحراف كمية المبيعات وانحراف مزيج المبيعات. وانحراف الكمية هو التغير في هامش المساهمة بسبب الفرق بين الحجم الفعلي والمقدر، بافتراض ثبات مزيج المبيعات المقدر والتكلفة المتغيرة للوحدة وسعر بيع الوحدة. ولذلك يساوي انحراف حجم المبيعات عندما يكون انحراف المزيج صفرًا. وفي الشركات متعددة المنتجات، ينتج انحراف المزيج عن اختلاف المزيج الفعلي عن المقدر. فحتى إذا تطابقت كمية المبيعات مع الموازنة، قد ينشأ انحراف مزيج غير ملائم عند زيادة مبيعات منتج منخفض هامش المساهمة على حساب مبيعات منتج مرتفع الهامش."
   },
   {
     "unit": 15,
@@ -5705,7 +5777,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The market share variance gives an indication of the amount\nof contribution margin gained (forgone) because of a change\nin the market share.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يعتمد انحراف الحصة السوقية جزئيًا على هامش المساهمة للوحدة (UCM). ما معادلته؟",
+    "choicesAr": [
+      "الوحدات الفعلية × (المتوسط المرجح المقدر لهامش مساهمة الوحدة وفق المزيج المخطط – المتوسط المرجح المقدر لهامش مساهمة الوحدة وفق المزيج الفعلي).",
+      "(الوحدات الفعلية – وحدات الموازنة الشاملة) × المتوسط المرجح المقدر لهامش مساهمة الوحدة وفق المزيج المخطط.",
+      "نسبة الحصة السوقية المقدرة × (حجم السوق الفعلي بالوحدات – حجم السوق المقدر بالوحدات) × المتوسط المرجح المقدر لهامش مساهمة الوحدة.",
+      "(نسبة الحصة السوقية الفعلية – نسبة الحصة السوقية المقدرة) × حجم السوق الفعلي بالوحدات × المتوسط المرجح المقدر لهامش مساهمة الوحدة."
+    ],
+    "explanationAr": "يوضح انحراف الحصة السوقية مقدار هامش المساهمة المكتسب أو المفقود نتيجة تغير الحصة السوقية."
   },
   {
     "unit": 15,

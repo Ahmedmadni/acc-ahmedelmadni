@@ -101,6 +101,9 @@ const pendingSourceLayouts = new Set([
   "15.5.2", "15.5.3", "15.5.5", "15.5.6", "15.5.7",
   // §6 Q53 Valyn planned and actual tables are interleaved and monetary amounts split.
   "15.6.53",
+  // §7 Ardmore/Water Control and §8 Folsom cases have interleaved table/prose columns.
+  "15.7.1", "15.7.2", "15.7.3", "15.7.4", "15.7.5", "15.7.6", "15.7.7", "15.7.8", "15.7.9",
+  "15.8.2", "15.8.6", "15.8.7", "15.8.8",
 ]);
 
 /** An ambiguous required-whole-unit rounding outcome should not earn a score
