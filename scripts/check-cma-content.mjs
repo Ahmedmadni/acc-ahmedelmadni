@@ -607,6 +607,7 @@ const staticArabicVol2 = new Set([
   ...Array.from({length:6},(_,i)=>"15.2."+(i+26)),
   ...Array.from({length:7},(_,i)=>"15.2."+(i+33)),
   ...Array.from({length:26},(_,i)=>"15.3."+(i+1)),
+  ...[27,28,29,30,31,33,34,35,36,40,41,42,43,44,45,46].map(n=>"15.3."+n),
 ]);
 const vol2QuestionById = new Map(CMA_GLEIM_2025_VOL2_QUESTIONS.map(q=>[q.id,q]));
 for (const [key, original] of vol2Records) {
@@ -668,7 +669,7 @@ for (const [key, expectedPage] of pendingOriginalSourcePages) {
 console.log("Review gate: 19 unverified Unit 12 questions retain PDF page locators and English-only labels.");
 console.log("Verified Unit 13 Arabic educational drafts: 43/44 §1, 14/14 §2, 33/34 §3, 31/31 §4 (121/123 total); source-flagged §1 Q34 and §3 Q23 remain English-first.");
 console.log("Unit 14 source Arabic drafts: §1 5/8, §2 41/43, §3 18/19, §4 36/40, §5 34/34, §6 26/31; 160/175 Arabic educational drafts. Ten review-held drafts and 15 English-first records remain outside scored practice.");
-console.log("Unit 15 Arabic source drafts: §1 16/16, §2 37/39, §3 26/46; 79/264 Arabic educational drafts. Remaining 185 original source items are English-first, including §2 Q25/Q32 held from graded exams.");
+console.log("Unit 15 Arabic source drafts: §1 16/16, §2 37/39, §3 42/46; 95/264 complete Arabic drafts (36.0%). Remaining 169 English-first, including 6 blocked source-table/consistency questions.");
 for (const [key,page,needle] of [
   ["15.2.25",596,"$1.360 U"],
   ["15.2.32",607,"Budgete\n"],
@@ -683,6 +684,26 @@ for (const [key,page,needle] of [
     "Unit 15 broken PDF table must stay English-first and unscored: "+key);
 }
 console.log("Unit 15 source review gate: §2 Q25 (p596) and §2 Q32 (p607) require authorized original-page inspection.");
+// Quarantine newly discovered Unit 15 §3 extraction and variance-classification
+// anomalies. They must remain English-first and never count as scored source items.
+for (const [key, expectedPage, anomaly] of [
+  ["15.3.32",645,"Material Price Variance"],
+  ["15.3.37",652,"Standard Price"],
+  ["15.3.38",652,"Standard Price"],
+  ["15.3.39",654,"Sta"],
+]) {
+  const original=vol2Records.get(key);
+  const [unit,section,number]=key.split(".");
+  const mapped=vol2QuestionById.get("cma-gleim-2025-vol2-su"+unit+"-s"+section+"-q"+String(number).padStart(3,"0"));
+  check(!!original && original.page===expectedPage && original.stem.includes(anomaly) &&
+    !original.stemAr && !original.choicesAr && !original.explanationAr &&
+    mapped?.sourcePage===expectedPage &&
+    mapped?.sourceLayoutReview===true && mapped?.sourceLanguage==="en" &&
+    mapped?.sourceArabicStatus===undefined && mapped?.answerIndex===original.answerIndex,
+    "Unit 15 §3 ambiguous material variance source must remain English-only and unscored: "+key);
+}
+console.log("Unit 15 §3 source review gate: Q32, Q37, Q38, Q39 require original licensed 2025 page comparison and are unscored.");
+
 // Original page layouts remain unverified: some explanations or stems contain
 // visibly broken PDF-extraction fragments. Keep records unchanged and unscored.
 for(const [id,page,field,needle] of [
