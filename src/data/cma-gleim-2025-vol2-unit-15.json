@@ -3302,7 +3302,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A direct labor or materials efficiency variance is calculated by\nmultiplying the difference between standard and actual usage\ntimes the standard cost per unit of input. The efficiency\nvariances can be divided into yield and mix variances. Mix and\nyield variances are calculated only when the production\nprocess involves combining several materials or classes of\nlabor in varying proportions (when substitutions are allowable\nin combining resources).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يمكن تقسيم انحراف الكفاءة لكل من العمل المباشر والمواد المباشرة إلى:",
+    "choicesAr": [
+      "انحراف الإنفاق وانحراف العائد.",
+      "انحراف العائد وانحراف السعر.",
+      "انحراف الحجم وانحراف المزيج.",
+      "انحراف العائد وانحراف المزيج."
+    ],
+    "explanationAr": "يُحسب انحراف كفاءة العمل المباشر أو المواد المباشرة بضرب الفرق بين الاستخدام الفعلي والمعياري في التكلفة المعيارية لوحدة المدخلات. ويمكن تحليل انحراف الكفاءة إلى انحراف المزيج وانحراف العائد. ولا يُحسب هذان الانحرافان إلا عندما تتضمن العملية الإنتاجية الجمع بين مواد متعددة أو فئات مختلفة من العمالة بنسب قابلة للتغيير، أي عندما يسمح بإحلال مدخل محل آخر."
   },
   {
     "unit": 15,
@@ -3353,7 +3361,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Mix and yield variances are the components of the usage\n(quantity or efficiency) variance. Mix and yield variances can\nonly be calculated when inputs are substitutable. The mix\nvariance isolates the effects of changes in the mix of inputs\nused. The mix variance equals actual total quantity (ATQ)\ntimes the weighted-average standard price for the standard\nmix (SMSP) minus the weighted-average standard price for\nthe actual mix (AMSP).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يساوي انحراف مزيج المواد أو العمالة:",
+    "choicesAr": [
+      "إجمالي الكمية الفعلية للمدخلات مضروبًا في الفرق بين متوسط السعر المعياري المرجح للمزيج المعياري ومتوسط السعر المعياري المرجح للمزيج الفعلي.",
+      "إجمالي الكمية الفعلية للمدخلات مضروبًا في الفرق بين متوسط السعر المدرج المرجح للمدخلات ومتوسط السعر الفعلي المرجح لها.",
+      "إجمالي الكمية المدرجة للمدخلات مضروبًا في الفرق بين متوسط السعر المدرج المرجح ومتوسط السعر المتوقع المرجح لها.",
+      "إجمالي الكمية الفعلية للمدخلات مضروبًا في الفرق بين متوسط السعر الفعلي المرجح ومتوسط السعر المتوقع المرجح لها."
+    ],
+    "explanationAr": "انحرافا المزيج والعائد هما مكونا انحراف الاستخدام، أي الكمية أو الكفاءة. ولا يمكن حسابهما إلا إذا كانت المدخلات قابلة للإحلال. ويعزل انحراف المزيج أثر تغيير النسب بين المدخلات المستخدمة، ويساوي إجمالي الكمية الفعلية (ATQ) مضروبًا في الفرق بين متوسط السعر المعياري المرجح للمزيج المعياري (SMSP) ومتوسط السعر المعياري المرجح للمزيج الفعلي (AMSP)."
   },
   {
     "unit": 15,
@@ -3455,7 +3471,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Mix and yield variances are the components of the usage\n(quantity or efficiency) variance. Mix and yield variances can\nonly be calculated when inputs are substitutable. The yield\nvariance measures how efficiently the actual mix of inputs was\nused to produce the given output. The yield variance equals\nstandard total quantity (STQ) minus the actual total quantity\n(ATQ) times the weighted-average standard price of the\nstandard mix of inputs (SMSP).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يساوي انحراف عائد المواد أو العمل:",
+    "choicesAr": [
+      "الفرق بين إجمالي الكمية المعيارية وإجمالي الكمية الفعلية للمدخلات مضروبًا في متوسط السعر المعياري المرجح للمزيج الفعلي للمدخلات.",
+      "إجمالي الكمية الفعلية للمدخلات مضروبًا في الفرق بين متوسط السعر المعياري المرجح للمزيج المعياري ومتوسط السعر المعياري المرجح للمزيج الفعلي.",
+      "إجمالي الكمية المعيارية للمدخلات مضروبًا في الفرق بين متوسط السعر المعياري المرجح للمزيج المعياري ومتوسط السعر المعياري المرجح للمزيج الفعلي.",
+      "الفرق بين إجمالي الكمية المعيارية وإجمالي الكمية الفعلية للمدخلات مضروبًا في متوسط السعر المعياري المرجح للمزيج المعياري."
+    ],
+    "explanationAr": "انحرافا المزيج والعائد مكونان لانحراف الاستخدام، أي الكمية أو الكفاءة، ولا يمكن حسابهما إلا إذا أمكن إحلال المدخلات. ويقيس انحراف العائد كفاءة استخدام المزيج الفعلي من المدخلات للحصول على الناتج المحقق. ويساوي الفرق بين إجمالي الكمية المعيارية (STQ) وإجمالي الكمية الفعلية (ATQ) مضروبًا في متوسط السعر المعياري المرجح للمزيج المعياري (SMSP)."
   },
   {
     "unit": 15,
@@ -3472,7 +3496,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Labor mix and labor yield variances are the components of the\ntotal labor efficiency variance. For example, if the labor yield\nvariance was $500 U and the labor mix variance was $320 U,\nthe total labor efficiency variance would be $820 U.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما الانحراف الذي يساوي مجموع انحراف مزيج العمل وانحراف عائد العمل؟",
+    "choicesAr": [
+      "إجمالي انحراف العمل.",
+      "انحراف معدل أجر العمل.",
+      "انحراف كفاءة العمل.",
+      "مجموع انحراف كفاءة العمل وانحراف كفاءة التكاليف الصناعية غير المباشرة."
+    ],
+    "explanationAr": "انحرافا مزيج العمل وعائد العمل هما مكونا إجمالي انحراف كفاءة العمل. فعلى سبيل المثال، إذا كان انحراف العائد $500 غير ملائم وانحراف المزيج $320 غير ملائم، يكون إجمالي انحراف كفاءة العمل $820 غير ملائم."
   },
   {
     "unit": 15,
@@ -3489,7 +3521,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The direct material yield variance is equal to the difference\nbetween the standard total quantity (STQ) and actual total\nquantity (ATQ) times the standard mix of standard inputs at\nstandard prices (SMSP).\nYield variance = (STQ – ATQ) × SMSP\nSTQ equals 250,000 [(25,000 units of finished goods × 4 oz.\nMaterial A per unit) + (25,000 units of finished goods × 6 oz\nMaterial B per unit)].\nATQ also equals 250,000 (105,000 Material A + 145,000\nMaterial B).\nSince STQ equals ATQ, the yield variance will be 0.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تصنع شركة منتجًا بمزج مادتين وفق المعايير التالية لكل وحدة من المنتج التام:\n1. المادة A: 4 أونصات بسعر $1.50 للأونصة\n2. المادة B: 6 أونصات بسعر $2.50 للأونصة\nأنتجت الشركة فعليًا 25,000 وحدة تامة باستخدام 105,000 أونصة من المادة A و145,000 أونصة من المادة B. وبلغت التكلفة الفعلية للأونصة $1.48 للمادة A و$2.55 للمادة B. ما انحراف عائد المواد المباشرة؟",
+    "choicesAr": [
+      "$0",
+      "$5,000 غير ملائم.",
+      "$5,000 ملائم.",
+      "$5,350 غير ملائم."
+    ],
+    "explanationAr": "يساوي انحراف عائد المواد المباشرة الفرق بين إجمالي الكمية المعيارية (STQ) وإجمالي الكمية الفعلية (ATQ) مضروبًا في متوسط السعر المعياري المرجح للمزيج المعياري (SMSP).\nانحراف العائد = (STQ − ATQ) × SMSP\nتبلغ الكمية المعيارية 250,000 أونصة [(25,000 وحدة تامة × 4 أونصات مادة A لكل وحدة) + (25,000 وحدة تامة × 6 أونصات مادة B لكل وحدة)].\nوتبلغ الكمية الفعلية أيضًا 250,000 أونصة (105,000 أونصة مادة A + 145,000 أونصة مادة B).\nوبما أن الكمية المعيارية تساوي الفعلية، فإن انحراف العائد يساوي 0."
   },
   {
     "unit": 15,
