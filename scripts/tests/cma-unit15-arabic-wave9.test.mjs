@@ -359,8 +359,8 @@ const wave15=new Map([
  ["8.1",[808,3,"66b971b3"]],["8.3",[810,3,"661e32ec"]],["8.4",[811,3,"6157d350"]],
  ["8.5",[812,2,"40a2f67a"]],["8.12",[823,3,"6a4c3488"]],
 ]);
-test("Unit 15 Wave 15: 202 drafts and 10 immutable combined/sales variance sources",()=>{
- const localized=rows.filter(r=>r.stemAr!==undefined||r.choicesAr!==undefined||r.explanationAr!==undefined);
+test("Unit 15 Wave 15: preserve 202 earlier drafts and 10 immutable combined/sales variance sources",()=>{
+ const localized=rows.filter(r=>(r.section<=7||(r.section===8&&r.number<=12))&&(r.stemAr!==undefined||r.choicesAr!==undefined||r.explanationAr!==undefined));
  assert.equal(localized.length,202);
  assert.deepEqual(localized.filter(r=>r.section===7).map(r=>r.number),[14,15,16,17,18]);
  assert.deepEqual(localized.filter(r=>r.section===8).map(r=>r.number),[1,3,4,5,12]);
@@ -392,6 +392,53 @@ test("Unit 15 Wave 15: materiality and sales variance decomposition",()=>{
  assert.equal(q(8,12).answerIndex,3);
  for(const [s,n] of [...Array.from({length:13},(_,i)=>[7,i+1]),...[2,6,7,8,9,10,11,23].map(n=>[8,n])]){
   const held=q(s,n);
+  assert.equal(held.stemAr,undefined); assert.equal(held.choicesAr,undefined); assert.equal(held.explanationAr,undefined);
+ }
+});
+
+const wave16=new Map([
+ [13,[824,1,"097fcad4"]],[14,[825,2,"2e524bd5"]],[15,[826,0,"c5d71bac"]],
+ [16,[827,1,"4cff6e28"]],[17,[829,0,"8b2195d0"]],[18,[830,3,"1d37d95d"]],
+ [19,[831,2,"0ca38e2a"]],[20,[832,2,"53d86522"]],[21,[832,1,"a104020d"]],
+ [22,[833,0,"8490c75e"]],[24,[837,2,"a1f7890e"]],[25,[838,1,"4560c69f"]],
+ [27,[840,3,"07f973ca"]],[28,[841,0,"8ebc09de"]],[29,[841,0,"38e445c5"]],
+]);
+test("Unit 15 Wave 16: 217 drafts and 15 immutable sales variance sources",()=>{
+ const localized=rows.filter(r=>r.stemAr!==undefined||r.choicesAr!==undefined||r.explanationAr!==undefined);
+ assert.equal(localized.length,217);
+ assert.deepEqual(localized.filter(r=>r.section===8).map(r=>r.number),[1,3,4,5,12,13,14,15,16,17,18,19,20,21,22,24,25,27,28,29]);
+ for(const [n,[page,index,hash]] of wave16){
+  const r=q(8,n);
+  assert.equal(r.page,page); assert.equal(r.answerIndex,index);
+  assert.equal(r.answerStatus,"source"); assert.equal(r.sourceTextStatus,undefined);
+  assert.equal(fingerprint(JSON.stringify([r.stem,r.choices,r.explanation,r.answerIndex,r.page])),hash);
+  assert.equal(validateCmaTranslation({question:{en:r.stem},choices:{en:r.choices},explanation:{en:r.explanation}},
+   {question:r.stemAr,choices:r.choicesAr,explanation:r.explanationAr}).valid,true,String(n));
+  for(const [en,ar] of [[r.stem,r.stemAr],...r.choices.map((c,i)=>[c,r.choicesAr[i]]),[r.explanation,r.explanationAr]])
+   assert.deepEqual(cmaNumericTokens(ar),cmaNumericTokens(en),String(n));
+ }
+});
+test("Unit 15 Wave 16: independent sales volume, quantity, mix, price and operating income arithmetic",()=>{
+ assert.equal((3800-4000)*((60000-16000-8000)/4000),-1800);
+ assert.equal(8000*(92000/8000-105000/10000),8000);
+ assert.equal(110000-120000,-10000);
+ assert.equal((42000-40000)*(6-3.5),5000);
+ assert.equal(Math.round(950400/.85-950400),167718);
+ const volume=(260-300)*3+(260-200)*2.5;
+ const quantity=(520*.6-300)*3+(520*.4-200)*2.5;
+ const mix=(260-520*.6)*3+(260-520*.4)*2.5;
+ assert.equal(volume,30); assert.equal(quantity,56); assert.equal(mix,-26);
+ assert.equal(volume,quantity+mix);
+ assert.equal(12000*(7250-6975)/1000,3300);
+ assert.equal((100000-80000)*(40000/80000),10000);
+ assert.equal(300000-600000,-300000);
+ assert.equal(105*(40-35),525);
+ assert.equal((650000-375000-195000)-(750000-400000-255000),-15000);
+ for(const [n,result] of [[13,"$1,800 unfavorable"],[15,"$8,000 favorable"],[16,"$10,000 U"],[17,"$5,000 favorable"],[18,"$167,718"],[19,"$30 F"],[20,"$56 F"],[21,"$26 U"],[22,"$3,300 favorable"],[24,"$10,000 favorable"],[25,"$300,000 U"],[28,"$525 favorable"],[29,"¥15,000 unfavorable"]])
+  assert.ok(q(8,n).choices[q(8,n).answerIndex].includes(result),"Original key Q"+n);
+ for(const [n,page] of [[26,839],[30,844],[31,844]]){
+  const held=q(8,n);
+  assert.equal(held.page,page);
   assert.equal(held.stemAr,undefined); assert.equal(held.choicesAr,undefined); assert.equal(held.explanationAr,undefined);
  }
 });
