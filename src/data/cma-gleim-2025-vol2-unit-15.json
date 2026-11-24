@@ -2961,7 +2961,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A favorable labor rate variance means the company is using\nlower-paid workers than what the standard-setters thought\nshould be used. These workers are apparently less\nexperienced or otherwise less skilled. As a result, the use of\nlower-paid workers may lead to an unfavorable labor efficiency\nvariance or an unfavorable materials usage variance as the\nlower-skilled workers require more hours or more materials\nthan would more skilled employees.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لدى شركة انحراف ملائم في سعر (معدل أجر) العمل المباشر. ما مصدر القلق الأكبر الذي قد تواجهه الشركة بسبب هذا الانحراف؟",
+    "choicesAr": [
+      "قد لا تستمر الظروف التي أدت إلى الانحراف الملائم مستقبلًا.",
+      "ربما لا يستخدم مدير الإنتاج الموارد البشرية بأعلى كفاءة ممكنة.",
+      "قد يؤدي السبب وراء هذا الانحراف الملائم إلى انحرافات أخرى غير ملائمة أكبر على امتداد سلسلة القيمة.",
+      "الإنتاج الفعلي أقل من الإنتاج المدرج في الموازنة."
+    ],
+    "explanationAr": "يعني انحراف معدل الأجر الملائم أن المنشأة تستخدم عمالًا يتقاضون أجورًا أقل مما توقع واضعو المعايير. وقد يكون هؤلاء العاملون أقل خبرة أو مهارة. وقد يؤدي استخدامهم إلى انحراف كفاءة عمل غير ملائم أو انحراف استخدام مواد غير ملائم لأنهم يحتاجون إلى ساعات عمل أو مواد أكثر مما يحتاجه العمال الأعلى مهارة."
   },
   {
     "unit": 15,
@@ -3012,7 +3020,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Any flexible budget variance for direct labor (or direct material)\ncan be subdivided into two component variances, the rate\n(price) variance and the efficiency (quantity, usage) variance.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم شركة التكاليف المعيارية والموازنة المرنة لتقييم العمل المباشر. ويمكن عادةً تقسيم انحراف الموازنة المرنة للعمل المباشر إلى أي انحرافين؟",
+    "choicesAr": [
+      "انحراف معدل أجر العمل المباشر وانحراف كفاءة العمل المباشر.",
+      "انحراف تكلفة العمل المباشر وانحراف حجم العمل المباشر.",
+      "انحراف معدل أجر العمل المباشر وانحراف حجم العمل المباشر.",
+      "انحراف تكلفة العمل المباشر وانحراف كفاءة العمل المباشر."
+    ],
+    "explanationAr": "يمكن تحليل أي انحراف للموازنة المرنة للعمل المباشر، وكذلك للمواد المباشرة، إلى انحرافين مكونين: انحراف المعدل (السعر)، وانحراف الكفاءة (الكمية أو الاستخدام)."
   },
   {
     "unit": 15,
@@ -3029,7 +3045,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The total variance for labor consists of a price (rate) variance\nand an efficiency (usage) variance. Since the total variance is\n$15,000 favorable, the price variance must be $33,000\nfavorable (–$18,000 + $33,000 = $15,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "حققت شركة انحراف عمل إجماليًا ملائمًا بمبلغ $15,000، وانحراف كفاءة عمل غير ملائم بمبلغ $18,000. كم يبلغ انحراف سعر (معدل أجر) العمل؟",
+    "choicesAr": [
+      "$3,000 ملائم.",
+      "$3,000 غير ملائم.",
+      "$33,000 ملائم.",
+      "$33,000 غير ملائم."
+    ],
+    "explanationAr": "يتكون إجمالي انحراف العمل من انحراف السعر (معدل الأجر) وانحراف الكفاءة (الاستخدام). وبما أن الانحراف الإجمالي $15,000 ملائم، يجب أن يكون انحراف السعر $33,000 ملائمًا، لأن (−$18,000 + $33,000 = $15,000)."
   },
   {
     "unit": 15,
@@ -3046,7 +3070,15 @@
     ],
     "answerIndex": 3,
     "explanation": "No variance by itself is either good or bad. Everything\ndepends on context and what can be revealed by the\ncomponent variances (if any) of a given variance. For\nexample, a favorable direct materials variance may reflect\nunrealistically pessimistic standards for materials usage, while\na favorable labor variance may reflect workers rushing the\nprocess and producing inferior goods.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أظهرت السجلات المحاسبية لشركة انحرافًا ملائمًا في كفاءة العمل للفترة المنتهية. أي تعليقات المسؤولين التالية تعكس فهمًا محدودًا لإجراءات التحقيق في الانحرافات؟\n1. «يمكن استخدام اختبارات إحصائية لتحديد ما إذا كان الانحراف يستدعي التحقيق».\n2. «لنفحصه؛ فقد تكون عملياتنا سليمة لكن معيار وقت العمل يحتاج إلى تعديل».\n3. «لا أؤمن بكل قواعد تحديد الانحرافات التي تستحق التحقيق؛ فالتقدير المهني السليم هو الأساس».\n4. «لا تقلقوا؛ فقد نشأ الانحراف من حدث عشوائي ويقع ضمن حدود النتائج المقبولة المحتملة».\n5. «لماذا القلق؟ الانحراف ملائم، فلنتجاهله».",
+    "choicesAr": [
+      "2 و5 فقط.",
+      "1 و3 و4 فقط.",
+      "4 و5 فقط.",
+      "5 فقط."
+    ],
+    "explanationAr": "لا يمكن وصف أي انحراف بأنه جيد أو سيئ لمجرد اتجاهه؛ بل يعتمد الحكم على السياق وعلى ما تكشفه الانحرافات المكونة. فقد يعكس انحراف مواد مباشر ملائم معايير استخدام متشائمة وغير واقعية، بينما قد يعكس انحراف عمل ملائم استعجال العمال في التنفيذ وإنتاج سلع أقل جودة. لذلك فمجرد كون الانحراف ملائمًا ليس مبررًا لتجاهله."
   },
   {
     "unit": 15,
@@ -3131,7 +3163,15 @@
     ],
     "answerIndex": 1,
     "explanation": "If the new employees are still learning the recipes, their\nrelatively unskilled labor is likely to result in excessive\nmaterials usage and labor inefficiency. An unfavorable\nmaterial quantity variance and an unfavorable labor efficiency\nvariance are indicated by the company’s analysis.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "شهد مطعم بيتزا مؤخرًا انخفاضًا في هامش الربح رغم ثبات المبيعات. وأظهر تحليل مدخلات التكاليف المباشرة النتائج التالية:\n• انحراف سعر مواد ملائم\n• انحراف كمية مواد غير ملائم\n• انحراف معدل أجر عمل ملائم\n• انحراف كفاءة عمل غير ملائم\nما السبب الأكثر احتمالًا لانخفاض هامش الربح؟",
+    "choicesAr": [
+      "رفع مورد الجبن أسعاره.",
+      "لا يزال الموظفون الجدد يتعلمون وصفات إعداد الطعام.",
+      "يتقاضى الموظفون أجورًا أعلى من المعدلات المعيارية المدرجة.",
+      "يعمل الموظفون ساعات أقل من الساعات المعيارية المدرجة."
+    ],
+    "explanationAr": "إذا كان الموظفون الجدد ما زالوا يتعلمون الوصفات، فإن قلة خبرتهم قد تؤدي إلى استخدام مواد أكثر من اللازم وضعف كفاءة العمل. وهذا يتسق مع انحراف كمية المواد غير الملائم وانحراف كفاءة العمل غير الملائم الظاهرين في التحليل."
   },
   {
     "unit": 15,
@@ -3148,7 +3188,15 @@
     ],
     "answerIndex": 0,
     "explanation": "An unfavorable labor rate variance is usually caused by\nassigning skilled workers to a production process when the\nstandard price calculation assumes that unskilled (and\ntherefore lower-paid) workers could complete the job. Thus,\nhiring less-skilled and lower-paid workers is unlikely to result in\nan unfavorable labor rate variance.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "وظفت منشأة صناعية مؤخرًا عددًا كبيرًا من العاملين استعدادًا لزيادة المشاريع القادمة. وبعد إنجاز المشاريع الأولى، وجد محاسبو الإدارة انحرافًا غير ملائم في معدل أجر العمل المباشر. أي التفسيرات التالية هو الأقل احتمالًا لسبب هذا الانحراف؟",
+    "choicesAr": [
+      "كان الموظفون الجدد أقل مهارة.",
+      "أدى اتفاق نقابي جديد إلى رفع أجور العمال.",
+      "استخدام عمال ذوي مهارات أعلى من المطلوب لأعمال أقل مهارة، ما رفع التكلفة.",
+      "تكلفة العمل الفعلية أعلى من التكلفة المعيارية."
+    ],
+    "explanationAr": "ينشأ انحراف معدل أجر العمل غير الملائم غالبًا عندما يُكلف عمال مهرة بعمليات إنتاجية تفترض المعايير أن عمالًا أقل مهارة وأجرًا يستطيعون تنفيذها. لذلك فإن توظيف عمال أقل مهارة وأجرًا لا يُتوقع أن يؤدي في حد ذاته إلى انحراف معدل أجر غير ملائم."
   },
   {
     "unit": 15,
@@ -3165,7 +3213,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A favorable labor rate variance is usually caused by assigning\nworkers with less skill to a job. However, a favorable rate\nvariance may be offset by an unfavorable efficiency variance\nor lower-quality products.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تسعى شركة XYZ إلى تخفيض تكاليف العمالة، ولذلك وظفت عمالًا أقل مهارة. ما النتيجة الأكثر احتمالًا لإسناد العمل إليهم؟",
+    "choicesAr": [
+      "منتجات أعلى جودة.",
+      "انحراف معدل أجر عمل غير ملائم.",
+      "إنجاز الأعمال في وقت أقصر.",
+      "انحراف كفاءة عمل غير ملائم."
+    ],
+    "explanationAr": "يحدث عادةً انحراف معدل أجر عمل ملائم عند تكليف عمال أقل مهارة بعمل معين؛ لكن قد يقابل هذا الانحراف الملائم انحراف كفاءة غير ملائم أو منتجات أقل جودة."
   },
   {
     "unit": 15,
