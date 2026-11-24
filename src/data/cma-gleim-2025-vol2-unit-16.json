@@ -1307,7 +1307,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Segment margin is the contribution margin for a segment of a\nbusiness minus fixed costs. It is a measure of long-run\nprofitability. Thus, an allocation of the corporate officers’\nsalaries should not be included in segment margin because\nthey are neither variable costs nor fixed costs that can be\nrationally allocated to the segment. Other items that are often\nnot allocated include corporate income taxes, interest,\ncompany-wide R&D expenses, and central administration\ncosts.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي ينبغي ألا يدخل ضمن هامش قطاع الأسلاك في شركة صناعية؟",
+    "choicesAr": [
+      "صافي مبيعات قطاع الأسلاك.",
+      "مصروفات البيع الثابتة لقطاع الأسلاك.",
+      "مصروفات البيع المتغيرة لقطاع الأسلاك.",
+      "نصيب قطاع الأسلاك من راتب رئيس الشركة الصناعية."
+    ],
+    "explanationAr": "هامش القطاع هو هامش مساهمة قطاع الأعمال مطروحًا منه تكاليفه الثابتة الخاصة به، وهو مقياس للربحية طويلة الأجل. ولذلك لا ينبغي إدراج حصة من رواتب مسؤولي الإدارة العامة ضمن هامش القطاع؛ لأنها ليست تكاليف متغيرة ولا تكاليف ثابتة يمكن تخصيصها للقطاع على أساس منطقي. ومن البنود الأخرى التي لا توزع غالبًا ضرائب دخل الشركة والفوائد ومصروفات البحث والتطوير على مستوى الشركة وتكاليف الإدارة المركزية."
   },
   {
     "unit": 16,
@@ -1324,7 +1332,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The performance of the segment is judged on all costs\nassigned to it, but the segment manager is only judged on\ncosts that (s)he can control. Some fixed costs are imposed on\nsegments by the organization’s upper management, and they\nare thus beyond the segment manager’s control. These direct\ncosts controllable by others make up the difference between\nsegment manager performance and segment performance.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عند استخدام نموذج هامش المساهمة لأغراض التقارير الداخلية، ما الفرق الرئيسي بين أداء مدير القطاع وأداء القطاع نفسه؟",
+    "choicesAr": [
+      "التكاليف الثابتة غير الموزعة.",
+      "التكاليف المتغيرة المباشرة لإنتاج المنتج.",
+      "التكاليف الثابتة المباشرة التي يتحكم فيها مدير القطاع.",
+      "التكاليف الثابتة المباشرة التي يتحكم فيها آخرون."
+    ],
+    "explanationAr": "يقيم أداء القطاع على أساس جميع التكاليف المنسوبة إليه، بينما يقيم مديره على أساس التكاليف التي يستطيع التحكم فيها فقط. وتفرض الإدارة العليا بعض التكاليف الثابتة على القطاعات، فتخرج عن نطاق رقابة مدير القطاع. وتمثل هذه التكاليف المباشرة التي يتحكم فيها آخرون الفرق بين أداء المدير وأداء القطاع."
   },
   {
     "unit": 16,
@@ -1341,7 +1357,15 @@
     ],
     "answerIndex": 0,
     "explanation": "A profit center is a segment of a company responsible for both\nrevenues and expenses. A profit center has the authority to\nmake decisions concerning markets (revenues) and sources\nof supplies (costs). However, the profit center’s manager does\nnot control his or her salary, investment and the resulting\ncosts (e.g., depreciation of plant assets), or expenses incurred\nat the corporate level. Consequently, profit center No. 12 is\nmost likely to control the $84,000 contribution margin (Sales –\nVariable costs) but not the other items in the summarized\nincome statement.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتضمن قائمة دخل مركز الربح رقم 12 في إحدى المنشآت لشهر أغسطس ما يلي:\nهامش المساهمة $84,000\nراتب المدير 24,000\nإهلاك المرافق 9,600\nمصروفات الشركة الموزعة 6,000\nأي المبالغ التالية يرجح أن يستطيع مدير مركز الربح التحكم فيه؟",
+    "choicesAr": [
+      "$84,000",
+      "$68,400",
+      "$60,000",
+      "$44,400"
+    ],
+    "explanationAr": "مركز الربح قطاع من الشركة مسؤول عن الإيرادات والمصروفات معًا، وله صلاحية اتخاذ القرارات بشأن الأسواق (الإيرادات) ومصادر التوريد (التكاليف). غير أن مدير مركز الربح لا يتحكم في راتبه أو الاستثمار والتكاليف الناتجة عنه (مثل إهلاك أصول المصنع) أو المصروفات المتكبدة على مستوى الشركة. لذلك يرجح أن يكون مركز الربح رقم 12 قادرًا على التحكم في هامش المساهمة البالغ $84,000 (المبيعات – التكاليف المتغيرة)، وليس البنود الأخرى في قائمة الدخل المختصرة."
   },
   {
     "unit": 16,
@@ -1358,7 +1382,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A cost center is a responsibility center that is responsible for\ncosts only. Of the alternatives given, variance analysis is the\nonly one that can be used in a cost center. Variance analysis\ninvolves comparing actual costs with predicted or standard\ncosts.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الأساليب التالية هو الأنسب لتقييم الأداء الإداري لقسم يعمل بوصفه مركز تكلفة؟",
+    "choicesAr": [
+      "نسبة العائد على الأصول.",
+      "نسبة العائد على الاستثمار.",
+      "طريقة فترة الاسترداد.",
+      "تحليل الانحرافات."
+    ],
+    "explanationAr": "مركز التكلفة مركز مسؤولية عن التكاليف فقط. ومن البدائل المعروضة، فإن تحليل الانحرافات هو الأسلوب المناسب لمركز التكلفة. ويتضمن مقارنة التكاليف الفعلية بالتكاليف المتوقعة أو المعيارية."
   },
   {
     "unit": 16,
@@ -1375,7 +1407,15 @@
     ],
     "answerIndex": 3,
     "explanation": "To be effective, a performance measure should be based on a\ncause-and-effect relationship between the outcome being\nmeasured and a driver that is under the supervisor’s control.\nThe supervisor has no control over the number or amount of\nclaims submitted by customers.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يُقيّم أداء مشرف معالجة المطالبات في نظام للرعاية الصحية بمقاييس متنوعة اتفق عليها مسبقًا مع المدير العام. وطلب المدير العام من المشرف اقتراح عدة مقاييس لتقييم أداء وحدته في السنة المقبلة. أي المقاييس التالية يرجح أن يكون الأقل تأثيرًا إيجابيًا في تحفيز المشرف وأدائه؟",
+    "choicesAr": [
+      "تكلفة معالجة المطالبة الواحدة.",
+      "متوسط وقت معالجة المطالبة الواحدة.",
+      "نسبة المطالبات المعالجة بدقة من المرة الأولى.",
+      "إجمالي القيمة النقدية للمطالبات المعالجة شهريًا."
+    ],
+    "explanationAr": "لكي يكون مقياس الأداء فعالًا، ينبغي أن يقوم على علاقة سبب ونتيجة بين النتيجة المقاسة ومحرك يخضع لرقابة المشرف. ولا يتحكم المشرف في عدد المطالبات التي يقدمها العملاء أو قيمتها."
   },
   {
     "unit": 16,
@@ -1392,7 +1432,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Unlike the other choices, the drivers of all three measures are\nunder the control of the shipping manager. Also, each\nmeasure is linked directly to an operational goal of the\nshipping department.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يتولى مدير الشحن لدى موزع إدارة العاملين وجميع معدات النقل المرتبطة بتنفيذ طلبات منتجات المخابز الواردة من تجار التجزئة المحليين وتسليمها إليهم. وتحدد معدلات الأجور بموجب عقد نقابي. أي مجموعة من مجموعات مقاييس الأداء الثلاثة التالية يرجح أن تحقق أعلى مستوى من توافق الأهداف؟",
+    "choicesAr": [
+      "تكلفة العمل لكل طلب؛ تكلفة النقل لكل طلب؛ عدد الطلبات المنجزة يوميًا.",
+      "نسبة الطلبات المنفذة في الموعد؛ نسبة الطلبات المنفذة بدقة؛ متوسط تكلفة تنفيذ الطلب وتسليمه.",
+      "رضا العملاء؛ الوقت المستغرق لإنجاز الطلب؛ نسبة الطلبات المنفذة بدقة.",
+      "الطلبات المنجزة لكل موظف يوميًا؛ إصابات الموظفين لكل ساعة عمل؛ عدد حوادث المركبات سنويًا."
+    ],
+    "explanationAr": "بخلاف البدائل الأخرى، فإن محركات المقاييس الثلاثة جميعها تقع ضمن نطاق رقابة مدير الشحن في سياق السؤال. كما يرتبط كل مقياس مباشرة بهدف تشغيلي لقسم الشحن."
   },
   {
     "unit": 16,
@@ -1409,7 +1457,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The level of difficulty experienced by users with a new\nsoftware release is not under the control of the hotline\nmanager.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تنتج شركة برمجيات برامج للمستخدمين الأفراد والمنشآت الصغيرة. ويتولى مدير قسم الخط الساخن للعملاء الإجابة عن استفساراتهم المتعلقة بالبرامج التي تنتجها جميع أقسام الشركة. لتعزيز توافق الأهداف، أي المقاييس التالية هو الأقل ملاءمة لتقييم أداء المدير؟",
+    "choicesAr": [
+      "متوسط الوقت اللازم لتقديم إجابة أو حل للعميل.",
+      "عدد الاتصالات بالخط الساخن لكل إصدار جديد من البرامج.",
+      "متوسط وقت انتظار العميل على الخط.",
+      "عدد شكاوى العملاء الناتجة عن إجابات غير صحيحة قدمت لهم."
+    ],
+    "explanationAr": "لا يخضع مستوى الصعوبة التي يواجهها المستخدمون مع الإصدار الجديد من البرامج لرقابة مدير الخط الساخن."
   },
   {
     "unit": 16,
@@ -1426,7 +1482,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A repair and maintenance function is a service department,\ni.e., a cost center. A nonfinancial measure of performance is\nappropriate.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي ينبغي استخدامه لتقييم أداء قسم الإصلاح والصيانة المسؤول عن إصلاح معدات الإنتاج في منشأة تصنع لوحات مفاتيح الحاسوب؟",
+    "choicesAr": [
+      "الانحراف بين صافي دخل المنشأة المقدر والفعلي.",
+      "إجمالي انحرافات التكاليف الصناعية غير المباشرة.",
+      "انحرافات حجم التكاليف الصناعية غير المباشرة الثابتة.",
+      "سرعة الاستجابة ودرجة رضا أقسام الإنتاج."
+    ],
+    "explanationAr": "تعد وظيفة الإصلاح والصيانة قسم خدمات، أي مركز تكلفة. ومن الملائم استخدام مقياس أداء غير مالي."
   },
   {
     "unit": 16,
@@ -1443,7 +1507,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Using the budgeted rate times actual hours of usage would\nreward those departments who budgeted their computer\nusage carefully while appropriately charging those who\nexceeded their budgets.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "كُلّف مدير تقنية المعلومات في قسم خدمات الحوسبة بجامعة بالمساعدة على الحد من مشكلة تجاوز التكاليف المتكررة بسبب استخدام الحاسوب غير المنضبط من جانب المستخدمين، دون الحد من استخدام تقنية المعلومات في البحث والتدريس. لضمان توافق الأهداف، أي قواعد التوزيع التالية ينبغي استخدامها لتحميل تكاليف قسم خدمات الحوسبة على الأقسام الأخرى بالجامعة؟",
+    "choicesAr": [
+      "المعدل الفعلي مضروبًا في ساعات استخدام الحاسوب الفعلية.",
+      "المعدل الفعلي مضروبًا في ساعات استخدام الحاسوب المقدرة.",
+      "المعدل المقدر مضروبًا في ساعات استخدام الحاسوب الفعلية.",
+      "المعدل المقدر مضروبًا في ساعات استخدام الحاسوب المقدرة."
+    ],
+    "explanationAr": "استخدام المعدل المقدر مضروبًا في ساعات الاستخدام الفعلية يحفز الأقسام على ضبط استخدامها للحاسوب وفق الموازنة، مع تحميل الأقسام التي تتجاوز موازناتها بتكلفة استخدامها الإضافي على أساس المعدل المقدر."
   },
   {
     "unit": 16,
@@ -1477,7 +1549,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Customer A has a customer level operating profit of $2.50/unit\n[($100,000 sales – $50,000 cost of goods sold – $10,000\ndelivery cost – $15,000 order taking) ÷ 10,000 units], which is\nthe highest. Customer level operating profit only includes\ndirect customer costs, such as cost of goods sold, order\ntaking, and delivery costs. Allocated costs, such as\ndepreciation, utilities, and administrative costs, are not\nincluded.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فيما يلي تفاصيل الإيرادات والمصروفات لأربعة عملاء:\nالبيان | العميل A | العميل B | العميل C | العميل D\nالوحدات المباعة | 10,000 | 20,000 | 35,000 | 50,000\nالمبيعات | $100,000 | $150,000 | $200,000 | $250,000\nتكلفة البضاعة المباعة | 50,000 | 60,000 | 70,000 | 75,000\nتكلفة التوصيل | 10,000 | 25,000 | 30,000 | 50,000\nاستلام الطلبات | 15,000 | 20,000 | 25,000 | 30,000\nالمصروفات الإدارية | 30,000 | 30,000 | 30,000 | 30,000\nالإهلاك | 20,000 | 20,000 | 20,000 | 20,000\nالمرافق | 10,000 | 10,000 | 10,000 | 10,000\nالربح/الخسارة | (35,000) | (15,000) | 15,000 | 35,000\nأي العملاء يحقق أكبر ربح تشغيلي على مستوى العميل لكل وحدة مباعة؟",
+    "choicesAr": [
+      "العميل A.",
+      "العميل B.",
+      "العميل C.",
+      "العميل D."
+    ],
+    "explanationAr": "يحقق العميل A ربحًا تشغيليًا على مستوى العميل قدره $2.50 لكل وحدة [($100,000 مبيعات – $50,000 تكلفة البضاعة المباعة – $10,000 تكلفة التوصيل – $15,000 استلام الطلبات) ÷ 10,000 وحدة]، وهو الأعلى. ولا يتضمن الربح التشغيلي على مستوى العميل إلا التكاليف المباشرة المتعلقة به، مثل تكلفة البضاعة المباعة واستلام الطلبات والتوصيل. ولا تدرج التكاليف الموزعة مثل الإهلاك والمرافق والمصروفات الإدارية."
   },
   {
     "unit": 16,
@@ -1494,7 +1574,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Gross profit of Group 2 is $600,000. Operating loss results\nfrom deducting order processing costs and delivery costs. If\nthe company charges a separate fee for delivery of small\nquantities, delivery costs of Group 2 can be reduced or\neliminated.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "قسمت شركة عملاءها إلى مجموعتين. تضم المجموعة 1 نسبة 20% من العملاء الأكثر ولاءً واعتمادية، وتضم المجموعة 2 نسبة 80% من العملاء، وهم إما عملاء صغار أو عملاء أكبر يطلبون كميات صغيرة لاختبار المنتج قبل تقديم طلبات أكبر. وتظهر أحدث النتائج أدناه:\nالبيان | المجموعة 1 | المجموعة 2\nالمبيعات | $7,500,000 | $2,000,000\nخصومات المبيعات | 375,000 | 0\nتكلفة المبيعات | 5,250,000 | 1,400,000\nمعالجة الطلبات | 40,000 | 150,000\nالتوصيل | 120,000 | 500,000\nالدخل (الخسارة) | $1,715,000 | $(50,000)\nما أفضل طريقة لتحسين ربحية الشركة؟",
+    "choicesAr": [
+      "فرض رسم منفصل لتوصيل الكميات الصغيرة.",
+      "إيقاف المبيعات لعملاء المجموعة 2.",
+      "إلغاء الخصومات لعملاء المجموعة 1.",
+      "رفع سعر بيع المنتج."
+    ],
+    "explanationAr": "يبلغ مجمل ربح المجموعة 2 مبلغ $600,000. وتنتج الخسارة التشغيلية عن خصم تكاليف معالجة الطلبات والتوصيل. وإذا فرضت الشركة رسمًا منفصلًا لتوصيل الكميات الصغيرة، فقد ينخفض صافي عبء تكاليف توصيل المجموعة 2 أو تتم تغطيته."
   },
   {
     "unit": 16,
