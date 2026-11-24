@@ -714,7 +714,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A flexible budget conceptually is a series of budgets prepared\nfor various levels of activity. A flexible budget adjusts the\nmaster budget for changes in activity so that actual results can\nbe compared with meaningful budget amounts.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتميز الموازنات المرنة بأنها:",
+    "choicesAr": [
+      "تراعي العوامل الخارجية المؤثرة في ربحية المنشأة.",
+      "تستخدم لتقييم مدى استغلال الطاقة الإنتاجية.",
+      "تتوقع التكاليف على أساس التحسينات المستقبلية المنتظرة.",
+      "تستوعب التغيرات في مستويات النشاط."
+    ],
+    "explanationAr": "تُمثل الموازنة المرنة من الناحية المفاهيمية مجموعة موازنات تُعد لمستويات متعددة من النشاط. وهي تعدّل الموازنة الرئيسية بحسب تغير حجم النشاط، بحيث تصبح المقارنة بين النتائج الفعلية والمبالغ المدرجة في الموازنة ذات معنى."
   },
   {
     "unit": 15,
@@ -731,7 +739,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A flexible budget provides managers with the revenues and\ncosts that should have been earned and incurred given the\nactual level of production achieved. This information is far\nmore useful than the static budget prepared before the fiscal\nperiod began when the production level was uncertain.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بالمقارنة مع الموازنات الثابتة، فإن الموازنات المرنة:",
+    "choicesAr": [
+      "تقدم للمديرين مقارنة أكثر واقعية للتكاليف الثابتة الفعلية والمخططة التي تقع تحت رقابتهم.",
+      "توفر فهمًا أفضل لانحرافات الطاقة خلال فترة التقييم.",
+      "تشجع المديرين على تقليل بنود التكاليف الثابتة وزيادة التكاليف المتغيرة القابلة للرقابة.",
+      "تقدم للمديرين مقارنة أكثر واقعية للإيرادات والتكاليف المخططة والفعلية الواقعة تحت رقابتهم."
+    ],
+    "explanationAr": "تعرض الموازنة المرنة الإيرادات والتكاليف التي كان ينبغي تحقيقها أو تحملها وفق مستوى الإنتاج الفعلي المحقق. وتكون هذه المعلومات أكثر فائدة من الموازنة الثابتة التي أُعدت قبل بدء الفترة، حين كان حجم الإنتاج المتوقع غير مؤكد."
   },
   {
     "unit": 15,
@@ -748,7 +764,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A flexible budget is essentially a series of budgets prepared\nfor various levels of operating activity. A flexible budget\nfacilitates comparison of actual results with budget figures.\nThe purpose is to have a usable budget even though activity\nmay differ from the level originally planned at the time the\nbudget was prepared.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "الموازنات المرنة:",
+    "choicesAr": [
+      "تستوعب التغيرات في معدل التضخم.",
+      "تستخدم لتقييم استغلال الطاقة الإنتاجية.",
+      "هي موازنات ثابتة أعيد تعديلها بسبب تغير الأسعار.",
+      "تستوعب التغيرات في مستويات النشاط."
+    ],
+    "explanationAr": "تمثل الموازنة المرنة مجموعة تقديرات تُعد لمستويات مختلفة من النشاط التشغيلي، وتُيسّر مقارنة النتائج الفعلية بالمبالغ المدرجة في الموازنة. وهدفها توفير معيار صالح للمقارنة حتى عندما يختلف النشاط الفعلي عن المستوى الذي خُطط له عند إعداد الموازنة."
   },
   {
     "unit": 15,
@@ -765,7 +789,15 @@
     ],
     "answerIndex": 0,
     "explanation": "A flexible budget is adaptable to various levels of production.\nFlexible budgeting enables an organization to compute the\nlevels of cost that “should” have been incurred given the level\nof output actually achieved. The flexible budget is usually\nprepared at the end of the period, making it the least beneficial\nbudget solution for this company.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تركز إحدى الشركات على التحسين المستمر، وتريد أن تدعم الموازنة هذا الهدف. وقد تمكنت خلال فترات سابقة من القضاء على جانب كبير من الهدر في الأنشطة، وترغب الآن في التركيز على الأنشطة المضيفة للقيمة وتحسين علاقاتها بالموردين والعملاء. أي أساليب إعداد الموازنات التالية هو الأقل فائدة لهذه الشركة؟",
+    "choicesAr": [
+      "الموازنة المرنة.",
+      "الموازنة على أساس الأنشطة.",
+      "الموازنة الصفرية.",
+      "الموازنة المستمرة."
+    ],
+    "explanationAr": "تتكيف الموازنة المرنة مع مستويات الإنتاج المختلفة، إذ تساعد في حساب مستوى التكاليف الذي كان ينبغي تحمله وفق حجم الإنتاج المحقق فعليًا. وتُعد غالبًا في نهاية الفترة لغرض مقارنة الأداء، ولذلك تعد في سياق أهداف الشركة المذكورة أقل الأساليب فائدة مقارنة بالأساليب الأخرى."
   },
   {
     "unit": 15,
@@ -782,7 +814,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The flexible budget amount for sales is found by multiplying\nthe actual number of sales by the average budgeted price at\nthe beginning of the period. This is calculated as 120 × $600 =\n$72,000.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "خططت شركة لبيع 100 زورق خلال أبريل بمتوسط سعر بيع $600. وفي منتصف الشهر باعت 65 زورقًا، وتوقعت أن يصل إجمالي المبيعات إلى 130 زورقًا بمتوسط سعر $595. وبلغت المبيعات الفعلية خلال أبريل 120 زورقًا بمتوسط سعر $590. ما إيراد مبيعات الزوارق المدرج في الموازنة المرنة لشهر أبريل؟",
+    "choicesAr": [
+      "$60,000",
+      "$72,000",
+      "$77,350",
+      "$78,000"
+    ],
+    "explanationAr": "يُحسب إيراد المبيعات وفق الموازنة المرنة بضرب عدد الوحدات المباعة فعليًا في سعر البيع المخطط في بداية الفترة. وبالتالي فإن الإيراد يساوي 120 × $600 = $72,000."
   },
   {
     "unit": 15,
@@ -799,7 +839,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The actual level of production for a period is rarely identical to\nthe level that was projected when the period was being\nplanned. Flexible budgets use standard costs to report what\ncosts “should” have been incurred given the actual level of\nproduction achieved.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "من مزايا استخدام الموازنة المرنة مقارنة بالموازنة الثابتة أنه في الموازنة المرنة:",
+    "choicesAr": [
+      "تظهر بوضوح حالات انخفاض الإنتاج عن المستوى المخطط.",
+      "يمكن تغيير المعايير بسهولة لمواكبة الظروف المتغيرة.",
+      "تظهر انحرافات التكاليف الثابتة بصورة أوضح.",
+      "يمكن مقارنة التكاليف المدرجة لمستوى إنتاج معين بالتكاليف الفعلية للمستوى نفسه."
+    ],
+    "explanationAr": "نادرًا ما يتطابق حجم الإنتاج الفعلي لأي فترة مع الحجم المتوقع عند التخطيط. وتستخدم الموازنة المرنة التكاليف المعيارية لتحديد التكاليف التي كان ينبغي تحملها عند مستوى الإنتاج الفعلي، مما يجعل المقارنة مع التكاليف الفعلية أكثر ملاءمة."
   },
   {
     "unit": 15,
@@ -816,7 +864,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Since actual sales volume exceeded expectations, revenue\nvariances will be favorable. By the same token, the higher\nlevel of output resulted in the company incurring more\nproduction costs than expected.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أعد المراقب المالي موازنة مرنة للسنة المنتهية مؤخرًا، وعدّل فيها الموازنة الثابتة الأصلية بسبب زيادة كبيرة وغير متوقعة في حجم المبيعات. وكانت معظم التكاليف متغيرة. ولاحظ أن الإيرادات والتكاليف الفعلية قريبة من مبالغ الموازنة المرنة. إذا قورنت الإيرادات والتكاليف الفعلية بالموازنة الثابتة الأصلية، فأي الانحرافات التالية ستظهر؟",
+    "choicesAr": [
+      "انحرافات الإيرادات والتكاليف كلها ملائمة.",
+      "انحراف الإيرادات ملائم وانحراف التكاليف غير ملائم.",
+      "انحراف الإيرادات غير ملائم وانحراف التكاليف ملائم.",
+      "انحرافات الإيرادات والتكاليف كلها غير ملائمة."
+    ],
+    "explanationAr": "نظرًا إلى أن حجم المبيعات الفعلي تجاوز التوقعات، ستكون انحرافات الإيرادات ملائمة. وبالمقابل، أدت زيادة النشاط إلى تحمل تكاليف إنتاج أعلى من تلك المدرجة في الموازنة الثابتة، ولذلك تكون انحرافات التكاليف غير ملائمة عند مقارنتها بالموازنة الأصلية."
   },
   {
     "unit": 15,
@@ -833,7 +889,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A flexible budget is always more useful than a static budget. A\nstatic budget is only helpful when exactly the combination of\ncircumstances on which it is based are actually experienced.\nUsing a flexible budget in the planning stages will allow the\ncorporation to project the results of multiple combinations of\nfactors, and using one in measuring performance will allow the\ncorporation to most accurately identify areas of success and\nfailure.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يتراوح حجم المبيعات الشهري لإحدى الشركات خلال السنة بين 7,000 وحدة و9,800 وحدة. وتدرس الإدارة مصروفات البيع المتوقعة والموارد النقدية اللازمة لها. أي نوع من الموازنات ينبغي استخدامه (1) للتخطيط، وأي نوع (2) يقدم أفضل تغذية راجعة في تقارير الأداء عند مقارنة المصروفات المخططة بالمبالغ الفعلية؟\nالتخطيط             تقارير الأداء",
+    "choicesAr": [
+      "ثابتة             ثابتة",
+      "ثابتة             مرنة",
+      "مرنة              ثابتة",
+      "مرنة              مرنة"
+    ],
+    "explanationAr": "تُعد الموازنة المرنة أكثر ملاءمة من الموازنة الثابتة عندما تتفاوت أحجام النشاط. فهي تساعد أثناء التخطيط في توقع النتائج عند مستويات مختلفة من النشاط، كما توفر عند تقييم الأداء أساسًا أكثر دقة لتحديد الانحرافات ومواطن النجاح أو القصور."
   },
   {
     "unit": 15,
@@ -850,7 +914,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Standard costs should be set with input from the personnel\nwho are most familiar with input usage.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الإجراءات التالية يتيح الاستفادة بصورة أفضل من التكاليف المعيارية وتحليل الانحرافات لتحسين القرارات الإدارية؟",
+    "choicesAr": [
+      "تحديد المعايير بمشاركة العاملين التنفيذيين الذين يؤدون العملية مباشرة.",
+      "عدم التمييز بين التكاليف الصناعية غير المباشرة المتغيرة والثابتة عند حساب انحرافاتها.",
+      "استخدام التكاليف المعيارية فقط لتقييم المخزون.",
+      "اعتبار متوسط التكلفة الفعلية في السنة السابقة معيارًا للسنة الحالية."
+    ],
+    "explanationAr": "ينبغي وضع التكاليف المعيارية بمشاركة الموظفين الأكثر معرفة بكيفية استخدام المدخلات في العمليات الفعلية، لأن خبرتهم تساعد في تحديد مستويات أداء قابلة للتطبيق وتدعم اتخاذ القرار."
   },
   {
     "unit": 15,
@@ -867,7 +939,15 @@
     ],
     "answerIndex": 1,
     "explanation": "A flexible budget is a series of several budgets prepared for\nmany levels of sales and production. A flexible budget is\ndesigned to allow adjustment of the budget to the actual level\nof activity before comparing the budgeted activity with actual\nresults.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تُسمى الخطة التي تستخدم الإيرادات والتكاليف المدرجة في الموازنة لكنها تقوم على عدد وحدات الإنتاج الفعلي:",
+    "choicesAr": [
+      "الموازنة المستمرة.",
+      "الموازنة المرنة.",
+      "الخطة الاستراتيجية.",
+      "الموازنة الثابتة."
+    ],
+    "explanationAr": "تتكون الموازنة المرنة من موازنات متعددة لمستويات مختلفة من المبيعات والإنتاج. وقد صُممت لتعديل الموازنة وفق مستوى النشاط الفعلي قبل مقارنة المبالغ المخططة بالنتائج المحققة."
   },
   {
     "unit": 15,
@@ -884,7 +964,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A flexible budget is essentially a series of several budgets\nprepared for various levels of sales and production. At the end\nof the period, management can compare actual costs or\nperformance with the appropriate budgeted level in the flexible\nbudget. A flexible budget is designed to allow adjustment of\nthe budget to the actual level of activity before comparing the\nbudgeted activity with actual results.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يمكن مقارنة النتائج الفعلية بموازنة مبنية على حجم النشاط المحقق باستخدام:",
+    "choicesAr": [
+      "الموازنة الشهرية.",
+      "الموازنة الرئيسية.",
+      "الموازنة المتجددة.",
+      "الموازنة المرنة."
+    ],
+    "explanationAr": "تُمثل الموازنة المرنة سلسلة موازنات لمستويات متنوعة من المبيعات والإنتاج. وفي نهاية الفترة تقارن الإدارة التكاليف أو الأداء الفعلي بمستوى الموازنة الذي يتناسب مع النشاط المنفذ، بعد تعديل الموازنة وفق حجم النشاط الفعلي."
   },
   {
     "unit": 15,
@@ -901,7 +989,15 @@
     ],
     "answerIndex": 0,
     "explanation": "A flexible budget is a series of budgets prepared for various\nlevels of sales and production. Another view is that it is based\non cost formulas, or standard costs. Thus, the cost formulas\nare fed into the computerized budget program along with the\nactual level of sales or production. The result is a budget\ncreated for the actual level of activity.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "إن استخدام التكاليف المعيارية في إعداد الموازنة يدل على الأرجح على أن المنشأة طبقت:",
+    "choicesAr": [
+      "الموازنة المرنة.",
+      "الموازنة الرأسمالية.",
+      "الموازنة الصفرية.",
+      "الموازنة الثابتة."
+    ],
+    "explanationAr": "تُعد الموازنة المرنة لمستويات مختلفة من المبيعات والإنتاج، ويمكن كذلك بناؤها على معادلات التكاليف المعيارية. وتدخل هذه المعادلات إلى نظام إعداد الموازنة مع مستوى النشاط الفعلي، فينتج عنها مبلغ موازنة مناسب لحجم النشاط المحقق."
   },
   {
     "unit": 15,
@@ -935,7 +1031,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A flexible budget is adaptable to unanticipated levels of\nproduction. Flexible budgeting enables an organization to\ncompute the levels of cost that “should” have been incurred\ngiven the level of output actually achieved.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "نتيجة لمشروع غير متوقع لإنشاء طريق، زادت حركة المرور أمام أحد المطاعم بصورة كبيرة، وارتفع عدد زبائنه إلى مستوى أعلى كثيرًا مما كان متوقعًا. أي أنواع الموازنات هو الأنسب لمساعدة مدير المطعم في تخطيط تكاليف العمالة؟",
+    "choicesAr": [
+      "الموازنة الصفرية.",
+      "الموازنة المتجددة.",
+      "الموازنة على أساس الأنشطة.",
+      "الموازنة المرنة."
+    ],
+    "explanationAr": "تتكيف الموازنة المرنة مع مستويات النشاط غير المتوقعة، وتساعد المنشأة على حساب التكاليف التي كان ينبغي تكبدها وفق حجم الإنتاج أو الخدمة الفعلي المحقق."
   },
   {
     "unit": 15,
@@ -952,7 +1056,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A flexible budget adjusts for changes in the volume of activity.\nIt can be adapted to any level of production. To create a\nflexible budget, standard costs are determined for the\nunderlying cost drivers. Standard costs may be used to isolate\nvariances. This kind of budgeting will aid management in\nevaluating the large variances caused by the seasonal\nweather conditions.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتغير إيرادات إحدى المنشآت وتكاليفها المتغيرة بدرجة كبيرة تبعًا للظروف الجوية الموسمية. وقد صعّبت هذه التقلبات تقييم النتائج الفعلية مقابل الموازنة بسبب كبر انحرافات الإيرادات في كثير من الأحيان. أي أساليب الموازنات التالية يرجح أن يساعد الإدارة في التخطيط وتقييم النتائج؟",
+    "choicesAr": [
+      "الموازنة الصفرية.",
+      "الموازنة المستمرة.",
+      "الموازنة المرنة.",
+      "موازنة المشروع."
+    ],
+    "explanationAr": "تعدل الموازنة المرنة المبالغ وفق التغير في حجم النشاط، ويمكن تكييفها مع مستويات إنتاج مختلفة. وتتطلب وضع تكاليف معيارية لمحركات التكلفة ذات الصلة، بما يتيح فصل آثار تغير النشاط عن الانحرافات الأخرى ويساعد الإدارة على تفسير الفروق الكبيرة الناجمة عن تقلبات الطقس الموسمية."
   },
   {
     "unit": 15,
@@ -969,7 +1081,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A flexible budget is a series of budgets prepared for various\nlevels of sales and production, which is suited for evaluating\nperformance when actual sales do not equal anticipated sales.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بدأت إحدى الشركات باستخدام الموازنات لتقييم الأداء. وأُعدت موازنة السنة الحالية على أساس مبيعات متوقعة تبلغ 40,000 وحدة، بينما بلغت المبيعات الفعلية 45,000 وحدة. أي منهج للموازنة ينبغي للشركة استخدامه لتقييم أدائها خلال السنة؟",
+    "choicesAr": [
+      "الموازنة الصفرية.",
+      "الموازنة المستمرة.",
+      "الموازنة الثابتة.",
+      "الموازنة المرنة."
+    ],
+    "explanationAr": "تُعد الموازنة المرنة لمستويات متعددة من المبيعات والإنتاج، ولذلك تكون مناسبة لتقييم الأداء عندما يختلف حجم المبيعات الفعلي عن الحجم المتوقع عند إعداد الموازنة."
   },
   {
     "unit": 15,
