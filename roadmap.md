@@ -11,4 +11,5 @@
 - [ ] Verify corrected source layouts, independent accounting calculations, Arabic terminology, and mobile/tablet exam & study presentation before lifting each scoring gate.
 
 - [x] Unit 15 Wave 1 (24 Nov 2026): 14 complete Arabic educational drafts in §1 (14/264 overall), with original source fingerprints, answer positions, ordered numeric tokens and CI coverage enforced.
-- [ ] Continue Unit 15: §1 Q9/Q16 and remaining 250 English-first questions need case-specific source/accounting review and Arabic drafts. See `docs/CMA_UNIT15_ARABIC_WAVE1_2026-11-24.md`.
+- [x] Unit 15 Wave 2 (24 Nov 2026): completed §1 16/16 and §2 12/39; total **28/264 (10.6%)** complete Arabic educational drafts. Added exact-source and six independent arithmetic regression fixtures.
+- [ ] Finish Unit 15 §2 Q13–39 and remaining sections (236 English-first records). Keep publisher-source correctness, key order and separate IFRS inventory measurement requirements explicit. See `docs/CMA_UNIT15_ARABIC_WAVE2_2026-11-24.md`.
