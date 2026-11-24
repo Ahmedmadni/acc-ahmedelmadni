@@ -34,21 +34,16 @@ function fingerprint(text) {
   return (hash >>> 0).toString(16).padStart(8, "0");
 }
 
-test("Unit 15 wave 2: the exact 28 Arabic drafts include 16/16 §1 and 12/39 §2; other records stay English-first", () => {
+test("Unit 15 wave 2: all 28 earlier Arabic drafts are intact when later waves are added", () => {
   assert.equal(records.length, 264);
   assert.equal(wave2.size, 14);
-  const arabic = records.filter((q) => q.stemAr !== undefined || q.choicesAr !== undefined || q.explanationAr !== undefined);
-  assert.equal(arabic.length, 28);
-  assert.equal(arabic.filter((q) => q.section === 1).length, 16);
-  assert.equal(arabic.filter((q) => q.section === 2).length, 12);
   const approved = new Set([...originalWave1, ...wave2.keys()]);
-  assert.deepEqual(new Set(arabic.map(idOf)), approved);
-  for (const q of records) {
-    if (approved.has(idOf(q)))
-      assert.ok(q.stemAr && q.explanationAr && q.choicesAr?.length === 4, "Incomplete Arabic record " + idOf(q));
-    else
-      assert.ok(q.stemAr === undefined && q.choicesAr === undefined && q.explanationAr === undefined,
-        "Unexpected new Arabic record " + idOf(q));
+  assert.equal(approved.size, 28);
+  assert.equal(records.filter((q) => q.section === 1 && approved.has(idOf(q))).length, 16);
+  assert.equal(records.filter((q) => q.section === 2 && approved.has(idOf(q))).length, 12);
+  for (const q of records.filter((q) => approved.has(idOf(q)))) {
+    assert.ok(q.stemAr && q.explanationAr && q.choicesAr?.length === 4,
+      "An earlier Unit 15 Arabic source draft was removed: " + idOf(q));
   }
 });
 
