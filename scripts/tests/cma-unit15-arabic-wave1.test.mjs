@@ -33,18 +33,17 @@ function fingerprint(text) {
   return (hash >>> 0).toString(16).padStart(8, "0");
 }
 
-test("Unit 15 first wave: exactly fourteen complete Arabic source drafts; no other items marked translated", () => {
+test("Unit 15 first wave: all fourteen original Section 1 Arabic drafts remain intact after later waves", () => {
   assert.equal(records.length, 264);
-  const localized = records.filter((q) => q.stemAr !== undefined || q.choicesAr !== undefined || q.explanationAr !== undefined);
-  assert.equal(localized.length, 14);
+  const firstWave = records.filter((q) => q.section === 1 && keys.has(q.number));
+  assert.equal(firstWave.length, 14);
   assert.deepEqual(
-    localized.map((q) => q.section + "." + q.number),
+    firstWave.map((q) => q.section + "." + q.number),
     [...keys.keys()].map((number) => "1." + number),
   );
-  for (const q of records) {
-    if (!keys.has(q.number) || q.section !== 1)
-      assert.ok(q.stemAr === undefined && q.choicesAr === undefined && q.explanationAr === undefined,
-        "Non-approved Unit 15 source translation: " + q.section + "." + q.number);
+  for (const q of firstWave) {
+    assert.ok(q.stemAr && q.explanationAr && q.choicesAr?.length === 4,
+      "Previously approved Unit 15 Arabic source draft was damaged: 1." + q.number);
   }
 });
 
