@@ -224,8 +224,8 @@ const wave12=new Map([
  [35,[751,2,"2ca3fd3f"]],[36,[752,2,"c468c0fe"]],[37,[753,1,"3e49d8eb"]],
  [38,[753,0,"23b8dd2a"]],
 ]);
-test("Unit 15 Wave 12: 166 complete drafts and 13 immutable overhead sources",()=>{
- const localized=rows.filter(r=>r.stemAr!==undefined||r.choicesAr!==undefined||r.explanationAr!==undefined);
+test("Unit 15 Wave 12: preserve 166 earlier drafts and 13 immutable overhead sources",()=>{
+ const localized=rows.filter(r=>(r.section<=5||(r.section===6&&r.number<=38))&&(r.stemAr!==undefined||r.choicesAr!==undefined||r.explanationAr!==undefined));
  assert.equal(localized.length,166);
  assert.deepEqual(localized.filter(r=>r.section===6).map(r=>r.number),Array.from({length:38},(_,i)=>i+1).filter(n=>n!==28));
  for(const [n,[page,index,hash]] of wave12){
@@ -265,4 +265,47 @@ test("Unit 15 Wave 12: independent overhead computations and Q28 actual-hour amb
   assert.notEqual(ah,sh);
   assert.equal(480000-sh*15,6360);
  }
+});
+
+const wave13=new Map([
+ [39,[754,0,"ebb88132"]],[40,[755,2,"cab15f07"]],[41,[757,0,"90163048"]],
+ [42,[757,0,"41ba4efc"]],[43,[758,1,"5622e771"]],[44,[760,1,"1e91a392"]],
+ [45,[761,1,"edb68e8a"]],[46,[762,3,"f54036f6"]],[47,[764,3,"7c7cb077"]],
+ [48,[764,3,"5823cf17"]],[49,[765,3,"141b5d92"]],[50,[766,1,"6307e4ab"]],
+ [51,[767,1,"67088b1e"]],[52,[768,1,"7a123c0f"]],[54,[772,2,"83d06fd5"]],
+]);
+test("Unit 15 Wave 13: 181 drafts and 15 immutable overhead sources",()=>{
+ const localized=rows.filter(r=>r.stemAr!==undefined||r.choicesAr!==undefined||r.explanationAr!==undefined);
+ assert.equal(localized.length,181);
+ assert.deepEqual(localized.filter(r=>r.section===6).map(r=>r.number),Array.from({length:54},(_,i)=>i+1).filter(n=>![28,53].includes(n)));
+ for(const [n,[page,index,hash]] of wave13){
+  const r=q(6,n);
+  assert.equal(r.page,page); assert.equal(r.answerIndex,index);
+  assert.equal(r.answerStatus,"source"); assert.equal(r.sourceTextStatus,undefined);
+  assert.equal(fingerprint(JSON.stringify([r.stem,r.choices,r.explanation,r.answerIndex,r.page])),hash);
+  assert.equal(validateCmaTranslation({question:{en:r.stem},choices:{en:r.choices},explanation:{en:r.explanation}},
+   {question:r.stemAr,choices:r.choicesAr,explanation:r.explanationAr}).valid,true,String(n));
+  for(const [en,ar] of [[r.stem,r.stemAr],...r.choices.map((c,i)=>[c,r.choicesAr[i]]),[r.explanation,r.explanationAr]])
+   assert.deepEqual(cmaNumericTokens(ar),cmaNumericTokens(en),String(n));
+ }
+});
+test("Unit 15 Wave 13: independent overhead rates, flexible-budget spending and volume",()=>{
+ const rate=756000/(60000*720/100);
+ assert.equal(rate,1.75); assert.equal(450000*rate-775000,12500);
+ assert.equal(144000-30000*(144000/36000),24000);
+ assert.equal(2400/(9600-4500*(10000/5000)),4);
+ const spending=1500000+430000*.5-1600000;
+ assert.equal(spending,115000);
+ assert.equal(1500000-1200000,300000);
+ assert.equal((430000-400000)*.5,15000);
+ assert.equal(300000+15000-spending,200000);
+ assert.equal(10300*(600000/10000)-596000,22000);
+ assert.equal(22000*(150000/20000)-160000,5000);
+ assert.equal(600000-350000*(600000/400000),75000);
+ assert.equal(300000-14000/4,296500);
+ for(const [n,result] of [[39,"$12,500"],[40,"$24,000 underabsorbed"],[43,"$4.00"],[45,"$115,000 favorable"],[46,"$22,000 favorable"],[50,"$5,000 favorable"],[51,"$75,000 unfavorable"]])
+  assert.ok(q(6,n).choices[q(6,n).answerIndex].includes(result),"Original key Q"+n);
+ const held=q(6,53);
+ assert.equal(held.page,771); assert.equal(held.answerIndex,0);
+ assert.equal(held.stemAr,undefined); assert.equal(held.choicesAr,undefined); assert.equal(held.explanationAr,undefined);
 });
