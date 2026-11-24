@@ -34,23 +34,22 @@ const sourceFingerprint = (value) => {
   return (hash >>> 0).toString(16).padStart(8, "0");
 };
 
-test("Unit 15 Wave 3 exact Arabic coverage: 43/264, all §1 and 27/39 §2", () => {
+test("Unit 15 Wave 3: all 43 earlier Arabic draft records survive subsequent cohorts", () => {
   assert.equal(records.length, 264);
-  const translated = records.filter(row => row.stemAr || row.choicesAr || row.explanationAr);
-  assert.equal(translated.length, 43);
-  assert.equal(translated.filter(row => row.section === 1).length, 16);
-  assert.equal(translated.filter(row => row.section === 2).length, 27);
   const approved = new Set([
     ...Array.from({ length: 16 }, (_, i) => "1." + (i + 1)),
     ...Array.from({ length: 24 }, (_, i) => "2." + (i + 1)),
     "2.26", "2.27", "2.28",
   ]);
-  assert.deepEqual(new Set(translated.map(key)), approved);
-  for (const row of records) {
+  assert.equal(approved.size, 43);
+  assert.equal(records.filter(row => row.section === 1 && approved.has(key(row))).length, 16);
+  assert.equal(records.filter(row => row.section === 2 && approved.has(key(row))).length, 27);
+  for (const row of records.filter(row => approved.has(key(row)))) {
     const complete = typeof row.stemAr === "string" && !!row.stemAr.trim() &&
       typeof row.explanationAr === "string" && !!row.explanationAr.trim() &&
-      Array.isArray(row.choicesAr) && row.choicesAr.length === 4 && row.choicesAr.every(x => typeof x === "string" && !!x.trim());
-    assert.equal(complete, approved.has(key(row)), "Partial/untracked source translation: " + key(row));
+      Array.isArray(row.choicesAr) && row.choicesAr.length === 4 &&
+      row.choicesAr.every(value => typeof value === "string" && !!value.trim());
+    assert.ok(complete, "Earlier Arabic source draft damaged: " + key(row));
   }
 });
 
