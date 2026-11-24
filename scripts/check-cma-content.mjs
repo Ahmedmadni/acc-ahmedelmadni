@@ -610,7 +610,7 @@ const staticArabicVol2 = new Set([
   ...[27,28,29,30,31,33,34,35,36,40,41,42,43,44,45,46].map(n=>"15.3."+n),
   ...[3,4,5,6,7,8,11,13,14,15,16,17,18,20,21,22,23,25,26,27,28,29,30,31,33,34,35].map(n=>"15.4."+n),
   ...[1,4,8,9,10,11,12].map(n=>"15.5."+n),
-  ...Array.from({length:10},(_,i)=>"15.6."+(i+1)),
+  ...Array.from({length:24},(_,i)=>"15.6."+(i+1)),
 ]);
 const vol2QuestionById = new Map(CMA_GLEIM_2025_VOL2_QUESTIONS.map(q=>[q.id,q]));
 for (const [key, original] of vol2Records) {
@@ -672,7 +672,7 @@ for (const [key, expectedPage] of pendingOriginalSourcePages) {
 console.log("Review gate: 19 unverified Unit 12 questions retain PDF page locators and English-only labels.");
 console.log("Verified Unit 13 Arabic educational drafts: 43/44 §1, 14/14 §2, 33/34 §3, 31/31 §4 (121/123 total); source-flagged §1 Q34 and §3 Q23 remain English-first.");
 console.log("Unit 14 source Arabic drafts: §1 5/8, §2 41/43, §3 18/19, §4 36/40, §5 34/34, §6 26/31; 160/175 Arabic educational drafts. Ten review-held drafts and 15 English-first records remain outside scored practice.");
-console.log("Unit 15 Arabic source drafts: §1 16/16, §2 37/39, §3 42/46, §4 27/35, §5 7/12, §6 10/67; 139/264 (52.7%) complete Arabic educational drafts. Remaining 125 English-first, including 19 source review holds.");
+console.log("Unit 15 Arabic source drafts: §1 16/16, §2 37/39, §3 42/46, §4 27/35, §5 7/12, §6 24/67; 153/264 (58.0%) complete Arabic educational drafts. Remaining 111 English-first, including 19 source review holds.");
 for (const [key,page,needle] of [
   ["15.2.25",596,"$1.360 U"],
   ["15.2.32",607,"Budgete\n"],
