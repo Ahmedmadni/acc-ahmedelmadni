@@ -113,7 +113,8 @@ const pendingAnswerRoundingReviews = new Set(["14.2.23"]);
  * Keep the exact original publisher record and block graded use until checked.
  * The sourceLayoutReview flag is the shared compatibility safety gate.
  */
-const pendingAnswerConsistencyReviews = new Set(["14.6.21"]);
+// Unit 15 §6 Q28 asks for actual machine hours but volume variance only identifies standard allowed hours.
+const pendingAnswerConsistencyReviews = new Set(["14.6.21", "15.6.28"]);
 
 /** §5 Q10 is a follow-up to Montero's preceding case: its isolated stem
  * contains neither the prior cash collections nor the cash expense schedule.
