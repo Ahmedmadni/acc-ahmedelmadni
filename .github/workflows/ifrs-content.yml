@@ -58,6 +58,8 @@ jobs:
         run: node --test scripts/tests/cma-translation.test.mjs
       - name: CMA Unit 14 source review and release hold inventory
         run: node --test scripts/tests/cma-unit14-review.test.mjs
+      - name: CMA Unit 15 variance analysis Arabic release tests
+        run: node --test scripts/tests/cma-unit15-arabic-wave1.test.mjs
       - name: CMA browser-only translation and external fallback tests
         run: node --test scripts/tests/cma-translation-browser.test.mjs
       - name: CMA on-site Part 2 bank regression tests

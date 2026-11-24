@@ -9,3 +9,6 @@
 - [x] Unit 14 reviewer ledger: 25 review-only questions documented with bilingual reasons and original PDF pages (15 English-first, 10 translated drafts still unscored).
 - [ ] Original 2025 Part 1 Volume 2 source-page audit: resolve 15 English-first and 10 translated review-only holds; the available Library PDF is a 2019 Part 2 book and cannot certify them.
 - [ ] Verify corrected source layouts, independent accounting calculations, Arabic terminology, and mobile/tablet exam & study presentation before lifting each scoring gate.
+
+- [x] Unit 15 Wave 1 (24 Nov 2026): 14 complete Arabic educational drafts in §1 (14/264 overall), with original source fingerprints, answer positions, ordered numeric tokens and CI coverage enforced.
+- [ ] Continue Unit 15: §1 Q9/Q16 and remaining 250 English-first questions need case-specific source/accounting review and Arabic drafts. See `docs/CMA_UNIT15_ARABIC_WAVE1_2026-11-24.md`.

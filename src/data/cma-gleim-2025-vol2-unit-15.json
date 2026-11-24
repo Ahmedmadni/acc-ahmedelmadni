@@ -14,7 +14,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The purpose of identifying and assigning responsibility for\nvariances is to determine who is likely to have information that\nwill enable management to find solutions. The constructive\napproach is to promote learning and continuous improvement\nin manufacturing operations, not to assign blame. However,\ninformation about variances may be useful in evaluating\nmanagers’ performance.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ينبغي أن يكون الهدف من تحديد انحرافات تكاليف التصنيع وإسناد مسؤولية متابعتها إلى شخص أو قسم هو:",
+    "choicesAr": [
+      "الاستفادة من معلومات الانحرافات لتعزيز التعلم والتحسين المستمر في عمليات التصنيع.",
+      "تحميل الانحرافات على المنتجات التامة حتى يُقيَّم المخزون تقييمًا صحيحًا في نهاية السنة.",
+      "تحديد التكلفة المناسبة للمنتجات المصنوعة لتعديل أسعار البيع وفقًا لذلك.",
+      "تحديد الشخص المخطئ في المشكلات التشغيلية داخل المنشأة."
+    ],
+    "explanationAr": "يهدف تحليل الانحرافات وتحديد الجهات المسؤولة عن متابعتها إلى معرفة من يمتلك المعلومات اللازمة لمساعدة الإدارة على الوصول إلى حلول. فالنهج البنّاء هو التعلم والتحسين المستمر للعمليات الصناعية، وليس البحث عن شخص لإلقاء اللوم عليه. ومع ذلك يمكن الاستفادة من معلومات الانحرافات عند تقييم أداء المديرين."
   },
   {
     "unit": 15,
@@ -31,7 +39,15 @@
     ],
     "answerIndex": 0,
     "explanation": "In the long run, these costs should be the same. In the short\nrun, however, they may differ because standard costs\nrepresent what costs should be, whereas budgeted costs are\nexpected actual costs. Budgeted costs may vary widely from\nstandard costs in certain months, but, for an annual budget\nperiod, the amounts should be similar.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "قد تنشأ فروق بين التكاليف المعيارية المستخدمة للرقابة على التكاليف والتكاليف المدرجة بالموازنة لنشاط تصنيعي مماثل، لأن:",
+    "choicesAr": [
+      "التكاليف المعيارية تعبر عما ينبغي أن تكون عليه التكلفة، بينما تعبر تكاليف الموازنة عن التكاليف الفعلية المتوقعة.",
+      "تكاليف الموازنة تكاليف تاريخية، بينما تقوم التكاليف المعيارية على دراسات هندسية.",
+      "تكاليف الموازنة تتضمن قدرًا من التراخي لا تتضمنه التكاليف المعيارية.",
+      "التكاليف المعيارية تتضمن قدرًا من التراخي لا تتضمنه تكاليف الموازنة."
+    ],
+    "explanationAr": "يُتوقع تقارب التكاليف المعيارية وتكاليف الموازنة على المدى الطويل. لكنهما قد تختلفان على المدى القصير؛ فالمعيار يمثل التكلفة التي ينبغي تحقيقها، بينما تُقدّر الموازنة التكلفة الفعلية المتوقعة. لذلك قد تظهر فروق كبيرة خلال بعض الشهور، وإن كان يُتوقع تقارب الإجماليات على مستوى الموازنة السنوية."
   },
   {
     "unit": 15,
@@ -48,7 +64,15 @@
     ],
     "answerIndex": 0,
     "explanation": "A responsibility accounting system should have certain\ncontrols that provide for feedback reports indicating deviations\nfrom expectations. Management may then focus on those\ndeviations (exceptions) for either reinforcement or correction.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في نظام المحاسبة عن المسؤولية، يُعد تقرير التغذية الراجعة الذي يركز على الفروق بين مبالغ الموازنة والمبالغ الفعلية مثالًا على:",
+    "choicesAr": [
+      "الإدارة بالاستثناء.",
+      "إسناد اللوم إلى المسؤولين.",
+      "منح مكافآت للمديرين الناجحين.",
+      "تجاهل المتغيرات الأخرى التي تحققت فيها أهداف الموازنة."
+    ],
+    "explanationAr": "ينبغي أن يتضمن نظام المحاسبة عن المسؤولية ضوابط وتقارير تغذية راجعة تكشف الانحرافات عن الأداء المتوقع. وبذلك تستطيع الإدارة التركيز على هذه الاستثناءات، سواء لتعزيز الأداء الجيد أو لاتخاذ إجراءات تصحيحية."
   },
   {
     "unit": 15,
@@ -65,7 +89,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A variance shows a deviation of actual results from the\nexpected or budgeted results. All significant variances should\nbe investigated, whether favorable or unfavorable.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العوامل التالية لا ينبغي أخذه في الحسبان عند اتخاذ قرار التحقيق في انحراف؟",
+    "choicesAr": [
+      "حجم الانحراف.",
+      "اتجاه الانحرافات عبر الزمن.",
+      "احتمال أن يؤدي التحقيق إلى منع تكرار الانحراف مستقبلًا.",
+      "ما إذا كان الانحراف ملائمًا أو غير ملائم."
+    ],
+    "explanationAr": "يعكس الانحراف الفرق بين النتائج الفعلية والنتائج المتوقعة أو المدرجة في الموازنة. وينبغي فحص جميع الانحرافات الجوهرية بصرف النظر عن كونها ملائمة أو غير ملائمة؛ فإشارة الانحراف وحدها لا تحدد ما إذا كانت المراجعة ضرورية."
   },
   {
     "unit": 15,
@@ -82,7 +114,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Management by exception gives significant attention only to\nthose areas in which material deviations from expectations\noccur. Consequently, management focuses resources where\nthe greatest returns from supervisory effort may be achieved.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الممارسات الإدارية التالية تقوم على تركيز الاهتمام في المجالات التي تستدعي التدخل، مع تقليل الاهتمام بالمجالات التي تعمل وفق المتوقع؟",
+    "choicesAr": [
+      "الإدارة بالأهداف.",
+      "المحاسبة عن المسؤولية.",
+      "المقارنة المرجعية.",
+      "الإدارة بالاستثناء."
+    ],
+    "explanationAr": "توجه الإدارة بالاستثناء قدرًا أكبر من الاهتمام إلى المجالات التي تظهر فيها انحرافات جوهرية عن التوقعات. ويتيح ذلك توجيه وقت الإدارة ومواردها إلى المشكلات أو الفرص التي يُرجح أن تحقق فيها جهود المتابعة أكبر منفعة."
   },
   {
     "unit": 15,
@@ -99,7 +139,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Variance analysis is an important tool for the management\naccountant. It enables management by exception, which is the\npractice of giving attention primarily to significant deviations\nfrom expectations. Managers must use their judgment to\ndetermine the most efficient use of their limited time.\nConcentrating on operations that are not performing within\nexpected limits is likely to yield the best ratio of benefits to\ncosts.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يعقد المراقب المالي في إحدى الشركات اجتماعًا شهريًا، ويُلزم أي قسم يسجل انحرافًا غير ملائم بنسبة 10% عن الموازنة بتفسيره ووضع خطة لمعالجته. يُعد ذلك مثالًا على:",
+    "choicesAr": [
+      "الإدارة على أساس الأنشطة.",
+      "إدارة التكلفة.",
+      "التحسين المستمر.",
+      "الإدارة بالاستثناء."
+    ],
+    "explanationAr": "يُعد تحليل الانحرافات أداة مهمة للمحاسب الإداري لأنه يدعم الإدارة بالاستثناء؛ أي التركيز أساسًا على الفروق الجوهرية عن النتائج المتوقعة. وعلى المديرين استخدام حكمهم المهني لتخصيص وقتهم المحدود بكفاءة، وغالبًا ما تحقق متابعة الأنشطة الخارجة عن الحدود المخططة منفعة أعلى مقارنة بتكلفة المتابعة."
   },
   {
     "unit": 15,
@@ -116,7 +164,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Management by exception, the practice of giving attention\nprimarily to significant deviations from expectations, is\ndependent upon careful formulation of standards and sound\nprojection of output and cost levels. Advance planning will be\njust as important as ever. There will be no less reliance than in\nthe past.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تشمل فوائد إعداد التقارير وفق أسلوب الإدارة بالاستثناء تقليل جميع ما يلي، باستثناء:",
+    "choicesAr": [
+      "تكاليف إعداد التقارير وإنتاجها.",
+      "الإفراط في المعلومات المعروضة على الإدارة.",
+      "الاعتماد على التخطيط المسبق.",
+      "التصرفات الإدارية التي تفتقر إلى التركيز."
+    ],
+    "explanationAr": "تقوم الإدارة بالاستثناء على وضع معايير مدروسة وتوقعات سليمة للإنتاج والتكاليف، ثم متابعة الانحرافات المهمة عنها. لذلك لا يقل الاعتماد على التخطيط المسبق؛ بل يظل التخطيط المسبق ضروريًا بالقدر نفسه حتى تعمل التقارير الاستثنائية بصورة فعالة."
   },
   {
     "unit": 15,
@@ -133,7 +189,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Not all variances are directly caused by the managers. Some\nof these variances can be beyond the control of the manager.\nThus, identifying the manager who is responsible for not\nachieving desired results should not be the main reason for\nwhy variances are calculated. If responsibility for certain costs\nexceeds the extent to which a manager can influence or\ncontrol that activity, the result may be reduced morale, a\ndecline in managerial effort, and poor performance. This is\nknown as the concept of controllability.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في نظام متابعة الأداء، أي الأسباب التالية هو الأقل صلاحية لحساب الانحرافات بين الأداء الفعلي والأداء المدرج بالموازنة؟",
+    "choicesAr": [
+      "تمكين المديرين من اتخاذ إجراءات تصحيحية مبكرة.",
+      "تحديد المدير الذي يتحمل مسؤولية عدم تحقيق النتائج المطلوبة.",
+      "اكتشاف الممارسات الكفؤة التي يمكن نقلها إلى أقسام أخرى في المنشأة.",
+      "تحسين التنبؤات بالأداء المستقبلي."
+    ],
+    "explanationAr": "لا تنشأ جميع الانحرافات مباشرة عن قرارات المديرين؛ فقد تقع بعض الأسباب خارج نطاق سيطرتهم. لذا لا يصح أن يكون هدف التحليل الأساسي هو تحديد مدير لتحميله مسؤولية كل فرق. وإذا تجاوزت المسؤولية المفروضة على المدير حدود قدرته على التأثير في النشاط أو التحكم فيه، فقد يضعف ذلك الروح المعنوية والجهد الإداري والأداء. ويُعرف هذا بمبدأ القابلية للرقابة."
   },
   {
     "unit": 15,
@@ -167,7 +231,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Computing variances does not verify the accuracy of\nstandards. The standards may be in fact correct, while the\nactual number could include unusual events that require\nfurther investigation.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الأسباب التالية هو الأقل احتمالًا لأن يكون غرضًا من حساب الانحرافات في نظام متابعة الأداء؟",
+    "choicesAr": [
+      "تحفيز التعلم التنظيمي.",
+      "إجراء تحسينات مستمرة.",
+      "التحقق من دقة المعايير.",
+      "تنبيه الإدارة إلى المشكلات القائمة."
+    ],
+    "explanationAr": "لا يثبت حساب الانحرافات وحده أن المعايير دقيقة أو غير دقيقة؛ فقد يكون المعيار سليمًا بينما تتأثر النتيجة الفعلية بظروف غير اعتيادية تتطلب تحقيقًا منفصلًا. لهذا لا يُعد حساب الفروق في حد ذاته وسيلة للتحقق من صحة المعايير."
   },
   {
     "unit": 15,
@@ -184,7 +256,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Positive variances still need to be investigated. If the cause of\nthe positive variance can be found, it can be applied to other\nareas to decrease the number of negative variances.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية بشأن الإدارة بالاستثناء هي الأقل احتمالًا للصحة؟",
+    "choicesAr": [
+      "يستطيع المديرون تركيز جهودهم على المجالات الأكثر أهمية.",
+      "تكون مفيدة بصورة خاصة عند تطبيقها على بنود يمكن التحكم فيها.",
+      "قد تؤدي إلى تغيير عملية تشغيلية بأكملها.",
+      "لا يلزم التحقيق في الانحرافات الإيجابية."
+    ],
+    "explanationAr": "ينبغي فحص الانحرافات الإيجابية أيضًا؛ فقد يكشف تحديد أسبابها عن أساليب يمكن تعميمها على أجزاء أخرى من المنشأة لتحسين الأداء والحد من الانحرافات السلبية. لذا لا تُستبعد من المراجعة لمجرد أنها ملائمة."
   },
   {
     "unit": 15,
@@ -201,7 +281,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Standard costs exclude past inefficiencies to focus on current\nperformance and potential improvement, taking into account\nexpected future changes.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يُستخدم نظام التكاليف المعيارية كثيرًا في تحليل الانحرافات لأن التكاليف المعيارية:",
+    "choicesAr": [
+      "تتضمن أوجه عدم الكفاءة السابقة، وتراعي التغيرات المستقبلية المتوقعة.",
+      "تستبعد أوجه عدم الكفاءة السابقة، وتراعي التغيرات المستقبلية المتوقعة.",
+      "تتضمن أوجه عدم الكفاءة السابقة، وتستبعد التغيرات المستقبلية المتوقعة.",
+      "تستبعد أوجه عدم الكفاءة السابقة، وتستبعد التغيرات المستقبلية المتوقعة."
+    ],
+    "explanationAr": "تُبنى التكاليف المعيارية على مستوى أداء مستهدف لا يكرر أوجه عدم الكفاءة التاريخية، مع أخذ التغيرات المستقبلية المتوقعة في الحسبان. ويسمح ذلك باستخدامها لتقييم الأداء الحالي وتحديد فرص التحسين."
   },
   {
     "unit": 15,
@@ -218,7 +306,15 @@
     ],
     "answerIndex": 1,
     "explanation": "A standard cost system is fully focused on quantitative factors,\nnot qualitative characteristics.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "قد يحقق استخدام نظام التكاليف المعيارية جميع المزايا التالية، باستثناء أنه:",
+    "choicesAr": [
+      "يساعد في تقييم الأداء.",
+      "يركز على الخصائص النوعية.",
+      "يساعد في إعداد الموازنات المرنة.",
+      "يساعد الموظفين على فهم ما يُتوقع منهم تحقيقه."
+    ],
+    "explanationAr": "يركز نظام التكاليف المعيارية أساسًا على المقاييس الكمية للتكاليف والمدخلات والأداء، وليس على الخصائص النوعية. لذلك لا يُعد التركيز على الجوانب النوعية إحدى المزايا المباشرة لهذا النظام."
   },
   {
     "unit": 15,
@@ -235,7 +331,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Information sent to top management is ordinarily more highly\naggregated and less timely than that communicated to\nmanagers at operational levels. Top managers are concerned\nwith the organization’s overall financial results and long-term\nprospects and are responsible for the strategic planning\nfunction. Lower-level reports contain more quantitative\ninformation of an operational nature, e.g., production data.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عند مقارنة تقارير الأداء المقدمة إلى الإدارة العليا بالتقارير المقدمة إلى المستويات الإدارية الأدنى، أي العبارات التالية صحيحة؟",
+    "choicesAr": [
+      "تكون تقارير الإدارة العليا أكثر تفصيلًا.",
+      "تغطي تقارير المستويات الإدارية الأدنى عادة فترات زمنية أطول.",
+      "تُظهر تقارير الإدارة العليا سيطرة على عدد أقل من بنود التكلفة.",
+      "تحتوي تقارير المستويات الإدارية الأدنى عادة على بيانات كمية تشغيلية أكثر وبيانات مالية أقل."
+    ],
+    "explanationAr": "تكون تقارير الإدارة العليا عادة أكثر تجميعًا وأقل فورية من التقارير المقدمة إلى المديرين التشغيليين، لأنها تركز على النتائج المالية الكلية والآفاق طويلة الأجل والتخطيط الاستراتيجي. أما تقارير المستويات الإدارية الأدنى فتتضمن عادة تفاصيل كمية تشغيلية أكثر، مثل بيانات الإنتاج."
   },
   {
     "unit": 15,
@@ -252,7 +356,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Variable costs by their nature are directly related to the level of\nactivity. Thus, a flexible budget formula must use per-unit\nvariable costs to be useful. At the same time, all fixed costs\nmust be covered regardless of the level of output. They are\nmost meaningful when stated in total.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية صحيحة عند التعبير عن التكاليف في معادلة الموازنة المرنة؟ تُعرض التكاليف المتغيرة:",
+    "choicesAr": [
+      "لكل وحدة، بينما تُعرض التكاليف الثابتة بإجماليها.",
+      "بإجماليها، بينما تُعرض التكاليف الثابتة لكل وحدة.",
+      "بإجماليها، وتُعرض التكاليف الثابتة أيضًا بإجماليها.",
+      "لكل وحدة، وتُعرض التكاليف الثابتة أيضًا لكل وحدة."
+    ],
+    "explanationAr": "ترتبط التكاليف المتغيرة بمستوى النشاط، لذلك تعبّر معادلة الموازنة المرنة عنها بتكلفة متغيرة لكل وحدة. أما التكاليف الثابتة فينبغي تغطيتها بصرف النظر عن حجم الإنتاج ضمن نطاق النشاط الملائم، ولهذا يكون عرضها بإجماليها أكثر فائدة."
   },
   {
     "unit": 15,
