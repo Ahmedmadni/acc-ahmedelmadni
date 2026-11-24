@@ -4,7 +4,7 @@ import { ArrowLeft, ArrowRight, ChartNoAxesCombined, CodeXml, PanelsTopLeft } fr
 import { Button } from "@/components/ui/button";
 import { useMotionSafe } from "@/lib/motion";
 import type { Lang } from "@/lib/i18n";
-import dashboardImage from "@/assets/finance-dashboard.webp";
+import workspaceImage from "@/assets/digital-expertise-professional.webp.asset.json";
 
 const expertise = [
   {
@@ -93,17 +93,17 @@ export function DigitalExpertise({ lang }: { lang: Lang }) {
           <figure className="min-w-0">
             <div className="overflow-hidden rounded-md border border-hairline bg-surface">
               <img
-                src={dashboardImage}
+                src={workspaceImage.url}
                 alt={
                   ar
-                    ? "تصوّر بصري لعرض البيانات والتقارير المالية"
-                    : "A visual illustration of financial data and reporting"
+                    ? "مكتب احترافي يعرض التقارير المالية وتصميم المواقع على شاشات واضحة"
+                    : "A professional workspace displaying financial reports and website design on clear screens"
                 }
                 className="aspect-[4/3] w-full object-cover"
                 loading="lazy"
                 decoding="async"
-                width={800}
-                height={600}
+                width={1536}
+                height={1024}
               />
             </div>
             <figcaption className="mt-4 flex flex-wrap justify-between gap-2 text-xs text-ink-muted">
