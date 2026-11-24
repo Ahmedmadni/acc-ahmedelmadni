@@ -170,7 +170,7 @@ const wave5=new Map([
 ]);
 const q3=n=>rows.find(r=>r.section===3&&r.number===n);
 test("Unit 16 Wave 5: 72 drafts and 12 immutable investment center sources",()=>{
- const localized=rows.filter(r=>r.stemAr!==undefined||r.choicesAr!==undefined||r.explanationAr!==undefined);
+ const localized=rows.filter(r=>(r.section<=2||(r.section===3&&r.number<=15))&&(r.stemAr!==undefined||r.choicesAr!==undefined||r.explanationAr!==undefined));
  assert.equal(localized.length,72);
  assert.deepEqual(localized.filter(r=>r.section===3).map(r=>r.number),[...wave5.keys()]);
  for(const [n,[page,index,hash]] of wave5){
@@ -208,6 +208,58 @@ test("Unit 16 Wave 5: ROI and residual income calculations and assumption counte
  for(const [n,page] of [[9,913],[10,914],[11,915]]){
   const held=q3(n);
   assert.equal(held.page,page);assert.equal(held.answerIndex,3);
+  assert.equal(held.stemAr,undefined);assert.equal(held.choicesAr,undefined);assert.equal(held.explanationAr,undefined);
+  assert.ok(adapter.includes('"16.3.'+n+'"'));
+ }
+});
+
+const wave6=new Map([
+ [16,[919,2,"70d26c49"]],[17,[920,0,"1070e8d8"]],[18,[921,1,"96157c58"]],
+ [19,[922,1,"3874f990"]],[20,[923,2,"ad6592a8"]],[21,[924,0,"0b2d4285"]],
+ [22,[925,0,"faa3eab3"]],[23,[926,1,"ee089186"]],[24,[927,3,"3684c703"]],
+ [25,[928,2,"25a255a7"]],[27,[929,3,"5e639d77"]],[28,[930,3,"39f061da"]],
+ [29,[931,3,"a89c9f14"]],
+]);
+test("Unit 16 Wave 6: 85 drafts and 13 immutable investment performance sources",()=>{
+ const localized=rows.filter(r=>r.stemAr!==undefined||r.choicesAr!==undefined||r.explanationAr!==undefined);
+ assert.equal(localized.length,85);
+ assert.deepEqual(localized.filter(r=>r.section===3).map(r=>r.number),[...wave5.keys(),...wave6.keys()]);
+ for(const [n,[page,index,hash]] of wave6){
+  const r=q3(n);
+  assert.equal(r.page,page);assert.equal(r.answerIndex,index);
+  assert.equal(r.answerStatus,"source");assert.equal(r.sourceTextStatus,undefined);
+  assert.equal(fingerprint(JSON.stringify([r.stem,r.choices,r.explanation,r.answerIndex,r.page])),hash);
+  assert.equal(validateCmaTranslation({question:{en:r.stem},choices:{en:r.choices},explanation:{en:r.explanation}},
+   {question:r.stemAr,choices:r.choicesAr,explanation:r.explanationAr}).valid,true,String(n));
+  for(const [en,ar] of [[r.stem,r.stemAr],...r.choices.map((c,i)=>[c,r.choicesAr[i]]),[r.explanation,r.explanationAr]])
+   assert.deepEqual(cmaNumericTokens(ar),cmaNumericTokens(en),String(n));
+ }
+});
+test("Unit 16 Wave 6: independent ROI/RI decisions, asset funding counterexample and holds",()=>{
+ const ri=(income,capital,rate)=>income-capital*rate;
+ assert.equal(ri(600000-360000-60000,120000,.08),170400);
+ const actual=[18.1,20,15.8,11],targets=[18,16,14,12];
+ assert.equal(actual.indexOf(Math.max(...actual)),1);
+ const excess=actual.map((v,i)=>v-targets[i]);
+ assert.equal(excess.indexOf(Math.max(...excess)),1);
+ assert.deepEqual([["A",13],["B",19],["C",22],["D",31]].filter(x=>x[1]>15).map(x=>x[0]),["B","C","D"]);
+ const returns=[1000/2500,5000/15000,4000/8000,7500/25000];
+ assert.equal(Math.max(...returns),.5);
+ assert.equal(ri(365000,1750000,.12),155000);
+ assert.equal((475000/3500000*100).toFixed(1),"13.6");
+ assert.equal(ri(200000,1000000,.15),50000);
+ // Cash purchase changes asset composition but not the total asset base.
+ const before={cash:400,inventory:100,other:500};
+ const after={cash:200,inventory:300,other:500};
+ const sum=o=>Object.values(o).reduce((a,b)=>a+b,0);
+ assert.equal(sum(before),sum(after));
+ assert.equal(100/sum(before),100/sum(after));
+ for(const [n,expected] of [[17,"$170,400"],[18,"Division B"],[19,"B, C, and D"],[20,"South"],[21,"$155,000"],[24,"13.6%"],[27,"$50,000"]])
+  assert.ok(q3(n).choices[q3(n).answerIndex].replace(/\s+/g," ").includes(expected),String(n));
+ const adapter=read("src/data/cma-questions-gleim-2025-vol2.ts");
+ for(const [n,page,index] of [[26,928,1],[30,932,1]]){
+  const held=q3(n);
+  assert.equal(held.page,page);assert.equal(held.answerIndex,index);
   assert.equal(held.stemAr,undefined);assert.equal(held.choicesAr,undefined);assert.equal(held.explanationAr,undefined);
   assert.ok(adapter.includes('"16.3.'+n+'"'));
  }
