@@ -28,3 +28,6 @@
 - [x] Unit 15 Wave 16 (24 Nov 2026): reviewed all 18 remaining records, translated 15 (§8 Q13–22/Q24–25/Q27–29). Total **217/264 (82.2%)**, §8 **20/31**. Held Q26/Q31 for revenue-versus-contribution-margin ambiguity and Q30 for corrupt table. All 264 reviewed; 47 held, zero unreviewed.
 - [x] Unit 15 reviewer ledger (24 Nov 2026): all 47 source holds now have bilingual explanations, original page numbers and gate types (39 explicit, 8 automatic). Study library and ExamPrep share the ledger; regression tests verify exact alignment with scoring exclusions.
 - [ ] Visually audit the 47 held records using the authorized 2025 source PDF and resolve source/rights issues before any scoring release. See `docs/CMA_UNIT15_ARABIC_WAVE16_2026-11-24.md` and the full source-page inventory therein.
+- [x] Unit 16 Wave 1: 20 educational Arabic drafts (§1 Q1–3/Q5–18/Q20–22), Q4/Q19 held for broken option and inferred key.
+- [x] Unit 16 Wave 2: 12 further drafts (§1 Q23–34); integrated the two waves on the latest main, preserving the Unit 15 source-review ledger. **32/166 (19.3%)**, §1 **32/53**, 2 held, 132 unreviewed.
+- [ ] Continue Unit 16 §1 Q35–53 then §§2–5. See `docs/CMA_UNIT16_ARABIC_WAVE2_2026-11-24.md`.
