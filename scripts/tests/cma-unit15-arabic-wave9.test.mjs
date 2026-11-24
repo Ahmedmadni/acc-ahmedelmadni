@@ -442,3 +442,52 @@ test("Unit 15 Wave 16: independent sales volume, quantity, mix, price and operat
   assert.equal(held.stemAr,undefined); assert.equal(held.choicesAr,undefined); assert.equal(held.explanationAr,undefined);
  }
 });
+
+import { CMA_UNIT15_REVIEW_HOLDS, getCmaUnit15SourceReview } from "../../src/lib/cma-unit15-source-review.ts";
+
+test("Unit 15 review ledger exactly matches all 47 unscored source exceptions",()=>{
+ const adapter=read("src/data/cma-questions-gleim-2025-vol2.ts");
+ const explicit=new Set();
+ for(const setName of ["pendingSourceLayouts","pendingAnswerConsistencyReviews","pendingAnswerRoundingReviews","pendingStandaloneContextReviews"]){
+  const match=adapter.match(new RegExp("const "+setName+"\\s*=\\s*new Set\\(\\[([\\s\\S]*?)\\]\\)"));
+  assert.ok(match,"Missing review set "+setName);
+  for(const id of match[1].matchAll(/"(15\.\d+\.\d+)"/g))explicit.add(id[1]);
+ }
+ const heldById=new Map(CMA_UNIT15_REVIEW_HOLDS.map(entry=>[entry.id,entry]));
+ assert.equal(heldById.size,47);
+ assert.equal(CMA_UNIT15_REVIEW_HOLDS.length,47);
+ assert.equal(explicit.size,39);
+ assert.equal(CMA_UNIT15_REVIEW_HOLDS.filter(e=>e.gate==="source-status").length,8);
+ for(const row of rows){
+  const key="15."+row.section+"."+row.number;
+  const id="cma-gleim-2025-vol2-su15-s"+row.section+"-q"+String(row.number).padStart(3,"0");
+  const automatic=["table-reflowed","reconstructed"].includes(row.sourceTextStatus);
+  const flagged=explicit.has(key)||automatic;
+  const entry=heldById.get(key);
+  const review=getCmaUnit15SourceReview(id);
+  assert.equal(!!entry,flagged,key+" review ledger and scoring adapter disagree");
+  assert.equal(!!review,flagged,key+" warning missing or unexpected");
+  if(flagged){
+   assert.equal(row.stemAr,undefined,key);
+   assert.equal(row.choicesAr,undefined,key);
+   assert.equal(row.explanationAr,undefined,key);
+   assert.equal(entry.page,row.page,key);
+   assert.equal(entry.gate,automatic?"source-status":"explicit",key);
+   if(automatic)assert.equal(entry.kind,row.sourceTextStatus,key);
+   assert.ok(review.message.ar.includes(String(row.page))&&review.message.en.includes(String(row.page)),key);
+   assert.ok(review.message.ar.includes("غير محتسب")&&review.message.en.includes("not scored"),key);
+  }else{
+   assert.ok(row.stemAr&&row.explanationAr&&row.choicesAr?.length===row.choices.length,key);
+  }
+ }
+ assert.equal(getCmaUnit15SourceReview("cma-gleim-2025-vol2-su14-s6-q021"),undefined);
+ assert.equal(getCmaUnit15SourceReview("invalid"),undefined);
+ assert.equal(getCmaUnit15SourceReview("cma-gleim-2025-vol2-su15-s6-q028")?.kind,"hours-definition");
+ assert.equal(getCmaUnit15SourceReview("cma-gleim-2025-vol2-su15-s8-q031")?.kind,"revenue-margin");
+ assert.equal(getCmaUnit15SourceReview("cma-gleim-2025-vol2-su15-s8-q023")?.kind,"reconstructed");
+ for(const path of ["src/routes/library.cma.tsx","src/components/tools/ExamPrep.tsx"]){
+  const ui=read(path);
+  assert.match(ui,/getCmaUnit15SourceReview\(q\.id\)\?\.message\[lang\]/);
+  assert.match(ui,/q\.sourceLayoutReview/);
+ }
+});
