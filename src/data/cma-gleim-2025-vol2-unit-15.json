@@ -4504,7 +4504,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Overhead was budgeted at $756,000 based on a budgeted\nlabor cost of $432,000 ($7.20 × 60,000 hours). Thus, $1.75 of\noverhead was applied for each $1 of labor cost ($756,000 ÷\n$432,000). Given actual labor costs of $450,000, $787,500\n($1.75 × $450,000) of overhead was applied during the period.\nActual overhead was $775,000, so $12,500 ($787,500 –\n$775,000) was overapplied.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم شركة معدل تحميل محددًا مسبقًا للتكاليف الصناعية غير المباشرة على أساس تكلفة العمل المباشر. بلغت التكاليف الصناعية غير المباشرة المقدرة $756,000 على أساس حجم مقدر يبلغ 60,000 ساعة عمل مباشر، بمعدل أجر معياري $7.20 للساعة. وبلغت التكاليف الصناعية غير المباشرة الفعلية $775,000، وتكلفة العمل المباشر الفعلية $450,000 للسنة المنتهية في 31 ديسمبر. ما مبلغ زيادة تحميل التكاليف الصناعية غير المباشرة؟",
+    "choicesAr": [
+      "$12,500",
+      "$18,000",
+      "$19,000",
+      "$37,000"
+    ],
+    "explanationAr": "قدرت التكاليف غير المباشرة بمبلغ $756,000 على أساس تكلفة عمل مقدرة $432,000 ($7.20 × 60,000 ساعة). لذلك حُمل $1.75 من التكاليف غير المباشرة لكل $1 من تكلفة العمل ($756,000 ÷ $432,000). وبما أن تكلفة العمل الفعلية $450,000، فقد حُمل $787,500 ($1.75 × $450,000) خلال الفترة. وبلغت التكاليف الفعلية $775,000، لذا كانت زيادة التحميل $12,500 ($787,500 – $775,000)."
   },
   {
     "unit": 15,
@@ -4521,7 +4529,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The total overhead variance is the difference between the\nactual overhead and applied (absorbed) overhead. Given that\nneither fixed nor variable overhead differed from budgeted\namounts, the only variance was caused by under- or\noverabsorption of fixed overhead. The variable overhead rate\ndoes not vary with the capacity. The fixed overhead rate at\n90% capacity is\n$144,000 fixed overhead\n= $4.00\n36,000 DLH\nGiven that the actual capacity achieved was 75%, and that\n30,000 standard hours were allowed, $120,000 (30,000 ×\n$4.00) of fixed overhead was applied. Thus, $24,000\n($144,000 FOH – $120,000) was underabsorbed.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أعدت شركة المعلومات التالية باستخدام نظام الموازنة المرنة:\nنسبة الطاقة الكلية | 75% | 90%\nساعات العمل المباشر | 30,000 | 36,000\nالتكاليف الصناعية غير المباشرة المتغيرة | $52,500 | $63,000\nالتكاليف الصناعية غير المباشرة الثابتة | $144,000 | $144,000\nإجمالي معدل التحميل لكل ساعة عمل مباشر | $6.55 | $5.75\nعملت الشركة عند 75% من طاقتها خلال السنة، لكنها حملت التكاليف الصناعية غير المباشرة على أساس 90% من الطاقة. إذا ساوت التكاليف الفعلية التكاليف المقدرة عند 75% من الطاقة، فما انحراف التكاليف الصناعية غير المباشرة للسنة؟",
+    "choicesAr": [
+      "نقص تحميل $28,500.",
+      "زيادة تحميل $28,500.",
+      "نقص تحميل $24,000.",
+      "زيادة تحميل $24,000."
+    ],
+    "explanationAr": "إجمالي انحراف التكاليف غير المباشرة هو الفرق بين التكاليف الفعلية والمحملة. وبما أن التكاليف الثابتة والمتغيرة لم تختلف عن المبالغ المقدرة، فإن الانحراف الوحيد ناشئ عن نقص أو زيادة تحميل التكاليف الثابتة. ولا يتغير معدل تحميل التكاليف المتغيرة مع الطاقة. معدل التحميل الثابت عند 90% من الطاقة هو $144,000 تكاليف ثابتة؛ الناتج = $4.00 عند القسمة على 36,000 ساعة عمل مباشر. وبما أن الطاقة الفعلية المحققة 75% والساعات المعيارية المسموح بها 30,000، فقد حُمل $120,000 (30,000 × $4.00) من التكاليف الثابتة. وبالتالي بلغ نقص التحميل $24,000 ($144,000 تكاليف ثابتة – $120,000)."
   },
   {
     "unit": 15,
@@ -4538,7 +4554,15 @@
     ],
     "answerIndex": 0,
     "explanation": "When direct labor hours are the allocation base for variable\noverhead, an efficiency in the use of direct labor hours will\nnaturally result in a favorable variable overhead efficiency\nvariance. Among the items listed, highly skilled workers would\nbe the most likely cause of a favorable direct labor efficiency\nvariance.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تحمل شركة التكاليف الصناعية غير المباشرة المتغيرة على أساس ساعات العمل المباشر، ولديها انحراف كفاءة متغيرة ملائم بمبلغ $25,000. ما السبب المحتمل؟",
+    "choicesAr": [
+      "استخدام عمالة أعلى مهارة.",
+      "انخفاض أسعار الكهرباء عن المتوقع.",
+      "استخدام مستلزمات أقل من المتوقع.",
+      "إنتاج وحدات تامة أقل من المتوقع."
+    ],
+    "explanationAr": "عندما تكون ساعات العمل المباشر أساس تحميل التكاليف المتغيرة، فإن الكفاءة في استخدامها تؤدي إلى انحراف كفاءة متغيرة ملائم. ومن بين الخيارات، فإن استخدام عمالة عالية المهارة هو السبب الأكثر احتمالًا لانحراف كفاءة العمل المباشر الملائم."
   },
   {
     "unit": 15,
@@ -4555,7 +4579,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The use of less-skilled workers will generally result in\nunfavorable labor efficiency variances. However, this is\naccompanied by favorable labor rate (or price) variances,\nwhich result from paying lower wages.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم منشأة التحليل الرباعي للتكاليف الصناعية غير المباشرة، وساعات تشغيل الآلات أساسًا لتوزيعها، وسنوات الخبرة محددًا رئيسيًا لزيادة الأجور. وتضع المعايير وتراجعها سنويًا. وبسبب زيادة الضغوط التنافسية قررت الإدارة تقليص حجم العمالة، وعرضت حوافز سمحت لعدد كبير من كبار الموظفين بالتقاعد المبكر في منتصف السنة. واضطرت إلى تعيين بدلاء مؤقتين بأجور المبتدئين للوفاء بمواعيد العمل. أي النتائج التالية أكثر احتمالًا؟",
+    "choicesAr": [
+      "انحرافات كفاءة غير ملائمة وانحرافات أسعار ملائمة.",
+      "انحرافات كفاءة غير ملائمة وانحرافات أسعار غير ملائمة.",
+      "انحرافات كفاءة ملائمة وانحرافات أسعار غير ملائمة.",
+      "انحرافات كفاءة ملائمة وانحرافات أسعار ملائمة."
+    ],
+    "explanationAr": "يؤدي استخدام عمالة أقل مهارة عادةً إلى انحرافات كفاءة عمل غير ملائمة، ولكن يقترن ذلك بانحرافات معدلات أجور (أسعار) ملائمة بسبب دفع أجور أقل."
   },
   {
     "unit": 15,
@@ -4572,7 +4604,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Since 10,000 hours were budgeted to complete 5,000 units,\nthe standard number of hours required for each unit of output\nis 2 (10,000 hours ÷ 5,000 units). Since 4,500 units were\nactually produced, the “expected” number of hours, that is, the\nnumber that should have been consumed given the achieved\nlevel of production, was 9,000 (4,500 units × 2 hours per unit).\nThe actual number of labor hours expended during the month\nwas 9,600, and the efficiency variance is given as $2,400 U.\nPlugging these amounts into the formula for the efficiency\nvariance allows us to derive the standard variable overhead\nrate:\n(EQ – AQ) × SP = Variable overhead efficiency variance\n(9,000 – 9,600) × SP = $2,400 U\nSP = $4.00 per hour",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يستخدم مصنع نظام التكاليف المعيارية ويحمل التكاليف الصناعية غير المباشرة على أساس ساعات العمل المباشر. تضمنت موازنة التصنيع لإنتاج 5,000 وحدة خلال يونيو 10,000 ساعة عمل مباشر بمعدل $15 للساعة، أي $150,000. وخلال يونيو أُنتجت 4,500 وحدة باستخدام 9,600 ساعة عمل مباشر، وبلغت التكاليف الصناعية غير المباشرة المتغيرة $39,360، وظهر انحراف كفاءة متغيرة غير ملائم بمبلغ $2,400. ما معدل التحميل المتغير المعياري لكل ساعة عمل مباشر؟",
+    "choicesAr": [
+      "$3.85",
+      "$4.00",
+      "$4.10",
+      "$6.00"
+    ],
+    "explanationAr": "نظرًا إلى تقدير 10,000 ساعة لإنتاج 5,000 وحدة، فإن الساعات المعيارية لكل وحدة تبلغ 2 (10,000 ساعة ÷ 5,000 وحدة). وبما أن الإنتاج الفعلي بلغ 4,500 وحدة، فإن عدد الساعات المتوقع استهلاكها عند مستوى الإنتاج المحقق يبلغ 9,000 (4,500 وحدة × 2 ساعة لكل وحدة). وبلغت ساعات العمل الفعلية للشهر 9,600، وانحراف الكفاءة $2,400 غير ملائم. وبالتعويض في المعادلة نستنتج المعدل المعياري المتغير:\n(EQ – AQ) × SP = انحراف كفاءة التكاليف المتغيرة\n(9,000 – 9,600) × SP = $2,400 غير ملائم\nSP = $4.00 لكل ساعة."
   },
   {
     "unit": 15,
@@ -4589,7 +4629,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Highlight uses direct labor hours as the driver for variable\noverhead application. Thus, if the direct labor efficiency\nvariance was favorable, the variable overhead efficiency\nvariance must be favorable as well since the two variances\nare based on the same standard and actual hours.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم منشأة نظام التكاليف المعيارية وتحمل التكاليف الصناعية غير المباشرة على المنتجات على أساس ساعات العمل المباشر. إذا أبلغت المنشأة مؤخرًا عن انحراف كفاءة عمل مباشر ملائم، فإن:",
+    "choicesAr": [
+      "انحراف إنفاق التكاليف المتغيرة يجب أن يكون ملائمًا.",
+      "انحراف كفاءة التكاليف المتغيرة يجب أن يكون ملائمًا.",
+      "انحراف حجم التكاليف الثابتة يجب أن يكون غير ملائم.",
+      "انحراف معدل أجر العمل المباشر يجب أن يكون غير ملائم."
+    ],
+    "explanationAr": "تستخدم المنشأة ساعات العمل المباشر محركًا لتحميل التكاليف الصناعية غير المباشرة المتغيرة. ولذلك إذا كان انحراف كفاءة العمل المباشر ملائمًا، فإن انحراف كفاءة التكاليف المتغيرة يكون ملائمًا أيضًا؛ لأن الانحرافين يعتمدان على الساعات المعيارية والفعلية نفسها."
   },
   {
     "unit": 15,
@@ -4606,7 +4654,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The total overhead applied was $1,400,000 ($1,200,000 fixed\nplus $200,000 variable). Since actual overhead was\n$1,600,000, the total overhead variance was $200,000\nunfavorable. The $200,000 total variance would be explained\nby three elements: the fixed overhead volume variance, the\nvariable overhead efficiency variance, and the total spending\nvariance. At $3 per hour, fixed overhead was applied on the\nbasis of 400,000 hours ($1,200,000 applied fixed overhead ÷\n$3 per labor hour). But since the budget called for 500,000\nhours ($1,500,000 budgeted fixed overhead ÷ $3 per labor\nhour), there was an unfavorable volume variance of 100,000\nhours at $3, or $300,000. The variable overhead efficiency\nvariance is calculated by multiplying the excess hours of\n30,000 (430,000 – 400,000) times the variable application rate\nof $.50, or $15,000 unfavorable. Therefore, when you combine\nthe $300,000 unfavorable volume variance and the $15,000\nunfavorable efficiency variance, you get $315,000\nunfavorable. Since the total variance was only $200,000\nunfavorable, the spending variance must be favorable in the\namount of $115,000. Algebraically, this is solved as $300,000\nU + 15,000 U – SV = 200,000 U. Thus SV = $115,000 F.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أظهر تقرير الأداء المعلومات التالية عن الشهر الماضي:\nإجمالي التكاليف الصناعية غير المباشرة الفعلية $1,600,000\nالتكاليف الثابتة المقدرة 1,500,000\nالتكاليف الثابتة المحملة بمعدل $3 لكل ساعة عمل 1,200,000\nالتكاليف المتغيرة المحملة بمعدل $.50 لكل ساعة عمل 200,000\nساعات العمل الفعلية 430,000\nما إجمالي انحراف إنفاق التكاليف الصناعية غير المباشرة للشهر؟",
+    "choicesAr": [
+      "$100,000 ملائم.",
+      "$115,000 ملائم.",
+      "$185,000 غير ملائم.",
+      "$200,000 غير ملائم."
+    ],
+    "explanationAr": "بلغ إجمالي التكاليف غير المباشرة المحملة $1,400,000 ($1,200,000 ثابتة بالإضافة إلى $200,000 متغيرة). وبما أن الفعلي بلغ $1,600,000، فإن الانحراف الإجمالي $200,000 غير ملائم. ويتكون الانحراف الإجمالي البالغ $200,000 من انحراف الحجم الثابت، وانحراف الكفاءة المتغيرة، وإجمالي انحراف الإنفاق. عند معدل $3 للساعة، حُملت التكاليف الثابتة على أساس 400,000 ساعة ($1,200,000 تكاليف ثابتة محملة ÷ $3 لكل ساعة). وبما أن الموازنة تضمنت 500,000 ساعة ($1,500,000 تكاليف ثابتة مقدرة ÷ $3 للساعة)، فقد نشأ انحراف حجم غير ملائم بمقدار 100,000 ساعة بمعدل $3، أي $300,000. ويحسب انحراف الكفاءة المتغيرة بضرب الساعات الزائدة البالغة 30,000 (430,000 – 400,000) في معدل التحميل المتغير $.50، أي $15,000 غير ملائم. وبجمع انحراف الحجم $300,000 غير الملائم وانحراف الكفاءة $15,000 غير الملائم، نحصل على $315,000 غير ملائم. ولأن الانحراف الإجمالي كان $200,000 غير ملائم فقط، فإن انحراف الإنفاق يجب أن يكون ملائمًا بمبلغ $115,000. جبريًا: $300,000 غير ملائم + 15,000 غير ملائم – SV = 200,000 غير ملائم. ومنه SV = $115,000 ملائم."
   },
   {
     "unit": 15,
@@ -4623,7 +4679,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The standard application rate for variable overhead is $60.00\nper direct labor hour ($600,000 budgeted ÷ 10,000 budgeted\ndirect labor hours). The variable overhead spending variance\ncan thus be derived by using the following formula:\nVariable overhead spending (AQ × SP) – Actual costs\nvariance = incurred\n= (10,300 × $60.00) –\n$596,000\n= $22,000 F",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تصنع شركة دمى لبيعها في متاجر الألعاب. وقدرت للسنة الحالية تكاليف صناعية غير مباشرة متغيرة قدرها $600,000 وثابتة قدرها $400,000. وتستخدم نظام التكاليف المعيارية وتحمل التكاليف الصناعية غير المباشرة على الوحدات المنتجة على أساس ساعات العمل المباشر المعيارية. وكان مستوى النشاط المرجعي للموازنة 10,000 ساعة عمل مباشر، واستخدمت الشركة 10,300 ساعة فعلية. وبناء على الإنتاج المحقق كان ينبغي استخدام 9,900 ساعة عمل مباشر معيارية. وبلغت التكاليف المتغيرة الفعلية $596,000 والثابتة الفعلية $410,000 للسنة. فما انحراف الإنفاق المتغير للسنة؟",
+    "choicesAr": [
+      "$24,000 غير ملائم.",
+      "$2,000 غير ملائم.",
+      "$4,000 ملائم.",
+      "$22,000 ملائم."
+    ],
+    "explanationAr": "معدل تحميل التكاليف المتغيرة المعياري $60.00 لكل ساعة عمل مباشر ($600,000 مقدرة ÷ 10,000 ساعة عمل مباشر مقدرة). ويحسب انحراف الإنفاق المتغير بالمعادلة:\nانحراف الإنفاق = (AQ × SP) – التكاليف الفعلية\n= (10,300 × $60.00) – $596,000\n= $22,000 ملائم."
   },
   {
     "unit": 15,
@@ -4640,7 +4704,15 @@
     ],
     "answerIndex": 3,
     "explanation": "When production is lower than planned, fixed overhead costs\nare spread among fewer units of output than were planned for,\ngenerating an unfavorable volume variance.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لدى شركة انحراف حجم تكاليف صناعية غير مباشرة ثابتة بمبلغ $10,000 غير ملائم. ما السبب الأكثر احتمالًا؟",
+    "choicesAr": [
+      "رواتب مشرفي الإنتاج أعلى من المخطط.",
+      "رواتب مشرفي الإنتاج أقل من المخطط.",
+      "الإنتاج أكبر من المخطط.",
+      "الإنتاج أقل من المخطط."
+    ],
+    "explanationAr": "عندما يكون الإنتاج أقل من المخطط، تُوزع التكاليف الثابتة على عدد وحدات أقل مما خُطط له، مما ينشئ انحراف حجم غير ملائم."
   },
   {
     "unit": 15,
@@ -4657,7 +4729,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The variable overhead spending variance can be derived by\nusing the following formula:\n(AQ × SP) – Actual costs incurred",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عند استخدام نظام الموازنة المرنة، يحسب انحراف إنفاق التكاليف الصناعية غير المباشرة المتغيرة من الفرق بين:",
+    "choicesAr": [
+      "التكاليف المتغيرة الفعلية والمبلغ المقدر سابقًا.",
+      "المبلغ المقدر سابقًا والمدخلات الفعلية مضروبة في المعدل المقدر.",
+      "المبلغ المحمل على الإنتاج تحت التشغيل والتكاليف المتغيرة الفعلية.",
+      "التكاليف المتغيرة الفعلية والمدخلات الفعلية مضروبة في المعدل المقدر."
+    ],
+    "explanationAr": "يمكن اشتقاق انحراف إنفاق التكاليف المتغيرة بالمعادلة:\n(AQ × SP) – التكاليف الفعلية المتكبدة."
   },
   {
     "unit": 15,
@@ -4674,7 +4754,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The fixed overhead production volume variance is the\ndifference between the static/flexible budget for fixed\noverhead and the amount allocated based on the budgeted\nallocation rate and the driver level allowable for the actual\nproduction level achieved. None of these factors are under the\ncontrol of the production manager.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تنتج شركة قطع غيار لمعدات معالجة القطن وتبيعها. أي انحرافات التكلفة التالية هو الأقل احتمالًا لخضوعه لرقابة مدير الإنتاج؟",
+    "choicesAr": [
+      "انحراف إنفاق التكاليف المتغيرة.",
+      "انحراف كفاءة العمل.",
+      "انحراف كمية المواد.",
+      "انحراف حجم الإنتاج للتكاليف الثابتة."
+    ],
+    "explanationAr": "انحراف حجم التكاليف الصناعية غير المباشرة الثابتة هو الفرق بين موازنة التكاليف الثابتة (الثابتة أو المرنة) والمبلغ المحمل على أساس معدل التحميل المقدر ومستوى محرك التكلفة المسموح به للإنتاج الفعلي المحقق. وتكون هذه العوامل عادةً خارج نطاق سيطرة مدير الإنتاج في سياق المسألة."
   },
   {
     "unit": 15,
@@ -4691,7 +4779,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The variable overhead spending variance is calculated as the\ndifference between actual overhead and variable overhead at\nthe budgeted application rate allowed for actual input. The\nbudgeted application rate was $7.50/DLH ($150,000 ÷ 20,000\nhours). 22,000 direct labor hours were used. Therefore, the\nvariance is $5,000 favorable [$160,000 – (22,000 × $7.50)].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أشارت موازنة شركة إلى إنتاج 50,000 وحدة تامة باستخدام 20,000 ساعة عمل مباشر وتكاليف صناعية غير مباشرة متغيرة قدرها $150,000. وأنتجت فعليًا 52,000 وحدة تامة باستخدام 22,000 ساعة عمل مباشر وتكاليف متغيرة قدرها $160,000. إذا استخدمت الشركة نظام التكاليف المعيارية وحملت التكاليف المتغيرة على أساس ساعات العمل المباشر، فما انحراف الإنفاق المتغير؟",
+    "choicesAr": [
+      "$4,000 غير ملائم.",
+      "$5,000 ملائم.",
+      "$15,000 غير ملائم.",
+      "$10,000 غير ملائم."
+    ],
+    "explanationAr": "يحسب انحراف إنفاق التكاليف المتغيرة بالفرق بين التكاليف الفعلية والتكاليف المتغيرة عند معدل التحميل المقدر للمدخلات الفعلية. وكان معدل التحميل المقدر $7.50 لكل ساعة عمل مباشر ($150,000 ÷ 20,000 ساعة). واستُخدمت 22,000 ساعة عمل مباشر. ومن ثم فإن الانحراف $5,000 ملائم [$160,000 – (22,000 × $7.50)]."
   },
   {
     "unit": 15,
@@ -4708,7 +4804,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Each bottle is budgeted to use $1.50 of fixed overhead, at a\ndenominator of 40,000 machine hours or 400,000 bottles.\nBecause only 350,000 bottles were produced, only $525,000\nof fixed overhead has been applied. Therefore, there is a\n$75,000 unfavorable production volume variance ($600,000 –\n$525,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في السنة الماضية، قدرت منشأة تكاليف صناعية غير مباشرة ثابتة قدرها $600,000 لمصنع كريم مرطب. واستند مبلغ $600,000 إلى مستوى نشاط مرجعي يبلغ 40,000 ساعة تشغيل آلات. ولكل عبوة كريم مرطب 0.1 ساعة تشغيل آلات معيارية. وأُنتجت 350,000 عبوة، وبيعت 360,000 عبوة خلال السنة الماضية. ما انحراف حجم الإنتاج؟",
+    "choicesAr": [
+      "$60,000 غير ملائم.",
+      "$75,000 غير ملائم.",
+      "$60,000 ملائم.",
+      "$75,000 ملائم."
+    ],
+    "explanationAr": "تقدر التكاليف الثابتة لكل عبوة بمبلغ $1.50 عند مستوى مرجعي 40,000 ساعة تشغيل آلات أو 400,000 عبوة. ولأن الإنتاج بلغ 350,000 عبوة فقط، فقد حُمل $525,000 فقط من التكاليف الثابتة. ومن ثم يوجد انحراف حجم إنتاج غير ملائم قدره $75,000 ($600,000 – $525,000)."
   },
   {
     "unit": 15,
@@ -4725,7 +4829,15 @@
     ],
     "answerIndex": 1,
     "explanation": "A production volume variance results from the\nunderapplication of standard overhead, which occurs when\nmore units are budgeted to be produced than are produced.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "حددت شركة تستخدم نظام التكاليف المعيارية تكلفة ثابتة معيارية لكل وحدة تامة قدرها $4.00، وتوقعت إنتاج وبيع 300,000 وحدة. وخلال السنة حدث انحراف حجم إنتاج غير ملائم قدره $14,000. أي مما يلي قد يكون سبب هذا الانحراف؟",
+    "choicesAr": [
+      "عدد الوحدات المنتجة أكبر من 300,000.",
+      "عدد الوحدات المنتجة أقل من 300,000.",
+      "عدد الوحدات المباعة أكبر من 300,000.",
+      "عدد الوحدات المباعة أقل من 300,000."
+    ],
+    "explanationAr": "ينتج انحراف حجم الإنتاج غير الملائم عن نقص تحميل التكاليف الصناعية غير المباشرة المعيارية، ويحدث ذلك عندما يكون عدد الوحدات المقدرة للإنتاج أكبر من عدد الوحدات المنتجة فعليًا."
   },
   {
     "unit": 15,
@@ -4759,7 +4871,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Normal costing applies overhead on the basis of budgeted\n(normalized) rates. Thus, it is possible to have a variable\noverhead spending variance when the budgeted rate is not the\nsame as the actual rate.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الانحرافات التالية يمكن أن يظهر عند استخدام الشركة نظام التكاليف العادية (Normal Costing)؟",
+    "choicesAr": [
+      "انحراف سعر المواد المباشرة.",
+      "انحراف كفاءة العمل المباشر.",
+      "انحراف إنفاق التكاليف الصناعية غير المباشرة المتغيرة.",
+      "انحراف كفاءة التكاليف الصناعية غير المباشرة المتغيرة."
+    ],
+    "explanationAr": "يحمل نظام التكاليف العادية التكاليف الصناعية غير المباشرة على أساس معدلات مقدرة (عادية). لذا يمكن أن ينشأ انحراف إنفاق متغير عندما يختلف المعدل المقدر عن المعدل الفعلي."
   },
   {
     "unit": 15,
