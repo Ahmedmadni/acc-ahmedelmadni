@@ -1599,7 +1599,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Residual income is the excess of operating income over a\ntargeted amount equal to an imputed interest charge on\ninvested capital. The rate used ordinarily is set as a target\nreturn by management but is often equal to the weighted\naverage cost of capital. Some entities prefer to measure\nmanagerial performance in terms of the amount of residual\nincome rather than the percentage ROI because the firm will\nbenefit from expansion as long as residual income is earned.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما أفضل وصف لمعدل الفائدة المحتسبة المستخدم في أسلوب الدخل المتبقي لتقييم الأداء؟",
+    "choicesAr": [
+      "متوسط معدل الإقراض للسنة محل التقييم.",
+      "المتوسط المرجح التاريخي لتكلفة رأس مال الشركة.",
+      "العائد المستهدف على الاستثمار الذي تحدده إدارة الشركة.",
+      "متوسط العائد على استثمارات الشركة خلال السنوات الماضية."
+    ],
+    "explanationAr": "الدخل المتبقي هو زيادة الدخل التشغيلي على المبلغ المستهدف المساوي لتكلفة الفائدة المحتسبة على رأس المال المستثمر. وتحدد الإدارة عادة المعدل باعتباره عائدًا مستهدفًا، وغالبًا ما يساوي المتوسط المرجح لتكلفة رأس المال. وتفضل بعض المنشآت قياس الأداء الإداري بمبلغ الدخل المتبقي بدلًا من نسبة العائد على الاستثمار، لأن المنشأة تستفيد من التوسع ما دام يحقق دخلًا متبقيًا موجبًا."
   },
   {
     "unit": 16,
@@ -1616,7 +1624,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Residual income is the excess of operating income (a pretax\namount) over a targeted amount equal to an imputed interest\ncharge on invested capital. Using assets of $500,000 as the\ninvestment base and a cost of capital of 6%, the computer\nservice center must earn $30,000 on those assets to cover the\ncost of capital. Given that operating income was only $25,000,\nresidual income is $(5,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "كانت الإحصاءات التشغيلية التالية لمركز خدمات الحاسوب خلال الشهر:\nالمبيعات $450,000\nالدخل التشغيلي 25,000\nصافي الربح بعد الضرائب 8,000\nإجمالي الأصول 500,000\nحقوق المساهمين 200,000\nتكلفة رأس المال 6%\nبناء على المعلومات السابقة، أي العبارات التالية صحيحة؟ يحقق مركز خدمات الحاسوب:",
+    "choicesAr": [
+      "عائدًا على الاستثمار بنسبة 4%.",
+      "دخلًا متبقيًا قدره $(5,000).",
+      "عائدًا على الاستثمار بنسبة 1.6%.",
+      "دخلًا متبقيًا قدره $(22,000)."
+    ],
+    "explanationAr": "الدخل المتبقي هو زيادة الدخل التشغيلي (قبل الضريبة) على مبلغ مستهدف يعادل الفائدة المحتسبة على رأس المال المستثمر. باستخدام أصول قدرها $500,000 أساسًا للاستثمار وتكلفة رأس مال 6% للفترة وفق افتراض المسألة، يجب أن يحقق المركز $30,000 على هذه الأصول لتغطية تكلفة رأس المال. وبما أن الدخل التشغيلي بلغ $25,000 فقط، فإن الدخل المتبقي يساوي $(5,000)."
   },
   {
     "unit": 16,
@@ -1633,7 +1649,15 @@
     ],
     "answerIndex": 3,
     "explanation": "ROI equals income divided by invested capital. If a company\nis already profitable, increasing sales and expenses by the\nsame percentage will increase ROI. For example, if a\ncompany has sales of $100 and expenses of $80, its net\nincome is $20. Given invested capital of $100, ROI is 20%\n($20 ÷ $100). If sales and expenses both increase 10% to\n$110 and $88, respectively, net income increases to $22. ROI\nwill then be 22% ($22 ÷ $100).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يمكن لمنشأة تحقق ربحًا أن تزيد عائدها على الاستثمار (ROI) من خلال:",
+    "choicesAr": [
+      "زيادة إيرادات المبيعات والمصروفات التشغيلية بالمبلغ النقدي نفسه.",
+      "خفض إيرادات المبيعات والمصروفات التشغيلية بالنسبة المئوية نفسها.",
+      "زيادة الاستثمار والمصروفات التشغيلية بالمبلغ النقدي نفسه.",
+      "زيادة إيرادات المبيعات والمصروفات التشغيلية بالنسبة المئوية نفسها."
+    ],
+    "explanationAr": "يساوي العائد على الاستثمار الدخل مقسومًا على رأس المال المستثمر. فإذا كانت الشركة تحقق ربحًا بالفعل، فإن زيادة المبيعات والمصروفات بالنسبة المئوية نفسها تزيد العائد على الاستثمار مع ثبات رأس المال المستثمر. فمثلًا، إذا بلغت المبيعات $100 والمصروفات $80، فإن صافي الدخل $20. وإذا كان رأس المال المستثمر $100، فإن العائد على الاستثمار 20% ($20 ÷ $100). وإذا زادت المبيعات والمصروفات كلتاهما بنسبة 10% لتصبحا $110 و$88 على الترتيب، يرتفع صافي الدخل إلى $22، ويصبح العائد على الاستثمار 22% ($22 ÷ $100)."
   },
   {
     "unit": 16,
@@ -1650,7 +1674,15 @@
     ],
     "answerIndex": 3,
     "explanation": "An investment center’s ROI is its operating income divided by\nits average invested capital. The Western Division’s operating\nincome is $400 ($4,000 sales – $3,525 cost of goods sold –\n$75 general expenses). Given average plant and equipment of\n$1,775 and average working capital of $625, the total average\ninvested capital is $2,400. ROI is thus 16.67% ($400 ÷\n$2,400).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فيما يلي معلومات مالية مختارة للقسم الغربي في إحدى الشركات عن السنة الماضية:\nالحساب | المبلغ (بالآلاف)\nمتوسط رأس المال العامل | $625\nالمصروفات العمومية والإدارية | 75\nصافي المبيعات | 4,000\nمتوسط المصانع والمعدات | 1,775\nتكلفة البضاعة المباعة | 3,525\nإذا عاملت الشركة القسم الغربي بوصفه مركز استثمار لأغراض قياس الأداء، فما العائد على الاستثمار قبل الضريبة للسنة الماضية؟",
+    "choicesAr": [
+      "34.78%",
+      "22.54%",
+      "19.79%",
+      "16.67%"
+    ],
+    "explanationAr": "العائد على استثمار مركز الاستثمار هو دخله التشغيلي مقسومًا على متوسط رأس المال المستثمر. ويبلغ الدخل التشغيلي للقسم الغربي $400 ($4,000 مبيعات – $3,525 تكلفة البضاعة المباعة – $75 مصروفات عمومية). ومع متوسط مصانع ومعدات $1,775 ومتوسط رأس مال عامل $625، يبلغ إجمالي متوسط رأس المال المستثمر $2,400. ومن ثم فإن العائد على الاستثمار 16.67% ($400 ÷ $2,400). جميع المبالغ بالآلاف."
   },
   {
     "unit": 16,
@@ -1667,7 +1699,15 @@
     ],
     "answerIndex": 1,
     "explanation": "An evaluation of an investment center is based upon the\nreturn on the investment base. These assets include plant and\nequipment, inventories, and receivables. However, land not in\nuse will most likely not be included in the investment base.\nTotal assets in use rather than total assets available is\npreferable when the investment center has been forced to\ncarry idle assets.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي البنود التالية يرجح ألا يدخل في حساب أساس الاستثمار للقسم عند استخدام أسلوب الدخل المتبقي لقياس الأداء وتقييمه؟",
+    "choicesAr": [
+      "الأصول الثابتة المستخدمة في عمليات القسم.",
+      "أرض يحتفظ بها القسم لتكون موقعًا لمصنع جديد.",
+      "مخزون القسم عندما تتحكم إدارته في مستويات المخزون.",
+      "الحسابات الدائنة للقسم عندما تتحكم إدارته في مقدار الائتمان قصير الأجل المستخدم."
+    ],
+    "explanationAr": "يعتمد تقييم مركز الاستثمار على العائد على أساس الاستثمار. وتشمل هذه الأصول المصانع والمعدات والمخزون والذمم المدينة. غير أن الأرض غير المستخدمة يرجح ألا تدخل ضمن أساس الاستثمار. ويفضل استخدام إجمالي الأصول المستغلة بدلًا من إجمالي الأصول المتاحة عندما يضطر مركز الاستثمار للاحتفاظ بأصول عاطلة."
   },
   {
     "unit": 16,
@@ -1684,7 +1724,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Residual income is the excess of the amount of the ROI over\na targeted amount equal to an imputed interest charge on\ninvested capital. The advantage of using residual income\nrather than percentage ROI is that the former emphasizes\nmaximizing a dollar amount instead of a percentage.\nManagers of divisions with a high ROI are encouraged to\naccept projects with returns exceeding the cost of capital even\nif those projects reduce the department’s ROI.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لماذا يعد الدخل المتبقي مقياسًا أفضل من العائد على الاستثمار (ROI) لتقييم أداء مدير مركز الاستثمار؟",
+    "choicesAr": [
+      "يلغي المشكلات المرتبطة بقياس أساس الأصول.",
+      "لا تهمل الأقسام ذات العائد المرتفع القرارات الاستثمارية المرغوبة.",
+      "لا يلزم إلا حساب القيمة الدفترية الإجمالية للأصول.",
+      "يلغي الخلافات بشأن تكلفة الفائدة المحتسبة."
+    ],
+    "explanationAr": "الدخل المتبقي هو زيادة مبلغ العائد المحقق من الاستثمار على المبلغ المستهدف المساوي لتكلفة الفائدة المحتسبة على رأس المال المستثمر. وتتمثل ميزة استخدام الدخل المتبقي بدلًا من نسبة العائد على الاستثمار في أنه يركز على تعظيم مبلغ نقدي بدلًا من نسبة مئوية. ويشجع مديري الأقسام ذات العائد المرتفع على قبول المشروعات التي تزيد عوائدها على تكلفة رأس المال حتى لو خفضت نسبة عائد القسم على الاستثمار."
   },
   {
     "unit": 16,
@@ -1701,7 +1749,15 @@
     ],
     "answerIndex": 1,
     "explanation": "ROI is calculated by dividing a segment’s income by the\ninvested capital. Thus, ROI can be manipulated by falsifying\nincome or invested capital.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية المتعلقة بالعائد على الاستثمار (ROI) كمقياس للأداء غير صحيحة؟",
+    "choicesAr": [
+      "قد لا يكون استخدام العائد على الاستثمار ملائمًا عندما يختلف متوسط عمر الأصول جوهريًا بين قطاعات المنشأة.",
+      "يعتمد العائد على الاستثمار على مقاييس مالية يمكن التحقق منها بصورة مستقلة، بينما تكون مقاييس الأداء الأخرى عرضة للتلاعب.",
+      "قد يؤدي استخدام العائد على الاستثمار إلى رفض المديرين مشروعات رأسمالية يمكن تبريرها بنماذج التدفقات النقدية المخصومة.",
+      "قد يجعل استخدام العائد على الاستثمار من غير المرغوب لمدير ماهر تولي مهام معالجة المشكلات، مثل إعادة الأقسام الخاسرة إلى الربحية."
+    ],
+    "explanationAr": "يحسب العائد على الاستثمار بقسمة دخل القطاع على رأس المال المستثمر. ولذلك يمكن التلاعب به من خلال تحريف الدخل أو رأس المال المستثمر."
   },
   {
     "unit": 16,
@@ -1718,7 +1774,15 @@
     ],
     "answerIndex": 3,
     "explanation": "ROI is calculated by dividing income by average invested\ncapital. It is a key performance measure of an investment\ncenter. Invested capital may be defined in various ways, such\nas shareholders’ equity, total assets available, or total assets\nemployed (which excludes idle assets). Total assets available\nis the measure that assumes the manager uses all assets\nwithout regard to financing.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "العائد على الاستثمار (ROI) أحد أساليب قياس أداء الأقسام. ويعبر عنه بالدخل التشغيلي:",
+    "choicesAr": [
+      "مقسومًا على النفقات الرأسمالية للسنة الحالية مضافًا إليها تكلفة رأس المال.",
+      "مطروحًا منه الفائدة المحتسبة على رأس المال المستثمر.",
+      "مقسومًا على متوسط الأصول الثابتة.",
+      "مقسومًا على متوسط إجمالي الأصول."
+    ],
+    "explanationAr": "يحسب العائد على الاستثمار بقسمة الدخل على متوسط رأس المال المستثمر، وهو مقياس رئيسي لأداء مركز الاستثمار. ويمكن تعريف رأس المال المستثمر بطرق مختلفة، مثل حقوق المساهمين أو إجمالي الأصول المتاحة أو إجمالي الأصول المستغلة (مع استبعاد الأصول العاطلة). ويفترض مقياس إجمالي الأصول المتاحة أن المدير يستخدم جميع الأصول دون النظر إلى طريقة تمويلها."
   },
   {
     "unit": 16,
@@ -1786,7 +1850,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Residual income is the excess of the amount of return on\ninvestment (ROI) over a targeted amount equal to an imputed\ninterest charge on invested capital. The rate used to impute\nthe interest is usually the weighted-average cost of capital.\nThe advantage of using residual income rather than\npercentage ROI is that the former emphasizes maximizing an\namount instead of a percentage. Managers are encouraged to\naccept projects with returns exceeding the cost of capital even\nif the investments reduce the percentage ROI.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ماذا يسمى هامش قطاع مركز الاستثمار بعد خصم الفائدة المحتسبة على الأصول المستخدمة فيه؟",
+    "choicesAr": [
+      "العائد على الاستثمار.",
+      "الدخل المتبقي.",
+      "الدخل التشغيلي.",
+      "العائد على الأصول."
+    ],
+    "explanationAr": "الدخل المتبقي هو زيادة مبلغ العائد المحقق من الاستثمار على المبلغ المستهدف المساوي لتكلفة الفائدة المحتسبة على رأس المال المستثمر. والمعدل المستخدم لاحتساب الفائدة عادة هو المتوسط المرجح لتكلفة رأس المال. وتتمثل ميزة الدخل المتبقي مقارنة بنسبة العائد على الاستثمار في التركيز على تعظيم مبلغ بدلًا من نسبة مئوية. ويشجع المديرين على قبول المشروعات التي يزيد عائدها على تكلفة رأس المال حتى لو خفضت الاستثمارات نسبة العائد على الاستثمار."
   },
   {
     "unit": 16,
@@ -1803,7 +1875,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Normally, management sets a target rate that all managers\nare expected to achieve. Anything above or below this normal\nreturn will catch the attention of higher management.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما أفضل وصف لمعدل الفائدة المحتسبة المستخدم في أسلوب الدخل المتبقي لقياس الأداء وتقييمه؟",
+    "choicesAr": [
+      "المتوسط المرجح التاريخي لتكلفة رأس مال الشركة.",
+      "التكلفة الحدية بعد الضريبة لرأس المال الجديد من حقوق الملكية.",
+      "متوسط العائد على الاستثمار الذي حققته الشركة خلال فترة معينة.",
+      "العائد المستهدف على الاستثمار الذي تحدده الإدارة."
+    ],
+    "explanationAr": "تحدد الإدارة عادة معدلًا مستهدفًا يتوقع من جميع المديرين تحقيقه. ويلفت أي عائد أعلى أو أقل من هذا العائد المعتاد انتباه الإدارة العليا."
   },
   {
     "unit": 16,
@@ -1820,7 +1900,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Residual income is the excess of the amount of the ROI over\na targeted amount equal to an imputed interest charge on\ninvested capital. If a manager has $19,000,000 of invested\ncapital ($17,200,000 of plant and equipment + $1,800,000 of\nworking capital), a 15% imputed interest charge equals\n$2,850,000. Adding $2,000,000 of residual income to the\nimputed interest results in a target profit of $4,850,000. This\nprofit can be achieved if costs are $25,150,000 ($30,000,000\nrevenue – $4,850,000 profit).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يقاس أداء المدير العام لقسم المنتجات الصناعية باستخدام طريقة الدخل المتبقي. ويراجع المدير المعلومات المتوقعة التالية للقسم عن السنة المقبلة:\nالبند | المبلغ (بالآلاف)\nرأس المال العامل | $1,800\nالإيرادات | 30,000\nالمصانع والمعدات | 17,200\nإذا كان معدل الفائدة المحتسبة 15% ويريد المدير تحقيق دخل متبقٍ مستهدف قدره $2,000,000، فما مبلغ التكاليف (تكلفة البضاعة المباعة والمصروفات التشغيلية الأخرى) اللازم لتحقيق الهدف؟",
+    "choicesAr": [
+      "$9,000,000",
+      "$10,800,000",
+      "$25,150,000",
+      "$25,690,000"
+    ],
+    "explanationAr": "الدخل المتبقي هو زيادة مبلغ العائد المحقق من الاستثمار على المبلغ المستهدف المساوي لتكلفة الفائدة المحتسبة على رأس المال المستثمر. فإذا كان رأس المال المستثمر $19,000,000 ($17,200,000 مصانع ومعدات + $1,800,000 رأس مال عامل)، فإن الفائدة المحتسبة بنسبة 15% تساوي $2,850,000. وبإضافة الدخل المتبقي $2,000,000 إلى الفائدة المحتسبة ينتج ربح مستهدف $4,850,000. ويمكن تحقيق هذا الربح إذا بلغت التكاليف $25,150,000 ($30,000,000 إيرادات – $4,850,000 ربح)."
   },
   {
     "unit": 16,
@@ -1837,7 +1925,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Residual income is the excess of the return on an investment\nover the targeted amount. This amount may be defined as the\nimputed interest on invested capital. Some firms prefer to\nmeasure managerial performance in terms of the amount of\nresidual income rather than the percentage ROI. The principle\nis that the firm is expected to benefit from expansion if residual\nincome is earned. Using a percentage ROI approach,\nexpansion might be rejected if it lowered ROI even though\nresidual income increases.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "الهدف الأساسي من أسلوب الدخل المتبقي لقياس الأداء وتقييمه هو أن يعظم القسم:",
+    "choicesAr": [
+      "معدل العائد على الاستثمار.",
+      "تكلفة الفائدة المحتسبة.",
+      "التدفقات النقدية.",
+      "الدخل الزائد على الحد الأدنى للعائد المطلوب."
+    ],
+    "explanationAr": "الدخل المتبقي هو زيادة العائد المحقق من الاستثمار على المبلغ المستهدف، والذي يمكن تعريفه بالفائدة المحتسبة على رأس المال المستثمر. وتفضل بعض المنشآت قياس الأداء الإداري بمبلغ الدخل المتبقي بدلًا من نسبة العائد على الاستثمار. ويقوم المبدأ على توقع استفادة المنشأة من التوسع إذا حقق دخلًا متبقيًا موجبًا. وعند استخدام نسبة العائد على الاستثمار قد يرفض التوسع إذا خفض هذه النسبة رغم زيادته الدخل المتبقي."
   },
   {
     "unit": 16,

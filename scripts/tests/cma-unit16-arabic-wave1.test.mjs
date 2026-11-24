@@ -128,7 +128,7 @@ const wave4=new Map([
 ]);
 const q2=n=>rows.find(r=>r.section===2&&r.number===n);
 test("Unit 16 Wave 4: 60 drafts and 11 immutable cost/revenue/profit center sources",()=>{
- const localized=rows.filter(r=>r.stemAr!==undefined||r.choicesAr!==undefined||r.explanationAr!==undefined);
+ const localized=rows.filter(r=>r.section<=2&&(r.stemAr!==undefined||r.choicesAr!==undefined||r.explanationAr!==undefined));
  assert.equal(localized.length,60);
  assert.deepEqual(localized.filter(r=>r.section===2).map(r=>r.number),[...wave4.keys()]);
  for(const [n,[page,index,hash]] of wave4){
@@ -160,4 +160,55 @@ test("Unit 16 Wave 4: customer profitability and controllable performance",()=>{
  assert.equal(held.stemAr,undefined);assert.equal(held.choicesAr,undefined);assert.equal(held.explanationAr,undefined);
  assert.ok(read("src/data/cma-questions-gleim-2025-vol2.ts").includes('"16.2.10"'));
  assert.ok(held.stem.includes("$100,00")&&held.explanation.includes("$200,000.0"));
+});
+
+const wave5=new Map([
+ [1,[905,2,"95d790f8"]],[2,[906,1,"97d58ffc"]],[3,[907,3,"a7a0e32e"]],
+ [4,[908,3,"2478f6fa"]],[5,[909,1,"359b57c6"]],[6,[910,1,"b2a6a658"]],
+ [7,[911,1,"7d7e85fb"]],[8,[912,3,"4e216cba"]],[12,[915,1,"85e5b732"]],
+ [13,[916,3,"45161681"]],[14,[917,2,"1891487b"]],[15,[918,3,"3283e325"]],
+]);
+const q3=n=>rows.find(r=>r.section===3&&r.number===n);
+test("Unit 16 Wave 5: 72 drafts and 12 immutable investment center sources",()=>{
+ const localized=rows.filter(r=>r.stemAr!==undefined||r.choicesAr!==undefined||r.explanationAr!==undefined);
+ assert.equal(localized.length,72);
+ assert.deepEqual(localized.filter(r=>r.section===3).map(r=>r.number),[...wave5.keys()]);
+ for(const [n,[page,index,hash]] of wave5){
+  const r=q3(n);
+  assert.equal(r.page,page);assert.equal(r.answerIndex,index);
+  assert.equal(r.answerStatus,"source");assert.equal(r.sourceTextStatus,undefined);
+  assert.equal(fingerprint(JSON.stringify([r.stem,r.choices,r.explanation,r.answerIndex,r.page])),hash);
+  assert.equal(validateCmaTranslation({question:{en:r.stem},choices:{en:r.choices},explanation:{en:r.explanation}},
+   {question:r.stemAr,choices:r.choicesAr,explanation:r.explanationAr}).valid,true,String(n));
+  for(const [en,ar] of [[r.stem,r.stemAr],...r.choices.map((c,i)=>[c,r.choicesAr[i]]),[r.explanation,r.explanationAr]])
+   assert.deepEqual(cmaNumericTokens(ar),cmaNumericTokens(en),String(n));
+ }
+});
+test("Unit 16 Wave 5: ROI and residual income calculations and assumption counterexamples",()=>{
+ const roi=(income,capital)=>income/capital;
+ const ri=(income,capital,rate)=>income-capital*rate;
+ assert.equal(ri(25000,500000,.06),-5000);
+ assert.equal(roi(25000,500000),.05);
+ assert.equal(roi(100-80,100),.20);
+ assert.equal(roi(110-88,100),.22);
+ assert.equal((100*roi(4000-3525-75,625+1775)).toFixed(2),"16.67");
+ assert.equal(19000000*.15,2850000);
+ assert.equal(30000000-(2000000+2850000),25150000);
+ // Improving negative income while reducing a positive asset base can reduce ROI.
+ assert.ok(roi(101-199,50)<roi(100-200,100));
+ // A larger asset denominator reduces the magnitude of a negative ROI.
+ assert.ok(roi(-100,50)<roi(-100,100));
+ // Extra volume at negative unit contribution reduces income even at constant fixed cost.
+ assert.ok(roi(110*(4-5)-20,100)<roi(100*(4-5)-20,100));
+ // Positive RI project may lower aggregate ROI.
+ assert.ok(ri(150,1000,.1)>0&&roi(200+150,1000+1000)<roi(200,1000));
+ for(const [n,expected] of [[1,"Target return"],[2,"$(5,000)"],[4,"16.67%"],[6,"Desirable investment"],[12,"Residual income"],[14,"$25,150,000"]])
+  assert.ok(q3(n).choices[q3(n).answerIndex].replace(/\s+/g," ").includes(expected),String(n));
+ const adapter=read("src/data/cma-questions-gleim-2025-vol2.ts");
+ for(const [n,page] of [[9,913],[10,914],[11,915]]){
+  const held=q3(n);
+  assert.equal(held.page,page);assert.equal(held.answerIndex,3);
+  assert.equal(held.stemAr,undefined);assert.equal(held.choicesAr,undefined);assert.equal(held.explanationAr,undefined);
+  assert.ok(adapter.includes('"16.3.'+n+'"'));
+ }
 });
