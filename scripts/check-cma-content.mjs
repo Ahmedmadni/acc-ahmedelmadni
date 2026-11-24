@@ -602,7 +602,8 @@ const staticArabicVol2 = new Set([
   ...[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34].map(n=>"14.5."+n),
   ...[1,2,8,9,11,13,14,15,16,17,18,19,20,22,23,24,25,26,27,28,29,30].map(n=>"14.6."+n),
   ...[5,6,7,12].map(n=>"14.6."+n),
-  ...[1,2,3,4,5,6,7,8,10,11,12,13,14,15].map(n=>"15.1."+n),
+  ...Array.from({length:16},(_,i)=>"15.1."+(i+1)),
+  ...Array.from({length:12},(_,i)=>"15.2."+(i+1)),
 ]);
 const vol2QuestionById = new Map(CMA_GLEIM_2025_VOL2_QUESTIONS.map(q=>[q.id,q]));
 for (const [key, original] of vol2Records) {
@@ -664,7 +665,7 @@ for (const [key, expectedPage] of pendingOriginalSourcePages) {
 console.log("Review gate: 19 unverified Unit 12 questions retain PDF page locators and English-only labels.");
 console.log("Verified Unit 13 Arabic educational drafts: 43/44 §1, 14/14 §2, 33/34 §3, 31/31 §4 (121/123 total); source-flagged §1 Q34 and §3 Q23 remain English-first.");
 console.log("Unit 14 source Arabic drafts: §1 5/8, §2 41/43, §3 18/19, §4 36/40, §5 34/34, §6 26/31; 160/175 Arabic educational drafts. Ten review-held drafts and 15 English-first records remain outside scored practice.");
-console.log("Unit 15 Arabic source drafts: §1 14 translated conceptual variance-analysis questions (14/264 total); all remaining Volume 2 Unit 15 source records remain English-first.");
+console.log("Unit 15 Arabic source drafts: §1 16/16 and §2 12/39; 28/264 complete Arabic educational drafts. All 236 remaining Unit 15 questions are English-first.");
 // Original page layouts remain unverified: some explanations or stems contain
 // visibly broken PDF-extraction fragments. Keep records unchanged and unscored.
 for(const [id,page,field,needle] of [
