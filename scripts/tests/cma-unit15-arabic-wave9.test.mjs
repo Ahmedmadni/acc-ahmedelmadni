@@ -22,9 +22,10 @@ function fingerprint(text) {
   for(let i=0;i<text.length;i++) h=Math.imul(h^text.charCodeAt(i),16777619);
   return (h>>>0).toString(16).padStart(8,"0");
 }
-test("Unit 15 Wave 9: exact 127 full Arabic drafts; §4 complete except eight holds, §5 five safe drafts",()=>{
+test("Unit 15 Wave 9: preserve 127 prior Arabic drafts; §4 complete except eight holds, §5 five prior safe drafts",()=>{
   assert.equal(rows.length,264);
-  const localized=rows.filter(x=>x.stemAr!==undefined||x.choicesAr!==undefined||x.explanationAr!==undefined);
+  const wave9Scope=rows.filter(x=>x.section<=4 || (x.section===5&&![8,9].includes(x.number)));
+  const localized=wave9Scope.filter(x=>x.stemAr!==undefined||x.choicesAr!==undefined||x.explanationAr!==undefined);
   assert.equal(localized.length,127);
   assert.equal(localized.filter(x=>x.section===1).length,16);
   assert.equal(localized.filter(x=>x.section===2).length,37);
@@ -32,8 +33,8 @@ test("Unit 15 Wave 9: exact 127 full Arabic drafts; §4 complete except eight ho
   assert.equal(localized.filter(x=>x.section===4).length,27);
   assert.equal(localized.filter(x=>x.section===5).length,5);
   assert.deepEqual(rows.filter(x=>x.section===4&&!x.stemAr).map(x=>x.number),[...sec4Holds]);
-  assert.deepEqual(rows.filter(x=>x.section===5&&x.stemAr).map(x=>x.number),[1,4,10,11,12]);
-  for(const r of rows) {
+  assert.deepEqual(wave9Scope.filter(x=>x.section===5&&x.stemAr).map(x=>x.number),[1,4,10,11,12]);
+  for(const r of wave9Scope) {
     const shouldExist=r.section===1||
       (r.section===2&&![25,32].includes(r.number))||
       (r.section===3&&![32,37,38,39].includes(r.number))||
@@ -116,4 +117,53 @@ test("Unit 15 Wave 9: five corrupt source-table records remain English-first and
   }
   assert.ok(q(5,2).stem.includes("Quantit"),"Mack source column fragments preserved");
   assert.ok(q(5,5).stem.includes("Classifica"),"Nursing source table fragments preserved");
+});
+
+const wave10=new Map([
+ ["5.8",[711,0,"673259dc"]],["5.9",[712,1,"0c6abd3f"]],
+ ["6.1",[718,1,"c0966820"]],["6.2",[719,3,"885f6492"]],
+ ["6.3",[720,0,"c301ed50"]],["6.4",[721,1,"17e43613"]],
+ ["6.5",[722,3,"ad848abe"]],["6.6",[723,1,"5404ef51"]],
+ ["6.7",[724,2,"0eed33e2"]],["6.8",[725,3,"94dc160c"]],
+ ["6.9",[726,3,"3f1a1c49"]],["6.10",[727,2,"9b8e97f3"]],
+]);
+test("Unit 15 Wave 10: 139 full drafts and immutable 12 new English sources",()=>{
+  const localized=rows.filter(r=>r.stemAr!==undefined||r.choicesAr!==undefined||r.explanationAr!==undefined);
+  assert.equal(localized.length,139);
+  assert.deepEqual(localized.filter(r=>r.section===5).map(r=>r.number),[1,4,8,9,10,11,12]);
+  assert.deepEqual(localized.filter(r=>r.section===6).map(r=>r.number),Array.from({length:10},(_,i)=>i+1));
+  for(const [id,[page,index,hash]] of wave10){
+    const [s,n]=id.split(".").map(Number),r=q(s,n);
+    assert.equal(r.page,page);
+    assert.equal(r.answerIndex,index);
+    assert.equal(r.answerStatus,"source");
+    assert.equal(r.sourceTextStatus,undefined);
+    assert.equal(fingerprint(JSON.stringify([r.stem,r.choices,r.explanation,r.answerIndex,r.page])),hash);
+    assert.equal(validateCmaTranslation({question:{en:r.stem},choices:{en:r.choices},explanation:{en:r.explanation}},
+      {question:r.stemAr,choices:r.choicesAr,explanation:r.explanationAr}).valid,true,id);
+    for(const [en,ar] of [[r.stem,r.stemAr],...r.choices.map((c,i)=>[c,r.choicesAr[i]]),[r.explanation,r.explanationAr]])
+      assert.deepEqual(cmaNumericTokens(ar),cmaNumericTokens(en),id);
+  }
+});
+test("Unit 15 Wave 10: independent mix, yield, overhead volume and efficiency arithmetic",()=>{
+  const standardHours=500+500+500, actualHours=550+650+375;
+  const standardCost=500*8+500*7+500*5, actualMixStandardCost=550*8+650*7+375*5;
+  const yieldVariance=(actualHours-standardHours)*standardCost/standardHours;
+  const mixVariance=actualMixStandardCost-actualHours*standardCost/standardHours;
+  assert.equal(yieldVariance,500);
+  assert.equal(mixVariance,325);
+  assert.equal(yieldVariance+mixVariance,actualMixStandardCost-standardCost);
+  assert.equal(q(5,8).choices[q(5,8).answerIndex],"$500 unfavorable.");
+  assert.equal(q(5,9).choices[q(5,9).answerIndex],"$325 unfavorable.");
+  const fixedRate=80000/10000, applied=6000*(10000/5000)*fixedRate;
+  const actualFixed=80000-2000;
+  assert.equal(applied,96000);
+  assert.equal(applied-actualFixed,18000);
+  assert.ok(q(6,2).choices[q(6,2).answerIndex].includes("$18,000"));
+  assert.equal(450000-42000*2*(450000/90000),30000);
+  const efficientHours=(90000-80000-2000)/20;
+  assert.equal(efficientHours,400);
+  assert.equal(q(6,8).choices[q(6,8).answerIndex],"400 direct labor hours efficient.");
+  assert.equal(q(6,9).answerIndex,3);
+  assert.equal(q(6,10).answerIndex,2);
 });
