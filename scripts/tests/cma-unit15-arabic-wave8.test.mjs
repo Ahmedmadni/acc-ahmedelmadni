@@ -112,5 +112,6 @@ test("Unit 15 Wave 8: eight dubious tables and variance explanations remain unsc
   // the unfavorable rate variance actually implies AP−7=+0.5.
   assert.equal((750-700)*38/100,19);
   // Q32 omits labor hours, so sales unit counts cannot identify labor rate.
-  assert.ok(q(32).stem.includes("Actual sales are 4,200 units"));
+  assert.match(q(32).stem,/Actual\s+sales are 4,200 units/,
+    "Imported publisher source says sales volume, not direct labor input hours");
 });
