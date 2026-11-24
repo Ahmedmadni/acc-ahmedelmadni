@@ -127,8 +127,8 @@ const wave10=new Map([
  ["6.7",[724,2,"0eed33e2"]],["6.8",[725,3,"94dc160c"]],
  ["6.9",[726,3,"3f1a1c49"]],["6.10",[727,2,"9b8e97f3"]],
 ]);
-test("Unit 15 Wave 10: 139 full drafts and immutable 12 new English sources",()=>{
-  const localized=rows.filter(r=>r.stemAr!==undefined||r.choicesAr!==undefined||r.explanationAr!==undefined);
+test("Unit 15 Wave 10: preserve 139 earlier drafts and immutable 12 English sources",()=>{
+  const localized=rows.filter(r=>(r.section<=5||(r.section===6&&r.number<=10))&&(r.stemAr!==undefined||r.choicesAr!==undefined||r.explanationAr!==undefined));
   assert.equal(localized.length,139);
   assert.deepEqual(localized.filter(r=>r.section===5).map(r=>r.number),[1,4,8,9,10,11,12]);
   assert.deepEqual(localized.filter(r=>r.section===6).map(r=>r.number),Array.from({length:10},(_,i)=>i+1));
@@ -166,4 +166,53 @@ test("Unit 15 Wave 10: independent mix, yield, overhead volume and efficiency ar
   assert.equal(q(6,8).choices[q(6,8).answerIndex],"400 direct labor hours efficient.");
   assert.equal(q(6,9).answerIndex,3);
   assert.equal(q(6,10).answerIndex,2);
+});
+
+const wave11=new Map([
+ [11,[728,2,"2ce909f2"]],[12,[729,3,"9335d5a4"]],
+ [13,[731,3,"376a3529"]],[14,[732,1,"e433951b"]],
+ [15,[732,1,"a22c4846"]],[16,[733,0,"625e504e"]],
+ [17,[734,3,"67081dcd"]],[18,[735,1,"eea3b126"]],
+ [19,[736,1,"1c8b6d67"]],[20,[737,0,"09dcaef2"]],
+ [21,[738,2,"c3924687"]],[22,[739,1,"8d2a51eb"]],
+ [23,[739,2,"1fe6d798"]],[24,[740,0,"b64419fe"]],
+]);
+test("Unit 15 Wave 11: 153 full drafts and 14 immutable overhead sources",()=>{
+ const localized=rows.filter(r=>r.stemAr!==undefined||r.choicesAr!==undefined||r.explanationAr!==undefined);
+ assert.equal(localized.length,153);
+ assert.deepEqual(localized.filter(r=>r.section===6).map(r=>r.number),Array.from({length:24},(_,i)=>i+1));
+ for(const [n,[page,index,hash]] of wave11){
+  const r=q(6,n);
+  assert.equal(r.page,page); assert.equal(r.answerIndex,index);
+  assert.equal(r.answerStatus,"source"); assert.equal(r.sourceTextStatus,undefined);
+  assert.equal(fingerprint(JSON.stringify([r.stem,r.choices,r.explanation,r.answerIndex,r.page])),hash);
+  assert.equal(validateCmaTranslation({question:{en:r.stem},choices:{en:r.choices},explanation:{en:r.explanation}},
+   {question:r.stemAr,choices:r.choicesAr,explanation:r.explanationAr}).valid,true,String(n));
+  for(const [en,ar] of [[r.stem,r.stemAr],...r.choices.map((c,i)=>[c,r.choicesAr[i]]),[r.explanation,r.explanationAr]])
+   assert.deepEqual(cmaNumericTokens(ar),cmaNumericTokens(en),String(n));
+ }
+});
+test("Unit 15 Wave 11: capacity, Nanjones and Franklin independent accounting calculations",()=>{
+ const normal=200000,master=220000,standardHours=210000;
+ assert.ok(standardHours>normal&&standardHours<master);
+ assert.equal(q(6,12).answerIndex,3);
+ const fixedRate=1200000/240000,variableRate=2400000/240000;
+ const totalRate=fixedRate+variableRate;
+ assert.equal(totalRate,15);
+ const applied=21000*totalRate;
+ assert.equal(applied,315000);
+ assert.equal(214000-21000*variableRate,4000);
+ assert.equal(21600*variableRate-214000,2000);
+ assert.equal(21000*fixedRate-100000,5000);
+ const allowed=198000*2, budgetFixed=200000*3, variableBudget=900000-budgetFixed;
+ const rate=variableBudget/(200000*2);
+ assert.equal(allowed,396000);
+ assert.equal(rate,0.75);
+ assert.equal((440000-allowed)*rate,33000);
+ assert.equal(352000-440000*rate,22000);
+ assert.equal(budgetFixed-575000,25000);
+ assert.equal(198000*3,594000);
+ assert.equal(budgetFixed-198000*3,6000);
+ for(const [n,result] of [[13,"$15.00"],[14,"$315,000"],[15,"$4,000 underapplied"],[16,"$2,000 favorable"],[17,"$5,000 favorable"],[19,"396,000"],[20,"$33,000 unfavorable"],[21,"$22,000 unfavorable"],[22,"$25,000 favorable"],[23,"$594,000"],[24,"$6,000 unfavorable"]])
+  assert.ok(q(6,n).choices[q(6,n).answerIndex].includes(result),"Original key Q"+n);
 });
