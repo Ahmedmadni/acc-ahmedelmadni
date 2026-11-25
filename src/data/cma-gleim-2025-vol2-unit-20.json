@@ -315,7 +315,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Training occurs during the implementation (installation and\noperation) phase of computer system development. Training\nand educating users is important not only for proper use of the\nsystem, but also to offset the resistance of users whose jobs\nmay have been substantially changed. This phase also\nincludes acceptance testing, system conversion, and system\nfollow-up.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في أي مرحلة من مراحل تطوير نظم الحاسوب يندرج تدريب المستخدمين وفق النموذج التقليدي؟",
+    "choicesAr": [
+      "مرحلة التخطيط.",
+      "مرحلة التحليل.",
+      "مرحلة التصميم.",
+      "مرحلة التنفيذ."
+    ],
+    "explanationAr": "يندرج تدريب المستخدمين ضمن مرحلة التنفيذ والتركيب والتشغيل في النموذج التقليدي. ويساعد على الاستخدام الصحيح للنظام والتكيف مع تغييرات الوظائف. وتشمل المرحلة أيضًا اختبارات القبول والتحول والمتابعة. وقد يبدأ التدريب قبل التنفيذ ويستمر بعده بحسب خطة المشروع."
   },
   {
     "unit": 20,
@@ -332,7 +340,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Detailed systems design involves developing specifications\nregarding input, processing, internal controls and security\nmeasures, programs, procedures, output, and databases.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما المصطلح الذي يشير إلى إعداد مواصفات الأجهزة والبرمجيات والموارد البشرية والبيانات والمخرجات المعلوماتية اللازمة لتطوير نظام؟",
+    "choicesAr": [
+      "تحليل النظم.",
+      "دراسة جدوى النظم.",
+      "صيانة النظم.",
+      "تصميم النظم."
+    ],
+    "explanationAr": "يشمل التصميم التفصيلي للنظام تحديد مواصفات المدخلات والمعالجة والضوابط الداخلية وتدابير الأمن والبرامج والإجراءات والمخرجات وقواعد البيانات. ويحول التصميم المتطلبات إلى مواصفات قابلة للتنفيذ."
   },
   {
     "unit": 20,
@@ -366,7 +382,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The systems development life cycle approach is the most\ncommon methodology applied to the development of large,\nhighly structured application systems. The life cycle approach\nis based on the idea that an information system has a finite life\nspan that is limited by the changing needs of the organization.\nThis cycle is analytically divisible into stages. A new system\nlife cycle begins when the inadequacy of the current system\nleads to a decision to develop a new or improved system. This\nmethod is a structured process for controlling the creative\nactivity required to devise, develop, and implement an\ninformation system. The process is described in varying terms\nby different writers, but the nature and sequence of the steps\nare essentially the same. Life cycle methodologies provide\nenhanced management and control of the development\nprocess because they provide structure for a creative process\nby dividing it into manageable steps and specifying what must\nbe produced in each phase.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يعد ميزة لمنهجيات دورة حياة تطوير النظم؟",
+    "choicesAr": [
+      "انخفاض تكاليف التطوير الإجمالية عند تغير المتطلبات باستمرار.",
+      "إتاحة نظام عامل للمستخدمين بسرعة.",
+      "تقليل زمن تطوير التطبيق للوصول إلى نظام عامل.",
+      "تحسين إدارة عملية التطوير والرقابة عليها."
+    ],
+    "explanationAr": "توفر منهجيات دورة الحياة إطارًا منظمًا لإدارة تطوير النظام وتطبيقه، وتقسم العمل إلى مراحل قابلة للإدارة مع تحديد المخرجات والمسؤوليات. ويساعد ذلك على تحسين الرقابة ومتابعة التقدم. وقد تختلف المنهجيات في ترتيب المراحل ودرجة التكرار والمرونة."
   },
   {
     "unit": 20,
@@ -417,7 +441,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Acceptance testing is conducted to determine whether the\nsystem meets the organization’s needs and is ready for\nrelease.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يصف اختبار القبول على أفضل وجه؟",
+    "choicesAr": [
+      "يحدد مدى تلبية النظام لاحتياجات المنشأة وجاهزيته للإصدار.",
+      "يختبر النظام المتكامل بالكامل للتحقق من استيفائه متطلباته.",
+      "يتحقق من الواجهات بين المكونات وفق تصميم البرمجيات.",
+      "يتحقق من وظائف جزء محدد من الشفرة ومعالجة البيانات المتبادلة بين الوحدات."
+    ],
+    "explanationAr": "يهدف اختبار القبول إلى تحديد ما إذا كان النظام يلبي احتياجات العمل ومعايير القبول المتفق عليها ويصلح للإصدار. ويختلف عن اختبار النظام الذي يركز على المتطلبات الفنية والوظيفية للنظام المتكامل، وعن اختبارات التكامل والوحدات."
   },
   {
     "unit": 20,
@@ -434,7 +466,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Feasibility studies should include an analysis of the cost-\nbenefit ratio of any system alternatives. In many cases, the\nbest possible system may not be cost effective. Thus, once\nthe decision makers have determined that two or more\nsystems alternatives are acceptable, the cost-benefit analysis\nshould be used to select the best system for a particular\napplication.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما أداة التحليل التي يستخدمها عادة محلل النظم واللجنة التوجيهية لاختيار أفضل بديل للنظام؟",
+    "choicesAr": [
+      "الاختبار التجريبي.",
+      "اختيار المستخدمين.",
+      "تحليل شجرة القرارات.",
+      "تحليل التكلفة والمنفعة."
+    ],
+    "explanationAr": "ينبغي أن تتضمن دراسات الجدوى مقارنة تكاليف البدائل ومنافعها. فقد يكون أحد الأنظمة متقدمًا من الناحية الفنية لكنه غير مجدٍ اقتصاديًا. وبعد تحديد البدائل المقبولة، يساعد تحليل التكلفة والمنفعة على اختيار البديل الأنسب للتطبيق، مع مراعاة المخاطر والمتطلبات الإلزامية والمنافع غير القابلة للقياس المالي."
   },
   {
     "unit": 20,
@@ -451,7 +491,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Prototyping produces the first model(s) of a new system. This\ntechnique usually employs a software tool for quick\ndevelopment of a model of the user interface (such as by\nreport or screen), interaction of users with the system (for\nexample, a menu-screen approach or data entry), and\nprocessing logic (the executable module). Prototyping\nstimulates user participation because the model allows for\nquick exploration of concepts and development of solutions\nwith quick results.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما اسم أسلوب تطوير النظم الذي يستخدم لإنتاج نموذج سريع لواجهات المستخدم وتفاعلاته مع النظام ومنطق المعالجة؟",
+    "choicesAr": [
+      "الشبكات العصبية.",
+      "إعداد النماذج الأولية.",
+      "إعادة الهندسة.",
+      "توليد التطبيقات."
+    ],
+    "explanationAr": "تنتج النمذجة الأولية نموذجًا مبكرًا للنظام، وقد تستخدم أدوات لبناء الشاشات والتقارير ومسارات التفاعل وإدخال البيانات ومنطق المعالجة بسرعة. وتشجع مشاركة المستخدمين وتساعد على استكشاف المتطلبات وتقييم الحلول قبل استكمال التطوير."
   },
   {
     "unit": 20,
@@ -485,7 +533,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Information technology conversion can involve hardware,\noperating systems, database management systems, and\napplications. Conversion methods utilized are (1) direct\ncutover, (2) pilot conversion, (3) phased conversion, and (4)\nparallel conversion. Under phased conversion, one function of\nthe new system at a time is placed in operation. For instance,\nif the new system is an integrated accounting application,\naccounts receivable could be installed, then accounts payable,\ncash management, materials handling, etc.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات الآتية صحيحة بشأن التحول المرحلي وفق التصنيف الوارد في السؤال؟",
+    "choicesAr": [
+      "يوقف النظام القديم ويتولى الجديد المعالجة فورًا.",
+      "يعمل النظامان القديم والجديد بكامل طاقتهما لمدة محددة.",
+      "توضع وظيفة من وظائف النظام الجديد قيد التشغيل في كل مرحلة.",
+      "تحول منشأة فرعية أو إدارة أو قسم بالكامل إلى النظام الجديد في كل مرحلة."
+    ],
+    "explanationAr": "قد يشمل التحول التقني الأجهزة وأنظمة التشغيل وقواعد البيانات والتطبيقات. وتشمل الطرق (1) الانتقال المباشر، و(2) التحول التجريبي، و(3) التحول المرحلي، و(4) التشغيل المتوازي. ووفق تصنيف السؤال، يشغل التحول المرحلي الوظائف تدريجيًا؛ مثل تشغيل الذمم المدينة ثم الذمم الدائنة وإدارة النقد والمخزون. وقد تستخدم بعض المنهجيات مصطلح التحول المرحلي أيضًا للتوسع التدريجي بين المواقع."
   },
   {
     "unit": 20,
@@ -519,7 +575,15 @@
     ],
     "answerIndex": 0,
     "explanation": "IT pervades every aspect of operations in a modern\norganization, and the IT steering committee must study each\nrequest for a new process and either approve or deny it. Once\na new process or system has been approved, a project team\nis assembled, consisting of representatives of the end users\nwho requested it and the IT personnel who will design and\nbuild the software components that will support it.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما الإجراء الأنسب لشركة تسعى إلى تحقيق مزايا تنافسية عند التخطيط لتطبيق نظام برمجي جديد؟",
+    "choicesAr": [
+      "تصميم عملية عمل محسنة ثم مواءمة البرمجيات معها.",
+      "تصميم البرمجيات لتطابق العمليات القائمة.",
+      "توجيه القوى العاملة إلى مناطق العمليات التي لا تمثل اختناقات.",
+      "السماح للإدارة بإملاء العمليات."
+    ],
+    "explanationAr": "ينبغي تقييم احتياجات العمل وتحسين عملياته قبل مواءمة الحل التقني معها، بدلًا من افتراض أن أتمتة الإجراءات القائمة تحقق التحسين تلقائيًا. وتراجع اللجنة التوجيهية الطلبات، ويشارك ممثلو المستخدمين وفريق التقنية في تصميم الحل الملائم. ويجب مراعاة تكلفة التخصيص والممارسات القياسية والقيود التنظيمية."
   },
   {
     "unit": 20,
@@ -553,7 +617,15 @@
     ],
     "answerIndex": 2,
     "explanation": "With cloud computing, organizations are relieved of the need\nto manage the storage of both application and data. It is\ntypically pay-per-use and self serviced. Hence, it usually has\nlower upfront costs for equipment and maintenance.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تراجع شركة أنظمتها الداخلية بحثًا عن فرص للتحسين. أي مما يلي يعد أفضل سبب من بين البدائل للنظر في الانتقال إلى الحوسبة السحابية؟",
+    "choicesAr": [
+      "أنها أفضل وسيلة لحماية المعلومات الحساسة للشركة.",
+      "لا يمكن الوصول إليها إلا من داخل الشركة عبر شبكتها الداخلية.",
+      "أنها عادة أقل تكلفة مبدئية من حيث المعدات والصيانة.",
+      "أنها تتيح خيارات أفضل لتعديل البرامج."
+    ],
+    "explanationAr": "قد تقلل الحوسبة السحابية الحاجة إلى الاستثمار المبدئي في الأجهزة وإدارة البنية التحتية محليًا. وقد يعتمد التسعير على الاستخدام أو الاشتراكات أو الالتزامات التعاقدية. ولا يضمن انخفاض التكلفة المبدئية انخفاض التكلفة الكلية طوال عمر النظام؛ لذا ينبغي مقارنة تكاليف التشغيل والترحيل والخروج من الخدمة."
   },
   {
     "unit": 20,
@@ -570,7 +642,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Cloud computing can be used for management and storage of\nboth applications and data where all the software and data are\nstored via the Internet. It allows organizations to access\nservices and applications that run on remote third-party hosts.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يصف نموذج الحوسبة السحابية على أفضل وجه من بين البدائل؟",
+    "choicesAr": [
+      "تبسيط العمليات على منصة تجارة إلكترونية داخلية آمنة ومتاحة بدرجة عالية لتحسين تجربة العملاء.",
+      "تسريع نشر التطبيقات بتشغيل عدة خوادم افتراضية على مضيف مادي واحد.",
+      "إتاحة موارد الشبكة للمستخدمين من مواقع بعيدة عبر شبكة خاصة افتراضية.",
+      "إتاحة الوصول عبر الإنترنت إلى خدمات وتطبيقات تعمل على بنية تقنية بعيدة يديرها مزود خارجي."
+    ],
+    "explanationAr": "تتيح الحوسبة السحابية الوصول عبر الشبكة إلى موارد حوسبية قابلة للتوفير عند الطلب، ومنها التطبيقات والتخزين والمعالجة. ويصف البديل الصحيح نموذجًا شائعًا يعتمد على مزود خارجي، لكن السحابة قد تكون خاصة أو عامة أو هجينة ولا يشترط أن يديرها طرف خارجي دائمًا."
   },
   {
     "unit": 20,
