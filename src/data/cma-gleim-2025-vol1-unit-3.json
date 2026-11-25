@@ -14,7 +14,15 @@
     ],
     "answerIndex": 1,
     "explanation": "An investment in equity securities that does not result in\nsignificant influence or control over the investee is reported at\nfair value, and unrealized holding gains and losses are\nincluded in earnings. Consequently, the securities should be\nreported as $28,000.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 31 ديسمبر كانت لدى شركة Ott استثمارات في أوراق مالية لحقوق الملكية كما يلي:\nالشركة | التكلفة | القيمة العادلة\nMan | $10,000 | $8,000\nKemo | 9,000 | 11,000\nFenn | 11,000 | 9,000\nالإجمالي | $30,000 | $28,000\nبأي مبلغ تعرض Ott هذه الأوراق المالية في قائمة المركز المالي في 31 ديسمبر؟",
+    "choicesAr": [
+      "$26,000",
+      "$28,000",
+      "$29,000",
+      "$30,000"
+    ],
+    "explanationAr": "وفق المعايير الأمريكية، يقاس الاستثمار في أوراق حقوق الملكية الذي لا ينتج عنه تأثير مهم أو سيطرة بالقيمة العادلة، مع إثبات مكاسب وخسائر الحيازة غير المحققة في الأرباح، بافتراض انطباق هذا النموذج. لذلك تعرض الأوراق بمبلغ $28,000."
   },
   {
     "unit": 3,
@@ -31,7 +39,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Unrealized holding gains and losses on an investment in\nequity securities that do not result in significant influence or\ncontrol over the investee are reported in earnings. On a\nstatement of financial position, these securities are reported at\nfair value.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بأي أساس تعرض المنشأة استثمارًا في أوراق مالية لحقوق الملكية قابلة للتداول لا يمنحها تأثيرًا مهمًا أو سيطرة على المنشأة المستثمر فيها، وفق المعايير الأمريكية؟",
+    "choicesAr": [
+      "الأقل من التكلفة والسوق، مع إثبات مكاسب وخسائر الحيازة في الأرباح.",
+      "الأقل من التكلفة والسوق، مع إثبات مكاسب الحيازة في الأرباح في حدود الخسائر المثبتة سابقًا.",
+      "القيمة العادلة، مع إثبات مكاسب الحيازة في الأرباح في حدود الخسائر المثبتة سابقًا.",
+      "القيمة العادلة، مع إثبات مكاسب وخسائر الحيازة في الأرباح."
+    ],
+    "explanationAr": "تثبت مكاسب وخسائر الحيازة غير المحققة للاستثمار في أوراق حقوق الملكية الذي لا يمنح تأثيرًا مهمًا أو سيطرة ضمن الأرباح وفق النموذج الأمريكي المعروض. وتعرض هذه الأوراق في قائمة المركز المالي بالقيمة العادلة."
   },
   {
     "unit": 3,
@@ -65,7 +81,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A realized loss or gain is recognized when an individual equity\nsecurity is sold or otherwise disposed of. Wall would have\nincluded the $2,000 ($31,500 – $29,500) decline in the fair\nvalue of the equity securities (an unrealized holding loss) in\nearnings at 12/31/Yr 6. Consequently, the realized loss on\ndisposal at 12/15/Yr 7 is $2,900 {$29,500 carrying amount –\n[(2,000 shares × $14) – $1,400]}.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "خلال السنة 6 اشترت Wall عدد 2,000 سهم عادي من Hemp مصنفة أوراقًا مالية للمتاجرة مقابل $31,500. وتمثل الأسهم 2% من ملكية Hemp. بلغت القيمة العادلة للاستثمار $29,500 في 31 ديسمبر من السنة 6. وباعت Wall جميع الأسهم بسعر $14 للسهم في 15 ديسمبر من السنة 7، متكبدة عمولات وساطة وضرائب قدرها $1,400. ما الخسارة التي تثبتها Wall في قائمة دخل السنة المنتهية في 31 ديسمبر من السنة 7؟",
+    "choicesAr": [
+      "$4,900",
+      "$3,500",
+      "$2,900",
+      "$1,500"
+    ],
+    "explanationAr": "تثبت مكاسب أو خسائر الاستبعاد عند بيع ورقة حقوق الملكية. وقد أثبتت Wall انخفاض القيمة العادلة البالغ $2,000 ($31,500 − $29,500) كخسارة حيازة غير محققة ضمن أرباح 12/31 من السنة 6. لذا تبلغ خسارة الاستبعاد في 12/15 من السنة 7 مبلغ $2,900 {$29,500 القيمة الدفترية − [(2,000 سهم × $14) − $1,400]}."
   },
   {
     "unit": 3,
@@ -82,7 +106,15 @@
     ],
     "answerIndex": 1,
     "explanation": "An investment in equity securities that does not result in\nsignificant influence or control over the investee is measured\nat fair value in the financial statements. Changes in fair value\nare included in earnings. In Year 1, Lane recorded the\nunrealized holding gain of $6,000 ($92,000 FV – $86,000\ncost). In Year 2, Lane recorded a realized gain of $12,500\n[$104,500 price – ($86,000 cost + $6,000 unrealized gain\nrecorded in Year 1)]. Also in Year 2, Lane recorded the\nunrealized holding loss of $2,000 ($73,000 cost – $71,000\nyear-end FV). Accordingly, the Year 2 effect is a gain of\n$10,500 ($12,500 – $2,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في نهاية السنة 1 احتفظت Lane باستثمار في أوراق حقوق ملكية تكلفته $86,000 وقيمته السوقية $92,000. وخلال السنة 2 بيعت جميع الأوراق مقابل $104,500. وفي نهاية السنة 2 اقتنت Lane أوراقًا إضافية بتكلفة $73,000 وقيمة سوقية في نهاية السنة $71,000. ما أثر هذه المعاملات على قائمة دخل السنة 2؟",
+    "choicesAr": [
+      "خسارة $2,000.",
+      "مكسب $10,500.",
+      "مكسب $16,500.",
+      "مكسب $18,500."
+    ],
+    "explanationAr": "يقاس الاستثمار الذي لا يمنح تأثيرًا مهمًا أو سيطرة بالقيمة العادلة وفق النموذج الأمريكي المعروض، وتثبت تغيراتها في الأرباح. وفي السنة 1 أثبتت Lane مكسب حيازة غير محقق قدره $6,000 ($92,000 قيمة عادلة − $86,000 تكلفة). وفي السنة 2 أثبتت مكسب بيع قدره $12,500 [$104,500 سعر البيع − ($86,000 تكلفة + $6,000 مكسب غير محقق مثبت في السنة 1)]. كما أثبتت في السنة 2 خسارة حيازة غير محققة $2,000 ($73,000 تكلفة − $71,000 قيمة عادلة آخر السنة). لذلك يبلغ أثر السنة 2 مكسبًا قدره $10,500 ($12,500 − $2,000)."
   },
   {
     "unit": 3,
@@ -99,7 +131,15 @@
     ],
     "answerIndex": 1,
     "explanation": "At each balance sheet date, an investment in equity securities\nthat does not result in significant influence or control over the\ninvestee is measured at fair value. During the year, Janson\npurchased 5,000 shares and sold 4,750 shares for an ending\nbalance of 250 shares. At year end, the fair value of each\nshare is $10, so the year-end balance is $2,500 (250 shares ×\n$10 per share).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تداولت Janson أسهم Flax القابلة للتداول خلال السنة 1 كما يلي:\nالتاريخ | عدد الأسهم المشتراة (المباعة) | سعر السهم\n3 فبراير، السنة 1 | 1,100 | $11\n15 أبريل، السنة 1 | 2,500 | 9\n28 مايو، السنة 1 | (750) | 13\n5 يوليو، السنة 1 | 1,400 | 12\n30 سبتمبر، السنة 1 | (4,000) | 15\nلم تحدث معاملات أخرى خلال بقية السنة. وفي 31 ديسمبر من السنة 1 بلغ سعر سهم Flax مبلغ $10. تستخدم Janson أساس الوارد أخيرًا صادر أولًا في التداول. ما صافي قيمة الاستثمار في نهاية السنة؟",
+    "choicesAr": [
+      "$(250)",
+      "$2,500",
+      "$2,750",
+      "$3,750"
+    ],
+    "explanationAr": "في تاريخ كل قائمة مركز مالي يقاس الاستثمار في أوراق حقوق الملكية الذي لا يمنح تأثيرًا مهمًا أو سيطرة بالقيمة العادلة وفق النموذج المعروض. واشترت Janson خلال السنة 5,000 سهم وباعت 4,750 سهمًا، فتبقى 250 سهمًا. وفي نهاية السنة بلغت القيمة العادلة للسهم $10، فيكون الرصيد $2,500 (250 سهمًا × $10 للسهم)."
   },
   {
     "unit": 3,
@@ -133,7 +173,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The company holds 25% (10,000 ÷ 40,000) of the\ncorporation’s voting common stock. Under the equity method,\n(1) an investor recognizes its share of the investee’s net\nincome as an increase in the investment account:\n$200,000 × 25% = $50,000\n(2) a dividend from the investee is treated as a return of an\ninvestment:\n$160,000 × 25% = $40,000\nThus, at the end of the year, the balance in the investment in\nthe corporation account is $160,000 ($150,000 + $50,000 –\n$40,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تمتلك شركة 10,000 سهم من أسهم شركة أخرى يبلغ عدد أسهمها القائمة 40,000. وخلال السنة حققت الشركة المستثمر فيها صافي دخل $200,000 ودفعت توزيعات $160,000. وبلغ رصيد الاستثمار وفق طريقة حقوق الملكية في بداية السنة $150,000. ما رصيد الاستثمار في نهاية السنة؟",
+    "choicesAr": [
+      "$110,000",
+      "$150,000",
+      "$160,000",
+      "$240,000"
+    ],
+    "explanationAr": "تمتلك الشركة 25% (10,000 ÷ 40,000) من الأسهم العادية ذات حق التصويت. وفق طريقة حقوق الملكية: (1) تثبت حصة المستثمر في صافي دخل المنشأة المستثمر فيها زيادة في حساب الاستثمار: $200,000 × 25% = $50,000. (2) تعامل التوزيعات باعتبارها استردادًا من الاستثمار: $160,000 × 25% = $40,000. لذا يبلغ الرصيد في نهاية السنة $160,000 ($150,000 + $50,000 − $40,000)، بافتراض عدم وجود تعديلات أخرى."
   },
   {
     "unit": 3,
@@ -150,7 +198,15 @@
     ],
     "answerIndex": 3,
     "explanation": "If an investor can exercise significant influence over an\ninvestee, the investment should be accounted for by the equity\nmethod. When a corporation owns 20% or more of the voting\npower of the investee, the ability to exercise significant\ninfluence is presumed.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "اقتنت شركة حصة تصويت قدرها 30% في شركة أخرى. ما الطريقة المستخدمة عادة للمحاسبة عن الاستثمار طويل الأجل في دفاتر المستثمر؟",
+    "choicesAr": [
+      "الأقل من التكلفة والسوق.",
+      "التكلفة.",
+      "التوحيد.",
+      "حقوق الملكية."
+    ],
+    "explanationAr": "إذا استطاع المستثمر ممارسة تأثير مهم على المنشأة المستثمر فيها، يستخدم طريقة حقوق الملكية، ما لم ينطبق استثناء. وعند امتلاك 20% أو أكثر من قوة التصويت يفترض وجود تأثير مهم ما لم يثبت خلاف ذلك."
   },
   {
     "unit": 3,
@@ -167,7 +223,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Under the equity method, an investor debits an investment\nand credits revenue for its share of the investee’s earnings.\nThe receipt of a cash dividend from the investee is treated as\na return of an investment. Thus, it is credited to the investment\nbut does not affect equity-based earnings. A change in fair\nvalue has no effect on an investment in securities accounted\nfor under the equity method.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يستخدم مستثمر طريقة حقوق الملكية للاستثمار في الأسهم العادية. هل تتأثر حصته في أرباح المنشأة المستثمر فيها بكل مما يلي؟\nالتوزيعات النقدية | تغير القيمة العادلة للأسهم العادية",
+    "choicesAr": [
+      "لا | نعم",
+      "لا | لا",
+      "نعم | لا",
+      "نعم | نعم"
+    ],
+    "explanationAr": "وفق طريقة حقوق الملكية يجعل المستثمر حساب الاستثمار مدينًا ودخل الاستثمار دائنًا بحصته من الأرباح. وتعامل التوزيعات النقدية باعتبارها استردادًا من الاستثمار فتخفض رصيده ولا تؤثر في دخل حقوق الملكية. كما لا يعدل الاستثمار لمجرد تغير سعره السوقي، مع مراعاة أحكام الانخفاض في القيمة."
   },
   {
     "unit": 3,
@@ -184,7 +248,15 @@
     ],
     "answerIndex": 3,
     "explanation": "After the date of acquisition, an equity-based investment in\ncommon stock account of an investor is increased by its share\nof the earnings of the investee, decreased by its share of the\nlosses of the investee, and decreased by its share of cash\ndividends received from the investee.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يستخدم مستثمر طريقة حقوق الملكية للاستثمار في الأسهم العادية. بعد تاريخ الاقتناء، كيف يتغير حساب الاستثمار؟",
+    "choicesAr": [
+      "لا يتأثر بحصة المستثمر في أرباح أو خسائر المنشأة المستثمر فيها.",
+      "لا يتأثر بالأرباح ولكنه ينخفض بحصة الخسائر.",
+      "يزداد بحصة الأرباح ولا يتأثر بحصة الخسائر.",
+      "يزداد بحصة الأرباح وينخفض بحصة الخسائر."
+    ],
+    "explanationAr": "بعد الاقتناء يزيد حساب الاستثمار بحصة المستثمر في أرباح المنشأة المستثمر فيها، وينخفض بحصته في الخسائر وبالتوزيعات النقدية المستلمة، مع مراعاة حدود الاعتراف بالخسائر والتعديلات الأخرى."
   },
   {
     "unit": 3,
@@ -201,7 +273,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Because the investor can exercise significant influence over\nthe investee’s operating and financial policies, the investment\nshould be accounted for using the equity method. The\n$700,000 paid for the investment is equal to 20% of the $3.5\nmillion fair value. The carrying amount and fair value of the net\nassets were the same. Under these circumstances, revenue\nfrom the investment is 20% of the reported net income of\n$400,000, or $80,000. The cash dividend does not affect the\namount of income to be reported.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 يناير اقتنت شركة حصة 20% من الأسهم العادية لشركة E كاستثمار طويل الأجل. دفعت $700,000 عندما كانت القيمة العادلة والدفترية لصافي أصول E مبلغ $3.5 مليون. وتستطيع ممارسة تأثير مهم على سياساتها التشغيلية والمالية. وفي السنة المنتهية في 31 ديسمبر حققت E صافي دخل $400,000 وأعلنت ودفعت توزيعات نقدية $160,000. ما دخل الاستثمار الذي تعرضه الشركة للسنة؟",
+    "choicesAr": [
+      "$32,000",
+      "$48,000",
+      "$80,000",
+      "$112,000"
+    ],
+    "explanationAr": "نظرًا إلى وجود تأثير مهم، تستخدم طريقة حقوق الملكية. ويساوي المقابل المدفوع $700,000 نسبة 20% من القيمة العادلة البالغة $3.5 مليون. والقيمة الدفترية مساوية للعادلة. وعليه فإن دخل الاستثمار يساوي 20% من صافي الدخل المعلن $400,000، أي $80,000. ولا تؤثر التوزيعات النقدية في الدخل."
   },
   {
     "unit": 3,
@@ -218,7 +298,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Under the fair value method and the cost method, (used only if\nthe fair value method and the equity method are not\napplicable), dividends from an investee should be accounted\nfor by the investor as dividend income unless a liquidating\ndividend is received. Thus, assuming that the dividend is not\nliquidating, it has no effect on the investment account under\nthe fair value method. Under the equity method, the investor\nrecognizes its equity in the undistributed earnings of the\ninvestee. Consequently, cash dividends decrease the\ninvestment account because the dividend is considered to be\na return of investment.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "استلمت شركة توزيعًا نقديًا من استثمار في أسهم عادية. هل تثبت زيادة في حساب الاستثمار وفق كل من طريقة القيمة العادلة وطريقة حقوق الملكية؟\nالقيمة العادلة | حقوق الملكية",
+    "choicesAr": [
+      "لا | لا",
+      "نعم | نعم",
+      "نعم | لا",
+      "لا | نعم"
+    ],
+    "explanationAr": "وفق نموذج القيمة العادلة، تعالج التوزيعات العادية كدخل توزيعات، ولا تزيد حساب الاستثمار. وقد تختلف معالجة توزيعات التصفية. أما وفق طريقة حقوق الملكية فيثبت المستثمر حصته من أرباح المنشأة المستثمر فيها، وتخفض التوزيعات النقدية حساب الاستثمار باعتبارها استردادًا من الاستثمار."
   },
   {
     "unit": 3,
@@ -235,7 +323,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Under the equity method, the investor’s share of the investee’s\nnet income is accounted for as an addition to the carrying\namount of the investment on the investor’s books. Losses and\ndividends are reflected as reductions of the carrying amount.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عند استخدام المستثمر طريقة حقوق الملكية للاستثمار في الأسهم العادية، متى يزيد حساب الاستثمار؟",
+    "choicesAr": [
+      "عند إثبات حصته النسبية من صافي دخل المنشأة المستثمر فيها.",
+      "عند استلام توزيعات نقدية منها.",
+      "عند الإطفاء الدوري للشهرة المتعلقة بالشراء.",
+      "عند إثبات إهلاك يتعلق بزيادة القيمة العادلة للأصول القابلة للإهلاك عن قيمتها الدفترية في تاريخ الشراء."
+    ],
+    "explanationAr": "وفق طريقة حقوق الملكية تضاف حصة المستثمر من صافي دخل المنشأة المستثمر فيها إلى القيمة الدفترية للاستثمار. وتخفض الخسائر والتوزيعات القيمة الدفترية."
   },
   {
     "unit": 3,
@@ -252,7 +348,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Under the equity method, the receipt of a cash dividend from\nthe investee should be credited to the investment account. It is\na return of, not a return on, the investment. However, the\nequity method is not applicable to preferred stock. Thus, the\ncompany should report $60,000 of revenue when the\npreferred dividends are declared.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تمتلك شركة 30% من الأسهم العادية القائمة و100% من الأسهم الممتازة القائمة غير التراكمية وغير المصوتة لشركة A. وفي السنة 1 أعلنت A توزيعات قدرها $100,000 على الأسهم العادية و$60,000 على الأسهم الممتازة. وتمارس الشركة تأثيرًا مهمًا على A وتطبق طريقة حقوق الملكية على استثمار الأسهم العادية. ما دخل التوزيعات الذي تعرضه في قائمة الدخل للسنة المنتهية في 31 ديسمبر من السنة 1؟",
+    "choicesAr": [
+      "$0",
+      "$30,000",
+      "$60,000",
+      "$90,000"
+    ],
+    "explanationAr": "وفق طريقة حقوق الملكية تخفض التوزيعات النقدية المستلمة حساب الاستثمار، فهي استرداد منه لا دخل إضافي عليه. وبافتراض أن الأسهم الممتازة المعروضة ليست في جوهرها أسهمًا عادية خاضعة لطريقة حقوق الملكية، تثبت الشركة دخل توزيعات قدره $60,000 عند إعلان توزيعاتها."
   },
   {
     "unit": 3,
@@ -269,7 +373,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The corporation’s purchase of 30% of E presumably allows it\nto exercise significant influence. Hence, it should apply the\nequity method. The investor’s share of the investee’s income\nis a function of the percentage of ownership and the length of\ntime the investment was held. The income from this\ninvestment was therefore $18,000 [$120,000 × 30% ×\n(6 months ÷ 12 months)].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 يوليو من السنة 1 اشترت شركة 3,000 سهم من أصل 10,000 سهم عادي قائم لشركة E بسعر $20 للسهم ولم تختر خيار القيمة العادلة. وفي 15 ديسمبر من السنة 1 دفعت E توزيعات $40,000 لمساهميها العاديين. وبلغ صافي دخل E للسنة المنتهية في 31 ديسمبر من السنة 1 مبلغ $120,000 تحقق بالتساوي على مدار السنة. ما دخل الاستثمار في قائمة دخل السنة 1؟",
+    "choicesAr": [
+      "$36,000",
+      "$18,000",
+      "$12,000",
+      "$6,000"
+    ],
+    "explanationAr": "يفترض أن اقتناء حصة 30% من E يمنح تأثيرًا مهمًا، فتطبق طريقة حقوق الملكية. وتتحدد حصة المستثمر في دخل المنشأة المستثمر فيها وفق نسبة الملكية ومدة الاحتفاظ بالاستثمار. لذا يبلغ الدخل $18,000 [$120,000 × 30% × (6 أشهر ÷ 12 شهرًا)]."
   },
   {
     "unit": 3,
@@ -286,7 +398,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Under the equity method, an investor recognizes increases in\nearnings and the investment account for its share of the\ninvestee’s net income for the period and decreases in the\ninvestment account for dividends. Best Billiard should\nrecognize a $10,000 increase in the investment account for\nSupreme Table’s income and a $15,000 decrease in the\naccount for dividends. Thus, the account will experience a net\ndecrease in book value.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تمتلك Best Billiard نسبة 40% من أسهم Supreme Table بتكلفة تاريخية $300,000. وأعلنت Supreme Table أرباح السنة السابقة، وكانت حصة Best Billiard منها $10,000. كما استلمت توزيعات $15,000 في السنة السابقة. وتستخدم طريقة حقوق الملكية. ما العرض الصحيح للاستثمار؟",
+    "choicesAr": [
+      "انخفاض القيمة الدفترية للاستثمار في Supreme Table.",
+      "زيادة القيمة الدفترية للاستثمار في Supreme Table.",
+      "عرض الاستثمار بالتكلفة الأصلية.",
+      "إعداد قوائم موحدة مع Supreme Table."
+    ],
+    "explanationAr": "وفق طريقة حقوق الملكية يزيد المستثمر دخل الاستثمار ورصيده بحصته من صافي دخل المنشأة المستثمر فيها، ويخفض رصيد الاستثمار بالتوزيعات. فتثبت Best Billiard زيادة $10,000 في الاستثمار مقابل الأرباح وانخفاضًا $15,000 مقابل التوزيعات. لذلك تنخفض القيمة الدفترية بالصافي."
   },
   {
     "unit": 3,
@@ -303,7 +423,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Investment in equity securities that does not result in control or\nsignificant influence over the investee is measured at fair\nvalue each balance sheet date. Since the equity investment is\ntraded in an active market, the fair value of the investment is\nreadily determinable. Thus, the investment is measured at\n$400,000, the quoted price for an identical investment.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لدى شركة استثمار في حقوق الملكية بتكلفة تاريخية $500,000 يتداول في سوق نشطة. وفي 31 ديسمبر من السنة 1 بلغ السعر المعلن لاستثمار مطابق $400,000، ولاستثمار مشابه $430,000. وقدرت الشركة القيمة وفق نموذج داخلي للقيمة الحالية للتدفقات النقدية بمبلغ $410,000. ما قيمة الاستثمار في 31 ديسمبر من السنة 1؟",
+    "choicesAr": [
+      "$400,000",
+      "$410,000",
+      "$430,000",
+      "$500,000"
+    ],
+    "explanationAr": "يقاس استثمار أوراق حقوق الملكية الذي لا يمنح سيطرة أو تأثيرًا مهمًا بالقيمة العادلة في تاريخ كل قائمة مركز مالي وفق النموذج المعروض. ولأن الاستثمار يتداول في سوق نشطة، يمكن تحديد قيمته العادلة مباشرة. لذا يقاس بمبلغ $400,000، وهو السعر المعلن لاستثمار مطابق، بافتراض إمكان الوصول إلى السوق."
   },
   {
     "unit": 3,
@@ -320,7 +448,15 @@
     ],
     "answerIndex": 3,
     "explanation": "An investment in voting stock that enables the investor to\nexercise significant influence over the investee should be\naccounted for by the equity method (assuming that the fair\nvalue option is not elected). Because neither investment gives\nGoll Co. the ability to exercise significant influence over either\ncompany, neither the investment in Rose Co. nor the\ninvestment in Jave Co. should be accounted for using the\nequity method.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تمتلك Goll حصة 25% من الأسهم العادية لشركة Rose وحصة 18% من الأسهم العادية لشركة Jave. ولا يمنح أي من الاستثمارين Goll القدرة على ممارسة تأثير مهم على السياسات التشغيلية والمالية لأي منهما. أي الاستثمارين يخضع لطريقة حقوق الملكية؟",
+    "choicesAr": [
+      "كلاهما Rose وJave.",
+      "Rose فقط.",
+      "Jave فقط.",
+      "لا Rose ولا Jave."
+    ],
+    "explanationAr": "يحاسب عن الاستثمار في أسهم التصويت الذي يمنح تأثيرًا مهمًا وفق طريقة حقوق الملكية، بافتراض عدم اختيار خيار القيمة العادلة. ونظرًا إلى أن أيًا من الاستثمارين لا يمنح Goll تأثيرًا مهمًا، فلا تستخدم طريقة حقوق الملكية لأي منهما."
   },
   {
     "unit": 3,
@@ -337,7 +473,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Under the equity method, the investor recognizes in income its\nshare of the investee’s earnings or losses in the periods for\nwhich they are reported by the investee. Thus, Chatham’s\nequity income (investment income) for the period is $25,000\n($100,000 net income reported by Boyrum × 25%). Under the\nequity method, dividends from the investee are treated as a\nreturn of an investment. They decrease the investment\nbalance but have no effect on the investor’s income.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تمتلك Chatham نسبة 25% من أسهم التصويت لشركة Boyrum وتطبق طريقة حقوق الملكية. وقد أعلنت Boyrum دخلًا $100,000 ودفعت توزيعات نقدية $30,000 خلال الفترة. ما دخل الاستثمار الذي تعرضه Chatham؟",
+    "choicesAr": [
+      "$0",
+      "$7,500",
+      "$17,500",
+      "$25,000"
+    ],
+    "explanationAr": "وفق طريقة حقوق الملكية يثبت المستثمر حصته من أرباح أو خسائر المنشأة المستثمر فيها في الفترات التي تعلن عنها. لذا يبلغ دخل Chatham من الاستثمار $25,000 ($100,000 صافي دخل Boyrum × 25%). وتعامل التوزيعات باعتبارها استردادًا من الاستثمار، فتخفض رصيده ولا تؤثر في دخل المستثمر."
   },
   {
     "unit": 3,
@@ -354,7 +498,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The equity method should be used when the investor has\nsignificant influence over an investee and has not elected the\nfair value option. An investment of 20% or more, but not more\nthan 50%, in the voting stock of the investee generally results\nin a significant influence over an investee.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي من نسب ملكية أسهم المنشأة المستثمر فيها التالية تشير عادة إلى تطبيق طريقة حقوق الملكية؟",
+    "choicesAr": [
+      "5%",
+      "15%",
+      "25%",
+      "75%"
+    ],
+    "explanationAr": "تستخدم طريقة حقوق الملكية عند وجود تأثير مهم وعدم اختيار خيار القيمة العادلة. ويُفترض عادة وجود تأثير مهم عند امتلاك 20% أو أكثر، وبما لا يتجاوز 50% من أسهم التصويت، ما لم تظهر أدلة على خلاف ذلك أو تتحقق السيطرة."
   },
   {
     "unit": 3,
@@ -371,7 +523,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The equity method should be used because Well Co.\nexercises significant influence over Rea. The investment in\nRea equals $435,000 [$400,000 investment + ($500,000 net\nincome × 10%) – ($150,000 of dividends × 10%)].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 2 يناير اشترت Well نسبة 10% من الأسهم العادية القائمة لشركة Rea مقابل $400,000، وهو مبلغ يساوي القيمة الدفترية والعادلة للحصة المقتناة في صافي أصول Rea. ولم تختر خيار القيمة العادلة. ونظرًا إلى أنها أكبر مساهم منفرد وأن مسؤوليها يشكلون أغلبية مجلس الإدارة، فإنها تمارس تأثيرًا مهمًا وفق معطيات السؤال. وحققت Rea صافي دخل $500,000 ودفعت توزيعات $150,000. ما قيمة الاستثمار في Rea في قائمة المركز المالي في 31 ديسمبر؟",
+    "choicesAr": [
+      "$450,000",
+      "$435,000",
+      "$400,000",
+      "$385,000"
+    ],
+    "explanationAr": "تستخدم طريقة حقوق الملكية لأن Well تمارس تأثيرًا مهمًا على Rea، بافتراض عدم تحقق السيطرة. ويساوي الاستثمار $435,000 [$400,000 الاستثمار + ($500,000 صافي الدخل × 10%) − ($150,000 التوزيعات × 10%)]."
   },
   {
     "unit": 3,
@@ -388,7 +548,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Under the fair value method, dividends from an investment in\nequity securities should be accounted for by the investor as\ndividend income unless a liquidating dividend is received.\nThus, assuming that the dividend is not liquidating, it has no\neffect on the investment balance under the fair value method.\nUnder the equity method, the investor recognizes its equity in\nthe undistributed earnings of the investee. Consequently, cash\ndividends decrease the investment balance because the\ndividend is considered to be a return of investment.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "استلمت Peel توزيعًا نقديًا من استثمار في أسهم عادية. هل تثبت زيادة في رصيد الاستثمار وفق كل من طريقة القيمة العادلة وطريقة حقوق الملكية؟\nالقيمة العادلة | حقوق الملكية",
+    "choicesAr": [
+      "لا | لا",
+      "نعم | نعم",
+      "نعم | لا",
+      "لا | نعم"
+    ],
+    "explanationAr": "وفق القيمة العادلة تثبت التوزيعات العادية من استثمار أوراق حقوق الملكية كدخل توزيعات، ولا تؤثر في رصيد الاستثمار مباشرة. وقد تختلف توزيعات التصفية. أما وفق حقوق الملكية فيثبت المستثمر حصته من أرباح المنشأة المستثمر فيها، وتخفض التوزيعات النقدية رصيد الاستثمار باعتبارها استردادًا منه."
   },
   {
     "unit": 3,
@@ -422,7 +590,15 @@
     ],
     "answerIndex": 2,
     "explanation": "If an investor with significant influence over an investee has\nnot elected to account for the investment using the fair value\noption, it must apply the equity method. Thus, the carrying\namount of the investment is increased (decreased) by the\ninvestor’s share of the investee’s net income (dividends paid).\nThe year-end carrying amount is $250,000 [$200,000 +\n($600,000 × 25%) – ($400,000 × 25%)].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تمتلك Larkin نسبة 25% من الأسهم العادية لشركة Devon منذ عدة سنوات، ولديها القدرة على ممارسة تأثير مهم عليها. وفيما يلي بيانات السنة الأخيرة:\nالقيمة الدفترية للاستثمار في بداية السنة: $200,000\nصافي دخل Devon للسنة: 600,000\nإجمالي التوزيعات المدفوعة لمساهمي Devon خلال السنة: 400,000\nما القيمة الدفترية لاستثمار Larkin في نهاية السنة؟",
+    "choicesAr": [
+      "$100,000",
+      "$200,000",
+      "$250,000",
+      "$350,000"
+    ],
+    "explanationAr": "إذا لم يختر المستثمر ذو التأثير المهم خيار القيمة العادلة، يطبق طريقة حقوق الملكية. وتزيد القيمة الدفترية بحصته من صافي الدخل وتنخفض بحصته من التوزيعات. لذا تبلغ القيمة في نهاية السنة $250,000 [$200,000 + ($600,000 × 25%) − ($400,000 × 25%)]."
   },
   {
     "unit": 3,
@@ -439,7 +615,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Under the equity method, the investor recognizes in income its\nshare of the investee’s earnings or losses in the periods for\nwhich they are reported by the investee. Therefore, the\ninvestment in Turf account is increased by the investor’s share\nof the investee’s income of $16,250 ($65,000 × 25%).\nDividends from the investee are treated as a return of an\ninvestment. Thus, the investment account is decreased by the\ndividends received of $7,500 ($30,000 × 25%). The year-end\ncarrying amount of investment in Turf is therefore $558,750\n($550,000 + $16,250 – $7,500).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في بداية السنة المالية اشترت End نسبة 25% من شركة Turf مقابل $550,000. وفي نهاية السنة أعلنت Turf صافي دخل $65,000 وأعلنت ودفعت توزيعات نقدية $30,000. وتستخدم End طريقة حقوق الملكية. ما قيمة الاستثمار في Turf في قائمة المركز المالي في نهاية السنة؟",
+    "choicesAr": [
+      "$550,000",
+      "$558,750",
+      "$566,250",
+      "$573,750"
+    ],
+    "explanationAr": "وفق طريقة حقوق الملكية يثبت المستثمر حصته من أرباح أو خسائر المنشأة المستثمر فيها في فتراتها. لذا يزيد حساب الاستثمار في Turf بحصة المستثمر من الدخل البالغة $16,250 ($65,000 × 25%). وتعامل التوزيعات كاسترداد من الاستثمار، فينخفض الحساب بحصة التوزيعات $7,500 ($30,000 × 25%). لذلك تبلغ القيمة الدفترية في نهاية السنة $558,750 ($550,000 + $16,250 − $7,500)."
   },
   {
     "unit": 3,
