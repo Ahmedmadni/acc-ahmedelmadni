@@ -638,6 +638,7 @@ const staticArabicVol2 = new Set([
   ...Array.from({length:19},(_,i)=>i+28).filter(n=>![28,29,32,35,40].includes(n)).map(n=>"19.1."+n),
   ...Array.from({length:15},(_,i)=>i+1).filter(n=>![6,7,11,12,13].includes(n)).map(n=>"19.2."+n),
   ...Array.from({length:13},(_,i)=>i+16).filter(n=>![19,25,27,28].includes(n)).map(n=>"19.2."+n),
+  ...Array.from({length:11},(_,i)=>i+29).filter(n=>![33,36,37,38,39].includes(n)).map(n=>"19.2."+n),
 ]);
 const vol2QuestionById = new Map(CMA_GLEIM_2025_VOL2_QUESTIONS.map(q=>[q.id,q]));
 for (const [key, original] of vol2Records) {
@@ -909,12 +910,12 @@ for(const [n,page,index] of [[3,1211,1],[6,1213,3],[7,1214,3],[9,1215,3],[26,122
  const mapped=vol2QuestionById.get("cma-gleim-2025-vol2-su19-s1-q"+String(n).padStart(3,"0"));
  check(original?.page===page && original.answerIndex===index && original.answerStatus==="source" && original.stemAr===undefined && original.choicesAr===undefined && original.explanationAr===undefined && mapped?.sourceLayoutReview===true && mapped?.sourceLanguage==="en" && mapped?.sourceArabicStatus===undefined && mapped?.answerIndex===original.answerIndex,"Unit 19 accounting systems hold: "+n);
 }
-for(const [n,page,index,status,layout] of [[6,1249,1,"source",null],[7,1250,2,"source",null],[11,1253,0,"source",null],[12,1254,0,"source","reconstructed"],[13,1255,2,"source",null],[19,1258,1,"source",null],[25,1262,0,"source",null],[27,1263,2,"source",null],[28,1264,3,"inferred",null]]){
+for(const [n,page,index,status,layout] of [[6,1249,1,"source",null],[7,1250,2,"source",null],[11,1253,0,"source",null],[12,1254,0,"source","reconstructed"],[13,1255,2,"source",null],[19,1258,1,"source",null],[25,1262,0,"source",null],[27,1263,2,"source",null],[28,1264,3,"inferred",null],[33,1267,1,"source",null],[36,1269,3,"source",null],[37,1269,0,"source",null],[38,1270,1,"source",null],[39,1271,0,"source",null]]){
  const original=vol2Records.get("19.2."+n);
  const mapped=vol2QuestionById.get("cma-gleim-2025-vol2-su19-s2-q"+String(n).padStart(3,"0"));
  check(original?.page===page && original.answerIndex===index && original.answerStatus===status && (original.sourceTextStatus??null)===layout && original.stemAr===undefined && original.choicesAr===undefined && original.explanationAr===undefined && mapped?.sourceLayoutReview===true && mapped?.sourceLanguage==="en" && mapped?.sourceArabicStatus===undefined && mapped?.answerIndex===original.answerIndex,"Unit 19 data governance hold: "+n);
 }
-console.log("Unit 19 Wave 5: 54/110 Arabic drafts; accounting systems 35/46; data governance 19/39; 20 reviewed holds, 36 unreviewed.");
+console.log("Unit 19 Wave 6: 60/110 Arabic drafts; accounting systems 35/46; data governance 25/39; 25 reviewed holds, 25 unreviewed.");
 const unit15ReviewRows=[...vol2Records.entries()].filter(([id])=>id.startsWith("15.")).filter(([id])=>{
  const [,section,n]=id.split(".");
  return vol2QuestionById.get("cma-gleim-2025-vol2-su15-s"+section+"-q"+String(n).padStart(3,"0"))?.sourceLayoutReview===true;

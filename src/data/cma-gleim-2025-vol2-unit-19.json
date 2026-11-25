@@ -1705,7 +1705,15 @@
     ],
     "answerIndex": 0,
     "explanation": "It may be difficult to prove that a full purge of data has actually\noccurred, which poses a challenge in satisfying data\ngovernance requirements.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يمثل التخلص من جميع نسخ البيانات صعوبة وتحديًا لأي مما يلي؟",
+    "choicesAr": [
+      "حوكمة البيانات.",
+      "نشر البيانات.",
+      "أرشفة البيانات.",
+      "صيانة البيانات."
+    ],
+    "explanationAr": "قد يصعب إثبات أن الإزالة النهائية للبيانات قد تمت بالفعل بجميع نسخها، مما يشكل تحديًا لتلبية متطلبات حوكمة البيانات. وتشمل المعالجة تحديد مواقع النسخ والنسخ الاحتياطية وتوثيق إجراءات الإزالة المصرح بها وفق سياسة الاحتفاظ والالتزامات النظامية."
   },
   {
     "unit": 19,
@@ -1722,7 +1730,15 @@
     ],
     "answerIndex": 3,
     "explanation": "It is important for every organization to have a formal record\nretention policy (sometimes referred to as a records\nmanagement policy), which provides for the retention and\nperiodic destruction of documents and other records.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تنظم شركة مرتين سنويًا أيامًا لتنظيم الملفات، يستخدمها الموظفون للتخلص من الملفات القديمة غير اللازمة وأرشفة السجلات وإرسالها للتخزين. تمثل هذه الممارسة تطبيقًا لأي مما يلي؟",
+    "choicesAr": [
+      "صيانة البيانات.",
+      "بيئة الرقابة الداخلية.",
+      "نظام إدارة قواعد البيانات.",
+      "سياسة الاحتفاظ بالسجلات."
+    ],
+    "explanationAr": "تنظم سياسة الاحتفاظ بالسجلات، التي تسمى أيضًا سياسة إدارة السجلات، مدد الاحتفاظ بالمستندات والسجلات والتخلص الدوري المصرح به منها. وينبغي تطبيقها وفق المتطلبات النظامية والتعاقدية، مع مراعاة أي التزام قائم بحفظ الأدلة."
   },
   {
     "unit": 19,
@@ -1739,7 +1755,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Illegal activities, such as noncompliance and fraud, are the\nleast likely explanation for having a formal record retention\npolicy. Once litigation is likely, it is too late to establish a\nrecords retention policy or to begin complying with a policy\nthat was not followed in the past.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي هو الأقل احتمالًا أن يكون هدفًا مشروعًا لوجود سياسة رسمية للاحتفاظ بالسجلات؟",
+    "choicesAr": [
+      "ضبط تكاليف تخزين السجلات.",
+      "الالتزام بالحد الأدنى لمدد الاحتفاظ التي يفرضها النظام.",
+      "إتلاف أدلة عدم الامتثال والغش.",
+      "التخلص الدوري من المستندات."
+    ],
+    "explanationAr": "إخفاء أدلة عدم الامتثال أو الغش ليس هدفًا مشروعًا لسياسة الاحتفاظ. وتهدف السياسة إلى إدارة السجلات والالتزام بمتطلبات حفظها والتخلص المصرح به منها. وعند نشوء التزام بحفظ الأدلة، يجب مراعاته وتعليق الإتلاف المتعارض معه؛ ولا تبرر السياسة إتلاف الأدلة."
   },
   {
     "unit": 19,
@@ -1756,7 +1780,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A policy that provides for the retention and periodic destruction\nof documents and other records is known as a formal record\nretention policy or a records management policy.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ماذا تسمى سياسة المنشأة المتعلقة بالاحتفاظ بالمستندات والسجلات الأخرى والتخلص الدوري منها؟",
+    "choicesAr": [
+      "امتثال السجلات.",
+      "تنقية السجلات.",
+      "أرشفة السجلات.",
+      "إدارة السجلات."
+    ],
+    "explanationAr": "تسمى السياسة التي تنظم الاحتفاظ بالمستندات والسجلات الأخرى والتخلص الدوري المصرح به منها سياسة الاحتفاظ بالسجلات أو سياسة إدارة السجلات. وتحدد السياسة مدد الاحتفاظ والمسؤوليات وضوابط التصرف والاستثناءات."
   },
   {
     "unit": 19,
@@ -1790,7 +1822,15 @@
     ],
     "answerIndex": 1,
     "explanation": "If a company becomes involved in a legal dispute, the task of\ngoing through a voluminous amount of records to produce\nrelevant material can become an enormous and costly\nchallenge. Additionally, keeping and maintaining too many\nrecords, or storing them longer than needed, can create\nunneeded costs for an organization.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "قد يؤدي الاحتفاظ بالسجلات لمدة تتجاوز الحاجة إليها إلى تحدٍ كبير عندما:",
+    "choicesAr": [
+      "يشتبه في تقديم الشركة إقرارًا ضريبيًا احتياليًا.",
+      "تحتاج الشركة إلى العثور على سجلات ذات صلة بنزاع قانوني.",
+      "لا تنتمي الشركة إلى قطاع خاضع للتنظيم.",
+      "تتخلص الشركة دوريًا من المستندات القديمة."
+    ],
+    "explanationAr": "عند وقوع نزاع قانوني، قد يصبح البحث بين كميات كبيرة من السجلات لإنتاج المستندات ذات الصلة مكلفًا ومعقدًا. وقد يؤدي الاحتفاظ بسجلات أكثر من اللازم إلى تكاليف غير ضرورية. لكن تخفيض التكاليف لا يبرر إتلاف السجلات التي يجب الاحتفاظ بها نظاميًا أو تعاقديًا أو لأغراض حفظ الأدلة."
   },
   {
     "unit": 19,
@@ -1807,7 +1847,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A formal record retention policy provides for the retention and\nperiodic destruction of documents and other records. The task\nof going through a voluminous amount of records to produce\nrelevant material can become an enormous and costly\nchallenge. Keeping and maintaining too many records, or\nstoring them longer than needed, can create unneeded costs\nfor an organization. Additionally, the inability to produce\ncertain documents can lead to severe penalties and fines.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "كانت موظفة في أسبوعها الثالث من البحث في سجلات 10 سنوات للعثور على مستندات مؤيدة لمصروفات الوجبات المخصومة في الإقرار الضريبي للسنة الماضية. أي السياسات الآتية كان من الأرجح أن يحد من حدوث هذه المشكلة؟",
+    "choicesAr": [
+      "سياسة إدارة قواعد البيانات.",
+      "سياسة صيانة البيانات.",
+      "سياسة رسمية للاحتفاظ بالسجلات.",
+      "سياسة أمن المعلومات."
+    ],
+    "explanationAr": "تنظم سياسة الاحتفاظ بالسجلات مدد الحفظ والتصرف المصرح به في المستندات. وقد يؤدي تراكم السجلات دون تنظيم إلى ارتفاع تكاليف البحث واسترجاع المستندات، كما قد تترتب عواقب على عدم تقديم مستندات لازمة. وتساعد السياسة، إلى جانب الفهرسة وإمكانية الاسترجاع، على الحد من هذه المشكلة دون الإخلال بمدد الاحتفاظ الملزمة."
   },
   {
     "unit": 19,
