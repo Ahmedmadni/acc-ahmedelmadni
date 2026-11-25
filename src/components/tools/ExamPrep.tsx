@@ -28,6 +28,7 @@ import { getCmaUnit14SourceReview } from "@/lib/cma-unit14-source-review";
 import { getCmaUnit15SourceReview } from "@/lib/cma-unit15-source-review";
 import { getCmaUnit16SourceReview } from "@/lib/cma-unit16-source-review";
 import { getCmaUnit17SourceReview } from "@/lib/cma-unit17-source-review";
+import { getCmaUnit18SourceReview } from "@/lib/cma-unit18-source-review";
 import { isCmaScorableQuestion, splitCmaQuizSourceReview } from "@/lib/cma-source-review.shared";
 import type { CmaStudyUnit } from "@/data/cma-topics";
 
@@ -553,6 +554,7 @@ export function ExamPrep({ lang }: { lang: Lang }) {
                         getCmaUnit15SourceReview(q.id)?.message[lang] ??
                         getCmaUnit16SourceReview(q.id)?.message[lang] ??
                         getCmaUnit17SourceReview(q.id)?.message[lang] ??
+                        getCmaUnit18SourceReview(q.id)?.message[lang] ??
                     (lang === "ar"
                       ? "هذا السؤال للتدريب ومراجعة المصدر فقط، ولا يُحتسب ضمن درجتك. لم يُطابق الجدول أو المعادلة بعد مع صفحة PDF الأصلية؛ مفتاح الإجابة الظاهر ليس اعتمادًا نهائيًا لصحة المصدر."
                       : "Source review required. This practice-only question is not scored. Its table or formula has not been matched to the original PDF; the displayed answer key is not independently certified.")}
