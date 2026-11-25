@@ -1076,7 +1076,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Data maintenance often involves cleansing and enrichment of\nthe data.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يصف صيانة البيانات في دورة حياتها على أفضل وجه؟",
+    "choicesAr": [
+      "تنقية البيانات وإثراؤها.",
+      "معالجة جميع البيانات المقدمة للمعالجة فعليًا.",
+      "حماية البيانات من الوصول غير المصرح به.",
+      "الاحتفاظ بالبيانات القديمة في موقع تخزين."
+    ],
+    "explanationAr": "تشمل صيانة البيانات غالبًا تنقيتها من الأخطاء والتكرار غير الضروري وإثراءها بمعلومات إضافية مناسبة، وفق ضوابط الجودة والحوكمة."
   },
   {
     "unit": 19,
@@ -1093,7 +1101,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Data analytics can be defined as the creation of data values\nby using inductive logic. It uses modeling, such as risk\nmodeling, actuarial modeling, and modeling for investment\ndecisions, and typically involves using other data as inputs.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تعد نمذجة المخاطر والنمذجة الاكتوارية ونمذجة قرارات الاستثمار أمثلة على:",
+    "choicesAr": [
+      "استخدام البيانات.",
+      "المحاكاة المتوازية.",
+      "تحليلات البيانات.",
+      "إثراء البيانات."
+    ],
+    "explanationAr": "تستخدم تحليلات البيانات الأساليب الإحصائية والمنطق الاستدلالي والنماذج لاستخلاص معلومات أو تقديرات جديدة من البيانات. ومن أمثلتها نمذجة المخاطر والنمذجة الاكتوارية ونمذجة قرارات الاستثمار. وتعتمد النتائج على جودة المدخلات والافتراضات وصلاحية النموذج."
   },
   {
     "unit": 19,
@@ -1110,7 +1126,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Independent verification is an important compensating control\nin the absence of segregation of duties and reduced individual\nauthorization of transactions. A third party performs the\nverification to ensure that the transactions were appropriately\nprocessed.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الأنشطة الرقابية الآتية يناسب الحد من مخاطر المعالجة غير الصحيحة في نظام محاسبي محوسب تم تركيبه حديثًا؟",
+    "choicesAr": [
+      "الفصل بين الواجبات.",
+      "ضمان اعتماد المعاملات بصورة سليمة.",
+      "حماية الأصول بصورة كافية.",
+      "التحقق المستقل من المعاملات."
+    ],
+    "explanationAr": "يعد التحقق المستقل ضابطًا مهمًا لاكتشاف المعالجة غير الصحيحة، وقد يكون ضابطًا تعويضيًا عندما يتعذر الفصل الكامل بين الواجبات. ويتحقق طرف مستقل من صحة المعالجة بمقارنة النتائج المتوقعة والفعلية وفحص الاستثناءات. ولا يغني ذلك عن اعتماد المعاملات والفصل الملائم بين الصلاحيات."
   },
   {
     "unit": 19,
@@ -1127,7 +1151,15 @@
     ],
     "answerIndex": 1,
     "explanation": "In a manual payroll system, a paper trail of documents is\ncreated to provide audit evidence that controls over each step\nin processing are in place and functioning. One element of a\ncomputer system that differentiates it from a manual system is\nthat a transaction trail useful for auditing purposes might exist\nonly for a brief time or only in computer-readable form.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "انتقلت شركة ماثيوز من تسجيل ساعات العمل على بطاقات حضور ورقية إلى نظام رواتب محوسب يسجل فيه الموظفون الدخول والخروج باستخدام بطاقات مغناطيسية، ويحدث النظام سجلات الرواتب تلقائيًا. ما أثر هذا التغيير؟",
+    "choicesAr": [
+      "يجب استخدام برنامج مراجعة حاسوبي عام.",
+      "يتغير جزء من مسار المراجعة.",
+      "تنخفض بالضرورة إمكانية الغش المتعلق بالرواتب.",
+      "يجب معالجة المعاملات على دفعات."
+    ],
+    "explanationAr": "ينشأ في نظام الرواتب اليدوي مسار مستندي ورقي يدعم أدلة المراجعة المتعلقة بتنفيذ الضوابط. وفي النظام المحوسب قد توجد أدلة المعاملات بصيغة إلكترونية فقط أو تكون متاحة لمدة محدودة وفق إعدادات الاحتفاظ. ولذلك يتغير جزء من مسار المراجعة، وتزداد أهمية سجلات التدقيق الإلكترونية وحمايتها وإمكانية استرجاعها."
   },
   {
     "unit": 19,
@@ -1144,7 +1176,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Computer processing permits consistent application of\npredefined business rules and the performance of complex\ncalculations in high volume. Hence, computer processing of\nthe accounting transactions reported in financial statements is\nmore efficient than in a manual system.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يعد ميزة لنظام معالجة المعاملات المحوسب مقارنة بالنظام اليدوي؟ النظام المحوسب:",
+    "choicesAr": [
+      "لا يتطلب مجموعة ضوابط داخلية بالصرامة نفسها.",
+      "ينتج قوائم مالية أكثر دقة بالضرورة.",
+      "يكون أكثر كفاءة في إعداد القوائم المالية.",
+      "يلغي الحاجة إلى مطابقة حسابات الرقابة بالأستاذ المساعد."
+    ],
+    "explanationAr": "تتيح المعالجة الحاسوبية تطبيق قواعد العمل المحددة مسبقًا بصورة متسقة وإجراء العمليات الحسابية المعقدة لأحجام كبيرة من البيانات. ومن ثم يمكن أن تكون معالجة المعاملات المحاسبية اللازمة للقوائم المالية أكثر كفاءة من المعالجة اليدوية. وتعتمد الدقة على سلامة المدخلات والبرامج والضوابط."
   },
   {
     "unit": 19,
@@ -1195,7 +1235,15 @@
     ],
     "answerIndex": 3,
     "explanation": "In a manual system with appropriate internal control, separate\nindividuals are responsible for authorizing transactions,\nrecording transactions, and having custody of assets. These\nchecks and balances prevent fraud and detect inaccurate or\nincomplete transactions. In a computerized environment,\nhowever, this segregation of duties is not always feasible. For\nexample, a computer may print checks, record disbursements,\nand generate information for reconciling the account balance.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "حولت منشأة مؤخرًا دورة المشتريات من إجراءات يدوية إلى نظام حاسوبي متصل. أي مما يلي قد ينتج عن الانتقال إلى النظام الآلي؟",
+    "choicesAr": [
+      "زيادة أخطاء المعالجة.",
+      "انخفاض تعرض المنشأة للمخاطر.",
+      "زيادة زمن المعالجة.",
+      "انخفاض الفصل التقليدي بين بعض الواجبات."
+    ],
+    "explanationAr": "في النظام اليدوي المصمم جيدًا تفصل مسؤوليات اعتماد المعاملات وتسجيلها وحيازة الأصول. وقد يجمع النظام المحوسب وظائف تنفيذية كانت منفصلة يدويًا، مثل معالجة المدفوعات وتسجيلها وإنتاج بيانات المطابقة. ولا يعني ذلك جواز الجمع بين الصلاحيات المتعارضة للمستخدمين؛ إذ ينبغي الحفاظ على الفصل المنطقي والاعتمادات المستقلة وضوابط المراجعة."
   },
   {
     "unit": 19,
@@ -1212,7 +1260,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The controls in a manual and in a computerized system are\ngeared toward the same control objectives. Only the design\nand implementation are different.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما الاختلاف الرقابي الأساسي عند الانتقال من نظام يدوي إلى نظام محوسب؟",
+    "choicesAr": [
+      "تتغير مبادئ الرقابة الداخلية.",
+      "تختلف أهداف الرقابة الداخلية.",
+      "تصبح أهداف الرقابة أصعب تحقيقًا.",
+      "تتغير أساليب تنفيذ الضوابط."
+    ],
+    "explanationAr": "تستهدف الضوابط في النظام اليدوي والمحوسب أهدافًا رقابية متشابهة، لكن تصميمها وطرق تنفيذها تختلف بحسب طبيعة النظام ومخاطره. فقد تستبدل بعض الإجراءات اليدوية بضوابط تطبيقية وضوابط عامة لتقنية المعلومات."
   },
   {
     "unit": 19,
@@ -1229,7 +1285,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Advances in technology bring new capabilities and, along with\nthem, new vulnerabilities. Because information system\nsecurity is continually subject to new threats, that is, to new\nrisks and exposures, risk assessment and management must\nbe a continual process.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لماذا تزيد الابتكارات في تقنية المعلومات أهمية إدارة المخاطر؟",
+    "choicesAr": [
+      "أصبح هدف الأمان الكامل أكثر قابلية للتحقيق.",
+      "تتعرض نظم المعلومات باستمرار لتهديدات جديدة.",
+      "انتشرت النظم الخاصة المغلقة.",
+      "لا تمثل الخصوصية مصدر قلق إلا لعدد قليل جدًا من المستخدمين."
+    ],
+    "explanationAr": "تقدم التطورات التقنية قدرات جديدة وقد تصاحبها نقاط ضعف ومخاطر جديدة. ونظرًا لتغير تهديدات أمن المعلومات باستمرار، ينبغي أن يكون تقييم المخاطر وإدارتها عملية مستمرة تتكيف مع تغير الأنظمة والتهديدات."
   },
   {
     "unit": 19,
@@ -1298,7 +1362,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The first phase of the data life cycle is to obtain data. It is the\nact of creating information that does not yet exist within the\norganization. Data can be captured by acquiring data from\noutside the organization, through values created within the\norganization, or through the acquisition of data that has\nalready been created by control systems within the\norganization.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما المرحلة الأولى من دورة حياة البيانات وفق النموذج المفترض في السؤال؟",
+    "choicesAr": [
+      "نشر البيانات.",
+      "صيانة البيانات.",
+      "التقاط البيانات.",
+      "توليف البيانات."
+    ],
+    "explanationAr": "تبدأ دورة حياة البيانات في النموذج المعروض بالحصول عليها وإدخال معلومات غير موجودة سابقًا لدى المنشأة. وقد تلتقط البيانات من مصادر خارجية أو من قيم تنشأ داخل المنشأة أو من بيانات تولدها أنظمتها الرقابية. وقد تتضمن نماذج أخرى مرحلة تخطيط تسبق الالتقاط."
   },
   {
     "unit": 19,
@@ -1315,7 +1387,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Data capture is defined as the act of creating information that\ndoes not yet exist within the organization. The primary ways in\nwhich data can be captured include utilizing data, data entry,\nand signal reception.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مراحل دورة حياة البيانات الآتية تعني إدخال معلومات لم تكن موجودة سابقًا لدى المنشأة؟",
+    "choicesAr": [
+      "تحليلات البيانات.",
+      "توليف البيانات.",
+      "استخدام البيانات.",
+      "التقاط البيانات."
+    ],
+    "explanationAr": "يعني التقاط البيانات الحصول على معلومات لم تكن موجودة سابقًا لدى المنشأة وتسجيلها. وقد يشمل الحصول على البيانات من مصادر أخرى أو الإدخال المباشر أو استقبال الإشارات. ويختلف ذلك عن تحليل البيانات الموجودة أو توليفها لاستخلاص معلومات جديدة وفق النموذج التعليمي."
   },
   {
     "unit": 19,
