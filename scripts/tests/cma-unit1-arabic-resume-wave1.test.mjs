@@ -251,3 +251,18 @@ test("Unit 7 independent final inventory and profit reconciliation calculations"
  assert.equal(1000+(9500-9125)/1.5,1250);assert.equal((187500+100000+150000+200000)*25000/100000,159375);assert.equal(1000*20,20000);assert.equal((187500+100000+150000)*75000/100000,328125);assert.equal(2000*30,60000);assert.equal(40000-(7000-5000)*600000/300000,36000);
  assert.equal(30000*(30-6-3-2-1-160000/40000)-75000,345000);assert.equal(500000+400000+90000+120000,1110000);assert.equal(900*(100-30-20-10-12),25200);assert.equal(25200-5000-3600-1800,14800);assert.equal(400000-(15000-12000)*1800000/15000,40000);assert.equal(56000+179100+154000+267000,656100);assert.equal(108400+121000+235900+27700,493000);assert.equal(150000+75000,225000);
 });
+
+const unit8Rows=JSON.parse(read("src/data/cma-gleim-2025-vol1-unit-8.json"));
+const unit8Wave1Pins=new Map([["1.1",[810,3,"73109273"]],["1.4",[814,3,"eea7fd32"]],["1.5",[815,2,"8927bb08"]],["1.6",[816,1,"5e9e5faf"]],["1.8",[818,2,"24825301"]],["1.9",[819,2,"1afb6558"]],["1.10",[820,1,"c330d437"]],["1.11",[821,0,"636cadc2"]],["1.14",[825,2,"b3b10d1a"]],["1.15",[826,3,"e9d509fb"]],["1.16",[827,2,"77f22526"]],["1.17",[827,3,"af4ae316"]],["1.18",[828,0,"01604ecb"]],["1.19",[828,2,"ccf018a2"]],["1.20",[829,3,"a893e249"]],["1.21",[830,0,"b1923333"]],["2.1",[832,1,"9dec57a9"]],["2.2",[833,2,"d10c61bd"]],["2.3",[833,1,"495ea531"]],["2.4",[834,2,"f5c18cc1"]],["2.5",[835,3,"11dc47c2"]],["2.7",[837,1,"ee850392"]],["2.8",[838,1,"f0d284a9"]],["2.9",[839,2,"57740e1d"]],["2.10",[840,0,"6ba602a6"]],["2.11",[840,1,"10cbf347"]]]);
+test("Unit 8 job and process costing preserve source, keys and numerical parity",()=>{
+ for(const [id,[page,index,hash]] of unit8Wave1Pins){const r=unit8Rows.find(r=>r.section+"."+r.number===id);assert.equal(r.page,page);assert.equal(r.answerIndex,index);assert.equal(r.answerStatus,"source");assert.equal(fingerprint(JSON.stringify([r.stem,r.choices,r.explanation,r.answerIndex,r.page])),hash);assert.equal(validateCmaTranslation({question:{en:r.stem},choices:{en:r.choices},explanation:{en:r.explanation}},{question:r.stemAr,choices:r.choicesAr,explanation:r.explanationAr}).valid,true,id);for(const [en,ar] of [[r.stem,r.stemAr],...r.choices.map((c,i)=>[c,r.choicesAr[i]]),[r.explanation,r.explanationAr]])assert.deepEqual(cmaNumericTokens(ar),cmaNumericTokens(en),id);}
+ const adapter=read("src/data/cma-questions-gleim-2025-vol1.ts");const held=["8.1.2","8.1.3","8.1.7","8.1.12","8.1.13","8.2.6"];assert.deepEqual(unit8Rows.filter(r=>r.section<=2&&!r.stemAr).map(r=>[r.unit,r.section,r.number].join(".")),held);for(const id of held)assert.ok(adapter.includes('"'+id+'"'),id);
+ assert.equal(unit8Rows.length,84);assert.deepEqual([1,2].map(s=>unit8Rows.filter(r=>r.section===s&&r.stemAr&&r.choicesAr&&r.explanationAr).length),[16,10]);assert.ok(unit8Rows.filter(r=>r.stemAr&&r.choicesAr&&r.explanationAr).length>=26);
+});
+test("Unit 8 independent job costing and WIP computations",()=>{
+ assert.equal((13700+4800+800*25)/7000,5.5);
+ assert.equal((27400+9600+400*50)/4000,14.25);
+ assert.equal(2500000*.3/.8,937500);
+ assert.equal((2500000-2425000)/.25,300000);
+ assert.equal(240000/50000*50000,240000);
+});
