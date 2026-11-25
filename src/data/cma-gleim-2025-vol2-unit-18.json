@@ -348,7 +348,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Most companies have their payrolls prepared by the same\nindividuals who maintain the year-to-date records. There is no\nneed for this functional separation because both duties involve\nrecordkeeping.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يتحقق الاستقلال التنظيمي عند معالجة الرواتب من خلال الفصل بين الوظائف داخل النظام. أي أوجه الفصل الوظيفي الآتية ليس مطلوبًا بحد ذاته لأغراض الرقابة الداخلية؟",
+    "choicesAr": [
+      "الفصل بين تسجيل أوقات العمل وإعداد الرواتب.",
+      "الفصل بين شؤون الموظفين وإعداد الرواتب.",
+      "الفصل بين إعداد الرواتب وتوزيع شيكاتها.",
+      "الفصل بين إعداد الرواتب وحفظ سجلاتها التراكمية منذ بداية السنة."
+    ],
+    "explanationAr": "في كثير من المنشآت يتولى الأشخاص الذين يعدون الرواتب حفظ سجلاتها التراكمية منذ بداية السنة أيضًا. ولا يلزم الفصل بين هاتين الوظيفتين لمجرد اجتماعهما لأن كلتيهما تتعلق بحفظ السجلات، مع ضرورة وجود ضوابط اعتماد ومراجعة مستقلة مناسبة."
   },
   {
     "unit": 18,
@@ -365,7 +373,15 @@
     ],
     "answerIndex": 0,
     "explanation": "No control should require disposal of fully depreciated assets.\nThey may still be productive and used in the business and\nshould remain on the books until disposal",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الضوابط الآتية غير مناسب للممتلكات والآلات والمعدات؟",
+    "choicesAr": [
+      "التخلص من الأصول المهلكة بالكامل.",
+      "وجود صلاحيات اعتماد مناسبة لاقتناء الأصول واستبعادها.",
+      "وجود سجلات تفصيلية للأصول وضوابط مادية عليها.",
+      "وجود سياسات مكتوبة للرسملة والإنفاق ومراجعة تطبيق طرق الإهلاك."
+    ],
+    "explanationAr": "لا ينبغي أن يفرض الضابط التخلص من الأصل لمجرد إهلاكه بالكامل؛ فقد يظل منتجًا ومستخدمًا في النشاط. ويظل الأصل وتراكم إهلاكه ضمن السجلات حتى استبعاده وفق شروط إلغاء الاعتراف المحاسبي."
   },
   {
     "unit": 18,
@@ -399,7 +415,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Recording of cash establishes accountability for assets. The\nbank reconciliation compares that recorded accountability with\nactual assets. The recording of cash receipts and preparation\nof bank reconciliations should therefore be performed by\ndifferent individuals since the preparer of a reconciliation could\nconceal a cash shortage. For example, if a cashier both\nprepares the bank deposit and performs the reconciliation,\n(s)he could embezzle cash and conceal the theft by falsifying\nthe reconciliation.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "إذا كانت الرقابة الداخلية مصممة جيدًا، فأي مهمتين ينبغي أن يؤديهما شخصان مختلفان؟",
+    "choicesAr": [
+      "اعتماد شطب الديون المعدومة ومطابقة الأستاذ المساعد للذمم الدائنة مع حساب الرقابة.",
+      "توزيع شيكات الرواتب واعتماد مرتجعات المبيعات لإصدار إشعارات دائنة.",
+      "ترحيل المبالغ من يوميتي المقبوضات والمدفوعات النقدية إلى الأستاذ العام.",
+      "تسجيل المقبوضات النقدية وإعداد التسويات البنكية."
+    ],
+    "explanationAr": "يثبت تسجيل النقدية المسؤولية عن الأصول، وتقارن التسوية البنكية الأرصدة المسجلة بالأرصدة الفعلية لدى البنك. لذلك ينبغي فصل تسجيل المقبوضات عن إعداد التسويات حتى لا يتمكن معد التسوية من إخفاء عجز نقدي. فالجمع بين إعداد الإيداع وإعداد التسوية يتيح إخفاء الاختلاس عن طريق تحريف التسوية."
   },
   {
     "unit": 18,
@@ -416,7 +440,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The payroll department is responsible for assembling payroll\ninformation (recordkeeping). The personnel department is\nresponsible for authorizing employee transactions such as\nhiring, firing, and changes in pay rates and deductions.\nSegregating the recording and authorization functions helps\nprevent fraud.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الأنشطة الآتية يمثل وظيفة مناسبة لقسم شؤون الموظفين ويساعد في ردع الغش في الرواتب؟",
+    "choicesAr": [
+      "توزيع شيكات الرواتب.",
+      "اعتماد ساعات العمل الإضافية.",
+      "اعتماد إضافة الموظفين إلى كشوف الرواتب وحذفهم منها.",
+      "جمع شيكات الرواتب التي لم يتسلمها أصحابها والاحتفاظ بها."
+    ],
+    "explanationAr": "يتولى قسم الرواتب تجميع معلومات الرواتب وتسجيلها، بينما يعتمد قسم شؤون الموظفين معاملات الموظفين مثل التعيين وإنهاء الخدمة وتغييرات معدلات الأجور والاستقطاعات وفق الصلاحيات. ويساعد الفصل بين التسجيل والاعتماد على منع الغش."
   },
   {
     "unit": 18,
@@ -433,7 +465,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Physical control of assets is a preventive control that reduces\nthe likelihood of theft or other loss. Keeping the vehicles at a\nsecure location and restricting access establishes\naccountability by the custodian and allows for proper\nauthorization of their use.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لدى شركة مرافق استثمارات كبيرة في مركبات الصيانة. أي ضابط داخلي يُرجح تطبيقه لتقليل خطر سرقة المركبات أو فقدانها؟",
+    "choicesAr": [
+      "مراجعة كفاية التغطية التأمينية.",
+      "حصر جميع أوامر أعمال الصيانة بطريقة منظمة.",
+      "الجرد الفعلي للمركبات ومطابقة نتائجه بالسجلات المحاسبية.",
+      "حفظ المركبات في موقع مؤمن وإخضاع تسليمها وإعادتها لاعتماد مسؤول العهدة."
+    ],
+    "explanationAr": "تمثل الحماية المادية للأصول ضابطًا وقائيًا يقلل احتمال السرقة أو الفقد. ويساعد حفظ المركبات في موقع مؤمن وتقييد الوصول إليها على تحديد مسؤولية العهدة وضبط التصريح باستخدامها وفق الصلاحيات المعتمدة."
   },
   {
     "unit": 18,
@@ -467,7 +507,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The risk of favoritism is increased when buyers have long-term\nrelationships with specific vendors. Periodic rotation of buyer\nassignments will limit the opportunity to show favoritism. This\nrisk is also reduced if buyers are required to take vacations.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لتقليل خطر استغلال موظفي المشتريات لمناصبهم لتحقيق مكاسب شخصية، ينبغي للمنشأة أن:",
+    "choicesAr": [
+      "تدوّر مهام ومسؤوليات موظفي المشتريات دوريًا.",
+      "تطلب من المراجعين الداخليين تأكيد مشتريات وذمم دائنة مختارة.",
+      "تشترط خضوع جميع المشتريات لمراجعات القيمة مقابل وحدة التكلفة.",
+      "توجه قسم المشتريات إلى حفظ سجلات الأسعار المدفوعة ومراجعتها كل 6 أشهر."
+    ],
+    "explanationAr": "يزداد خطر المحاباة عندما تنشأ علاقات طويلة بين موظفي الشراء وموردين محددين. ويحد التدوير الدوري للمهام من فرص المحاباة، كما يساعد إلزام موظفي الشراء بأخذ إجازاتهم على تقليل هذا الخطر. ولا يغني ذلك عن الإفصاح عن تعارض المصالح والمراجعة المستقلة."
   },
   {
     "unit": 18,
@@ -484,7 +532,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The most effective control over off-site inventory is the periodic\ncomparison of the recorded accountability with the actual\nphysical inventory.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "كيف يمكن للإدارة تعزيز الرقابة الداخلية على عهدة المخزون المحفوظ في مستودع خارج مقر المنشأة على أفضل وجه؟",
+    "choicesAr": [
+      "مطابقة مستندات التحويل من المستودع وإليه مع سجلات المخزون.",
+      "زيادة التغطية التأمينية.",
+      "المطابقة الدورية للجرد الفعلي للمخزون مع السجلات المحاسبية.",
+      "التأكيد الدوري للكميات الموجودة مع أمين عهدة المستودع."
+    ],
+    "explanationAr": "أفضل ضابط ضمن البدائل هو المقارنة الدورية بين الكميات المثبتة في السجلات والمخزون الموجود فعليًا، على أن تتم المطابقة باستقلال مناسب عن وظيفة الحيازة."
   },
   {
     "unit": 18,
@@ -518,7 +574,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Having an independent third party prepare the bank\nreconciliations would reveal any discrepancies between\nrecorded deposits and the bank statements. A bank\nreconciliation compares the bank statement with company\nrecords and resolves differences caused by deposits in transit,\noutstanding checks, NSF checks, bank charges, errors, etc.\nThe other answer choices are controls implemented before\ndeposits are prepared and recorded in the company’s books.\nThe problem here is the detection of the diversion of funds\nthat have been properly recorded upon receipt.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الضوابط الآتية يمكن استخدامه لاكتشاف الإيداعات البنكية المسجلة في الدفاتر التي لم تُنفذ فعليًا؟",
+    "choicesAr": [
+      "إثبات المسؤولية عن المقبوضات في أقرب وقت ممكن.",
+      "ربط المقبوضات بالسجلات الأخرى مثل ربط التحصيلات بالذمم المدينة أو المبيعات.",
+      "تجميع نقاط استلام النقد.",
+      "إسناد إعداد التسويات البنكية إلى طرف مستقل."
+    ],
+    "explanationAr": "يكشف إعداد التسويات البنكية بواسطة طرف مستقل الفروق بين الإيداعات المسجلة وكشوف البنك. وتقارن التسوية كشف البنك بسجلات المنشأة وتفسر الفروق الناتجة عن الإيداعات بالطريق والشيكات القائمة والشيكات المرتجعة لعدم كفاية الرصيد والرسوم البنكية والأخطاء وغيرها. أما البدائل الأخرى فتتعلق بضوابط تسبق إعداد الإيداعات وتسجيلها. والمطلوب هنا اكتشاف تحويل أموال سُجلت بصورة صحيحة عند استلامها دون إيداعها فعليًا."
   },
   {
     "unit": 18,
@@ -535,7 +599,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Segregation of duties and other control procedures serve to\nprevent or detect a fraud committed by an employee acting\nalone. One employee may not have the ability to engage in\nwrongdoing or may be subject to detection by other\nemployees in the course of performing their assigned duties.\nHowever, collusion may circumvent controls. For example,\ncomparison of recorded accountability with assets may fail to\ndetect fraud if persons having custody of assets collude with\nrecord keepers.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "من المرجح أن يكتشف نظام رقابة داخلية ملائم الغش الذي يرتكبه:",
+    "choicesAr": [
+      "مجموعة موظفين متواطئين.",
+      "موظف منفرد.",
+      "مجموعة مديرين متواطئين.",
+      "مدير منفرد."
+    ],
+    "explanationAr": "يساعد الفصل بين الواجبات وغيره من الضوابط على منع غش الموظف الذي يعمل منفردًا أو اكتشافه، إذ قد لا يتمكن من تجاوز جميع الضوابط أو قد يكتشفه زملاؤه أثناء أداء مهامهم. لكن التواطؤ قد يتجاوز هذه الضوابط؛ فقد تفشل مطابقة الأرصدة المسجلة بالأصول الفعلية في كشف الغش إذا تواطأ حائزو الأصول مع مسؤولي السجلات."
   },
   {
     "unit": 18,
@@ -552,7 +624,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Attendance data are accumulated by the timekeeping function.\nPreparing the payroll is a payroll department function. For\ncontrol purposes, these two functions should be separated to\navoid the perpetration and concealment of fraud.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "من أهداف مراجعة الرواتب التحقق من سلامة الفصل بين الواجبات. أي الأنشطة الآتية غير متوافقة رقابيًا؟",
+    "choicesAr": [
+      "تعيين الموظفين واعتماد تغييرات معدلات أجورهم.",
+      "إعداد الرواتب وتقديم نماذج ضرائب الرواتب.",
+      "توقيع شيكات الرواتب وتوزيعها.",
+      "إعداد بيانات الحضور وإعداد الرواتب."
+    ],
+    "explanationAr": "تجمع وظيفة تسجيل أوقات العمل بيانات الحضور، بينما يعد قسم الرواتب كشوف الرواتب. ولأغراض الرقابة ينبغي فصل الوظيفتين للحد من ارتكاب الغش وإخفائه."
   },
   {
     "unit": 18,
@@ -569,7 +649,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Since auditors, storekeepers, etc., may not have the requisite\nexpertise to determine whether materials are usable, that\ndecision must often be made by a designated independent\nauthority. To provide effective control of materials, this\ndetermination, asset custody, and authorization for disposal\nare functions that should be segregated.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتطلب الرقابة الملائمة على المواد المتقادمة أن:",
+    "choicesAr": [
+      "تبقى مثبتة بالتكلفة في السجلات المحاسبية حتى التصرف الفعلي فيها.",
+      "تفرز وتعالج وتعبأ قبل التصرف فيها لتحقيق أفضل سعر بيع.",
+      "تقرر جهة معتمدة عدم صلاحيتها للاستخدام المعتاد.",
+      "تبقى في منطقة التخزين المعتادة."
+    ],
+    "explanationAr": "قد لا يمتلك المراجعون أو أمناء المخازن الخبرة الفنية اللازمة للحكم على صلاحية المواد للاستخدام. ولذلك ينبغي عند الحاجة إسناد هذا التقييم إلى جهة مختصة مستقلة ومعتمدة. ويتطلب تعزيز الرقابة الفصل بين تقييم الصلاحية وحيازة الأصول واعتماد التصرف فيها. أما القياس المحاسبي للمواد المتقادمة فلا يتوقف بالضرورة على تاريخ التصرف فيها."
   },
   {
     "unit": 18,
@@ -586,7 +674,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The accounts receivable manager has the ability to perpetrate\nirregularities because (s)he performs incompatible functions.\nAuthorization and recording of transactions should be\nseparate. Thus, someone outside the accounts receivable\ndepartment should authorize write-offs.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لاحظ مراجع أن قسم الذمم المدينة مستقل عن الأنشطة المحاسبية الأخرى، وأن قسم ائتمان مستقل يعتمد الائتمان. وتتم مطابقة حسابات الرقابة مع الأستاذ المساعد شهريًا، كما يعد تحليل أعمار الذمم شهريًا. ويشطب مدير الذمم المدينة الحسابات المتأخرة بعد 1 سنة، أو قبل ذلك في حالة الإفلاس أو ظروف استثنائية أخرى. والإشعارات الدائنة مرقمة مسبقًا ويجب ربطها بتقارير الاستلام. أي المجالات الآتية يمثل نقطة ضعف رقابية محتملة؟",
+    "choicesAr": [
+      "شطب الحسابات المتأخرة.",
+      "اعتماد الائتمان.",
+      "تحليل أعمار الذمم المدينة شهريًا.",
+      "معالجة الإشعارات الدائنة."
+    ],
+    "explanationAr": "يجمع مدير الذمم المدينة بين وظائف غير متوافقة، مما يزيد فرص حدوث مخالفات. وينبغي فصل اعتماد المعاملات عن تسجيلها، وبالتالي ينبغي اعتماد شطب الذمم من مسؤول مستقل عن قسم الذمم المدينة وفق الصلاحيات المعتمدة."
   },
   {
     "unit": 18,
