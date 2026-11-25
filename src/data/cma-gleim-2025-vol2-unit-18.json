@@ -2095,7 +2095,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A hash total of employee numbers would detect such a\nsubstitution although the termination had not yet been\nrecorded. A hash total is an otherwise meaningless control\ntotal, such as the total of employee numbers or invoice\nnumbers, that is used to verify data. Thus, the hash total for\nthe employee listing by the personnel department could be\ncompared with the total generated during the payroll run.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في بيئة معالجة الرواتب الآلية، استبدل مدير قسم بطاقة وقت لموظف انتهت خدمته ببطاقة لموظف وهمي له معدل الأجر نفسه وساعات العمل نفسها. ما أفضل تقنية رقابية لاكتشاف هذا التصرف باستخدام أرقام تعريف الموظفين؟",
+    "choicesAr": [
+      "إجمالي الدفعة.",
+      "عدد السجلات.",
+      "إجمالي رقابي لأرقام التعريف (Hash Total).",
+      "فحص لاحق."
+    ],
+    "explanationAr": "قد يكشف جمع أرقام تعريف الموظفين هذا الاستبدال حتى لو لم يسجل انتهاء الخدمة بعد، بشرط اختلاف الرقمين ووجود كشف مرجعي مستقل. وإجمالي Hash Total هو مجموع رقابي لأرقام لا يكون لمجموعها معنى مالي، مثل أرقام الموظفين أو الفواتير. ويمكن مقارنة مجموع أرقام كشف الموارد البشرية بالمجموع الناتج عن معالجة الرواتب. ولا يضمن هذا الأسلوب اكتشاف جميع التغييرات المتعددة، ولا يقصد به دالة التجزئة التشفيرية."
   },
   {
     "unit": 18,
@@ -2112,7 +2120,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A control total is an application control that may consist of a\ncount of the number of records processed at different stages\nof the operation. Comparison of the counts indicates whether\nall records have been processed or some have been added. A\ncontrol total might also consist of a total of one information\nfield for all records processed, such as the total sales dollars\nfor a batch of sales invoices. A limit or reasonableness check\ntests whether the value of a field falls outside a prescribed\nrange. The range may be stated in terms of an upper limit,\nlower limit, or both. The loss, addition, etc., of data may result\nin an unreasonable value. A sequence test verifies the\nordering of records and may therefore detect various\nanomalies.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "من خطوات تقييم مخاطر الرقابة في نظام معلومات محوسب تحديد الضوابط اللازمة لمنع فقد البيانات أو إضافتها أو تكرارها أو تعديلها أثناء المعالجة. أي مما يلي يمثل مثالًا لهذه الضوابط؟",
+    "choicesAr": [
+      "اعتماد البيانات والموافقة عليها في أقسام المستخدمين وفحصها بواسطة مجموعات رقابة البيانات.",
+      "مراجعة مخرجات البيانات بواسطة مجموعات رقابة البيانات.",
+      "استخدام تسميات الملفات الخارجية والداخلية.",
+      "استخدام المجاميع الرقابية واختبارات الحدود والمعقولية والتسلسل."
+    ],
+    "explanationAr": "قد يتكون الإجمالي الرقابي، وهو ضابط تطبيقي، من عدد السجلات المعالجة في مراحل مختلفة. وتساعد مقارنة الأعداد على تحديد ما إذا كانت السجلات قد عولجت بالكامل أو أضيفت إليها سجلات. وقد يكون الإجمالي مجموع قيم حقل محدد، مثل قيمة مبيعات دفعة من الفواتير. ويفحص اختبار الحدود أو المعقولية ما إذا كانت قيمة الحقل تقع خارج نطاق محدد بحد أعلى أو أدنى أو كليهما. وقد يؤدي فقد البيانات أو إضافتها إلى قيمة غير معقولة. ويتحقق اختبار التسلسل من ترتيب السجلات وقد يكشف حالات غير طبيعية. وتختلف وظيفة الضابط الوقائية أو الكاشفة بحسب توقيت تطبيقه وكيفيته."
   },
   {
     "unit": 18,
@@ -2129,7 +2145,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Trojan horses and worms are threats to computerized\nsystems. Data theft is a threat to any system. Serendipity is\nessentially a nonsense answer in that the word means the\nfortunate discovery of something good.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي لا يمثل تهديدًا لنظم المعلومات؟",
+    "choicesAr": [
+      "برامج حصان طروادة.",
+      "الديدان الحاسوبية.",
+      "سرقة البيانات.",
+      "الاكتشاف السعيد بالمصادفة."
+    ],
+    "explanationAr": "تمثل برامج حصان طروادة والديدان تهديدات للنظم المحوسبة، كما تمثل سرقة البيانات تهديدًا لأي نظام. أما الاكتشاف السعيد بالمصادفة (Serendipity) فلا يشير في هذا السياق إلى تهديد أمني."
   },
   {
     "unit": 18,
@@ -2163,7 +2187,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A database management system’s software includes security\nfeatures. Thus, a specified user’s access may be limited to\ncertain data fields or logical views depending on the\nindividual’s assigned duties. A logical view consists of the\nfields available to a given user, function, or application. It may\ninclude all or part of a physical data file or a combination of\nfields from multiple physical data files.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "للرقابة السليمة على الوصول إلى ملفات قواعد البيانات المحاسبية، ينبغي لمسؤول قاعدة البيانات ضمان وجود خصائص تتيح:",
+    "choicesAr": [
+      "الوصول إلى ملفات قاعدة البيانات للقراءة فقط.",
+      "التحديث من خلال أدوات ذات امتيازات مرتفعة.",
+      "الوصول فقط إلى طرق العرض المنطقية المصرح بها.",
+      "تحديث المستخدمين لملفات تعريف صلاحياتهم."
+    ],
+    "explanationAr": "تتضمن نظم إدارة قواعد البيانات خصائص أمنية تتيح قصر وصول مستخدم معين على حقول أو طرق عرض منطقية محددة وفق واجباته. وتشمل طريقة العرض المنطقية الحقول المتاحة لمستخدم أو وظيفة أو تطبيق، وقد تتضمن جزءًا من ملف بيانات فعلي أو كله أو تجمع حقولًا من ملفات متعددة. وينبغي تطبيق مبدأ الحد الأدنى من الصلاحيات وإنفاذ القيود على مستوى قاعدة البيانات أو طبقة الوصول الموثوقة."
   },
   {
     "unit": 18,
@@ -2180,7 +2212,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Input controls provide assurance that data submitted for\nprocessing are authorized, complete, and accurate. A hash\ntotal is an example of a data input validation routine for batch\nprocessing. A hash total is a control total without a defined\nmeaning, such as the total of employee numbers or invoice\nnumbers, that is used to verify the completeness of data.\nThus, the hash total for the employee listing by the personnel\ndepartment could be compared with the total generated during\nthe processing run.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يدخل ضمن إجراءات التحقق من صحة مدخلات البيانات في معالجة الدفعات؟",
+    "choicesAr": [
+      "سجلات الأجهزة الطرفية.",
+      "كلمات المرور.",
+      "المجاميع الرقابية لأرقام التعريف (Hash Totals).",
+      "ضوابط النسخ الاحتياطي."
+    ],
+    "explanationAr": "تساعد ضوابط المدخلات على توفير تأكيد معقول بأن البيانات المقدمة للمعالجة معتمدة وكاملة ودقيقة. ومن أمثلتها المجموع الرقابي لأرقام التعريف، وهو مجموع لا يحمل معنى ماليًا في ذاته، مثل مجموع أرقام الموظفين أو الفواتير، ويستخدم للتحقق من اكتمال البيانات. ويمكن مقارنة مجموع أرقام كشف الموارد البشرية بمجموع الأرقام الناتج عن تشغيل المعالجة. ولا يثبت تطابق المجموع وحده خلو البيانات من جميع الأخطاء."
   },
   {
     "unit": 18,
@@ -2197,7 +2237,15 @@
     ],
     "answerIndex": 1,
     "explanation": "A completeness test checks that all data elements are entered\nbefore processing. An interactive system can be programmed\nto notify the user to enter the number before accepting the\nreceiving report.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أدخل موظف قسم الاستلام بيانات شحنة من جهاز طرفي بعيد، لكنه أغفل عن غير قصد رقم أمر الشراء. ما أفضل ضابط آلي لاكتشاف هذا الخطأ؟",
+    "choicesAr": [
+      "إجمالي الدفعة.",
+      "اختبار الاكتمال.",
+      "اختبار التسلسل.",
+      "اختبار المعقولية."
+    ],
+    "explanationAr": "يتحقق اختبار الاكتمال من إدخال جميع عناصر البيانات المطلوبة قبل المعالجة. ويمكن برمجة النظام التفاعلي لإشعار المستخدم بضرورة إدخال رقم أمر الشراء قبل قبول تقرير الاستلام."
   },
   {
     "unit": 18,
@@ -2214,7 +2262,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Input controls provide reasonable assurance that processing\nhas been performed as intended for the particular application.\nA hash total is an input control. A hash total is a control total\nwithout a defined meaning, such as the total of employee\nnumbers or invoice numbers, that is used to verify the\ncompleteness of data.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي مثال لضابط مدخلات في تطبيق يعمل بمعالجة الدفعات؟",
+    "choicesAr": [
+      "مجاميع الرقابة بين عمليات التشغيل المتتابعة.",
+      "قوائم الأخطاء.",
+      "إجراءات الكتابة المزدوجة.",
+      "المجاميع الرقابية لأرقام التعريف (Hash Totals)."
+    ],
+    "explanationAr": "توفر ضوابط المدخلات تأكيدًا معقولًا بشأن سلامة البيانات الداخلة للمعالجة وفق متطلبات التطبيق. ومن أمثلتها المجموع الرقابي لأرقام التعريف، مثل مجموع أرقام الموظفين أو الفواتير، وهو مجموع لا يحمل معنى ماليًا ويستخدم للتحقق من اكتمال البيانات. ولا يكفي وحده لإثبات صحتها الكاملة."
   },
   {
     "unit": 18,
@@ -2231,7 +2287,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A functional separation of EDP activities is necessary. A\nprogrammer designs program flowcharts and writes the\ncomputer programs as required by the system. Once the\nprogram has been debugged and the documentation\nprepared, the programmer should have no further access to it\nor to data files. A librarian is responsible for permitting only\ncomputer operators, not programmers, to have access to\nprograms.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الحالات الآتية تمثل ضعفًا في الرقابة الداخلية لنظام محوسب؟",
+    "choicesAr": [
+      "تخضع جميع تغييرات البرامج التطبيقية لاعتماد الإدارة وموافقتها.",
+      "توجد ضوابط لضمان دقة معالجة الملفات والتقارير وسلامتها.",
+      "توجد ضوابط لحماية ملفات البيانات من الوصول أو التعديل أو الإتلاف غير المصرح به.",
+      "يملك المبرمجون صلاحية تغيير البرامج وملفات البيانات عند اكتشاف خطأ."
+    ],
+    "explanationAr": "يتطلب الضبط السليم فصل وظائف معالجة البيانات الإلكترونية. يصمم المبرمج البرامج ويكتبها ويختبرها ويوثقها. وبعد اعتمادها ينبغي فصل أعمال التطوير عن تشغيل بيئة الإنتاج وحيازة بياناتها، وألا يحصل المطور على صلاحيات تعديل غير خاضعة للرقابة. وفي النموذج التقليدي يتولى أمين مكتبة البرامج إتاحة البرامج لمشغلي الحاسوب وفق الصلاحيات. ويمكن في النظم الحديثة تنفيذ هذا الهدف بموافقات مستقلة، وصلاحيات مؤقتة ومقيدة عند الضرورة، وسجلات تدقيق لعمليات النشر والتغيير."
   },
   {
     "unit": 18,
@@ -2265,7 +2329,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A comprehensive computer security plan should be developed\nto safeguard physical facilities and hardware and provide for\nthe privacy and integrity of data. Such a plan assists\nmanagement in ensuring that benefits exceed costs.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يمثل أفضل سبب لإعداد خطة لأمن الحاسوب؟",
+    "choicesAr": [
+      "تحديد جميع التهديدات المحتملة المرتبطة بمعدات معالجة البيانات.",
+      "ضمان التعافي من الضرر المرتبط بأي تهديد محدد.",
+      "اختيار مجموعة سياسات وإجراءات رقابية تحقق أفضل توازن بين أمن الحاسوب والتكلفة.",
+      "ضمان أقسام المستخدمين وجود السياسات الرقابية وأمان ملفات بياناتهم."
+    ],
+    "explanationAr": "ينبغي إعداد خطة شاملة لأمن الحاسوب لحماية المنشآت المادية والأجهزة والمحافظة على خصوصية البيانات وسلامتها. وتساعد الخطة الإدارة على موازنة منافع الضوابط وتكاليفها وفق المخاطر، مع مراعاة الالتزامات النظامية والحدود المقبولة للمخاطر، دون ضمان اكتشاف جميع التهديدات أو التعافي من كل ضرر."
   },
   {
     "unit": 18,
@@ -2282,7 +2354,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Arithmetic proof checks (recalculations) are performed by edit\nroutines before data are processed. A simple example is\ncomparing total debits and total credits or the vendor number\nwith the number for an accounts payable payment.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي مثال لفحص التحقق الداخلي من صحة البيانات؟",
+    "choicesAr": [
+      "التأكد من توزيع المخرجات على الأشخاص المناسبين.",
+      "متابعة عمل المبرمجين.",
+      "جمع إحصاءات دقيقة للمعاملات التاريخية أثناء جمع البيانات.",
+      "إعادة حساب مبلغ للتأكد من دقته."
+    ],
+    "explanationAr": "تجري إجراءات التحقق الحسابي إعادة الحساب قبل معالجة البيانات أو اعتمادها. ومن الأمثلة مقارنة مجموع المدين بمجموع الدائن. أما مطابقة رقم المورد برقم المورد المرتبط بمدفوعات الذمم الدائنة فهي مثال للتحقق المرجعي من البيانات، وليست إعادة حساب مبلغ."
   },
   {
     "unit": 18,
@@ -2299,7 +2379,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A check digit, or self-checking number, is an input control to\ndetermine if an error might have been made on an\nidentification number. The digit is an extra number on the end\nof the identification number (creating a new ID number) that is\ncalculated by an algorithm on the original part of the ID\nnumber. If the ID is miskeyed, the algorithm will produce a\nnumber different from the check digit and an error will be\ndetected and reported.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الضوابط الآتية مصمم لاكتشاف الأخطاء عند نقطة إدخال البيانات؟",
+    "choicesAr": [
+      "إجمالي الدفعة.",
+      "عدد السجلات.",
+      "رقم التحقق الذاتي.",
+      "نقاط الاستعادة."
+    ],
+    "explanationAr": "رقم التحقق (Check Digit) ضابط إدخال يساعد على اكتشاف أخطاء كتابة أرقام التعريف. وهو رقم إضافي يحسب بخوارزمية استنادًا إلى الجزء الأصلي من رقم التعريف. وعند الإدخال يعاد حساب الرقم ومقارنته برقم التحقق المقدم؛ فإذا اختلفا يكتشف النظام الخطأ ويبلغ عنه. ولا تكتشف جميع خوارزميات التحقق كل أنواع الأخطاء، ولا يثبت تطابق الرقم أن المعاملة معتمدة."
   },
   {
     "unit": 18,
@@ -2316,7 +2404,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Complete, up-to-date documentation of all programs and\nassociated operating procedures is necessary for efficient\noperation of a computer installation. Maintenance of programs\nis important to provide for continuity and consistency of data\nprocessing services to users. Program documentation (the\nprogram run manual) consists of problem statements, systems\nflowcharts, operating instructions, record lay-outs, program\nflowcharts, program listings, test data, and approval and\nchange sheets.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "توثيق البرامج ضابط يهدف أساسًا إلى ضمان أن:",
+    "choicesAr": [
+      "يتمكن المبرمجون من الوصول إلى مكتبة الأشرطة أو المعلومات في ملفات الأقراص.",
+      "لا ترتكب البرامج أخطاء حسابية.",
+      "تظل البرامج محدثة وتؤدي الوظائف المقصودة منها.",
+      "تكون البيانات قد أُدخلت وعولجت."
+    ],
+    "explanationAr": "يساعد التوثيق الكامل والمحدث للبرامج وإجراءات التشغيل المرتبطة بها على كفاءة تشغيل النظام وصيانته واستمرارية خدمات معالجة البيانات واتساقها. وقد يشمل دليل تشغيل البرنامج وصف المشكلة وخرائط تدفق النظام وتعليمات التشغيل وهياكل السجلات وخرائط تدفق البرامج وقوائم الشيفرة وبيانات الاختبار وسجلات الموافقات والتغييرات. ويدعم التوثيق صحة التشغيل والصيانة، لكنه لا يضمن وحده خلو البرامج من الأخطاء."
   },
   {
     "unit": 18,
