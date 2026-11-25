@@ -1486,7 +1486,15 @@
     ],
     "answerIndex": 3,
     "explanation": "An amortization schedule for the first 2 years of Evangel’s\nbonds can be prepared as follows:\nBeginn              Equal            Equals     Endin\ning     Times        s:   Min          :        g\nCarryi      :      Intere   us:     Discou     Carryi\nng      Effecti      st   Cas         nt       ng\nYe     Amoun       ve       Expe     h      Amorti     Amou\nar         t      Rate       nse   Paid       zed        nt\n1     $96,207    10%      $9,621 $9,000     $621     $96,828\n2      96,828    10%        9,683 9,000       683     97,511",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 يناير أصدرت Evangel سندات بفائدة 9% وقيمة اسمية $100,000 تستحق بعد 5 سنوات. صدرت مقابل $96,207 بعائد 10%، مما نتج عنه خصم إصدار $3,793. وتستخدم الشركة طريقة الفائدة الفعلية لإطفاء الخصم. وتدفع الفائدة سنويًا في 31 ديسمبر.\nما مصروف الفائدة الذي يعرض في قائمة دخل السنة الثانية؟",
+    "choicesAr": [
+      "$8,779",
+      "$9,000",
+      "$9,559",
+      "$9,683"
+    ],
+    "explanationAr": "يمكن إعداد جدول إطفاء خصم السندات لأول 2 سنة كما يلي:\nالسنة | القيمة الدفترية أول المدة | معدل الفائدة الفعلي | مصروف الفائدة | النقد المدفوع | الخصم المطفأ | القيمة الدفترية آخر المدة\n1 | $96,207 | 10% | $9,621 | $9,000 | $621 | $96,828\n2 | 96,828 | 10% | 9,683 | 9,000 | 683 | 97,511."
   },
   {
     "unit": 4,
@@ -1503,7 +1511,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Total interest expense for the year equals the carrying amount\nof the bonds times the effective rate (yield), or $9,621\n($96,207 × 10%). Subtracting the cash interest payment from\nthis leaves the amount of discount amortized, or $621 ($9,621\n– $9,000). Subtracting this amount from the previous\nunamortized discount ($3,793) leaves a remaining\nunamortized discount at the end of Year 1 of $3,172.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 يناير أصدرت Evangel سندات بفائدة 9% وقيمة اسمية $100,000 تستحق بعد 5 سنوات. صدرت مقابل $96,207 بعائد 10%، مما نتج عنه خصم إصدار $3,793. وتستخدم الشركة طريقة الفائدة الفعلية لإطفاء الخصم. وتدفع الفائدة سنويًا في 31 ديسمبر.\nما خصم السندات غير المطفأ في نهاية السنة الأولى؟",
+    "choicesAr": [
+      "$621",
+      "$2,452",
+      "$3,172",
+      "$3,793"
+    ],
+    "explanationAr": "يساوي مصروف الفائدة القيمة الدفترية مضروبة في معدل العائد الفعلي، أي $9,621 ($96,207 × 10%). وبطرح الفائدة النقدية يكون الخصم المطفأ $621 ($9,621 − $9,000). وبطرحه من الخصم غير المطفأ السابق ($3,793)، يتبقى في نهاية السنة 1 مبلغ $3,172."
   },
   {
     "unit": 4,
@@ -1520,7 +1536,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Total interest expense for the year equals the carrying amount\nof the bonds times the effective rate (yield), or $9,621\n($96,207 × 10%). Subtracting the cash interest payment from\nthis leaves the amount of discount amortized ($9,621 – $9,000\n= $621). Subtracting this amount from the previous\nunamortized discount ($3,793) leaves a remaining\nunamortized discount at the end of Year 1 of $3,172.\nSubtracting this amount from the face amount of the bonds\n($100,000) provides a carrying amount of $96,828.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 يناير أصدرت Evangel سندات بفائدة 9% وقيمة اسمية $100,000 تستحق بعد 5 سنوات. صدرت مقابل $96,207 بعائد 10%، مما نتج عنه خصم إصدار $3,793. وتستخدم الشركة طريقة الفائدة الفعلية لإطفاء الخصم. وتدفع الفائدة سنويًا في 31 ديسمبر.\nما صافي القيمة الدفترية للسندات المستحقة في نهاية السنة الأولى؟",
+    "choicesAr": [
+      "$94,866",
+      "$95,586",
+      "$96,828",
+      "$97,548"
+    ],
+    "explanationAr": "يساوي مصروف الفائدة القيمة الدفترية مضروبة في العائد الفعلي، أي $9,621 ($96,207 × 10%). وبطرح الفائدة النقدية ينتج الخصم المطفأ ($9,621 − $9,000 = $621). وبطرحه من الخصم السابق ($3,793) يتبقى في نهاية السنة 1 مبلغ $3,172. وبطرح هذا المبلغ من القيمة الاسمية ($100,000) نحصل على قيمة دفترية قدرها $96,828."
   },
   {
     "unit": 4,
@@ -1537,7 +1561,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Total interest expense for the year equals the carrying amount\nof the bonds times the effective rate (yield), or $9,621\n($96,207 × 10%).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 يناير أصدرت Evangel سندات بفائدة 9% وقيمة اسمية $100,000 تستحق بعد 5 سنوات. صدرت مقابل $96,207 بعائد 10%، مما نتج عنه خصم إصدار $3,793. وتستخدم الشركة طريقة الفائدة الفعلية لإطفاء الخصم. وتدفع الفائدة سنويًا في 31 ديسمبر.\nما مصروف الفائدة في قائمة الدخل في نهاية السنة الأولى؟",
+    "choicesAr": [
+      "$8,659",
+      "$9,000",
+      "$9,621",
+      "$10,000"
+    ],
+    "explanationAr": "يساوي مصروف الفائدة للسنة القيمة الدفترية للسندات مضروبة في العائد الفعلي، أي $9,621 ($96,207 × 10%) بعد التقريب."
   },
   {
     "unit": 4,
@@ -1554,7 +1586,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A premium on bonds payable arises when the amount\nreceived from sale of the bonds at issuance exceeds the face\nvalue of the bonds. This situation occurs if, at the time the\nbonds are sold, their stated rate is greater than the current\nmarket rate.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "متى تنشأ علاوة إصدار السندات المستحقة؟",
+    "choicesAr": [
+      "عند حلول موعد الفائدة نصف السنوية.",
+      "عندما يقل معدل السوق بعد الإصدار عن المعدل الاسمي للسندات.",
+      "عندما تتجاوز متحصلات بيع السندات عند الإصدار قيمتها الاسمية.",
+      "عند رسملة تكلفة إصدار السندات."
+    ],
+    "explanationAr": "تنشأ علاوة الإصدار عندما تتجاوز متحصلات بيع السندات عند الإصدار قيمتها الاسمية، ويحدث ذلك عادة عندما يزيد معدل الفائدة الاسمي عند البيع على معدل السوق السائد، مع ثبات العوامل الأخرى."
   },
   {
     "unit": 4,
@@ -1605,7 +1645,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The annual cash payment is the face amount of the bonds\ntimes the stated rate ($100,000 × 9% = $9,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 يناير أصدرت Evangel سندات بفائدة 9% وقيمة اسمية $100,000 تستحق بعد 5 سنوات. صدرت مقابل $96,207 بعائد 10%، مما نتج عنه خصم إصدار $3,793. وتستخدم الشركة طريقة الفائدة الفعلية لإطفاء الخصم. وتدفع الفائدة سنويًا في 31 ديسمبر.\nما مبلغ الفائدة التي ستدفعها Evangel في نهاية السنة الأولى؟",
+    "choicesAr": [
+      "$8,659",
+      "$9,000",
+      "$9,621",
+      "$10,000"
+    ],
+    "explanationAr": "تساوي الدفعة النقدية السنوية القيمة الاسمية مضروبة في معدل الفائدة الاسمي ($100,000 × 9% = $9,000)."
   },
   {
     "unit": 4,
@@ -1639,7 +1687,15 @@
     ],
     "answerIndex": 1,
     "explanation": "A bond issued “at 97” is issued at a price equal to 97% of its\nface amount (400 bonds × $1,000 face amount × .97 =\n$388,000). At the issue date, no time has passed, so no\namortization has occurred, and the accrued interest is credited\nto either interest payable or interest expense. The reported\namount is therefore $388,000 ($400,000 – $12,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 يناير من السنة 2 أصدرت Oak عدد 400 سند بمعدل 8% وقيمة اسمية $1,000 للسند بسعر 97 بالإضافة إلى الفائدة المستحقة. والسندات مؤرخة في 1 أكتوبر من السنة 1 وتستحق في 1 أكتوبر من السنة 11. وتدفع الفائدة نصف سنويًا في 1 أبريل و1 أكتوبر. بلغت الفائدة المستحقة من 1 أكتوبر السنة 1 إلى 1 يناير السنة 2 مبلغ $8,000. ما صافي السندات المستحقة بعد الخصم في 1 يناير من السنة 2؟",
+    "choicesAr": [
+      "$380,300",
+      "$388,000",
+      "$388,300",
+      "$392,000"
+    ],
+    "explanationAr": "الإصدار بسعر 97 يعني إصدار السندات بنسبة 97% من قيمتها الاسمية (400 سند × $1,000 × .97 = $388,000). وفي تاريخ الإصدار لم تنقض فترة لإطفاء الخصم، وتسجل الفائدة المحصلة عن الفترة السابقة منفصلة عن أصل الالتزام. لذا يبلغ المبلغ المعروض $388,000 ($400,000 − $12,000)."
   },
   {
     "unit": 4,
@@ -1656,7 +1712,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Interest payable does not vary with the issue price of bonds. It\nequals their face amount times the stated (contractual) rate at\nthe beginning of the period.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عند استخدام طريقة الفائدة الفعلية لإطفاء علاوة إصدار السندات، كيف تحسب الفائدة التعاقدية المستحقة عن فترة الفائدة؟",
+    "choicesAr": [
+      "القيمة الاسمية للسندات أول الفترة × معدل الفائدة التعاقدي للفترة.",
+      "القيمة الاسمية أول الفترة × معدل الفائدة الفعلي.",
+      "القيمة الدفترية أول الفترة × معدل الفائدة التعاقدي.",
+      "القيمة الدفترية أول الفترة × معدل الفائدة الفعلي."
+    ],
+    "explanationAr": "لا تتغير الفائدة التعاقدية المستحقة بتغير سعر إصدار السندات. فهي تساوي قيمتها الاسمية مضروبة في معدل الفائدة الاسمي التعاقدي للفترة."
   },
   {
     "unit": 4,
@@ -1673,7 +1737,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Bond discount must appear as a direct deduction from the\nface amount of the bond payable to report the effective liability\nfor the bonds. Thus, the bond liability is shown net of\nunamortized discount.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "كيف يعرض خصم إصدار السندات غير المطفأ في قائمة المركز المالي للمصدر؟",
+    "choicesAr": [
+      "خصم مباشر من القيمة الاسمية للدين.",
+      "خصم مباشر من القيمة الحالية للدين.",
+      "تكلفة مؤجلة مستقلة.",
+      "جزء من تكاليف الإصدار."
+    ],
+    "explanationAr": "يطرح خصم إصدار السندات مباشرة من قيمتها الاسمية لعرض القيمة الدفترية للالتزام. ولذلك يعرض الالتزام بعد خصم الجزء غير المطفأ."
   },
   {
     "unit": 4,
@@ -1690,7 +1762,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The carrying amount of a bond payable is equal to its maturity\n(face) amount plus any unamortized premium or minus any\nunamortized discount. Amortization results in a reduction of\nthe discount or premium. Consequently, the carrying amount\nof a bond is increased when discount is amortized and\ndecreased when premium is amortized.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "كيف تتأثر القيمة الدفترية للسندات المستحقة بإطفاء كل مما يلي؟\nخصم الإصدار | علاوة الإصدار",
+    "choicesAr": [
+      "زيادة | زيادة",
+      "انخفاض | انخفاض",
+      "زيادة | انخفاض",
+      "انخفاض | زيادة"
+    ],
+    "explanationAr": "تساوي القيمة الدفترية للسندات قيمتها الاسمية عند الاستحقاق مضافًا إليها العلاوة غير المطفأة أو مطروحًا منها الخصم غير المطفأ. ويخفض الإطفاء رصيد الخصم أو العلاوة. لذلك تزيد القيمة الدفترية عند إطفاء الخصم وتنخفض عند إطفاء العلاوة."
   },
   {
     "unit": 4,
@@ -1707,7 +1787,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Under the effective interest method, interest expense for the 6\nmonths since the bond was issued is equal to the carrying\namount of the bond multiplied by the effective interest rate for\nhalf a year. Thus, interest expense is $10,328 [$206,576 ×\n10% × (6 months ÷ 12 months)].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 يوليو تلقت Dover مبلغ $206,576 مقابل سندات قيمتها الاسمية $200,000 وفائدتها 12%، بعائد 10%. ما مصروف الفائدة عن 6 أشهر منتهية في 31 ديسمبر؟",
+    "choicesAr": [
+      "$12,394",
+      "$12,000",
+      "$10,328",
+      "$10,000"
+    ],
+    "explanationAr": "وفق طريقة الفائدة الفعلية، يساوي مصروف الفائدة عن 6 أشهر من الإصدار القيمة الدفترية مضروبة في معدل الفائدة الفعلي لنصف سنة وفق اصطلاح العائد في المسألة. لذا يبلغ المصروف $10,328 [$206,576 × 10% × (6 أشهر ÷ 12 شهرًا)] بعد التقريب."
   },
   {
     "unit": 4,
@@ -1724,7 +1812,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The face amount of the bonds is $1,000,000 (1,000 × $1,000),\nand the unamortized premium is $14,000 (given). The carrying\namount is thus $1,014,000. The other data are irrelevant.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 يناير من السنة 1 أصدرت Gilson عدد 1,000 سند قابل للاستدعاء بفائدة 9% وقيمة اسمية $1,000 مقابل $1,030,000. والسندات مؤرخة في 1 يناير من السنة 1 وتستحق في 31 ديسمبر من السنة 15. وتدفع الفائدة نصف سنويًا في 1 يناير و1 يوليو. ويمكن للمصدر استدعاؤها بسعر 102 في أي تاريخ دفع فائدة بعد 31 ديسمبر من السنة 5. وبلغت العلاوة غير المطفأة $14,000 في 31 ديسمبر من السنة 8، وسعر السوق 99 في ذلك التاريخ. ما القيمة الدفترية للسندات في قائمة المركز المالي في 31 ديسمبر من السنة 8؟",
+    "choicesAr": [
+      "$1,020,000",
+      "$1,016,000",
+      "$1,014,000",
+      "$990,000"
+    ],
+    "explanationAr": "تبلغ القيمة الاسمية $1,000,000 (1,000 × $1,000)، والعلاوة غير المطفأة $14,000 كما ورد في السؤال. لذا تبلغ القيمة الدفترية $1,014,000 وفق نموذج التكلفة المطفأة، بافتراض عدم حدوث استدعاء أو وجود تكاليف إصدار أخرى."
   },
   {
     "unit": 4,
@@ -1741,7 +1837,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Interest expense for the 6 months since the bonds were\nissued is $21,900 [$438,000 carrying amount × 10% effective\nrate × (6 ÷ 12)]. The periodic cash payment is $20,000\n[$500,000 face amount × 8% stated rate × (6 ÷ 12)]. The\n$1,900 ($21,900 – $20,000) difference is the amount of\ndiscount to be amortized for this 6-month interest period.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 يوليو من السنة 3 حصلت Lundy على $438,000 مقابل إصدار 500 سند بفائدة 8% وقيمة اسمية $1,000 للسند، بعائد 10%. والسندات مؤرخة في 1 يوليو من السنة 3 وتستحق في 1 يوليو من السنة 13. وتدفع الفائدة نصف سنويًا في 1 يناير و1 يوليو. باستخدام الفائدة الفعلية، ما خصم الإصدار المطفأ خلال 6 أشهر منتهية في 31 ديسمبر من السنة 3؟",
+    "choicesAr": [
+      "$3,800",
+      "$3,100",
+      "$2,480",
+      "$1,900"
+    ],
+    "explanationAr": "يبلغ مصروف الفائدة خلال 6 أشهر من الإصدار $21,900 [$438,000 القيمة الدفترية × 10% المعدل الفعلي × (6 ÷ 12)]. وتبلغ الدفعة النقدية $20,000 [$500,000 القيمة الاسمية × 8% المعدل الاسمي × (6 ÷ 12)]. والفرق $1,900 ($21,900 − $20,000) هو الخصم المطفأ خلال فترة الفائدة البالغة 6 أشهر، وفق اصطلاح العائد في المسألة."
   },
   {
     "unit": 4,
@@ -1758,7 +1862,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Under the effective interest method, interest expense is equal\nto the carrying amount of the bonds at the beginning of the\ninterest period times the effective interest rate. The carrying\namount of the bonds at December 1, Year 1 (the issuance\ndate), was $5,194,770. The annual yield rate was 16%.\nInterest expense is therefore equal to $415,582 [$5,194,770 ×\n16% × (6 months ÷ 12 months)] for the first 6 months of the\nyear. For the same period, interest paid was $360,000\n[$6,000,000 × 12% × (6 months ÷ 12 months)]. Hence, the\nsemiannual discount amortization was $55,582 ($415,582\ninterest expense – $360,000 interest paid), and the carrying\namount of the bonds for the second 6-month period was\n$5,250,352 ($5,194,770 + $55,582). For this period, the\nsemiannual interest expense was $420,028 [$5,250,352 ×\n16% × (6 months ÷ 12 months)]. Total interest expense for the\nyear is equal to $835,610 ($415,582 + $420,028).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أصدرت Clare سندات بقيمة $6 ملايين أمريكية وفائدة 12% في 1 ديسمبر من السنة 1، تستحق في 1 ديسمبر من السنة 6، وتدفع الفائدة في 1 ديسمبر و1 يونيو. وبيعت السندات مقابل $5,194,770 أمريكي بعائد 16%. إذا أطفئ الخصم بالفائدة الفعلية، فما مصروف الفائدة للسنة المالية المنتهية في 30 نوفمبر من السنة 2 بشأن إصدار السندات البالغ $6 ملايين؟",
+    "choicesAr": [
+      "$623,372",
+      "$720,000",
+      "$831,163",
+      "$835,610"
+    ],
+    "explanationAr": "وفق الفائدة الفعلية يساوي مصروف الفائدة القيمة الدفترية أول فترة الفائدة مضروبة في معدل الفائدة الفعلي للفترة. وبلغت القيمة الدفترية في 1 ديسمبر من السنة 1 (تاريخ الإصدار) $5,194,770. والعائد السنوي وفق اصطلاح المسألة 16%. لذا يبلغ مصروف الفائدة $415,582 [$5,194,770 × 16% × (6 أشهر ÷ 12 شهرًا)] لأول 6 أشهر. وفي الفترة نفسها بلغت الفائدة المدفوعة $360,000 [$6,000,000 × 12% × (6 أشهر ÷ 12 شهرًا)]. لذا بلغ إطفاء الخصم نصف السنوي $55,582 ($415,582 مصروف − $360,000 مدفوع)، والقيمة الدفترية لفترة 6 أشهر الثانية $5,250,352 ($5,194,770 + $55,582). وبلغ مصروف الفائدة لهذه الفترة $420,028 [$5,250,352 × 16% × (6 أشهر ÷ 12 شهرًا)]. ومن ثم يبلغ إجمالي المصروف السنوي $835,610 ($415,582 + $420,028)."
   },
   {
     "unit": 4,
@@ -1775,7 +1887,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Accrued interest expense is $23,475 [$469,500 carrying\namount × 10% effective rate × (6 ÷ 12)]. Accrued interest\npayable is $22,500 [$500,000 face amount × 9% stated rate ×\n(6 ÷ 12)]. The difference of $975 is the amount of discount\namortization for the period. The amount that should be\nreported as bonds payable equals $470,475 ($469,500\ncarrying amount at January 2 + $975 current-period discount\namortized).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 2 يناير من السنة 1 أصدرت West سندات بفائدة 9% وقيمة $500,000 تستحق في 2 يناير من السنة 11. وصدرت مقابل $469,500 بعائد 10%. وتدفع الفائدة سنويًا في 31 ديسمبر. وتستخدم الشركة طريقة الفائدة الفعلية لإطفاء الخصم. ما مبلغ السندات المستحقة في قائمة المركز المالي في 30 يونيو من السنة 1؟",
+    "choicesAr": [
+      "$469,500",
+      "$470,475",
+      "$471,025",
+      "$500,000"
+    ],
+    "explanationAr": "مصروف الفائدة المستحق $23,475 [$469,500 القيمة الدفترية × 10% المعدل الفعلي × (6 ÷ 12)]. والفائدة المستحقة الدفع $22,500 [$500,000 القيمة الاسمية × 9% المعدل الاسمي × (6 ÷ 12)]. والفرق $975 يمثل إطفاء الخصم للفترة. لذا تبلغ السندات المستحقة $470,475 ($469,500 القيمة الدفترية في 2 يناير + $975 الخصم المطفأ)، وفق تقريب نصف السنة."
   },
   {
     "unit": 4,
@@ -1792,7 +1912,15 @@
     ],
     "answerIndex": 3,
     "explanation": "For the first year, interest expense is $93,900 ($939,000\ncarrying amount × 10% yield rate). The periodic interest\npayment is $90,000 ($1,000,000 face amount × 9% coupon\nrate). The $3,900 ($93,900 – $90,000) difference is the\namount of bond discount amortized. Thus, the $61,000\nunamortized bond discount at the beginning of the year should\nbe reduced by $3,900 to a year-end balance of $57,100.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 يناير من السنة 4 أصدرت Celt سندات بفائدة 9% وقيمة اسمية $1 مليون تستحق في 1 يناير من السنة 14. صدرت مقابل $939,000 بعائد 10%، وبلغ خصم الإصدار $61,000. وتستخدم الشركة طريقة الفائدة الفعلية وتدفع الفائدة سنويًا في 31 ديسمبر. ما الخصم غير المطفأ في 31 ديسمبر من السنة 4؟",
+    "choicesAr": [
+      "$51,000",
+      "$51,610",
+      "$52,000",
+      "$57,100"
+    ],
+    "explanationAr": "يبلغ مصروف الفائدة للسنة الأولى $93,900 ($939,000 القيمة الدفترية × 10% العائد). وتبلغ دفعة الفائدة $90,000 ($1,000,000 القيمة الاسمية × 9% معدل الكوبون). والفرق $3,900 ($93,900 − $90,000) هو الخصم المطفأ. لذا يخفض الخصم غير المطفأ أول السنة $61,000 بمبلغ $3,900 إلى رصيد آخر السنة $57,100."
   },
   {
     "unit": 4,
@@ -1809,7 +1937,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Under the effective interest method, interest expense is the\ncarrying amount of the bonds at the beginning of the interest\nperiod times the market (yield) rate of interest. Assuming\ninterest is paid annually on June 30, interest expense for the\nyear ended June 30, Year 4, is $6,300 ($105,000 carrying\namount × 6% effective rate), and the periodic interest payment\nis $7,000 ($100,000 face amount × 7% stated rate). The\ndifference ($7,000 – $6,300 = $700) is the amount of premium\namortized. The remaining unamortized premium is therefore\n$4,300 ($5,000 – $700).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لدى Webb سند قائم بفائدة 7% وأجل 10 سنوات وقيمة اسمية $100,000. وبيع أصلًا بعائد سنوي 6%. وتستخدم طريقة الفائدة الفعلية لإطفاء العلاوة. بلغت القيمة الدفترية في 30 يونيو من السنة 3 مبلغ $105,000. ما العلاوة غير المطفأة في قائمة المركز المالي في 30 يونيو من السنة 4؟",
+    "choicesAr": [
+      "$1,050",
+      "$3,950",
+      "$4,300",
+      "$4,500"
+    ],
+    "explanationAr": "وفق الفائدة الفعلية يساوي مصروف الفائدة القيمة الدفترية أول الفترة مضروبة في معدل العائد. وبافتراض دفع الفائدة سنويًا في 30 يونيو، يبلغ مصروف السنة المنتهية في 30 يونيو من السنة 4 مبلغ $6,300 ($105,000 القيمة الدفترية × 6% العائد الفعلي)، وتبلغ دفعة الفائدة $7,000 ($100,000 القيمة الاسمية × 7% المعدل الاسمي). والفرق ($7,000 − $6,300 = $700) هو العلاوة المطفأة. لذا تتبقى علاوة غير مطفأة $4,300 ($5,000 − $700)."
   },
   {
     "unit": 4,
@@ -1826,7 +1962,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Debt is sold at a discount when it sells for less than its face\namount, that is, when the contract (stated) interest rate is less\nthan the market (effective) interest rate. Under the effective\ninterest method required by GAAP, the difference between\ninterest expense and interest paid is the discount amortization.\nWhen debt is issued at a discount, interest expense exceeds\ninterest (cash) paid. The entry is to debit interest expense,\ncredit discount, and credit cash. Consequently, interest\nexpense equals the sum of the periodic interest payments and\nthe discount.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عند إصدار دين بخصم، فإن إجمالي مصروف الفائدة على مدة الدين يساوي الفائدة النقدية المدفوعة:",
+    "choicesAr": [
+      "ناقص الخصم.",
+      "ناقص الخصم وناقص القيمة الاسمية.",
+      "زائد الخصم.",
+      "زائد الخصم وزائد القيمة الاسمية."
+    ],
+    "explanationAr": "يصدر الدين بخصم عند بيعه بأقل من قيمته الاسمية، أي عندما يقل المعدل الاسمي عن معدل السوق الفعلي عادة. ووفق الفائدة الفعلية يمثل الفرق بين مصروف الفائدة والمدفوع النقدي إطفاء الخصم. وعند الإصدار بخصم يتجاوز المصروف الفائدة المدفوعة، ويكون القيد مدينًا بمصروف الفائدة ودائنًا بالخصم والنقد. لذلك يساوي إجمالي المصروف مجموع دفعات الفائدة والخصم، بافتراض عدم وجود تكاليف إصدار أخرى."
   },
   {
     "unit": 4,
@@ -1843,7 +1987,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The annual interest expense (June 1-May 31) of the bonds is\n$51,009 ($728,700 × 7%). The cash interest paid is $56,000\n($700,000 × 8%). The difference of $4,991 ($56,000 –\n$51,009) is the portion to amortize the premium. The balance\nof the premiums on bonds payable account after the first\npayment is $23,709 ($28,700 – $4,991).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 يونيو أصدرت Greendale سندات بقيمة $700,000 وأجل 5 سنوات وفائدة 8% تدفع سنويًا في 31 مايو. وبيعت مقابل $728,700 عندما كان معدل السوق 7%. وتستخدم طريقة الفائدة الفعلية لإطفاء العلاوة. ما رصيد علاوة الإصدار بعد دفعة الفائدة الأولى مباشرة؟",
+    "choicesAr": [
+      "$22,960",
+      "$23,709",
+      "$33,691",
+      "$34,440"
+    ],
+    "explanationAr": "يبلغ مصروف الفائدة السنوي (من 1 يونيو إلى 31 مايو) $51,009 ($728,700 × 7%). والفائدة النقدية المدفوعة $56,000 ($700,000 × 8%). والفرق $4,991 ($56,000 − $51,009) يمثل إطفاء العلاوة. لذلك يبلغ رصيد علاوة الإصدار بعد الدفعة الأولى $23,709 ($28,700 − $4,991)."
   },
   {
     "unit": 4,
@@ -1860,6 +2012,14 @@
     ],
     "answerIndex": 3,
     "explanation": "Under the effective interest method, interest expense is equal\nto the carrying amount of the bonds at the beginning of the\nperiod times the effective interest rate. The cash interest paid\nis equal to the face amount of the bonds times the stated\ninterest rate. The difference is the amortization of discount of\nthe bonds. The amortization of discount of the bonds\nincreases the carrying amount of the bonds. Because the\ncarrying amount of the bonds increases each period, interest\nexpense on the bonds increases as well.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية تصف مصروف الفائدة على السندات المستحقة عند إصدارها بخصم واستخدام طريقة الفائدة الفعلية؟",
+    "choicesAr": [
+      "يتساوى مصروف الفائدة كل سنة.",
+      "ينخفض مصروف الفائدة كل سنة.",
+      "يزداد مصروف الفائدة بالمبلغ نفسه كل سنة.",
+      "يزداد مصروف الفائدة بمبلغ أكبر كل سنة."
+    ],
+    "explanationAr": "وفق الفائدة الفعلية يساوي مصروف الفائدة القيمة الدفترية أول الفترة مضروبة في المعدل الفعلي. وتساوي الفائدة النقدية القيمة الاسمية مضروبة في المعدل الاسمي. ويمثل الفرق إطفاء الخصم الذي يزيد القيمة الدفترية. وبافتراض دفعات ومعدلات ثابتة وفترات متساوية، يزيد مصروف الفائدة تدريجيًا بمقادير متزايدة."
   }
 ]
