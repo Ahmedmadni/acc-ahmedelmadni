@@ -113,3 +113,5 @@
 - [x] Unit 2 Wave 7: 28 subsequent measurement drafts (§4 Q1–3/Q5–8/Q10–11/Q13–31); **94/107 (87.9%)**, 13 held, zero unreviewed. Initial review complete; continue Unit 3. See `docs/CMA_UNIT2_ARABIC_WAVE7_2026-11-25.md`.
 
 - [x] Unit 3 complete initial Arabic review: 109/125 (87.2%), 16 held, zero unreviewed across all five sections. See `docs/CMA_UNIT3_ARABIC_REVIEW_2026-11-25.md`. Continue Unit 4 after CI.
+
+- [x] Unit 4 initial Arabic review: 71/86 (82.6%), 15 held, zero unreviewed across contingencies, leases, income taxes and bonds. See `docs/CMA_UNIT4_ARABIC_REVIEW_2026-11-25.md`. Continue Unit 5 after CI.
