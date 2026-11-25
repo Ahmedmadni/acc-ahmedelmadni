@@ -1957,7 +1957,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Collusion is when two or more individuals conspire to commit\nan act that violates a set of standards, usually for the personal\nbenefit of the perpetrators. In this scenario, two assistants\nviolated the existing set of controls by authorizing debt write-\noffs for their own personal benefit. Therefore, the limitation\nbest illustrated by the scenario is collusion.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يقيم مراجع داخلي نظام الرقابة على دورة المقبوضات النقدية. ووفق الضوابط المعمول بها، يتولى مدير الائتمان اعتماد شطب الديون غير القابلة للتحصيل. إلا أن المراجع اكتشف أن اثنين من مساعدي المدير يعتمدان شطب بعض الديون دون علمه لتحقيق منفعة شخصية. أي القيود الملازمة للرقابة الداخلية يوضحه هذا السيناريو على أفضل وجه؟",
+    "choicesAr": [
+      "الخطأ البشري.",
+      "التواطؤ.",
+      "تجاوز الإدارة للضوابط.",
+      "الأحداث الخارجية."
+    ],
+    "explanationAr": "يحدث التواطؤ عندما يتفق شخصان أو أكثر على مخالفة الضوابط أو المعايير، وقد يكون الهدف تحقيق منفعة شخصية. وفي هذه الحالة تجاوز المساعدان إجراءات اعتماد شطب الديون بصورة مشتركة لتحقيق منفعة شخصية، مما يوضح كيف يمكن للتواطؤ إضعاف فعالية الرقابة الداخلية."
   },
   {
     "unit": 19,
@@ -1974,7 +1982,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Even if the controls are effective (accounts payable and cash\npayments appropriately checked and determined the validity\nof the expense), the CEO may override the control by having\nthe ability to manipulate the accounting records.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تلزم منشأة جميع الموظفين بتقديم تقارير المصروفات قبل تعويضهم عنها. ويقدم الرئيس التنفيذي الإيصالات لموظف الذمم الدائنة الذي يعد مستند الصرف والشيك ويستخدم آلة توقيع الرئيس التنفيذي لتوقيعه. ثم يرسل المستند والشيك إلى مكتب المدير المالي. ويمكن للرئيس التنفيذي والمدير المالي ترحيل قيود تسوية إلى يوميات الذمم الدائنة والمدفوعات النقدية واليومية العامة. ما القيد الملازم للرقابة الداخلية الأكثر احتمالًا في هذه الحالة؟",
+    "choicesAr": [
+      "التواطؤ.",
+      "تجاوز الإدارة للضوابط.",
+      "عدم ملاءمة أهداف الرقابة الداخلية.",
+      "الأحداث الخارجية الخارجة عن سيطرة المنشأة."
+    ],
+    "explanationAr": "حتى إذا تحققت الجهات المختصة من صحة المصروفات، فقد تتيح صلاحيات تعديل السجلات للرئيس التنفيذي تجاوز الضوابط. وهذا يوضح خطر تجاوز الإدارة للرقابة، كما أن الجمع بين إعداد مستند الصرف والتوقيع عليه وصلاحيات التعديل غير المقيدة قد يشير إلى ضعف في تصميم الضوابط نفسها. ولا يكفي وجود الصلاحية وحده لإثبات حدوث تجاوز فعلي."
   },
   {
     "unit": 19,
@@ -1991,7 +2007,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The mailroom employee and the accounts receivable clerk\nagreed to circumvent the controls over cash receipts. This\nmay create opportunities to embezzle cash by not recording\nthe receipts. The mailroom should (1) separate checks from\nremittance advices (documents that identify customers,\ninvoice numbers, and amounts), (2) prepare the daily list of\nchecks received, and (3) send the receipts and a copy of the\nlist to the cash receipts function for deposit. The accounts\nreceivable function should receive only the remittance advices\nfor posting.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يفتح جيم البريد في غرفة البريد ويسجل جميع الشيكات المستلمة في كشف المقبوضات اليومي. ثم يسلم الكشف والشيكات إلى سالي، موظفة الذمم المدينة، لتسجيل المدفوعات في الأستاذ المساعد للذمم المدينة. وقد اتفق الموظفان على اتباع هذا الإجراء لتبسيط رقابة المقبوضات. ما القيد الملازم للرقابة الداخلية الأكثر احتمالًا؟",
+    "choicesAr": [
+      "الأحداث الخارجية الخارجة عن سيطرة المنشأة.",
+      "تجاوز الإدارة للضوابط.",
+      "التواطؤ.",
+      "عدم ملاءمة أهداف الرقابة الداخلية."
+    ],
+    "explanationAr": "اتفق الموظفان على تجاوز الفصل القائم بين حيازة المقبوضات وتسجيلها. ويصنف ذلك ضمن التواطؤ في سياق السؤال، حتى وإن لم يثبت وقوع اختلاس. ووفق الدورة المستندية المفترضة، ينبغي لغرفة البريد (1) فصل الشيكات عن إشعارات السداد، و(2) إعداد كشف يومي بالشيكات المستلمة، و(3) إرسال المقبوضات ونسخة من الكشف إلى قسم المقبوضات للإيداع. ويتلقى قسم الذمم المدينة إشعارات السداد للتسجيل دون حيازة الشيكات."
   },
   {
     "unit": 19,
@@ -2025,7 +2049,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The COO’s ability to negotiate an undisclosed agreement\noutside the ordinary course of business with a related party is\nan example of management override.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تفاوض مدير العمليات على معاملة بيع مهمة خارج النشاط المعتاد للمنشأة مع شركة تعمل في قطاع مختلف، وهو عضو في مجلس إدارة تلك الشركة. واختلفت شروط الاتفاق غير المفصح عنه عن عقود البيع المعتادة للمنشأة. ما القيد الملازم للرقابة الداخلية الأكثر احتمالًا في هذا السيناريو؟",
+    "choicesAr": [
+      "الإخفاقات في تطبيق الضوابط.",
+      "تجاوز الإدارة للضوابط.",
+      "الأحداث الخارجية الخارجة عن سيطرة المنشأة.",
+      "عدم ملاءمة أهداف الرقابة الداخلية."
+    ],
+    "explanationAr": "يشير إبرام مسؤول إداري اتفاقًا غير مفصح عنه خارج المسار المعتاد مع طرف تربطه به علاقة إدارية إلى خطر تجاوز الإدارة للضوابط وتعارض المصالح. ويستلزم ذلك مراجعة صلاحيات الاعتماد والإفصاح والعلاقة بين الطرفين. ولا تثبت الشروط غير المعتادة وحدها وقوع مخالفة دون فحص الإجراءات الفعلية."
   },
   {
     "unit": 19,
@@ -2076,7 +2108,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The board of directors defines expectations about integrity,\nethical values, transparency, and accountability through its\nauthority.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يعد من مسؤوليات مجلس الإدارة؟",
+    "choicesAr": [
+      "توفير خط الدفاع الأول لإدارة المخاطر بفعالية.",
+      "تحديد التوقعات المتعلقة بالشفافية والمساءلة.",
+      "تقييم كفاية الضوابط وفعاليتها.",
+      "فحص الرقابة الداخلية وإعداد تقارير بشأنها."
+    ],
+    "explanationAr": "يحدد مجلس الإدارة التوقعات المتعلقة بالنزاهة والقيم الأخلاقية والشفافية والمساءلة، ويمارس الإشراف على الإدارة. وتظل الإدارة مسؤولة عن تشغيل الضوابط، بينما تقدم المراجعة الداخلية تقييمًا مستقلًا لكفايتها وفعاليتها. وقد يستند المجلس إلى نتائج هذا التقييم في أداء دوره الإشرافي."
   },
   {
     "unit": 19,
@@ -2093,7 +2133,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Internal auditors are responsible for evaluating the adequacy\nand effectiveness of controls in responding to risks in the\nentity’s oversight, operations, and information systems.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يعد من مسؤوليات المراجعين الداخليين؟",
+    "choicesAr": [
+      "حماية الأصول مباشرة.",
+      "تصميم إجراءات نظم المعلومات أو صياغتها.",
+      "تقييم تعرض عمليات المنشأة للمخاطر المتعلقة بحماية الأصول.",
+      "تشغيل نظام رقابي يوفر تأكيدًا معقولًا بشأن تحقيق الأهداف."
+    ],
+    "explanationAr": "تقيّم المراجعة الداخلية بصورة مستقلة كفاية الضوابط وفعاليتها في الاستجابة للمخاطر المتعلقة بالإشراف والعمليات ونظم المعلومات، ومنها مخاطر حماية الأصول. أما تصميم الضوابط وتشغيلها وتحمل مسؤولية حماية الأصول فهي مسؤوليات إدارية، ولا تنتقل إلى المراجعة الداخلية بمجرد تقديمها المشورة."
   },
   {
     "unit": 19,
@@ -2110,7 +2158,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Management override of controls occurs when the actions of\nmanagement (e.g., officers) are not consistent with\nestablished control activities. Officers are expected to\ninfluence management and operations. However, when such\ninfluence is significant and concentrated in the hands of few,\nthere is an increased risk of management override of controls.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في شركة مساهمة عامة صغيرة ذات مستويات إدارية قليلة ونطاقات إشراف واسعة، تساعد جميع الإجراءات الآتية على الحد من خطر تجاوز الإدارة للضوابط باستثناء:",
+    "choicesAr": [
+      "إنشاء برنامج فعال للإبلاغ المجهول عن المخالفات يشعر الموظفون بالأمان عند استخدامه.",
+      "ترسيخ ثقافة مؤسسية تقدر النزاهة والقيم الأخلاقية.",
+      "وجود مسؤولين اثنين لهما تأثير كبير في الإدارة والعمليات.",
+      "وجود وظيفة مراجعة داخلية فعالة."
+    ],
+    "explanationAr": "يحدث تجاوز الإدارة عندما تتعارض تصرفات المسؤولين مع الأنشطة الرقابية المعتمدة. ومن الطبيعي أن تؤثر الإدارة في العمليات، لكن تركز النفوذ الكبير لدى عدد قليل من المسؤولين دون إشراف مستقل قد يزيد خطر تجاوز الضوابط بدلًا من تخفيفه. وتساعد قنوات الإبلاغ والرقابة المستقلة والثقافة الأخلاقية على الحد من هذا الخطر."
   },
   {
     "unit": 19,
@@ -2127,7 +2183,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The COSO model broadly defines internal control as a\n“process, effected by an entity’s board of directors,\nmanagement, and other personnel, designed to provide\nreasonable assurance regarding the achievement of\nobjectives in the following categories: (1) effectiveness and\nefficiency of operations, (2) reliability of financial reporting, and\n(3) compliance with applicable laws and regulations.”",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الأسباب الآتية لإنشاء نظام للرقابة الداخلية هو الأكثر شمولًا؟",
+    "choicesAr": [
+      "حماية موارد المنشأة.",
+      "توفير تأكيد معقول بشأن تحقيق أهداف المنشأة.",
+      "تشجيع الالتزام بأهداف المنشأة.",
+      "ضمان دقة المعلومات وموثوقيتها وتوقيت إتاحتها."
+    ],
+    "explanationAr": "الرقابة الداخلية عملية يشارك فيها مجلس الإدارة والإدارة والموظفون، وتهدف إلى توفير تأكيد معقول بشأن تحقيق الأهداف. ويعرض الشرح الأصلي الفئات التالية: (1) فعالية العمليات وكفاءتها، (2) موثوقية التقارير المالية، و(3) الالتزام بالقوانين واللوائح المعمول بها. ولأغراض الدراسة، ينبغي عدم حصر أهداف التقارير في التقارير المالية وحدها، كما أن التأكيد المعقول لا يعني ضمان تحقيق جميع الأهداف."
   },
   {
     "unit": 19,
@@ -2144,7 +2208,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Inherent limitations may exist and should be considered by the\nauditor. Human judgment can be faulty, controls can be\ncircumvented by collusion, and management may\ninappropriately override controls. Thus, the CEO’s ability to\nrequest a check with no purchase order is possible because of\nan inherent limitation. It is an override of the internal control by\nmanagement.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يمثل مثالًا على قيد ملازم للرقابة الداخلية؟",
+    "choicesAr": [
+      "عدم إجراء التسويات البنكية في الوقت المناسب.",
+      "قدرة الرئيس التنفيذي على تجاوز ضابط وطلب شيك دون أمر شراء.",
+      "عدم إجراء فحوص الجدارة الائتمانية للعملاء.",
+      "عدم مطابقة مستندات الشحن بفواتير المبيعات."
+    ],
+    "explanationAr": "تشمل القيود الملازمة للرقابة الداخلية احتمال الخطأ في الحكم البشري والتواطؤ وتجاوز الإدارة غير المناسب للضوابط. وتوضح إمكانية تجاوز الرئيس التنفيذي إجراء الاعتماد خطر تجاوز الإدارة. أما عدم تنفيذ التسويات أو الفحوص أو المطابقات اللازمة فيمثل قصورًا في تصميم الضوابط أو تشغيلها. وقد توجد استثناءات معتمدة للشراء لا تعد تجاوزًا غير مشروع بحد ذاتها."
   },
   {
     "unit": 19,
