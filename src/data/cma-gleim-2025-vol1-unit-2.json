@@ -507,7 +507,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Cost of goods sold equals beginning inventory, plus\npurchases, minus ending inventory. To determine cost of\ngoods sold, purchases must be calculated. Purchases equal\n$167,000 ($49,000 ending accounts payable + $180,000\npayments to suppliers – $62,000 beginning accounts\npayable). Thus, cost of goods sold equals $147,000 ($120,000\nbeginning inventory + $167,000 purchases – $140,000 ending\ninventory).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فيما يلي بيانات مختارة من قائمتي المركز المالي في 31 ديسمبر من السنة 1 و31 ديسمبر من السنة 2:\nالبند | 12/31 السنة 1 | 12/31 السنة 2\nالمخزون | $120,000 | $140,000\nالذمم التجارية الدائنة | 62,000 | 49,000\nمعلومات إضافية عن السنة 2:\n1. بلغت المدفوعات النقدية لموردي البضائع $180,000.\nما تكلفة البضاعة المباعة خلال السنة 2؟",
+    "choicesAr": [
+      "$147,000",
+      "$160,000",
+      "$167,000",
+      "$180,000"
+    ],
+    "explanationAr": "تساوي تكلفة البضاعة المباعة مخزون أول المدة مضافًا إليه المشتريات مطروحًا منه مخزون آخر المدة. ويجب أولًا حساب المشتريات. بافتراض عدم وجود حركات أخرى في حساب الموردين، تبلغ المشتريات $167,000 ($49,000 ذمم دائنة آخر المدة + $180,000 مدفوعات للموردين − $62,000 ذمم دائنة أول المدة). ومن ثم تبلغ تكلفة البضاعة المباعة $147,000 ($120,000 مخزون أول المدة + $167,000 مشتريات − $140,000 مخزون آخر المدة)."
   },
   {
     "unit": 2,
@@ -541,7 +549,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The effects of the errors on cost of goods sold are offsetting.\nPurchases, which increase cost of goods sold, and ending\ninventory, which decreases cost of goods sold, are\nunderstated by the same amount. Neither cost of goods sold\nnor net income is affected.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "إذا لم تُسجل بضائع مملوكة لمنشأة ضمن المشتريات ولم تُدرج في جرد مخزون آخر المدة عن طريق الخطأ، فما النتيجة؟",
+    "choicesAr": [
+      "تظهر تكلفة البضاعة المباعة للفترة بأقل من قيمتها الصحيحة.",
+      "تظهر تكلفة البضاعة المباعة للفترة بأكثر من قيمتها الصحيحة.",
+      "يظهر صافي دخل الفترة بأقل من قيمته الصحيحة.",
+      "لا أثر على تكلفة البضاعة المباعة أو ربح الفترة."
+    ],
+    "explanationAr": "يتعادل أثر الخطأين على تكلفة البضاعة المباعة. فالمشتريات التي تزيد التكلفة ومخزون آخر المدة الذي يخفضها كلاهما أقل من قيمته الصحيحة بالمبلغ نفسه. لذلك لا تتأثر تكلفة البضاعة المباعة ولا صافي الدخل. لكن ذلك لا يعني صحة أرصدة المخزون والالتزامات في قائمة المركز المالي."
   },
   {
     "unit": 2,
@@ -558,7 +574,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Beginning inventory, plus purchases (or other inventory\nadditions), minus cost of goods sold, equals ending inventory.\nThus, ending inventory equals $10,000 ($5,000 + $60,000 –\n$55,000). Direct labor is included in total production costs.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما تكلفة مخزون آخر المدة في ضوء البيانات التالية؟\nمخزون أول المدة: $5,000\nإجمالي تكاليف الإنتاج: 60,000\nتكلفة البضاعة المباعة: 55,000\nالأجور المباشرة: 40,000",
+    "choicesAr": [
+      "$5,000",
+      "$10,000",
+      "$45,000",
+      "$50,000"
+    ],
+    "explanationAr": "يساوي مخزون آخر المدة مخزون أول المدة مضافًا إليه المشتريات أو إضافات المخزون الأخرى ومطروحًا منه تكلفة البضاعة المباعة. لذلك يبلغ مخزون آخر المدة $10,000 ($5,000 + $60,000 − $55,000). والأجور المباشرة مدرجة بالفعل ضمن إجمالي تكاليف الإنتاج."
   },
   {
     "unit": 2,
@@ -575,7 +599,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The gross profit (gross margin) method calculates ending\ninventory at a given time by subtracting an estimated cost of\ngoods sold from the sum of beginning inventory and\npurchases (or cost of goods manufactured). The estimated\ncost of goods sold equals sales minus the gross profit. The\ngross profit equals sales multiplied by the gross profit\npercentage, an amount ordinarily determined on a historical\nbasis. Given that the gross margin percentage is 40% of net\nsales, cost of goods sold must be 60% of net sales, or\n$540,000 ($900,000 × 60%). Goods available for sale equals\ncost of goods sold plus ending inventory ($540,000 +\n$200,000 = $740,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتعلق البيانات التالية بقائمة دخل شركة:\nإجمالي المبيعات: $1,000,000\nصافي المبيعات: 900,000\nتكاليف الشحن للداخل: 10,000\nمخزون آخر المدة: 200,000\nهامش مجمل الربح: 40%\nما تكلفة البضاعة المتاحة للبيع؟",
+    "choicesAr": [
+      "$550,000",
+      "$560,000",
+      "$740,000",
+      "$800,000"
+    ],
+    "explanationAr": "تقدر طريقة مجمل الربح مخزون آخر المدة بطرح تكلفة البضاعة المباعة المقدرة من مجموع مخزون أول المدة والمشتريات (أو تكلفة البضاعة المصنعة). وتساوي تكلفة البضاعة المباعة المقدرة المبيعات مطروحًا منها مجمل الربح. ويُحسب مجمل الربح بضرب المبيعات في نسبته المقدرة عادةً استنادًا إلى البيانات التاريخية. وبما أن هامش مجمل الربح يبلغ 40% من صافي المبيعات، فإن تكلفة البضاعة المباعة تبلغ 60% من صافي المبيعات، أي $540,000 ($900,000 × 60%). وتساوي تكلفة البضاعة المتاحة للبيع تكلفة البضاعة المباعة مضافًا إليها مخزون آخر المدة ($540,000 + $200,000 = $740,000). ولا تضاف تكاليف الشحن مرة أخرى إلى الناتج."
   },
   {
     "unit": 2,
@@ -592,7 +624,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Cost of goods sold equals beginning finished goods, plus cost\nof goods manufactured for a manufacturer or purchases for a\nretailer, minus ending finished goods. Overstated ending\ninventory therefore results in understated cost of goods sold,\noverstated net income, and overstated retained earnings in\nthe period of the error. When these errors reverse in the\nfollowing period, beginning inventory and cost of goods sold\nwill be overstated, and net income will be understated.\nRetained earnings will be correct.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ظهر مخزون شركة في 31 ديسمبر من السنة الحالية بأكثر من قيمته الصحيحة. فما النتيجة؟",
+    "choicesAr": [
+      "يظهر دخل السنة الحالية بأقل من قيمته الصحيحة.",
+      "تظهر الأرباح المحتجزة للسنة الحالية بأقل من قيمتها الصحيحة.",
+      "تظهر الأرباح المحتجزة للسنة التالية بأقل من قيمتها الصحيحة.",
+      "يظهر دخل السنة التالية بأقل من قيمته الصحيحة."
+    ],
+    "explanationAr": "تساوي تكلفة البضاعة المباعة مخزون أول المدة من البضاعة التامة مضافًا إليه تكلفة البضاعة المصنعة للمنشأة الصناعية أو المشتريات للمنشأة التجارية، مطروحًا منه مخزون آخر المدة. ولذلك تؤدي المبالغة في مخزون آخر المدة إلى تخفيض تكلفة البضاعة المباعة والمبالغة في صافي الدخل والأرباح المحتجزة في فترة الخطأ. وعند انعكاس الخطأ في الفترة التالية، يكون مخزون أول المدة وتكلفة البضاعة المباعة أعلى من قيمتهما الصحيحة، ويكون صافي الدخل أقل من قيمته الصحيحة. وتعود الأرباح المحتجزة إلى قيمتها الصحيحة بافتراض صحة مخزون آخر الفترة التالية وعدم وجود أخطاء أخرى."
   },
   {
     "unit": 2,
@@ -609,7 +649,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Cost of goods sold equals beginning finished goods, plus cost\nof goods manufactured for a manufacturer or purchases for a\nretailer, minus ending finished goods. Overstated ending\ninventory therefore results in understated cost of goods sold,\noverstated net income, and overstated retained earnings in\nthe period of the error.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي من الأخطاء التالية يؤدي إلى المبالغة في صافي الدخل؟",
+    "choicesAr": [
+      "المبالغة في مخزون أول المدة.",
+      "المبالغة في مخزون آخر المدة.",
+      "المبالغة في إطفاء الشهرة.",
+      "المبالغة في مخصص خسائر الائتمان."
+    ],
+    "explanationAr": "تساوي تكلفة البضاعة المباعة مخزون أول المدة من البضاعة التامة مضافًا إليه تكلفة البضاعة المصنعة للمنشأة الصناعية أو المشتريات للمنشأة التجارية، مطروحًا منه مخزون آخر المدة. ولذلك تؤدي المبالغة في مخزون آخر المدة إلى تخفيض تكلفة البضاعة المباعة والمبالغة في صافي الدخل والأرباح المحتجزة خلال فترة الخطأ. وتُقرأ الإشارة إلى إطفاء الشهرة ضمن الإطار المحاسبي الذي يسمح به."
   },
   {
     "unit": 2,
@@ -626,7 +674,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Cost of goods sold equals beginning inventory, plus\npurchases, minus ending inventory. If the ending inventory is\nunderestimated, the cost of goods sold will be overestimated.\nIf cost of goods sold is overestimated, net earnings will be\nunderestimated.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "إذا قُدر مخزون آخر المدة بأقل من قيمته الصحيحة نتيجة خطأ في الجرد الفعلي، فكيف تظهر تكلفة البضاعة المباعة للفترة وصافي الأرباح؟\nالقائمة A: تكلفة البضاعة المباعة | القائمة B: صافي الأرباح",
+    "choicesAr": [
+      "أقل من الصحيح | أقل من الصحيح",
+      "أقل من الصحيح | أعلى من الصحيح",
+      "أعلى من الصحيح | أقل من الصحيح",
+      "أعلى من الصحيح | أعلى من الصحيح"
+    ],
+    "explanationAr": "تساوي تكلفة البضاعة المباعة مخزون أول المدة مضافًا إليه المشتريات ومطروحًا منه مخزون آخر المدة. فإذا كان مخزون آخر المدة أقل من قيمته الصحيحة، كانت تكلفة البضاعة المباعة أعلى من قيمتها الصحيحة، وبالتالي كان صافي الأرباح أقل من قيمته الصحيحة."
   },
   {
     "unit": 2,
