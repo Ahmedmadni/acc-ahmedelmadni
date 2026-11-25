@@ -1168,7 +1168,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Machine hours are a direct measure of the level of use of a\nrobotic painting operation.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عند تطبيق التكاليف على أساس الأنشطة، أي أنشطة الأقسام التالية يتوقع استخدام ساعات تشغيل الآلات محركًا لتخصيص تكاليفه غير المباشرة على الإنتاج؟",
+    "choicesAr": [
+      "كافتيريا المصنع.",
+      "تجهيز الآلات.",
+      "مناولة المواد.",
+      "الطلاء الآلي بالروبوتات."
+    ],
+    "explanationAr": "تمثل ساعات تشغيل الآلات مقياسًا مباشرًا لمستوى استخدام عمليات الطلاء الآلي بالروبوتات."
   },
   {
     "unit": 8,
@@ -1185,7 +1193,15 @@
     ],
     "answerIndex": 2,
     "explanation": "One of the benefits of activity-based costing is the discovery of\ncost relationships that went unnoticed under traditional\naccounting methods.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تدرس شركة تطبيق برنامج للتكاليف والإدارة على أساس الأنشطة. أي العبارات التالية صحيحة؟",
+    "choicesAr": [
+      "ينبغي التركيز على أنشطة التصنيع وتجنب تطبيق البرنامج على وظائف الخدمات.",
+      "يرجح ألا تجد برمجيات كافية في السوق لتساعد في مسك السجلات.",
+      "تحصل عادة على فهم أعمق لأسباب تكبد التكاليف.",
+      "يرجح أن تستخدم مجمعات تكلفة أقل مما كانت تستخدمه في المحاسبة التقليدية."
+    ],
+    "explanationAr": "من مزايا التكاليف على أساس الأنشطة اكتشاف العلاقات بين التكاليف والأنشطة التي لم تكن ظاهرة في ظل طرق المحاسبة التقليدية."
   },
   {
     "unit": 8,
@@ -1202,7 +1218,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Activity-based costing is founded on the idea that drivers for\nindirect cost assignment should be based on some level of\nactivity. Cost of materials does not directly reflect a level of a\ngiven activity.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي أقل احتمالًا لاستخدامه أساسًا لتخصيص التكاليف في نظام ABC؟",
+    "choicesAr": [
+      "عدد أنواع المواد المستخدمة في تصنيع المنتج.",
+      "عدد وحدات المواد المستخدمة في تصنيع المنتج.",
+      "عدد الموردين الذين يوردون المواد المستخدمة في التصنيع.",
+      "تكلفة المواد المستخدمة في تصنيع المنتج."
+    ],
+    "explanationAr": "يقوم نظام ABC على ربط تحميل التكاليف غير المباشرة بمحركات تعبر عن مستوى النشاط المسبب للتكلفة. وتكلفة المواد لا تعكس مباشرة مستوى النشاط في هذه المقارنة. وقد يصلح مقياس مالي إذا ثبتت علاقته السببية بالتكلفة محل التخصيص."
   },
   {
     "unit": 8,
@@ -1253,7 +1277,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The first step in performing an activity-based costing\nassignment is to divide the dollar amount of the indirect cost\nactivity in question by the number of units of the appropriate\nallocation base. Total receiving costs for both products\namounted to $450,000. Between them, Products A and B had\n200 (50 + 150) receiving orders. Thus, the allocation rate is\n$2,250 per order ($450,000 ÷ 200 orders). The amount\nallocated to Product A is $112,500 (50 orders × $2,250).\nDividing this amount by the number of units of Product A\n(30,000) results in a per-unit receiving cost of $3.75.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تصنع شركة Atmel منتجين وتبيعهما. وفيما يلي بياناتهما:\nالبند | المنتج A | المنتج B\nالوحدات المنتجة والمباعة | 30,000 | 12,000\nساعات تشغيل الآلات للوحدة | 2 | 3\nأوامر الاستلام لكل خط إنتاج | 50 | 150\nأوامر الإنتاج لكل خط إنتاج | 12 | 18\nدفعات التشغيل | 8 | 12\nعمليات الفحص | 20 | 30\nإجمالي ساعات تشغيل الآلات المقدرة 100,000. وفيما يلي التكاليف غير المباشرة المقدرة:\nتكاليف الاستلام | $450,000\nالتكاليف الهندسية | 300,000\nتكاليف تجهيز الآلات | 25,000\nتكاليف الفحص | 200,000\nإجمالي التكاليف غير المباشرة | $975,000\nباستخدام ABC، ما تكلفة الاستلام المحملة على وحدة واحدة من المنتج A؟",
+    "choicesAr": [
+      "$3.75",
+      "$10.75",
+      "$19.50",
+      "$28.13"
+    ],
+    "explanationAr": "تتمثل الخطوة الأولى في قسمة مبلغ التكلفة غير المباشرة للنشاط على عدد وحدات أساس التحميل الملائم. وبلغ إجمالي تكاليف الاستلام للمنتجين $450,000. وبلغ مجموع أوامر الاستلام للمنتجين 200 (50 + 150) أمرًا. لذا يبلغ معدل التحميل $2,250 لكل أمر ($450,000 ÷ 200 أمر). ويبلغ المبلغ المحمل على المنتج A قيمة $112,500 (50 أمرًا × $2,250). وبقسمة المبلغ على عدد وحدات المنتج A (30,000) تبلغ تكلفة الاستلام للوحدة $3.75."
   },
   {
     "unit": 8,
@@ -1270,7 +1302,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The first step in performing an activity-based costing\nassignment is to divide the dollar amount of the indirect cost\nactivity in question by the number of units of the appropriate\nallocation base. Total engineering costs for both products\namounted to $300,000. Between them, Products A and B had\n30 (12 + 18) production orders. Thus, the allocation rate is\n$10,000 per order ($300,000 ÷ 30 orders). The amount\nallocated to Product B is $180,000 (18 orders × $10,000).\nDividing this amount by the number of units of Product B\n(12,000) results in a per-unit engineering cost of $15.00.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تصنع شركة Atmel منتجين وتبيعهما. وفيما يلي بياناتهما:\nالبند | المنتج A | المنتج B\nالوحدات المنتجة والمباعة | 30,000 | 12,000\nساعات تشغيل الآلات للوحدة | 2 | 3\nأوامر الاستلام لكل خط إنتاج | 50 | 150\nأوامر الإنتاج لكل خط إنتاج | 12 | 18\nدفعات التشغيل | 8 | 12\nعمليات الفحص | 20 | 30\nإجمالي ساعات تشغيل الآلات المقدرة 100,000. وفيما يلي التكاليف غير المباشرة المقدرة:\nتكاليف الاستلام | $450,000\nالتكاليف الهندسية | 300,000\nتكاليف تجهيز الآلات | 25,000\nتكاليف الفحص | 200,000\nإجمالي التكاليف غير المباشرة | $975,000\nيتمثل محرك التكاليف الهندسية لدى Atmel في عدد أوامر الإنتاج لكل خط إنتاج. باستخدام ABC، ما التكلفة الهندسية للوحدة من المنتج B؟",
+    "choicesAr": [
+      "$4.00",
+      "$10.00",
+      "$15.00",
+      "$29.25"
+    ],
+    "explanationAr": "تتمثل الخطوة الأولى في قسمة مبلغ التكلفة غير المباشرة للنشاط على عدد وحدات أساس التحميل الملائم. وبلغ إجمالي التكاليف الهندسية للمنتجين $300,000. وبلغ مجموع أوامر إنتاجهما 30 (12 + 18) أمرًا. لذا يبلغ معدل التحميل $10,000 لكل أمر ($300,000 ÷ 30 أمرًا). ويبلغ المبلغ المحمل على المنتج B قيمة $180,000 (18 أمرًا × $10,000). وبقسمة المبلغ على عدد وحدات المنتج B (12,000) تبلغ التكلفة الهندسية للوحدة $15.00."
   },
   {
     "unit": 8,
@@ -1287,7 +1327,15 @@
     ],
     "answerIndex": 1,
     "explanation": "A primary advantage of ABC is that product costing is\nimproved, allowing for better decision making. The result is not\nonly more accurate cost assignments but also better cost\ncontrol and more efficient operations.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما أحد الأسباب الرئيسية لتحول الشركة من نظام التكاليف التقليدي إلى ABC؟",
+    "choicesAr": [
+      "أنه طريقة أسهل للتطبيق.",
+      "أنه يقلل تحميل المنتجات بتكاليف أقل أو أكثر مما تستحق.",
+      "أنه يلغي تحميل التكاليف غير المباشرة على المنتجات.",
+      "أنه يحدد تكاليف الإنتاج غير المضيفة للقيمة."
+    ],
+    "explanationAr": "من المزايا الأساسية لـ ABC تحسين احتساب تكلفة المنتج، مما يتيح اتخاذ قرارات أفضل. وقد يؤدي ذلك إلى تخصيص أدق للتكاليف وتحسين الرقابة عليها وكفاءة العمليات."
   },
   {
     "unit": 8,
@@ -1304,7 +1352,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The allocation rate is simply equal to the budgeted\nmanufacturing overhead divided by machine hours. Therefore,\nthe answer for Machining is $100/hr. [$4,000,000 ÷\n40,000 hours]. The rate for Assembly is $50/hr. [$2,000,000 ÷\n40,000 hours].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يضم مصنع قسمي تشغيل الآلات والتجميع. وتتضمن موازنة السنة البيانات التالية:\nالبند | تشغيل الآلات | التجميع\nالتكاليف الصناعية غير المباشرة | $4,000,000 | $2,000,000\nساعات العمل المباشر | 100,000 | 200,000\nساعات تشغيل الآلات | 40,000 | 40,000\nإذا خصص المصنع التكاليف الصناعية غير المباشرة وفق ساعات تشغيل الآلات، فما معدلا التحميل للقسمين؟\nتشغيل الآلات | التجميع",
+    "choicesAr": [
+      "$40 للساعة | $10 للساعة",
+      "$10 للساعة | $40 للساعة",
+      "$100 للساعة | $50 للساعة",
+      "$50 للساعة | $100 للساعة"
+    ],
+    "explanationAr": "يساوي معدل التحميل التكاليف الصناعية غير المباشرة المقدرة مقسومة على ساعات تشغيل الآلات. ولذلك يبلغ معدل قسم تشغيل الآلات $100 للساعة ($4,000,000 ÷ 40,000 ساعة)، ومعدل التجميع $50 للساعة ($2,000,000 ÷ 40,000 ساعة)."
   },
   {
     "unit": 8,
@@ -1321,7 +1377,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Cost drivers should be related to the costs accumulated in\ncost pools. The number of parts used has a direct cause-and-\neffect relationship with materials handling costs. The more\nparts used, the more handling is involved.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تنتج شركة صناعية مجموعات متنوعة من المنتجات تتطلب توليفات مختلفة من الأجزاء. وحددت مجمعات للتكاليف، منها مجمع مناولة المواد، ويشمل أجور ومزايا العاملين في استلام المواد وفحصها وتخزينها ونقلها إلى مواقع العمل، وإهلاك وصيانة معدات المناولة مثل الرافعات الشوكية، والمستلزمات المستخدمة والتكاليف المرتبطة بها. ما محرك التكلفة الأنسب على الأرجح لتحميل تكاليف المناولة على المنتجات من بين البدائل؟",
+    "choicesAr": [
+      "ساعات العمل المباشر.",
+      "عدد الوحدات المنتجة.",
+      "عدد الموردين.",
+      "عدد الأجزاء المستخدمة."
+    ],
+    "explanationAr": "ينبغي ربط محركات التكلفة بالتكاليف المجمعة. ويرتبط عدد الأجزاء المستخدمة بعلاقة سببية بتكاليف المناولة؛ فكلما زاد عدد الأجزاء زادت أعمال المناولة عادة، مع افتراض تقارب طبيعة الأجزاء واحتياجات مناولتها."
   },
   {
     "unit": 8,
@@ -1338,7 +1402,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The process value analysis performed as part of ABC\nprovides information for eliminating or reducing nonvalue-\nadding activities. The result is therefore not only more\naccurate cost assignments, especially of overhead, but also\nbetter cost control and more efficient operations.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "على ماذا تركز الإدارة على أساس الأنشطة (ABM)؟",
+    "choicesAr": [
+      "تحسين تخصيص تكاليف الإنتاج غير المباشرة.",
+      "تقليل عدد مجمعات التكلفة.",
+      "زيادة عدد أسس التخصيص المرتبطة بحجم الإنتاج.",
+      "تحسين فعالية الأنشطة."
+    ],
+    "explanationAr": "يوفر تحليل قيمة العمليات ضمن ABC معلومات لحذف الأنشطة غير المضيفة للقيمة أو تقليلها. والنتيجة ليست مجرد تخصيص أدق للتكاليف، خصوصًا غير المباشرة، بل أيضًا رقابة أفضل على التكاليف وعمليات أكثر كفاءة."
   },
   {
     "unit": 8,
@@ -1355,7 +1427,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The total manufacturing overhead is $6,000,000 ($4,000,000 +\n$2,000,000), and the total direct labor hours are 300,000\n(100,000 + 200,000). Because the plant uses a corporate-wide\noverhead rate based on direct labor hours, the rate will be $20\nper hour ($6,000,000 ÷ 300,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يضم مصنع قسمي تشغيل الآلات والتجميع. وتتضمن موازنة السنة البيانات التالية:\nالبند | تشغيل الآلات | التجميع\nالتكاليف الصناعية غير المباشرة | $4,000,000 | $2,000,000\nساعات العمل المباشر | 100,000 | 200,000\nساعات تشغيل الآلات | 410,000 | 40,000\nإذا استخدم المصنع معدل تحميل موحدًا على مستوى الشركة قائمًا على ساعات العمل المباشر، فما المعدل؟",
+    "choicesAr": [
+      "$10 للساعة.",
+      "$20 للساعة.",
+      "$40 للساعة.",
+      "$75 للساعة."
+    ],
+    "explanationAr": "إجمالي التكاليف الصناعية غير المباشرة $6,000,000 ($4,000,000 + $2,000,000)، وإجمالي ساعات العمل المباشر 300,000 (100,000 + 200,000). ولأن معدل التحميل الموحد يستند إلى ساعات العمل المباشر، فإنه يبلغ $20 للساعة ($6,000,000 ÷ 300,000). ولا تدخل ساعات الآلات في الحساب."
   },
   {
     "unit": 8,
@@ -1372,7 +1452,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The machining department uses machine hours as its\nallocation base. Thus, the machining allocation rate is equal to\n$100 per machine hour ($4,000,000 ÷ 40,000). The assembly\ndepartment uses direct labor hours as its allocation base.\nThus, the assembly allocation rate is equal to $10 per direct\nlabor hour ($2,000,000 ÷ 200,000).\nJob 2420 uses 20 direct labor hours in assembly and\n10 machine hours in machining (the 5 machine hours used in\nassembly are distractors). This job will be assigned $200\noverhead from assembly ($10 rate × 20 direct labor hours)\nand $1,000 overhead from machining ($100 rate × 10 machine\nhours) for a total overhead of $1,200 ($1,000 + $200).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يضم مصنع قسمي تشغيل الآلات والتجميع. وتتضمن موازنة السنة البيانات التالية:\nالبند | تشغيل الآلات | التجميع\nالتكاليف الصناعية غير المباشرة | $4,000,000 | $2,000,000\nساعات العمل المباشر | 100,000 | 200,000\nساعات تشغيل الآلات | 40,000 | 40,000\nافترض أن المصنع يستخدم ساعات تشغيل الآلات أساسًا للتحميل في قسم تشغيل الآلات، وساعات العمل المباشر في قسم التجميع. إذا استلزم الأمر 2420 عدد 20 ساعة عمل مباشر في كل قسم، و10 ساعات تشغيل آلات في قسم تشغيل الآلات و5 ساعات في التجميع، فما التكاليف غير المباشرة المحملة على الأمر؟",
+    "choicesAr": [
+      "$1,100",
+      "$1,200",
+      "$2,100",
+      "$2,200"
+    ],
+    "explanationAr": "يستخدم قسم تشغيل الآلات ساعات الآلات أساسًا للتخصيص. لذا يبلغ معدله $100 لكل ساعة تشغيل آلة ($4,000,000 ÷ 40,000). ويستخدم قسم التجميع ساعات العمل المباشر، فيبلغ معدله $10 لكل ساعة عمل مباشر ($2,000,000 ÷ 200,000).\nيستهلك الأمر 2420 عدد 20 ساعة عمل مباشر في التجميع و10 ساعات آلات في قسم تشغيل الآلات (أما 5 ساعات آلات التجميع فليست أساس التحميل هناك). ويحمل على الأمر $200 من التجميع ($10 × 20 ساعة عمل مباشر)، و$1,000 من تشغيل الآلات ($100 × 10 ساعات آلات)، بإجمالي $1,200 ($1,000 + $200)."
   },
   {
     "unit": 8,
@@ -1406,7 +1494,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The original per-unit cost of inspection supplies was $0.35\n{$7,000 total inspection costs ÷ [10,000 diamonds for\npendants + (2 diamonds per set of earrings × 5,000 earring\nsets)]}. The new per-diamond cost of inspection is $3.85\n[($60,000 + $3,000) ÷ (8,000 + 5,000 × 2) + $0.35]. Since a\nset of earrings requires two diamonds, the inspection cost per\nset of earrings is $7.70 ($3.85 × 2).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تصنع شركة أقراطًا وقلائد ماسية وتستخدم الموازنة على أساس الأنشطة. وخصصت مجمعًا لتكاليف فحص الماس، ومحركه عدد قطع الماس المستخدمة. وتبلغ تكلفة مستلزمات الفحص $0.35 لكل قطعة. وتوقعت في الأصل إنتاج وبيع 10,000 قلادة تحتوي كل منها على قطعة ماس واحدة و5,000 زوج أقراط يحتوي كل زوج على قطعتين، مما أدى إلى التكاليف التالية:\nراتب الفاحص | $60,000\nتكاليف المعدات | 3,000\nمستلزمات الفحص | 7,000\nالإجمالي | $70,000\nتكلفة القطعة | $3.50\nإذا توقعت الآن إنتاج وبيع 8,000 قلادة فقط بالإضافة إلى الأقراط، فما تكلفة الفحص لكل زوج أقراط؟",
+    "choicesAr": [
+      "$6.30",
+      "$7.00",
+      "$7.70",
+      "$7.78"
+    ],
+    "explanationAr": "كانت تكلفة مستلزمات الفحص للقطعة $0.35 {$7,000 إجمالي المستلزمات ÷ [10,000 قطعة للقلائد + (2 قطعة لكل زوج أقراط × 5,000 زوج)]}. وتصبح تكلفة فحص القطعة الجديدة $3.85 [($60,000 + $3,000) ÷ (8,000 + 5,000 × 2) + $0.35]، بافتراض ثبات تكاليف الراتب والمعدات. ولأن الزوج يحتاج قطعتين، تبلغ تكلفة فحصه $7.70 ($3.85 × 2)."
   },
   {
     "unit": 8,
@@ -1423,7 +1519,15 @@
     ],
     "answerIndex": 0,
     "explanation": "A traditional cost allocation system puts all the overhead costs\ninto a single pool and allocates them to the end products.\nActivity-based costing is more accurate because indirect costs\nare attached to activities that are then rationally allocated to\nend products. Therefore, activity-based costing provides a\nmore accurate report of each product’s cost so that\nmanagement can make more informed pricing decisions.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تصنع شركة تشكيلة متزايدة من أجهزة الاتصالات الاستهلاكية. واستخدمت دائمًا نظام تخصيص تقليديًا، لكن المحاسبين اقترحوا التحول إلى ABC. واعترض نائب رئيس العمليات بأن إعادة توزيع التكاليف لن توفر المال وأن هذه الأنظمة معقدة ومكلفة. ما الرد الأكثر منطقية؟",
+    "choicesAr": [
+      "توفر نظم ABC تقارير أدق عن تكلفة كل منتج لتمكين الإدارة من اتخاذ قرارات تسعير أفضل.",
+      "تكلفة استخدامها أقل من نظم التكاليف التقليدية.",
+      "تلغي جميع التخصيصات الاعتباطية المستخدمة في النظم التقليدية.",
+      "تركز على التصنيع وتستبعد الهندسة والتسويق والأنشطة الأخرى غير القابلة للتتبع من احتساب التكاليف."
+    ],
+    "explanationAr": "قد يجمع النظام التقليدي التكاليف غير المباشرة في مجمع واحد ثم يحملها على المنتجات. أما ABC فيربط التكاليف غير المباشرة بالأنشطة ثم يخصصها على أساس منطقي للمنتجات النهائية. ولذلك قد يوفر بيانات أدق عن تكلفة المنتج لاتخاذ قرارات تسعير مدروسة. ولا يضمن مجرد إعادة تخصيص التكلفة تخفيضها."
   },
   {
     "unit": 8,
@@ -1440,7 +1544,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The Machining Department allocates manufacturing overhead\nbased on machine hours; thus, the overhead rate is $100/hr.\n($4,000,000 ÷ 40,000). The Assembly Department allocates\nmanufacturing overhead based on direct labor hours; thus, the\noverhead rate is $10/hr. ($2,000,000 ÷ 200,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لدى شركة صناعية قسمان في مصنعها بشنغهاي: تشغيل الآلات والتجميع. وتتضمن موازنة السنة البيانات التالية:\nالبند | تشغيل الآلات | التجميع\nالتكاليف الصناعية غير المباشرة | $4,000,000 | $2,000,000\nساعات العمل المباشر | 100,000 | 200,000\nساعات تشغيل الآلات | 40,000 | 40,000\nإذا استخدم المصنع ساعات تشغيل الآلات أساسًا للتحميل في قسم تشغيل الآلات وساعات العمل المباشر في قسم التجميع، فما معدلا تحميل التكاليف على المنتجات؟\nتشغيل الآلات | التجميع",
+    "choicesAr": [
+      "$40 للساعة | $10 للساعة",
+      "$75 للساعة | $30 للساعة",
+      "$100 للساعة | $10 للساعة",
+      "$100 للساعة | $50 للساعة"
+    ],
+    "explanationAr": "يخصص قسم تشغيل الآلات التكاليف الصناعية غير المباشرة وفق ساعات تشغيل الآلات، فيبلغ معدل التحميل $100 للساعة ($4,000,000 ÷ 40,000). ويخصص قسم التجميع التكاليف وفق ساعات العمل المباشر، فيبلغ معدله $10 للساعة ($2,000,000 ÷ 200,000)."
   },
   {
     "unit": 8,
@@ -1457,7 +1569,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Because every batch of Product A contains 50 units and every\nbatch of Product B contains 25 units, the company will\nproduce 20 (1,000 ÷ 50) batches of Product A and 30 (750 ÷\n25) batches of Product B. Thus, the budgeted overhead is\ncalculated as follows:\nProduct A: (20 batches × 1.75 hours × $100) + (20 batches ×\n1.00 hours × $150) = $6,500\nProduct B: (30 batches × 1.25 hours × $100) + (30 batches ×\n0.75 hours × $150) = $7,125\nTherefore, total budgeted overhead is $13,625.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تطبق شركة الموازنة على أساس الأنشطة. وتحمل تكاليف التجهيز وفق ساعات التجهيز، والتكاليف الصناعية غير المباشرة الأخرى وفق ساعات العمل الصناعي المباشر. وتظهر الموازنة:\nمحرك التكلفة | المنتج A | المنتج B\nعدد الوحدات لكل دفعة | 50 | 25\nزمن التجهيز لكل دفعة | 1.75 ساعة | 1.25 ساعة\nزمن العمل الصناعي المباشر لكل دفعة | 1.00 ساعة | 0.75 ساعة\nتخطط الشركة لإنتاج 1,000 وحدة من A و750 وحدة من B. ومعدل ساعة التجهيز $100 ومعدل ساعة العمل الصناعي المباشر $150. فما إجمالي التكاليف غير المباشرة المقدرة؟",
+    "choicesAr": [
+      "$10,063",
+      "$13,625",
+      "$15,125",
+      "$22,188"
+    ],
+    "explanationAr": "لأن كل دفعة من A تتضمن 50 وحدة وكل دفعة من B تتضمن 25 وحدة، تنتج الشركة 20 (1,000 ÷ 50) دفعة من A و30 (750 ÷ 25) دفعة من B. وتحسب التكاليف غير المباشرة المقدرة كالآتي:\nA: (20 دفعة × 1.75 ساعة × $100) + (20 دفعة × 1.00 ساعة × $150) = $6,500\nB: (30 دفعة × 1.25 ساعة × $100) + (30 دفعة × 0.75 ساعة × $150) = $7,125\nالإجمالي $13,625."
   },
   {
     "unit": 8,
@@ -1474,7 +1594,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Activity-based costing involves defining the activities that drive\nindirect costs. A cost pool is established for each activity, and\na cost driver is identified for each pool. Drivers can include\nlabor hours, machine hours, or other variables.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما اسم طريقة احتساب التكاليف التي تحدد تكلفة المنتج بتحديد تكاليف المهام الفردية ثم تحميلها على المنتجات بحسب المهام اللازمة لإنتاج كل منتج؟",
+    "choicesAr": [
+      "التكاليف على أساس الأنشطة.",
+      "تكاليف الأوامر.",
+      "تكاليف المراحل.",
+      "تكاليف العمليات."
+    ],
+    "explanationAr": "يتضمن ABC تحديد الأنشطة المسببة للتكاليف غير المباشرة، وإنشاء مجمع تكلفة لكل نشاط، وتحديد محرك تكلفة لكل مجمع. وقد تشمل المحركات ساعات العمل أو ساعات الآلات أو متغيرات أخرى."
   },
   {
     "unit": 8,
@@ -1491,7 +1619,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Activity-based costing (ABC) is a response to the significant\nincrease in indirect costs resulting from the rapid advance of\ntechnology. The real benefits of ABC occur when a company\nhas a high level of fixed costs and produces a wide variety of\nproducts with widely varying levels of production. ABC allows\ncosts to be allocated to products based on cost drivers\n(operations that drive, or cause, costs).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتضمن عمليات شركة مستوى مرتفعًا من التكاليف الثابتة وتنتج مجموعة متنوعة من المنتجات. ما نظام التكاليف الذي يرجح التوصية به؟",
+    "choicesAr": [
+      "تكاليف الأوامر.",
+      "تكاليف المراحل.",
+      "تحليل قيمة العمليات.",
+      "التكاليف على أساس الأنشطة."
+    ],
+    "explanationAr": "ظهر ABC استجابة لارتفاع التكاليف غير المباشرة مع تقدم التكنولوجيا. وتظهر فوائده بصورة خاصة عندما تكون التكاليف الثابتة غير المباشرة كبيرة وتتعدد المنتجات وتختلف أحجام إنتاجها واستهلاكها للأنشطة. ويتيح تخصيص التكاليف بحسب محركاتها، مع مراعاة تكلفة تطبيق النظام وفائدته."
   },
   {
     "unit": 8,
