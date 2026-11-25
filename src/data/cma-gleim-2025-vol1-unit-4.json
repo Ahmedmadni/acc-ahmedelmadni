@@ -741,7 +741,15 @@
     ],
     "answerIndex": 2,
     "explanation": "As an accounting policy for short-term leases, a lessee may\nelect not to recognize the right-of-use asset and lease liability\nif, at the commencement date, the lease (1) has a term of 12\nmonths or less and (2) does not include a purchase option that\nthe lessee is reasonably certain to exercise.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "إذا كانت مدة الإيجار أقل من 12 شهرًا، فمتى يجوز للمستأجر اختيار عدم إثبات أصل حق الاستخدام والتزام الإيجار وفق المعايير الأمريكية؟",
+    "choicesAr": [
+      "ينقل العقد ملكية الأصل إلى المستأجر في نهاية المدة.",
+      "تساوي القيمة الحالية لمجموع (1) الدفعات و(2) القيمة المتبقية المضمونة من المستأجر 90% أو أكثر من القيمة العادلة للأصل.",
+      "لا يتضمن العقد خيار شراء يكون المستأجر متأكدًا بدرجة معقولة من ممارسته.",
+      "تمثل المدة الجزء الأكبر من العمر الاقتصادي المتبقي للأصل."
+    ],
+    "explanationAr": "يجوز للمستأجر اختيار سياسة محاسبية للإيجارات قصيرة الأجل بعدم إثبات أصل حق الاستخدام والتزام الإيجار إذا كان العقد عند بدء الإيجار (1) مدته 12 شهرًا أو أقل و(2) لا يتضمن خيار شراء يكون المستأجر متأكدًا بدرجة معقولة من ممارسته."
   },
   {
     "unit": 4,
@@ -775,7 +783,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A lessee classifies a lease as a finance lease or an operating\nlease. A finance lease meets at least one of five classification\ncriteria. The lease does not (1) transfer ownership of the\nleased asset to the lessee or (2) contain a purchase option the\nlessee is reasonably certain to exercise. (3) The lease term\nalso is for 67% (4 years ÷ 6 years) of the leased asset’s\nremaining economic life, not a major part (at least 75%). (4)\nFurthermore, the present value of the sum of the lease\npayments is 75% of the leased asset’s fair value, not\nsubstantially all (at least 90%). However, (5) the leased asset\nis so specialized that it is expected to have no alternative use\nto the lessor at the end of the lease term. Consequently, a\ncriterion for classification of the lease as a finance lease is\nmet.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 يناير من السنة 1 أبرم مستأجر عقد إيجار لمدة 4 سنوات لا ينقل الملكية في نهاية المدة. ويتضمن خيار شراء لا يتوقع ممارسته بدرجة معقولة. وللأصل (1) عمر اقتصادي 6 سنوات، (2) لا قيمة متبقية، (3) قيمة حالية للدفعات السنوية تعادل 75% من قيمته العادلة. وإذا لم يكن للأصل استخدام بديل لدى المؤجر في نهاية المدة، فما تصنيف العقد لدى المستأجر وفق المعايير الأمريكية؟",
+    "choicesAr": [
+      "تشغيلي.",
+      "من نوع البيع.",
+      "قصير الأجل.",
+      "تمويلي."
+    ],
+    "explanationAr": "يصنف المستأجر العقد تمويليًا أو تشغيليًا وفق المعايير الأمريكية. ويكفي تحقق أحد معايير التصنيف الخمسة. لا يتحقق (1) نقل الملكية أو (2) خيار شراء مؤكد الممارسة بدرجة معقولة. أما (3) فالمدة 67% (4 سنوات ÷ 6 سنوات) من العمر الاقتصادي المتبقي، فلا تمثل الجزء الأكبر وفق المؤشر الإرشادي (75% على الأقل). و(4) القيمة الحالية للدفعات 75% من القيمة العادلة، فلا تمثل معظمها وفق المؤشر (90% على الأقل). لكن (5) الأصل متخصص إلى درجة عدم توقع استخدام بديل لدى المؤجر في نهاية المدة، فيتحقق معيار الإيجار التمويلي."
   },
   {
     "unit": 4,
@@ -792,7 +808,15 @@
     ],
     "answerIndex": 0,
     "explanation": "A lease is classified as a finance lease by the lessee if, at\nlease commencement date, any of the following five criteria is\nsatisfied: (1) the lease transfers ownership of the leased asset\nto the lessee by the end of the lease term, (2) the lease\nincludes an option to purchase the leased asset that the\nlessee is reasonably certain to exercise, (3) the lease term is\nfor the major part (generally is considered to be at least 75%)\nof the remaining economic life of the leased asset, (4) the\npresent value of the sum of the lease payments and any\nresidual value guaranteed by the lessee equals or exceeds\nsubstantially all (generally is considered to be at least 90%) of\nthe fair value of the leased asset, or (5) the leased asset is of\nsuch a specialized nature that it is expected to have no\nalternative use to the lessor at the end of the lease term.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي معيار لتصنيف الإيجار تمويليًا في دفاتر المستأجر وفق المعايير الأمريكية؟",
+    "choicesAr": [
+      "وجود خيار شراء يكون المستأجر متأكدًا بدرجة معقولة من ممارسته.",
+      "عدم انتقال ملكية الأصل إلى المستأجر.",
+      "مدة الإيجار 65% أو أكثر من العمر الإنتاجي المقدر للأصل.",
+      "القيمة الحالية للحد الأدنى للدفعات 70% أو أكثر من القيمة السوقية العادلة للأصل."
+    ],
+    "explanationAr": "يصنف المستأجر العقد تمويليًا إذا تحقق عند البدء أحد المعايير الخمسة: (1) تنتقل الملكية بنهاية المدة، (2) يتضمن العقد خيار شراء مؤكد الممارسة بدرجة معقولة، (3) تمثل المدة الجزء الأكبر من العمر الاقتصادي المتبقي (ومن المؤشرات الإرشادية 75% على الأقل)، (4) تعادل القيمة الحالية لمجموع الدفعات وأي قيمة متبقية مضمونة من المستأجر معظم القيمة العادلة أو تتجاوزها (ومن المؤشرات 90% على الأقل)، أو (5) يكون الأصل متخصصًا بحيث لا يتوقع وجود استخدام بديل للمؤجر عند انتهاء المدة."
   },
   {
     "unit": 4,
@@ -826,7 +850,15 @@
     ],
     "answerIndex": 1,
     "explanation": "A lease is classified as a finance lease by the lessee if, at\nlease commencement date, any one of five criteria is satisfied.\nOne criterion is that the present value of the sum of the lease\npayments and any residual value guaranteed by the lessee\nequals or exceeds substantially all (generally considered to be\nat least 90%) of the fair value of the leased asset.\nConsequently, if the fair value of the computer on January 1,\nYear 1, is $14,000, the lease is a finance lease because the\npresent value of the lease payments is 93% ($13,000 ÷\n$14,000) of the fair value of the computer.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 يناير من السنة 1 أبرمت Frost عقدًا لمدة 2 سنة مع Ananz لاستئجار حاسوب جديد. تبدأ المدة في 1 يناير من السنة 1 وتنتهي في 31 ديسمبر من السنة 2. ويدفع المستأجر دفعتين سنويتين بمبلغ $8,000 لكل منهما. وتبلغ القيمة الحالية للدفعات $13,000. أي الظروف التالية تستلزم التصنيف تمويليًا وفق المعايير الأمريكية؟",
+    "choicesAr": [
+      "العمر الاقتصادي للحاسوب 3 سنوات.",
+      "القيمة العادلة للحاسوب في 1 يناير من السنة 1 هي $14,000.",
+      "لا يوجد خيار شراء للحاسوب عند نهاية المدة.",
+      "تبقى ملكية الحاسوب لدى Ananz خلال المدة وبعد انتهائها."
+    ],
+    "explanationAr": "يصنف الإيجار تمويليًا عند تحقق أحد المعايير الخمسة في تاريخ البدء. ومن المعايير أن تساوي القيمة الحالية لمجموع الدفعات والقيمة المتبقية المضمونة من المستأجر معظم القيمة العادلة أو تتجاوزها (ومن المؤشرات الإرشادية 90% على الأقل). لذا إذا كانت القيمة العادلة في 1 يناير من السنة 1 هي $14,000، فإن الإيجار تمويلي لأن القيمة الحالية للدفعات تبلغ 93% ($13,000 ÷ $14,000) من القيمة العادلة."
   },
   {
     "unit": 4,
@@ -843,7 +875,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The lease liability consists of the present value of the lease\npayments. The lease liability is reduced by the portion of the\nlease payment attributable to the lease liability. This amount is\nthe lease payment minus the interest component of the\npayment. Thus, the liability is decreased by the lease payment\neach period minus the portion of the payment allocable to\ninterest.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تدفع Quick دفعات إيجارها في نهاية كل فترة. بماذا ينخفض التزام الإيجار التمويلي دوريًا؟",
+    "choicesAr": [
+      "دفعة الإيجار ناقص الجزء المخصص للفائدة.",
+      "دفعة الإيجار زائد إطفاء الأصل المرتبط.",
+      "دفعة الإيجار ناقص إطفاء الأصل المرتبط.",
+      "كامل دفعة الإيجار."
+    ],
+    "explanationAr": "يقاس التزام الإيجار أولًا بالقيمة الحالية للدفعات. وينخفض الالتزام بالجزء من الدفعة المخصص لسداد أصل الالتزام، أي مبلغ الدفعة ناقص مكون الفائدة. لذا ينخفض الالتزام في كل فترة بالدفعة ناقص الجزء المخصص للفائدة."
   },
   {
     "unit": 4,
@@ -860,7 +900,15 @@
     ],
     "answerIndex": 1,
     "explanation": "This lease is classified as a finance lease because the leased\nmachine is transferred to Cole at the end of the lease term.\nThe lease liability and right-of-use (ROU) asset are initially\nrecognized at the present value of the lease payments of\n$108,000. The lessee amortizes the ROU on a straight-line\nbasis. When, at the end of the lease term, the ownership of\nthe leased asset is transferred to the lessee or the lessee is\nreasonably certain to exercise the purchase option, the\namortization period is the useful life of the leased asset. Thus,\ncurrent amortization expense is $9,000 [($108,000 right-of-use\nasset – $0 salvage value) ÷ 12-year economic life].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 2 يناير وقعت Cole عقد إيجار غير قابل للإلغاء لمدة 8 سنوات لآلة جديدة مقابل دفعات سنوية $15,000 في بداية كل سنة. وعمر الآلة الإنتاجي 12 سنة دون قيمة متبقية. وتنتقل الملكية إلى Cole بانتهاء المدة. وتستخدم القسط الثابت. وبلغت القيمة الحالية لإجمالي الدفعات في 2 يناير مبلغ $108,000 وفق معدل مناسب. ما إطفاء أصل حق الاستخدام للسنة الحالية؟",
+    "choicesAr": [
+      "$0",
+      "$9,000",
+      "$13,500",
+      "$15,000"
+    ],
+    "explanationAr": "يصنف العقد تمويليًا بسبب انتقال ملكية الآلة في نهاية المدة. ويبلغ أساس القياس الأولي لأصل حق الاستخدام $108,000، وهو القيمة الحالية لكامل الدفعات في السؤال، بما فيها دفعة البدء؛ أما الالتزام عند البدء فيستبعد المدفوع بالفعل. ويطفأ الأصل بالقسط الثابت على العمر الإنتاجي عند انتقال الملكية أو التأكد بدرجة معقولة من ممارسة خيار الشراء. لذا يبلغ الإطفاء $9,000 [($108,000 أصل حق الاستخدام − $0 القيمة المتبقية) ÷ 12 سنة العمر الاقتصادي]."
   },
   {
     "unit": 4,
@@ -894,7 +942,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The lease is classified as a finance lease by the lessee\nbecause the ownership of the leased asset is transferred to\nthe lessee at the end of the lease term. The lessee must\nrecord a finance lease by debiting a right-of-use asset and\ncrediting a lease liability.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أبرمت Neary عقدًا لاستئجار حواسيب من Baldwin ابتداءً من 1 يناير من السنة 1. وفيما يلي البيانات:\nمدة الإيجار: 4 سنوات\nالعمر الإنتاجي للحواسيب: 5 سنوات\nالقيمة الحالية لدفعات الإيجار المستقبلية: $100,000\nالقيمة العادلة للأصل في تاريخ الإيجار: 105,000\nمعدل الفائدة الضمني المعروف للمستأجر: 10%\nتنتقل ملكية الأصل من Baldwin إلى Neary في نهاية المدة. وصنفت Neary العقد عقد إيجار رأسمالي (تمويلي بالمصطلح الحالي) وتستخدم القسط الثابت للأصول المماثلة.\nكيف يعرض العقد في دفاتر Neary في 1 يناير من السنة 1؟",
+    "choicesAr": [
+      "أصل فقط.",
+      "أصل والتزام.",
+      "التزام فقط.",
+      "مصروف والتزام."
+    ],
+    "explanationAr": "يصنف العقد تمويليًا لانتقال ملكية الأصل إلى المستأجر في نهاية المدة. ويثبت المستأجر أصل حق الاستخدام مدينًا والتزام الإيجار دائنًا، مع مراعاة أي دفعات عند البدء."
   },
   {
     "unit": 4,
@@ -911,7 +967,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Under a finance lease, the lessee recognizes a right-of-use\nasset and lease liability at an amount equal to the present\nvalue of the lease payments ($100,000) given no initial direct\ncosts. Because the lease provides for the transfer of\nownership, the lease is a finance lease, and the lessee should\namortize the right-of-use asset using the straight-line method\nover the estimated useful life (5 years). Annual expense is\n$20,000 ($100,000 ÷ 5 years).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أبرمت Neary عقدًا لاستئجار حواسيب من Baldwin ابتداءً من 1 يناير من السنة 1. وفيما يلي البيانات:\nمدة الإيجار: 4 سنوات\nالعمر الإنتاجي للحواسيب: 5 سنوات\nالقيمة الحالية لدفعات الإيجار المستقبلية: $100,000\nالقيمة العادلة للأصل في تاريخ الإيجار: 105,000\nمعدل الفائدة الضمني المعروف للمستأجر: 10%\nتنتقل ملكية الأصل من Baldwin إلى Neary في نهاية المدة. وصنفت Neary العقد عقد إيجار رأسمالي (تمويلي بالمصطلح الحالي) وتستخدم القسط الثابت للأصول المماثلة.\nما مصروف الإطفاء السنوي الذي تثبته Neary للحواسيب؟",
+    "choicesAr": [
+      "$20,000",
+      "$21,000",
+      "$25,000",
+      "$26,250"
+    ],
+    "explanationAr": "وفق الإيجار التمويلي وفي غياب تكاليف مباشرة أولية أو دفعات مقدمة أو حوافز، يثبت أصل حق الاستخدام والتزام الإيجار بالقيمة الحالية للدفعات ($100,000). وبما أن العقد ينقل الملكية، يطفأ الأصل بالقسط الثابت على عمره الإنتاجي المقدر (5 سنوات). ويبلغ المصروف السنوي $20,000 ($100,000 ÷ 5 سنوات)، بافتراض عدم وجود قيمة متبقية."
   },
   {
     "unit": 4,
@@ -928,7 +992,15 @@
     ],
     "answerIndex": 1,
     "explanation": "A short-term lease has a term of 12 or fewer months and does\nnot include a purchase option reasonably expected to be\nexercised. For this type of lease, the lessee may elect not to\nrecognize the right-of-use asset and lease liability.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "إذا استخدم المستأجر تمويلًا خارج قائمة المركز المالي، فأي مما يلي قد يفسر اقتناء حق استخدام الأصول؟",
+    "choicesAr": [
+      "نقدًا.",
+      "بعقود إيجار قصيرة الأجل.",
+      "بعقود إيجار تمويلية.",
+      "بتسهيل ائتماني."
+    ],
+    "explanationAr": "الإيجار قصير الأجل مدته 12 شهرًا أو أقل ولا يتضمن خيار شراء مؤكد الممارسة بدرجة معقولة وفق المعايير الأمريكية. ويمكن اختيار عدم إثبات أصل حق الاستخدام والتزام الإيجار لهذا النوع."
   },
   {
     "unit": 4,
@@ -945,7 +1017,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A lease is classified as a sales-type lease by the lessor and as\na finance lease by the lessee if, at lease commencement, the\nlease includes an option to purchase the leased asset that the\nlessee is reasonably certain to exercise.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يحقق معيارًا لتصنيف الإيجار تمويليًا لدى المستأجر؟",
+    "choicesAr": [
+      "العقد يتعلق بمعدات غير متخصصة.",
+      "ضمان طرف ثالث للقيمة المتبقية.",
+      "القيمة الحالية للدفعات 75% من القيمة العادلة للأصل.",
+      "المستأجر متأكد بدرجة معقولة من ممارسة خيار الشراء."
+    ],
+    "explanationAr": "يصنف العقد تمويليًا لدى المستأجر ومن نوع البيع لدى المؤجر وفق المعايير الأمريكية إذا تضمن عند البدء خيار شراء يكون المستأجر متأكدًا بدرجة معقولة من ممارسته."
   },
   {
     "unit": 4,
@@ -979,7 +1059,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The lease transfers ownership; thus, W Co. is entitled to claim\namortization on the equipment. Given an amortizable base of\n$10,000 and a 5-year useful life, the annual amortization\nexpense is $2,000 ($10,000 ÷ 5 years).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 يوليو من السنة 1 أجرت V معدات تصنيع إلى W لاستخدامها في الإنتاج. والعقد غير قابل للإلغاء وينقل الملكية. وفي تاريخ البدء بلغ أساس الإطفاء $10,000 ويطبق القسط الثابت على العمر الإنتاجي المتبقي 5 سنوات. عن الفترة السنوية المنتهية في 31 ديسمبر من السنة 2، ما مبلغ الإطفاء ومن يثبته؟",
+    "choicesAr": [
+      "$1,000؛ V.",
+      "$2,000؛ W.",
+      "$1,000؛ W.",
+      "$2,000؛ V."
+    ],
+    "explanationAr": "لأن الإيجار ينقل الملكية، يثبت W إطفاء أصل حق الاستخدام. وبأساس إطفاء $10,000 وعمر 5 سنوات يبلغ الإطفاء السنوي $2,000 ($10,000 ÷ 5 سنوات)."
   },
   {
     "unit": 4,
@@ -1030,7 +1118,15 @@
     ],
     "answerIndex": 1,
     "explanation": "As an accounting policy for short-term leases, a lessee may\nelect not to recognize the right-of-use asset and lease liability.\nA short-term lease is a lease that has a lease term of 12\nmonths or less and does not include a purchase option that\nthe lessee is reasonably certain to exercise. Under this short-\nterm lease exception, the lessee recognizes lease payments\nas rent expense on the straight-line basis over the full lease\nterm.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي شرط لاختيار المستأجر سياسة عدم إثبات أصل حق الاستخدام والتزام الإيجار وفق المعايير الأمريكية؟",
+    "choicesAr": [
+      "القيمة العادلة للأصل $5,000 أو أقل.",
+      "مدة العقد 12 شهرًا أو أقل في تاريخ البدء.",
+      "وجود قيمة متبقية مضمونة من المستأجر.",
+      "مدة العقد 24 شهرًا أو أقل عند البدء وينقل الملكية إلى المستأجر في النهاية."
+    ],
+    "explanationAr": "يجوز اختيار سياسة عدم إثبات أصل حق الاستخدام والتزام الإيجار للإيجارات قصيرة الأجل. وهي عقود مدتها 12 شهرًا أو أقل ولا تشمل خيار شراء مؤكد الممارسة بدرجة معقولة. وبموجب الإعفاء يثبت المستأجر الدفعات مصروف إيجار بالقسط الثابت على كامل المدة."
   },
   {
     "unit": 4,
@@ -1047,7 +1143,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A lessee’s finance and operating leases result in the same\naccounting for (1) initial recognition and measurement of the\nright-of-use asset and the lease liability and (2) subsequent\nmeasurement of the lease liability. The reduction of the lease\nliability is the excess of the periodic lease payment over the\ninterest expense recognized during the period.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أبرمت Quinn بصفتها مستأجرًا عقدين مع Jacob Equipment. وصنفت A تمويليًا وB تشغيليًا. ومدة كل عقد 5 سنوات والدفعات السنوية متساوية. أي المعالجات التالية متماثلة في العقدين؟",
+    "choicesAr": [
+      "تصنيف الدفعات النقدية ضمن التدفقات التشغيلية الخارجة.",
+      "إطفاء أصل حق الاستخدام بالقسط الثابت على العمر الإنتاجي للأصل.",
+      "إثبات مصروف إيجار واحد متساوٍ كل فترة.",
+      "تسجيل انخفاض التزام الإيجار عند سداد الدفعات الدورية."
+    ],
+    "explanationAr": "تتماثل محاسبة الإيجار التمويلي والتشغيلي لدى المستأجر من حيث (1) الاعتراف والقياس الأولي لأصل حق الاستخدام والالتزام، و(2) القياس اللاحق للالتزام. ويبلغ انخفاض الالتزام الفرق بين الدفعة الدورية والفائدة المحتسبة خلال الفترة."
   },
   {
     "unit": 4,
@@ -1064,7 +1168,15 @@
     ],
     "answerIndex": 0,
     "explanation": "For finance and operating leases, a lessee must recognize a\nlease liability and a right-of-use asset at the lease\ncommencement date. A lease liability is measured initially at\nthe present value of the lease payments to be made over the\nlease term.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "هل يستخدم المستأجر القيمة الحالية لدفعات الإيجار لتحديد مبلغ الالتزام في كل من التصنيفين التاليين؟\nالإيجار التمويلي | الإيجار التشغيلي",
+    "choicesAr": [
+      "نعم | نعم",
+      "نعم | لا",
+      "لا | لا",
+      "لا | نعم"
+    ],
+    "explanationAr": "في الإيجار التمويلي والتشغيلي يثبت المستأجر عند بدء العقد التزام الإيجار وأصل حق الاستخدام، مع مراعاة الإعفاءات. ويقاس الالتزام أولًا بالقيمة الحالية للدفعات غير المسددة التي ستدفع خلال مدة العقد."
   },
   {
     "unit": 4,
