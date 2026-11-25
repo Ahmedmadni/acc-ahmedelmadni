@@ -1670,7 +1670,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Interest payable equals the face amount of the bonds, times\nthe nominal (stated) interest rate, times the portion of the\ninterest period included in the accounting period. The yield\nrate and sale between interest periods for an amount including\naccrued interest do not affect interest payable. Accordingly,\ninterest payable equals $16,000 [($800,000 × 8%) × (3 ÷\n12 months)].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 نوفمبر أصدرت Mason سندات بقيمة $800,000 لأجل 10 سنوات وفائدة 8% مؤرخة في 1 أكتوبر. وبيعت بعائد 10% مقابل $700,000 بالإضافة إلى الفائدة المستحقة. تدفع الفائدة في 1 أبريل و1 أكتوبر من كل سنة. ما الفائدة المستحقة الدفع في قائمة المركز المالي في 31 ديسمبر؟",
+    "choicesAr": [
+      "$17,500",
+      "$16,000",
+      "$11,667",
+      "$10,667"
+    ],
+    "explanationAr": "تساوي الفائدة المستحقة القيمة الاسمية مضروبة في معدل الفائدة الاسمي ونسبة الفترة المنقضية. ولا يؤثر العائد الفعلي أو بيع السندات بين تاريخي دفع الفائدة مع تحصيل الفائدة المستحقة في مبلغ الفائدة التعاقدية المستحقة للدفع. لذا تبلغ $16,000 [($800,000 × 8%) × (3 ÷ 12 شهرًا)]."
   },
   {
     "unit": 4,
