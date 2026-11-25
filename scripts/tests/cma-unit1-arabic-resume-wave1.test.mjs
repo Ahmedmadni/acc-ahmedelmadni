@@ -55,3 +55,10 @@ test("Unit 1 consolidation wave 6 preserves source, answers and numerical parity
  assert.equal(1400000-100000*10,400000);assert.equal(4+1,5);assert.equal(600000,Number(rows.find(r=>r.section===6&&r.number===20).choices[0].replace(/[$,]/g,"")));
  assert.ok(rows.filter(r=>r.stemAr&&r.choicesAr&&r.explanationAr).length>=193);
 });
+
+const wave7Pins=new Map([[21,[208,3,"274f60ed"]],[22,[209,0,"cbf9c68c"]],[23,[210,0,"95546555"]],[24,[211,2,"7173dcfe"]],[25,[212,1,"4f8fe329"]],[26,[213,3,"cde93444"]],[27,[214,3,"7cfd24b1"]],[28,[215,2,"bcfe809f"]],[30,[217,0,"eb908231"]]]);
+test("Unit 1 consolidation wave 7 preserves source, answers and numerical parity",()=>{
+ for(const [n,[page,index,hash]] of wave7Pins){const r=rows.find(r=>r.section===6&&r.number===n);assert.equal(r.page,page);assert.equal(r.answerIndex,index);assert.equal(r.answerStatus,"source");assert.equal(fingerprint(JSON.stringify([r.stem,r.choices,r.explanation,r.answerIndex,r.page])),hash);assert.equal(validateCmaTranslation({question:{en:r.stem},choices:{en:r.choices},explanation:{en:r.explanation}},{question:r.stemAr,choices:r.choicesAr,explanation:r.explanationAr}).valid,true,String(n));for(const [en,ar] of [[r.stem,r.stemAr],...r.choices.map((c,i)=>[c,r.choicesAr[i]]),[r.explanation,r.explanationAr]])assert.deepEqual(cmaNumericTokens(ar),cmaNumericTokens(en),String(n));}
+ const adapter=read("src/data/cma-questions-gleim-2025-vol1.ts");const held=["1.4.23","1.5.16","1.5.17","1.5.39","1.5.41","1.5.54","1.5.59","1.5.64","1.5.65","1.5.66","1.6.6","1.6.9","1.6.13","1.6.19","1.6.29"];for(const r of rows.filter(r=>!r.stemAr)){const id=[r.unit,r.section,r.number].join(".");assert.ok(held.includes(id),id);assert.ok(adapter.includes('"'+id+'"'));}assert.equal(rows.filter(r=>!r.stemAr).length,held.length);
+ assert.equal(450000+200000-100000,550000);assert.equal(2000000+500000+100000,2600000);assert.equal(1000000+250000,1250000);assert.equal(8000000-5000000,3000000);assert.equal(8000000+800000-800000,8000000);assert.equal(rows.filter(r=>r.stemAr&&r.choicesAr&&r.explanationAr).length,202);
+});
