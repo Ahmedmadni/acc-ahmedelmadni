@@ -492,7 +492,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The entity is using a cost-to-cost accounting method. The\ninput method based on costs incurred to measure the\nprogress toward completion recognizes gross profit or revenue\nbased on the ratio of costs to date to estimated total costs.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تحسب منشأة الدخل المعترف به في السنة الثالثة من عقد إنشاء مدته 5 سنوات. وتستخدم مدخل التكاليف المتكبدة لقياس التقدم نحو الإكمال. ما النسبة المستخدمة في حساب الدخل؟",
+    "choicesAr": [
+      "تكاليف السنة 3 إلى إجمالي الفواتير.",
+      "تكاليف السنة 3 إلى إجمالي التكاليف المقدرة.",
+      "إجمالي التكاليف المتكبدة حتى تاريخه إلى إجمالي الفواتير.",
+      "إجمالي التكاليف المتكبدة حتى تاريخه إلى إجمالي التكاليف المقدرة."
+    ],
+    "explanationAr": "تستخدم المنشأة طريقة التكلفة إلى التكلفة. ويعتمد قياس التقدم والاعتراف بالإيراد أو مجمل الربح التراكمي على نسبة التكاليف المتكبدة حتى تاريخه إلى إجمالي التكاليف المقدرة، مع استبعاد المدخلات التي لا تعكس تقدم الأداء. ويطرح المعترف به سابقًا لتحديد مبلغ الفترة."
   },
   {
     "unit": 5,
@@ -509,7 +517,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The input method based on costs incurred provides for the\nrecognition of gross profit based on the relationship between\nthe costs incurred to date and estimated total costs for the\ncompletion of the contract. The total anticipated gross profit is\nmultiplied by the ratio of the costs incurred to date to the total\nestimated costs, and the product is reduced by previously\nrecognized gross profit. The percentage-of-completion at\n12/31/Yr 4 is 75% [$1,800,000 ÷ ($1,800,000 + $600,000)].\nThe total anticipated gross profit is $600,000 ($3,000,000\ncontract price – $2,400,000 expected total costs).\nConsequently, a gross profit of $150,000 [($600,000 total\ngross profit × 75%) – $300,000 previously recognized gross\nprofit] is recognized for Year 4.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم Haft باستمرار مدخل التكاليف المتكبدة لقياس التقدم نحو إكمال المشروع. وفي 10 يناير من السنة 3 بدأت عقد إنشاء بقيمة $3 ملايين. وقدرت تكلفة الإنشاء عند البدء بـ$2,250,000. وفيما يلي بيانات التقدم:\nمجمل الربح المعترف به في 12/31 السنة 3: $300,000\nالتكاليف المتكبدة من 1/10 السنة 3 حتى 12/31 السنة 4: 1,800,000\nالتكلفة المقدرة للإكمال في 12/31 السنة 4: 600,000\nما مجمل الربح في قائمة دخل السنة المنتهية في 31 ديسمبر من السنة 4؟",
+    "choicesAr": [
+      "$450,000",
+      "$300,000",
+      "$262,500",
+      "$150,000"
+    ],
+    "explanationAr": "يعتمد مدخل التكاليف المتكبدة على نسبة التكاليف التراكمية إلى إجمالي التكلفة المقدرة للإكمال. ويضرب مجمل الربح المتوقع في هذه النسبة ثم يطرح مجمل الربح المعترف به سابقًا. وتبلغ نسبة الإكمال في 12/31 السنة 4 مقدار 75% [$1,800,000 ÷ ($1,800,000 + $600,000)]. ويبلغ مجمل الربح المتوقع $600,000 ($3,000,000 سعر العقد − $2,400,000 إجمالي التكلفة المتوقعة). لذلك يعترف بمجمل ربح $150,000 [($600,000 × 75%) − $300,000 المعترف به سابقًا] في السنة 4."
   },
   {
     "unit": 5,
@@ -526,7 +542,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The cost-to-cost method recognizes revenues, costs, and\ngross profit depending on the progress made on the contract.\nGross profit recognized in the last year of the contract equals\nthe contract price, minus actual total costs, minus gross profit\npreviously recognized.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي البنود التالية يستخدم في حساب مجمل الربح المعترف به في السنة الرابعة والأخيرة من عقد يقاس تقدمه بمدخل التكاليف المتكبدة؟\nإجمالي التكاليف الفعلية | مجمل الربح المعترف به سابقًا",
+    "choicesAr": [
+      "نعم | نعم",
+      "نعم | لا",
+      "لا | نعم",
+      "لا | لا"
+    ],
+    "explanationAr": "تعترف طريقة التكلفة إلى التكلفة بالإيراد والتكاليف ومجمل الربح بحسب التقدم في العقد. ويساوي مجمل ربح السنة الأخيرة سعر العقد مطروحًا منه إجمالي التكاليف الفعلية ومجمل الربح المعترف به سابقًا."
   },
   {
     "unit": 5,
@@ -543,7 +567,15 @@
     ],
     "answerIndex": 3,
     "explanation": "In Year 1, one-third of the estimated costs of this construction\nproject were incurred [$5,400,000 ÷ ($5,400,000 +\n$10,800,000)]. The entity should therefore have recognized\none-third of the estimated gross profit in Year 1. At year-end,\nthe estimated gross profit was $1,800,000 [$18,000,000 price\n– $16,200,000 total estimated costs ($5,400,000 costs\nincurred + $10,800,000 estimated costs to complete)]. In\nYear 1, $600,000 ($1,800,000 × 1/3) should have been\nrecognized as gross profit.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم Gow مدخل التكاليف المتكبدة لقياس تقدم عقد إنشاء طويل الأجل. وفي السنة 1 بدأت عقدًا بقيمة $18 مليونًا اكتمل في السنة 2. وفيما يلي بيانات السنة 1:\nالتكاليف المتكبدة: $5,400,000\nالمتحصلات: 4,200,000\nالتكاليف المقدرة للإكمال: 10,800,000\nما مجمل الربح الذي تعترف به Gow في السنة 1؟",
+    "choicesAr": [
+      "$1,400,000",
+      "$1,200,000",
+      "$900,000",
+      "$600,000"
+    ],
+    "explanationAr": "في السنة 1 تكبدت المنشأة ثلث التكلفة المقدرة [$5,400,000 ÷ ($5,400,000 + $10,800,000)]. ولذلك تعترف بثلث مجمل الربح المقدر في السنة 1. وفي نهاية السنة بلغ مجمل الربح المتوقع $1,800,000 [$18,000,000 سعر العقد − $16,200,000 إجمالي التكلفة المقدرة ($5,400,000 متكبدة + $10,800,000 متبقية)]. وفي السنة 1 يعترف بمجمل ربح $600,000 ($1,800,000 × 1/3)."
   },
   {
     "unit": 5,
@@ -560,7 +592,15 @@
     ],
     "answerIndex": 0,
     "explanation": "In Year 1, one-half of the estimated costs of this construction\nproject were incurred [$1,750,000 ÷ ($1,750,000 +\n$1,750,000)]. The company should therefore recognize one-\nhalf of the estimated gross profit in Year 1. At year-end, the\nestimated gross profit is $700,000, equal to the contract price\nminus total estimated costs [$4,200,000 – ($1,750,000 +\n$1,750,000)]. In Year 1, $350,000 should be recognized as\ngross profit ($700,000 × 50%).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بدأت Kechara مشروع إنشاء طويل الأجل على أرض العميل في السنة 1. وفيما يلي البيانات:\nسعر العقد: $4,200,000\nالتكاليف المتكبدة في السنة 1: 1,750,000\nالتكاليف المقدرة للإكمال: 1,750,000\nالمبالغ المفوترة: 900,000\nالمتحصلات من الفواتير: 800,000\nيقاس التقدم نحو الإكمال بمدخل التكاليف المتكبدة. ما مجمل الربح المعروض في قائمة دخل السنة 1؟",
+    "choicesAr": [
+      "$350,000",
+      "$150,000",
+      "$133,333",
+      "$100,000"
+    ],
+    "explanationAr": "في السنة 1 تكبدت المنشأة نصف التكلفة المقدرة [$1,750,000 ÷ ($1,750,000 + $1,750,000)]. لذلك تعترف بنصف مجمل الربح المقدر في السنة 1. ويبلغ مجمل الربح المتوقع في نهاية السنة $700,000، وهو سعر العقد ناقص إجمالي التكلفة المقدرة [$4,200,000 − ($1,750,000 + $1,750,000)]. وفي السنة 1 يعترف بمجمل ربح $350,000 ($700,000 × 50%)."
   },
   {
     "unit": 5,
@@ -577,7 +617,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Determining the annual recognized gross profit requires\ncalculation of the estimated total gross profit.\nYear 1     Year 2\nContract price                $700,000 $700,000\nMinus: Estimated total costs\nCosts to date                $300,000 $390,000\nEstimated costs to complete 250,000 130,000\nEstimated total costs        $550,000 $520,000\nEstimated total gross profit $150,000 $180,000\nThe completion percentage for Year 2 is the ratio of costs\nincurred to date to estimated total costs ($390,000 ÷ $520,000\n= 75%). The cumulative gross profit recognized at the end of\nYear 2 is therefore $135,000 ($180,000 × 75%). Because\n$65,000 was recognized in Year 1, the amount recognized in\nYear 2 is $70,000 ($135,000 – $65,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم Paulson مدخل التكاليف المتكبدة لقياس التقدم في عقود الإنشاء طويلة الأجل. وفيما يلي بيانات عقد بقيمة $700,000، كانت تكلفته المقدرة $500,000 ومدته 3 سنوات:\nالبند | السنة 1 | السنة 2 | السنة 3\nالتكلفة التراكمية | $300,000 | $390,000 | $530,000\nالتكلفة المتبقية في نهاية السنة | 250,000 | 130,000 | 0\nفواتير التقدم | 325,000 | 220,000 | 155,000\nالمتحصلات | 300,000 | 200,000 | 200,000\nبافتراض الاعتراف بمجمل ربح $65,000 في السنة 1، ما مجمل ربح السنة 2؟",
+    "choicesAr": [
+      "$35,000",
+      "$70,000",
+      "$135,000",
+      "$170,000"
+    ],
+    "explanationAr": "يتطلب حساب مجمل الربح السنوي تقدير إجمالي مجمل الربح:\nالبند | السنة 1 | السنة 2\nسعر العقد | $700,000 | $700,000\nيطرح: إجمالي التكاليف المقدرة\nالتكلفة حتى تاريخه | $300,000 | $390,000\nالتكاليف المقدرة للإكمال | 250,000 | 130,000\nإجمالي التكلفة المقدرة | $550,000 | $520,000\nإجمالي مجمل الربح المقدر | $150,000 | $180,000\nنسبة الإكمال في السنة 2 هي نسبة التكاليف التراكمية إلى إجمالي التكلفة المقدرة ($390,000 ÷ $520,000 = 75%). لذا يبلغ مجمل الربح التراكمي في نهاية السنة 2 مبلغ $135,000 ($180,000 × 75%). وبما أنه اعترف بـ$65,000 في السنة 1، فإن مجمل الربح المعترف به في السنة 2 يبلغ $70,000 ($135,000 − $65,000)."
   },
   {
     "unit": 5,
@@ -594,7 +642,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Revenue must be recognized over time, that is, over the\n2 years of the construction period, because (1) the robot has\nno alternative use to the entity and (2) the entity has an\nenforceable right to payment for the performance completed to\ndate. In Year 1, 50% ($250,000 ÷ $500,000) of expected costs\nhas been incurred. Using the input method based on costs\nincurred, the entity recognizes 50% of the expected revenue\nfrom the contract for Year 1 ($800,000 contract price × 50% =\n$400,000). The total gross profit from the contract is expected\nto be $300,000 ($800,000 – $500,000). Thus, $150,000\n($300,000 × 50%) of gross profit ($400,000 revenue –\n$250,000 cost of goods sold) is recognized in Year 1. In\nYear 2, the contract is completed, and the total gross profit\nfrom the contract is $200,000 [$800,000 contract price –\n($250,000 + $350,000) total costs incurred]. Because\n$150,000 of gross profit was recognized in Year 1, $50,000\n($200,000 – $150,000) of gross profit is recognized in Year 2.\nThe total revenue from the contract is $800,000. Revenue of\n$400,000 was recognized in Year 1, so Year 2 revenue is\n$400,000 ($800,000 – $400,000). Cost of goods sold in Year 2\nequals the actual costs incurred of $350,000.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 يناير من السنة 1 أبرمت منشأة عقدًا لبناء روبوت لعميل، ويتوقع اكتماله في نهاية السنة 2. وحددت المنشأة أن الروبوت لا استخدام بديل له لديها، وأن لها حقًا واجب النفاذ في مقابل الأداء المنجز حتى تاريخه، وأن التقدم قابل للقياس بشكل معقول باستخدام مدخل التكاليف المتكبدة. يبلغ سعر العقد $800,000 وإجمالي التكلفة المتوقعة $500,000. وفيما يلي البيانات:\nالبند | السنة 1 | السنة 2\nالتكاليف المتكبدة سنويًا | $250,000 | $350,000\nالتكاليف المتوقعة مستقبلًا | 250,000 | 0\nما الإيراد وتكلفة المبيعات ومجمل الربح المعترف بها في السنة 2؟\nالإيراد | تكلفة المبيعات | مجمل الربح",
+    "choicesAr": [
+      "$400,000        $350,000            $50,000",
+      "$400,000         $250,000            $150,000",
+      "$800,000         $350,000            $450,000",
+      "$800,000         $600,000            $200,000"
+    ],
+    "explanationAr": "يعترف بالإيراد على مدى الزمن، أي خلال 2 سنة الإنشاء، لأن (1) الروبوت لا استخدام بديل له لدى المنشأة و(2) لها حق واجب النفاذ في مقابل الأداء المنجز. وفي السنة 1 تكبدت 50% ($250,000 ÷ $500,000) من التكاليف المتوقعة. ووفق مدخل التكاليف تعترف بـ50% من الإيراد المتوقع للسنة 1 ($800,000 × 50% = $400,000). ويبلغ مجمل الربح المتوقع $300,000 ($800,000 − $500,000). لذا يعترف بمجمل ربح $150,000 ($300,000 × 50%)، وهو ($400,000 إيراد − $250,000 تكلفة المبيعات) في السنة 1. وفي السنة 2 يكتمل العقد، ويبلغ مجمل ربحه الكلي $200,000 [$800,000 − ($250,000 + $350,000) إجمالي التكلفة]. وبما أنه اعترف بـ$150,000 في السنة 1، يعترف بـ$50,000 ($200,000 − $150,000) في السنة 2. وإجمالي الإيراد $800,000. واعترف بـ$400,000 في السنة 1، لذلك يبلغ إيراد السنة 2 مبلغ $400,000 ($800,000 − $400,000). وتساوي تكلفة المبيعات في السنة 2 التكلفة الفعلية $350,000."
   },
   {
     "unit": 5,
@@ -611,7 +667,15 @@
     ],
     "answerIndex": 0,
     "explanation": "When the outcome of the contract is not reasonably\nmeasurable but the costs incurred in satisfying the\nperformance obligation are expected to be recovered, revenue\nmust be recognized only to the extent of the costs incurred.\nRevenue recognized is based on a zero profit margin until the\nentity can reasonably measure the outcome of the\nperformance obligation.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أبرمت منشأة عقدًا لإنشاء مبنى وحددت بشكل مناسب أن التزام الأداء ينفذ على مدى الزمن. وفي مرحلة مبكرة لا يمكن قياس نتيجة العقد بشكل معقول، لكنها تتوقع استرداد التكاليف المتكبدة. كيف يعترف بإيراد العقد؟",
+    "choicesAr": [
+      "في حدود التكاليف المتكبدة فقط.",
+      "عند اكتمال الإنشاء فقط.",
+      "بالتساوي على مدة العقد بطريقة القسط الثابت.",
+      "على أساس التقدم نحو إكمال المشروع."
+    ],
+    "explanationAr": "عندما يتعذر قياس نتيجة العقد بشكل معقول مع توقع استرداد تكاليف الوفاء بالتزام الأداء، يعترف بالإيراد فقط في حدود التكاليف المتكبدة القابلة للاسترداد. ويكون هامش الربح صفرًا حتى تتمكن المنشأة من قياس التقدم بشكل معقول."
   },
   {
     "unit": 5,
@@ -628,7 +692,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The expected gross profit is $500,000 ($2,500,000 price –\n$2,000,000 expected cost). Recognized gross profit in Year 1\nis $125,000 [$500,000 × ($500,000 ÷ $2,000,000)].\nCumulative recognized gross profit in Year 2 is $350,000\n{$500,000 × [($500,000 + $900,000) ÷ $2,000,000]}.\nRecognized gross profit in Year 3 is $150,000 [($2,500,000\nprice – $500,000 – $900,000 – $600,000) actual gross profit –\n$350,000 previously recognized].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يتطلب عقد Frame بناء جسر على أرض العميل خلال 3 سنوات. وتبلغ التكلفة الإجمالية المتوقعة $2,000,000 والمقابل $2,500,000. وبلغت التكاليف الفعلية $500,000 و$900,000 و$600,000 على الترتيب خلال كل من السنوات 3. وبلغت دفعات التقدم المحصلة $600,000 و$1,200,000 و$700,000 على الترتيب. بافتراض استخدام مدخل التكاليف المتكبدة، ما مجمل ربح السنة الأخيرة؟",
+    "choicesAr": [
+      "$120,000",
+      "$125,000",
+      "$140,000",
+      "$150,000"
+    ],
+    "explanationAr": "مجمل الربح المتوقع $500,000 ($2,500,000 السعر − $2,000,000 التكلفة المتوقعة). ومجمل الربح في السنة 1 يساوي $125,000 [$500,000 × ($500,000 ÷ $2,000,000)]. ومجمل الربح التراكمي في السنة 2 يساوي $350,000 {$500,000 × [($500,000 + $900,000) ÷ $2,000,000]}. ومجمل الربح في السنة 3 يساوي $150,000 [($2,500,000 − $500,000 − $900,000 − $600,000) إجمالي الربح الفعلي − $350,000 المعترف به سابقًا]."
   },
   {
     "unit": 5,
@@ -645,7 +717,15 @@
     ],
     "answerIndex": 3,
     "explanation": "When revenue is recognized over time, the progress toward\ncomplete satisfaction of a performance obligation must be\nmeasured. This progress must be measured either by the\noutput method or the input method. To determine the\nappropriate method, an entity must consider the nature of the\ngood or service that it promised to transfer to the customer.\nThe chosen method should measure the entity’s performance\nin transferring control of the promised asset to the customer.\nThe input method recognizes revenue on the basis of (1) the\nentity’s inputs to the satisfaction of the performance obligation\nrelative to (2) the total expected inputs to the satisfaction of\nthat performance obligation. Examples of input methods\ninclude (1) resources consumed, (2) labor hours expended,\n(3) costs incurred, (4) time elapsed, or (5) machine hours\nused. When an entity’s inputs are incurred evenly over time,\nrecognition of revenue on a straight-line basis may be\nappropriate.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عند الاعتراف بإيراد عقود العملاء على مدى الزمن، بأي طريقة يمكن قياس التقدم نحو الوفاء الكامل بالتزام الأداء؟",
+    "choicesAr": [
+      "طريقة النقطة الزمنية.",
+      "طريقة هامش الربح الصفري.",
+      "طريقة مجمل الربح المقدر.",
+      "مدخل المدخلات."
+    ],
+    "explanationAr": "عند الاعتراف بالإيراد على مدى الزمن يجب قياس التقدم نحو الوفاء الكامل بالتزام الأداء، باستخدام مدخل المخرجات أو المدخلات. ويختار الأسلوب الذي يعكس أداء المنشأة في نقل السيطرة على السلعة أو الخدمة الموعودة. ويقيس مدخل المدخلات الإيراد بناء على نسبة (1) المدخلات المستخدمة للوفاء بالتزام الأداء إلى (2) إجمالي المدخلات المتوقعة. ومن أمثلته: (1) الموارد المستهلكة، (2) ساعات العمل، (3) التكاليف المتكبدة، (4) الزمن المنقضي، (5) ساعات تشغيل الآلات. وقد يناسب القسط الثابت عندما تتكبد المدخلات بالتساوي على مدى الزمن."
   },
   {
     "unit": 5,
@@ -662,7 +742,15 @@
     ],
     "answerIndex": 1,
     "explanation": "As soon as an estimated loss becomes evident, it must be\nrecognized in full. The total of the costs incurred in Year 1 plus\nestimated costs to complete is $3,100,000 ($930,000 +\n$2,170,000). Because this sum exceeds the $3 million fixed-\nprice construction contract amount, a $100,000 loss should be\nrecognized.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم Hansen مدخل التكاليف المتكبدة للاعتراف بالإيراد. وفي السنة 1 بدأت عقد إنشاء بسعر ثابت قدره $3 ملايين. وأظهرت السجلات للسنة المنتهية في 31 ديسمبر من السنة 1:\nالتكاليف المتكبدة: $930,000\nالتكاليف المقدرة للإكمال: 2,170,000\nالمبالغ المفوترة: 1,100,000\nالمتحصلات: 700,000\nما الخسارة الواجب الاعتراف بها في السنة 1؟",
+    "choicesAr": [
+      "$230,000",
+      "$100,000",
+      "$30,000",
+      "$0"
+    ],
+    "explanationAr": "وفق نموذج خسائر عقود الإنشاء المنطبق على المسألة، يعترف بكامل الخسارة المتوقعة فور اتضاحها. ويبلغ مجموع التكاليف المتكبدة في السنة 1 والمتبقية المقدرة $3,100,000 ($930,000 + $2,170,000). ولأن المجموع يتجاوز سعر العقد الثابت البالغ $3 ملايين، يعترف بخسارة $100,000."
   },
   {
     "unit": 5,
@@ -679,7 +767,15 @@
     ],
     "answerIndex": 1,
     "explanation": "At the end of Year 1, Project 1 is 66 2/3% complete [$240,000\n÷ ($240,000 + $120,000)] and Project 2 is 87 1/2% complete\n[$280,000 ÷ ($280,000 + $40,000)]. Each project’s percentage\nof completion is multiplied by its expected total gross profit.\nAccordingly, Pell recognizes $40,000 [($420,000 contract\nprice – $240,000 costs incurred – $120,000 additional\nestimated costs) × 66 2/3%] of gross profit for Project 1.\nHowever, Project 2 estimates indicate a loss of $20,000\n($300,000 – $280,000 – $40,000). Because the full amount of\na loss is reported immediately irrespective of the accounting\nmethod used, a gross profit of $20,000 [$40,000 Project 1 +\n$(20,000) Project 2] is recognized.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فيما يلي بيانات مشروعات الإنشاء طويلة الأجل لشركة Pell التي بدأت في السنة 1:\nالبند | المشروع 1 | المشروع 2\nسعر العقد | $420,000 | $300,000\nالتكاليف المتكبدة خلال السنة 1 | 240,000 | 280,000\nالتكاليف المقدرة للإكمال | 120,000 | 40,000\nالمفوتر للعملاء خلال السنة 1 | 150,000 | 270,000\nالمحصل من العملاء خلال السنة 1 | 90,000 | 250,000\nإذا استخدمت Pell مدخل التكاليف المتكبدة، فما مجمل الربح أو الخسارة في قائمة دخل السنة 1؟",
+    "choicesAr": [
+      "$(20,000)",
+      "$20,000",
+      "$22,500",
+      "$40,000"
+    ],
+    "explanationAr": "في نهاية السنة 1 بلغ تقدم المشروع 1 نسبة 66 2/3% [$240,000 ÷ ($240,000 + $120,000)] والمشروع 2 نسبة 87 1/2% [$280,000 ÷ ($280,000 + $40,000)]. ويضرب تقدم المشروع المربح في إجمالي مجمل ربحه المتوقع. وبذلك تعترف Pell بمبلغ $40,000 [($420,000 − $240,000 − $120,000) × 66 2/3%] مجمل ربح المشروع 1. أما تقديرات المشروع 2 فتشير إلى خسارة $20,000 ($300,000 − $280,000 − $40,000). ووفق نموذج خسائر عقود الإنشاء المنطبق يعترف بكامل الخسارة فورًا، لذا يكون مجمل الربح الصافي $20,000 [$40,000 المشروع 1 + $(20,000) المشروع 2]."
   },
   {
     "unit": 5,
@@ -696,7 +792,15 @@
     ],
     "answerIndex": 2,
     "explanation": "At the end of Year 1, total cost was expected to be $400 ($100\nincurred + $300 estimated cost to complete), and estimated\ntotal profit was $600 ($1,000 price – $400 estimated total\ncost). Thus, the amount of profit recognized in Year 1 was\n$150 [$600 × ($100 cost incurred ÷ $400 estimated total\ncost)]. The project was completed in Year 2 at an additional\ncost of $200. Actual profit was therefore $700 ($1,000 – $300\nactual total cost). Profit recognized in Year 2 is $550 ($700\ntotal – $150 recognized in Year 1).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تعترف شركة إنشاء بإيرادات عقودها على مدى الزمن باستخدام مدخل التكاليف المتكبدة. وفيما يلي البيانات:\nالبند | السنة 1 | السنة 2\nتكاليف الإنشاء | $100 | $200\nالتكلفة المقدرة للإكمال في نهاية السنة | 300 | 0\nسعر العقد $1,000. ما الربح المعترف به في السنة 2؟",
+    "choicesAr": [
+      "$150",
+      "$400",
+      "$550",
+      "$800"
+    ],
+    "explanationAr": "في نهاية السنة 1 كانت التكلفة الإجمالية المتوقعة $400 ($100 متكبدة + $300 مقدرة للإكمال)، وإجمالي الربح المقدر $600 ($1,000 السعر − $400 التكلفة). لذلك بلغ الربح المعترف به في السنة 1 مبلغ $150 [$600 × ($100 ÷ $400)]. واكتمل المشروع في السنة 2 بتكلفة إضافية $200. لذا بلغ الربح الفعلي $700 ($1,000 − $300 إجمالي التكلفة الفعلية). والربح المعترف به في السنة 2 هو $550 ($700 إجمالي − $150 معترف به في السنة 1)."
   },
   {
     "unit": 5,
@@ -713,7 +817,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Using the cost-to-cost method, the estimated loss from the\nproject is $1,000,000 ($7,000,000 contract price – $2,000,000\nactual costs in the first year – $6,000,000 estimated remaining\ncosts to complete the project). As soon as an estimated loss\non any project becomes apparent, it must be recognized in\nfull. Therefore, the total $1,000,000 loss must be recognized.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لدى Howard البيانات التالية للسنة الأولى من عقد إنشاء قيمته $7,000,000:\nالتكاليف الفعلية: $2,000,000\nالتكاليف المقدرة للإكمال: 6,000,000\nفواتير التقدم: 1,800,000\nالمتحصلات النقدية: 1,500,000\nما مجمل الربح أو الخسارة باستخدام مدخل التكاليف المتكبدة؟",
+    "choicesAr": [
+      "$(1,000,000)",
+      "$(200,000)",
+      "$800,000",
+      "$1,750,000"
+    ],
+    "explanationAr": "باستخدام التكلفة إلى التكلفة تبلغ خسارة المشروع المقدرة $1,000,000 ($7,000,000 سعر العقد − $2,000,000 تكلفة السنة الأولى − $6,000,000 التكاليف المتبقية المقدرة). ووفق نموذج خسائر عقود الإنشاء المنطبق يعترف بكامل الخسارة عند اتضاحها، أي $1,000,000."
   },
   {
     "unit": 5,
@@ -730,7 +842,15 @@
     ],
     "answerIndex": 2,
     "explanation": "When the outcome of the contract is not reasonably\nmeasurable but the costs incurred in satisfying the\nperformance obligation are expected to be recovered, revenue\nmust be recognized only to the extent of the costs incurred.\nRevenue recognized is based on a zero profit margin until the\nentity can reasonably measure the outcome of the\nperformance obligation.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تعترف منشأة بإيراد عقد طويل الأجل على مدى الزمن. وفي بداية التنفيذ لا تستطيع قياس النتيجة بشكل معقول لكنها تتوقع استرداد التكاليف المتكبدة. على أي أساس يعترف بالإيراد؟",
+    "choicesAr": [
+      "مدخل المخرجات.",
+      "القسط الثابت.",
+      "هامش ربح صفري.",
+      "طريقة العقد المكتمل."
+    ],
+    "explanationAr": "عندما يتعذر قياس تقدم الوفاء بالتزام الأداء بشكل معقول مع توقع استرداد التكاليف المتكبدة، يعترف بالإيراد فقط في حدود تلك التكاليف القابلة للاسترداد. ويكون هامش الربح صفرًا حتى يمكن قياس التقدم بشكل معقول."
   },
   {
     "unit": 5,
@@ -747,7 +867,15 @@
     ],
     "answerIndex": 1,
     "explanation": "An entity must recognize revenue when (or as) it satisfies each\nperformance obligation in the contract by transferring the\npromised good or service to a customer. Because the\ncustomer controls the building as it is constructed, the contract\nmeets the criteria for recognition of revenue over time. Thus,\nthe contractor must recognize revenue as progress is made\ntoward completion of the contract.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لدى مقاول عقد بسعر ثابت لإنشاء مبنى على أرض العميل. ويتوقع اكتماله خلال 2 سنة. وترسل فواتير التقدم للعميل كل ربع سنة. ما التوقيت المناسب للاعتراف بالإيراد إذا أمكن قياس نتيجة العقد بشكل معقول؟",
+    "choicesAr": [
+      "بعد توقيع العقد.",
+      "مع التقدم نحو إكمال العقد.",
+      "عند تحصيل النقد.",
+      "فقط في حدود التكاليف المتكبدة."
+    ],
+    "explanationAr": "تعترف المنشأة بالإيراد عندما أو مع الوفاء بكل التزام أداء بنقل السلعة أو الخدمة الموعودة للعميل. ولأن العميل يسيطر على المبنى أثناء إنشائه وفق الحالة المعروضة، تتحقق شروط الاعتراف على مدى الزمن. لذا يعترف المقاول بالإيراد وفق التقدم نحو إكمال العقد."
   },
   {
     "unit": 5,
@@ -764,7 +892,15 @@
     ],
     "answerIndex": 1,
     "explanation": "If the progress to completion is based on the relationship of\nthe cumulative costs incurred to date to estimated total costs\nat completion, the cumulative amount incurred at 12/31/Year 1\nwas $1,500,000 ($7,500,000 × 20%). At 12/31/Year 2, the\ncumulative amount incurred was $4,800,000 ($8,000,000 ×\n60%). The difference of $3,300,000 ($4,800,000 –\n$1,500,000) equals contract costs incurred during Year 2.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم Cinnabar مدخل التكاليف المتكبدة للاعتراف بإيراد التزام أداء ينفذ على مدى الزمن. وفي السنة 1 أبرمت عقدًا بسعر ثابت لإنشاء مبنى مكاتب مقابل $10 ملايين. وفيما يلي البيانات:\nفي 31 ديسمبر | السنة 1 | السنة 2\nنسبة الإكمال | 20% | 60%\nإجمالي التكاليف المقدرة عند الإكمال | $7,500,000 | $8,000,000\nمجمل الربح التراكمي المعترف به | 500,000 | 1,200,000\nما تكاليف العقد المتكبدة خلال السنة 2؟",
+    "choicesAr": [
+      "$3,200,000",
+      "$3,300,000",
+      "$3,500,000",
+      "$4,800,000"
+    ],
+    "explanationAr": "إذا قيس التقدم بنسبة التكاليف التراكمية إلى إجمالي التكاليف المقدرة عند الإكمال، بلغت التكاليف التراكمية في 12/31 السنة 1 مبلغ $1,500,000 ($7,500,000 × 20%). وفي 12/31 السنة 2 بلغت $4,800,000 ($8,000,000 × 60%). ويمثل الفرق $3,300,000 ($4,800,000 − $1,500,000) تكاليف العقد خلال السنة 2."
   },
   {
     "unit": 5,
@@ -781,7 +917,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The input method based on costs incurred recognizes revenue\nbased on the stage of completion of the contract. The\nprogress toward completion of the project is the calculation of\nratio of the contract costs incurred to date to the estimated\ntotal costs. The percentage-of-completion at year-end on the\ncost-to-cost basis is 35% ($700,000 ÷ $2,000,000). The gross\nprofit for Year 1 is the anticipated gross profit on the contract\ntimes the completion percentage. Thus, profit for Year 1 is\n$350,000 [($3,000,000 – $2,000,000) × 35%].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بدأت شركة عقد إنشاء طويل الأجل في السنة 1 بقيمة $3,000,000. وفيما يلي البيانات في نهاية كل سنة:\nالبند | السنة 1 | السنة 2 | السنة 3\nإجمالي التكلفة المقدرة | $2,000,000 | $2,000,000 | $2,000,000\nالتكلفة المتكبدة | 700,000 | 900,000 | 400,000\nالفواتير | 800,000 | 1,200,000 | 1,000,000\nالمتحصلات | 600,000 | 1,200,000 | 1,200,000\nوفق مدخل التكاليف المتكبدة، ما مجمل ربح السنة 1؟",
+    "choicesAr": [
+      "$(100,000)",
+      "$100,000",
+      "$200,000",
+      "$350,000"
+    ],
+    "explanationAr": "يعترف مدخل التكاليف المتكبدة بالإيراد وفق مرحلة الإكمال. ويقاس التقدم بنسبة التكاليف التراكمية إلى إجمالي التكلفة المقدرة. وتبلغ نسبة الإكمال في نهاية السنة 35% ($700,000 ÷ $2,000,000). ومجمل ربح السنة 1 يساوي إجمالي الربح المتوقع مضروبًا في نسبة الإكمال. لذا يبلغ ربح السنة 1 مبلغ $350,000 [($3,000,000 − $2,000,000) × 35%]."
   },
   {
     "unit": 5,
@@ -798,7 +942,15 @@
     ],
     "answerIndex": 0,
     "explanation": "By the end of Year 1, 35% [$700,000 ÷ ($700,000 +\n$1,300,000)] of total expected costs have been incurred.\nUsing the input method based on costs incurred, 35% of the\nrevenue from the contract is recognized in Year 1. Thus,\n$875,000 ($2,500,000 × 35%) of revenue from this contract is\nrecognized in Year 1.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 يناير من السنة 1 أبرمت Big عقدًا لبناء جسر على أرض العميل مقابل $2,500,000. ويتوقع اكتمال الجسر بنهاية السنة 3. وتحدد Big أن التقدم نحو الإكمال قابل للقياس بشكل معقول باستخدام مدخل التكاليف المتكبدة. وفي بداية العقد قدرت التكلفة الإجمالية بـ$1,700,000. وفيما يلي (1) التكاليف الفعلية لكل سنة، و(2) التكاليف المتوقعة للإكمال، و(3) المبالغ المفوترة للعميل:\nالبند | السنة 1 | السنة 2 | السنة 3\nالتكاليف المتكبدة سنويًا | $700,000 | $500,000 | $800,000\nالتكاليف المتوقعة في السنوات التالية | 1,300,000 | 675,000 | 0\nالمبالغ المفوترة والمحصلة سنويًا | 700,000 | 950,000 | 850,000\nما إيراد العقد المعترف به في قائمة دخل السنة 1؟",
+    "choicesAr": [
+      "$875,000",
+      "$650,000",
+      "$700,000",
+      "$175,000"
+    ],
+    "explanationAr": "بنهاية السنة 1 تكبدت المنشأة 35% [$700,000 ÷ ($700,000 + $1,300,000)] من إجمالي التكاليف المتوقعة. وباستخدام مدخل التكاليف المتكبدة يعترف بـ35% من إيراد العقد في السنة 1. لذلك يعترف بإيراد $875,000 ($2,500,000 × 35%) في السنة 1."
   },
   {
     "unit": 5,
@@ -832,7 +984,15 @@
     ],
     "answerIndex": 2,
     "explanation": "In this contract, revenue is recognized over time and based on\nthe progress toward completion. The progress toward\ncompletion is measured using the input method based on\ncosts incurred. The construction was completed in Year 3.\nAccordingly, the entire gross profit from the contract of\n$500,000 [$2,500,000 – ($700,000 + $500,000 + $800,000)]\nmust be recognized by the end of Year 3. At the end of Year\n2, the total expected gross profit from the contract was\n$625,000 [$2,500,000 – ($700,000 + $500,000 + $675,000)].\nBy the end of Year 2, 64% [($700,000 + $500,000) ÷\n($700,000 + $500,000 + $675,000)] of the expected contract\ncosts had been incurred. Because the recognized gross profit\nin the first 2 years of the contract was $400,000 ($625,000 ×\n64%), the gross profit recognized in Year 3 is $100,000\n($500,000 – $400,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 يناير من السنة 1 أبرمت Big عقدًا لبناء جسر على أرض العميل مقابل $2,500,000. ويتوقع اكتمال الجسر بنهاية السنة 3. وتحدد Big أن التقدم نحو الإكمال قابل للقياس بشكل معقول باستخدام مدخل التكاليف المتكبدة. وفي بداية العقد قدرت التكلفة الإجمالية بـ$1,700,000. وفيما يلي (1) التكاليف الفعلية لكل سنة، و(2) التكاليف المتوقعة للإكمال، و(3) المبالغ المفوترة للعميل:\nالبند | السنة 1 | السنة 2 | السنة 3\nالتكاليف المتكبدة سنويًا | $700,000 | $500,000 | $800,000\nالتكاليف المتوقعة في السنوات التالية | 1,300,000 | 675,000 | 0\nالمبالغ المفوترة والمحصلة سنويًا | 700,000 | 950,000 | 850,000\nما مجمل ربح العقد المعترف به في قائمة دخل السنة 3؟",
+    "choicesAr": [
+      "$500,000",
+      "$50,000",
+      "$100,000",
+      "$166,667"
+    ],
+    "explanationAr": "يعترف بالإيراد على مدى الزمن حسب التقدم نحو الإكمال، المقاس بمدخل التكاليف المتكبدة. واكتمل الإنشاء في السنة 3. لذلك يجب الاعتراف بإجمالي مجمل ربح العقد $500,000 [$2,500,000 − ($700,000 + $500,000 + $800,000)] بحلول نهاية السنة 3. وفي نهاية السنة 2 بلغ إجمالي مجمل الربح المتوقع $625,000 [$2,500,000 − ($700,000 + $500,000 + $675,000)]. وبنهاية السنة 2 تكبدت المنشأة 64% [($700,000 + $500,000) ÷ ($700,000 + $500,000 + $675,000)] من التكاليف المتوقعة. ولأن مجمل الربح لأول 2 سنة بلغ $400,000 ($625,000 × 64%)، يبلغ مجمل الربح في السنة 3 مبلغ $100,000 ($500,000 − $400,000)."
   },
   {
     "unit": 5,
@@ -866,7 +1026,15 @@
     ],
     "answerIndex": 2,
     "explanation": "When the outcome of the contract is not reasonably\nmeasurable, but the costs incurred in satisfying the\nperformance obligation are expected to be recovered, revenue\nmust be recognized only to the extent of the costs incurred.\nRevenue recognized is based on a zero profit margin until the\nentity can reasonably measure the outcome of the\nperformance obligation. Because the costs incurred are\nexpected to be recovered, revenue is recognized equal to the\ncosts incurred of $450,000 in Year 1.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 أكتوبر من السنة 1 أبرمت Little عقدًا لإنشاء مصنع على أرض العميل مقابل $1,000,000. ويتوقع اكتماله بنهاية السنة 5. ووفق السياسة المحاسبية يقاس التقدم بمدخل التكاليف المتكبدة. وفي السنة 1 تكبدت Little مبلغ $450,000 وفوترت العميل بمبلغ $600,000. وفي نهاية السنة 1 لم تستطع تقدير إجمالي تكلفة الإنشاء أو التقدم بشكل معقول، لكنها تتوقع استرداد التكاليف المتكبدة. ما إيراد العقد في قائمة دخل السنة 1؟",
+    "choicesAr": [
+      "$150,000",
+      "$600,000",
+      "$450,000",
+      "$0"
+    ],
+    "explanationAr": "عندما يتعذر قياس نتيجة العقد بشكل معقول مع توقع استرداد تكاليف الوفاء بالتزام الأداء، يعترف بالإيراد في حدود التكاليف المتكبدة القابلة للاسترداد. ويكون هامش الربح صفرًا حتى يمكن قياس التقدم بشكل معقول. ولأن التكاليف متوقع استردادها، يعترف بإيراد يعادلها قدره $450,000 في السنة 1."
   },
   {
     "unit": 5,
