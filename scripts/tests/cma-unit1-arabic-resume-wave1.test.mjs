@@ -47,3 +47,11 @@ test("Unit 1 consolidation wave 5 preserves source, answers and numerical parity
  assert.equal(900-(100+200+200+400-200),200);assert.equal(1000000-800000,200000);assert.equal(600000-(850000-350000),100000);
  assert.ok(rows.filter(r=>r.stemAr&&r.choicesAr&&r.explanationAr).length>=185);
 });
+
+const wave6Pins=new Map([[11,[198,3,"bdd1ea4a"]],[12,[199,2,"86a3d15c"]],[14,[201,1,"45a00419"]],[15,[202,3,"66835b1b"]],[16,[203,2,"1881971e"]],[17,[204,3,"537c6488"]],[18,[205,2,"0124cbcb"]],[20,[207,0,"f5690e69"]]]);
+test("Unit 1 consolidation wave 6 preserves source, answers and numerical parity",()=>{
+ for(const [n,[page,index,hash]] of wave6Pins){const r=rows.find(r=>r.section===6&&r.number===n);assert.equal(r.page,page);assert.equal(r.answerIndex,index);assert.equal(r.answerStatus,"source");assert.equal(fingerprint(JSON.stringify([r.stem,r.choices,r.explanation,r.answerIndex,r.page])),hash);assert.equal(validateCmaTranslation({question:{en:r.stem},choices:{en:r.choices},explanation:{en:r.explanation}},{question:r.stemAr,choices:r.choicesAr,explanation:r.explanationAr}).valid,true,String(n));for(const [en,ar] of [[r.stem,r.stemAr],...r.choices.map((c,i)=>[c,r.choicesAr[i]]),[r.explanation,r.explanationAr]])assert.deepEqual(cmaNumericTokens(ar),cmaNumericTokens(en),String(n));}
+ const adapter=read("src/data/cma-questions-gleim-2025-vol1.ts");for(const n of [13,19]){const r=rows.find(r=>r.section===6&&r.number===n);assert.equal(r.stemAr,undefined);assert.ok(adapter.includes('"1.6.'+n+'"'));}
+ assert.equal(1400000-100000*10,400000);assert.equal(4+1,5);assert.equal(600000,Number(rows.find(r=>r.section===6&&r.number===20).choices[0].replace(/[$,]/g,"")));
+ assert.ok(rows.filter(r=>r.stemAr&&r.choicesAr&&r.explanationAr).length>=193);
+});
