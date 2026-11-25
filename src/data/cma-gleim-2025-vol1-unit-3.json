@@ -2143,7 +2143,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Under the straight-line, activity, and SYD methods, the\ndepreciable base is $40,000 ($45,000 original cost – $5,000\nestimated salvage value). Under the straight-line method, this\nbase is allocated equally to the 5 years, resulting in a\ndepreciation expense of $8,000. Under the units-of-output\nmethod, the $40,000 is allocated evenly across the estimated\nmileage to produce a depreciation charge of $.50 per mile.\nThus, first-year depreciation expense is $10,000 (20,000 miles\n× $.50). Under SYD, the depreciable base is multiplied by the\nSYD factor (Years of useful life remaining at beginning of year\n÷ Sum of the digits). SYD depreciation expense in the first\nyear is therefore $13,333 [$40,000 × (5 ÷ 15)]. Under the DDB\nmethod, the $45,000 original cost is multiplied by a rate that is\nequal to twice the straight-line rate (2 × 20% = 40%). The\nresult is a depreciation expense of $18,000 ($45,000 × 40%)\nin the first year.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "اشترت Tunis سيارة نقل بمبلغ $45,000 وعمر إنتاجي مقدر 5 سنوات أو 80,000 ميل، وقيمة متبقية $5,000. بلغت المسافة الفعلية في السنة الأولى 20,000 ميل. أي الطرق التالية ينتج عنها أعلى إهلاك للسنة الأولى؟",
+    "choicesAr": [
+      "القسط الثابت.",
+      "طريقة النشاط.",
+      "مجموع أرقام السنوات.",
+      "الرصيد المتناقص المضاعف."
+    ],
+    "explanationAr": "أساس الإهلاك في القسط الثابت والنشاط ومجموع أرقام السنوات هو $40,000 ($45,000 التكلفة − $5,000 القيمة المتبقية). ويوزع القسط الثابت هذا الأساس بالتساوي على 5 سنوات، فيبلغ الإهلاك $8,000. وفي طريقة وحدات الإنتاج توزع $40,000 على الأميال المقدرة بمعدل $.50 للميل. فيبلغ إهلاك السنة الأولى $10,000 (20,000 ميل × $.50). وفي مجموع أرقام السنوات يضرب الأساس في كسر السنوات المتبقية أول السنة على مجموع أرقامها، فيبلغ الإهلاك $13,333 [$40,000 × (5 ÷ 15)]. وفي الرصيد المتناقص المضاعف تضرب التكلفة الأصلية $45,000 في ضعف معدل القسط الثابت (2 × 20% = 40%)، فيبلغ إهلاك السنة الأولى $18,000 ($45,000 × 40%)."
   },
   {
     "unit": 3,
@@ -2160,7 +2168,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Similar to the sum-of-the-years’ digits method, the double\ndeclining balance method is an accelerated method of\ndepreciation resulting in decreasing depreciation charges over\nthe asset’s useful life. Under this method, depreciation\nexpense is calculated as follows: Carrying amount × Double\nthe straight-line rate of depreciation. The carrying amount is\ncost less accumulated depreciation (NOTE: salvage value is\nnot considered). The straight-line rate of depreciation is\ncalculated as follows: 100% ÷ Useful life. Here, that rate is\n20% (100% ÷ 5 years). Accordingly, Freer’s depreciation\nexpense in the first year under the double declining balance\nmethod is $20,000 [$50,000 × (2 × 20%)], which is greater\nthan the other methods.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "اشترت Freer آلة بمبلغ $50,000 لاستخدامها في إنتاج منتجاتها لمدة خمس سنوات، وقيمتها المتبقية $5,000. وتتوقع إنتاج 90,000 وحدة في السنة الأولى وإجمالي 450,000 وحدة. أي الطرق التالية تعطي أكبر إهلاك للسنة الأولى؟",
+    "choicesAr": [
+      "القسط الثابت.",
+      "مجموع أرقام السنوات.",
+      "الرصيد المتناقص المضاعف.",
+      "وحدات الإنتاج."
+    ],
+    "explanationAr": "كما في مجموع أرقام السنوات، تعد طريقة الرصيد المتناقص المضاعف طريقة معجلة ينخفض فيها الإهلاك مع مرور العمر الإنتاجي. ويحسب المصروف بضرب القيمة الدفترية في ضعف معدل القسط الثابت. والقيمة الدفترية هي التكلفة ناقص مجمع الإهلاك، دون طرح القيمة المتبقية عند تحديد أساس المعدل، مع عدم النزول عنها. ومعدل القسط الثابت = 100% ÷ العمر الإنتاجي، وهنا 20% (100% ÷ 5 سنوات). لذا يبلغ إهلاك السنة الأولى $20,000 [$50,000 × (2 × 20%)]، وهو أكبر من الطرق الأخرى."
   },
   {
     "unit": 3,
@@ -2177,7 +2193,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The acquisition cost of the machine includes all costs\nnecessary to prepare it for its intended use. Hence, the\ndepreciable cost is $420,000 ($400,000 invoice price + $4,000\ndelivery expense + $9,000 site preparation + $7,000 electrical\nwork). Under the DDB method, salvage value is ignored at the\nbeginning. Thus, the full $420,000 is subject to depreciation.\nGiven a 5-year life, the annual straight-line rate is 20%, and\nthe DDB rate is 40%. Depreciation for the first year is therefore\n$168,000 ($420,000 × 40%).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "اقتنت Pretoria آلة جديدة بتكلفة $400,000 وتكبدت شحنًا إلى المصنع $4,000. ودفعت $9,000 لإنشاء وتجهيز موقع الآلة و$7,000 لتركيب التوصيلات الكهربائية اللازمة. تقدر عمرها الإنتاجي بـ5 سنوات وقيمتها المتبقية بـ$30,000. وبافتراض الاقتناء في 1 يناير وإهلاك سنة كاملة، ما مصروف الإهلاك وفق الرصيد المتناقص المضاعف؟",
+    "choicesAr": [
+      "$148,000",
+      "$168,000",
+      "$160,000",
+      "$161,600"
+    ],
+    "explanationAr": "تشمل تكلفة اقتناء الآلة جميع التكاليف اللازمة لتجهيزها للاستخدام المقصود. لذلك تبلغ التكلفة $420,000 ($400,000 سعر الفاتورة + $4,000 التسليم + $9,000 تجهيز الموقع + $7,000 الأعمال الكهربائية). وفي الرصيد المتناقص المضاعف لا تطرح القيمة المتبقية من أساس المعدل أولًا، فتطبق الطريقة على كامل $420,000 مع احترام الحد الأدنى للقيمة المتبقية. وبعمر 5 سنوات يبلغ معدل القسط الثابت 20% والمعدل المضاعف 40%. لذا يبلغ إهلاك السنة الأولى $168,000 ($420,000 × 40%)."
   },
   {
     "unit": 3,
@@ -2194,7 +2218,15 @@
     ],
     "answerIndex": 1,
     "explanation": "DDB is an accelerated depreciation method that determines\nperiodic depreciation expense by multiplying the carrying\namount at the beginning of each period by a constant rate that\nis equal to twice the straight-line rate of depreciation. Given\nthat this machine has a 10-year useful life, the DDB rate is\n20%. Each year the carrying amount of the asset decreases\nby the depreciation expense recognized. Salvage value is\nignored in determining the carrying amount except as a\nminimum below which the asset may not be depreciated. The\ncarrying amount at the end of the first year was $384,000\n[$480,000 cost × (100% – 20%)]. Thus, second-year\ndepreciation is $76,800 ($384,000 × 20%).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "اشترت Sydney آلة ركبت ووضعت في الخدمة في 1 يناير من السنة 1 بتكلفة $480,000. وقدرت القيمة المتبقية بـ$80,000. وتهلك على 10 سنوات بالرصيد المتناقص المضاعف. ما مصروف الإهلاك للسنة المنتهية في 31 ديسمبر من السنة 2؟",
+    "choicesAr": [
+      "$96,000",
+      "$76,800",
+      "$64,000",
+      "$61,440"
+    ],
+    "explanationAr": "الرصيد المتناقص المضاعف طريقة معجلة تحسب مصروف الفترة بضرب القيمة الدفترية أول الفترة في معدل ثابت يعادل ضعف معدل القسط الثابت. ونظرًا إلى أن العمر 10 سنوات، يبلغ المعدل 20%. وتنخفض القيمة الدفترية سنويًا بمصروف الإهلاك. ولا تطرح القيمة المتبقية من أساس المعدل، بل تعد حدًا أدنى للقيمة الدفترية. وبلغت القيمة الدفترية في نهاية السنة الأولى $384,000 [$480,000 التكلفة × (100% − 20%)]. لذا يبلغ إهلاك السنة الثانية $76,800 ($384,000 × 20%)."
   },
   {
     "unit": 3,
@@ -2211,7 +2243,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Under the DDB method, the assets are depreciated at a\nconstant rate of 40% (200% × 20% straight-line rate). This rate\nis applied in both of the first 2 years. For Year 3, straight-line\nis used based on the remaining carrying amount. The\ncalculation is as follows:\nYear 1: $50,000 × 40%                          $20,000\nYear 2: ($50,000 – $20,000) × 40%               12,000\nYear 3: ($50,000 – $20,000 – $12,000) ÷ 3     6,000\nAccumulated depreciation, 12/31/Year 3      $38,000",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "اشترت Turtle معدات في 2 يناير من السنة 1 بمبلغ $50,000 وعمر خدمة مقدر 5 سنوات. وتطبق على أصول عمرها 5 سنوات طريقة الرصيد المتناقص المضاعف بنسبة 200% من معدل القسط الثابت في أول 2 سنة، ثم تتحول إلى القسط الثابت. ما مجمع الإهلاك في قائمة المركز المالي بتاريخ 31 ديسمبر من السنة 3؟",
+    "choicesAr": [
+      "$30,000",
+      "$38,000",
+      "$39,200",
+      "$42,000"
+    ],
+    "explanationAr": "في الرصيد المتناقص المضاعف يطبق معدل ثابت 40% (200% × 20% معدل القسط الثابت)، في أول 2 سنة. وفي السنة 3 يستخدم القسط الثابت على القيمة الدفترية المتبقية، بافتراض عدم وجود قيمة متبقية.\nالسنة 1: $50,000 × 40% = $20,000\nالسنة 2: ($50,000 − $20,000) × 40% = 12,000\nالسنة 3: ($50,000 − $20,000 − $12,000) ÷ 3 = 6,000\nمجمع الإهلاك في 12/31 من السنة 3: $38,000."
   },
   {
     "unit": 3,
@@ -2279,7 +2319,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Under the SYD method, the amount to be depreciated is\n$40,000 ($50,000 original cost – $10,000 salvage). The\nportion expensed each year is based on a fraction, the\ndenominator of which is the summation of the years of life of\nthe asset being depreciated. For an asset with a 5-year life,\nthe denominator is 15 (5 + 4 + 3 + 2 + 1). The numerator\nequals the years remaining at the beginning of the year. For\nYear 3, the fraction is 3 ÷ 15, and depreciation expense is\n$8,000 [$40,000 × (3 ÷ 15)].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتعلق البيانات التالية بإحدى مركبات Roswell المشتراة في 1 يناير من السنة 1:\nتكلفة المركبة: $50,000\nالعمر الإنتاجي المقدر بالسنوات: 5\nالعمر الإنتاجي المقدر بالأميال: 100,000\nالقيمة المتبقية المقدرة: $10,000\nالأميال الفعلية:\nالسنة 1: 30,000\nالسنة 2: 20,000\nالسنة 3: 15,000\nالسنة 4: 25,000\nالسنة 5: 12,000\nلم تتغير التقديرات خلال عمر الأصل.\nما مصروف إهلاك السنة 3 وفق مجموع أرقام السنوات؟",
+    "choicesAr": [
+      "$6,000",
+      "$8,000",
+      "$10,000",
+      "$16,000"
+    ],
+    "explanationAr": "وفق مجموع أرقام السنوات يبلغ المبلغ القابل للإهلاك $40,000 ($50,000 التكلفة − $10,000 القيمة المتبقية). ويحدد الجزء المحمل سنويًا بكسر مقامه مجموع أرقام سنوات العمر. وبعمر 5 سنوات يكون المقام 15 (5 + 4 + 3 + 2 + 1). والبسط عدد السنوات المتبقية أول السنة. وفي السنة 3 يكون الكسر 3 ÷ 15، ويبلغ الإهلاك $8,000 [$40,000 × (3 ÷ 15)]."
   },
   {
     "unit": 3,
@@ -2296,7 +2344,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Under the activity method, periodic depreciation is based on\nthe proportion of expected total production that occurred. For\nYears 1 through 4, the total depreciation was $36,000\n{($50,000 – $10,000) × [(30,000 + 20,000 + 15,000 + 25,000)\n÷ 100,000]}. Accordingly, the remaining depreciable base was\n$4,000 ($50,000 cost – $10,000 salvage – $36,000). Given\nthat the 12,000 miles driven in Year 5 exceeded the remaining\nestimated production of 10,000 miles (100,000 – 30,000 –\n20,000 – 15,000 – 25,000), only the $4,000 of the remaining\ndepreciable base should be recognized in Year 5.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتعلق البيانات التالية بإحدى مركبات Roswell المشتراة في 1 يناير من السنة 1:\nتكلفة المركبة: $50,000\nالعمر الإنتاجي المقدر بالسنوات: 5\nالعمر الإنتاجي المقدر بالأميال: 100,000\nالقيمة المتبقية المقدرة: $10,000\nالأميال الفعلية:\nالسنة 1: 30,000\nالسنة 2: 20,000\nالسنة 3: 15,000\nالسنة 4: 25,000\nالسنة 5: 12,000\nلم تتغير التقديرات خلال عمر الأصل.\nما مصروف إهلاك السنة 5 وفق طريقة النشاط؟",
+    "choicesAr": [
+      "$4,000",
+      "$4,800",
+      "$5,000",
+      "$6,000"
+    ],
+    "explanationAr": "وفق طريقة النشاط يعتمد إهلاك الفترة على نسبة الاستخدام الفعلي إلى إجمالي الاستخدام المتوقع. وخلال السنوات 1 إلى 4 بلغ إجمالي الإهلاك $36,000 {($50,000 − $10,000) × [(30,000 + 20,000 + 15,000 + 25,000) ÷ 100,000]}. ومن ثم تبقى أساس قابل للإهلاك قدره $4,000 ($50,000 التكلفة − $10,000 المتبقية − $36,000). ولأن 12,000 ميل في السنة 5 تجاوزت الاستخدام المقدر المتبقي البالغ 10,000 ميل (100,000 − 30,000 − 20,000 − 15,000 − 25,000)، يثبت فقط المبلغ المتبقي القابل للإهلاك $4,000 في السنة 5."
   },
   {
     "unit": 3,
@@ -2313,7 +2369,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The sum-of-the-years’-digits (SYD) method multiplies a\nconstant depreciable base (Cost – Salvage value) by a\ndeclining fraction. It is a declining-rate, declining-charge\nmethod. Consequently, the depreciable base is $18,000\n($20,000 – $2,000). The SYD fraction’s numerator is the\nnumber of years of useful life minus the prior years elapsed.\nThe denominator is the sum of the digits of all the years in the\nasset’s life. The numerator is 1 year (4 – 3), and the\ndenominator is 10 (1 + 2 + 3 + 4). The depreciation for the last\nyear is $1,800 [$18,000 × (1 ÷ 10)], so the declining balance\nafter 3 years of the 4-year period (Year 2-Year 4) is $3,800\n($1,800 remaining depreciable base + $2,000 salvage value).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم Spiro مجموع أرقام السنوات لإهلاك معدات اشترتها في يناير من السنة 2 مقابل $20,000. وقدرت القيمة المتبقية بـ$2,000 والعمر الإنتاجي بـ4 سنوات. ما القيمة الدفترية للأصل في 31 ديسمبر من السنة 4؟",
+    "choicesAr": [
+      "$1,800",
+      "$2,000",
+      "$3,800",
+      "$4,500"
+    ],
+    "explanationAr": "تضرب طريقة مجموع أرقام السنوات أساسًا ثابتًا للإهلاك (التكلفة ناقص القيمة المتبقية) في كسر متناقص. فهي طريقة ذات معدل ومصروف متناقصين. ويبلغ الأساس القابل للإهلاك $18,000 ($20,000 − $2,000). وبسط الكسر هو العمر الإنتاجي ناقص السنوات المنقضية، ومقامه مجموع أرقام سنوات العمر. وبالنسبة للسنة الأخيرة يكون البسط 1 سنة (4 − 3) والمقام 10 (1 + 2 + 3 + 4). ويبلغ إهلاك السنة الأخيرة $1,800 [$18,000 × (1 ÷ 10)]. ومن ثم تكون القيمة الدفترية بعد 3 سنوات من العمر البالغ 4 سنوات (السنة 2 إلى السنة 4) هي $3,800 ($1,800 أساس الإهلاك المتبقي + $2,000 القيمة المتبقية)."
   },
   {
     "unit": 3,
@@ -2330,7 +2394,15 @@
     ],
     "answerIndex": 2,
     "explanation": "When using a declining-balance method, a constant rate is\napplied to the changing carrying amount of the asset. The\ncarrying amount for the first period’s calculation is the\nacquisition cost ($108,000). The constant rate for the DDB\nmethod is twice the straight-line rate [(100% ÷ 4 years) × 2].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "اشترت Caracas حاسوبًا في 1 يناير مقابل $108,000 بعمر إنتاجي مقدر 4 سنوات وقيمة متبقية $18,000. وستستخدم الرصيد المتناقص المضاعف. ما معادلة الإهلاك الواجب عرضه في نهاية السنة الأولى؟",
+    "choicesAr": [
+      "($108,000 – $18,000) × (25% × 2)",
+      "($108,000 – $18,000) × (25% × 1/2)",
+      "($108,000) × (25% × 2)",
+      "($108,000) × (25% × 1/2)"
+    ],
+    "explanationAr": "في الرصيد المتناقص يطبق معدل ثابت على القيمة الدفترية المتغيرة. والقيمة الدفترية المستخدمة أول فترة هي تكلفة الاقتناء ($108,000). والمعدل الثابت في الرصيد المتناقص المضاعف هو ضعف معدل القسط الثابت [(100% ÷ 4 سنوات) × 2]، مع عدم النزول عن القيمة المتبقية."
   },
   {
     "unit": 3,
@@ -2347,7 +2419,15 @@
     ],
     "answerIndex": 2,
     "explanation": "SYD depreciation is calculated on a constant depreciable\nbase equal to the original cost minus the salvage value,\nmultiplied by the SYD fraction. The SYD fraction’s numerator\nis the number of years of remaining useful life of the asset.\nThus, the numerator is 4 (10 years – 6 years). The\ndenominator is the sum of the digits of the total years of the\nexpected useful life. In this case, the denominator is 55 {[(1 +\n2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10)] or [10 (10 + 1) ÷ 2)]}.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم طريقة مجموع أرقام السنوات لإهلاك آلة عمرها الإنتاجي المقدر 10 سنوات. ما الكسر المطبق على التكلفة القابلة للإهلاك في السنة السابعة؟",
+    "choicesAr": [
+      "7/10",
+      "7/55",
+      "4/55",
+      "3/10"
+    ],
+    "explanationAr": "يحسب الإهلاك بضرب أساس ثابت يساوي التكلفة الأصلية مطروحًا منها القيمة المتبقية في كسر مجموع أرقام السنوات. والبسط هو سنوات العمر المتبقية. لذا يكون البسط 4 (10 سنوات − 6 سنوات). والمقام مجموع أرقام سنوات العمر المتوقع، وهنا 55 {[(1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10)] أو [10 × (10 + 1) ÷ 2]}."
   },
   {
     "unit": 3,
@@ -2364,7 +2444,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Under the double-declining balance method, the salvage value\nis ignored in determining the carrying amount, but the asset is\nnot depreciated below the salvage value. Given an estimated\nuseful life of 8 years, the declining balance percentage is 25%\n(100% ÷ 8 × 2). The depreciation expense in the first year of\noperation is $35,000 ($140,000 × 25%), and the carrying\namount of the machine at the end of the first year is $105,000\n($140,000 – $35,000). The depreciation expense in the\nsecond year is $26,250 ($105,000 × 25%). The carrying\namount of the machine at the end of the second year of\noperations is $78,750 ($105,000 – $26,250).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "اشترت Hall آلة في 1 يناير بتكلفة $140,000 وعمر إنتاجي مقدر ثماني سنوات وقيمة متبقية $60,000. واختارت الرصيد المتناقص المضاعف. ما القيمة الدفترية للآلة في نهاية السنة الثانية من التشغيل؟",
+    "choicesAr": [
+      "$60,000",
+      "$61,250",
+      "$78,750",
+      "$80,000"
+    ],
+    "explanationAr": "في الرصيد المتناقص المضاعف لا تطرح القيمة المتبقية من أساس المعدل، لكن لا يجوز تخفيض القيمة الدفترية عنها. وبعمر 8 سنوات يكون المعدل 25% (100% ÷ 8 × 2). إهلاك السنة الأولى $35,000 ($140,000 × 25%)، والقيمة الدفترية في نهايتها $105,000 ($140,000 − $35,000). وإهلاك السنة الثانية $26,250 ($105,000 × 25%). لذا تبلغ القيمة الدفترية في نهاية السنة الثانية $78,750 ($105,000 − $26,250)."
   },
   {
     "unit": 3,
@@ -2381,7 +2469,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Under the double-declining balance depreciation method, the\nperiodic depreciation expense is calculated by multiplying the\ncarrying amount at the beginning of the period by two times\nthe percentage of the straight-line rate of depreciation.\nSalvage value is ignored in determining the carrying amount,\nbut the asset is not depreciated below the salvage value. The\ncarrying amount at the beginning of the first year is its cost of\n$60,000. The straight-line rate of depreciation is 10% (100% ÷\n10). The depreciation expense under the double-declining\nmethod is thus $12,000 ($60,000 × 2 × 10%).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 يناير اشترت Nick شاحنة توصيل مقابل $60,000 بقيمة متبقية $2,000 وعمر إنتاجي مقدر 10 سنوات. ويقدر عمرها التشغيلي بـ100,000 ميل. وخلال السنة الأولى قطعت 19,000 ميل. وتستخدم الرصيد المتناقص المضاعف. ما إهلاك السنة الأولى؟",
+    "choicesAr": [
+      "$5,800",
+      "$11,020",
+      "$11,600",
+      "$12,000"
+    ],
+    "explanationAr": "في الرصيد المتناقص المضاعف يحسب الإهلاك بضرب القيمة الدفترية في بداية الفترة في ضعف معدل القسط الثابت. ولا تطرح القيمة المتبقية من أساس المعدل، لكنها تحد القيمة الدفترية الدنيا. والقيمة الدفترية في بداية السنة الأولى هي التكلفة $60,000. ومعدل القسط الثابت 10% (100% ÷ 10). لذا يبلغ الإهلاك $12,000 ($60,000 × 2 × 10%)."
   },
   {
     "unit": 3,
