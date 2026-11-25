@@ -282,7 +282,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The management reporting system (MRS) is a subsystem of\nthe accounting information system. The MRS provides\ninformation useful to decision making and internal\nmanagement, including the internal activities recorded in the\ncost accounting system and the preparation of related reports\nand analysis. The MRS typically produces production reports,\npro forma financial statements, budgets, cost-volume-profit\nanalysis, and other internal reports. Therefore, the types of\ndecisions to be made have the greatest impact on the design\nof an effective management reporting system.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العوامل الآتية له أكبر أثر في تصميم نظام فعال للتقارير الإدارية؟",
+    "choicesAr": [
+      "عدد المعاملات المطلوب معالجتها.",
+      "أنواع القرارات المطلوب اتخاذها.",
+      "عدد المستخدمين المخولين.",
+      "عدد الجهات الرقابية الواجب تلبية متطلباتها."
+    ],
+    "explanationAr": "يعد نظام التقارير الإدارية في النموذج التعليمي المفترض جزءًا من نظام المعلومات المحاسبي. ويوفر معلومات مفيدة للقرارات والإدارة الداخلية، بما فيها بيانات محاسبة التكاليف والتقارير والتحليلات المرتبطة بها. ومن مخرجاته تقارير الإنتاج والقوائم المالية التقديرية والموازنات وتحليل التكلفة والحجم والربح والتقارير الداخلية الأخرى. ولذلك تعد أنواع القرارات المطلوب اتخاذها العامل الأهم في تصميم التقارير من بين البدائل."
   },
   {
     "unit": 19,
@@ -299,7 +307,15 @@
     ],
     "answerIndex": 3,
     "explanation": "In a database, storage structures are created that render the\napplications programs independent of the physical or logical\narrangement of the data. Each data item has a standard\ndefinition, name, and format, and related items are linked by a\nsystem of pointers. The programs therefore only need to\nspecify data items by name, not by location. A database\nmanagement system handles retrieval and storage. Because\nseparate files for different applications programs are\nunnecessary, data redundancy and inconsistency can be\nsubstantially reduced.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "من الأهداف الأساسية لنظام قواعد البيانات:",
+    "choicesAr": [
+      "تقليل التعقيد الكلي لمعالجة البيانات وتخزينها.",
+      "توفير ملفات بيانات منفصلة خاصة بكل برنامج تطبيقي.",
+      "استخدام مفاهيم التنظيم المادي بدلًا من التنظيم المنطقي للبيانات.",
+      "تحسين اتساق البيانات بتقليل تكرارها."
+    ],
+    "explanationAr": "تتيح هياكل قواعد البيانات فصل التطبيقات عن تفاصيل التخزين المادي، وقد توفر درجات من الاستقلال المنطقي. ويكون لعناصر البيانات تعريف وأسماء وصيغ محددة، وتربط العناصر ذات الصلة وفق نموذج البيانات المستخدم. ويختص نظام إدارة قواعد البيانات بالتخزين والاسترجاع، مما يقلل الحاجة إلى ملفات مستقلة متكررة لكل تطبيق ويساعد على تحسين اتساق البيانات. وقد يستخدم التكرار المقصود لأغراض الأداء والإتاحة."
   },
   {
     "unit": 19,
@@ -316,7 +332,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A database is characterized by the independence of\napplications from the physical arrangement of the data.\nApplication programmers define a user view (external schema)\nof the data and write program instructions using a\nprogramming language interface with the DBMS.\nConsequently, programs need not specify the location of a\ndata item. Only the name of the item is necessary. The DBMS\nmediates between user view and the actual physical\narrangement of the data. Hence, different users (applications)\nmay create different views of the data.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "إتاحة طرق عرض مختلفة للبيانات نفسها للمستخدمين وظيفة من وظائف:",
+    "choicesAr": [
+      "نظام التشغيل.",
+      "نظام إدارة مكتبة البرامج.",
+      "نظام إدارة قواعد البيانات.",
+      "برنامج خدمي."
+    ],
+    "explanationAr": "من خصائص قواعد البيانات استقلال التطبيقات عن تفاصيل الترتيب المادي للبيانات. ويمكن تحديد عرض منطقي للمستخدم ضمن المخطط الخارجي للبيانات والتعامل معه عبر واجهة نظام إدارة قواعد البيانات. ويتوسط النظام بين العرض المنطقي والتخزين الفعلي، مما يتيح طرق عرض مختلفة للمستخدمين والتطبيقات بحسب احتياجاتهم وصلاحياتهم."
   },
   {
     "unit": 19,
@@ -333,7 +357,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A file is a group of records. Each record refers to the collection\nof data for a specific vendor in the data base.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الهياكل الآتية يشير إلى مجموعة البيانات المتعلقة بجميع الموردين في قاعدة بيانات علائقية، وفق مصطلحات الخيارات؟",
+    "choicesAr": [
+      "سجل.",
+      "حقل.",
+      "ملف.",
+      "بايت."
+    ],
+    "explanationAr": "الملف في التسلسل التقليدي للبيانات مجموعة من السجلات؛ ويمثل كل سجل بيانات مورد معين. وفي قاعدة البيانات العلائقية يقابل ذلك عادة جدول الموردين الذي يتكون من صفوف وأعمدة، ولا يلزم أن يكون الجدول ملفًا ماديًا مستقلًا."
   },
   {
     "unit": 19,
@@ -350,7 +382,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A character (byte) is composed of a group of bits, a field is a\ngroup of bytes, a record is a group of fields, and a file is a\ngroup of records.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما التسلسل الهرمي التصاعدي الصحيح للبيانات في النظام؟",
+    "choicesAr": [
+      "محرف، سجل، ملف، حقل.",
+      "حقل، محرف، ملف، سجل.",
+      "محرف، حقل، سجل، ملف.",
+      "حقل، سجل، ملف، محرف."
+    ],
+    "explanationAr": "في التسلسل التعليمي المبسط تتجمع المحارف في حقول، والحقول في سجلات، والسجلات في ملفات. ويتكون البايت من بتات. ولا ينبغي مساواة كل محرف ببايت واحد في جميع ترميزات النصوص؛ فقد يتطلب المحرف عدة بايتات."
   },
   {
     "unit": 19,
@@ -367,7 +407,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A record is a collection of related data items (fields). A field\n(data item) is a group of characters representing one unit of\ninformation. The part number, part description, etc., are\nrepresented by fields.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يشاهد موظف المخزون على شاشة جهاز طرفي بيانات صنف معين: رقم القطعة ووصفها والكمية المتاحة والكمية المطلوبة ولم تصل بعد وكمية الطلب ونقطة إعادة الطلب. ماذا تشكل هذه البيانات مجتمعة؟",
+    "choicesAr": [
+      "حقلًا.",
+      "ملفًا.",
+      "قاعدة بيانات.",
+      "سجلًا."
+    ],
+    "explanationAr": "السجل مجموعة من عناصر البيانات المرتبطة، التي تسمى حقولًا. ويمثل كل حقل عنصرًا مستقلًا من المعلومات، مثل رقم الصنف أو وصفه أو كميته المتاحة، بينما تشكل الحقول المرتبطة بالصنف سجلًا."
   },
   {
     "unit": 19,
@@ -384,7 +432,15 @@
     ],
     "answerIndex": 1,
     "explanation": "A data item (or field) is a group of characters. It is used to\nrepresent individual attributes of an entity, such as an\nemployee’s address. A field is an item in a record.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يمثل الوحدة الأساسية للبيانات المستخدمة لتمثيل السمات الفردية لكيان معين؟",
+    "choicesAr": [
+      "قاعدة بيانات.",
+      "حقل بيانات.",
+      "ملف.",
+      "سجل."
+    ],
+    "explanationAr": "يمثل حقل البيانات سمة محددة لكيان معين، مثل عنوان موظف. وهو عنصر ضمن سجل يضم سمات ذلك الكيان. وقد يكون الحقل نصيًا أو رقميًا أو من نوع بيانات آخر."
   },
   {
     "unit": 19,
@@ -401,7 +457,15 @@
     ],
     "answerIndex": 1,
     "explanation": "A data dictionary is an organized and shared collection of\ninformation about the objects and resources used by the IS\norganization to deliver or exchange information internally and\nexternally.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما وظيفة قاموس البيانات؟",
+    "choicesAr": [
+      "تحديد الحد الفاصل بين معاملتين متتاليتين.",
+      "وصف المعلومات المتعلقة بالكائنات والموارد وإتاحتها للمشاركة.",
+      "تحديد مستخدمي النظام.",
+      "تحديد الامتيازات والقواعد الأمنية للكائنات والموارد."
+    ],
+    "explanationAr": "قاموس البيانات مجموعة منظمة ومشتركة من المعلومات الوصفية عن كائنات البيانات والموارد المستخدمة لتقديم المعلومات وتبادلها داخل المنشأة وخارجها. وقد يشمل أسماء الحقول وتعريفاتها وأنواعها وعلاقاتها وقيودها. ولا يعد مجرد توثيق قواعد الصلاحيات بديلًا عن تطبيقها فعليًا."
   },
   {
     "unit": 19,
@@ -418,7 +482,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The individuals with custodial responsibility should send the\nremittance advices or a list of the remittances to those with\nrecordkeeping responsibility to update customer accounts and\naccounts receivable records.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عند استلام شيكات العملاء في غرفة البريد، يعد الموظف المختص كشفًا بجميع الشيكات المستلمة ويرسله مع الشيكات إلى قسم المقبوضات النقدية. إلى أي جهة ينبغي بعد ذلك إرسال كشف المقبوضات وإشعارات السداد؟",
+    "choicesAr": [
+      "المراجع الداخلي للتحقيق في المعاملات غير المعتادة بالكشف.",
+      "المدير المالي لمقارنة الكشف بكشف البنك الشهري.",
+      "قسم الذمم المدينة لتحديث حسابات العملاء.",
+      "بنك المنشأة لمقارنة الكشف بقسيمة إيداع أمين الصندوق."
+    ],
+    "explanationAr": "ينبغي للمسؤولين عن حيازة المقبوضات إرسال إشعارات السداد أو كشف بها إلى المسؤولين عن حفظ السجلات لتحديث حسابات العملاء والذمم المدينة. ويساعد الفصل بين حيازة النقد وتسجيله، مع المطابقة المستقلة، على الحد من الأخطاء والغش."
   },
   {
     "unit": 19,
@@ -435,7 +507,15 @@
     ],
     "answerIndex": 1,
     "explanation": "A remittance listing provides a control total for later\nreconciliation. The mail room prepares a remittance listing of\nall checks received during the day and forwards it with the\nchecks to cash receipts.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يصف الضابط الأكثر فعالية من بين البدائل لضمان المعالجة السليمة لمعاملات المقبوضات النقدية؟",
+    "choicesAr": [
+      "إرسال الشيكات المستلمة إلى قسم الذمم المدينة لإيداعها يوميًا.",
+      "تعد غرفة البريد كشفًا بجميع الشيكات المستلمة خلال اليوم وترسله مع الشيكات إلى قسم المقبوضات النقدية.",
+      "تفصل إشعارات السداد عن الشيكات وترسل إلى الأستاذ العام للترحيل إلى حسابات العملاء.",
+      "يتولى الموظفون الذين يستلمون بريد العملاء إعداد الإيداع البنكي اليومي."
+    ],
+    "explanationAr": "يوفر كشف المقبوضات إجماليًا رقابيًا للمطابقة اللاحقة. وتعد غرفة البريد كشفًا بالشيكات المستلمة خلال اليوم وترسله إلى قسم المقبوضات النقدية مع الشيكات. وتزداد فعالية الضابط عند إرسال نسخة مستقلة إلى جهة التسجيل والمطابقة ومقارنة الإجماليات بالإيداعات الفعلية."
   },
   {
     "unit": 19,
@@ -452,7 +532,15 @@
     ],
     "answerIndex": 2,
     "explanation": "An employee who does not have access to other records\nshould open the mail and prepare a remittance listing of\nchecks received. A restrictive endorsement “for deposit only”\nshould be added to each check, which puts transferees on\nnotice to act accordingly (that is, to deposit the check in the\norganization’s account).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستلم غرفة البريد بالمنشأة شيكات العملاء يوميًا. ما الضابط المناسب لحماية هذه الشيكات؟",
+    "choicesAr": [
+      "ينقل موظف البريد الشيكات إلى البنك لإيداعها يوميًا.",
+      "ترسل الشيكات دون تغيير إلى المراقب المالي لمعالجتها.",
+      "يضع موظف البريد تظهيرًا مقيدًا على كل شيك ويعد كشفًا بجميع الشيكات المستلمة.",
+      "توفير تغطية تأمينية ضد خيانة الأمانة لموظفي البريد."
+    ],
+    "explanationAr": "ينبغي أن يتولى فتح البريد وإعداد كشف الشيكات موظف غير مسؤول عن حفظ السجلات المحاسبية ذات الصلة. ويضاف تظهير مقيد يفيد بأن الشيك للإيداع فقط في حساب المنشأة، وفق النظام المصرفي والقانوني المعمول به. ويقلل ذلك خطر تحويل الشيكات لغير الغرض المخصص لها، مع ضرورة وجود ضوابط حفظ وإيداع ومطابقة مستقلة."
   },
   {
     "unit": 19,
@@ -469,7 +557,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The mail room and cash receipts perform custodial functions.\nIndividuals with custodial functions should not have access to\nthe accounting records. For example, if the cashier were\nallowed to post the receipts to the accounts receivable\nsubsidiary ledger, an opportunity for embezzlement would\narise that could be concealed by falsifying the books.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في هيكل رقابة داخلية مصمم جيدًا، يتسلم قسم المقبوضات النقدية الشيكات من غرفة البريد. أي المهام الآتية لا ينبغي أن تشملها وظيفة حيازة الشيكات؟",
+    "choicesAr": [
+      "تظهير الشيكات.",
+      "إعداد قسيمة الإيداع البنكي.",
+      "إيداع الشيكات يوميًا لدى بنك محلي.",
+      "ترحيل المقبوضات إلى الأستاذ المساعد للذمم المدينة."
+    ],
+    "explanationAr": "تؤدي غرفة البريد وقسم المقبوضات وظائف حيازة. وينبغي فصل هذه الوظائف عن صلاحيات تسجيل المعاملات وتعديل السجلات المحاسبية. فإذا تولى أمين الصندوق ترحيل المقبوضات إلى الأستاذ المساعد للذمم المدينة فقد تنشأ فرصة لاختلاس المقبوضات وإخفاء المخالفة بتعديل السجلات."
   },
   {
     "unit": 19,
@@ -486,7 +582,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Accounts payable is a recording function. Matching the\nvendors’ invoices against purchase orders and receiving\nreports should be the responsibility of accounts payable.\nThese are the primary supporting documents for the payment\nvoucher (prepared by accounts payable) that will be relied\nupon by the treasurer while making payments.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الملاحظات الآتية خلال المسح الأولي لدورة المدفوعات النقدية في متجر محلي متعدد الأقسام يعكس نقطة قوة رقابية؟",
+    "choicesAr": [
+      "يعد أمين الخزانة شيكات الموردين استنادًا إلى مستندات صرف أعدها قسم الذمم الدائنة.",
+      "يستخدم مديرو الأقسام نماذج مرقمة مسبقًا لطلب البضائع من الموردين.",
+      "يثبت قسم الذمم الدائنة الالتزام بمجرد إرسال أمر الشراء.",
+      "يتولى المراقب المالي مدفوعات النفقات الرأسمالية."
+    ],
+    "explanationAr": "محاسبة الذمم الدائنة وظيفة تسجيل. ويتولى القسم مطابقة فواتير الموردين بأوامر الشراء وتقارير الاستلام، وهي المستندات الرئيسية المؤيدة لمستند الصرف الذي يعتمد عليه أمين الخزانة عند الدفع وفق الصلاحيات. وتساعد المطابقة الثلاثية والفصل بين التسجيل والصرف على تقليل المدفوعات غير المعتمدة، دون أن يعني ذلك تأجيل إثبات الالتزام المستحق حتى الدفع."
   },
   {
     "unit": 19,
