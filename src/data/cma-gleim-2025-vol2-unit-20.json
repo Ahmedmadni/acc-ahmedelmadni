@@ -31,7 +31,15 @@
     ],
     "answerIndex": 1,
     "explanation": "A systems analysis requires a survey of the existing system,\nthe organization itself, and the organization’s environment to\ndetermine (among other things) whether a new system is\nneeded. The survey results determine not only what, where,\nhow, and by whom activities are performed but also why, how\nwell, and whether they should be done at all. Ascertaining the\nproblems and informational needs of decision makers is the\nnext step. The systems analyst must consider the entity’s key\nsuccess variables (factors that determine its success or\nfailure), the decisions currently being made and those that\nshould be made, the factors important in decision making\n(timing, relation to other decisions, etc.), the information\nneeded for decisions, and how well the current system makes\nthose decisions. Finally, the systems analysis should establish\nthe requirements of a system that will meet user needs.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما المصطلح الذي يشير إلى دراسة كيفية عمل النظام الحالي، وتحديد احتياجات المستخدمين، ووضع المتطلبات المنطقية للنظام المقترح؟",
+    "choicesAr": [
+      "صيانة النظم.",
+      "تحليل النظم.",
+      "دراسة جدوى النظم.",
+      "تصميم النظم."
+    ],
+    "explanationAr": "يشمل تحليل النظم دراسة النظام القائم والمنشأة وبيئتها لفهم الحاجة إلى نظام جديد، وكيفية تنفيذ الأنشطة وأسبابها ومدى كفاءتها. ثم تحدد مشكلات متخذي القرارات واحتياجاتهم المعلوماتية وعوامل النجاح والقرارات المطلوبة وتوقيت المعلومات. وتنتهي المرحلة بتحديد متطلبات نظام يلبي احتياجات المستخدمين."
   },
   {
     "unit": 20,
@@ -65,7 +73,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Testing is performed during system development with the\nintent of identifying errors or other defects. The job of testing is\nan iterative process as when one error is corrected, it can\nilluminate other errors or even create new ones. All of the\nobjectives listed are objectives for performing tests during\nsystem development.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يعد من أهداف الاختبارات أثناء تطوير النظام؟\nI. استجابة النظام بصورة صحيحة لمختلف أنواع المدخلات.\nII. تحقيق النظام للنتيجة العامة التي يتوقعها أصحاب المصلحة.\nIII. تلبية النظام للمتطلبات التي استند إليها تصميمه وتطويره.\nIV. تنفيذ وظائف النظام خلال زمن مقبول.",
+    "choicesAr": [
+      "I وIII فقط.",
+      "II وIII وIV فقط.",
+      "I وII وIV فقط.",
+      "I وII وIII وIV."
+    ],
+    "explanationAr": "تهدف الاختبارات أثناء تطوير النظام إلى اكتشاف الأخطاء والعيوب والتحقق من استيفاء المتطلبات والنتائج المتوقعة والأداء والاستجابة للمدخلات. والاختبار عملية تكرارية؛ فقد يكشف إصلاح عيب عن عيوب أخرى أو يؤدي إلى ظهورها. وجميع الأهداف المذكورة صحيحة، دون أن يعني ذلك أن الاختبارات تثبت غياب جميع العيوب الممكنة."
   },
   {
     "unit": 20,
@@ -82,7 +98,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The project initiation phase includes promptly informing\nmanagers and employees about the project, assembling the\nproject team (possibly including systems analysts,\nprogrammers, accountants, and users), training selected\npersonnel to improve necessary skills and enhance\ncommunication among team members, and establishing\nproject controls (e.g., by implementing a project scheduling\ntechnique such as PERT). Preparing the project proposal is a\npart of the project definition phase, as are conducting\nfeasibility studies, determining project priority, and submitting\nthe proposal for approval.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتضمن عملية تخطيط النظم مرحلتي تعريف المشروع وبدء المشروع. جميع الخطوات الآتية تندرج ضمن مرحلة بدء المشروع وفق النموذج المفترض ما عدا:",
+    "choicesAr": [
+      "إعداد مقترح المشروع.",
+      "إبلاغ المديرين والموظفين بالمشروع.",
+      "تشكيل فريق المشروع.",
+      "تدريب الموظفين المختارين."
+    ],
+    "explanationAr": "تشمل مرحلة بدء المشروع إبلاغ المعنيين وتشكيل الفريق من المختصين والمستخدمين وتدريب الأفراد ووضع ضوابط المشروع، مثل استخدام أسلوب تقييم ومراجعة البرامج (PERT) للجدولة. أما إعداد مقترح المشروع ودراسة الجدوى وتحديد الأولوية ورفع المقترح للاعتماد فتندرج ضمن مرحلة تعريف المشروع في النموذج المعروض. وقد تختلف أسماء المراحل بين منهجيات إدارة المشاريع."
   },
   {
     "unit": 20,
@@ -99,7 +123,15 @@
     ],
     "answerIndex": 1,
     "explanation": "A requirement for documentation standards would have\nprevented the problem.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أعدت محللة توقعات باستخدام وظائف مطورة حديثًا في النظام، ثم غادرت الشركة ولم تتمكن بديلتها من فهم كيفية استخدام تلك الوظائف. وفق ممارسات دورة حياة تطوير النظم، أي الضوابط الآتية كان الأرجح أن يحد من هذه المشكلة؟",
+    "choicesAr": [
+      "تحديد جهود الحوسبة للمستخدم النهائي.",
+      "وضع معايير وإجراءات للتوثيق.",
+      "وضع إجراءات ومتطلبات النسخ الاحتياطي.",
+      "متابعة تغييرات النظام وتقييمها."
+    ],
+    "explanationAr": "تساعد معايير التوثيق وإجراءاته على نقل المعرفة وتوفير تعليمات واضحة لاستخدام وظائف النظام وصيانتها. ومن بين البدائل، يعالج التوثيق سبب المشكلة مباشرة. وتزداد فعاليته عند تحديثه باستمرار ودعمه بالتدريب وتسليم المهام."
   },
   {
     "unit": 20,
@@ -116,7 +148,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Software-as-a-service (SaaS) is a software-user distribution\nmodel wherein a third-party provider hosts applications and\nmakes them available to subscribers over the Internet. With\nthis model, the user does not have to buy and maintain as\nmuch computer hardware, install software, or worry about\nmanning support services. Other benefits of SaaS include\nflexible payments, scalable usage, automatic updates, and\nflexible accessibility.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يصف البرمجيات كخدمة (SaaS) على أفضل وجه؟",
+    "choicesAr": [
+      "نظام تخطيط موارد منشأة مثبت ومصان محليًا.",
+      "نوع من الحوسبة السحابية يستضيف فيه طرف خارجي التطبيقات مقابل رسم شهري.",
+      "نوع من نظم إدارة قواعد البيانات يخدمه طرف خارجي مقابل رسم سنوي.",
+      "منصة بنية تحتية تحل محل الحواسيب الفردية المعقدة داخل المنشأة."
+    ],
+    "explanationAr": "البرمجيات كخدمة نموذج لتقديم التطبيقات يستضيف فيه مزود الخدمة البرمجيات ويتيحها للمستخدمين عبر الشبكة. وقد يقلل الحاجة إلى شراء الأجهزة وتثبيت البرامج وصيانتها محليًا، مع إتاحة التوسع والتحديث والوصول المرن. والرسم الشهري مثال على نموذج التسعير وليس شرطًا لازمًا لتعريف الخدمة، وقد تختلف المسؤوليات وفق العقد."
   },
   {
     "unit": 20,
@@ -133,7 +173,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The feasibility study should consider the activity to be\nautomated, the needs of the user, the type of equipment\nrequired, the cost, and the potential benefit to the specific area\nand the company in general. Thus, technical feasibility and\ncost are determined during this stage.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتبع شركة تأمين مفهوم دورة حياة تطوير النظم في مشاريع نظم المعلومات الكبرى، وتستعد لدراسة جدوى نظام مقترح للاكتتاب التأميني. أي العوامل الآتية تعد من العوامل الأساسية التي ينبغي أن تتناولها الدراسة؟",
+    "choicesAr": [
+      "الموردون المحتملون للنظام وسمعتهم من حيث الجودة.",
+      "التعرض للفيروسات وغيرها من الاختراقات.",
+      "أساليب التنفيذ مثل التشغيل المتوازي أو الانتقال المباشر.",
+      "التقنية والتكاليف المرتبطة بها."
+    ],
+    "explanationAr": "تدرس الجدوى النشاط المراد أتمتته واحتياجات المستخدمين والتقنية والمعدات المطلوبة والتكاليف والمنافع المتوقعة للقسم والمنشأة. ولذلك تعد الجدوى التقنية والاقتصادية من المحاور الأساسية، مع إمكان دراسة المخاطر والجوانب التشغيلية والتنظيمية أيضًا."
   },
   {
     "unit": 20,
@@ -150,7 +198,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Systems maintenance must be undertaken by systems\nanalysts and applications programmers continuously\nthroughout the life of a system. Maintenance is the redesign of\nthe system and programs to meet new needs or to correct\ndesign flaws. Ideally, these changes should be made as part\nof a regular program of preventive maintenance.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما المصطلح الذي يشير إلى متابعة النظام وتقييمه وتعديله عند الحاجة؟",
+    "choicesAr": [
+      "تحليل النظم.",
+      "دراسة جدوى النظم.",
+      "صيانة النظم.",
+      "تنفيذ النظم."
+    ],
+    "explanationAr": "تستمر صيانة النظم طوال عمر النظام، وتشمل تقييمه وتعديل البرامج أو التصميم لتلبية الاحتياجات الجديدة وتصحيح العيوب. ومن الأفضل أن تتضمن خطة الصيانة إجراءات وقائية وتحديثات موثقة وخاضعة للاختبار والاعتماد."
   },
   {
     "unit": 20,
@@ -167,7 +223,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A modular conversion approach entails switching to the new\nor improved system in organizational (division, region, product\nline, etc.) segments or system segments (accounts receivable,\ndatabase, etc.). A pilot conversion is one in which the final\ntesting and switchover are accomplished at one segment or\ndivision of the company.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تعمل شركة وورك ويل في عدة مناطق، وتعالج كل منطقة بياناتها في مركز إقليمي. طور فريق نظم المعلومات الإدارية نظام إدارة قواعد بيانات لخدمة العملاء والفوترة، وأوصى مدير الفريق بتطبيقه في المنطقة الجنوبية الغربية للتحقق من أدائه قبل التوسع. ماذا يسمى هذا الأسلوب للتحول؟",
+    "choicesAr": [
+      "التحول المتوازي.",
+      "التحول المباشر.",
+      "التحول بالنموذج الأولي.",
+      "التحول التجريبي."
+    ],
+    "explanationAr": "يتضمن التحول بحسب الوحدات تطبيق النظام في أجزاء تنظيمية أو وظيفية محددة. أما التحول التجريبي (Pilot) فيختبر التطبيق الفعلي والانتقال في وحدة أو منطقة مختارة قبل تعميمه. وهو يختلف عن بناء نموذج أولي وعن تطبيق النظام القديم والجديد بالتوازي."
   },
   {
     "unit": 20,
@@ -184,7 +248,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The systems development life-cycle approach is the oldest\nmethodology applied to the development of medium or large\ninformation systems. The cycle is analytically divisible into\nstages: definition, design, development, implementation, and\nmaintenance. Testing is the most crucial step in the\ndevelopment stage of the life cycle.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يعمل مدير مشروع نظم معلومات على ضم محلل نظم إلى الفريق للمشاركة في اختبار النظام المحوسب الجديد. في أي مرحلة من دورة حياة تطوير النظم سيشارك بصورة أساسية وفق النموذج المعروض؟",
+    "choicesAr": [
+      "تحليل التكلفة والمنفعة.",
+      "تعريف المتطلبات.",
+      "إعداد خرائط التدفق.",
+      "التطوير."
+    ],
+    "explanationAr": "يمكن تقسيم دورة حياة تطوير النظم إلى تعريف المتطلبات والتصميم والتطوير والتنفيذ والصيانة. وتعد اختبارات النظام جزءًا رئيسيًا من مرحلة التطوير في النموذج التقليدي، مع استمرار اختبارات القبول والتشغيل والصيانة في المراحل المناسبة."
   },
   {
     "unit": 20,
@@ -201,7 +273,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The life cycle approach is best employed when systems are\nlarge and highly structured, users understand the tasks to be\nperformed by the information system, and the developers\nhave directly applicable experience in designing similar\nsystems. In the life cycle process, each stage of development\nis highly structured, and requirements are clearly defined.\nHowever, when the task is unstructured, prototyping may be\nthe better approach.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "من العيوب الرئيسية للنهج التقليدي المتسلسل لدورة حياة تطوير النظم أنه أقل ملاءمة للمشاريع:",
+    "choicesAr": [
+      "المنظمة.",
+      "الكبيرة.",
+      "المعقدة.",
+      "غير المنظمة."
+    ],
+    "explanationAr": "يناسب النهج التقليدي المتسلسل المشاريع ذات المتطلبات الواضحة والمهام المحددة والخبرات السابقة المناسبة. أما المشاريع التي يصعب تحديد متطلباتها مسبقًا فقد تستفيد من النماذج الأولية والتطوير التكراري. ولا يعني ذلك أن جميع نماذج دورة حياة تطوير النظم تتبع أسلوبًا متسلسلًا ثابتًا."
   },
   {
     "unit": 20,
