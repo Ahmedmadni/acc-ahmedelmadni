@@ -4535,7 +4535,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Cash flows from financing activities generally involve the cash\neffects of transactions and other events that relate to the\nissuance, settlement, or reacquisition of the entity’s debt and\nequity instruments. Cash receipts from the sale of property,\nplant, and equipment; intangible assets; and other long-lived\nassets are investing activities. Under the indirect method, the\ngain on disposal of a building of $20,000 is reported as an\nadjustment to calculate the net cash flows from operating\nactivities. Therefore, the amount that would be included in\nGranite’s financing activities on the statement of cash flows is\n$0.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "خلال السنة، باعت شركة Granite مبنى مقابل $100,000، محققةً ربحًا قدره $20,000. وبلغت صافي القيمة الدفترية للمبنى وقت البيع $80,000. تستخدم الشركة الطريقة غير المباشرة لإعداد قائمة التدفقات النقدية. ما المبلغ الذي يُدرج في قسم الأنشطة التمويلية نتيجة بيع المبنى؟",
+    "choicesAr": [
+      "$0",
+      "$20,000",
+      "$80,000",
+      "$100,000"
+    ],
+    "explanationAr": "ترتبط التدفقات التمويلية عمومًا بالآثار النقدية لإصدار أدوات الدين وحقوق الملكية للمنشأة أو تسويتها أو إعادة شرائها. وتُصنف المقبوضات النقدية من بيع العقارات والآلات والمعدات والأصول غير الملموسة والأصول الأخرى طويلة الأجل ضمن الأنشطة الاستثمارية. وفي الطريقة غير المباشرة يُطرح ربح بيع المبنى البالغ $20,000 عند حساب صافي التدفقات التشغيلية. لذلك فإن المبلغ الذي يُدرج ضمن الأنشطة التمويلية في قائمة التدفقات النقدية هو $0."
   },
   {
     "unit": 1,
@@ -4552,7 +4560,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Under the indirect method, the net cash flow from operating\nactivities is determined by adjusting the net income of a\nbusiness. Noncash losses and expenses included in net\nincome, such as depreciation expense, are added to net\nincome, and gains and revenues whose cash effects are\nrelated to investing or financing cash flows, such as gain on\nsale of equipment, are subtracted from net income. Thus, the\nnet cash provided by operating activities is $31,750 ($20,000\nnet income + $13,000 depreciation expense – $1,250 gain on\nsale of equipment).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أعدت شركة Marble قائمة التدفقات النقدية باستخدام المبالغ التالية:\nصافي انخفاض الأصول الثابتة: $(3,750)\nمصروف الإهلاك: 13,000\nربح بيع معدات (صافي القيمة الدفترية $3,250): 1,250\nالنفقات الرأسمالية: 12,500\nبلغ صافي دخل الشركة في نهاية السنة $20,000. ما صافي النقد الناتج عن الأنشطة التشغيلية الذي ينبغي عرضه؟",
+    "choicesAr": [
+      "$19,500",
+      "$29,250",
+      "$31,750",
+      "$33,000"
+    ],
+    "explanationAr": "وفق الطريقة غير المباشرة، يُحدد صافي التدفقات التشغيلية بتعديل صافي دخل المنشأة. وتُضاف الخسائر والمصروفات غير النقدية الداخلة في صافي الدخل، مثل الإهلاك، وتُطرح الأرباح والإيرادات التي ترتبط آثارها النقدية بالاستثمار أو التمويل، مثل ربح بيع المعدات. وعليه فإن صافي النقد الناتج عن التشغيل يبلغ $31,750 ($20,000 صافي الدخل + $13,000 مصروف الإهلاك − $1,250 ربح بيع المعدات)."
   },
   {
     "unit": 1,
@@ -4569,7 +4585,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Under the indirect method, the net cash flow from operating\nactivities is determined by adjusting the net income for the\neffect of (1) noncash revenue and expenses that were\nincluded in net income, (2) items included in net income\nwhose cash effects relate to investing or financing cash flows,\n(3) all deferrals of past operating cash flows, and (4) all\naccruals of expected future operating cash flows. Noncash\nlosses and expenses included in net income should be added\nto net income. Consequently, the loss of $40,000 from\ndisposal of the land should be added to net income. In\naddition, increase in current operating liabilities and decrease\nin current operating assets are both added to net income,\nresulting in an increase of $30,000 ($20,000 for increase in\naccounts payable + $10,000 for decrease in prepaid\nexpenses). As a result, the net adjustment to net income to\ndetermine net cash from operating activities is $70,000\n($40,000 + $30,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فيما يلي معلومات من القوائم المالية لشركة Mabel في نهاية السنة الحالية والسابقة:\nالبند | السنة الحالية | السنة السابقة\nمصروفات مدفوعة مقدمًا | $10,000 | $20,000\nحسابات دائنة | 50,000 | 30,000\nأراضٍ | 250,000 | 600,000\nبيعت أرض نقدًا خلال السنة المالية الحالية، مما أدى إلى خسارة قدرها $40,000. ما صافي التعديل على صافي الدخل لتحديد صافي النقد من الأنشطة التشغيلية؟",
+    "choicesAr": [
+      "($70,000)",
+      "$0",
+      "$30,000",
+      "$70,000"
+    ],
+    "explanationAr": "وفق الطريقة غير المباشرة، تُحدد التدفقات التشغيلية بتعديل صافي الدخل لآثار (1) الإيرادات والمصروفات غير النقدية الداخلة في صافي الدخل؛ (2) البنود الداخلة في صافي الدخل التي ترتبط آثارها النقدية بالاستثمار أو التمويل؛ (3) تأجيلات التدفقات التشغيلية السابقة؛ (4) استحقاقات التدفقات التشغيلية المستقبلية المتوقعة. وتُضاف الخسائر والمصروفات التي لا تمثل تدفقًا نقديًا تشغيليًا إلى صافي الدخل. لذا تُضاف خسارة بيع الأرض البالغة $40,000. كما تُضاف زيادة الالتزامات التشغيلية المتداولة وانخفاض الأصول التشغيلية المتداولة، مما يؤدي إلى زيادة بمقدار $30,000 ($20,000 زيادة الحسابات الدائنة + $10,000 انخفاض المصروفات المدفوعة مقدمًا). وبذلك يبلغ صافي التعديل على صافي الدخل $70,000 ($40,000 + $30,000)."
   },
   {
     "unit": 1,
