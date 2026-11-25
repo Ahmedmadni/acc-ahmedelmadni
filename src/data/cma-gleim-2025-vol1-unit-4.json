@@ -14,7 +14,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Gain contingencies are not recorded; they are recognized only\nwhen realized. A gain contingency must be adequately\ndisclosed.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "شركة مدعية في قضيتين تتعلقان بانتهاك براءات الاختراع. في الأولى نسخ منافس أحد منتجاتها، ويقدر المحامون التعويض بمبلغ $5,000,000، ويتوقعون استمرار التقاضي من 2 إلى 3 سنوات. وفي الثانية يرى المحامون أن موقف الشركة ضعيف، وفرصة الفوز 50%، والتعويض المحتمل بين $250,000 و$1,000,000. ما المبلغ المناسب لإثباته كمكسب محتمل؟",
+    "choicesAr": [
+      "$0",
+      "$5,000,000",
+      "$5,125,000",
+      "$5,250,000"
+    ],
+    "explanationAr": "وفق المعالجة الأمريكية العامة، لا تثبت المكاسب المحتملة قبل تحققها، ويُفصح عنها بصورة مناسبة دون الإيحاء بتحققها."
   },
   {
     "unit": 4,
@@ -31,7 +39,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A material contingent loss must be accrued when the following\ntwo conditions are met:\n1. It is probable that, at the balance sheet date, an asset\nhas been impaired or a liability has been incurred.\n2. The amount of the loss can be reasonably estimated.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "متى ينبغي إثبات التزام ناشئ عن خسارة محتملة؟",
+    "choicesAr": [
+      "إذا أمكن تقدير مبلغ الخسارة بشكل معقول.",
+      "إذا كان وقوع الأحداث المستقبلية المحتملة ممكنًا بدرجة معقولة.",
+      "إذا كان وقوع الأحداث ممكنًا بدرجة معقولة وأمكن تقدير الخسارة.",
+      "إذا كان وقوع الأحداث مرجحًا وأمكن تقدير الخسارة بشكل معقول."
+    ],
+    "explanationAr": "وفق المعايير الأمريكية تستحق الخسارة المحتملة الجوهرية عند تحقق الشرطين:\n1. يرجح وجود انخفاض في قيمة أصل أو نشوء التزام في تاريخ قائمة المركز المالي.\n2. يمكن تقدير مبلغ الخسارة بشكل معقول."
   },
   {
     "unit": 4,
@@ -65,7 +81,15 @@
     ],
     "answerIndex": 3,
     "explanation": "An assurance-type warranty creates a loss contingency. The\naccrual method therefore should be used if (1) incurrence of\nwarranty expense is probable, (2) the amount can be\nreasonably estimated, and (3) the amount is material. Thus, a\nprovision for costs incurred under an assurance-type warranty\nis made when the related revenue is recognized. Expense for\nthe assurance-type warranty equals 4% of sales for the\nperiod, or $120,000 ($3,000,000 × 4%).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تصنع شركة أجهزة صوتية تشمل ضمانًا لمدة 2 سنة لتأكيد خلو المنتج من العيوب. وتقدر تكلفة الضمان بـ4% من المبيعات خلال فترة الضمان. بلغت المبيعات خلال السنة $3 ملايين، والتكاليف الفعلية للضمان $67,500. ما مصروف الضمان في قائمة دخل السنة المنتهية في 31 ديسمبر؟",
+    "choicesAr": [
+      "$52,500",
+      "$60,000",
+      "$67,500",
+      "$120,000"
+    ],
+    "explanationAr": "ينشأ عن ضمان التأكيد خسارة محتملة. ويطبق الاستحقاق إذا (1) رجح تكبد مصروف الضمان، (2) أمكن تقديره بشكل معقول، (3) كان جوهريًا. لذا يثبت مخصص الضمان عند الاعتراف بالإيراد المرتبط به. ويبلغ المصروف 4% من مبيعات الفترة، أي $120,000 ($3,000,000 × 4%)."
   },
   {
     "unit": 4,
@@ -82,7 +106,15 @@
     ],
     "answerIndex": 2,
     "explanation": "An assurance-type warranty creates a loss contingency.\nBecause the product is new, the balance of the estimated\nwarranty liability at the beginning of the year is $0. If 3,000\nunits were sold at an estimated $8 per unit warranty cost, the\ntotal credits to the liability account equaled $24,000 (3,000 ×\n$8). Given that actual warranty costs of $7,000 were debited\nto the account, the ending balance must have been $17,000\n($24,000 – $7,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 أبريل بدأت شركة بيع منتج جديد بضمان تأكيد معياري لمدة 1 سنة. ومن أصل 5,000 وحدة بالمخزون في 1 أبريل، بيعت 3,000 وحدة حتى 30 يونيو. وقدرت تكلفة الضمان المتوسطة بـ$8 لكل وحدة مباعة. وبلغت تكاليف الضمان الفعلية من 1 أبريل حتى 30 يونيو مبلغ $7,000. ما التزام الضمان المقدر في 30 يونيو؟",
+    "choicesAr": [
+      "$9,000",
+      "$16,000",
+      "$17,000",
+      "$33,000"
+    ],
+    "explanationAr": "ينشأ عن ضمان التأكيد خسارة محتملة. ولأن المنتج جديد فإن رصيد أول المدة لالتزام الضمان $0. وبيعت 3,000 وحدة بتكلفة ضمان مقدرة $8 للوحدة؛ لذا بلغ مجموع المبالغ الدائنة للالتزام $24,000 (3,000 × $8). وخصمت التكاليف الفعلية $7,000 من الالتزام، فيبلغ رصيده $17,000 ($24,000 − $7,000)."
   },
   {
     "unit": 4,
@@ -99,7 +131,15 @@
     ],
     "answerIndex": 3,
     "explanation": "An assurance-type warranty creates a loss contingency. The\naccrual method therefore should be used if (1) incurrence of\nwarranty expense is probable, (2) the amount can be\nreasonably estimated, and (3) the amount is material. Thus, a\nprovision for costs incurred under an assurance-type warranty\nis made when the related revenue is recognized.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تبيع منشأة أجهزة تشمل ضمان تأكيد لمدة 3 سنوات. وينفذ الصيانة فني مستقل بموجب عقد معها. وتقدر تكلفة الضمان بـ$30 لكل جهاز مباع. متى تثبت المنشأة هذه التكاليف؟",
+    "choicesAr": [
+      "بالتساوي على عمر الضمان.",
+      "عند تنفيذ الصيانة.",
+      "عند دفع مستحقات الفني.",
+      "عند بيع الأجهزة."
+    ],
+    "explanationAr": "ينشأ عن ضمان التأكيد خسارة محتملة، ويطبق الاستحقاق إذا (1) رجح تكبد مصروف الضمان، (2) أمكن تقديره بشكل معقول، (3) كان جوهريًا. لذا يثبت مخصص تكاليف ضمان التأكيد عند الاعتراف بالإيراد المرتبط به."
   },
   {
     "unit": 4,
@@ -116,7 +156,15 @@
     ],
     "answerIndex": 2,
     "explanation": "An assurance-type warranty creates a loss contingency. The\naccrual method therefore should be used if (1) incurrence of\nwarranty expense is probable, (2) the amount can be\nreasonably estimated, and (3) the amount is material. Thus, a\nprovision for costs incurred under an assurance-type warranty\nis made when the related revenue is recognized. Because this\nproduct is new, the beginning balance in the estimated\nwarranty liability account at the beginning of Year 3 is $0. For\nYear 3, the estimated warranty costs related to dollar sales\nare 6% (2% + 4%) of sales or $36,000 ($600,000 × 6%). For\nYear 4, the estimated warranty costs are $60,000 ($1,000,000\nsales × 6%). These amounts are charged to warranty expense\nand increase the estimated warranty liability account. This\nliability account is decreased for expenditures of $9,000 and\n$30,000 in Year 3 and Year 4, respectively. Accordingly, the\nestimated warranty liability at 12/31/Yr 4 is $57,000 ($0 +\n$36,000 – $9,000 + $60,000 – $30,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في السنة 3 طرح منتج جديد بضمان تأكيد ضد العيوب لمدة 2 سنة. وتقدر تكلفة الضمان بنسبة 2% من المبيعات خلال 12 شهرًا بعد البيع و4% خلال ثاني 12 شهرًا. وفيما يلي المبيعات والتكاليف الفعلية للسنتين المنتهيتين في 31 ديسمبر من السنة 3 والسنة 4:\nالسنة | المبيعات | تكاليف الضمان الفعلية\nالسنة 3 | $600,000 | $9,000\nالسنة 4 | 1,000,000 | 30,000\nالإجمالي | $1,600,000 | $39,000\nما التزام الضمان المقدر في 31 ديسمبر من السنة 4؟",
+    "choicesAr": [
+      "$0",
+      "$39,000",
+      "$57,000",
+      "$96,000"
+    ],
+    "explanationAr": "ينشأ عن ضمان التأكيد خسارة محتملة ويطبق الاستحقاق إذا (1) رجح تكبد المصروف، (2) أمكن تقديره، (3) كان جوهريًا. ويثبت المخصص عند الاعتراف بالإيراد. ولأن المنتج جديد فإن رصيد أول السنة 3 هو $0. وفي السنة 3 تبلغ التكلفة المقدرة 6% (2% + 4%) من المبيعات، أي $36,000 ($600,000 × 6%). وفي السنة 4 تبلغ $60,000 ($1,000,000 × 6%). تحمل هذه المبالغ على مصروف الضمان وتزيد الالتزام، ويخفض الالتزام بالتكاليف الفعلية $9,000 و$30,000 في السنة 3 والسنة 4 على الترتيب. لذا يبلغ الالتزام في 12/31 من السنة 4 مبلغ $57,000 ($0 + $36,000 − $9,000 + $60,000 − $30,000)."
   },
   {
     "unit": 4,
@@ -150,7 +198,15 @@
     ],
     "answerIndex": 0,
     "explanation": "A liability arising from a loss contingency should be recorded if\nthe contingent future event will probably occur and the amount\nof the loss can be reasonably estimated.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تواجه شركة دعوى فصل تعسفي بمبلغ $500,000. ويرى محاميها أن احتمال فوز المدعي وحصوله على المبلغ الكامل يقارب 80%، ويتوقع استمرار القضية من 2 إلى 3 سنوات. ما العرض المالي الأنسب لهذه الخسارة المحتملة؟",
+    "choicesAr": [
+      "إثبات خسارة محتملة بمبلغ $500,000.",
+      "إثبات خسارة محتملة بمبلغ $400,000.",
+      "الإفصاح فقط في الإيضاحات.",
+      "عدم الإثبات أو الإفصاح."
+    ],
+    "explanationAr": "وفق المعايير الأمريكية يثبت الالتزام الناشئ عن خسارة محتملة عندما يكون نشوء الالتزام مرجحًا ويمكن تقدير مبلغ الخسارة بشكل معقول. ولا يضرب مبلغ التعويض في احتمال الفوز في هذه المسألة ذات الالتزام الفردي."
   },
   {
     "unit": 4,
@@ -167,7 +223,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Gain contingencies are not recognized until they are realized.\nBecause the appeal is not expected to be decided before Year\n6, Caso should not record any revenue from the lawsuit in the\nYear 4 income statement. This gain contingency should be\ndisclosed; however, care should be taken to avoid misleading\nimplications as to the likelihood of realization.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في مايو من السنة 1 رفعت Caso دعوى ضد Wayne تطالب بتعويض $1.9 مليون عن انتهاك براءة اختراع. وفي نوفمبر من السنة 4 قضت المحكمة بتعويض $1.5 مليون، لكن لا يتوقع البت في استئناف Wayne قبل السنة 6. ويرى محامي Caso أن الفوز مرجح بتعويض يتراوح بين $800,000 و$1.1 مليون، والمبلغ الأكثر احتمالًا $1 مليون. ما الدخل من القضية الذي تثبته Caso في السنة المنتهية في 31 ديسمبر من السنة 4؟",
+    "choicesAr": [
+      "$0",
+      "$800,000",
+      "$1,000,000",
+      "$1,500,000"
+    ],
+    "explanationAr": "لا تثبت المكاسب المحتملة قبل تحققها وفق المعالجة الأمريكية المعروضة. ولأن الاستئناف لن يحسم قبل السنة 6، لا تثبت Caso إيرادًا من القضية في قائمة دخل السنة 4. ويُفصح عن المكسب المحتمل مع تجنب الإيحاء المضلل باحتمال تحققه."
   },
   {
     "unit": 4,
@@ -184,7 +248,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Loss contingencies should be accrued when information\navailable prior to issuance of financial statements indicates\nthat it is probable that an asset has been impaired or a liability\nhas been incurred, and the amount of loss can be reasonably\nestimated. Probable is defined as a condition in which future\nevents are likely to occur.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "متى تستحق خسارة محتملة في دفاتر المنشأة؟",
+    "choicesAr": [
+      "إذا كان نشوء الالتزام ممكنًا بدرجة معقولة وكان مبلغ الخسارة معلومًا.",
+      "إذا رجح نشوء الالتزام وكان مبلغ الخسارة مجهولًا.",
+      "إذا رجح نشوء الالتزام وأمكن تقدير مبلغ الخسارة بشكل معقول.",
+      "إذا كان احتمال نشوء الالتزام بعيدًا وأمكن تقدير الخسارة."
+    ],
+    "explanationAr": "تستحق الخسارة المحتملة عندما تشير المعلومات المتاحة قبل إصدار القوائم إلى رجحان انخفاض قيمة أصل أو نشوء التزام في تاريخ التقرير وإمكان تقدير الخسارة بشكل معقول. والمقصود بالمرجح أن وقوع الحدث محتمل بدرجة كبيرة وفق المعايير الأمريكية."
   },
   {
     "unit": 4,
@@ -201,7 +273,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Under the conservatism restraint, when alternative accounting\nmethods are appropriate, the one having the less favorable\neffect on net income and total assets is preferable. Thus, a\nloss, not a gain, contingency may be recorded in the financial\nstatements. If the probability of realization of a gain is high, the\ncontingency is disclosed in the notes.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "شركة Conlon مدعية في قضية انتهاك براءة اختراع. واحتمال الحكم لصالحها مرتفع ويمكن تقدير مبلغ التسوية بشكل معقول. ما المعالجة الصحيحة؟",
+    "choicesAr": [
+      "إثبات مكسب محتمل بالحد الأدنى للتسوية المقدرة.",
+      "إثبات مكسب محتمل بمبلغ التسوية المرجحة.",
+      "الإفصاح فقط في الإيضاحات.",
+      "لا يلزم أي عرض حاليًا."
+    ],
+    "explanationAr": "وفق المعالجة الأمريكية للمكاسب المحتملة، لا يثبت المكسب غير المتحقق في القوائم. وإذا كان احتمال تحققه مرتفعًا، يفصح عنه في الإيضاحات دون تضليل بشأن درجة التأكد."
   },
   {
     "unit": 4,
@@ -218,7 +298,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A contingent loss is accrued when two conditions are met: It is\nprobable that at a balance sheet date an asset is overstated or\na liability has been incurred, and the amount of the loss can\nbe reasonably estimated. If both conditions are not met, but\nthe probability of the loss is at least reasonably possible, the\namount of the loss must be disclosed. This loss is reasonably\npossible and reasonably estimable, and it therefore should be\ndisclosed but not accrued as a liability. The financial\nstatements should disclose the nature of the loss contingency\nand the amount or range of the possible loss. If an estimate\ncannot be made, the notes should state this.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "قد تتكبد شركة أجهزة منزلية خسارة بسبب اكتشاف عيب في أحد منتجاتها. وقوع الخسارة ممكن بدرجة معقولة ويمكن تقدير تكاليفها. كيف تعالج؟\nالاستحقاق | الإفصاح في الإيضاحات",
+    "choicesAr": [
+      "نعم | لا",
+      "نعم | نعم",
+      "لا | نعم",
+      "لا | لا"
+    ],
+    "explanationAr": "تستحق الخسارة المحتملة إذا رجح في تاريخ التقرير انخفاض قيمة أصل أو نشوء التزام وأمكن تقدير المبلغ. وإذا لم يتحقق الشرطان مع كون احتمال الخسارة ممكنًا بدرجة معقولة على الأقل، يفصح عن الخسارة. وهنا الخسارة ممكنة بدرجة معقولة وقابلة للتقدير، فيفصح عنها دون إثبات التزام. وتوضح الإيضاحات طبيعتها ومبلغها أو نطاقها، وإذا تعذر التقدير يذكر ذلك."
   },
   {
     "unit": 4,
@@ -235,7 +323,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Contingencies are probable (likely to occur), reasonably\npossible, or remote. When contingent losses are probable and\nthe amount can be reasonably estimated, the amount of the\nloss should be recognized. If the amount cannot be\nreasonably estimated but the loss is at least reasonably\npossible, full disclosure should be made, including a statement\nthat an estimate cannot be made.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عند عرض الأمور المحتملة، أي العبارات التالية صحيحة؟",
+    "choicesAr": [
+      "لا يستحق ضمان دين الغير إلا إذا كانت الخسارة وشيكة.",
+      "يفصح عن الخسارة المحتملة إذا كان احتمالها بعيدًا.",
+      "يجب أن يتضمن الإفصاح عن الخسارة المحتملة تقديرًا نقديًا دائمًا.",
+      "يفصح عن الخسارة المرجحة غير القابلة للتقدير مع ذكر تعذر تقديرها."
+    ],
+    "explanationAr": "تصنف الخسائر المحتملة وفق المعايير الأمريكية إلى مرجحة، وممكنة بدرجة معقولة، وبعيدة الاحتمال. وإذا رجحت الخسارة وأمكن تقديرها بشكل معقول تثبت. وإذا تعذر تقديرها وكان احتمالها ممكنًا بدرجة معقولة على الأقل، يفصح عنها مع بيان تعذر التقدير، مع مراعاة القواعد الخاصة بالضمانات."
   },
   {
     "unit": 4,
@@ -252,7 +348,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Because the loss is probable and can be reasonably\nestimated, it should be accrued if the amount is material. If the\nestimate is stated within a given range, and no amount within\nthat range appears to be a better estimate than any other, the\nminimum of the range should be accrued. Thus, Steel should\nreport a $500,000 contingent liability.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 5 فبراير من السنة 2 رفع موظف دعوى بقيمة $2 مليون ضد Steel عن أضرار ناجمة عن انفجار مصنع في 29 ديسمبر من السنة 1. ويتوقع المحامي خسارة القضية بمبلغ بين $500,000 و$1 مليون. وعرض الموظف التسوية خارج المحكمة مقابل $900,000، لكن الشركة رفضت. ما الالتزام من الدعوى في قائمة المركز المالي في 31 ديسمبر من السنة 1؟",
+    "choicesAr": [
+      "$2,000,000",
+      "$1,000,000",
+      "$900,000",
+      "$500,000"
+    ],
+    "explanationAr": "لأن الخسارة مرجحة وقابلة للتقدير، تستحق إذا كانت جوهرية. وفق المعايير الأمريكية إذا كان التقدير نطاقًا ولم يكن أي مبلغ فيه أفضل من غيره، يثبت الحد الأدنى ويفصح عن التعرض الإضافي عند اللزوم. لذلك تثبت Steel التزامًا محتملًا $500,000، بافتراض عدم كون عرض التسوية أفضل تقدير."
   },
   {
     "unit": 4,
@@ -269,7 +373,15 @@
     ],
     "answerIndex": 0,
     "explanation": "A contingent loss is accrued when it is probable that, at a\nbalance sheet date, an asset is overstated or a liability has\nbeen incurred and the amount of the loss can be reasonably\nestimated. If both conditions are not met but the probability of\nthe loss is at least reasonably possible, the amount of the loss\nmust be disclosed. This loss is reasonably possible and\nreasonably estimable. Hence, it should be disclosed but not\naccrued.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 10 نوفمبر من السنة 4 وقع حادث لشاحنة Garry مع سيارة يقودها Dacey. وفي 10 يناير من السنة 5 تلقت Garry إشعارًا بدعوى تعويض عن إصابات بقيمة $800,000. ويرى المحامي أن الحكم ضدها ممكن بدرجة معقولة، بنطاق $250,000 إلى $500,000، وأن $400,000 أفضل تقدير. وتنتهي السنة في 31 ديسمبر، وصدرت قوائم السنة 4 في 6 مارس من السنة 5. ما الخسارة المستحقة في 31 ديسمبر من السنة 4؟",
+    "choicesAr": [
+      "$0",
+      "$250,000",
+      "$400,000",
+      "$500,000"
+    ],
+    "explanationAr": "تستحق الخسارة المحتملة عندما يرجح في تاريخ التقرير انخفاض قيمة أصل أو نشوء التزام ويمكن تقدير المبلغ. وإذا لم يتحقق الشرطان وكان احتمال الخسارة ممكنًا بدرجة معقولة على الأقل، يفصح عنها. وهنا الخسارة ممكنة بدرجة معقولة ويمكن تقديرها، لذا يفصح عنها دون استحقاق."
   },
   {
     "unit": 4,
@@ -286,7 +398,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A contingent loss is accrued when two conditions are met: (1)\nIt is probable that at a balance sheet date an asset is\noverstated or a liability has been incurred, and (2) the amount\nof the loss can be reasonably estimated. Gain contingencies\nshould not be recognized until they are realized. A gain\ncontingency should be disclosed, but care should be taken to\navoid misleading implications as to the likelihood of\nrealization. Because the award in favor of Doll is probable and\ncan be reasonably estimated, a loss should be recognized in\nYear 4 by Brooker. However, Doll should not recognize the\ngain until Year 5.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في السنة 4 أحيل نزاع عقدي بين Doll وBrooker للتحكيم الملزم. وفي السنة 4 أشار محاميا الطرفين بصورة خاصة إلى إمكان تقدير التعويض المرجح لصالح Doll. وفي السنة 5 حكم المحكم لصالح Doll. متى يثبت الطرفان المكسب والخسارة؟\nمكسب Doll | خسارة Brooker",
+    "choicesAr": [
+      "السنة 4 | السنة 4",
+      "السنة 4 | السنة 5",
+      "السنة 5 | السنة 4",
+      "السنة 5 | السنة 5"
+    ],
+    "explanationAr": "تستحق الخسارة المحتملة عند تحقق (1) رجحان انخفاض قيمة أصل أو نشوء التزام في تاريخ التقرير، و(2) إمكان تقديرها بشكل معقول. ولا تثبت المكاسب المحتملة قبل تحققها، وإنما يفصح عنها دون تضليل بشأن احتمال التحقق. وبما أن التعويض لصالح Doll مرجح وقابل للتقدير، تثبت Brooker الخسارة في السنة 4، بينما تثبت Doll المكسب في السنة 5 عند تحقق شروط الاعتراف."
   },
   {
     "unit": 4,
@@ -303,7 +423,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Gain contingencies are recognized only when realized. A\nprobable favorable judgment and reasonably estimated\namount of damages may be disclosed in the notes to the\nfinancial statements, but no amount should be recognized as\na contingency gain until realized.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تعد Green قوائم نهاية السنة ولديها دعوى ضد منافس بتعويض $5,000,000. ويرى محاموها أن الحكم لصالحها مرجح وأن مبلغ التعويض قابل للتقدير بشكل معقول. وتكبدت أتعابًا قانونية $100,000، ومعدل ضريبة الدخل 30%. ما المكسب المحتمل الذي تثبته؟",
+    "choicesAr": [
+      "$0",
+      "$3,430,000",
+      "$3,500,000",
+      "$4,900,000"
+    ],
+    "explanationAr": "لا تثبت المكاسب المحتملة قبل تحققها. ويمكن الإفصاح عن الحكم المرجح ومبلغ التعويض القابل للتقدير في الإيضاحات، لكن لا يثبت مكسب محتمل قبل تحققه."
   },
   {
     "unit": 4,
@@ -320,7 +448,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A contingent liability must be accrued when, based on the\ninformation available prior to the issuance of the financial\nstatements, the loss is probable and the amount of the loss\ncan be reasonably estimated. The most likely amount of the\nloss ($1,300,000) should be accrued if the estimate is stated\nwithin a range.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "خلال السنة 2 رفع موظف سابق دعوى ضد Dane بسبب الفصل التعسفي في نوفمبر من السنة 1. ويرى المحامي أن الموظف سيفوز على الأرجح بتعويض بين $1,000,000 و$1,500,000، والمبلغ الأكثر احتمالًا $1,300,000. ولن تصدر قوائم السنة المنتهية في 31 ديسمبر من السنة 1 حتى فبراير من السنة 2. ما الالتزام الواجب عرضه في 31 ديسمبر من السنة 1؟",
+    "choicesAr": [
+      "$0",
+      "$1,000,000",
+      "$1,300,000",
+      "$1,500,000"
+    ],
+    "explanationAr": "يستحق الالتزام المحتمل عندما تشير المعلومات المتاحة قبل إصدار القوائم إلى خسارة مرجحة وقابلة للتقدير ترتبط بظروف قائمة في تاريخ التقرير. وإذا ورد التقدير في نطاق، يثبت أفضل تقدير للخسارة ($1,300,000) وفق المعايير الأمريكية."
   },
   {
     "unit": 4,
@@ -355,7 +491,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A material contingent loss must be accrued (debit loss and\ncredit contingent liability) when (1) it is probable that, at a\nbalance sheet date, an asset has been impaired or a liability\nhas been incurred and (2) the amount of the loss can be\nreasonably estimated. If the amount of loss cannot be\nreasonably estimated but the probability of the loss is at least\nreasonably possible, the nature of the contingency must be\ndescribed in the notes to the financial statements.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "كيف تعالج شركة الالتزام المحتمل إذا كانت الخسارة مرجحة ولكن لا يمكن تقديرها بشكل معقول؟",
+    "choicesAr": [
+      "لا يعرض الالتزام.",
+      "يعرض التزامًا قصير الأجل.",
+      "يعرض التزامًا طويل الأجل.",
+      "يفصح عنه فقط في الإيضاحات."
+    ],
+    "explanationAr": "تستحق الخسارة المحتملة الجوهرية (من حـ/ الخسارة إلى حـ/ الالتزام) عندما (1) يرجح في تاريخ التقرير انخفاض قيمة أصل أو نشوء التزام، و(2) يمكن تقدير مبلغها بشكل معقول. وإذا تعذر التقدير وكان احتمال الخسارة ممكنًا بدرجة معقولة على الأقل، يفصح عن طبيعتها في الإيضاحات وعن تعذر تقديرها."
   },
   {
     "unit": 4,
@@ -372,7 +516,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A material contingent loss must be accrued when (1) it is\nprobable that, at a balance sheet date, an asset has been\nimpaired or a liability has been incurred, and (2) the amount of\nthe loss can be reasonably estimated. Because the probability\nof the loss is reasonably possible, and not probable, no\naccrual is required. The nature of the contingency and an\nestimate of the amount of the possible loss or the range of\nloss must be disclosed when the probability of the loss is\nreasonably possible. Thus, Stark is only required to disclose\nthe range of the loss in the notes to the financial statements.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "قبل إصدار قوائم 31 ديسمبر أصبحت Stark مدعى عليها في قضية عن حدث وقع في أكتوبر. ويرى محاميها أن الحكم ضدها ممكن بدرجة معقولة، وأن التعويض يتراوح بين $100,000 و$150,000. ما المبلغ المستحق و/أو المفصح عنه في قوائم 31 ديسمبر؟\nاستحقاق الالتزام المحتمل | الإفصاح عن الالتزام المحتمل",
+    "choicesAr": [
+      "$100,000                    $100,000 - $150,000",
+      "$100,000                    $150,000",
+      "$0                         $100,000 - $150,000",
+      "$0                         $150,000"
+    ],
+    "explanationAr": "تستحق الخسارة المحتملة الجوهرية إذا (1) رجح في تاريخ التقرير انخفاض قيمة أصل أو نشوء التزام، و(2) أمكن تقدير المبلغ. ولأن الخسارة ممكنة بدرجة معقولة لا مرجحة، لا يلزم الاستحقاق. ويفصح عن طبيعة الخسارة وتقدير مبلغها أو نطاقها؛ لذا تفصح Stark فقط عن نطاق الخسارة في الإيضاحات."
   },
   {
     "unit": 4,
@@ -389,7 +541,15 @@
     ],
     "answerIndex": 0,
     "explanation": "A material contingent loss must be accrued when (1) it is\nprobable that, at a balance sheet date, an asset has been\nimpaired or a liability has been incurred, and (2) the amount of\nthe loss can be reasonably estimated. If one or both\nconditions are not met, no loss is accrued.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لم تثبت True خسارة مرجحة من دعوى قضائية في قوائمها المالية. أي تفسير لعدم الاستحقاق يتفق مع المبادئ المحاسبية المتعارف عليها؟",
+    "choicesAr": [
+      "لا يمكن تقدير الخسارة بشكل معقول.",
+      "يمكن تقدير نطاق للخسارة لكن لا يوجد مبلغ أدق من غيره.",
+      "إثبات المبلغ في القوائم يضعف دفاع الشركة.",
+      "لا يلزم الاستحقاق لأن مبلغ الخسارة المقدر أفصح عنه في الإيضاحات."
+    ],
+    "explanationAr": "تستحق الخسارة المحتملة الجوهرية عندما (1) يرجح في تاريخ التقرير انخفاض قيمة أصل أو نشوء التزام، و(2) يمكن تقدير المبلغ بشكل معقول. وإذا لم يتحقق أحد الشرطين فلا تستحق الخسارة، مع مراعاة متطلبات الإفصاح."
   },
   {
     "unit": 4,
@@ -406,7 +566,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Gain contingencies are recognized only when realized. A gain\ncontingency must be adequately disclosed in the notes to the\nfinancial statements.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تراجع Tiger Rags إفصاحاتها عن المكاسب المحتملة. متى ينبغي إثبات المكسب؟",
+    "choicesAr": [
+      "عند تحققه.",
+      "عندما يتحدد بوضوح.",
+      "عندما يكون ممكنًا بدرجة معقولة وقابلًا للتقدير.",
+      "عندما يكون مرجحًا وقابلًا للتقدير."
+    ],
+    "explanationAr": "لا تثبت المكاسب المحتملة قبل تحققها وفق المعالجة الأمريكية العامة. ويفصح عنها بصورة مناسبة في الإيضاحات دون المبالغة في احتمال التحقق."
   },
   {
     "unit": 4,
@@ -423,7 +591,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Because the extended warranty was purchased separately, it\nis classified as a service-type warranty. Revenue from a\nservice-type warranty is recognized over the coverage period.\nBecause warranty costs are expected to be incurred evenly\nover the life of the warranty contracts, the revenue should be\nrecognized on the straight-line basis over the life of the\nextended warranty contract.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "باعت Kamchatka سلعة معمرة في 1 يناير من السنة 1 وحصل العميل تلقائيًا على ضمان معياري ضد عيوب التصنيع لمدة 1 سنة. واشترى ضمانًا ممتدًا يضيف 2 سنة حتى نهاية السنة 3. وتوقعت الشركة عند البيع تكبد تكاليف الضمان بالتساوي على مدة العقود. وقدم العميل مطالبة واحدة خلال فترة 3 سنوات في السنة 2. متى تثبت الشركة إيراد الضمان الممتد؟",
+    "choicesAr": [
+      "في 1 يناير من السنة 1.",
+      "في السنتين 2 و3.",
+      "عند المطالبة في السنة 2.",
+      "في 31 ديسمبر من السنة 3 عند انتهاء الضمان."
+    ],
+    "explanationAr": "لأن الضمان الممتد اشتري بصورة منفصلة، يصنف ضمان خدمة (التزام أداء منفصل). ويثبت الإيراد على مدى فترة التغطية، وبما أن الخدمة تقدم بالتساوي حسب معطيات المسألة، يثبت إيراد الضمان الممتد بالقسط الثابت على مدة العقد."
   },
   {
     "unit": 4,
@@ -440,7 +616,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A standard warranty against manufacturing defects is an\nassurance-type warranty. This warranty creates a loss\ncontingency. A liability for warranty costs is recognized on the\ndate the product is sold. Because this product is new, the\nbeginning balance in the estimated warranty liability account\nat the beginning of Year 1 is $0. For Year 1, the estimated\nwarranty costs related to dollar sales are 6% (2% + 4%) of\nsales, or $9,000 ($150,000 × 6%). For Year 2, the estimated\nwarranty costs are $15,000 ($250,000 × 6%). These amounts\nare charged to warranty expense and the estimated warranty\nliability account. This liability account is decreased for\nexpenditures of $2,250 and $7,500 in Year 1 and Year 2,\nrespectively. Hence, the estimated warranty liability\nat 12/31/Year 2 is $14,250 ($9,000 – $2,250 + $15,000 –\n$7,500).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في السنة 1 قدمت Gum منتجًا جديدًا بضمان معياري ضد العيوب لمدة 2 سنة. وتقدر تكاليف الضمان بـ2% من المبيعات خلال 12 شهرًا بعد البيع و4% خلال ثاني 12 شهرًا. وفيما يلي المبيعات والتكاليف الفعلية في السنتين المنتهيتين في 31 ديسمبر من السنة 1 والسنة 2:\nالسنة | المبيعات | تكاليف الضمان الفعلية\nالسنة 1 | $150,000 | $2,250\nالسنة 2 | 250,000 | 7,500\nالإجمالي | $400,000 | $9,750\nما التزام الضمان المقدر في قائمة المركز المالي في 31 ديسمبر من السنة 2؟",
+    "choicesAr": [
+      "$2,500",
+      "$3,250",
+      "$11,250",
+      "$14,250"
+    ],
+    "explanationAr": "ضمان عيوب التصنيع المعياري ضمان تأكيد ينشأ عنه خسارة محتملة. ويثبت الالتزام عند بيع المنتج والاعتراف بالإيراد. ولأن المنتج جديد فإن رصيد أول السنة 1 هو $0. وفي السنة 1 تبلغ التكلفة المقدرة 6% (2% + 4%) من المبيعات، أي $9,000 ($150,000 × 6%). وفي السنة 2 تبلغ $15,000 ($250,000 × 6%). تحمل هذه المبالغ على مصروف الضمان وتزيد الالتزام، ويخفض الالتزام بالتكاليف الفعلية $2,250 و$7,500 في السنة 1 والسنة 2 على الترتيب. لذا يبلغ الالتزام في 12/31 من السنة 2 مبلغ $14,250 ($9,000 − $2,250 + $15,000 − $7,500)."
   },
   {
     "unit": 4,
@@ -457,7 +641,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Under the accrual method, the total estimated warranty costs\nare charged to operating expense in the year of sale. The total\nestimated warranty cost per unit is $2,000 ($500 + $1,500). In\nYear 2, 200 units were sold, so the warranty expense\nrecognized is $400,000.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يبلغ سعر بيع وحدة منتج شركة جديدة $20,000. ويحصل المشترون على ضمان تأكيد لمدة 2 سنة، بتكلفة متوقعة $500 للوحدة في سنة البيع و$1,500 في السنة التالية. باعت الشركة 160 وحدة في السنة الأولى و200 في الثانية. وبلغت المدفوعات الفعلية للضمان $40,000 و$260,000 في السنة 1 والسنة 2 على الترتيب. ما مصروف الضمان في السنة الثانية؟",
+    "choicesAr": [
+      "$100,000",
+      "$260,000",
+      "$340,000",
+      "$400,000"
+    ],
+    "explanationAr": "وفق الاستحقاق تحمل كامل تكلفة الضمان المقدرة على مصروف التشغيل في سنة البيع. ويبلغ تقدير تكلفة الوحدة $2,000 ($500 + $1,500). وفي السنة 2 بيعت 200 وحدة، لذا يبلغ مصروف الضمان $400,000."
   },
   {
     "unit": 4,
@@ -474,7 +666,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A standard warranty against manufacturing defects is an\nassurance-type warranty. This warranty creates a loss\ncontingency. A liability for warranty costs is recognized on the\ndate the product is sold. Warranty expense equals 2% of\nsales. In Year 2, warranty expense is $6,000 ($300,000 × 2%).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تبيع Wall منتجًا بضمان معياري ضد عيوب التصنيع لمدة 2 سنة. وتقدر تكاليف الإصلاح بـ2% من صافي المبيعات. وخلال أول 2 سنة كانت المبيعات والتكاليف كما يلي:\nالسنة 1:\nإجمالي المبيعات: $250,000\nتكاليف الإصلاح: 4,500\nالسنة 2:\nإجمالي المبيعات: $300,000\nتكاليف الإصلاح: 5,000\nما مصروف الضمان للسنة 2؟",
+    "choicesAr": [
+      "$1,000",
+      "$5,000",
+      "$5,900",
+      "$6,000"
+    ],
+    "explanationAr": "الضمان المعياري ضد عيوب التصنيع ضمان تأكيد ينشأ عنه خسارة محتملة. ويثبت التزام الضمان عند بيع المنتج. ويبلغ المصروف 2% من المبيعات. وفي السنة 2 يبلغ المصروف $6,000 ($300,000 × 2%)."
   },
   {
     "unit": 4,
@@ -491,7 +691,15 @@
     ],
     "answerIndex": 1,
     "explanation": "A liability for warranty costs is recognized when the related\nrevenue is recognized (i.e., on the day the product is sold).\nEven if the warranty covers a period longer than the period in\nwhich the product is sold, the entire liability for the expected\nwarranty costs must be recognized on the day the product is\nsold. Thus, in the first calendar year a warranty liability of\n$100,000 (1,000 units × $100 estimated warranty cost per\nunit) was recognized. Actual payments for warranty costs\nreduce the amount of warranty liability recognized. Thus, at\nthe end of the first calendar year, the balance of the warranty\nliability is $88,000 ($100,000 warranty liability initially\nrecognized – $12,000 actual warranty costs incurred during\nthe first year).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بدأت Hill إنتاج منتج جديد. وفي السنة الميلادية الأولى باعت 1,000 وحدة بسعر $1,200 للوحدة بضمان لمدة سنتين. وتقدر متوسط تكلفة الضمان بـ$100 للوحدة. وتكبدت تكاليف فعلية $12,000 في السنة الأولى و$22,000 في الثانية. وتستخدم طريقة استحقاق مصروف الضمان. ما رصيد التزام الضمان المقدر في نهاية السنة الميلادية الأولى؟",
+    "choicesAr": [
+      "$66,000",
+      "$88,000",
+      "$100,000",
+      "$112,000"
+    ],
+    "explanationAr": "يثبت التزام الضمان عند الاعتراف بالإيراد المرتبط به، أي عند بيع المنتج في سياق السؤال. وحتى إذا تجاوزت التغطية فترة البيع، يثبت كامل الالتزام المتوقع عند البيع. لذا أثبتت في السنة الأولى التزامًا $100,000 (1,000 وحدة × $100 تكلفة ضمان مقدرة للوحدة). وتخفض تكاليف الضمان الفعلية الالتزام. وفي نهاية السنة الأولى يبلغ الرصيد $88,000 ($100,000 الالتزام الأولي − $12,000 التكاليف الفعلية خلال السنة الأولى)."
   },
   {
     "unit": 4,
@@ -508,7 +716,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A contingent loss must be accrued when, based on\ninformation available prior to the issuance of the financial\nstatements, two conditions are met: (1) It is probable that an\nasset has been impaired or a liability has been incurred at a\nbalance sheet date, and (2) the amount of the loss can be\nreasonably estimated. Because the liability was settled before\nthe financial statements were issued, it was certain that a\nliability had been incurred, and the amount could be\nspecifically determined. Thus, the contingent loss must be\naccrued. Disclosure of the amount of the accrual is necessary\nto keep the financial statements from being misleading, given\nthat the settlement was significantly greater than expected.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "سوت Ace قضية في 1 فبراير من السنة 2 تتعلق بحدث وقع في السنة 1. وقدر الالتزام في 31 ديسمبر من السنة 1 بمبلغ يقل كثيرًا عن التسوية النهائية. والمعاملة جوهرية ولم تصدر قوائم السنة 1. كيف تعرض التسوية في قوائم السنة 1؟",
+    "choicesAr": [
+      "الإفصاح عن التسوية فقط.",
+      "استحقاق التسوية فقط.",
+      "لا إفصاح ولا استحقاق.",
+      "الإفصاح والاستحقاق معًا."
+    ],
+    "explanationAr": "تستحق الخسارة المحتملة وفق المعلومات المتاحة قبل إصدار القوائم إذا (1) رجح في تاريخ التقرير انخفاض أصل أو نشوء التزام، و(2) أمكن تقدير الخسارة. ولأن التسوية قبل الإصدار تؤكد التزامًا قائمًا في تاريخ التقرير وتحدد مبلغه، تعدل القوائم لإثباته. ويُفصح عن مبلغ الاستحقاق عند اللزوم لتجنب التضليل، نظرًا إلى الفرق الجوهري عن التقدير السابق."
   },
   {
     "unit": 4,
