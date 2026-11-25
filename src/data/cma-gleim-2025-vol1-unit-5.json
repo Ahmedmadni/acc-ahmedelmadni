@@ -14,7 +14,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The transaction price is the amount of consideration to which\nan entity expects to be entitled in exchange for transferring\npromised goods or services to a customer. It excludes\namounts collected on behalf of third parties. Thus, the amount\ncollected for city occupancy taxes must not be included in the\ntransaction price. In addition, any consideration payable to the\ncustomer, such as coupons, credit, or vouchers, reduces the\ntransaction price. Accordingly, the total transaction price of the\ncontract is $17,000 [(10 × 10 × $200) – $3,000].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أبرم فندق عقدًا مع عميل لتوفير 10 غرف لمدة 10 ليال بسعر $200 للغرفة في الليلة. ويحصّل بالإضافة إلى السعر ضريبة إشغال للمدينة بمبلغ $7 للغرفة في الليلة. ووفق العرض الترويجي يحصل كل عميل يشتري أكثر من 50 ليلة غرفة على خصم $3,000 من إجمالي الشراء. ما إجمالي سعر المعاملة للعقد؟",
+    "choicesAr": [
+      "$20,000",
+      "$17,700",
+      "$17,000",
+      "$20,700"
+    ],
+    "explanationAr": "سعر المعاملة هو مبلغ المقابل الذي تتوقع المنشأة استحقاقه مقابل نقل السلع أو الخدمات الموعودة إلى العميل. ويستبعد المبالغ المحصلة نيابة عن الغير، ومنها ضريبة الإشغال هنا. كما يخفض المقابل المدفوع للعميل، مثل القسائم والخصومات، سعر المعاملة ما لم يكن مقابل سلعة أو خدمة متميزة. لذا يبلغ سعر المعاملة $17,000 [(10 × 10 × $200) − $3,000]."
   },
   {
     "unit": 5,
@@ -31,7 +39,15 @@
     ],
     "answerIndex": 1,
     "explanation": "An entity recognizes revenue when (or as) it satisfies a\nperformance obligation by transferring a promised good or\nservice (an asset) to a customer. Accordingly, ABC recognizes\nrevenue when a luncheon is served.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تقدم ABC خدمات ضيافة متخصصة في وجبات غداء الشركات الكبرى. وتشترط تقديم الطلبات قبل الموعد بـ2 أسبوع. وتصدر الفواتير في اليوم 10 من الشهر التالي للخدمة، ويستحق السداد خلال 30 يومًا من تاريخ الفاتورة. متى ينبغي الاعتراف بالإيراد؟",
+    "choicesAr": [
+      "عندما يقدم العميل الطلب.",
+      "عند تقديم وجبة الغداء.",
+      "عند إرسال الفاتورة.",
+      "عند استلام سداد العميل."
+    ],
+    "explanationAr": "تعترف المنشأة بالإيراد عندما (أو مع) الوفاء بالتزام الأداء بنقل سلعة أو خدمة موعودة إلى العميل. لذلك تعترف ABC بالإيراد عند تقديم وجبة الغداء."
   },
   {
     "unit": 5,
@@ -48,7 +64,15 @@
     ],
     "answerIndex": 0,
     "explanation": "An entity recognizes revenue when (or as) it satisfies a\nperformance obligation by transferring a promised good or\nservice (an asset) to a customer. Because transfers ordinarily\noccur at the point of sale, the most appropriate time to\nrecognize revenue is when the sale occurs.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أسس شخص شركة لإنتاج مضارب وكرات البيسبول، ويريد تحديد سياسة الاعتراف بالإيراد. وفق مبدأ الاعتراف بالإيراد، ما التوقيت الأنسب؟",
+    "choicesAr": [
+      "عند حدوث البيع.",
+      "عند تحصيل النقد.",
+      "عند اكتمال الإنتاج.",
+      "عند إعداد القوائم المالية ربع السنوية."
+    ],
+    "explanationAr": "تعترف المنشأة بالإيراد عندما (أو مع) الوفاء بالتزام الأداء بنقل السلعة أو الخدمة الموعودة للعميل. ولأن السيطرة تنتقل عادة عند البيع في الحالة المعروضة، فإن هذا هو التوقيت المناسب، وليس مجرد إصدار فاتورة أو تحصيل مبلغ."
   },
   {
     "unit": 5,
@@ -65,7 +89,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Revenue is recognized when a performance obligation is\nsatisfied by transferring a promised good or service to a\ncustomer. It happens when the customer obtains control of the\ngood or service (i.e., an asset). Control of an asset is\ntransferred to the customer when the customer (1) has the\nability to direct the use of the asset and (2) obtains\nsubstantially all of the remaining benefits (potential cash flows)\nfrom the asset.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "متى يعد الأصل الموعود منقولًا إلى العميل بما يحقق الوفاء الكامل بالتزام الأداء في العقد؟",
+    "choicesAr": [
+      "عندما يحصل العميل على السيطرة على الأصل.",
+      "عندما يستطيع توجيه استخدام المنتج.",
+      "عندما يحوز الأصل ماديًا.",
+      "عندما يسدد كامل قيمة الأصل."
+    ],
+    "explanationAr": "يعترف بالإيراد عند الوفاء بالتزام الأداء بنقل السلعة أو الخدمة الموعودة إلى العميل، أي عندما يحصل على السيطرة. وتنتقل السيطرة عندما (1) يستطيع العميل توجيه استخدام الأصل و(2) يحصل على معظم منافعه المتبقية (التدفقات النقدية المحتملة)."
   },
   {
     "unit": 5,
@@ -99,7 +131,15 @@
     ],
     "answerIndex": 1,
     "explanation": "An entity recognizes revenue when (or as) it satisfies a\nperformance obligation by transferring a promised good or\nservice (an asset) to a customer. A performance obligation\ncan be satisfied either over time or at a point in time. Under\nthe former scenario, an entity recognizes revenue as it\nsatisfies the performance obligation. Thus, the company\nshould recognize the advancement evenly over the year as\nthe services are performed.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تقدم شركة خدمات تسميد ومكافحة الحشرات والأمراض للأشجار والنباتات والشجيرات بموجب عقود. ومقابل $50 شهريًا تزور الشركة مقر المشترك وتستخدم الخلطات المناسبة، وتقدم زيارات إضافية عند الحاجة بين المواعيد الدورية. ويفضل بعض المشتركين سداد سنة كاملة مقدمًا بسعر سنوي $540. متى تعترف الشركة بالإيراد المتعلق بالمشترك الذي يسدد مقدمًا؟",
+    "choicesAr": [
+      "عند تحصيل النقد.",
+      "بالتساوي على مدار السنة مع تقديم الخدمات.",
+      "في نهاية سنة العقد بعد تقديم جميع الخدمات.",
+      "في نهاية السنة المالية."
+    ],
+    "explanationAr": "تعترف المنشأة بالإيراد عندما (أو مع) الوفاء بالتزام الأداء بنقل سلعة أو خدمة موعودة. وقد يتحقق الوفاء على مدى الزمن أو في نقطة زمنية. وفي الحالة الأولى يعترف بالإيراد مع الوفاء بالتزام الأداء؛ لذا يعترف بالمبلغ المقدم بالتساوي على مدار السنة بافتراض تقديم الخدمة بصورة منتظمة."
   },
   {
     "unit": 5,
@@ -133,7 +173,15 @@
     ],
     "answerIndex": 3,
     "explanation": "An entity recognizes revenue when (or as) it satisfies a\nperformance obligation by transferring a promised good or\nservice (an asset) to a customer. An airline’s performance\nobligation regarding airline tickets is to ensure promised flights\noccur. Thus, an airline should recognize revenue from airline\ntickets when related flights occur.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "متى ينبغي لشركة طيران الاعتراف بإيراد تذاكر الطيران؟",
+    "choicesAr": [
+      "عند حجز مقاعد المسافرين.",
+      "عند تأكيد الحجوزات.",
+      "عند إصدار التذاكر.",
+      "عند تنفيذ الرحلات المتعلقة بالتذاكر."
+    ],
+    "explanationAr": "تعترف المنشأة بالإيراد عندما (أو مع) الوفاء بالتزام الأداء بنقل السلعة أو الخدمة الموعودة. ويتمثل التزام شركة الطيران في تقديم خدمة النقل الموعودة. لذلك يعترف بإيراد التذاكر عند تنفيذ الرحلات المتعلقة بها، بافتراض عدم انطباق أحكام خاصة بالتذاكر غير المستخدمة."
   },
   {
     "unit": 5,
@@ -150,7 +198,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The transfer of the software license and the performance of\ninstallation services are separately identifiable from other\npromises in the contract. The installation services do not\nsignificantly modify or customize the software itself. In\naddition, on the basis of the entity’s customary business\npractice, at contract inception, it made an implicit promise to\nprovide technical support services. The entity’s past practice\nof providing these services creates a valid expectation that the\ncustomer will receive these services. Consequently, the entity\nidentifies the following performance obligations in the contract:\n(1) software license, (2) installation services, and (3) technical\nsupport services.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أبرم مطور برمجيات عقدًا مع عميل جديد لبيع ترخيص برنامج وتقديم خدمات التركيب. ويبيع أحيانًا الترخيص والتركيب بصورة منفصلة. وتقدم منشآت أخرى خدمات التركيب عادة، ولا تعدل الخدمة البرنامج تعديلًا جوهريًا. وتاريخيًا قدم المطور للعملاء الجدد دعمًا فنيًا لمدة 5 سنوات دون مقابل إضافي. ولا يحدد العقد شروط الدعم. وفق مبدأ الاعتراف بالإيراد من عقود العملاء، ما التزامات الأداء المحددة في العقد؟",
+    "choicesAr": [
+      "التزام أداء واحد: (1) ترخيص البرنامج وخدمات التركيب معًا.",
+      "التزاما أداء: (1) ترخيص البرنامج و(2) خدمات التركيب.",
+      "ثلاثة التزامات أداء: (1) ترخيص البرنامج و(2) خدمات التركيب و(3) الدعم الفني.",
+      "التزاما أداء: (1) ترخيص البرنامج والتركيب معًا و(2) الدعم الفني."
+    ],
+    "explanationAr": "يمكن تحديد نقل ترخيص البرنامج وتقديم خدمات التركيب بصورة منفصلة عن بقية الوعود في العقد. ولا يعدل التركيب البرنامج تعديلًا جوهريًا ولا يخصصه. وبناء على الممارسة التجارية المعتادة، ينشأ عند إبرام العقد وعد ضمني بتقديم الدعم الفني، إذ تخلق الممارسة السابقة توقعًا صحيحًا لدى العميل بالحصول عليه. لذلك تحدد المنشأة التزامات الأداء التالية: (1) ترخيص البرنامج و(2) خدمات التركيب و(3) الدعم الفني، بافتراض أن العميل يستطيع الانتفاع بكل منها منفردًا أو مع موارد متاحة بسهولة."
   },
   {
     "unit": 5,
@@ -167,7 +223,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The standalone selling price is the price at which an entity\nwould sell a promised good or service separately to a\ncustomer. The best evidence of a standalone selling price is\nthe observable price of a good or service when it is sold\nseparately in similar circumstances and to similar customers\n(e.g., a contractually stated price or list price of a good or\nservice).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما أفضل دليل على سعر البيع المستقل لسلعة أو خدمة موعودة للعميل؟",
+    "choicesAr": [
+      "التكلفة المتوقعة.",
+      "التكلفة المتوقعة مضافًا إليها هامش مناسب.",
+      "سعر يمكن ملاحظته.",
+      "سعر بيع المنافس."
+    ],
+    "explanationAr": "سعر البيع المستقل هو السعر الذي تبيع به المنشأة السلعة أو الخدمة الموعودة بصورة منفصلة. وأفضل دليل عليه هو السعر الملحوظ عند البيع المنفصل في ظروف مماثلة ولعملاء مماثلين. وقد يكون السعر المذكور في العقد أو قائمة الأسعار دليلًا إذا كان يمثل فعلًا سعر البيع المستقل، ولا يفترض ذلك تلقائيًا."
   },
   {
     "unit": 5,
@@ -184,7 +248,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The transaction price should be allocated to performance\nobligations in the contract based on their standalone selling\nprices. The sum of the products’ standalone selling prices is\n$320,000 ($40,000 + $120,000 + $160,000), and the\nstandalone selling price of product X is $40,000. Thus,\n$31,250 [($40,000 ÷ $320,000) × $250,000] of the total\ncontract price should be allocated to product X.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أبرمت منشأة عقدًا لبيع المنتجات X وY وZ مقابل $250,000. وتنتقل السيطرة عليها في أوقات مختلفة. وحددت المنشأة تسليم كل منتج بوصفه التزام أداء متميزًا. ويباع X وY بانتظام بصورة منفصلة بأسعار بيع مستقلة قابلة للملاحظة تبلغ $40,000 و$120,000 على الترتيب. وقدر سعر البيع المستقل للمنتج Z بمبلغ $160,000 باستخدام مدخل تقييم السوق المعدل. وتقرر أن خصم العميل لا يتعلق بمنتجات محددة في العقد. ما الإيراد المعترف به عند بيع X؟",
+    "choicesAr": [
+      "$40,000",
+      "$22,500",
+      "$31,250",
+      "$62,500"
+    ],
+    "explanationAr": "يوزع سعر المعاملة على التزامات الأداء وفق أسعار البيع المستقلة النسبية. ويبلغ مجموع هذه الأسعار $320,000 ($40,000 + $120,000 + $160,000)، وسعر البيع المستقل للمنتج X هو $40,000. لذلك يخصص له $31,250 [($40,000 ÷ $320,000) × $250,000] من إجمالي سعر العقد."
   },
   {
     "unit": 5,
@@ -219,7 +291,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A contract is accounted for under the revenue recognition\nstandard if all the following criteria are met: (1) The contract\nwas approved by both parties, (2) the contract has commercial\nsubstance, (3) each party’s rights regarding (a) goods or\nservices to be transferred and (b) the payment terms can be\nidentified, and (4) it is probable that the entity will collect the\nconsideration to which it is entitled according to the contract.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي ليس معيارًا لازمًا للمحاسبة عن عقد مع عميل وفق معيار الاعتراف بالإيراد؟",
+    "choicesAr": [
+      "أن يكون للعقد مضمون تجاري.",
+      "أن يمكن تحديد شروط السداد.",
+      "أن يتوقع استرداد تكاليف الوفاء بالعقد.",
+      "أن يمكن تحديد حقوق كل طرف المتعلقة بالسلع أو الخدمات التي ستنقل."
+    ],
+    "explanationAr": "يحاسب عن العقد وفق معيار الإيراد إذا تحققت الشروط التالية: (1) اعتماد الطرفين للعقد والتزامهما بالتنفيذ، (2) وجود مضمون تجاري، (3) إمكان تحديد (أ) حقوق الطرفين بشأن السلع أو الخدمات و(ب) شروط السداد، (4) رجحان تحصيل المقابل الذي تستحقه المنشأة وفق العقد. أما استرداد تكاليف الوفاء فليس شرطًا مستقلًا للاعتراف بالعقد."
   },
   {
     "unit": 5,
@@ -236,7 +316,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Under the accrual basis of accounting, revenue is recognized\nwhen earned. Revenue is earned when (or as) a performance\nobligation is satisfied. In this case, the delivery of 50,000\ngallons on December 21 would have been earned during Year\n1. Accordingly, Company A would accrue $150,000 (50,000\ngallons × $3) as revenue on December 31, Year 1. The\nremaining half of the order would be recognized in January.\nThe timing of the cash payment is not a consideration of when\nthe revenue is to be recognized.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 أكتوبر من السنة 1 باعت A لشركة B كمية 100,000 جالون من المنتج X بسعر $3 للجالون. وسلمت خمسين ألف جالون في 21 ديسمبر من السنة 1، والباقي في 8 يناير من السنة 2. وشروط السداد: 50% في 1 أكتوبر من السنة 1، و25% عند التسليم الأول، و25% عند التسليم الثاني. ما الإيراد الذي تثبته A في 31 ديسمبر من السنة 1؟",
+    "choicesAr": [
+      "$75,000",
+      "$150,000",
+      "$225,000",
+      "$300,000"
+    ],
+    "explanationAr": "وفق أساس الاستحقاق يعترف بالإيراد عندما (أو مع) الوفاء بالتزام الأداء. وفي هذه الحالة حقق تسليم 50,000 جالون في 21 ديسمبر الإيراد خلال السنة 1. لذلك تثبت A إيرادًا $150,000 (50,000 جالون × $3) في 31 ديسمبر من السنة 1، وتعترف بالباقي في يناير. ولا يحدد توقيت السداد النقدي توقيت الاعتراف بالإيراد، بافتراض انتقال السيطرة عند التسليم."
   },
   {
     "unit": 5,
@@ -270,7 +358,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Under the accrual method, revenues and gains are realized\nwhen goods or services have been exchanged for cash or\nclaims to cash, not when that cash is collected. Consequently,\ngiven that total cash collected for Year 2 sales is $275,000\n($200,000 Year 2 + $75,000 Year 3), revenue for Year 2 is\n$275,000.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فيما يلي بيانات إحدى الشركات:\nالمتحصلات النقدية من العملاء | السنة 1 | السنة 2 | السنة 3\nمن مبيعات السنة 1 | $95,000 | $120,000 | —\nمن مبيعات السنة 2 | — | 200,000 | $75,000\nمن مبيعات السنة 3 | — | 50,000 | 225,000\nما إيراد السنة 2 وفق أساس الاستحقاق؟",
+    "choicesAr": [
+      "$200,000",
+      "$275,000",
+      "$320,000",
+      "$370,000"
+    ],
+    "explanationAr": "وفق أساس الاستحقاق يعترف بالإيراد عند الوفاء بالتزام الأداء مقابل النقد أو الحق في المقابل، لا عند التحصيل. ولأن إجمالي المتحصلات من مبيعات السنة 2 بلغ $275,000 ($200,000 في السنة 2 + $75,000 في السنة 3)، فإن إيراد السنة 2 يبلغ $275,000، بافتراض أن المبالغ المعروضة تمثل كامل المقابل المستحق."
   },
   {
     "unit": 5,
@@ -287,7 +383,15 @@
     ],
     "answerIndex": 2,
     "explanation": "An entity recognizes revenue for the transfer of promised\ngoods or services to customers in an amount that reflects the\nconsideration to which the entity expects to be entitled in the\nexchange. Revenue is recognized when the performance\nobligation is satisfied. Consideration received for an obligation\nyet to be satisfied (i.e., advance payment) is recorded as\ndeferred (or unearned) income, a liability. Thus, cash\ncollections from sales of season tickets are recorded initially\nas unearned income. As the service is performed (as the\nperformance obligation is satisfied by playing the games),\nportions of this liability are reclassified as earned income. The\nentity should recognize $1 million as income in Year 1\n[($3,000,000 ÷ 6 months) × 2 months]. The remaining $2\nmillion will be reported as a liability for Year 1.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تبيع منشأة تملك فريق كرة سلة محترفًا جديدًا اشتراكات موسمية لمبارياته. ويمتد الموسم الأول من نوفمبر السنة 1 إلى أبريل السنة 2، بواقع 10 مباريات شهريًا. وفي السنة 1 حصلت $3 ملايين من بيع الاشتراكات مقدمًا. وتنتهي سنتها المالية في 31 ديسمبر. وفق هذه المعلومات، ماذا ينبغي أن تعرض؟",
+    "choicesAr": [
+      "إيراد $3 ملايين في قائمة دخل السنة 1.",
+      "إيراد $2 مليون في قائمة دخل السنة 1.",
+      "إيراد $1 مليون في قائمة دخل السنة 1.",
+      "لا إيراد من الاشتراكات الموسمية."
+    ],
+    "explanationAr": "تعترف المنشأة بالإيراد عند نقل السلع أو الخدمات الموعودة بمبلغ المقابل المتوقع استحقاقه، وعند الوفاء بالتزام الأداء. ويسجل المقابل المحصل مقدمًا عن التزام لم ينفذ باعتباره التزام عقد (إيرادًا غير مكتسب). ومع تقديم الخدمة بإقامة المباريات، يحول جزء من الالتزام إلى إيراد مكتسب. وتعترف المنشأة بإيراد $1 مليون في السنة 1 [($3,000,000 ÷ 6 أشهر) × 2 شهر]، ويعرض المتبقي $2 مليون التزامًا في السنة 1."
   },
   {
     "unit": 5,
@@ -338,7 +442,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The standalone selling price is the price at which an entity\nwould sell a promised good or service separately to a\ncustomer. The best evidence of a standalone selling price is\nthe observable price of a good or service when it is sold\nseparately in similar circumstances and to similar customers\n(e.g., a contractually stated price or list price of a good or\nservice).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما أفضل دليل على سعر البيع المستقل عند وجود التزامات أداء مختلفة في العقد؟",
+    "choicesAr": [
+      "التكلفة المتوقعة.",
+      "التكلفة المتوقعة زائد هامش مناسب.",
+      "سعر يمكن ملاحظته.",
+      "سعر بيع المنافس."
+    ],
+    "explanationAr": "سعر البيع المستقل هو السعر الذي تبيع به المنشأة السلعة أو الخدمة الموعودة بصورة منفصلة إلى العميل. وأفضل دليل عليه سعرها الملحوظ عند بيعها بصورة منفصلة في ظروف مماثلة ولعملاء مماثلين. ولا يعتبر سعر العقد أو قائمة الأسعار سعرًا مستقلًا تلقائيًا إلا إذا دعمته الأدلة."
   },
   {
     "unit": 5,
@@ -355,7 +467,15 @@
     ],
     "answerIndex": 2,
     "explanation": "After separate performance obligations are identified and the\ntransaction price is determined, the transaction price is\nallocated to performance obligations in the contract based on\ntheir standalone selling prices. The standalone selling price is\nthe price at which an entity would sell a promised good or\nservice separately to a customer. The best evidence of a\nstandalone selling price is the observable price of a good or\nservice when it is sold separately in similar circumstances and\nto similar customers (e.g., a contractually stated price or list\nprice of a good or service).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يتضمن عقد مع عميل أكثر من التزام أداء. على أي أساس يوزع سعر المعاملة عادة على التزامات الأداء؟",
+    "choicesAr": [
+      "المدخل المتبقي.",
+      "مجمل الربح المتوقع لالتزامات الأداء.",
+      "أسعار يمكن ملاحظتها مباشرة.",
+      "التكاليف المتوقعة للوفاء بالتزامات الأداء."
+    ],
+    "explanationAr": "بعد تحديد التزامات الأداء المنفصلة وسعر المعاملة، يوزع السعر عليها على أساس أسعار البيع المستقلة النسبية، مع مراعاة الاستثناءات الخاصة بالخصومات والمقابل المتغير. وسعر البيع المستقل هو سعر البيع المنفصل للعميل. وأفضل دليل عليه السعر الملحوظ للبيع المنفصل في ظروف مماثلة ولعملاء مماثلين. وعند عدم توافره يجب تقديره بأسلوب مناسب."
   },
   {
     "unit": 5,
