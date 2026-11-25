@@ -2602,7 +2602,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Since beginning inventory was 6,000 and ending inventory\nwas 5,200, inventory decreased by 800 units which means\nsales exceeded production. If production is less than sales,\noperating income is higher under variable costing. It follows\nthat income is lower under absorption costing.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فيما يلي تكاليف الوحدة لشركة عن السنة الميلادية المنتهية:\nالبند | متغيرة | ثابتة\nتصنيع | $8.00 | $3.00\nغير صناعية | $2.00 | $5.50\nبلغ مخزون المنتج الوحيد 6,000 وحدة في 1 يناير و5,200 وحدة في 31 ديسمبر. مقارنة بدخل التكاليف المتغيرة، ما دخل التكاليف الكلية؟",
+    "choicesAr": [
+      "أقل بمبلغ $2,400.",
+      "أعلى بمبلغ $2,400.",
+      "أقل بمبلغ $6,800.",
+      "أعلى بمبلغ $6,800."
+    ],
+    "explanationAr": "بما أن مخزون أول المدة بلغ 6,000 وحدة وآخر المدة 5,200 وحدة، انخفض المخزون بمقدار 800 وحدة، أي إن المبيعات تجاوزت الإنتاج. ومع ثبات معدل تحميل التكاليف الصناعية الثابتة، يزيد الدخل التشغيلي وفق التكاليف المتغيرة، وبالتالي يقل الدخل وفق التكاليف الكلية بمقدار التكاليف الثابتة المحررة من المخزون."
   },
   {
     "unit": 7,
@@ -2619,7 +2627,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The difference between absorption-basis and variable-basis\noperating income ($9,500 – $9,125 = $375) is equal to the\nchange in inventory for the period (in units) multiplied by fixed\nmanufacturing cost per unit. Stated another way, the\ndifference in operating incomes divided by fixed per-unit\nmanufacturing cost equals the change in ending inventory\n($375 ÷ $1.50 = 250 units). Since 1,000 units were sold and\nending inventory increased by 250 units, 1,250 units were\nproduced (1,000 + 250).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "باعت شركة 1,000 وحدة في مايو. وفيما يلي تكلفة الوحدة خلال الشهر:\nالمواد المباشرة | $5.50\nالأجور المباشرة | 3.00\nالتكاليف الصناعية غير المباشرة المتغيرة | 1.00\nالتكاليف الصناعية غير المباشرة الثابتة | 1.50\nالمصروفات الإدارية المتغيرة | .50\nالمصروفات الإدارية الثابتة | 3.50\nالإجمالي | $15.00\nبلغ دخل مايو وفق التكاليف الكلية $9,500، وكان سيبلغ $9,125 وفق التكاليف المتغيرة. كم وحدة أنتجت في مايو؟",
+    "choicesAr": [
+      "750",
+      "925",
+      "1,075",
+      "1,250"
+    ],
+    "explanationAr": "يساوي الفرق بين الدخل التشغيلي وفق التكاليف الكلية والمتغيرة ($9,500 − $9,125 = $375) التغير في المخزون بالوحدات مضروبًا في تكلفة التصنيع الثابتة للوحدة، بافتراض ثبات معدل التحميل. وبقسمة فرق الدخل على التكلفة الثابتة للوحدة نحصل على التغير في المخزون ($375 ÷ $1.50 = 250 وحدة). وبما أن المبيعات بلغت 1,000 وحدة وزاد المخزون بمقدار 250 وحدة، فإن الإنتاج بلغ 1,250 وحدة (1,000 + 250)."
   },
   {
     "unit": 7,
@@ -2636,7 +2652,15 @@
     ],
     "answerIndex": 0,
     "explanation": "With no beginning inventory, cost of goods manufactured is\nsimply the sum of direct labor, direct materials, variable\noverhead, and fixed overhead, or $637,500 ($187,500 +\n$100,000 + $150,000 + $200,000). The cost of the ending\ninventory is equal to $159,375 [$637,500 × (25,000 units ÷\n100,000 units)].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بلغت مبيعات شركة في السنة الماضية 75,000 وحدة وإنتاجها 100,000 وحدة. وفيما يلي بيانات السنة:\nأجور التصنيع المباشرة | $187,500\nالتكاليف الصناعية غير المباشرة المتغيرة | 100,000\nالمواد المباشرة | 150,000\nمصروفات البيع المتغيرة | 100,000\nالمصروفات الإدارية الثابتة | 100,000\nالتكاليف الصناعية غير المباشرة الثابتة | 200,000\nبافتراض عدم وجود مخزون أول المدة، ما إجمالي قيمة مخزون الإنتاج التام آخر المدة وفق التكاليف الكلية؟",
+    "choicesAr": [
+      "$159,375",
+      "$184,375",
+      "$209,375",
+      "$279,175"
+    ],
+    "explanationAr": "في غياب مخزون أول المدة وعدم وجود إنتاج تحت التشغيل، تساوي تكلفة الإنتاج التام مجموع الأجور والمواد المباشرة والتكاليف الصناعية غير المباشرة المتغيرة والثابتة، أي $637,500 ($187,500 + $100,000 + $150,000 + $200,000). وتبلغ تكلفة مخزون آخر المدة $159,375 [$637,500 × (25,000 وحدة ÷ 100,000 وحدة)]."
   },
   {
     "unit": 7,
@@ -2670,7 +2694,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The difference between variable and absorption costing is that\nvariable costing eliminates fixed costs from product\ninventories. These fixed costs are charged to operating costs\nduring the period in which the costs are incurred under\nvariable costing. Absorption costing charges the fixed costs to\nthe remaining inventory for $20,000 (1,000 × $20). These\ncosts will be recognized during the following period, assuming\nthe inventory is sold. Because variable costing charges the\nfixed manufacturing costs to the current period, the operating\nexpenses will be $20,000 higher than under absorption\ncosting. Because operating costs would be $20,000 lower\nusing absorption costing, the result would be a higher pretax\nincome of $20,000.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في نهاية السنة الأولى لتشغيل Killo تبقت 1,000 وحدة في المخزون. وبلغت تكلفة التصنيع المتغيرة والثابتة للوحدة $90 و$20 على الترتيب. إذا استخدمت Killo التكاليف الكلية بدلًا من المتغيرة (المباشرة)، فما مقدار زيادة الدخل قبل الضريبة؟",
+    "choicesAr": [
+      "$0",
+      "$20,000",
+      "$70,000",
+      "$90,000"
+    ],
+    "explanationAr": "تختلف التكاليف المتغيرة عن الكلية باستبعاد التكاليف الصناعية الثابتة من المخزون وتحميلها على مصروفات الفترة عند تكبدها. أما التكاليف الكلية فتحمل المخزون المتبقي بتكاليف ثابتة قدرها $20,000 (1,000 × $20). ويعترف بها عند بيع المخزون لاحقًا. ولذلك تزيد المصروفات التشغيلية وفق التكاليف المتغيرة بمبلغ $20,000 مقارنة بالكلية. وبما أن المصروفات أقل وفق التكاليف الكلية بمبلغ $20,000، فإن الدخل قبل الضريبة يزيد بمبلغ $20,000."
   },
   {
     "unit": 7,
@@ -2687,7 +2719,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Under variable costing, product cost includes only the variable\nportion of manufacturing costs. Thus, the direct manufacturing\nlabor, the variable manufacturing overhead, and the direct\nmaterials costs are all included in the cost of goods sold\ncalculation. The total variable manufacturing cost is equal to\n$437,500 ($187,500 + 100,000 + 150,000), and the total\nvariable manufacturing cost per unit is equal to $4.375\n($437,500 ÷ 100,000 units manufactured). Because\n100,000 units were produced but only 75,000 were sold, the\ncost of goods sold is $328,125 ($4.375 × 75,000 units sold).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بلغت مبيعات شركة في السنة الماضية 75,000 وحدة وإنتاجها 100,000 وحدة. وفيما يلي البيانات:\nأجور التصنيع المباشرة | $187,500\nالتكاليف الصناعية غير المباشرة المتغيرة | 100,000\nالمواد المباشرة | 150,000\nمصروفات البيع المتغيرة | 100,000\nالمصروفات الإدارية الثابتة | 100,000\nالتكاليف الصناعية غير المباشرة الثابتة | 200,000\nبافتراض عدم وجود مخزون أول المدة، ما تكلفة البضاعة المباعة وفق التكاليف المتغيرة؟",
+    "choicesAr": [
+      "$553,125",
+      "$478,125",
+      "$403,125",
+      "$328,125"
+    ],
+    "explanationAr": "وفق التكاليف المتغيرة تحمل على المنتج تكاليف التصنيع المتغيرة فقط. لذا تدخل الأجور المباشرة والتكاليف الصناعية غير المباشرة المتغيرة والمواد المباشرة في حساب تكلفة المبيعات. ويبلغ إجمالي تكلفة التصنيع المتغيرة $437,500 ($187,500 + 100,000 + 150,000)، وتبلغ تكلفة الوحدة المتغيرة $4.375 ($437,500 ÷ 100,000 وحدة منتجة). ولأن الإنتاج 100,000 وحدة والمبيعات 75,000 وحدة فقط، تبلغ تكلفة المبيعات $328,125 ($4.375 × 75,000 وحدة مباعة)."
   },
   {
     "unit": 7,
@@ -2704,7 +2744,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Absorption costing is required under GAAP. It includes all\nmanufacturing costs in product cost: direct materials, direct\nlabor, and fixed as well as variable manufacturing overhead.\nVariable costing differs only in that it expenses fixed\nmanufacturing costs. Hence, given no beginning inventory,\npretax net income for absorption costing purposes exceeds\npretax net income for variable costing purposes by $60,000\n(2,000 units in EI × $30 fixed manufacturing cost per unit).\nThis amount is expensed using variable costing and treated as\na product cost using absorption costing.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في نهاية السنة الأولى لتشغيل شركة بلغ المخزون 2,000 وحدة. والتكاليف المتغيرة $100 للوحدة وتكاليف التصنيع الثابتة $30 للوحدة. بمقدار كم يزيد الدخل قبل الضريبة عند استخدام التكاليف الكلية بدلًا من المتغيرة؟",
+    "choicesAr": [
+      "$60,000",
+      "$140,000",
+      "$200,000",
+      "$260,000"
+    ],
+    "explanationAr": "تتطلب المبادئ المحاسبية المتعارف عليها تحميل المخزون بتكاليف التصنيع المؤهلة، ومنها المواد والأجور المباشرة والتكاليف الصناعية غير المباشرة الثابتة والمتغيرة. وتختلف التكاليف المتغيرة في تحميل التكاليف الصناعية الثابتة على المصروفات. وفي غياب مخزون أول المدة، يزيد الدخل قبل الضريبة وفق التكاليف الكلية بمبلغ $60,000 (2,000 وحدة في مخزون آخر المدة × $30 تكلفة تصنيع ثابتة للوحدة). ويعد هذا المبلغ مصروفًا وفق التكاليف المتغيرة وتكلفة منتج وفق الكلية."
   },
   {
     "unit": 7,
@@ -2721,7 +2769,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The difference between variable costing and absorption\ncosting is the treatment of fixed costs. Under absorption\ncosting, the fixed portion of manufacturing overhead is\nincluded in the cost of each product. Under variable costing,\nproduct cost includes only variable manufacturing costs and\nfixed costs are treated as period costs. The rate for assigning\nfixed overhead costs is $2 per unit ($600,000 budgeted fixed\noverhead costs ÷ 300,000 budgeted production units).\nBecause the ending inventory in April is 2,000 units greater\nthan the beginning inventory, the company produced more\nunits than it sold. In April, under absorption costing, $4,000\n($2 fixed overhead rate per unit × 2,000 units produced and\nnot sold) of fixed manufacturing overhead costs were still\nembedded in ending inventory and were not expensed. Under\nvariable costing, these fixed manufacturing overhead costs of\n$4,000 were expensed. Therefore, the operating income\nunder the absorption costing is $4,000 greater than under the\nvariable costing. Therefore, operating income under variable\ncosting is $36,000 ($40,000 – $4,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "توقعت شركة في بداية سنتها المالية إنتاج 300,000 وحدة. وبلغت موازنة التكاليف الصناعية غير المباشرة السنوية $150,000 للمتغيرة و$600,000 للثابتة. وفي أبريل، مع وجود 5,000 وحدة في مخزون الإنتاج التام أول الشهر، بلغ الدخل وفق التكاليف الكلية $40,000. وبلغ مخزون الإنتاج التام آخر الشهر 7,000 وحدة. ما دخل أبريل وفق التكاليف المتغيرة؟",
+    "choicesAr": [
+      "$35,000",
+      "$36,000",
+      "$44,000",
+      "$45,000"
+    ],
+    "explanationAr": "تختلف التكاليف الكلية والمتغيرة في معالجة التكاليف الصناعية الثابتة. فوفق الكلية تدخل ضمن تكلفة المنتج، بينما تحمل التكاليف المتغيرة المنتج بتكاليف التصنيع المتغيرة فقط وتعالج الثابتة كتكاليف فترة. ويبلغ معدل تحميل التكاليف الصناعية غير المباشرة الثابتة $2 للوحدة ($600,000 تكلفة ثابتة مقدرة ÷ 300,000 وحدة إنتاج مقدرة). وبما أن مخزون آخر أبريل يزيد بمقدار 2,000 وحدة على مخزون أوله، فإن الإنتاج تجاوز المبيعات. ووفق التكاليف الكلية تبقى $4,000 ($2 معدل تحميل ثابت للوحدة × 2,000 وحدة منتجة غير مباعة) ضمن المخزون ولا تحمل على المصروفات. أما وفق التكاليف المتغيرة فتحمل التكاليف الثابتة البالغة $4,000 على المصروفات. لذا يزيد الدخل التشغيلي وفق الكلية بمبلغ $4,000 مقارنة بالمتغيرة. ومن ثم يبلغ الدخل التشغيلي وفق المتغيرة $36,000 ($40,000 − $4,000)."
   },
   {
     "unit": 7,
@@ -2738,7 +2794,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Absorption costing (also called full costing or full absorption\ncosting) treats all manufacturing costs as product costs. Thus,\ndirect materials, direct labor, variable overhead, and fixed\noverhead are all treated as product costs and will be\nexpensed as cost of goods sold. During the period,\n30,000 units were sold. Thus, operating income is calculated\nas follows:\nRevenues ($30/unit × 30,000 units)                      $ 900,000\nDirect materials ($6/unit × 30,000 units)                (180,000)\nDirect labor ($3/unit × 30,000 units)                     (90,000)\nVariable overhead ($2/unit × 30,000 units)                (60,000)\nVariable S&A expense* ($1/unit × 30,000 units)            (30,000)\nFixed S&A expense*                                        (75,000)\nFixed manufacturing overhead ($4/unit** ×\n30,000 units)                                           (120,000)\nOperating income                                    $ 345,000\n* This is a period cost and is completely expensed in the\nperiod it is incurred.\n** $160,000 total ÷ 40,000 units produced = $4/unit",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تدرس شركة صناعية التحول من التكاليف المتغيرة إلى الكلية. وفيما يلي بيانات يناير 20X2:\nسعر البيع | $30 للوحدة\nالوحدات المنتجة | 40,000\nالوحدات المباعة | 30,000\nالمخزون في 1/1/X2 | لا يوجد\nالمواد المباشرة | $6 للوحدة\nالأجور المباشرة | $3 للوحدة\nالتكاليف الصناعية غير المباشرة المتغيرة | $2 للوحدة\nمصروفات البيع والإدارة المتغيرة | $1 للوحدة\nمصروفات البيع والإدارة الثابتة | $75,000\nالتكاليف الصناعية غير المباشرة الثابتة | $160,000\nما الدخل التشغيلي وفق التكاليف الكلية؟",
+    "choicesAr": [
+      "$295,000",
+      "$345,000",
+      "$335,000",
+      "$305,000"
+    ],
+    "explanationAr": "تعالج التكاليف الكلية جميع تكاليف التصنيع المؤهلة كتكاليف منتج. لذا تعد المواد والأجور المباشرة والتكاليف الصناعية غير المباشرة الثابتة والمتغيرة تكاليف منتج تحمل على تكلفة البضاعة المباعة عند البيع. وخلال الفترة بيعت 30,000 وحدة. ويحُسب الدخل التشغيلي كما يلي:\nالإيرادات ($30 × 30,000) | $900,000\nالمواد المباشرة ($6 × 30,000) | (180,000)\nالأجور المباشرة ($3 × 30,000) | (90,000)\nالتكاليف الصناعية غير المباشرة المتغيرة ($2 × 30,000) | (60,000)\nمصروفات البيع والإدارة المتغيرة ($1 × 30,000) | (30,000)\nمصروفات البيع والإدارة الثابتة | (75,000)\nالتكاليف الصناعية غير المباشرة الثابتة ($4 × 30,000) | (120,000)\nالدخل التشغيلي | $345,000\nمصروفات البيع والإدارة تكاليف فترة تحمل بالكامل على الفترة التي تتكبد فيها.\nمعدل التحميل الثابت: $160,000 ÷ 40,000 وحدة منتجة = $4 للوحدة."
   },
   {
     "unit": 7,
@@ -2755,7 +2819,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Under absorption costing, inventoriable costs include all\nmanufacturing costs, both fixed and variable. Thus, the\ninventoriable costs include the prime costs [$900,000\n($500,000 direct materials + $400,000 direct labor)], the\nvariable manufacturing overhead ($90,000), and the fixed\nmanufacturing overhead ($120,000), for a total inventoriable\ncost of $1,110,000.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في نهاية السنة المالية 20X9 سجلت Monterrey Manufacturing البيانات التالية:\nالمواد المباشرة | $500,000\nالأجور المباشرة | 400,000\nالتكاليف الصناعية غير المباشرة المتغيرة | 90,000\nالتكاليف الصناعية غير المباشرة الثابتة | 120,000\nمصروفات البيع والمصروفات الأخرى المتغيرة | 90,000\nمصروفات البيع والمصروفات الأخرى الثابتة | 50,000\nبافتراض استخدام التكاليف الكلية، ما تكاليف السنة المالية 20X9 القابلة للتحميل على المخزون؟",
+    "choicesAr": [
+      "$900,000",
+      "$1,080,000",
+      "$1,110,000",
+      "$1,070,000"
+    ],
+    "explanationAr": "تشمل تكاليف المخزون وفق التكاليف الكلية تكاليف التصنيع المؤهلة، الثابتة والمتغيرة. وتضم التكاليف الأولية [$900,000 ($500,000 مواد مباشرة + $400,000 أجور مباشرة)]، والتكاليف الصناعية غير المباشرة المتغيرة ($90,000) والثابتة ($120,000). ويبلغ إجماليها $1,110,000."
   },
   {
     "unit": 7,
@@ -2789,7 +2861,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The contribution margin is calculated by subtracting all\nvariable costs from sales revenue. It represents the portion of\nsales that is available for covering fixed costs and profit.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما الفرق بين سعر البيع وإجمالي التكاليف المتغيرة؟",
+    "choicesAr": [
+      "مجمل الربح التشغيلي.",
+      "صافي الربح.",
+      "نقطة التعادل.",
+      "هامش المساهمة."
+    ],
+    "explanationAr": "يحسب هامش المساهمة بطرح جميع التكاليف المتغيرة من إيرادات المبيعات على أساس متسق. ويمثل الجزء المتاح من المبيعات لتغطية التكاليف الثابتة وتحقيق الربح."
   },
   {
     "unit": 7,
@@ -2806,7 +2886,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Gross margin or gross profit is the excess of sales over cost of\ngoods sold, calculated on a full absorption basis. Cost of\ngoods sold would include all manufacturing costs, both fixed\nand variable.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يشير مصطلح مجمل الربح لدى المنشأة الصناعية إلى زيادة المبيعات على:",
+    "choicesAr": [
+      "تكلفة المبيعات باستبعاد التكاليف الصناعية غير المباشرة الثابتة.",
+      "جميع التكاليف المتغيرة بما فيها مصروفات البيع والإدارة المتغيرة.",
+      "تكلفة المبيعات بما فيها التكاليف الصناعية غير المباشرة الثابتة.",
+      "تكاليف التصنيع باستبعاد التكاليف الصناعية الثابتة."
+    ],
+    "explanationAr": "مجمل الربح هو الفرق بين المبيعات وتكلفة البضاعة المباعة المحسوبة على أساس التكاليف الكلية. وتشمل تكلفة المبيعات تكاليف التصنيع المؤهلة، الثابتة والمتغيرة، المتعلقة بالوحدات المباعة."
   },
   {
     "unit": 7,
@@ -2823,7 +2911,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Contribution margin equals revenues minus all variable costs.\nGiven no WIP and no beginning finished goods, the\ncontribution margin was $25,200 [900 units × ($100 – $30 –\n$20 – $10 – $12)]. The variable costs of producing the units\nnot sold are embedded in ending inventory rather than\nexpensed as part of cost of goods sold. The fixed costs are\nthus excluded from computation of the contribution margin.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فيما يلي بيانات Richardson للسنة الماضية:\nأنتجت الشركة 1,000 وحدة وباعت 900 وحدة وفق الموازنة.\nلا يوجد مخزون إنتاج تحت التشغيل أول المدة أو آخرها، ولا مخزون إنتاج تام أول المدة.\nتساوت التكاليف الثابتة المقدرة والفعلية، وتتغير تكاليف التصنيع المتغيرة مع الإنتاج فقط وتكاليف البيع المتغيرة مع المبيعات فقط.\nبيانات الوحدة المقدرة:\nسعر البيع | $100\nالمواد المباشرة | 30\nالأجور المباشرة | 20\nتكاليف التصنيع المتغيرة الأخرى | 10\nتكاليف البيع الثابتة | 5\nتكاليف البيع المتغيرة | 12\nتكاليف التصنيع الثابتة ($3,600 إجماليًا) | 4\nالتكاليف الإدارية الثابتة ($1,800 إجماليًا) | 2\nما هامش مساهمة Richardson للسنة الماضية؟",
+    "choicesAr": [
+      "$25,200",
+      "$28,000",
+      "$31,500",
+      "$35,000"
+    ],
+    "explanationAr": "يساوي هامش المساهمة الإيرادات ناقص جميع التكاليف المتغيرة. وفي غياب الإنتاج تحت التشغيل ومخزون الإنتاج التام أول المدة، بلغ هامش المساهمة $25,200 [900 وحدة × ($100 − $30 − $20 − $10 − $12)]. وتبقى تكاليف التصنيع المتغيرة للوحدات غير المباعة ضمن مخزون آخر المدة بدلًا من تحميلها على تكلفة المبيعات. ولا تدخل التكاليف الثابتة في حساب هامش المساهمة، لذلك لا يؤثر اختلاف تبويبها في النتيجة."
   },
   {
     "unit": 7,
@@ -2840,7 +2936,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Operating income based on variable costing is $14,800\ncalculated as follows:\nSales (900 × $100)              $90,000\nCOGS [900 × ($30 + $20 + $10)] 54,000\nFixed manufacturing (1,000 × $5) 5,000\nVariable selling (900 × $12)     10,800\nFixed selling                     3,600\nFixed administrative              1,800\nOperating income            $14,800",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فيما يلي بيانات شركة للسنة الماضية:\nأنتجت 1,000 وحدة وباعت 900 وحدة وفق الموازنة.\nلا يوجد مخزون إنتاج تحت التشغيل أول المدة أو آخرها، ولا مخزون إنتاج تام أول المدة.\nتساوت التكاليف الثابتة المقدرة والفعلية، وتتغير تكاليف التصنيع المتغيرة مع الإنتاج فقط وتكاليف البيع المتغيرة مع المبيعات فقط.\nبيانات الوحدة المقدرة:\nسعر البيع | $100\nالمواد المباشرة | 30\nالأجور المباشرة | 20\nتكاليف التصنيع المتغيرة | 10\nتكاليف التصنيع الثابتة | 5\nتكاليف البيع المتغيرة | 12\nتكاليف البيع الثابتة ($3,600 إجماليًا) | 4\nالتكاليف الإدارية الثابتة ($1,800 إجماليًا) | 2\nبافتراض استخدام التكاليف المتغيرة، ما الدخل التشغيلي للسنة الماضية؟",
+    "choicesAr": [
+      "$13,600",
+      "$14,200",
+      "$14,800",
+      "$15,300"
+    ],
+    "explanationAr": "بلغ الدخل التشغيلي وفق التكاليف المتغيرة $14,800، وحسب كما يلي:\nالمبيعات (900 × $100) | $90,000\nتكلفة المبيعات [900 × ($30 + $20 + $10)] | 54,000\nتكاليف التصنيع الثابتة (1,000 × $5) | 5,000\nتكاليف البيع المتغيرة (900 × $12) | 10,800\nتكاليف البيع الثابتة | 3,600\nالتكاليف الإدارية الثابتة | 1,800\nالدخل التشغيلي | $14,800."
   },
   {
     "unit": 7,
@@ -2874,7 +2978,15 @@
     ],
     "answerIndex": 1,
     "explanation": "In a variable costing system, all variable costs are first\ndeducted from revenues to arrive at the contribution margin.\nAll fixed costs, including both fixed manufacturing overhead\nand fixed selling and administrative costs, are deducted from\nthe contribution margin.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "الدخل التشغيلي وفق التكاليف المتغيرة يساوي هامش المساهمة مطروحًا منه:",
+    "choicesAr": [
+      "تكلفة المبيعات والمصروفات الإدارية.",
+      "التكاليف الصناعية غير المباشرة الثابتة ومصروفات البيع والإدارة الثابتة.",
+      "التكاليف الصناعية غير المباشرة الثابتة والمتغيرة.",
+      "مصروفات البيع والإدارة المتغيرة والثابتة."
+    ],
+    "explanationAr": "وفق نظام التكاليف المتغيرة تطرح جميع التكاليف المتغيرة من الإيرادات أولًا للوصول إلى هامش المساهمة. ثم تطرح جميع التكاليف الثابتة، بما فيها التكاليف الصناعية غير المباشرة الثابتة ومصروفات البيع والإدارة الثابتة، لتحديد الدخل التشغيلي."
   },
   {
     "unit": 7,
@@ -2891,7 +3003,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The key difference between variable costing and absorption\ncosting in this circumstance is the treatment of fixed overhead.\nAbsorption costing treats all manufacturing costs as product\ncosts, while variable costing considers only variable\nmanufacturing costs to be product costs. Under absorption\ncosting, only $1,440,000 [($1,800,000 ÷ 15,000 units\nproduced) × 12,000 units sold] of fixed overhead costs are\nrecognized in the period; under variable costing, all\n$1,800,000 of fixed overhead costs are recognized. Thus,\nthere is an increase in cost and a resulting decrease in\noperating income of $360,000 ($1,800,000 – $1,440,000),\nwhich leads to an operating income under variable costing of\n$40,000.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "خلال الشهر الأول لتشغيل شركة أنتجت منتجًا بتكلفة إنتاج متغيرة $50 للوحدة. وبلغت التكاليف الصناعية غير المباشرة الثابتة $1,800,000 وتوزع وفق الوحدات المنتجة. وخلال الشهر أكملت الشركة 15,000 وحدة وباعت 12,000 وحدة دون انحرافات. إذا كان الدخل التشغيلي وفق التكاليف الكلية $400,000، فما الدخل التشغيلي (الخسارة) وفق التكاليف المتغيرة؟",
+    "choicesAr": [
+      "$760,000",
+      "$40,000",
+      "$(50,000)",
+      "$(110,000)"
+    ],
+    "explanationAr": "يكمن الفرق بين التكاليف المتغيرة والكلية في هذه الحالة في معالجة التكاليف الصناعية الثابتة. وتعامل الكلية جميع تكاليف التصنيع المؤهلة كتكاليف منتج، بينما تعامل المتغيرة تكاليف التصنيع المتغيرة فقط كذلك. ووفق الكلية يثبت خلال الفترة $1,440,000 فقط [($1,800,000 ÷ 15,000 وحدة منتجة) × 12,000 وحدة مباعة] من التكاليف الصناعية الثابتة، بينما يثبت كامل مبلغ $1,800,000 وفق المتغيرة. لذا تزيد التكاليف وينخفض الدخل التشغيلي بمبلغ $360,000 ($1,800,000 − $1,440,000)، ليبلغ الدخل وفق المتغيرة $40,000."
   },
   {
     "unit": 7,
@@ -2942,7 +3062,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Using absorption costing, fixed manufacturing overhead is\nincluded in inventoriable (product) costs. Fixed manufacturing\noverhead costs are indirect costs because they cannot be\ndirectly traced to specific units produced.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "وفق التكاليف الكلية، ما أفضل وصف للتكاليف الصناعية غير المباشرة الثابتة؟",
+    "choicesAr": [
+      "تكاليف فترة مباشرة.",
+      "تكاليف فترة غير مباشرة.",
+      "تكاليف منتج مباشرة.",
+      "تكاليف منتج غير مباشرة."
+    ],
+    "explanationAr": "تدرج التكاليف الصناعية غير المباشرة الثابتة المؤهلة ضمن تكاليف المنتج القابلة للتحميل على المخزون وفق التكاليف الكلية. وهي تكاليف غير مباشرة لأنها لا تتبع مباشرة إلى وحدات الإنتاج المحددة."
   },
   {
     "unit": 7,
@@ -2959,7 +3087,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Product costs, also called inventoriable costs, are capitalized\nas part of finished goods inventory. They eventually become a\ncomponent of cost of goods sold. Period costs are expensed\nas incurred, i.e., they are not capitalized in finished goods\ninventory and are thus excluded from cost of goods sold. The\nproduct and period costs can be calculated as follows:\nProduct        Period\nCosts         Costs\nDirect materials      $ 56,000\nDirect labor           179,100\nVariable overhead      154,000\nFixed overhead         267,000\nVariable selling costs             $108,400\nFixed selling costs                 121,000\nAdministrative costs                235,900\nUninsured loss                       27,700\nTotals              $656,100     $493,000",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أظهرت مراجعة سجلات السنة الماضية البيانات التالية:\nالتكاليف المتغيرة:\nالمواد المباشرة المستخدمة | $56,000\nالأجور المباشرة | 179,100\nالتكاليف الصناعية غير المباشرة | 154,000\nتكاليف البيع | 108,400\nالتكاليف الثابتة:\nالتكاليف الصناعية غير المباشرة | 267,000\nتكاليف البيع | 121,000\nالتكاليف الإدارية | 235,900\nوتكبدت الشركة خسارة حريق غير مؤمن عليها بالمصنع قدرها $27,700 خلال السنة. وفق التكاليف الكلية، ما تكاليف المنتج وتكاليف الفترة؟\nالمنتج | الفترة",
+    "choicesAr": [
+      "$235,100 $914,000",
+      "$497,500 $651,600",
+      "$656,100 $493,000",
+      "$683,800 $465,300"
+    ],
+    "explanationAr": "ترسمل تكاليف المنتج المؤهلة ضمن مخزون الإنتاج التام، وتصبح لاحقًا جزءًا من تكلفة المبيعات. وتحمل تكاليف الفترة على المصروفات عند تكبدها ولا ترسمل في المخزون، وبالتالي تستبعد من تكلفة المبيعات في سياق هذا التصنيف. ويحسب التصنيف كما يلي:\nالبند | المنتج | الفترة\nالمواد المباشرة | $56,000 | —\nالأجور المباشرة | 179,100 | —\nالتكاليف الصناعية غير المباشرة المتغيرة | 154,000 | —\nالتكاليف الصناعية غير المباشرة الثابتة | 267,000 | —\nتكاليف البيع المتغيرة | — | $108,400\nتكاليف البيع الثابتة | — | 121,000\nالتكاليف الإدارية | — | 235,900\nالخسارة غير المؤمن عليها | — | 27,700\nالإجمالي | $656,100 | $493,000."
   },
   {
     "unit": 7,
@@ -2976,7 +3112,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Product costs are incurred to produce units of output. They\nare expensed when the product is sold. Such costs include\ndirect materials and direct labor. Period costs are charged to\nexpense as incurred because they are not identifiable with a\nproduct. Under variable costing, only variable manufacturing\ncosts are considered product costs; fixed manufacturing costs\nare considered period costs and are expensed as incurred.\nSelling costs are period costs under both variable and\nabsorption costing. Thus, the entire $225,000 ($150,000 +\n$75,000) is classified as period costs.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بلغت التكاليف الصناعية غير المباشرة الثابتة $150,000 وتكاليف البيع المتغيرة $75,000. كيف تصنف هذه التكاليف وفق التكاليف المتغيرة؟",
+    "choicesAr": [
+      "تكاليف فترة $0؛ تكاليف منتج $225,000.",
+      "تكاليف فترة $75,000؛ تكاليف منتج $150,000.",
+      "تكاليف فترة $150,000؛ تكاليف منتج $75,000.",
+      "تكاليف فترة $225,000؛ تكاليف منتج $0."
+    ],
+    "explanationAr": "تتكبد تكاليف المنتج لإنتاج الوحدات، وتحمل على المصروفات عند بيع المنتج. ومن أمثلتها المواد والأجور المباشرة. وتحمل تكاليف الفترة على المصروفات عند تكبدها. ووفق التكاليف المتغيرة تعد تكاليف التصنيع المتغيرة وحدها تكاليف منتج، بينما تعد التكاليف الصناعية الثابتة تكاليف فترة. وتعد تكاليف البيع تكاليف فترة وفق التكاليف المتغيرة والكلية. لذا يصنف كامل المبلغ $225,000 ($150,000 + $75,000) تكاليف فترة."
   },
   {
     "unit": 7,
@@ -2993,6 +3137,14 @@
     ],
     "answerIndex": 2,
     "explanation": "In a variable costing system, only the variable costs are\nrecorded as product costs. All fixed costs are expensed in the\nperiod incurred. Because changes in the relationship between\nproduction levels and sales levels do not cause changes in the\namount of fixed manufacturing cost expensed, profits more\ndirectly follow the trends in sales, especially when the UCM\n(Selling price per unit – Variable costs per unit) is constant.\nUnit sales times the UCM equals the total CM, and operating\nincome (a pretax amount) equals the CM minus fixed costs of\noperations. If the UCM is constant and fixed costs are stable,\nthe change in operating income will approximate the change in\nthe CM (Unit sales × UCM).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يمكن تفسير التغير في الدخل التشغيلي من فترة لأخرى وفق التكاليف المتغيرة بالتغير في:",
+    "choicesAr": [
+      "حجم المبيعات بالوحدات مضروبًا في سعر بيع الوحدة.",
+      "مستوى مخزون الإنتاج التام مضروبًا في سعر بيع الوحدة.",
+      "حجم المبيعات بالوحدات مضروبًا في هامش مساهمة ثابت للوحدة.",
+      "مستوى مخزون الإنتاج التام مضروبًا في هامش مساهمة ثابت للوحدة."
+    ],
+    "explanationAr": "وفق التكاليف المتغيرة لا تسجل ضمن تكاليف المنتج إلا تكاليف التصنيع المتغيرة. وتحمل التكاليف الثابتة على مصروفات الفترة. لذلك لا تؤثر تغيرات العلاقة بين الإنتاج والمبيعات في مبلغ التكاليف الصناعية الثابتة المحمل على الفترة، وترتبط الأرباح باتجاه المبيعات بصورة أوضح، خصوصًا عندما يكون هامش مساهمة الوحدة (UCM)، أي سعر بيع الوحدة ناقص تكلفتها المتغيرة، ثابتًا. ويبلغ هامش المساهمة الإجمالي حاصل ضرب الوحدات المباعة في هامش مساهمة الوحدة، ويساوي الدخل التشغيلي قبل الضريبة هامش المساهمة ناقص تكاليف التشغيل الثابتة. ومع ثبات هامش الوحدة والتكاليف الثابتة، يساوي تغير الدخل التشغيلي تغير هامش المساهمة."
   }
 ]
