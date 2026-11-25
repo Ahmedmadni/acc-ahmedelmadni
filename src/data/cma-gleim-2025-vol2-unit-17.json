@@ -309,7 +309,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Internal controls are designed to provide reasonable (not\nabsolute) assurance that objectives will be achieved.\nTherefore, even the best internal control cannot guarantee the\ncomplete elimination of employee fraud. However, effective\ninternal control will reduce the amount of employee fraud.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عندما تتمتع منشأة برقابة داخلية قوية، يمكن للإدارة توقع منافع متنوعة. ما المنفعة الأقل احتمالًا للتحقق؟",
+    "choicesAr": [
+      "انخفاض تكلفة المراجعة الخارجية.",
+      "القضاء التام على احتيال الموظفين.",
+      "توافر بيانات موثوقة لأغراض اتخاذ القرار.",
+      "قدر من التأكيد بشأن الالتزام بقانون الممارسات الأجنبية الفاسدة لعام 1977."
+    ],
+    "explanationAr": "تصمم الضوابط الداخلية لتوفير تأكيد معقول، وليس مطلقًا، بشأن تحقيق الأهداف. ولذلك لا يضمن حتى أفضل نظام رقابة داخلية القضاء التام على احتيال الموظفين، وإن كانت الرقابة الفعالة تساعد على الحد منه."
   },
   {
     "unit": 17,
@@ -326,7 +334,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Section 302 of the Sarbanes-Oxley Act requires periodic\nstatutory financial reports to include certain certifications. The\nsigning officer must review the report. Based on the officer’s\nknowledge, the report should not contain any untrue statement\nof a material fact or omit a material fact that is necessary to\nmake the statements not misleading.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما المتطلب الأساسي للمادة 302 من قانون ساربينز أوكسلي بالنسبة للإدارة العليا للشركات العامة الخاضعة له؟",
+    "choicesAr": [
+      "إنشاء ضوابط داخلية كافية والمحافظة عليها.",
+      "التصديق على العرض العادل والملائم للقوائم المالية.",
+      "المحافظة على مدونة أخلاقيات لجميع كبار المسؤولين الماليين.",
+      "الإفصاح الفوري عن التغيرات الجوهرية في الظروف التشغيلية."
+    ],
+    "explanationAr": "تتطلب المادة 302 من قانون ساربينز أوكسلي أن تتضمن التقارير المالية الدورية النظامية إقرارات محددة. ويجب على المسؤول الموقع مراجعة التقرير. وبناءً على علمه، ينبغي ألا يتضمن التقرير بيانًا غير صحيح عن حقيقة جوهرية أو يغفل حقيقة جوهرية لازمة لتجنب التضليل. ويشمل نطاق الإقرار أيضًا مسؤوليات الرقابة وفق النص النظامي."
   },
   {
     "unit": 17,
@@ -360,7 +376,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The Sarbanes-Oxley Act requires that the audit committee of a\npublic company hire and pay the external auditors. Such\naffiliation inhibits management from changing auditors to gain\nacceptance of a questionable accounting method. Also, a\npotential successor auditor must inquire of the predecessor\nauditor before accepting an engagement.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "كيف عزز قانون ساربينز أوكسلي استقلالية المراجع فيما يتعلق بآلية اختياره؟",
+    "choicesAr": [
+      "تكليف المراجعين بإعداد التقارير وفق قانون الممارسات الأجنبية الفاسدة.",
+      "الإبلاغ عن طبيعة الخلافات مع المراجعين السابقين.",
+      "اختيار المراجعين من خلال لجان المراجعة.",
+      "تعيين مكتب محاسبة آخر غير المكتب القائم بالمراجعة لتنفيذ أعمال الضرائب."
+    ],
+    "explanationAr": "يجعل قانون ساربينز أوكسلي لجنة المراجعة لدى الجهة المصدرة الخاضعة مسؤولة مباشرة عن تعيين المراجع الخارجي وتحديد أتعابه والإشراف على عمله. ويحد ذلك من قدرة الإدارة على تغيير المراجع للحصول على قبول معالجة محاسبية محل شك. كما يستفسر المراجع اللاحق المحتمل من المراجع السابق قبل قبول المهمة، وفق المعايير ذات الصلة."
   },
   {
     "unit": 17,
@@ -394,7 +418,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The Foreign Corrupt Practices Act of 1977 prohibits bribes to\nforeign officials for purposes of obtaining or retaining\nbusiness. The Act also requires companies to maintain\neffective systems of internal control.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما القانون الذي يحظر على الشركات الأمريكية دفع رشاوى لمسؤولين أجانب بغرض الحصول على أعمال أو الاحتفاظ بها؟",
+    "choicesAr": [
+      "قانون المعايير الأخلاقية الفيدرالية.",
+      "قانون روبنسون باتمان.",
+      "قانون الممارسات الأجنبية الفاسدة.",
+      "اتفاقية التجارة الحرة لأمريكا الشمالية."
+    ],
+    "explanationAr": "يحظر قانون الممارسات الأجنبية الفاسدة لعام 1977 تقديم الرشاوى للمسؤولين الأجانب بغرض الحصول على أعمال أو الاحتفاظ بها. كما يفرض متطلبات نظم الرقابة المحاسبية الداخلية على الجهات المصدرة الخاضعة لأحكامه المحاسبية؛ ويختلف نطاق هذه الأحكام عن نطاق حظر الرشوة."
   },
   {
     "unit": 17,
@@ -428,7 +460,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Although the requirements of the FCPA relating to the\nmaintenance of accounting records and systems of internal\naccounting control apply only to companies required to\nregister under the Securities Exchange Act of 1934, the\nantibribery provisions apply to all domestic business concerns\nengaged in interstate commerce.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يحظر قانون الممارسات الأجنبية الفاسدة لعام 1977 رشوة المسؤولين الأجانب. أي العبارات التالية تصف تطبيق القانون على الشركات التي تمارس هذه الأفعال وصفًا صحيحًا؟",
+    "choicesAr": [
+      "ينطبق فقط على الشركات متعددة الجنسيات.",
+      "ينطبق على جميع الشركات المحلية التي تمارس التجارة بين الولايات ضمن نطاق أحكام مكافحة الرشوة.",
+      "ينطبق فقط على الشركات المسجلة أوراقها المالية بموجب قانون تداول الأوراق المالية لعام 1934.",
+      "ينطبق فقط على الشركات التي تمارس التجارة الخارجية."
+    ],
+    "explanationAr": "تتعلق متطلبات القانون بشأن السجلات المحاسبية ونظم الرقابة المحاسبية الداخلية بالجهات المصدرة الخاضعة للتسجيل أو الإبلاغ بموجب قانون تداول الأوراق المالية لعام 1934. أما أحكام مكافحة الرشوة فأوسع نطاقًا، وتشمل المنشآت المحلية في سياق التجارة بين الولايات، فضلًا عن الحالات الأخرى التي يحددها القانون. لا تعني الإجابة أن القانون يقتصر عليها."
   },
   {
     "unit": 17,
@@ -445,7 +485,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The Foreign Corrupt Practices Act of 1977 prohibits bribes to\nforeign officials and requires firms to have adequate systems\nof internal control. Violation of the act subjects individual\nmanagers to fines and/or imprisonment. The act does not\nspecifically require the establishment of audit committees, but\nmany firms have established audit committees as one means\nof dealing with the internal control provisions of the act.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي ليس من جوانب قانون الممارسات الأجنبية الفاسدة لعام 1977؟",
+    "choicesAr": [
+      "إخضاع أفراد الإدارة للغرامات والسجن عند تحقق شروط المسؤولية.",
+      "حظر رشوة المسؤولين الأجانب.",
+      "اشتراط إنشاء لجان مراجعة مستقلة.",
+      "اشتراط تطوير نظام للرقابة الداخلية والمحافظة عليه للجهات الخاضعة للأحكام المحاسبية."
+    ],
+    "explanationAr": "يحظر قانون الممارسات الأجنبية الفاسدة لعام 1977 رشوة المسؤولين الأجانب، ويلزم الجهات المصدرة الخاضعة بأحكامه المحاسبية بأنظمة رقابة محاسبية داخلية كافية. وقد تعرض المخالفة المديرين للغرامات أو السجن وفق شروط المسؤولية. ولا يشترط هذا القانون بذاته إنشاء لجان مراجعة، لكن منشآت كثيرة أنشأتها ضمن وسائل التعامل مع متطلبات الرقابة الداخلية."
   },
   {
     "unit": 17,
@@ -462,7 +510,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The Foreign Corrupt Practices Act requires publicly traded\ncompanies to devise and maintain a system of internal\naccounting controls sufficient to provide reasonable assurance\nthat transactions are executed in accordance with\nmanagement’s authorization.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي المتطلبات التالية يفرضها قانون الممارسات الأجنبية الفاسدة على الشركات التي تتداول أوراقها المالية علنًا في الولايات المتحدة والخاضعة لأحكامه المحاسبية؟",
+    "choicesAr": [
+      "تصميم نظام رقابة محاسبية داخلية والمحافظة عليه بما يكفي لتوفير تأكيد معقول بأن المعاملات تنفذ وفق تفويض الإدارة.",
+      "الإفصاح للمستثمرين المحتملين عن المعلومات اللازمة لاتخاذ قرارات استثمارية مدروسة عند الطرح العام الأولي للأوراق المالية.",
+      "تقديم نموذج SEC 8K دوريًا كلما وقع حدث مهم يؤثر في الرقابة الداخلية للشركة.",
+      "إصدار إقرار بفعالية نظام الرقابة الداخلية على التقارير المالية في نهاية السنة المالية."
+    ],
+    "explanationAr": "يتطلب قانون الممارسات الأجنبية الفاسدة من الجهات المصدرة الخاضعة لأحكامه المحاسبية تصميم نظام للرقابة المحاسبية الداخلية والمحافظة عليه، بما يكفي لتوفير تأكيد معقول بأن المعاملات تنفذ وفق تفويض الإدارة."
   },
   {
     "unit": 17,
@@ -496,7 +552,15 @@
     ],
     "answerIndex": 1,
     "explanation": "A qualified opinion is issued when the auditor concludes that\nmisstatements, individually or in aggregate, are material but\nnot pervasive to the financial statements.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ينهي مكتب مراجعة مراجعة قوائم شركة متداولة علنًا في الولايات المتحدة. وبعد الحصول على أدلة مراجعة كافية، خلص المراجع الخارجي إلى أن التحريفات في مجموعها جوهرية لكنها غير منتشرة في القوائم المالية. ما نوع الرأي الذي ينبغي للمراجع إصداره بشأن القوائم المالية؟",
+    "choicesAr": [
+      "رأي غير معدل.",
+      "رأي متحفظ.",
+      "رأي معارض.",
+      "امتناع عن إبداء الرأي."
+    ],
+    "explanationAr": "يصدر رأي متحفظ عندما يخلص المراجع إلى أن التحريفات، منفردة أو مجتمعة، جوهرية ولكنها غير منتشرة في القوائم المالية. وفي سياق معايير PCAOB يستخدم مصطلح الرأي غير المتحفظ للرأي غير المعدل."
   },
   {
     "unit": 17,
@@ -513,7 +577,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The audit committee has a control function because of its\noversight of internal as well as external auditing. It should be\nmade up of directors who are independent of management.\nThe authority and independence of the audit committee\nstrengthen the position of the internal audit activity. The board\nshould concur in the appointment or removal of the chief audit\nexecutive, who should have direct, regular communication\nwith the board.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي من خصائص الهيكل التنظيمي التالية لشركة صناعية كبيرة يمثل ضعفًا رقابيًا؟",
+    "choicesAr": [
+      "يرأس قسم نظم المعلومات نائب رئيس يتبع رئيس الشركة مباشرة.",
+      "يشغل المدير المالي منصب نائب رئيس ويتبع الرئيس التنفيذي.",
+      "تتكون لجنة المراجعة التابعة لمجلس الإدارة من الرئيس التنفيذي والمدير المالي وأحد كبار المساهمين.",
+      "يتبع المراقب المالي وأمين الخزانة المدير المالي."
+    ],
+    "explanationAr": "تؤدي لجنة المراجعة وظيفة رقابية من خلال إشرافها على المراجعة الداخلية والخارجية. وينبغي أن تتكون من أعضاء مجلس إدارة مستقلين عن الإدارة. وتعزز سلطة اللجنة واستقلاليتها مكانة نشاط المراجعة الداخلية. وينبغي أن يشارك المجلس في اعتماد تعيين الرئيس التنفيذي للمراجعة أو عزله، وأن يكون لهذا المسؤول تواصل مباشر ومنتظم مع المجلس."
   },
   {
     "unit": 17,

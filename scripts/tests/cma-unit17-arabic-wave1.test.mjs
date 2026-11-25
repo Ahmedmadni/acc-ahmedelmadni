@@ -35,3 +35,27 @@ test("Unit 17 Wave 1: independence, reasonable assurance and jurisdiction review
   assert.ok(adapter.includes('"17.1.'+n+'"'));
  }
 });
+
+
+const wave2=new Map([[16,[1021,1,"ea9ffa27"]],[17,[1022,1,"fafef48f"]],[19,[1024,2,"b0949c7b"]],[21,[1026,2,"5ec61fe1"]],[23,[1028,1,"e16eecad"]],[24,[1029,2,"9397270f"]],[25,[1030,0,"cf6b45ad"]],[27,[1031,1,"e1fe8478"]],[28,[1032,2,"f3dd4961"]]]);
+test("Unit 17 Wave 2: nine governance drafts, statutory scope and immutable source keys",()=>{
+ const localized=rows.filter(r=>r.section===1&&r.stemAr);
+ assert.deepEqual(localized.map(r=>r.number),[...wave1.keys(),...wave2.keys()]);
+ for(const [n,[page,index,hash]] of wave2){
+  const r=q(n);
+  assert.equal(r.page,page);assert.equal(r.answerIndex,index);assert.equal(r.answerStatus,"source");assert.equal(r.sourceTextStatus,undefined);
+  assert.equal(fingerprint(JSON.stringify([r.stem,r.choices,r.explanation,r.answerIndex,r.page])),hash);
+  assert.equal(validateCmaTranslation({question:{en:r.stem},choices:{en:r.choices},explanation:{en:r.explanation}},{question:r.stemAr,choices:r.choicesAr,explanation:r.explanationAr}).valid,true,String(n));
+  for(const [en,ar] of [[r.stem,r.stemAr],...r.choices.map((c,i)=>[c,r.choicesAr[i]]),[r.explanation,r.explanationAr]])assert.deepEqual(cmaNumericTokens(ar),cmaNumericTokens(en),String(n));
+ }
+ const adapter=read("src/data/cma-questions-gleim-2025-vol2.ts");
+ for(const [n,page,index] of [[18,1023,0],[20,1024,3],[22,1027,3],[26,1031,1]]){
+  const held=q(n);
+  assert.equal(held.page,page);assert.equal(held.answerIndex,index);
+  assert.equal(held.stemAr,undefined);assert.equal(held.choicesAr,undefined);assert.equal(held.explanationAr,undefined);
+  assert.ok(adapter.includes('"17.1.'+n+'"'));
+ }
+ assert.deepEqual(rows.filter(r=>r.section===1&&!r.stemAr).map(r=>r.number),[1,2,3,4,5,6,10,11,12,14,18,20,22,26]);
+ for(const [n,expected] of [[16,"Elimination of employee fraud"],[17,"fair and appropriate"],[19,"audit committees"],[21,"Foreign Corrupt Practices Act"],[23,"interstate"],[24,"independent audit committees"],[25,"management’s authorization"],[27,"Qualified opinion"],[28,"chief executive officer"]])
+  assert.ok(q(n).choices[q(n).answerIndex].replace(/\s+/g," ").includes(expected),String(n));
+});
