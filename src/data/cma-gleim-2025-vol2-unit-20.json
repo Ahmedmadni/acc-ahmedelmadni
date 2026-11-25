@@ -701,7 +701,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Logistic regression is a statistical model that estimates the\nprobability of an event occurring given a dataset of\nindependent variables. The binary dependent variable is\nbetween 0 and 1. An example is borrower will default on loan\nor borrower will pay back loan.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يحدد محلل مالي احتمال تعثر بعض العملاء في سداد قروضهم. أي النماذج الإحصائية الآتية هو الأنسب من بين البدائل لتقدير هذا الاحتمال؟",
+    "choicesAr": [
+      "تحليل السلاسل الزمنية.",
+      "الانحدار اللوجستي.",
+      "تحليل مونت كارلو.",
+      "الانحدار الخطي البسيط."
+    ],
+    "explanationAr": "يقدر الانحدار اللوجستي احتمال وقوع حدث اعتمادًا على متغيرات تفسيرية. في الحالة الثنائية يأخذ المتغير التابع المرصود إحدى القيمتين 0 و1، أما الاحتمال المتوقع فيقع بينهما. ومن أمثلته تقدير احتمال تعثر المقترض في السداد مقابل عدم تعثره."
   },
   {
     "unit": 20,
@@ -718,7 +726,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Logistic regression is a statistical model that estimates the\nprobability of an event occurring given a dataset of\nindependent variables. The binary dependent variable is\nbetween 0 and 1. Examples include the following: candidate\nwill pass or candidate will fail, borrower will default on loan or\nborrower will pay back loan, email is spam or email is not\nspam, and transaction is fraud or transaction is not fraud.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات الآتية تصف الانحدار اللوجستي على أفضل وجه؟",
+    "choicesAr": [
+      "أداة إحصائية تقدر العلاقة الخطية بين متغير تابع ومتغير مستقل أو عدة متغيرات مستقلة.",
+      "أسلوب إحصائي لاستكشاف البيانات وتصنيفها ضمن فئات محددة مسبقًا.",
+      "أسلوب للنمذجة التنبؤية يختلف عن الانحدار الخطي المعتاد باستخدام نتائج ثنائية القيمة في صورته الثنائية.",
+      "أسلوب تنبؤي يقدر القيم المستقبلية اعتمادًا على سلسلة من نقاط البيانات المجمعة عبر الزمن."
+    ],
+    "explanationAr": "يقدر الانحدار اللوجستي احتمال وقوع حدث اعتمادًا على مجموعة من المتغيرات التفسيرية. وفي النموذج الثنائي تكون النتيجة المرصودة 0 أو 1، ويقدر النموذج احتمال وقوعها. ومن الأمثلة نجاح المرشح أو رسوبه، وتعثر المقترض أو عدم تعثره، وتصنيف البريد المزعج، وتصنيف المعاملات وفق احتمالية الغش."
   },
   {
     "unit": 20,
@@ -735,7 +751,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Classification is a statistical technique used to explore data\nand group the data into predefined categories.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما اسم أداة تحليلات البيانات المستخدمة لتوزيع مجموعات البيانات على فئات محددة مسبقًا؟",
+    "choicesAr": [
+      "التصنيف.",
+      "التجميع العنقودي.",
+      "الانحدار الخطي.",
+      "الانحدار اللوجستي."
+    ],
+    "explanationAr": "التصنيف مهمة تحليلية تسند المشاهدات إلى فئات محددة مسبقًا، بخلاف التجميع العنقودي الذي يبحث عن مجموعات متشابهة دون اشتراط فئات محددة سلفًا. ويمكن استخدام الانحدار اللوجستي وغيره لتنفيذ التصنيف، لكن التصنيف هو الاسم العام للمهمة."
   },
   {
     "unit": 20,
@@ -769,7 +793,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A bar chart (also called bar graph) is the best way to present\nthe findings because it shows the number of cases each\nquarter in comparison to other quarters.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لاحظ مستشفى زيادة عدد حالات مرض معين، وطلب من محلل جمع بيانات الحالات خلال آخر 3 سنوات. ولاحظ المحلل ظهور المرض قبل 3 سنوات في الربع الثاني، ثم ارتفاع الحالات بوضوح في الربعين الثالث والرابع من كل سنة مقارنة بالربعين الأول والثاني. ما أفضل وسيلة لعرض النتائج من بين البدائل؟",
+    "choicesAr": [
+      "جدول يعرض عدد الحالات في كل شهر خلال آخر 3 سنوات.",
+      "مخطط دائري يعرض عدد الحالات في كل ربع خلال آخر 3 سنوات.",
+      "مخطط مبعثر يعرض التغير في عدد الحالات لكل ربع خلال آخر 3 سنوات.",
+      "مخطط أعمدة يعرض عدد الحالات في كل ربع خلال آخر 3 سنوات."
+    ],
+    "explanationAr": "يسهل مخطط الأعمدة مقارنة أعداد الحالات بين الأرباع وإظهار النمط الموسمي عبر السنوات. ويجب ترتيب الفترات زمنيًا وتوحيد مقياس المحور حتى تكون المقارنة واضحة."
   },
   {
     "unit": 20,
@@ -786,7 +818,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Data mining examines large amounts of data to discover\npatterns using statistical models and techniques. The term\ndata mining is somewhat misleading because its purpose is\nthe discovery of patterns in large amounts of data, not the\nextraction of the data itself.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات الآتية تعرف التنقيب عن البيانات؟",
+    "choicesAr": [
+      "عملية تستخدم الأساليب الإحصائية لاستخراج البيانات وتحليلها من قواعد بيانات كبيرة لاكتشاف الأنماط والاتجاهات.",
+      "نظام يستخدم لتطوير مقاييس أداء المنشأة.",
+      "عملية تستخدم خوارزميات لتسهيل الاتصال الفعال داخل المنشأة.",
+      "نظام لتنظيم البيانات المعقدة وتفسيرها لضمان تسجيلها بدقة في قاعدة البيانات."
+    ],
+    "explanationAr": "يفحص التنقيب عن البيانات كميات كبيرة من البيانات لاكتشاف الأنماط باستخدام النماذج والأساليب الإحصائية والخوارزميات. ويتمثل هدفه في اكتشاف الأنماط والعلاقات المفيدة، وليس مجرد استخراج البيانات من قواعدها."
   },
   {
     "unit": 20,
@@ -803,7 +843,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The coefficient of determination (r 2) is a measure of the fit\nbetween the independent and dependent variables. The\ncoefficient of determination is the proportion of the total\nvariation in the dependent variable that is accounted for by the\nindependent variable. The value of r 2 ranges from 0 to 1. The\ncloser the value of r 2 to 1, the more useful the independent\nvariable (x) is for explaining or predicting the variation in the\ndependent variable (y). A coefficient of determination of 0.85\nequals 85% of the variation of the dependent variable\nexplained by the regression line.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "إذا كان معامل التحديد (r 2) في معادلة انحدار بسيطة يساوي 0.85، فماذا يعني ذلك؟",
+    "choicesAr": [
+      "يفسر خط الانحدار 85% من تباين المتغير التابع.",
+      "يفسر خط الانحدار 85% من تباين المتغير المستقل.",
+      "يبلغ معامل الارتباط بين المتغير التابع والمستقل 0.85.",
+      "لا يوجد ارتباط قوي بين المتغير التابع والمستقل."
+    ],
+    "explanationAr": "يقيس معامل التحديد (r 2) مدى ملاءمة النموذج للبيانات. وفي الانحدار الخطي المعتاد مع ثابت، يمثل معامل التحديد (r 2) نسبة التباين الكلي للمتغير التابع التي يفسرها النموذج، وتتراوح قيمته من 0 إلى 1. وكلما اقترب (r 2) من 1 زادت نسبة التباين المفسرة داخل العينة. وتعني قيمة 0.85 أن خط الانحدار يفسر 85% من تباين المتغير التابع، ولا يثبت ذلك السببية أو جودة التنبؤ خارج العينة."
   },
   {
     "unit": 20,
@@ -837,7 +885,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Business intelligence refers to software applications, tools,\nand practices that can be used to analyze and organize raw\ndata. The objective is to speed up and improve managerial\ndecision making and to uncover new business opportunities.\nVisualizing and analyzing business data can be easier with\ndashboard features. A standard dashboard for key analytical\nfunctions makes collaboration easier by enabling a large\norganization to share its analyses across the entire entity.\nBasically, a dashboard is defined as an interactive user\ninterface that presents information in an easy-to-read and\neasy-to-understand manner.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ترغب منشأة في استخدام ذكاء الأعمال (BI) لتقييم المؤشرات الرئيسية، واقترح مدير تقنية المعلومات دمج لوحة مؤشرات في الأداة. ما السبب الرئيسي من بين البدائل لتطبيق هذه اللوحة؟",
+    "choicesAr": [
+      "إتاحة أكبر عدد ممكن من الرسوم البيانية للإدارة.",
+      "إظهار الأنماط والاتجاهات في البيانات عبر المنشأة.",
+      "تصميمها للتركيز على المؤشرات التي لم تحقق أهدافها.",
+      "إصدار طلبات إعادة شراء مواد الإنتاج المهمة تلقائيًا."
+    ],
+    "explanationAr": "يشمل ذكاء الأعمال الأدوات والتطبيقات والممارسات المستخدمة لتنظيم البيانات وتحليلها لدعم القرارات واكتشاف الفرص. وتعرض لوحة المؤشرات المعلومات في صورة سهلة القراءة والفهم، وتساعد على مشاركة التحليلات ومتابعة الأنماط والاتجاهات. وتعتمد فائدتها على اختيار المؤشرات المناسبة وجودة البيانات، لا على كثرة الرسوم."
   },
   {
     "unit": 20,
@@ -854,7 +910,15 @@
     ],
     "answerIndex": 1,
     "explanation": "A scatter plot is the best way to present the relationship by\nillustrating the correlation between the number of car\naccidents (y variable) and the population size (x variable).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تدرس شركة تأمين سيارات فتح فروع في دولة أجنبية شهد سكانها نموًا سريعًا خلال آخر 5 سنوات. وتريد معرفة ما إذا كان عدد حوادث السيارات مرتبطًا بنمو السكان. أي العروض الآتية أكثر فائدة؟",
+    "choicesAr": [
+      "مخطط خطي يضع الأشهر على المحور x وعدد الحوادث على المحور y.",
+      "مخطط مبعثر يضع عدد حوادث السيارات على المحور y وحجم السكان على المحور x.",
+      "جدول يعرض عدد حوادث السيارات في الصفوف وحجم السكان في الأعمدة.",
+      "مخطط دائري يعرض عدد حوادث السيارات في كل مدينة خلال آخر 5 سنوات."
+    ],
+    "explanationAr": "يعرض المخطط المبعثر العلاقة بين عدد حوادث السيارات (y) وحجم السكان (x) باستخدام المشاهدات المتقابلة. ويمكن أن يكشف عن نمط ارتباط، لكن الارتباط لا يثبت السببية، وقد يلزم تحليل معدل الحوادث بالنسبة للسكان والعوامل الأخرى."
   },
   {
     "unit": 20,
@@ -871,7 +935,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The four Vs of big data include volume, velocity, variety, and\nveracity. Some people include the value of the data as a fifth\nV.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يدخل ضمن الخصائص الأربع المعروفة باسم Vs للبيانات الضخمة؟",
+    "choicesAr": [
+      "الحجم (Volume).",
+      "السرعة (Velocity).",
+      "التنوع (Variety).",
+      "جميع الإجابات صحيحة."
+    ],
+    "explanationAr": "تشمل الخصائص الأربع الحجم والسرعة والتنوع وموثوقية البيانات (Veracity). وتضيف بعض التصنيفات القيمة (Value) بوصفها خاصية خامسة."
   },
   {
     "unit": 20,
@@ -939,7 +1011,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The simple regression equation is y = a + bx. The symbol y is\nthe dependent variable (overhead costs), a is the y-axis\nintercept (fixed costs), b is the slope of the regression line\n(cost driver), and x is the independent variable.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم شركة بوكس تحليل الانحدار لتقدير العلاقة الوظيفية بين متغير مستقل يمثل محرك التكلفة والتكاليف الصناعية غير المباشرة. افترض استخدام المعادلة الآتية:\ny = a + bx\nما رمز المتغير المستقل؟",
+    "choicesAr": [
+      "y.",
+      "x.",
+      "bx.",
+      "a."
+    ],
+    "explanationAr": "معادلة الانحدار البسيط هي y = a + bx. يمثل y المتغير التابع (التكاليف الصناعية غير المباشرة)، ويمثل a الجزء الثابت المقدر، ويمثل b ميل خط الانحدار أي التغير المقدر في التكلفة لكل وحدة من محرك التكلفة، ويمثل x المتغير المستقل (محرك التكلفة)."
   },
   {
     "unit": 20,

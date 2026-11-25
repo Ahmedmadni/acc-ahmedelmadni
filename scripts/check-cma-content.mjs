@@ -643,6 +643,7 @@ const staticArabicVol2 = new Set([
   ...Array.from({length:12},(_,i)=>i+14).filter(n=>![21,22,25].includes(n)).map(n=>"19.3."+n),
   ...Array.from({length:13},(_,i)=>i+1).filter(n=>![1,3,13].includes(n)).map(n=>"20.1."+n),
   ...Array.from({length:18},(_,i)=>i+14).filter(n=>![16,18,19,23,25,27,30,31].includes(n)).map(n=>"20.1."+n),
+  ...Array.from({length:15},(_,i)=>i+1).filter(n=>![4,8,12,13,14].includes(n)).map(n=>"20.2."+n),
 ]);
 const vol2QuestionById = new Map(CMA_GLEIM_2025_VOL2_QUESTIONS.map(q=>[q.id,q]));
 for (const [key, original] of vol2Records) {
@@ -930,7 +931,12 @@ for(const [n,page,index] of [[1,1294,3],[3,1296,1],[13,1304,1],[16,1306,3],[18,1
  const mapped=vol2QuestionById.get("cma-gleim-2025-vol2-su20-s1-q"+String(n).padStart(3,"0"));
  check(original?.page===page && original.answerIndex===index && original.answerStatus==="source" && original.stemAr===undefined && original.choicesAr===undefined && original.explanationAr===undefined && mapped?.sourceLayoutReview===true && mapped?.sourceLanguage==="en" && mapped?.sourceArabicStatus===undefined && mapped?.answerIndex===original.answerIndex,"Unit 20 finance transformation hold: "+n);
 }
-console.log("Unit 20 Wave 2: 20/90 Arabic drafts; finance transformation 20/31; 11 reviewed holds, 59 unreviewed.");
+for(const [n,page,index] of [[4,1323,1],[8,1327,3],[12,1330,2],[13,1331,2],[14,1331,3]]){
+ const original=vol2Records.get("20.2."+n);
+ const mapped=vol2QuestionById.get("cma-gleim-2025-vol2-su20-s2-q"+String(n).padStart(3,"0"));
+ check(original?.page===page && original.answerIndex===index && original.answerStatus==="source" && original.stemAr===undefined && original.choicesAr===undefined && original.explanationAr===undefined && mapped?.sourceLayoutReview===true && mapped?.sourceLanguage==="en" && mapped?.sourceArabicStatus===undefined && mapped?.answerIndex===original.answerIndex,"Unit 20 data analytics hold: "+n);
+}
+console.log("Unit 20 Wave 3: 30/90 Arabic drafts; finance transformation 20/31; data analytics 10/59; 16 reviewed holds, 44 unreviewed.");
 const unit15ReviewRows=[...vol2Records.entries()].filter(([id])=>id.startsWith("15.")).filter(([id])=>{
  const [,section,n]=id.split(".");
  return vol2QuestionById.get("cma-gleim-2025-vol2-su15-s"+section+"-q"+String(n).padStart(3,"0"))?.sourceLayoutReview===true;
