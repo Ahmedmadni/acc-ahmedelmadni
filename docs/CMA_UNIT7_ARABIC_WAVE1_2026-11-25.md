@@ -1,0 +1,5 @@
+# Unit 7 Wave 1
+
+55 Arabic educational drafts: section 1 29/30 and section 2 26/30. Unit 7: 55/131 (42.0%), five held, 71 unreviewed. Combined imported bank: 1802/2443. Original English text, keys and numeric tokens preserved. Independent prime cost, conversion cost, flexible budget and cost-behavior calculations added. Q1.11 distinguishes direct product costs from allocated overhead; Q1.17 distinguishes common from joint costs; Q1.25 clarifies finished goods storage; Q2.16 and Q2.29 clarify that mixed classification does not prove linear behavior.
+
+Holds: 7.1.9 corporate vice-president incorrectly classified as factory overhead absent manufacturing role; 7.2.9 table digits split across lines; 7.2.14 step-fixed cost described simply as fixed without defining relevant range; 7.2.25 projected weight and shipment count conflict with historical average, verify assumptions; 7.2.28 interleaved columns and narrative. Original-page verification pending. Next: section 3 costing techniques and section 4 absorption/variable costing.
