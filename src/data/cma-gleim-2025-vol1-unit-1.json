@@ -4224,7 +4224,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Operating activities are all transactions and other events that\nare not financing or investing activities. In general, operating\nactivities involve the production and delivery of goods and the\nprovision of services. Their effects normally are reported in\nearnings. Cash inflows from operating activities include receipts\nfrom collection or sale of accounts and notes resulting from\nsales to customers. Cash outflows from operating activities\ninclude cash payments to employees for services and creditors\nfor interest. Thus, the net cash provided by operating activities\nis $14,000 ($25,000 – $8,000 – $3,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "حسبت شركة البيانات التالية عن الفترة:\nمقبوضات نقدية من العملاء: $25,000\nمقبوضات نقدية من بيع المعدات: 1,000\nفوائد مدفوعة للبنك عن ورقة دفع: 3,000\nمدفوعات نقدية للموظفين: 8,000\nما صافي النقد الناتج عن الأنشطة التشغيلية الذي ينبغي عرضه في قائمة التدفقات النقدية؟",
+    "choicesAr": [
+      "$14,000",
+      "$15,000",
+      "$18,000",
+      "$26,000"
+    ],
+    "explanationAr": "الأنشطة التشغيلية هي المعاملات والأحداث التي لا تُصنف ضمن الأنشطة التمويلية أو الاستثمارية. وتشمل عمومًا إنتاج السلع وتسليمها وتقديم الخدمات، وتنعكس آثارها عادةً في الأرباح. ومن تدفقاتها الداخلة تحصيل أو بيع الحسابات وأوراق القبض الناشئة عن المبيعات للعملاء. ومن تدفقاتها الخارجة مدفوعات الموظفين مقابل خدماتهم والفوائد المدفوعة للدائنين وفق المعايير الأمريكية. لذا فإن صافي النقد الناتج عن التشغيل يبلغ $14,000 ($25,000 − $8,000 − $3,000)."
   },
   {
     "unit": 1,
@@ -4258,7 +4266,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Cash flows from investing activities represent the extent to\nwhich expenditures have been made for resources intended to\ngenerate future income and cash flows. These expenditures\ninclude (1) cash payments for property, plant, and equipment;\n(2) other long-lived assets; (3) equity and debt instruments\nheld for investment purposes; and (4) cash advances and\nloans made to other parties. The cash outflows used by\ninvesting activities is $140,000 ($80,000 purchase of\nequipment + $60,000 purchase of AFS securities).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أجرت شركة Dunbarn المعاملات التالية خلال السنة:\nشراء مخزون: $120,000\nشراء معدات: 80,000\nشراء أوراق مالية متاحة للبيع: 60,000\nشراء أسهم خزينة: 70,000\nإصدار أسهم عادية: 150,000\nما صافي النقد الناتج عن (المستخدم في) الأنشطة الاستثمارية الذي ينبغي عرضه في قائمة التدفقات النقدية للسنة؟",
+    "choicesAr": [
+      "$(120,000)",
+      "$(140,000)",
+      "$(210,000)",
+      "$150,000"
+    ],
+    "explanationAr": "تعكس التدفقات الاستثمارية الإنفاق على الموارد التي يُقصد منها توليد دخل وتدفقات نقدية مستقبلية. وتشمل هذه المدفوعات (1) اقتناء العقارات والآلات والمعدات؛ (2) اقتناء الأصول الأخرى طويلة الأجل؛ (3) اقتناء أدوات حقوق الملكية والدين لأغراض الاستثمار؛ (4) السلف والقروض المقدمة لأطراف أخرى. ويبلغ النقد المستخدم في الاستثمار $140,000 ($80,000 لشراء المعدات + $60,000 لشراء الأوراق المالية المتاحة للبيع)."
   },
   {
     "unit": 1,
@@ -4275,7 +4291,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Cash flows from financing activities generally involve the cash\neffects of transactions and other events that relate to the\nissuance, settlement, or reacquisition of the entity’s debt and\nequity instruments. In addition, payments of cash dividends\nare classified as cash outflows from financing activities.\nTherefore, the items that should be classified as cash flows\nfrom financing activities are the dividends paid ($5,000) and\nthe issuance of the company’s bonds ($10,000). The net cash\nflow should be an inflow of $5,000 ($10,000 – $5,000). Cash\nflows from investing activities include the sale of equipment\n($20,000), the purchase of stock of another company\n($2,000), and the purchase of a U.S. Treasury note ($2,000).\nCash flows from operating activities include income taxes paid\n($2,000) and interest income received ($500).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تعرض شركة المعلومات التالية عن السنة 1:\nبيع معدات: $20,000\nإصدار سندات الشركة: 10,000\nتوزيعات أرباح مدفوعة: 5,000\nشراء أسهم شركة أخرى: 2,000\nشراء سند خزانة أمريكي: 2,000\nضرائب دخل مدفوعة: 2,000\nفوائد مقبوضة: 500\nما صافي التدفقات النقدية من الأنشطة التمويلية؟",
+    "choicesAr": [
+      "$(9,000)",
+      "$5,000",
+      "$5,500",
+      "$15,000"
+    ],
+    "explanationAr": "ترتبط التدفقات التمويلية عادةً بإصدار أدوات دين المنشأة وحقوق ملكيتها أو تسويتها أو إعادة شرائها. وتُصنف التوزيعات النقدية المدفوعة تدفقات تمويلية خارجة. لذلك تقتصر البنود التمويلية هنا على التوزيعات المدفوعة ($5,000) وإصدار سندات الشركة ($10,000). ويبلغ صافي التدفق الداخل $5,000 ($10,000 − $5,000). وتشمل التدفقات الاستثمارية بيع المعدات ($20,000) وشراء أسهم شركة أخرى ($2,000) وشراء سند الخزانة الأمريكي ($2,000)، بافتراض أنها استثمارات وليست معادلات نقد أو أوراقًا مقتناة خصيصًا لإعادة البيع. وتشمل التدفقات التشغيلية وفق المعايير الأمريكية ضرائب الدخل المدفوعة ($2,000) والفوائد المقبوضة ($500)."
   },
   {
     "unit": 1,
@@ -4292,7 +4316,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Cash proceeds from issuing shares and other equity\ninstruments (obtaining resources from owners) are cash\ninflows from financing activities in the statement of cash flows.\nThe total cash inflow of $15,000 (1,000 shares × $15 price per\nshare) is thus reported as a cash inflow from financing\nactivities.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أصدرت شركة Ace عدد 1,000 سهم عادي بقيمة اسمية $10 للسهم، مقابل $15 نقدًا للسهم. كيف تُعرض المعاملة في قائمة التدفقات النقدية لسنة الإصدار؟",
+    "choicesAr": [
+      "$15,000 تدفق نقدي داخل من الأنشطة التمويلية.",
+      "$10,000 تدفق نقدي داخل من الأنشطة التمويلية و$5,000 تعديل للوصول إلى التدفقات النقدية التشغيلية.",
+      "$15,000 تدفق نقدي من الأنشطة الاستثمارية.",
+      "$10,000 تدفق نقدي من الأنشطة الاستثمارية و$5,000 تعديل للوصول إلى التدفقات النقدية التشغيلية."
+    ],
+    "explanationAr": "تُصنف المتحصلات النقدية من إصدار الأسهم وأدوات حقوق الملكية الأخرى (الحصول على موارد من الملاك) ضمن التدفقات التمويلية الداخلة. لذا يُعرض كامل التدفق النقدي الداخل البالغ $15,000 (عدد 1,000 سهم × سعر إصدار $15 للسهم) ضمن الأنشطة التمويلية."
   },
   {
     "unit": 1,
@@ -4309,7 +4341,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Cash flows from finance activities generally involve the cash\neffects of transactions and other events that relate to the\nissuance, settlement, or reacquisition of an entity’s debt and\nequity instruments. Thus, only the $100,000 proceeds from\nlong-term debt should be reported as net cash provided by\nfinance activities in the statement of cash flows.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أجرت شركة Box المعاملات التالية خلال السنة:\nمتحصلات بيع استثمارات: $80,000\nشراء عقارات وآلات ومعدات: 10,000\nمتحصلات اقتراض طويل الأجل: 100,000\nخسارة بيع استثمار: 5,000\nما صافي النقد الناتج عن الأنشطة التمويلية الذي ينبغي عرضه في قائمة التدفقات النقدية؟",
+    "choicesAr": [
+      "$70,000",
+      "$75,000",
+      "$80,000",
+      "$100,000"
+    ],
+    "explanationAr": "ترتبط التدفقات التمويلية عمومًا بالآثار النقدية للمعاملات والأحداث المتعلقة بإصدار أدوات الدين وحقوق الملكية للمنشأة أو تسويتها أو إعادة شرائها. لذا فإن متحصلات الاقتراض طويل الأجل البالغة $100,000 وحدها تمثل صافي النقد الناتج عن الأنشطة التمويلية في هذه القائمة."
   },
   {
     "unit": 1,
@@ -4343,7 +4383,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Cash flows from financing activities generally involve the cash\neffects of transactions and other events that relate to the\nissuance, settlement, or reacquisition of the entity’s debt and\nequity instruments. The principal payments of $48,000 on\nnotes payable are repaid cash borrowed and are cash\noutflows for financing activities. However, cash received or\npaid as interest is included in cash flows from operating\nactivities. In addition, cash payments to acquire equity or debt\ninstruments of other entities are classified as cash outflows for\ninvesting activities.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أجرت شركة المعاملات التالية خلال السنة:\nسداد أصل أوراق دفع طويلة الأجل: $48,000\nفوائد مدفوعة عن أوراق الدفع: 8,000\nمدفوعات نقدية لشراء 100 سهم عادي من شركة أخرى: 25,000\nما المبلغ المصنف تدفقًا نقديًا خارجًا ضمن الأنشطة التمويلية في قائمة التدفقات النقدية؟",
+    "choicesAr": [
+      "$48,000",
+      "$56,000",
+      "$73,000",
+      "$81,000"
+    ],
+    "explanationAr": "تشمل التدفقات التمويلية عادةً الآثار النقدية لإصدار أدوات الدين وحقوق الملكية للمنشأة أو تسويتها أو إعادة شرائها. ويمثل سداد أصل أوراق الدفع البالغ $48,000 ردًا للنقد المقترض، ويُصنف تدفقًا تمويليًا خارجًا. أما الفوائد المقبوضة أو المدفوعة فتُصنف ضمن التشغيل وفق المعايير الأمريكية في سياق السؤال. وتُصنف مدفوعات اقتناء أدوات حقوق الملكية أو الدين لمنشآت أخرى لأغراض الاستثمار ضمن التدفقات الاستثمارية الخارجة."
   },
   {
     "unit": 1,
@@ -4360,7 +4408,15 @@
     ],
     "answerIndex": 0,
     "explanation": "In an indirect presentation of net cash flows from operating\nactivities by a business, the statement of cash flows should\nbegin with net income adjusted for certain items, including\nthose recognized in the determination of net income that did\nnot affect cash during the period. The recognition of\ndepreciation expense reduces net income without directly\naffecting cash. Thus, depreciation must be added back to net\nincome in the determination of cash flows from operating\nactivities.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عند استخدام الطريقة غير المباشرة لعرض قائمة التدفقات النقدية لمنشأة، كيف يُعرض مصروف الإهلاك؟",
+    "choicesAr": [
+      "يُضاف إلى صافي الدخل في قسم الأنشطة التشغيلية.",
+      "يُطرح من صافي الدخل في قسم الأنشطة التشغيلية.",
+      "يُعرض تدفقًا نقديًا خارجًا في قسم الأنشطة الاستثمارية.",
+      "لا يُفصح عنه في القائمة."
+    ],
+    "explanationAr": "عند عرض صافي التدفقات التشغيلية بالطريقة غير المباشرة، يبدأ الحساب بصافي الدخل مع تعديله ببنود منها ما دخل في احتساب صافي الدخل دون أن يؤثر في النقد خلال الفترة. ويخفض إثبات مصروف الإهلاك صافي الدخل دون تأثير نقدي مباشر؛ لذلك يُضاف الإهلاك إلى صافي الدخل للوصول إلى التدفقات التشغيلية."
   },
   {
     "unit": 1,
@@ -4377,7 +4433,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Cash flows from financing activities generally involve the cash\neffects of transactions and other events that relate to the\nissuance, settlement, or reacquisition of the entity’s debt and\nequity instruments. The proceeds from the sale of a building is\nan investing cash flow. All of the other transactions represent\ncash flows from financing activities. Thus, the company’s\nincrease in cash flows provided by financing activities is $250\n[($300) + $250 + $200 + $100].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تُعد شركة قائمة التدفقات النقدية لنهاية السنة بالطريقة غير المباشرة. وقد أجرت المعاملات التالية خلال السنة:\nتوزيعات أرباح مدفوعة: $300\nمتحصلات إصدار أسهم عادية: 250\nمبالغ مقترضة بموجب تسهيل ائتماني: 200\nمتحصلات إصدار سندات قابلة للتحويل: 100\nمتحصلات بيع مبنى: 150\nما صافي التدفقات النقدية الناتجة عن الأنشطة التمويلية خلال السنة؟",
+    "choicesAr": [
+      "$50",
+      "$150",
+      "$250",
+      "$550"
+    ],
+    "explanationAr": "ترتبط التدفقات التمويلية عمومًا بالآثار النقدية لإصدار أدوات الدين وحقوق الملكية أو تسويتها أو إعادة شرائها. وتمثل متحصلات بيع المبنى تدفقًا استثماريًا. أما بقية المعاملات فتمثل تدفقات تمويلية. لذا يبلغ صافي التدفقات التمويلية الداخلة $250 [($300) + $250 + $200 + $100]."
   },
   {
     "unit": 1,
@@ -4394,7 +4458,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The statement of cash flows may report operating activities in\nthe form of either an indirect or a direct presentation. An\nindirect presentation by a business removes from net income\nthe effects of all non-cash items, all deferrals of past operating\ncash flows, all accruals of expected future operating cash\nflows, and all items whose cash effects are financing or\ninvesting cash flows. The result is net operating cash flow.\nGoodwill impairment is a noncash loss and should be added\nto net income.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم شركة Hellespont الطريقة غير المباشرة لإعداد قائمة التدفقات النقدية. كيف ينبغي عرض إثبات خسارة انخفاض قيمة الشهرة؟",
+    "choicesAr": [
+      "تدفق نقدي من الأنشطة الاستثمارية.",
+      "تدفق نقدي من الأنشطة التمويلية.",
+      "طرح من صافي الدخل.",
+      "إضافة إلى صافي الدخل."
+    ],
+    "explanationAr": "يمكن عرض التدفقات التشغيلية بالطريقة المباشرة أو غير المباشرة. وتستبعد الطريقة غير المباشرة من صافي الدخل آثار البنود غير النقدية وتأجيلات التدفقات التشغيلية السابقة واستحقاقات التدفقات التشغيلية المستقبلية، والبنود التي ترتبط آثارها النقدية بالتمويل أو الاستثمار. وينتج عن ذلك صافي التدفق النقدي التشغيلي. وتمثل خسارة انخفاض قيمة الشهرة خسارة غير نقدية تُضاف إلى صافي الدخل."
   },
   {
     "unit": 1,
