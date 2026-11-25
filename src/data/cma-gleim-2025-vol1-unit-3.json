@@ -2494,7 +2494,15 @@
     ],
     "answerIndex": 1,
     "explanation": "A recognized intangible asset is amortized over its useful life if\nthat useful life is finite, that is, unless the useful life is\ndetermined to be indefinite. The useful life of an intangible\nasset is indefinite if no foreseeable limit exists on the period\nover which it will contribute, directly or indirectly, to the\nreporting entity’s cash flows.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "متى يُطفأ الأصل غير الملموس المعترف به على مدى عمره الإنتاجي؟",
+    "choicesAr": [
+      "إلا إذا تعذر تحديد نمط استهلاك المنافع الاقتصادية للأصل بموثوقية.",
+      "إذا كان عمره الإنتاجي محددًا.",
+      "إلا إذا تعذر تحديد المدة الدقيقة لعمره.",
+      "إذا كان عمره غير محدد ولكنه ليس لانهائيًا."
+    ],
+    "explanationAr": "يطفأ الأصل غير الملموس على مدى عمره الإنتاجي إذا كان محددًا، بخلاف الأصل ذي العمر غير المحدد. ويكون العمر غير محدد عندما لا يوجد حد منظور للفترة التي يتوقع أن يساهم فيها الأصل، مباشرة أو غير مباشرة، في التدفقات النقدية للمنشأة."
   },
   {
     "unit": 3,
@@ -2511,7 +2519,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The corporation will amortize the cost of the patent on a\nstraight-line basis at the rate of $1,300 per year ($22,100 ÷\n17). The costs of a successful legal defense of a patent are\ncapitalized and amortized over the shorter of the remaining\nlegal life or the estimated useful life of the patent. Because the\nlegal costs to defend the patent were incurred when the patent\nhad 9.5 years of life remaining, they will be amortized at a rate\nof $1,200 per year ($11,400 ÷ 9.5). Because Year 8 only\nincludes a half year’s depreciation for the legal costs, total\namortization expense for that year is $1,900 ($1,300 + $600).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "اشترت شركة براءة اختراع في بداية السنة 1 مقابل $22,100 على أن تطفأ على مدى 17 سنة. وفي 1 يوليو من السنة 8 تكبدت تكاليف قانونية $11,400 للدفاع الناجح عن البراءة. ما مصروف الإطفاء الذي ينبغي إثباته في السنة 8؟",
+    "choicesAr": [
+      "$2,500",
+      "$1,971",
+      "$1,900",
+      "$1,300"
+    ],
+    "explanationAr": "تطفئ الشركة تكلفة البراءة بالقسط الثابت بمعدل سنوي $1,300 ($22,100 ÷ 17). وفي المعالجة الأمريكية المفترضة هنا، ترسمل تكاليف الدفاع القانوني الناجح عن البراءة عند استيفاء شروط الاعتراف وتطفأ على الأقصر من العمر القانوني المتبقي والعمر الإنتاجي المقدر. ولأن تكاليف الدفاع تكبدت عندما تبقى من عمر البراءة 9.5 سنة، فإن معدل إطفائها السنوي $1,200 ($11,400 ÷ 9.5). وتشمل السنة 8 نصف سنة فقط من إطفاء التكاليف القانونية؛ لذلك يبلغ إجمالي الإطفاء $1,900 ($1,300 + $600)."
   },
   {
     "unit": 3,
@@ -2528,7 +2544,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Generally, R&D costs are expensed as incurred. Legal fees\nand registration fees are excluded from the definition of R&D.\nThus, the patent registration fees should be capitalized as a\ncost associated with an internally developed patent. The\npatent’s R&D costs should have been expensed as they were\nincurred.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي التكاليف التالية المرتبطة ببراءة اختراع مطورة داخليًا ينبغي رسملتها وفق المعالجة الأمريكية العامة؟\nالبحث والتطوير | تسجيل البراءة",
+    "choicesAr": [
+      "لا | نعم",
+      "لا | لا",
+      "نعم | لا",
+      "نعم | نعم"
+    ],
+    "explanationAr": "تثبت تكاليف البحث والتطوير عمومًا مصروفًا عند تكبدها وفق المعايير الأمريكية، مع مراعاة الاستثناءات المحددة. وتستبعد الأتعاب القانونية ورسوم التسجيل من تعريف البحث والتطوير. لذلك ترسمل رسوم التسجيل المرتبطة بالبراءة عند تحقق شروط الاعتراف، بينما تحمل تكاليف البحث والتطوير الخاصة بها على المصروفات."
   },
   {
     "unit": 3,
@@ -2545,7 +2569,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A patent is amortized over the shorter of its useful life or legal\nlife, so annual amortization on this patent is $1,700 ($17,000 ÷\n10 years). The depreciation expense for the year of acquisition\nis $850 [$1,700 × (6 ÷ 12 months)]. The patent should\ntherefore be reported at December 31 at $16,150 ($17,000 –\n$850).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 يوليو حصلت شركة على براءة اختراع لعملية تصنيع جديدة تزيد كفاءة الإنتاج. بلغت التكلفة $17,000، والعمر الإنتاجي المتوقع للعملية 10 سنوات، رغم أن العمر القانوني للبراءة 17 سنة. تتبع الشركة السنة الميلادية وتعد قائمة المركز المالي في 31 ديسمبر. بأي مبلغ تعرض البراءة في 31 ديسمبر من سنة الاقتناء؟",
+    "choicesAr": [
+      "$15,300",
+      "$16,000",
+      "$16,150",
+      "$16,500"
+    ],
+    "explanationAr": "تطفأ البراءة على الأقصر من عمرها الإنتاجي أو القانوني في الحالة المعروضة؛ لذا يبلغ الإطفاء السنوي $1,700 ($17,000 ÷ 10 سنوات). ويبلغ مصروف إطفاء سنة الاقتناء $850 [$1,700 × (6 ÷ 12 شهرًا)]، بافتراض إتاحتها للاستخدام في تاريخ الاقتناء. ومن ثم تعرض في 31 ديسمبر بمبلغ $16,150 ($17,000 − $850)."
   },
   {
     "unit": 3,
@@ -2562,7 +2594,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Goodwill is tested for impairment at least annually but is never\namortized for public companies. Trademarks, however, may\nbe amortized but only if they have finite useful lives.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي من الأصول التالية المقتناة خلال السنة بمعاملة تبادل يمكن أن يخضع للإطفاء لدى الشركات العامة؟\nالشهرة | العلامات التجارية",
+    "choicesAr": [
+      "لا | لا",
+      "لا | نعم",
+      "نعم | نعم",
+      "نعم | لا"
+    ],
+    "explanationAr": "تختبر الشهرة للانخفاض في القيمة سنويًا على الأقل ولا تطفأ لدى الشركات العامة وفق النموذج المعروض. أما العلامات التجارية فيمكن أن تخضع للإطفاء إذا كان عمرها الإنتاجي محددًا."
   },
   {
     "unit": 3,
@@ -2579,7 +2619,15 @@
     ],
     "answerIndex": 3,
     "explanation": "U.S. GAAP require that R&D costs be expensed as incurred,\nwhile IFRS separate research costs from development costs.\nUnder IFRS, research costs are to be expensed, while\ndevelopment costs can be capitalized.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية تصف المعالجة العامة لتكاليف البحث والتطوير وفق المعايير الأمريكية والمعايير الدولية IFRS؟",
+    "choicesAr": [
+      "يسمح كلا الإطارين برسملة تكاليف البحث والتطوير عمومًا.",
+      "لا يسمح أي من الإطارين برسملة تكاليف البحث والتطوير.",
+      "تسمح المعايير الأمريكية برسملة البحث والتطوير وتلزم IFRS بإثباتهما مصروفًا.",
+      "تتطلب المعايير الأمريكية إثبات البحث والتطوير مصروفًا عمومًا، وتتطلب IFRS إثبات البحث مصروفًا وتسمح برسملة التطوير المستوفي للشروط."
+    ],
+    "explanationAr": "تقتضي القاعدة العامة للمعايير الأمريكية إثبات تكاليف البحث والتطوير مصروفًا عند تكبدها مع وجود استثناءات محددة. وتفصل IFRS بين البحث والتطوير: تثبت تكاليف البحث مصروفًا، بينما يجب رسملة تكاليف التطوير ابتداءً من تحقق شروط الاعتراف بالأصل غير الملموس."
   },
   {
     "unit": 3,
@@ -2596,7 +2644,15 @@
     ],
     "answerIndex": 0,
     "explanation": "An intangible asset is an identifiable nonmonetary\n(nonfinancial) asset without physical substance. Inventory is a\ntangible asset. Thus, goods on consignment are not intangible\nassets.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي لا يعد أصلًا غير ملموس؟",
+    "choicesAr": [
+      "بضاعة محتفظ بها للبيع بالعمولة.",
+      "براءات الاختراع.",
+      "حقوق النشر.",
+      "العلامات التجارية."
+    ],
+    "explanationAr": "الأصل غير الملموس أصل غير نقدي قابل للتحديد وليس له وجود مادي. والمخزون أصل ملموس؛ ولذلك لا تعد بضاعة الأمانة أصلًا غير ملموس، سواء كانت مملوكة للموكل أو محتفظًا بها لدى الوكيل."
   },
   {
     "unit": 3,
@@ -2613,7 +2669,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Patents may be purchased or developed internally. The initial\ncapitalized cost of a purchased patent is normally the fair\nvalue of the consideration given, that is, its purchase price\nplus incidental costs, such as registration and attorney’s fees.\nInternally developed patents are less likely to be capitalized\nbecause related R&D costs generally are expensed when\nincurred. Thus, only relatively minor costs can be capitalized,\nfor example, patent registration fees and legal fees.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي النفقات التالية تؤهل للرسملة كأصل وفق المعالجة الأمريكية العامة؟",
+    "choicesAr": [
+      "تكلفة المواد المستخدمة في اختبار النموذج الأولي.",
+      "تكاليف اختبار النموذج الأولي وتعديل تصميمه.",
+      "رواتب المهندسين القائمين بتطوير منتج جديد.",
+      "التكاليف القانونية للحصول على براءة اختراع لمنتج جديد."
+    ],
+    "explanationAr": "يمكن شراء البراءة أو تطويرها داخليًا. وتكون تكلفة البراءة المشتراة عادةً قيمة المقابل المدفوع مضافًا إليها التكاليف العرضية اللازمة للاقتناء مثل رسوم التسجيل وأتعاب المحاماة. أما تكاليف البحث والتطوير للبراءات المطورة داخليًا فتثبت عمومًا مصروفًا عند تكبدها، مع مراعاة الاستثناءات. ويمكن رسملة تكاليف مثل رسوم التسجيل والأتعاب القانونية عند تحقق شروط الاعتراف."
   },
   {
     "unit": 3,
@@ -2630,7 +2694,15 @@
     ],
     "answerIndex": 0,
     "explanation": "R&D costs generally are expensed as incurred. However,\nlegal work in connection with patent applications or litigation\nand the sale or licensing of patents are specifically excluded\nfrom the definition of R&D. Hence, the legal costs of filing a\npatent should be capitalized. The patent should be amortized\nover its estimated economic life of 10 years. Amortization for\nthe year equals $1,700 [($34,000 ÷ 10) × (6 ÷ 12)]. Thus, the\nreported amount of the patent at year end equals $32,300\n($34,000 – $1,700).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "خلال السنة المنتهية تكبدت شركة تكاليف بحث وتطوير $136,000 في مختبراتها بشأن براءة اختراع منحت في 1 يوليو. وبلغت تكاليف تسجيلها $34,000. وعمرها القانوني 20 سنة وعمرها الاقتصادي المقدر 10 سنوات. ما صافي مبلغ البراءة بعد مجمع الإطفاء في قائمة المركز المالي في 31 ديسمبر؟",
+    "choicesAr": [
+      "$32,300",
+      "$33,150",
+      "$161,500",
+      "$165,000"
+    ],
+    "explanationAr": "تثبت تكاليف البحث والتطوير عمومًا مصروفًا عند تكبدها وفق المعايير الأمريكية. وتستبعد الأعمال القانونية المتعلقة بطلبات البراءات أو التقاضي وبيع البراءات أو ترخيصها من تعريف البحث والتطوير. لذا ترسمل تكاليف تقديم طلب البراءة المؤهلة. وتطفأ البراءة على عمرها الاقتصادي المقدر 10 سنوات. ويبلغ إطفاء السنة $1,700 [($34,000 ÷ 10) × (6 ÷ 12)]. لذلك تبلغ قيمة البراءة في نهاية السنة $32,300 ($34,000 − $1,700)."
   },
   {
     "unit": 3,
@@ -2647,7 +2719,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The amortization period for an intangible asset distinct from\ngoodwill is the shorter of its useful life or the legal life\nremaining after acquisition.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لبراءة اختراع مشتراة عمر قانوني متبق قدره 15 سنة. كيف تعالج؟",
+    "choicesAr": [
+      "تثبت مصروفًا في سنة الاقتناء.",
+      "تطفأ على مدى 15 سنة بصرف النظر عن عمرها الإنتاجي.",
+      "تطفأ على مدى عمرها الإنتاجي إذا كان أقل من 15 سنة.",
+      "تطفأ على مدى 40 سنة."
+    ],
+    "explanationAr": "فترة إطفاء الأصل غير الملموس ذي العمر المحدد، مثل البراءة في الحالة المعروضة، هي الأقصر من عمره الإنتاجي وعمره القانوني المتبقي بعد الاقتناء، مع مراعاة التجديدات التي تستوفي شروط إدراجها في العمر الإنتاجي."
   },
   {
     "unit": 3,
@@ -2664,7 +2744,15 @@
     ],
     "answerIndex": 1,
     "explanation": "An intangible asset is carried at cost minus any accumulated\namortization and impairment losses, or at a revalued amount.\nThe revaluation model is similar to that for items of PPE (initial\nrecognition of an asset at cost). However, fair value must be\ndetermined based on an active market.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "وفق IFRS، متى يجوز لمنشأة اقتنت أصلًا غير ملموس استخدام نموذج إعادة التقييم للقياس اللاحق؟",
+    "choicesAr": [
+      "عند إمكان تحديد العمر الإنتاجي للأصل بموثوقية.",
+      "عند وجود سوق نشطة للأصل غير الملموس.",
+      "عند إمكان قياس تكلفة الأصل بموثوقية.",
+      "عندما يكون الأصل غير الملموس أصلًا نقديًا."
+    ],
+    "explanationAr": "يعرض الأصل غير الملموس بالتكلفة ناقص مجمع الإطفاء وخسائر الانخفاض، أو بمبلغ إعادة التقييم. ويشبه نموذج إعادة التقييم نموذج العقارات والآلات والمعدات من حيث الاعتراف الأولي بالتكلفة، إلا أنه يجب تحديد القيمة العادلة بالرجوع إلى سوق نشطة."
   },
   {
     "unit": 3,
@@ -2681,7 +2769,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Legal fees incurred in the successful defense of a patent\nshould be capitalized as part of the cost of the patent and then\namortized over its remaining useful life because that useful life\nis finite. Legal fees incurred in an unsuccessful defense\nshould be expensed as the costs are incurred.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "متى ترسمل الأتعاب القانونية التي تتكبدها شركة للدفاع عن حقوق براءة الاختراع وفق المعالجة الأمريكية المفترضة؟\nنتيجة ناجحة | نتيجة غير ناجحة",
+    "choicesAr": [
+      "نعم | نعم",
+      "نعم | لا",
+      "لا | لا",
+      "لا | نعم"
+    ],
+    "explanationAr": "ترسمل الأتعاب القانونية المرتبطة بالدفاع الناجح عن البراءة عند استيفاء شروط الاعتراف وتضاف إلى تكلفتها ثم تطفأ على عمرها الإنتاجي المتبقي المحدد. أما أتعاب الدفاع غير الناجح فتحمل على المصروفات عند تكبدها."
   },
   {
     "unit": 3,
@@ -2715,7 +2811,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Under IFRS, (1) costs incurred during the research phase of\nan internal project are expensed as incurred since the\ncompany cannot demonstrate that an intangible asset exists\nthat will generate probable future economic benefits; and\n(2) costs incurred during the development phase of an internal\nproject can be capitalized and recognized as an intangible\nasset if, and only if, the company can demonstrate all of the\nfollowing:\n1. The technical feasibility to complete the intangible\nasset\n2. Its intention to complete and use or sell the intangible\nasset\n3. Its ability to sell or use the intangible asset\n4. Availability of resources to complete and use or sell\nthe intangible asset\n5. The way in which the asset will generate probable\nfuture economic benefits\n6. Its ability to reliably measure expenditures attributable\nto the asset",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية صحيحة بشأن المقارنة بين المعايير الأمريكية والمعايير الدولية للتقارير المالية (IFRS)؟",
+    "choicesAr": [
+      "تثبت تكاليف التطوير عمومًا مصروفًا وفق المعايير الأمريكية، وترسمل وفق IFRS إذا استوفت شروطًا محددة.",
+      "تثبت تكاليف البحث مصروفًا وفق المعايير الأمريكية وترسمل وفق IFRS إذا استوفت شروطًا محددة.",
+      "يجب إثبات جميع تكاليف البحث والتطوير مصروفًا وفق كلا الإطارين.",
+      "لا ترسمل الشهرة المتولدة داخليًا وفق المعايير الأمريكية، ولكن يجوز رسملتها وفق IFRS."
+    ],
+    "explanationAr": "وفق IFRS: (1) تحمل تكاليف مرحلة البحث في المشروع الداخلي على المصروفات عند تكبدها؛ إذ لا تستطيع الشركة إثبات وجود أصل غير ملموس يحقق منافع اقتصادية مستقبلية محتملة؛ (2) يجب رسملة تكاليف مرحلة التطوير والاعتراف بأصل غير ملموس ابتداءً من إثبات جميع الشروط التالية:\n1. الجدوى الفنية لإكمال الأصل.\n2. نية إكماله واستخدامه أو بيعه.\n3. القدرة على استخدامه أو بيعه.\n4. توافر الموارد اللازمة لإكماله واستخدامه أو بيعه.\n5. كيفية توليده منافع اقتصادية مستقبلية محتملة.\n6. القدرة على قياس النفقات المنسوبة إليه بموثوقية."
   },
   {
     "unit": 3,
@@ -2749,7 +2853,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Amortization is a means of allocating an initial cost to the\nperiods that benefit from that cost. It is similar to depreciation,\na term associated with long-lived tangible assets, and\ndepletion, which is associated with natural resources.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما المقصود بعملية إطفاء الأصول غير الملموسة مثل حقوق النشر وبراءات الاختراع؟",
+    "choicesAr": [
+      "تحديد التدفق النقدي التشغيلي للفترة الحالية.",
+      "التخصيص المنتظم لتكلفة الأصل غير الملموس على فترات استخدامه.",
+      "تجميع أموال لاستبدال الأصل في نهاية عمره الإنتاجي.",
+      "العكس المنتظم لتغير مستويات الأسعار العامة خلال الفترة."
+    ],
+    "explanationAr": "الإطفاء وسيلة لتخصيص التكلفة القابلة للإطفاء على الفترات المستفيدة منها. ويشبه الإهلاك المرتبط بالأصول الملموسة طويلة الأجل والاستنفاد المرتبط بالموارد الطبيعية."
   },
   {
     "unit": 3,
@@ -2766,7 +2878,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Internally developed intangibles other than goodwill are most\noften initially recorded at the amount of the incidental costs\nonly. Thus, cost of patent registration is capitalized as patent\ncost and reported in the financial statements as an intangible\nasset.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي أنواع الأصول التالية يعرض عادةً في قائمة المركز المالي كأصل غير ملموس وفق المعالجة الأمريكية العامة؟",
+    "choicesAr": [
+      "الأوراق المالية المشتقة.",
+      "تكاليف البحث والتطوير.",
+      "تحسينات العقارات المستأجرة.",
+      "تكاليف تسجيل براءات الاختراع."
+    ],
+    "explanationAr": "تسجل الأصول غير الملموسة المطورة داخليًا بخلاف الشهرة، وفق المعالجة الأمريكية العامة المعروضة، عادةً بتكاليفها العرضية المؤهلة فقط. لذلك ترسمل تكلفة تسجيل البراءة باعتبارها جزءًا من تكلفتها وتعرض في القوائم المالية كأصل غير ملموس عند تحقق شروط الاعتراف."
   },
   {
     "unit": 3,
@@ -2817,7 +2937,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The legal costs associated with the successful litigation of a\npatent defense are capitalized because they benefit future\nperiods, while unsuccessful litigation costs must be expensed\nas incurred. Thus, only the $100,000 of legal costs associated\nwith unsuccessful outcomes are expensed in Year 3.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في السنة 3 تكبدت شركة تكاليف قانونية $500,000 للدفاع عن عدة براءات. ويشمل المبلغ $400,000 مرتبطًا بنتائج ناجحة و$100,000 بنتائج غير ناجحة. ما مبلغ التكاليف القانونية الذي ينبغي إثباته مصروفًا للسنة 3؟",
+    "choicesAr": [
+      "$500,000",
+      "$400,000",
+      "$100,000",
+      "$0"
+    ],
+    "explanationAr": "ترسمل تكاليف الدفاع القانوني الناجح عن البراءات عند استيفاء شروط الاعتراف وفق المعالجة الأمريكية المعروضة، لأنها تحقق منافع مستقبلية. أما تكاليف الدفاع غير الناجح فتحمل على المصروفات عند تكبدها. لذلك تحمل التكاليف البالغة $100,000 المرتبطة بالنتائج غير الناجحة على مصروفات السنة 3، بخلاف أي إطفاء أو انخفاض في القيمة قد يلزم إثباته منفصلًا."
   },
   {
     "unit": 3,
@@ -2834,7 +2962,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The accounting treatment of the costs of the legal defense of a\npatent depends on the outcome of the litigation. The costs of\nsuccessful litigation are capitalized because they will benefit\nfuture periods. The costs of unsuccessful litigation are\nexpended as incurred.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تكبدت Bay أتعابًا قانونية للدفاع عن حقوق براءتها. متى ترسمل هذه الأتعاب وفق المعالجة الأمريكية المفترضة؟\nنتيجة ناجحة | نتيجة غير ناجحة",
+    "choicesAr": [
+      "نعم | نعم",
+      "نعم | لا",
+      "لا | لا",
+      "لا | نعم"
+    ],
+    "explanationAr": "تتوقف معالجة تكاليف الدفاع القانوني عن البراءة على نتيجة التقاضي في السياق المعروض. وترسمل تكاليف التقاضي الناجح عند تحقق شروط الاعتراف لأنها تحقق منافع للفترات المستقبلية. أما تكاليف التقاضي غير الناجح فتحمل على المصروفات عند تكبدها."
   },
   {
     "unit": 3,
@@ -2851,6 +2987,14 @@
     ],
     "answerIndex": 3,
     "explanation": "Research and development (R&D) costs must be expensed as\nincurred. Activities typically characterized as R&D include the\ndesign, construction, and testing of preproduction prototypes\nand models. Accordingly, the company will expense the entire\nR&D costs of $1,100,000 ($1,000,000 + $100,000) incurred in\nrespect to the prototype.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تكبد قسم البحث بشركة $1,000,000 تكاليف مواد وأجور وتكاليف غير مباشرة لإنشاء نموذج أولي لمنتج جديد، و$100,000 لاختباره وتعديله. أي العبارات التالية تصف المعالجة الصحيحة لتكاليف النموذج وفق المعالجة الأمريكية العامة؟",
+    "choicesAr": [
+      "رسملة $1,100,000 وإطفاؤها على عمر المبيعات المتوقع للمنتج.",
+      "رسملة $1,100,000 وإطفاؤها على عمر النموذج.",
+      "رسملة $1,000,000 وإطفاؤها على عمر النموذج وإثبات $100,000 مصروفًا عند تكبدها.",
+      "إثبات $1,100,000 مصروفًا عند تكبدها."
+    ],
+    "explanationAr": "تحمل تكاليف البحث والتطوير عمومًا على المصروفات عند تكبدها وفق المعايير الأمريكية، بافتراض عدم انطباق استثناء. ومن أنشطته تصميم وإنشاء واختبار النماذج الأولية قبل الإنتاج. وعليه تحمل الشركة كامل تكاليف البحث والتطوير المرتبطة بالنموذج الأولي البالغة $1,100,000 ($1,000,000 + $100,000) على المصروفات."
   }
 ]
