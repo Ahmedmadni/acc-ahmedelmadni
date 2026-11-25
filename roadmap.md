@@ -93,3 +93,5 @@
 - [x] Unit 1 resumed Wave 4: completed initial cash flow review (§5 Q64–69); translated Q67–69, held Q64–66, **177/217 (81.6%)**. Section 5: 60/69 translated, nine held; Section 6 next. See `docs/CMA_UNIT1_ARABIC_RESUME_WAVE4_2026-11-25.md`.
 
 - [x] Unit 1 resumed Wave 5: eight consolidation and goodwill Arabic drafts (§6 Q1–5/Q7–8/Q10); **185/217 (85.3%)**. Q6 incomplete VIE control criteria; Q9 equity consideration assumption held. Continue Q11. See `docs/CMA_UNIT1_ARABIC_RESUME_WAVE5_2026-11-25.md`.
+
+- [x] Unit 1 resumed Wave 6: eight consolidation Arabic drafts (§6 Q11–12/Q14–18/Q20); **193/217 (88.9%)**. Q13 source amount discrepancy, Q19 missing parent liabilities and control assumptions held. Continue §6 Q21. See `docs/CMA_UNIT1_ARABIC_RESUME_WAVE6_2026-11-25.md`.
