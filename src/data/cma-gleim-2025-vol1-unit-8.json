@@ -14,7 +14,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Cost of goods sold is based on the manufacturing costs\nincurred in production but does not include selling or general\nand administrative expenses. Manufacturing costs equal\n$38,500 [$13,700 DM + $4,800 DL + (800 hours × $25) OH].\nThus, per-unit cost is $5.50 ($38,500 ÷ 7,000 units).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تصنع شركة قمصانًا متخصصة باستخدام نظام تكاليف الأوامر. وخلال مارس تكبدت التكاليف التالية لإكمال الأمر ICU2: مواد مباشرة $13,700؛ أجور مباشرة $4,800؛ مصروفات إدارية $1,400؛ مصروفات بيع $5,600. وتحمل التكاليف الصناعية غير المباشرة بمعدل $25 لكل ساعة تشغيل آلة، واستلزم الأمر ICU2 عدد 800 ساعة تشغيل. إذا أسفر الأمر ICU2 عن 7,000 قميص سليم، فما تكلفة المبيعات لكل وحدة؟",
+    "choicesAr": [
+      "$6.50",
+      "$6.30",
+      "$5.70",
+      "$5.50"
+    ],
+    "explanationAr": "تستند تكلفة المبيعات إلى تكاليف التصنيع دون مصروفات البيع والإدارة العامة. وتبلغ تكاليف التصنيع $38,500 [$13,700 مواد مباشرة + $4,800 أجور مباشرة + (800 ساعة × $25) تكاليف غير مباشرة]. ومن ثم تبلغ تكلفة الوحدة $5.50 ($38,500 ÷ 7,000 وحدة)."
   },
   {
     "unit": 8,
@@ -65,7 +73,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Job-order costs are used in determining the costs of a\nspecific, clearly identifiable job or project. In contrast, process\ncosting averages the costs of all production.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في أي الأغراض التالية تكون تكاليف الأوامر أكثر فائدة؟",
+    "choicesAr": [
+      "تحديد قيمة المخزون بطريقة الوارد أخيرًا صادر أولًا.",
+      "تقدير التكاليف غير المباشرة الداخلة في أسعار التحويل.",
+      "الرقابة على التكاليف غير المباشرة للإنتاج المستقبلي.",
+      "تحديد تكلفة مشروع معين."
+    ],
+    "explanationAr": "تستخدم تكاليف الأوامر لتحديد تكلفة أمر أو مشروع محدد يمكن تمييزه بوضوح. أما تكاليف المراحل فتحدد متوسط تكلفة الإنتاج."
   },
   {
     "unit": 8,
@@ -82,7 +98,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Spoiled goods are defective items that cannot be feasibly\nreworked. Traditional cost accounting systems distinguish\nbetween normal and abnormal spoilage because, in some\noperations, a degree of spoilage is viewed as inevitable.\nNormal spoilage occurs under normal, efficient operating\nconditions. It is spoilage that is uncontrollable in the short run\nand therefore should be expressed as a function of good\noutput (treated as a product cost). Accordingly, normal\nspoilage is assigned to all good units in process costing\nsystems, that is, all units that have passed the inspection point\nat which the spoilage was detected. If normal spoilage is\nattributable to a specific job, only the disposal value of the\nnormally spoiled goods is removed from work-in-process,\nthereby assigning the cost of normal spoilage to the good\nunits remaining in the specific job. Abnormal spoilage is not\nexpected to occur under normal, efficient operating conditions.\nThe cost of abnormal spoilage should be separately identified\nand reported. Abnormal spoilage is typically treated as a\nperiod cost (a loss) because it is unusual.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بالمقارنة مع التالف الطبيعي، فإن التالف غير الطبيعي:",
+    "choicesAr": [
+      "ينشأ بصورة أكثر تكرارًا من عوامل ملازمة لعملية التصنيع.",
+      "يعالج محاسبيًا بالطريقة نفسها التي يعالج بها التالف الطبيعي.",
+      "يعد عمومًا أكثر خضوعًا لرقابة إدارة الإنتاج من التالف الطبيعي.",
+      "لا يتأثر عادة بصرامة معايير الإنتاج."
+    ],
+    "explanationAr": "التالف وحدات معيبة لا يمكن إعادة تشغيلها بصورة مجدية اقتصاديًا. وتميز نظم التكاليف التقليدية بين التالف الطبيعي وغير الطبيعي لأن بعض العمليات ينشأ عنها قدر من التالف يصعب تجنبه. يحدث التالف الطبيعي في ظروف التشغيل العادية الكفؤة، ويعد غير قابل للرقابة في الأجل القصير، ولذلك يقاس نسبةً إلى الإنتاج السليم ويعامل كتكلفة منتج. وفي تكاليف المراحل يحمل على الوحدات السليمة التي تجاوزت نقطة الفحص التي اكتشف عندها. وإذا تعلق التالف الطبيعي بأمر معين، تخصم قيمة التصرف في الوحدات التالفة من الإنتاج تحت التشغيل، وتتحمل الوحدات السليمة المتبقية في الأمر صافي تكلفة التالف. أما التالف غير الطبيعي فلا يتوقع حدوثه في ظروف التشغيل العادية الكفؤة، وتحدد تكلفته ويبلغ عنها بصورة منفصلة، وتعالج عادة كخسارة في الفترة."
   },
   {
     "unit": 8,
@@ -99,7 +123,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Cost of goods sold is based on the manufacturing costs\nincurred in production. It does not include selling or general\nand administrative expenses. Manufacturing costs consist of\ndirect materials, $27,400; direct labor, $9,600; and overhead,\n$20,000 (400 direct labor hours × $50 per hour). The total of\nthese three cost elements is $57,000. Dividing the $57,000 of\ntotal manufacturing costs by the 4,000 units produced results\nin a per-unit cost of $14.25.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تصنع شركة فساتين متخصصة باستخدام نظام تكاليف الأوامر. وخلال يناير تكبدت التكاليف التالية لإكمال الأمر J-1:\nالمواد المباشرة | $27,400\nالأجور المباشرة | 9,600\nالمصروفات الإدارية | 2,800\nمصروفات البيع | 11,200\nتحمل التكاليف الصناعية غير المباشرة بمعدل $50 لكل ساعة عمل مباشر، واستلزم الأمر J-1 عدد 400 ساعة عمل مباشر. وإذا نتج عن الأمر J-1 عدد 4,000 فستان سليم، فما تكلفة المبيعات للوحدة؟",
+    "choicesAr": [
+      "$9.25",
+      "$14.25",
+      "$14.95",
+      "$17.75"
+    ],
+    "explanationAr": "تستند تكلفة المبيعات إلى تكاليف التصنيع المتكبدة ولا تشمل مصروفات البيع أو الإدارة العامة. وتشمل تكاليف التصنيع المواد المباشرة $27,400، والأجور المباشرة $9,600، والتكاليف الصناعية غير المباشرة $20,000 (400 ساعة عمل مباشر × $50 للساعة). ويبلغ مجموعها $57,000. وبقسمة $57,000 على 4,000 وحدة منتجة تبلغ تكلفة الوحدة $14.25."
   },
   {
     "unit": 8,
@@ -133,7 +165,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Under job-order costing, abnormal spoilage is not treated as a\nmanufacturing cost, therefore unit manufacturing cost is\nunaffected. Abnormal spoilage is a period cost. The difference\nbetween the disposal value of the spoiled goods and the value\nof the goods in work-in-process control must be recognized as\na loss, which will decrease operating income.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تكبدت شركة تتبع السنة الميلادية تالفًا قدره $17,000 خلال أبريل صنفته إدارة الإنتاج تالفًا غير طبيعي. وحدث التالف في الأمر رقم 532 الذي بيع بعد 3 أشهر مقابل $459,000. أي مما يلي يصف أثر التالف على تكلفة تصنيع الوحدة من الأمر رقم 532 وعلى الدخل التشغيلي للسنة؟\nتكلفة تصنيع الوحدة | الدخل التشغيلي",
+    "choicesAr": [
+      "زيادة | دون أثر",
+      "زيادة | انخفاض",
+      "دون أثر | انخفاض",
+      "دون أثر | معلومات غير كافية للحكم"
+    ],
+    "explanationAr": "وفق تكاليف الأوامر لا يحمل التالف غير الطبيعي على تكلفة تصنيع الوحدات السليمة، ولذلك لا تتأثر تكلفة تصنيع الوحدة. ويعامل التالف غير الطبيعي كتكلفة فترة، ويثبت الفرق بين قيمة التصرف في الوحدات التالفة وقيمتها في حساب مراقبة الإنتاج تحت التشغيل كخسارة تخفض الدخل التشغيلي."
   },
   {
     "unit": 8,
@@ -150,7 +190,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Job-order costing applies to accumulating costs by specific\njob. This method is appropriate when producing products with\nindividual characteristics or when identifiable groupings are\npossible. Units (jobs) should be dissimilar enough to warrant\nthe special recordkeeping required by job-order costing.\nProducts are usually custom-made for a specific customer.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تعمل شركة تصنيع أجهزة متخصصة على إنشاء نظام للتكاليف. وتنتج آلات فريدة ومتميزة عند تلقي طلبات الشراء من العملاء. ورغم احتفاظها بمخزون من بعض الأجزاء والتجميعات المشتركة، فإنها لا تحتفظ بمخزون إنتاج تام لأن كل طلب يتعلق بجهاز مصمم حسب احتياجات العميل. ما نظام تجميع التكاليف الأنسب؟",
+    "choicesAr": [
+      "التكاليف بالتحميل العكسي.",
+      "التكاليف على مستوى الدفعة.",
+      "تكاليف الأوامر.",
+      "تكاليف المراحل."
+    ],
+    "explanationAr": "يجمع نظام تكاليف الأوامر التكاليف لكل أمر محدد. ويناسب إنتاج منتجات ذات خصائص فردية أو مجموعات يمكن تمييزها. وينبغي أن تكون الأوامر مختلفة بما يكفي لتبرير السجلات الخاصة بهذا النظام. وعادة تصنع المنتجات وفق طلب عميل محدد."
   },
   {
     "unit": 8,
@@ -167,7 +215,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Abnormal spoilage is not expected to occur under normal,\nefficient operating conditions. The cost of abnormal spoilage\nshould be separately identified and reported to management.\nAbnormal spoilage is typically treated as a period cost and\nwritten off as a loss because of its unusual nature.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أثناء تصنيع منتجها الوحيد اكتشفت شركة أن انقطاعًا غير معتاد للكهرباء أثناء الليل أتلف إنتاج يوم كامل تحت التشغيل. كيف تعالج تكلفة الوحدات التالفة؟",
+    "choicesAr": [
+      "تضاف إلى تكلفة الوحدات السليمة المنتجة مستقبلًا.",
+      "تشطب كخسارة.",
+      "تضاف إلى تكلفة إنتاج اليوم التالي.",
+      "تضاف إلى التكاليف الصناعية غير المباشرة العامة."
+    ],
+    "explanationAr": "لا يتوقع حدوث التالف غير الطبيعي في ظروف التشغيل العادية الكفؤة. وتحدد تكلفته منفصلة ويبلغ عنها للإدارة. ويعامل عادة كتكلفة فترة ويثبت خسارة بسبب طبيعته غير المعتادة."
   },
   {
     "unit": 8,
@@ -184,7 +240,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Output that does not meet the quality for salability is\nconsidered spoilage. The numbers that do not pass final\ninspection but that are considered acceptable as a part of\nefficient production are considered normal spoilage. The\naccounting treatment is to include normal spoilage as a\nproduct cost.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تصنع شركة منتجًا واحدًا. وأثناء التصنيع لا يجتاز عدد صغير من الوحدات الفحص النهائي فيتلف. ما المعالجة المناسبة لتكلفة هذه الوحدات بافتراض أنها ضمن التالف الطبيعي؟",
+    "choicesAr": [
+      "تضاف إلى تكلفة الوحدات السليمة المنتجة.",
+      "تتجاهل لعدم أهميتها النسبية.",
+      "تحمل على المصروفات عند تكبدها.",
+      "تضاف إلى تكاليف الضمان."
+    ],
+    "explanationAr": "يعد الإنتاج غير المستوفي لشروط الجودة اللازمة للبيع تالفًا. وتعد الوحدات التي لا تجتاز الفحص النهائي ضمن المستوى المقبول في الإنتاج الكفء تالفًا طبيعيًا. وتحمل تكلفته على المنتج."
   },
   {
     "unit": 8,
@@ -235,7 +299,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Actual costing is the recording of product costs based on the\nactual (1) cost of materials, (2) cost of labor, and (3) overhead\nincurred. Actual overhead costs incurred were given as\n$240,000. Thus, the amount of manufacturing overhead costs\nallocated to jobs under actual costing is $240,000.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم شركة صناعية ساعات تشغيل الآلات أساسًا وحيدًا لتخصيص التكاليف الصناعية غير المباشرة. وتظهر السجلات المعلومات التالية:\nالبند | المقدر | الفعلي\nالتكاليف الصناعية غير المباشرة | $200,000 | $240,000\nساعات تشغيل الآلات | 40,000 | 50,000\nباستخدام التكاليف الفعلية، ما مبلغ التكاليف الصناعية غير المباشرة المخصص للأوامر؟",
+    "choicesAr": [
+      "$300,000",
+      "$250,000",
+      "$240,000",
+      "$200,000"
+    ],
+    "explanationAr": "تسجل التكاليف الفعلية تكلفة المنتج استنادًا إلى (1) تكلفة المواد الفعلية، و(2) تكلفة الأجور الفعلية، و(3) التكاليف الصناعية غير المباشرة الفعلية. وقد بلغت التكاليف الصناعية غير المباشرة المتكبدة فعليًا $240,000. ولذلك يبلغ المبلغ المخصص للأوامر وفق التكاليف الفعلية $240,000."
   },
   {
     "unit": 8,
@@ -252,7 +324,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Total manufacturing cost of $2,500,000 is composed of raw\nmaterials, direct labor, and factory overhead. Factory\noverhead is 30% of total manufacturing costs, or $750,000. If\nfactory overhead is 80% of direct labor cost, direct labor cost\nis $937,500 ($750,000 ÷ 80%).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم شركة Farber نظام التكاليف العادية. وفيما يلي بيانات سجلاتها المالية للسنة:\nإجمالي تكاليف التصنيع $2,500,000.\nتكلفة الإنتاج التام $2,425,000.\nالتكاليف الصناعية غير المباشرة المحملة 30% من إجمالي تكاليف التصنيع.\nتحمل التكاليف الصناعية غير المباشرة بمعدل 80% من تكلفة الأجور المباشرة.\nمخزون الإنتاج تحت التشغيل في 1 يناير يساوي 75% من مخزون الإنتاج تحت التشغيل في 31 ديسمبر.\nما إجمالي تكلفة الأجور المباشرة للسنة؟",
+    "choicesAr": [
+      "$750,000",
+      "$600,000",
+      "$909,375",
+      "$937,500"
+    ],
+    "explanationAr": "يتكون إجمالي تكاليف التصنيع البالغ $2,500,000 من المواد والأجور المباشرة والتكاليف الصناعية غير المباشرة. وتمثل التكاليف الصناعية غير المباشرة 30% من إجمالي تكاليف التصنيع، أي $750,000. وإذا كانت هذه التكاليف تساوي 80% من تكلفة الأجور المباشرة، فإن تكلفة الأجور المباشرة تبلغ $937,500 ($750,000 ÷ 80%)."
   },
   {
     "unit": 8,
@@ -269,7 +349,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Waste is the amount of raw materials left over from a\nproduction process or production cycle for which there is no\nfurther use. Waste is usually not salable at any price and must\nbe discarded.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما اسم الكمية المتبقية من المواد الخام بعد عملية إنتاج أو دورة إنتاج، والتي لا استخدام آخر لها؟",
+    "choicesAr": [
+      "الخردة.",
+      "التالف غير الطبيعي.",
+      "الفاقد.",
+      "التالف الطبيعي."
+    ],
+    "explanationAr": "الفاقد هو الكمية المتبقية من المواد الخام بعد عملية الإنتاج أو دورته والتي لا استخدام آخر لها. وعادة لا يمكن بيعه بأي سعر ويجب التخلص منه."
   },
   {
     "unit": 8,
@@ -286,7 +374,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Abnormal spoilage is usually charged to a special loss\naccount because it is not expected to occur under normal,\nefficient operating conditions. Because it is unusual, it should\nbe separately reported as a period cost.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "إلى أي حساب تحمل عادة تكلفة التالف غير الطبيعي؟",
+    "choicesAr": [
+      "المخزون.",
+      "حساب انحراف المواد.",
+      "التكاليف الصناعية غير المباشرة.",
+      "حساب خسائر مستقل."
+    ],
+    "explanationAr": "تحمل تكلفة التالف غير الطبيعي عادة على حساب خسائر مستقل لأنه لا يتوقع حدوثه في ظروف التشغيل العادية الكفؤة. ونظرًا إلى طبيعته غير المعتادة ينبغي إظهاره منفصلًا بوصفه تكلفة فترة."
   },
   {
     "unit": 8,
@@ -303,7 +399,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Abnormal spoilage is spoilage that is not expected to occur\nunder normal, efficient operation conditions.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ماذا يسمى التالف الذي لا يتوقع حدوثه في ظروف التشغيل العادية الكفؤة؟",
+    "choicesAr": [
+      "التالف غير الطبيعي.",
+      "التالف الفعلي.",
+      "التالف الطبيعي.",
+      "التالف المتبقي."
+    ],
+    "explanationAr": "التالف غير الطبيعي هو التالف الذي لا يتوقع حدوثه في ظروف التشغيل العادية الكفؤة."
   },
   {
     "unit": 8,
@@ -320,7 +424,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Rejected units that are discarded are classified as spoilage.\nSpoilage is separated into abnormal or normal spoilage.\nNormal spoilage is an inherent result of the normal production\nprocess. Abnormal spoilage is spoilage that is not expected to\noccur under normal, efficient operating conditions.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تصنع شركة مكبرات صوت لمصنعي السيارات. ويرفض مصنعو السيارات نحو 3% من المكبرات المستلمة لعدم مطابقتها للجودة المطلوبة. وتفحص الشركة الوحدات المرفوضة لتحديد ما يمكن إصلاحه وإعادة تشغيله وما يجب التخلص منه. كيف تصنف مكبرات الصوت التي يتخلص منها؟",
+    "choicesAr": [
+      "فاقد.",
+      "خردة.",
+      "تالف.",
+      "تكاليف إعادة التشغيل."
+    ],
+    "explanationAr": "تصنف الوحدات المرفوضة التي يتخلص منها كتالف. ويقسم التالف إلى طبيعي وغير طبيعي. فالتالف الطبيعي نتيجة ملازمة لعملية الإنتاج العادية، أما التالف غير الطبيعي فلا يتوقع حدوثه في ظروف التشغيل العادية الكفؤة."
   },
   {
     "unit": 8,
@@ -337,7 +449,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Abnormal spoilage is spoilage that is not expected to occur\nunder normal, efficient operating conditions. The cost of\nabnormal spoilage should be separately identified and\nreported to management. Abnormal spoilage is typically\ntreated as a period cost (a loss) because of its unusual nature.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية تصف التالف غير الطبيعي؟",
+    "choicesAr": [
+      "لا يمكن حدوثه عند استخدام المعايير المثالية.",
+      "لا يخضع عادة لرقابة مشرف الإنتاج.",
+      "ينتج عن معايير إنتاج غير واقعية.",
+      "لا يتوقع حدوثه في ظروف التشغيل الكفؤة."
+    ],
+    "explanationAr": "التالف غير الطبيعي هو التالف الذي لا يتوقع حدوثه في ظروف التشغيل العادية الكفؤة. وتحدد تكلفته منفصلة ويبلغ عنها للإدارة. ويعامل عادة كتكلفة فترة (خسارة) بسبب طبيعته غير المعتادة."
   },
   {
     "unit": 8,
@@ -354,7 +474,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Cost of goods manufactured ($2,425,000) equals total\nmanufacturing costs ($2,500,000) plus beginning work-in-\nprocess (75% of EWIP) minus ending work-in-process. The\nending work-in-process is $300,000.\n$2,500,000 + .75 EWIP – EWIP = $2,425,000\n$2,500,000 – .25 EWIP = $2,425,000\nEWIP = $75,000 ÷ .25\nEWIP = $300,000",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم شركة Farber نظام التكاليف العادية. وفيما يلي بيانات سجلاتها المالية للسنة:\nإجمالي تكاليف التصنيع $2,500,000.\nتكلفة الإنتاج التام $2,425,000.\nالتكاليف الصناعية غير المباشرة المحملة 30% من إجمالي تكاليف التصنيع.\nتحمل التكاليف الصناعية غير المباشرة بمعدل 80% من تكلفة الأجور المباشرة.\nمخزون الإنتاج تحت التشغيل في 1 يناير يساوي 75% من مخزون الإنتاج تحت التشغيل في 31 ديسمبر.\nما القيمة الدفترية لمخزون الإنتاج تحت التشغيل في 31 ديسمبر؟",
+    "choicesAr": [
+      "$300,000.",
+      "$225,000.",
+      "$100,000.",
+      "$75,000."
+    ],
+    "explanationAr": "تساوي تكلفة الإنتاج التام ($2,425,000) إجمالي تكاليف التصنيع ($2,500,000) مضافًا إليه مخزون الإنتاج تحت التشغيل أول المدة (75% من EWIP، أي مخزون آخر المدة) مطروحًا منه مخزون آخر المدة. ويبلغ مخزون آخر المدة $300,000.\n$2,500,000 + .75 EWIP − EWIP = $2,425,000\n$2,500,000 − .25 EWIP = $2,425,000\nEWIP = $75,000 ÷ .25\nEWIP = $300,000."
   },
   {
     "unit": 8,
