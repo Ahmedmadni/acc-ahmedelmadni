@@ -79,3 +79,7 @@
 - [x] Unit 20 Wave 6: 9 exploratory, time-series and mining Arabic drafts (§2 Q47–52/Q54/Q57/Q59); **54/90 (60%)**, all 90 reviewed, 36 held, zero unreviewed. See `docs/CMA_UNIT20_ARABIC_WAVE6_2026-11-25.md`.
 - [x] Unit 20 bilingual review ledger: 36 page-specific reasons in library and ExamPrep, including three duplicates, two missing charts and one inferred key. See `docs/CMA_UNIT20_SOURCE_REVIEW_2026-11-25.md`.
 - [ ] Revisit governance holds with official statutory scope and original-page checks; continue §2 Q17–65.
+
+- [x] Audit all 20 imported Part 1 units: 1301/2443 complete static Arabic records; add CI coverage regression check. See `docs/CMA_PART1_SOURCE_COVERAGE_2026-11-25.md`.
+- [ ] Resume Volume 1 localization: review remaining Unit 1 English-only records, then Units 2–10; preserve keys, check duplicates across both volumes and quarantine source ambiguities.
+- [ ] Resolve review holds against authorized original pages; distinguish Arabic drafts from verified translations and scored eligibility.
