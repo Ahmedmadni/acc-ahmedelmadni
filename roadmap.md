@@ -127,3 +127,5 @@
 - [x] Unit 7 Wave 1: cost terminology and behavior initial review complete (55/60; five held). Unit 7 55/131 (42.0%), 71 unreviewed. See `docs/CMA_UNIT7_ARABIC_WAVE1_2026-11-25.md`. Continue §3 costing techniques.
 
 - [x] Unit 7 Wave 2: 28 new drafts; §3 7/9 initially reviewed and §4 Q1–23 21/23 initially reviewed. Unit 7 83/131 (63.4%), nine held, 39 unreviewed. Continue §4 Q24. See `docs/CMA_UNIT7_ARABIC_WAVE2_2026-11-25.md`.
+
+- [x] Unit 7 Wave 3: 32 additional Arabic drafts, seven holds; initial review complete 115/131 (87.8%), 16 held, zero unreviewed. See `docs/CMA_UNIT7_ARABIC_WAVE3_2026-11-25.md`. Continue Unit 8 after CI.
