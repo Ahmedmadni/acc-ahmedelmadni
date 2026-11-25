@@ -1492,7 +1492,15 @@
     ],
     "answerIndex": 0,
     "explanation": "A standard-cost system records the product at standard\n(predetermined) costs and compares expected with actual\ncost. This comparison allows deviations (variances) from\nexpected results to be identified and investigated. A standard-\ncost system can be used in job-order, process-costing, and\nactivity-based systems to isolate variances.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في أي من أنظمة التكاليف التالية يمكن استخدام نظام التكاليف المعيارية؟\nتكاليف المراحل | تكاليف الأوامر | التكاليف على أساس الأنشطة",
+    "choicesAr": [
+      "نعم | نعم | نعم",
+      "نعم | لا | نعم",
+      "لا | نعم | لا",
+      "لا | لا | لا"
+    ],
+    "explanationAr": "يسجل نظام التكاليف المعيارية تكلفة المنتج وفق تكاليف محددة مسبقًا، ويقارن التكلفة المتوقعة بالفعلية لتحديد الانحرافات والتحقيق فيها. ويمكن استخدام التكاليف المعيارية مع أنظمة الأوامر والمراحل والتكاليف على أساس الأنشطة لعزل الانحرافات."
   },
   {
     "unit": 7,
@@ -1509,7 +1517,15 @@
     ],
     "answerIndex": 1,
     "explanation": "An activity-based costing (ABC) system identifies the causal\nrelationship between the incurrence of cost and the underlying\nactivities that cause those costs. Under an ABC system, costs\nare applied to products on the basis of resources consumed\n(drivers).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما النظام المحاسبي الذي يجمع البيانات المالية والتشغيلية على أساس طبيعة محركات التكلفة الأساسية ومداها؟",
+    "choicesAr": [
+      "التكاليف المباشرة.",
+      "التكاليف على أساس الأنشطة.",
+      "التكاليف على أساس زمن الدورة.",
+      "التكاليف المتغيرة."
+    ],
+    "explanationAr": "يحدد نظام التكاليف على أساس الأنشطة (ABC) العلاقة السببية بين تكبد التكاليف والأنشطة التي تؤدي إليها. وتحمل التكاليف على المنتجات وفق استهلاك الموارد والأنشطة باستخدام محركات تكلفة مناسبة."
   },
   {
     "unit": 7,
@@ -1526,7 +1542,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Like products that are mass produced should be accounted for\nusing process costing techniques to assign costs to products.\nCosts are accumulated by departments or cost centers rather\nthan by jobs, work-in-process is stated in terms of equivalent\nunits, and unit costs are established on a departmental basis.\nProcess costing is an averaging process that calculates the\naverage cost of all units.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الأساليب التالية تستخدمه على الأرجح الشركات التي تنتج منتجات متجانسة أساسًا لحساب متوسط التكاليف وتزويد الإدارة ببيانات تكلفة الوحدة؟",
+    "choicesAr": [
+      "تكاليف الأوامر.",
+      "التكاليف المباشرة.",
+      "التكاليف الكلية.",
+      "تكاليف المراحل."
+    ],
+    "explanationAr": "تناسب تكاليف المراحل الإنتاج الكمي لمنتجات متشابهة. وتتراكم التكاليف حسب الأقسام أو مراكز التكلفة لا حسب الأوامر، ويقاس الإنتاج تحت التشغيل بالوحدات المكافئة، وتحدد تكلفة الوحدة على مستوى القسم. ويحسب النظام متوسط تكلفة الوحدات."
   },
   {
     "unit": 7,
@@ -1560,7 +1584,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Setting standards at an ideal level can motivate employees.\nHowever, if the standards are too high, employees may be\ndiscouraged. If the standards are too low, employees may not\nbe competitive. Setting the correct level of standards is\ndifficult, but it can motivate employees when done correctly.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي أقل احتمالًا أن يكون سببًا لتبني نظام التكاليف المعيارية؟",
+    "choicesAr": [
+      "وضع معايير مثالية يمكن أن يحفز الموظفين.",
+      "يحدد النظام مستوى التكاليف الذي ينبغي تحقيقه والمسؤول عنها.",
+      "يميل استخدام التكاليف المعيارية إلى تبسيط مسك السجلات.",
+      "تقل تكلفة استخدام التكاليف المعيارية مقارنة بالتكاليف الفعلية."
+    ],
+    "explanationAr": "قد تحفز المعايير الموظفين إذا كانت صعبة ولكن قابلة للتحقيق. أما المعايير المثالية التي لا تسمح بالفاقد أو التوقف الطبيعي فقد تثبطهم لصعوبة بلوغها، في حين أن المعايير السهلة جدًا لا تحفز تحسين الأداء. لذلك يمثل اختيار مستوى مناسب للمعايير تحديًا."
   },
   {
     "unit": 7,
@@ -1577,7 +1609,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Variance analysis enables management by exception, the\npractice of giving attention primarily to significant deviations\nfrom expectations, whether favorable or unfavorable.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "على ماذا تتيح الإدارة بالاستثناء للمديرين تركيز اهتمامهم؟",
+    "choicesAr": [
+      "المجالات الأكثر انحرافًا عن التوقعات.",
+      "التكاليف والإيرادات غير الإدارية.",
+      "الانحرافات غير الملائمة فقط.",
+      "التكاليف والإيرادات المتغيرة."
+    ],
+    "explanationAr": "يتيح تحليل الانحرافات تطبيق الإدارة بالاستثناء، أي تركيز الاهتمام على الانحرافات الجوهرية عن النتائج المتوقعة، سواء كانت ملائمة أم غير ملائمة."
   },
   {
     "unit": 7,
@@ -1594,7 +1634,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Job-order costing is appropriate when producing products with\nindividual characteristics or when identifiable groupings are\npossible. Costs are attached to specific “jobs.” Each job will\nresult in a single, identifiable end product.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تبيع شركة مواد إعلانية متخصصة تصمم وتصنع وفق احتياجات كل عميل. وتبرز اسم شركة العميل، الذي يوزعها على عملائه للترويج. ما نظام تجميع التكاليف الأنسب؟",
+    "choicesAr": [
+      "التكاليف الفعلية.",
+      "تكاليف الأوامر.",
+      "تكاليف دورة الحياة.",
+      "تكاليف المراحل."
+    ],
+    "explanationAr": "يناسب نظام تكاليف الأوامر المنتجات ذات الخصائص الفردية أو المجموعات التي يمكن تحديدها وتتبع تكاليفها. وترتبط التكاليف بأوامر محددة، ويؤدي كل أمر إلى منتج أو دفعة منتجات يمكن تحديدها."
   },
   {
     "unit": 7,
@@ -1611,7 +1659,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A cost accounting system has numerous objectives, including\nproduct costing, assessing departmental efficiency, inventory\nvaluation, income determination, and planning, evaluating,\nand controlling operations. Determining sales commissions is\nnot an objective of a cost accounting system because such\ncommissions are based on sales, not costs.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي أقل احتمالًا أن يكون هدفًا لنظام محاسبة التكاليف؟",
+    "choicesAr": [
+      "احتساب تكلفة المنتج.",
+      "قياس كفاءة الأقسام.",
+      "تقييم المخزون.",
+      "تحديد عمولات المبيعات."
+    ],
+    "explanationAr": "تشمل أهداف نظام محاسبة التكاليف احتساب تكلفة المنتج وتقييم كفاءة الأقسام والمخزون وتحديد الدخل والتخطيط والرقابة وتقييم العمليات. أما تحديد عمولات المبيعات التي تعتمد على المبيعات لا التكاليف فليس هدفًا أساسيًا للنظام، مع إمكان استخدام بيانات التكاليف في خطط حوافز أخرى."
   },
   {
     "unit": 7,
@@ -1628,7 +1684,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The only costs capitalized are the variable costs of\nmanufacturing. Prime costs (direct materials and direct labor)\nare variable.\nPrime costs (direct materials and direct labor) $800,000\nVariable manufacturing overhead                  100,000\nTotal inventoriable costs                    $900,000",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في نهاية السنة المالية سجلت Jubal Manufacturing البيانات التالية:\nالتكاليف الأولية | $800,000\nالتكاليف الصناعية غير المباشرة المتغيرة | 100,000\nالتكاليف الصناعية غير المباشرة الثابتة | 160,000\nمصروفات البيع والمصروفات الأخرى المتغيرة | 80,000\nمصروفات البيع والمصروفات الأخرى الثابتة | 40,000\nإذا استخدمت Jubal طريقة التكاليف المتغيرة، فما التكاليف القابلة للتحميل على المخزون للسنة المالية؟",
+    "choicesAr": [
+      "$800,000",
+      "$900,000",
+      "$980,000",
+      "$1,060,000"
+    ],
+    "explanationAr": "تحمل على المخزون وفق التكاليف المتغيرة تكاليف التصنيع المتغيرة فقط. ويفترض في السؤال أن التكاليف الأولية (المواد والأجور المباشرة) متغيرة.\nالتكاليف الأولية (المواد والأجور المباشرة) | $800,000\nالتكاليف الصناعية غير المباشرة المتغيرة | 100,000\nإجمالي التكاليف القابلة للتحميل على المخزون | $900,000."
   },
   {
     "unit": 7,
@@ -1645,7 +1709,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The absorption method is required for financial statements\nprepared according to GAAP. It charges all production costs to\ninventories. The prime costs of $800,000, variable\nmanufacturing overhead of $100,000, and fixed manufacturing\noverhead of $160,000 are included. They total $1,060,000.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في نهاية السنة المالية سجلت Jubal Manufacturing البيانات التالية:\nالتكاليف الأولية | $800,000\nالتكاليف الصناعية غير المباشرة المتغيرة | 100,000\nالتكاليف الصناعية غير المباشرة الثابتة | 160,000\nمصروفات البيع والمصروفات الأخرى المتغيرة | 80,000\nمصروفات البيع والمصروفات الأخرى الثابتة | 40,000\nباستخدام طريقة التكاليف الكلية (الامتصاصية)، ما تكاليف Jubal القابلة للتحميل على المخزون؟",
+    "choicesAr": [
+      "$800,000",
+      "$900,000",
+      "$1,060,000",
+      "$1,180,000"
+    ],
+    "explanationAr": "تتطلب القوائم المالية وفق المبادئ المحاسبية المتعارف عليها تحميل المخزون بالتكاليف الصناعية الثابتة والمتغيرة المؤهلة. وتشمل في السؤال التكاليف الأولية $800,000، والتكاليف الصناعية غير المباشرة المتغيرة $100,000، والثابتة $160,000. ويبلغ مجموعها $1,060,000، مع مراعاة قواعد توزيع التكاليف الثابتة على أساس الطاقة العادية."
   },
   {
     "unit": 7,
@@ -1662,7 +1734,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Under variable costing, inventory is charged only with variable\nproduction costs. Fixed manufacturing costs are expensed as\nperiod costs. Absorption costing charges all production costs\nto inventory. If finished goods inventory increases, absorption\ncosting results in higher income because it capitalizes some\nfixed costs that are expensed under variable costing. When\ninventory declines, variable costing results in higher income\nbecause some fixed costs capitalized under the absorption\nmethod in prior periods are expensed in the current period.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية صحيحة عن التكاليف الكلية والتكاليف المتغيرة؟",
+    "choicesAr": [
+      "تعالج التكاليف غير المباشرة بالطريقة نفسها في كلتا الطريقتين.",
+      "إذا زاد مخزون الإنتاج التام، فإن طريقة التكاليف الكلية تحقق دخلًا أعلى.",
+      "تقل تكاليف التصنيع المتغيرة عند تطبيق طريقة التكاليف المتغيرة.",
+      "يتساوى مجمل الربح في الطريقتين."
+    ],
+    "explanationAr": "وفق التكاليف المتغيرة يحمل المخزون بتكاليف الإنتاج المتغيرة فقط، وتعد تكاليف التصنيع الثابتة تكاليف فترة. أما التكاليف الكلية فتحمل المخزون بالتكاليف الصناعية الثابتة والمتغيرة المؤهلة. وعند زيادة مخزون الإنتاج التام يكون دخل التكاليف الكلية أعلى في الحالة المعتادة مع ثبات معدل التحميل، لأن جزءًا من التكاليف الثابتة يؤجل في المخزون بدلًا من تحميله على مصروفات الفترة. وعند انخفاض المخزون يحدث العكس إذا كانت التكاليف الثابتة المحررة من المخزون أكبر من المؤجلة فيه."
   },
   {
     "unit": 7,
@@ -1679,7 +1759,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Under absorption costing, all manufacturing costs, both fixed\nand variable, are treated as product costs. Under variable\ncosting, only variable costs of manufacturing are inventoried\nas product costs. Fixed manufacturing costs are expensed as\nperiod costs. Packaging and shipping costs are not product\ncosts under either method because they are incurred after the\ngoods have been manufactured. Instead, they are included in\nselling and administrative expenses for the period.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تختلف طريقتا التكاليف الكلية والمتغيرة في تحميل تكاليف الإنتاج. أي البنود التالية لم يصنف بصورة صحيحة بوصفه تكلفة منتج؟\nالبند | التكاليف الكلية | التكاليف المتغيرة",
+    "choicesAr": [
+      "المستلزمات الصناعية | نعم | نعم",
+      "تأمين المصنع | نعم | لا",
+      "تكلفة الأجور المباشرة | نعم | نعم",
+      "تكاليف التعبئة والشحن | نعم | نعم"
+    ],
+    "explanationAr": "تحمل جميع تكاليف التصنيع المؤهلة، الثابتة والمتغيرة، على المنتج وفق التكاليف الكلية. أما التكاليف المتغيرة فتحمل المنتج بتكاليف التصنيع المتغيرة فقط وتثبت التكاليف الصناعية الثابتة مصروف فترة. ويفترض السؤال أن التعبئة والشحن يتعلقان بتوزيع السلع بعد اكتمال التصنيع، ولذلك يصنفان ضمن مصروفات البيع لا تكاليف المنتج. أما التعبئة اللازمة لإتمام التصنيع فقد تعامل بصورة مختلفة."
   },
   {
     "unit": 7,
@@ -1696,7 +1784,15 @@
     ],
     "answerIndex": 1,
     "explanation": "In a variable costing system, only the variable costs are\nrecorded as product costs. All fixed costs are expensed in the\nperiod incurred. Because changes in the relationship between\nproduction levels and sales levels do not cause changes in the\namount of fixed manufacturing cost expensed, profits more\ndirectly follow the trends in sales.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية صحيحة لدى منشأة تستخدم طريقة التكاليف المتغيرة؟",
+    "choicesAr": [
+      "تتغير تكلفة وحدة المنتج بسبب تغير عدد الوحدات المصنعة.",
+      "تتقلب الأرباح مع المبيعات.",
+      "يحسب انحراف الطاقة العاطلة.",
+      "تشمل تكاليف المنتج المصروفات الإدارية المتغيرة."
+    ],
+    "explanationAr": "لا تسجل ضمن تكاليف المنتج إلا تكاليف التصنيع المتغيرة وفق هذه الطريقة. وتحمل التكاليف الثابتة على مصروفات الفترة. ولذلك لا تؤثر تغيرات العلاقة بين الإنتاج والمبيعات في مقدار تكاليف التصنيع الثابتة المحملة على الفترة، وترتبط الأرباح بصورة أوضح باتجاه المبيعات، مع ثبات الأسعار والتكاليف الأخرى."
   },
   {
     "unit": 7,
@@ -1713,7 +1809,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The contribution margin from manufacturing (Sales – Variable\ncosts) is $10 ($40 – $30) per unit sold, or $1,200,000 (120,000\nunits × $10). The fixed costs of manufacturing ($600,000) and\nselling and administrative costs ($400,000) are deducted from\nthe contribution margin to arrive at an operating income of\n$200,000.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "خططت Osawa لإنتاج 200,000 وحدة من منتجها الوحيد في السنة الأولى للتشغيل، وحققت هذا الإنتاج بالفعل. بلغت تكاليف التصنيع المتغيرة $30 للوحدة، وبلغت تكاليف التصنيع الثابتة المخططة والفعلية $600,000، وبلغ مجموع مصروفات البيع والإدارة $400,000. باعت Osawa عدد 120,000 وحدة بسعر $40 للوحدة.\nما الدخل التشغيلي للسنة وفق التكاليف المتغيرة؟",
+    "choicesAr": [
+      "$200,000",
+      "$440,000",
+      "$800,000",
+      "$600,000"
+    ],
+    "explanationAr": "يبلغ هامش المساهمة من التصنيع (المبيعات ناقص تكاليف التصنيع المتغيرة) $10 ($40 − $30) للوحدة المباعة، أو $1,200,000 (120,000 وحدة × $10). وتطرح تكاليف التصنيع الثابتة ($600,000) ومصروفات البيع والإدارة ($400,000) للوصول إلى دخل تشغيلي $200,000."
   },
   {
     "unit": 7,
@@ -1730,7 +1834,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Absorption costing net income is computed as follows:\nSales (120,000 units × $40)                      $4,800,000\nVariable production costs\n(200,000 units × $30)                $6,000,000\nFixed production costs                   600,000\nTotal production costs             $6,600,000\nEnding inventory\n(80,000 units × $33)                 (2,640,000)\nCost of goods sold                                  (3,960,000)\nGross profit                                        $ 840,000\nSelling and administrative expenses                   (400,000)\nOperating income                                    $ 440,000",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "خططت Osawa لإنتاج 200,000 وحدة من منتجها الوحيد في السنة الأولى للتشغيل، وحققت هذا الإنتاج بالفعل. بلغت تكاليف التصنيع المتغيرة $30 للوحدة، وبلغت تكاليف التصنيع الثابتة المخططة والفعلية $600,000، وبلغ مجموع مصروفات البيع والإدارة $400,000. باعت Osawa عدد 120,000 وحدة بسعر $40 للوحدة.\nما الدخل التشغيلي وفق التكاليف الكلية؟",
+    "choicesAr": [
+      "$200,000",
+      "$440,000",
+      "$600,000",
+      "$840,000"
+    ],
+    "explanationAr": "يحسب الدخل وفق التكاليف الكلية كما يلي:\nالمبيعات (120,000 وحدة × $40) | $4,800,000\nتكاليف الإنتاج المتغيرة (200,000 وحدة × $30) | $6,000,000\nتكاليف الإنتاج الثابتة | 600,000\nإجمالي تكاليف الإنتاج | $6,600,000\nيطرح مخزون آخر المدة (80,000 وحدة × $33) | (2,640,000)\nتكلفة البضاعة المباعة | (3,960,000)\nمجمل الربح | $840,000\nمصروفات البيع والإدارة | (400,000)\nالدخل التشغيلي | $440,000."
   },
   {
     "unit": 7,
@@ -1747,7 +1859,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Absorption (full) costing considers all manufacturing costs to\nbe inventoriable as product costs. These costs include\nvariable and fixed manufacturing costs, whether direct or\nindirect. The alternative to absorption is known as variable\n(direct) costing.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي طريقة من طرق احتساب تكلفة المخزون تعامل تكاليف التصنيع المباشرة وغير المباشرة، الثابتة والمتغيرة، باعتبارها تكاليف قابلة للتحميل على المخزون؟",
+    "choicesAr": [
+      "التكاليف المباشرة.",
+      "التكاليف المتغيرة.",
+      "التكاليف الكلية.",
+      "تكاليف التحويل."
+    ],
+    "explanationAr": "تعد التكاليف الكلية جميع تكاليف التصنيع المؤهلة تكاليف منتج، وتشمل التكاليف الثابتة والمتغيرة سواء كانت مباشرة أم غير مباشرة. وتسمى الطريقة البديلة التكاليف المتغيرة (المباشرة في اصطلاح السؤال)."
   },
   {
     "unit": 7,
@@ -1781,7 +1901,15 @@
     ],
     "answerIndex": 2,
     "explanation": "In an absorption costing system, fixed overhead costs are\nincluded in inventory. When sales exceed production, more\noverhead is expensed under absorption costing due to fixed\noverhead carried over from the prior inventory. If sales\nincrease over production, more than one period’s overhead is\nrecognized as expense. Accordingly, if the increase in\noverhead expensed is greater than the contribution margin of\nthe increased units sold, profit may be lower with an increased\nlevel of sales.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عندما تعد المنشأة تقارير مالية باستخدام التكاليف الكلية:",
+    "choicesAr": [
+      "تزداد الأرباح دائمًا بزيادة المبيعات.",
+      "تنخفض الأرباح دائمًا بانخفاض المبيعات.",
+      "قد تنخفض الأرباح رغم زيادة المبيعات حتى دون تغير أسعار البيع والتكاليف.",
+      "يؤدي انخفاض الإنتاج وثبات المبيعات إلى ارتفاع الأرباح."
+    ],
+    "explanationAr": "تدرج التكاليف الصناعية غير المباشرة الثابتة ضمن المخزون في نظام التكاليف الكلية. وعندما تتجاوز المبيعات الإنتاج، قد تحمل الفترة بتكاليف ثابتة سبق تأجيلها ضمن المخزون. فإذا تجاوزت الزيادة في التكاليف الثابتة المحملة على الفترة هامش مساهمة الوحدات المباعة الإضافية، فقد ينخفض الربح رغم زيادة المبيعات."
   },
   {
     "unit": 7,
