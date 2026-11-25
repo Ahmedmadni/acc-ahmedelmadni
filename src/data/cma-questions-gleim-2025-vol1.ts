@@ -52,6 +52,7 @@ const records: SourceRecord[] = [
   ...unit10,
 ];
 const topics = new Map(CMA_TOPICS.map((topic) => [topic.id, topic]));
+const pendingUnit1SourceReviews = new Set(["1.4.23","1.5.16","1.5.17","1.5.39","1.5.41"]);
 
 /** Source-language items retain their English text while Arabic translation is reviewed. */
 export const CMA_GLEIM_2025_VOL1_QUESTIONS: CmaLocalQuestion[] = records.map((item) => {
@@ -76,5 +77,6 @@ export const CMA_GLEIM_2025_VOL1_QUESTIONS: CmaLocalQuestion[] = records.map((it
     sourcePage: item.page,
     answerStatus: item.answerStatus === "inferred" ? "inferred" : "source",
     sourceTextStatus: item.sourceTextStatus,
+    sourceLayoutReview: pendingUnit1SourceReviews.has(`${item.unit}.${item.section}.${item.number}`) || undefined,
   };
 });

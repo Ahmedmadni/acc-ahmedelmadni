@@ -83,3 +83,5 @@
 - [x] Audit all 20 imported Part 1 units: 1301/2443 complete static Arabic records; add CI coverage regression check. See `docs/CMA_PART1_SOURCE_COVERAGE_2026-11-25.md`.
 - [ ] Resume Volume 1 localization: review remaining Unit 1 English-only records, then Units 2–10; preserve keys, check duplicates across both volumes and quarantine source ambiguities.
 - [ ] Resolve review holds against authorized original pages; distinguish Arabic drafts from verified translations and scored eligibility.
+
+- [x] Unit 1 resumed Wave 1: seven cash flow Arabic drafts (§5 Q34–38/Q40/Q42), 155/217 complete Arabic, five additional source-review holds. See `docs/CMA_UNIT1_ARABIC_RESUME_WAVE1_2026-11-25.md`.
