@@ -699,7 +699,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The control objective of authorization concerns the proper\nexecution of transactions in accordance with management’s\nwishes. One means of achieving this control objective is the\nestablishment of policies as guides to action. When a decision\naffects the capitalization of the entity, a policy should be in\nforce requiring review at the highest level.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "من أهداف الرقابة في دورة التمويل والخزانة ضمان الاعتماد السليم لمعاملات الشركة المتعلقة بأدوات الدين وحقوق الملكية. أي الضوابط الآتية يحقق هذا الهدف على أفضل وجه؟",
+    "choicesAr": [
+      "فصل مسؤولية حيازة الأموال عن تسجيل المعاملة.",
+      "وجود سياسات مكتوبة للشركة تلزم بعرض مقترحات التمويل والسداد الرئيسية على مجلس الإدارة للمراجعة.",
+      "الاستعانة بمتعهد تغطية في جميع حالات الإصدار الجديد لأدوات الدين أو حقوق الملكية.",
+      "قيام الشركة بنفسها بوظائف مسجل الأوراق المالية ووكيل نقل الملكية."
+    ],
+    "explanationAr": "يتعلق هدف الاعتماد بتنفيذ المعاملات بصورة سليمة وفق توجيهات الإدارة. ومن وسائل تحقيقه وضع سياسات ترشد التصرفات. وعندما يؤثر القرار في هيكل رأس مال المنشأة، ينبغي أن تنص السياسة على مراجعته على المستوى الإداري أو الحوكمي المختص وفق الصلاحيات المعتمدة."
   },
   {
     "unit": 18,
@@ -716,7 +724,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Separating cash receipts and recordkeeping prevents an\nemployee from misappropriating cash and altering the records\nto conceal the irregularity.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ينبغي فصل وظيفة استلام المقبوضات النقدية عن وظيفة حفظ السجلات المتعلقة بها في المنشأة بهدف:",
+    "choicesAr": [
+      "الحماية المادية للمقبوضات النقدية.",
+      "إثبات المسؤولية عن النقد عند استلامه لأول مرة.",
+      "منع سداد المدفوعات النقدية من المقبوضات.",
+      "تقليل حالات اختلاس المقبوضات النقدية التي لا يتم اكتشافها."
+    ],
+    "explanationAr": "يقلل الفصل بين استلام النقد وحفظ السجلات قدرة الموظف على اختلاس النقد وتعديل السجلات لإخفاء المخالفة. ولا يلغي هذا الفصل جميع مخاطر الاختلاس."
   },
   {
     "unit": 18,
@@ -733,7 +749,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Purchasing from parties related to buyers or other company\nofficials is a risk factor because it suggests the possibility of\nfraud. Such conflicts of interest may result in transactions\nunfavorable to the company.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عند مراجعة قسم المشتريات، أي مما يلي يعد عادةً عامل خطر؟",
+    "choicesAr": [
+      "يضع القسم الطالب للمواد مواصفات الشراء.",
+      "تُنفذ مشتريات بعض الأصناف بموجب أوامر شراء شاملة أو مفتوحة.",
+      "تتم المشتريات من أطراف ذات صلة بموظفي الشراء أو مسؤولي الشركة الآخرين.",
+      "عدم تدوير المشتريات بين الموردين المدرجين في قائمة الموردين المعتمدين."
+    ],
+    "explanationAr": "يعد الشراء من أطراف ذات صلة بموظفي الشراء أو مسؤولي الشركة عامل خطر لأنه قد يشير إلى احتمال وجود غش أو تعارض مصالح، وقد يؤدي إلى معاملات غير مواتية للشركة. ولا يعني وجود العلاقة وحده ثبوت الغش."
   },
   {
     "unit": 18,
@@ -750,7 +774,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Salespeople should be responsible for generating sales and\nproviding service to customers. For effective control purposes,\nthe finance department should be responsible for monitoring\nthe financial condition of prospective and continuing\ncustomers in the credit approval process.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي إجراءات اعتماد الائتمان الآتية يمثل أساسًا لإثبات قصور رقابي لدى تاجر جملة؟",
+    "choicesAr": [
+      "تراجع اللجنة المالية التابعة لمجلس الإدارة معايير الائتمان التجاري وتعتمدها.",
+      "لا تُشحن البضائع للعملاء الذين لا يستوفون معايير الائتمان التجاري إلا مقابل الدفع عند التسليم.",
+      "يتولى موظفو المبيعات تقييم الحالة المالية للعملاء المحتملين والحاليين ومتابعتها.",
+      "يظهر توقيع معتمد من قسم الائتمان يفيد الموافقة على ائتمان العميل في جميع أوامر البيع الآجل."
+    ],
+    "explanationAr": "تتمثل مسؤولية موظفي المبيعات في تحقيق المبيعات وتقديم الخدمة للعملاء. ولتحقيق رقابة فعالة ينبغي أن تتولى الوظيفة المالية أو الائتمانية المستقلة متابعة الحالة المالية للعملاء المحتملين والحاليين ضمن عملية اعتماد الائتمان، بما يقلل تعارض المصالح."
   },
   {
     "unit": 18,
@@ -767,7 +799,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Review and approval of time cards by line supervisors is\nappropriate because they should know whether work has\nbeen performed. Also, because they do not distribute\npaychecks, they are not in a position to divert falsely\nauthorized checks.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يعد وسيلة للتحقق من أن شيكات الرواتب محررة بمبالغ معتمدة بصورة سليمة؟",
+    "choicesAr": [
+      "إجراء تحقق ميداني دوري من وجود الموظفين المدرجين في كشوف الرواتب.",
+      "اشتراط إعادة الشيكات غير المسلمة إلى أمين الصندوق.",
+      "اشتراط اعتماد المشرف لبطاقات تسجيل أوقات عمل الموظفين.",
+      "حضور عملية توزيع شيكات الرواتب بصفة شاهد."
+    ],
+    "explanationAr": "تعد مراجعة بطاقات أوقات العمل واعتمادها بواسطة المشرفين المباشرين إجراءً مناسبًا لأنهم على علم بما إذا كان العمل قد أُنجز. كما أن عدم توليهم توزيع شيكات الرواتب يقلل فرص الاستيلاء على الشيكات المعتمدة بصورة غير سليمة. ويجب كذلك التحقق من معدلات الأجور والحسابات وفق الصلاحيات."
   },
   {
     "unit": 18,
@@ -801,7 +841,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Requiring all members of the internal auditing department to\nbe CIAs is a directive control. The control is designed to\nencourage a desirable event to occur, i.e., to enhance the\nprofessionalism and level of expertise of the internal auditing\ndepartment.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يمكن تصنيف الضوابط حسب الوظيفة المقصودة منها، مثل اكتشاف وقوع حدث غير مرغوب فيه (رقابة كاشفة)، أو تجنب وقوعه (رقابة وقائية)، أو دعم وقوع حدث مرغوب فيه (رقابة توجيهية). أي مما يلي ضابط توجيهي؟",
+    "choicesAr": [
+      "إعداد التسويات البنكية شهريًا.",
+      "اشتراط توقيعين على جميع المدفوعات التي تتجاوز مبلغًا نقديًا محددًا.",
+      "تسجيل كل معاملة في يوم وقوعها.",
+      "اشتراط حصول جميع أعضاء قسم المراجعة الداخلية على شهادة المراجع الداخلي المعتمد (CIA)."
+    ],
+    "explanationAr": "يمثل اشتراط حصول جميع أعضاء قسم المراجعة الداخلية على شهادة CIA ضابطًا توجيهيًا، إذ يستهدف تعزيز السلوك المرغوب فيه ورفع مستوى المهنية والخبرة داخل القسم. وهذا مثال تعليمي على التصنيف وليس اشتراطًا مهنيًا عامًا على جميع المراجعين الداخليين."
   },
   {
     "unit": 18,
@@ -818,7 +866,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The payroll department is responsible for assembling payroll\ninformation (recordkeeping). The personnel department is\nresponsible for authorizing and executing employee\ntransactions such as hiring, firing, and changes in pay rates\nand deductions. Segregating these functions helps prevent\nfraud. Thus, the payroll for each period should be compared\nwith the active employment files of the personnel department.\nAuthorization by the personnel department is the only control\nplaced in the transaction flow early enough to prevent the\naddition of bogus employees to the payroll.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "كشفت مراجعة وظيفة الرواتب عن حالات أضاف فيها أحد موظفي الرواتب موظفين وهميين إلى الكشوف وأودع الشيكات في حسابات أقاربه. أي ضابط كان ينبغي أن يمنع هذه التصرفات؟",
+    "choicesAr": [
+      "استخدام بطاقات الوقت وسجلات الحضور في حساب إجمالي أجور الموظفين.",
+      "وضع سياسة للتعامل مع الأقارب الذين يعملون في القسم نفسه.",
+      "إسناد توقيع شيكات الرواتب إلى مكتب أمين الخزانة.",
+      "قصر اعتماد التغييرات في كشوف الرواتب على قسم شؤون الموظفين."
+    ],
+    "explanationAr": "يتولى قسم الرواتب تجميع المعلومات وحفظ السجلات، بينما يعتمد قسم شؤون الموظفين معاملات التعيين وإنهاء الخدمة وتغييرات معدلات الأجور والاستقطاعات. ويساعد الفصل بين الاعتماد والتسجيل على منع الغش. كما ينبغي مطابقة كشوف الرواتب في كل فترة مع ملفات الموظفين الذين ما زالوا على رأس العمل. ومن بين البدائل، يمثل اعتماد شؤون الموظفين الضابط المبكر الأنسب لمنع إضافة موظفين وهميين."
   },
   {
     "unit": 18,
@@ -835,7 +891,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The receiving department should maintain a file of properly\nauthorized purchase orders so that unauthorized shipments\nare not accepted. However, prices and quantities should be\nomitted from these copies of the orders. If the receiving clerk\ndoes not know the quantity ordered, an independent count can\nbe ensured.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "كشفت مراجعة وظيفة الاستلام في مركز توزيع الشركة عن ضعف الرقابة على الواردات. أي الضوابط الآتية مناسب لوظيفة الاستلام؟",
+    "choicesAr": [
+      "ضمان عمل موظف الاستلام في المستودع باستقلال عن مدير المستودع لتحقيق الفصل الكافي بين الواجبات.",
+      "تزويد قسم الاستلام بالمستودع بنسخة من أمر الشراء تتضمن وصف الأصناف دون الأسعار والكميات.",
+      "اشتراط اعتماد مدير المستودع لجميع الواردات.",
+      "تزويد قسم الاستلام بنسخة مطابقة لأمر الشراء الأصلي."
+    ],
+    "explanationAr": "ينبغي أن يحتفظ قسم الاستلام بملف لأوامر الشراء المعتمدة حتى لا يقبل شحنات غير مصرح بها. ويمكن حذف الأسعار والكميات من نسخ الاستلام لتشجيع العد المستقل؛ فعدم معرفة الموظف بالكمية المطلوبة يقلل احتمال الاكتفاء بنقلها من أمر الشراء دون عد فعلي. وتظل المطابقة المستقلة لاحقًا ضرورية."
   },
   {
     "unit": 18,
@@ -852,7 +916,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Internal control over accounts receivable begins with a proper\nseparation of duties. Hence, the cashier, who performs an\nasset custody function, should not be involved in\nrecordkeeping. Accounts should be periodically confirmed by\nan auditor, and delinquent accounts should be reviewed by\nthe head of accounts receivable and the credit manager.\nCustomer statements should be mailed monthly by the\naccounts receivable department without allowing access to the\nstatements by employees of the cashier’s department. The\nsales manager should not be the only person to review\ndelinquent accounts because (s)he may have an interest in\nnot declaring an account uncollectible.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الحالات الآتية تمثل ضعفًا في الرقابة الداخلية على الذمم المدينة؟",
+    "choicesAr": [
+      "يؤكد المراجعون الداخليون أرصدة حسابات العملاء دوريًا.",
+      "يتولى مدير المبيعات وحده مراجعة الحسابات المتأخرة.",
+      "يُمنع أمين الصندوق من الوصول إلى سجلات العملاء وكشوف حساباتهم الشهرية.",
+      "يرسل قسم الذمم المدينة كشوف حسابات العملاء شهريًا."
+    ],
+    "explanationAr": "تبدأ الرقابة على الذمم المدينة بالفصل السليم بين الواجبات؛ فلا ينبغي أن يتولى أمين الصندوق، الذي يحوز الأصول، حفظ سجلاتها. ويمكن تأكيد أرصدة العملاء دوريًا ومراجعة المتأخرات بواسطة مسؤولي الذمم والائتمان وإرسال كشوف الحسابات دون تدخل موظفي الصندوق. ولا ينبغي أن ينفرد مدير المبيعات بمراجعة المتأخرات لاحتمال تعارض مصلحته في تحقيق المبيعات مع تقييم قابلية التحصيل."
   },
   {
     "unit": 18,
@@ -869,7 +941,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The payroll department is responsible for assembling payroll\ninformation (recordkeeping). The personnel department is\nresponsible for authorizing employee transactions such as\nhiring, firing, and changes in pay rates and deductions.\nSegregating the recording and authorization functions helps\nprevent fraud.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "مخاطر الرقابة هي احتمال عدم منع تحريف جوهري في أحد الحسابات أو اكتشافه في الوقت المناسب بواسطة سياسات وإجراءات الرقابة الداخلية لدى العميل. ما أفضل إجراء رقابي لمنع معاملات الرواتب الوهمية أو اكتشافها؟",
+    "choicesAr": [
+      "استخدام شيكات رواتب مرقمة مسبقًا وحصرها.",
+      "اعتماد قسم شؤون الموظفين للتعيين ومعدل الأجر والوضع الوظيفي وإنهاء الخدمة.",
+      "التحقق الداخلي من معدلات الأجور المعتمدة والحسابات والمطابقة مع سجل الرواتب.",
+      "إجراء تسويات بنكية دورية ومستقلة لحساب الرواتب البنكي."
+    ],
+    "explanationAr": "يتولى قسم الرواتب تجميع المعلومات وحفظ السجلات، في حين يتولى قسم شؤون الموظفين اعتماد معاملات التعيين وإنهاء الخدمة وتغييرات معدلات الأجر والاستقطاعات. ويساعد الفصل بين وظيفتي التسجيل والاعتماد على منع الغش. وفي مفهوم مخاطر الرقابة يُراعى كذلك تصحيح التحريف المكتشف في الوقت المناسب."
   },
   {
     "unit": 18,
@@ -886,7 +966,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The policies and procedures most likely to be relevant to a\nfinancial statement audit pertain to the entity’s ability to record,\nprocess, summarize, and report financial data consistent with\nthe assertions embodied in the financial statements.\nMaintenance of control over unused checks is an example of a\nrelevant procedure because the objective is to safeguard\ncash. The auditor must understand the ICS policies and\nprocedures relevant to the assertions about cash in the\nfinancial statements. (S)he must then assess control risk for\nthose assertions; that is, (s)he must evaluate the effectiveness\nof the ICS in preventing or detecting material misstatements in\nthe assertions.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يتكون هيكل الرقابة الداخلية للمنشأة (ICS) من السياسات والإجراءات الموضوعة لتوفير تأكيد معقول بشأن تحقيق أهداف محددة. ويرتبط بعض هذه الأهداف والسياسات والإجراءات بمراجعة القوائم المالية. أي مما يلي يُرجح أن يؤخذ في الاعتبار في هذه المراجعة؟",
+    "choicesAr": [
+      "إعداد تقارير نتائج مراقبة الجودة ومراجعتها في الوقت المناسب.",
+      "المحافظة على الرقابة على الشيكات غير المستخدمة.",
+      "التحليل التسويقي للمبيعات الناتجة عن الحملات الإعلانية.",
+      "الاحتفاظ بالتحليلات الإحصائية للإنتاج."
+    ],
+    "explanationAr": "تتعلق السياسات والإجراءات الأوثق صلة بمراجعة القوائم المالية بقدرة المنشأة على تسجيل البيانات المالية ومعالجتها وتلخيصها وعرضها بما يتسق مع إقرارات القوائم المالية. وتمثل الرقابة على الشيكات غير المستخدمة مثالًا مباشرًا لأن هدفها حماية النقدية. ويفهم المراجع الضوابط ذات الصلة بإقرارات النقدية ويقيّم مخاطر الرقابة وفق منهج المراجعة المعمول به. وقد تصبح الضوابط التشغيلية الأخرى ذات صلة تبعًا لطبيعة المخاطر والإقرارات."
   },
   {
     "unit": 18,
@@ -903,7 +991,15 @@
     ],
     "answerIndex": 1,
     "explanation": "“A control is any action taken by management to enhance the\nlikelihood that established goals and objectives will be\nachieved. Management plans, organizes, and directs the\nperformance of sufficient actions to provide reasonable\nassurance that objectives and goals will be achieved. Thus,\ncontrol is the result of proper planning, organizing, and\ndirecting by management.”",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يقيّم المراجعون الضوابط بصورة منتظمة. أي العبارات الآتية يصف مفهوم الرقابة لدى المراجعين الداخليين على أفضل وجه؟",
+    "choicesAr": [
+      "تستغني الإدارة بصورة منتظمة عن الموظفين الذين لا يحققون الأداء المتوقع.",
+      "تتخذ الإدارة إجراءات تزيد احتمال تحقيق الأهداف والغايات المحددة.",
+      "تمثل الرقابة إجراءات محددة يصممها المحاسبون والمراجعون لضمان صحة المعالجة.",
+      "ينبغي تصميم إجراءات الرقابة من أسفل إلى أعلى لضمان الاهتمام بالتفاصيل."
+    ],
+    "explanationAr": "الرقابة في سياق السؤال هي إجراء تتخذه الإدارة لتعزيز احتمال تحقيق الأهداف المحددة. وتخطط الإدارة وتنظم وتوجه تنفيذ إجراءات كافية لتوفير تأكيد معقول بشأن تحقيق الأهداف. ولا يقتصر مفهوم الرقابة على الإجراءات المحاسبية؛ كما أن مجلس الإدارة والعاملين الآخرين يؤدون أدوارًا رقابية بحسب مسؤولياتهم."
   },
   {
     "unit": 18,
