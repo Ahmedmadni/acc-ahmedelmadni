@@ -2243,7 +2243,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Variable costing treats only direct materials, direct labor, and\nthe variable portion of manufacturing overhead as product\ncosts.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يتمثل الفرق الأساسي بين التكاليف الكلية والمتغيرة في أن التكاليف المتغيرة تعامل ما يلي بوصفه تكاليف منتج:",
+    "choicesAr": [
+      "المواد المباشرة والأجور المباشرة فقط.",
+      "المواد والأجور المباشرة والتكاليف الصناعية غير المباشرة المتغيرة ونصيب من التكاليف الصناعية غير المباشرة الثابتة.",
+      "المواد والأجور المباشرة والتكاليف الصناعية غير المباشرة المتغيرة ومصروفات البيع والإدارة المتغيرة فقط.",
+      "المواد والأجور المباشرة والتكاليف الصناعية غير المباشرة المتغيرة فقط."
+    ],
+    "explanationAr": "تحمل التكاليف المتغيرة المنتج بالمواد والأجور المباشرة المتغيرة والتكاليف الصناعية غير المباشرة المتغيرة فقط، بافتراض سلوك المواد والأجور كما في السؤال."
   },
   {
     "unit": 7,
@@ -2260,7 +2268,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Under variable costing, fixed manufacturing costs are not\nincluded in product costs. Rather, they are period costs and\nexpensed in the current period as incurred. Consequently, any\nvariability in profits will not be attributed to changes in\nproduction. Instead, profits will vary closely with sales. Thus,\nmanagers should primarily review variable costing income\nstatements to eliminate the possibility of profit distortion due to\nchanges in production.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ترغب الإدارة في تحديد ربحية خط إنتاج Alpha. لتجنب تشوه الربح الناتج عن تغير حجم الإنتاج وتأجيل التكاليف الصناعية الثابتة، ما التقارير التي ينبغي للمديرين مراجعتها أساسًا؟",
+    "choicesAr": [
+      "قوائم الدخل وفق التكاليف المتغيرة (المباشرة).",
+      "قوائم الدخل وفق التكاليف الكلية.",
+      "قوائم الدخل متعددة الخطوات.",
+      "قوائم التدفقات النقدية."
+    ],
+    "explanationAr": "وفق التكاليف المتغيرة لا تدخل التكاليف الصناعية الثابتة ضمن تكاليف المنتج، بل تعد تكاليف فترة تحمل على المصروف عند تكبدها. لذلك لا يتغير الربح بسبب تأجيل هذه التكاليف في المخزون، ويرتبط بصورة أوضح بالمبيعات. وتناسب قوائم الدخل وفق التكاليف المتغيرة هذا الغرض، مع مراعاة بقية التغيرات في التكاليف."
   },
   {
     "unit": 7,
@@ -2277,7 +2293,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Fixed factory overhead cost is treated as a product cost under\nabsorption costing and as a period cost under variable\ncosting. Under variable costing, only variable costs are\nassigned to units of product and therefore included in the\ninventory. Under absorption costing, both variable factory\noverhead costs and fixed factory overhead costs are assigned\nto units of product and therefore included in the inventory.\nThus, ending inventory is the same under both absorption\ncosting and variable costing only when there is no fixed\nfactory overhead cost.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في أي من الحالات التالية تتساوى قيمة مخزون آخر المدة في قائمة المركز المالي وفق التكاليف الكلية والمتغيرة، بافتراض وجود مخزون وتساوي أسس القياس الأخرى؟",
+    "choicesAr": [
+      "عندما يتساوى عدد الوحدات المنتجة والمباعة.",
+      "عندما لا توجد تكاليف صناعية غير مباشرة ثابتة.",
+      "عندما يكون انحراف حجم الإنتاج صفرًا.",
+      "عندما لا توجد تكاليف صناعية غير مباشرة متغيرة."
+    ],
+    "explanationAr": "تعامل التكاليف الصناعية غير المباشرة الثابتة كتكلفة منتج وفق التكاليف الكلية وكلفة فترة وفق التكاليف المتغيرة. وتحمل التكاليف المتغيرة وحدات المنتج بالتكاليف المتغيرة فقط، بينما تشمل التكاليف الكلية التكاليف الصناعية المتغيرة والثابتة المؤهلة. لذا تتساوى قيمة المخزون الموجود إذا لم توجد تكاليف صناعية ثابتة تحمل عليه، بافتراض عدم وجود تكاليف صناعية مباشرة ثابتة أو فروق أخرى. وتتساوى القيم أيضًا إذا لم يوجد مخزون أصلًا."
   },
   {
     "unit": 7,
@@ -2294,7 +2318,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Under absorption costing, the fixed portion of manufacturing\noverhead is absorbed into the cost of each unit product.\nProduct cost thus includes all manufacturing costs, both fixed\nand variable.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي التكاليف التالية تدخل عمومًا في حساب الدخل التشغيلي باستخدام التكاليف الكلية؟\nI. تكاليف التصنيع المباشرة الثابتة\nII. تكاليف التصنيع المباشرة المتغيرة\nIII. التكاليف الصناعية غير المباشرة المتغيرة\nIV. التكاليف الصناعية غير المباشرة الثابتة",
+    "choicesAr": [
+      "II وIII فقط.",
+      "I وIV فقط.",
+      "I وII وIII فقط.",
+      "I وII وIII وIV."
+    ],
+    "explanationAr": "وفق التكاليف الكلية تحمل تكلفة المنتج بنصيبها من التكاليف الصناعية الثابتة، وتشمل جميع تكاليف التصنيع المؤهلة، الثابتة والمتغيرة. وتحمل على الدخل عند بيع المنتج أو عند وجوب إثباتها مصروفًا وفق قواعد القياس."
   },
   {
     "unit": 7,
@@ -2311,7 +2343,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Variable costing capitalizes on the variable costs of\nproduction. Fixed manufacturing overhead is treated as a\nperiod cost and is expensed in the period that the cost is\nincurred.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية صحيحة عن نظامي التكاليف المتغيرة والكلية؟",
+    "choicesAr": [
+      "تعد التكاليف المتغيرة التكاليف الصناعية غير المباشرة الثابتة تكاليف فترة.",
+      "تعد التكاليف الكلية التكاليف الصناعية غير المباشرة الثابتة تكاليف فترة.",
+      "تعد التكاليف المتغيرة التكاليف الصناعية غير المباشرة المتغيرة تكاليف فترة.",
+      "تعد التكاليف الكلية التكاليف الصناعية غير المباشرة المتغيرة تكاليف فترة."
+    ],
+    "explanationAr": "ترسمل التكاليف المتغيرة تكاليف الإنتاج المتغيرة فقط ضمن المخزون. وتعالج التكاليف الصناعية غير المباشرة الثابتة كتكلفة فترة تثبت مصروفًا عند تكبدها."
   },
   {
     "unit": 7,
@@ -2328,7 +2368,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Activity-based costing, job-order costing, process costing, and\nstandard costing can all be used for both internal and external\npurposes. Variable costing is not acceptable under GAAP for\nexternal reporting purposes.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي طرق التكاليف التالية مصنفة بصورة صحيحة من حيث ملاءمتها للتقارير الخارجية والداخلية؟\nالطريقة | التقارير الخارجية | التقارير الداخلية",
+    "choicesAr": [
+      "التكاليف على أساس الأنشطة | لا | نعم",
+      "تكاليف الأوامر | لا | نعم",
+      "التكاليف المتغيرة | لا | نعم",
+      "تكاليف المراحل | لا | لا"
+    ],
+    "explanationAr": "يمكن استخدام التكاليف على أساس الأنشطة وتكاليف الأوامر والمراحل والتكاليف المعيارية لأغراض داخلية وخارجية إذا استوفت قواعد قياس المخزون. أما التكاليف المتغيرة وحدها فلا تقبل وفق المبادئ المحاسبية المتعارف عليها لقياس المخزون في التقارير الخارجية."
   },
   {
     "unit": 7,
@@ -2345,7 +2393,15 @@
     ],
     "answerIndex": 2,
     "explanation": "When production exceeds sales, ending inventory increases.\nUnder absorption costing, some fixed costs are included in\nending inventory. Under variable costing, all fixed costs are\nexpensed. Accordingly, income is higher under absorption\ncosting.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية صحيحة بشأن الفرق بين التكاليف الكلية والمتغيرة، بافتراض ثبات معدل تحميل التكاليف الصناعية الثابتة وعدم وجود فروق أخرى؟",
+    "choicesAr": [
+      "عندما يتساوى الإنتاج والمبيعات يكون دخل التكاليف الكلية أعلى.",
+      "عندما يتساوى الإنتاج والمبيعات يكون دخل التكاليف الكلية أقل.",
+      "عندما يزيد الإنتاج على المبيعات يكون دخل التكاليف الكلية أعلى.",
+      "عندما يقل الإنتاج عن المبيعات يكون دخل التكاليف الكلية أعلى."
+    ],
+    "explanationAr": "عندما يتجاوز الإنتاج المبيعات يزيد مخزون آخر المدة. وتؤجل بعض التكاليف الصناعية الثابتة ضمن المخزون وفق التكاليف الكلية، بينما تحمل جميعها على الفترة وفق التكاليف المتغيرة. لذلك يزيد دخل التكاليف الكلية في هذه الحالة مع ثبات معدل التحميل."
   },
   {
     "unit": 7,
@@ -2362,7 +2418,15 @@
     ],
     "answerIndex": 1,
     "explanation": "In a variable-costing income statement, all variable costs are\ndeducted from sales revenue to arrive at the contribution\nmargin. Total fixed costs are then deducted from the\ncontribution margin to determine operating income. In an\nabsorption-costing income statement, fixed factory overhead\nincluded in the cost of goods sold is deducted from sales\nrevenue in the calculation of the gross margin. Other fixed\ncosts are among the amounts subtracted from the gross\nmargin to determine operating income.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في قائمة الدخل المعدة كتقرير داخلي، هل يعرض إجمالي التكاليف الثابتة عادة بصورة منفصلة وفق الطريقتين التاليتين؟\nالتكاليف الكلية | التكاليف المتغيرة",
+    "choicesAr": [
+      "لا | لا",
+      "لا | نعم",
+      "نعم | نعم",
+      "نعم | لا"
+    ],
+    "explanationAr": "في قائمة الدخل وفق التكاليف المتغيرة تطرح جميع التكاليف المتغيرة من المبيعات للوصول إلى هامش المساهمة، ثم تطرح التكاليف الثابتة لتحديد الدخل التشغيلي. أما في قائمة التكاليف الكلية فتطرح التكاليف الصناعية الثابتة الداخلة في تكلفة المبيعات ضمن حساب مجمل الربح، بينما تطرح التكاليف الثابتة الأخرى ضمن المصروفات اللاحقة لمجمل الربح."
   },
   {
     "unit": 7,
@@ -2379,7 +2443,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The difference between variable costing and absorption\ncosting is that variable costing treats fixed manufacturing\noverhead as a period cost. Absorption costing treats it as a\nproduct cost. Given that sales exceeded production, both\nmethods expense all fixed manufacturing overhead incurred\nduring the year. However, 10,000 units (510,000 sales –\n500,000 production) manufactured in a prior period were also\nsold. These units presumably were recorded at $10 under\nvariable costing and $16 under absorption costing.\nConsequently, absorption costing operating income is $60,000\n(10,000 units × $6) less than that under variable costing.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم شركة صناعية التكاليف المتغيرة للتقارير الداخلية والتحليل، لكنها تحول سجلاتها إلى التكاليف الكلية للتقارير الخارجية. ويسوي قسم المحاسبة الدخل التشغيلي بالطريقتين للتحقق من صحة التحويل. وحسبت التكلفة الصناعية غير المباشرة الثابتة للوحدة على أساس إنتاج مخطط قدره 480,000 وحدة.\nالبيانات السنوية | الموازنة | الفعلي\nالمبيعات (وحدة) | 495,000 | 510,000\nالإنتاج (وحدة) | 480,000 | 500,000\nتكلفة الوحدة | المتغيرة | الكلية\nالتكاليف المتغيرة | $10.00 | $10.00\nالتكاليف الصناعية غير المباشرة الثابتة | 0 | 6.00\nإجمالي تكلفة التصنيع للوحدة | $10.00 | $16.00\nما الفرق بين الدخل التشغيلي وفق الطريقتين؟",
+    "choicesAr": [
+      "$57,600",
+      "$60,000",
+      "$90,000",
+      "$120,000"
+    ],
+    "explanationAr": "تعالج التكاليف المتغيرة التكاليف الصناعية غير المباشرة الثابتة كتكاليف فترة، بينما تعاملها التكاليف الكلية كتكاليف منتج. ونظرًا إلى تجاوز المبيعات الإنتاج، تحمل الفترة بالتكاليف الصناعية الثابتة للسنة في الطريقتين بعد تسوية التحميل. كما بيعت 10,000 وحدة (510,000 مبيعات − 500,000 إنتاج) صنعت في فترة سابقة. ويفترض أن هذه الوحدات سجلت بتكلفة $10 وفق التكاليف المتغيرة و$16 وفق الكلية. ومن ثم يقل دخل التكاليف الكلية بمبلغ $60,000 (10,000 وحدة × $6)."
   },
   {
     "unit": 7,
@@ -2396,7 +2468,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Under variable costing, the only costs that are capitalized are\nthe variable costs of manufacturing. These include\nDirect materials used                            $300,000\nDirect labor                                      100,000\nVariable overhead                                  50,000\nTotal inventoriable costs                    $450,000",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فيما يلي سجلات شركة Valenz للسنة المالية المنتهية في 30 نوفمبر:\nالمواد المباشرة المستخدمة | $300,000\nالأجور المباشرة | 100,000\nالتكاليف الصناعية غير المباشرة المتغيرة | 50,000\nالتكاليف الصناعية غير المباشرة الثابتة | 80,000\nمصروفات البيع والإدارة المتغيرة | 40,000\nمصروفات البيع والإدارة الثابتة | 20,000\nإذا استخدمت Valenz التكاليف المتغيرة، فما التكاليف القابلة للتحميل على المخزون للسنة المالية؟",
+    "choicesAr": [
+      "$400,000",
+      "$450,000",
+      "$490,000",
+      "$530,000"
+    ],
+    "explanationAr": "وفق التكاليف المتغيرة تحمل على المخزون تكاليف التصنيع المتغيرة فقط، وتشمل:\nالمواد المباشرة المستخدمة | $300,000\nالأجور المباشرة | 100,000\nالتكاليف الصناعية غير المباشرة المتغيرة | 50,000\nإجمالي التكاليف القابلة للتحميل على المخزون | $450,000."
   },
   {
     "unit": 7,
@@ -2413,7 +2493,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The absorption method is required for financial statements\nprepared according to GAAP. It charges all costs of production\nto inventories. The variable cost of materials ($300,000), direct\nlabor ($100,000), variable overhead ($50,000), and fixed\noverhead ($80,000) are included. They total $530,000.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فيما يلي سجلات شركة Valenz للسنة المالية المنتهية في 30 نوفمبر:\nالمواد المباشرة المستخدمة | $300,000\nالأجور المباشرة | 100,000\nالتكاليف الصناعية غير المباشرة المتغيرة | 50,000\nالتكاليف الصناعية غير المباشرة الثابتة | 80,000\nمصروفات البيع والإدارة المتغيرة | 40,000\nمصروفات البيع والإدارة الثابتة | 20,000\nباستخدام التكاليف الكلية، ما تكاليف Valenz القابلة للتحميل على المخزون؟",
+    "choicesAr": [
+      "$400,000",
+      "$450,000",
+      "$530,000",
+      "$590,000"
+    ],
+    "explanationAr": "تتطلب القوائم المالية وفق المبادئ المحاسبية المتعارف عليها طريقة التكاليف الكلية لتحميل المخزون بتكاليف الإنتاج المؤهلة. وتشمل تكلفة المواد المتغيرة ($300,000)، والأجور المباشرة ($100,000)، والتكاليف الصناعية غير المباشرة المتغيرة ($50,000)، والثابتة ($80,000). ويبلغ مجموعها $530,000."
   },
   {
     "unit": 7,
@@ -2430,7 +2518,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The manufacturer’s ending inventory consists of 10,000 units,\nmade up of $50,000 variable manufacturing cost (10,000 × $5)\nand $20,000 fixed manufacturing cost (10,000 × $2).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لدى مصنع للبسكويت تكاليف الوحدة التالية لشهر يونيو:\nتكلفة التصنيع المتغيرة | تكلفة التسويق المتغيرة | تكلفة التصنيع الثابتة | تكلفة التسويق الثابتة\n$5.00 | $3.50 | $2.00 | $4.00\nأنتج المصنع 100,000 وحدة خلال يونيو، وتبقى منها 10,000 وحدة في مخزون آخر المدة. ويستخدم طريقة الوارد أولًا صادر أولًا (FIFO)، وتمثل الوحدات البالغ عددها 10,000 كامل مخزون الإنتاج التام آخر الشهر. ما قيمة هذا المخزون وفق التكاليف الكلية؟",
+    "choicesAr": [
+      "$50,000",
+      "$70,000",
+      "$85,000",
+      "$145,000"
+    ],
+    "explanationAr": "يتكون مخزون آخر المدة من 10,000 وحدة تشمل $50,000 تكلفة تصنيع متغيرة (10,000 × $5)، و$20,000 تكلفة تصنيع ثابتة (10,000 × $2)."
   },
   {
     "unit": 7,
@@ -2447,7 +2543,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Under variable costing, only variable manufacturing costs are\ncapitalized as part of inventory. Thus, ending inventory is\nvalued at $5,000,000.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أكملت شركة الشهر الأول لإنتاج منتج جديد ولم تشحن أي وحدة منه بعد. وبلغت تكاليف التصنيع المتغيرة $5,000,000، وتكاليف التصنيع الثابتة $2,000,000، وتكاليف التسويق المتغيرة $1,000,000، وتكاليف التسويق الثابتة $3,000,000. ما قيمة مخزون المنتج الجديد وفق التكاليف المتغيرة؟",
+    "choicesAr": [
+      "$5,000,000",
+      "$6,000,000",
+      "$8,000,000",
+      "$11,000,000"
+    ],
+    "explanationAr": "ترسمل تكاليف التصنيع المتغيرة فقط ضمن المخزون وفق هذه الطريقة. لذلك تبلغ قيمة مخزون آخر المدة $5,000,000."
   },
   {
     "unit": 7,
