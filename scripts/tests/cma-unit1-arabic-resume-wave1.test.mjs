@@ -253,11 +253,11 @@ test("Unit 7 independent final inventory and profit reconciliation calculations"
 });
 
 const unit8Rows=JSON.parse(read("src/data/cma-gleim-2025-vol1-unit-8.json"));
-const unit8Wave1Pins=new Map([["1.1",[810,3,"73109273"]],["1.4",[814,3,"eea7fd32"]],["1.5",[815,2,"8927bb08"]],["1.6",[816,1,"5e9e5faf"]],["1.8",[818,2,"24825301"]],["1.9",[819,2,"1afb6558"]],["1.10",[820,1,"c330d437"]],["1.11",[821,0,"636cadc2"]],["1.14",[825,2,"b3b10d1a"]],["1.15",[826,3,"e9d509fb"]],["1.16",[827,2,"77f22526"]],["1.17",[827,3,"af4ae316"]],["1.18",[828,0,"01604ecb"]],["1.19",[828,2,"ccf018a2"]],["1.20",[829,3,"a893e249"]],["1.21",[830,0,"b1923333"]],["2.1",[832,1,"9dec57a9"]],["2.2",[833,2,"d10c61bd"]],["2.3",[833,1,"495ea531"]],["2.4",[834,2,"f5c18cc1"]],["2.5",[835,3,"11dc47c2"]],["2.7",[837,1,"ee850392"]],["2.8",[838,1,"f0d284a9"]],["2.9",[839,2,"57740e1d"]],["2.10",[840,0,"6ba602a6"]],["2.11",[840,1,"10cbf347"]]]);
+const unit8Wave1Pins=new Map([["1.1",[810,3,"73109273"]],["1.4",[814,3,"eea7fd32"]],["1.5",[815,2,"8927bb08"]],["1.6",[816,1,"5e9e5faf"]],["1.8",[818,2,"24825301"]],["1.9",[819,2,"1afb6558"]],["1.10",[820,1,"c330d437"]],["1.11",[821,0,"636cadc2"]],["1.14",[825,2,"b3b10d1a"]],["1.15",[826,3,"e9d509fb"]],["1.16",[827,2,"77f22526"]],["1.17",[827,3,"af4ae316"]],["1.18",[828,0,"01604ecb"]],["1.19",[828,2,"ccf018a2"]],["1.20",[829,3,"a893e249"]],["1.21",[830,0,"b1923333"]],["2.1",[832,1,"9dec57a9"]],["2.2",[833,2,"d10c61bd"]],["2.3",[833,1,"495ea531"]],["2.4",[834,2,"f5c18cc1"]],["2.5",[835,3,"11dc47c2"]],["2.7",[837,1,"ee850392"]],["2.8",[838,1,"f0d284a9"]],["2.9",[839,2,"57740e1d"]],["2.10",[840,0,"6ba602a6"]]]);
 test("Unit 8 job and process costing preserve source, keys and numerical parity",()=>{
  for(const [id,[page,index,hash]] of unit8Wave1Pins){const r=unit8Rows.find(r=>r.section+"."+r.number===id);assert.equal(r.page,page);assert.equal(r.answerIndex,index);assert.equal(r.answerStatus,"source");assert.equal(fingerprint(JSON.stringify([r.stem,r.choices,r.explanation,r.answerIndex,r.page])),hash);assert.equal(validateCmaTranslation({question:{en:r.stem},choices:{en:r.choices},explanation:{en:r.explanation}},{question:r.stemAr,choices:r.choicesAr,explanation:r.explanationAr}).valid,true,id);for(const [en,ar] of [[r.stem,r.stemAr],...r.choices.map((c,i)=>[c,r.choicesAr[i]]),[r.explanation,r.explanationAr]])assert.deepEqual(cmaNumericTokens(ar),cmaNumericTokens(en),id);}
- const adapter=read("src/data/cma-questions-gleim-2025-vol1.ts");const held=["8.1.2","8.1.3","8.1.7","8.1.12","8.1.13","8.2.6"];assert.deepEqual(unit8Rows.filter(r=>r.section<=2&&!r.stemAr).map(r=>[r.unit,r.section,r.number].join(".")),held);for(const id of held)assert.ok(adapter.includes('"'+id+'"'),id);
- assert.equal(unit8Rows.length,84);assert.deepEqual([1,2].map(s=>unit8Rows.filter(r=>r.section===s&&r.stemAr&&r.choicesAr&&r.explanationAr).length),[16,10]);assert.ok(unit8Rows.filter(r=>r.stemAr&&r.choicesAr&&r.explanationAr).length>=26);
+ const adapter=read("src/data/cma-questions-gleim-2025-vol1.ts");const held=["8.1.2","8.1.3","8.1.7","8.1.12","8.1.13","8.2.6","8.2.11"];assert.deepEqual(unit8Rows.filter(r=>r.section<=2&&!r.stemAr).map(r=>[r.unit,r.section,r.number].join(".")),held);for(const id of held)assert.ok(adapter.includes('"'+id+'"'),id);
+ assert.equal(unit8Rows.length,84);assert.deepEqual([1,2].map(s=>unit8Rows.filter(r=>r.section===s&&r.stemAr&&r.choicesAr&&r.explanationAr).length),[16,9]);assert.ok(unit8Rows.filter(r=>r.stemAr&&r.choicesAr&&r.explanationAr).length>=25);
 });
 test("Unit 8 independent job costing and WIP computations",()=>{
  assert.equal((13700+4800+800*25)/7000,5.5);
@@ -265,4 +265,19 @@ test("Unit 8 independent job costing and WIP computations",()=>{
  assert.equal(2500000*.3/.8,937500);
  assert.equal((2500000-2425000)/.25,300000);
  assert.equal(240000/50000*50000,240000);
+});
+
+const unit8Wave2Pins=new Map([[3,[844,1,"a83ff217"]],[4,[845,0,"6db0f9f1"]],[5,[846,2,"be31abe0"]],[6,[848,1,"842e4d46"]],[7,[849,3,"712e6111"]],[8,[850,3,"f7ea1345"]],[9,[851,3,"5cf17ac5"]],[10,[852,0,"4b265dde"]],[11,[853,3,"dcf1d45b"]],[12,[854,3,"27c403e1"]],[13,[855,3,"3f26af58"]],[14,[857,1,"66c316f5"]],[17,[862,0,"180bb114"]]]);
+test("Unit 8 ABC initial review preserves English source, keys and numeric parity",()=>{
+ for(const [n,[page,index,hash]] of unit8Wave2Pins){const r=unit8Rows.find(r=>r.section===3&&r.number===n);assert.equal(r.page,page);assert.equal(r.answerIndex,index);assert.equal(r.answerStatus,"source");assert.equal(fingerprint(JSON.stringify([r.stem,r.choices,r.explanation,r.answerIndex,r.page])),hash);assert.equal(validateCmaTranslation({question:{en:r.stem},choices:{en:r.choices},explanation:{en:r.explanation}},{question:r.stemAr,choices:r.choicesAr,explanation:r.explanationAr}).valid,true,String(n));for(const [en,ar] of [[r.stem,r.stemAr],...r.choices.map((c,i)=>[c,r.choicesAr[i]]),[r.explanation,r.explanationAr]])assert.deepEqual(cmaNumericTokens(ar),cmaNumericTokens(en),String(n));}
+ const adapter=read("src/data/cma-questions-gleim-2025-vol1.ts");const held=["8.3.1","8.3.2","8.3.15","8.3.16"];assert.deepEqual(unit8Rows.filter(r=>r.section===3&&r.number<=17&&!r.stemAr).map(r=>[r.unit,r.section,r.number].join(".")),held);for(const id of held)assert.ok(adapter.includes('"'+id+'"'),id);
+ const primary=unit8Rows.find(r=>r.section===2&&r.number===3),repeat=unit8Rows.find(r=>r.section===2&&r.number===11);assert.equal(primary.stem,repeat.stem);assert.deepEqual(primary.choices,repeat.choices);assert.equal(primary.answerIndex,repeat.answerIndex);assert.equal(repeat.stemAr,undefined);assert.ok(adapter.includes('"8.2.11"'));
+ const translated=unit8Rows.filter(r=>r.stemAr&&r.choicesAr&&r.explanationAr);assert.equal(new Set(translated.map(r=>JSON.stringify([r.stem,r.choices]))).size,translated.length);assert.ok(translated.length>=38);
+});
+test("Unit 8 ABC independent quality cost and service allocation calculations",()=>{
+ assert.equal(12*11.5+17500*.14+25*77,4513);
+ assert.equal(4513-27500*.145,525.5);
+ assert.equal(12*12+17500*.14+30*77,4904);
+ assert.equal(4904-30000*.15,404);
+ assert.equal(7200000/60000,120);assert.equal(7500000/300000,25);assert.equal((120*36000+25*90000)/36000,182.5);
 });
