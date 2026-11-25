@@ -153,3 +153,31 @@ test("Unit 5 revenue contracts preserves source, answer keys and numeric parity"
  assert.equal(unit5Rows.filter(r=>r.section===1).length,21);assert.ok(unit5Rows.filter(r=>r.section===1&&r.stemAr&&r.choicesAr&&r.explanationAr).length>=15);
  assert.equal(10*10*200-3000,17000);assert.equal(250000*40000/(40000+120000+160000),31250);assert.equal(50000*3,150000);assert.equal(200000+75000,275000);assert.equal(3000000/6*2,1000000);
 });
+
+const unit5Wave2Pins=new Map([[1,[571,3,"5772fcc0"]],[2,[571,3,"3dae00b8"]],[3,[573,0,"2239fab7"]],[4,[574,3,"c67cfbbb"]],[5,[575,0,"473ed893"]],[6,[576,1,"a4de89c2"]],[7,[578,0,"8af48944"]],[8,[580,0,"9b14975e"]],[9,[581,3,"e55bd479"]],[10,[582,3,"a95f2f47"]],[11,[583,1,"dac49698"]],[12,[585,1,"43037504"]],[13,[586,2,"40641487"]],[14,[587,0,"1f516f4e"]],[15,[588,2,"fab82ca2"]],[16,[589,1,"edb352a6"]],[17,[590,1,"5b4cb974"]],[18,[591,3,"b9e135a2"]],[19,[593,0,"5f5abbdc"]],[20,[594,1,"863183ba"]],[21,[595,2,"8edec36e"]],[22,[596,0,"81310084"]],[23,[597,2,"58aa7247"]],[26,[600,2,"869e1145"]],[28,[602,1,"f46871a1"]],[29,[603,1,"6b7bfd2f"]],[30,[605,0,"bd4158ed"]],[31,[605,1,"84a9f778"]],[32,[607,0,"f3577d3b"]],[33,[608,0,"938c63ad"]]]);
+test("Unit 5 over-time revenue preserves source, answer keys and numerical parity",()=>{
+ for(const [n,[page,index,hash]] of unit5Wave2Pins){const r=unit5Rows.find(r=>r.section===2&&r.number===n);assert.equal(r.page,page);assert.equal(r.answerIndex,index);assert.equal(r.answerStatus,"source");assert.equal(fingerprint(JSON.stringify([r.stem,r.choices,r.explanation,r.answerIndex,r.page])),hash);assert.equal(validateCmaTranslation({question:{en:r.stem},choices:{en:r.choices},explanation:{en:r.explanation}},{question:r.stemAr,choices:r.choicesAr,explanation:r.explanationAr}).valid,true,String(n));for(const [en,ar] of [[r.stem,r.stemAr],...r.choices.map((c,i)=>[c,r.choicesAr[i]]),[r.explanation,r.explanationAr]])assert.deepEqual(cmaNumericTokens(ar),cmaNumericTokens(en),String(n));}
+ const adapter=read("src/data/cma-questions-gleim-2025-vol1.ts");const held=["5.2.24","5.2.25","5.2.27"];for(const id of held){const n=Number(id.split(".")[2]);assert.equal(unit5Rows.find(r=>r.section===2&&r.number===n).stemAr,undefined);assert.ok(adapter.includes('"'+id+'"'),id);}
+ assert.equal(unit5Rows.filter(r=>r.section===2).length,33);assert.ok(unit5Rows.filter(r=>r.section===2&&r.stemAr&&r.choicesAr&&r.explanationAr).length>=30);assert.ok(unit5Rows.filter(r=>r.stemAr&&r.choicesAr&&r.explanationAr).length>=45);
+});
+test("Unit 5 independent construction contract calculations",()=>{
+ const profit=(price,spent,remaining)=>Math.round((price-spent-remaining)*spent/(spent+remaining));
+ assert.equal(profit(3000000,1800000,600000)-300000,150000);
+ assert.equal(profit(18000000,5400000,10800000),600000);
+ assert.equal(profit(4200000,1750000,1750000),350000);
+ assert.equal(profit(700000,390000,130000)-65000,70000);
+ assert.equal(800000-250000-350000-150000,50000);
+ assert.equal(profit(2500000,2000000,0)-profit(2500000,1400000,600000),150000);
+ assert.equal(3000000-930000-2170000,-100000);
+ assert.equal(profit(420000,240000,120000)+(300000-280000-40000),20000);
+ assert.equal(1000-100-200-profit(1000,100,300),550);
+ assert.equal(7000000-2000000-6000000,-1000000);
+ assert.equal(8000000*.6-7500000*.2,3300000);
+ assert.equal(profit(3000000,700000,1300000),350000);
+ assert.equal(2500000*700000/2000000,875000);
+ assert.equal(profit(2500000,1200000,675000)-profit(2500000,700000,1300000),225000);
+ assert.equal(2500000-2000000-profit(2500000,1200000,675000),100000);
+ assert.equal(2500000-2500000*1200000/1875000,900000);
+ assert.equal(6000000-1860000-4340000,-200000);
+ assert.equal(364000-105000-192000-(122000-105000),50000);
+});
