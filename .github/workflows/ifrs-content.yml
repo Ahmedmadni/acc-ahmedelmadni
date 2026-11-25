@@ -80,6 +80,8 @@ jobs:
         run: node --test scripts/tests/cma-unit16-arabic-wave1.test.mjs
       - name: Test CMA Unit 17 Arabic drafts
         run: node --test scripts/tests/cma-unit17-arabic-wave1.test.mjs
+      - name: Test CMA Unit 18 Arabic drafts
+        run: node --test scripts/tests/cma-unit18-arabic-wave1.test.mjs
       - name: CMA browser-only translation and external fallback tests
         run: node --test scripts/tests/cma-translation-browser.test.mjs
       - name: CMA on-site Part 2 bank regression tests
