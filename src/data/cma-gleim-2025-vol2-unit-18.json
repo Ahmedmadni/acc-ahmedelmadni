@@ -1736,7 +1736,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Detective controls alert the proper people after an unwanted\nevent. They are known as “after-the-fact” controls. A stock\ncount is a detective control because it can identify inventory\nshortages after inventory shrinkage has occurred.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يتعين على شركة تجزئة إجراء جرد للمخزون مرة واحدة على الأقل شهريًا لتحديد العجز. ما نوع هذا الضابط؟",
+    "choicesAr": [
+      "رقابة وقائية.",
+      "رقابة كاشفة.",
+      "رقابة تصحيحية.",
+      "رقابة توجيهية."
+    ],
+    "explanationAr": "تنبه الضوابط الكاشفة الأشخاص المختصين بعد وقوع حدث غير مرغوب فيه، ولذلك تسمى ضوابط لاحقة للحدث. ويعد جرد المخزون ضابطًا كاشفًا لأنه يساعد على تحديد العجز بعد حدوث الفقد في المخزون."
   },
   {
     "unit": 18,
@@ -1753,7 +1761,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Complete segregation may not be feasible due to cost-benefit\nrestraints. Compensating controls most likely are established\nwhen segregation of duties is not feasible. Typical\ncompensating controls may include more management\noversight.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يعد أفضل وسيلة للتعويض عن عدم كفاية الفصل بين الواجبات في منشأة صغيرة؟",
+    "choicesAr": [
+      "الإفصاح للمراجعين الخارجيين عن عدم الفصل بين الواجبات أثناء المراجعة السنوية.",
+      "استبدال الموظفين كل 3 أو 4 سنوات.",
+      "اشتراط اجتياز المحاسبين فحصًا سنويًا لخلفياتهم.",
+      "تعزيز إشراف الإدارة على الأنشطة غير المتوافقة رقابيًا."
+    ],
+    "explanationAr": "قد يتعذر الفصل الكامل بين الواجبات بسبب اعتبارات التكلفة والمنفعة. وفي هذه الحالة تستخدم الضوابط التعويضية، ومنها تعزيز إشراف الإدارة. وينبغي أن يكون هذا الإشراف مستقلًا عن الأنشطة محل المراجعة، موثقًا ومتناسبًا مع المخاطر."
   },
   {
     "unit": 18,
@@ -1770,7 +1786,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Preventive controls are measures taken in advance so that\nanticipated problems associated with performance of an\nactivity will not occur. Creating a security awareness manual\ninvolves anticipating problems.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تعتمد منشأة بصورة كبيرة على التجارة الإلكترونية في معاملاتها. يمثل وجود دليل للتوعية بأمن المعلومات لدى المنشأة مثالًا لأي من أنواع الضوابط الآتية؟",
+    "choicesAr": [
+      "وقائية.",
+      "كاشفة.",
+      "تصحيحية.",
+      "رقابة الامتثال."
+    ],
+    "explanationAr": "الضوابط الوقائية تدابير تُتخذ مسبقًا للحد من احتمال وقوع المشكلات المتوقعة أثناء أداء النشاط. ويستهدف إعداد دليل للتوعية بأمن المعلومات استباق هذه المشكلات، ولذلك يعد مثالًا للرقابة الوقائية ضمن البدائل المعروضة. وقد يكون للدليل أيضًا دور توجيهي، ولا يثبت مجرد وجوده أن الموظفين يطبقونه أو أن الضابط يعمل بفعالية."
   },
   {
     "unit": 18,
@@ -1787,7 +1811,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Four common methods of testing are inquiry, observation,\ninspection, and re-performance. Re-performance involves\nperforming the internal control again to assess its accuracy\nand effectiveness.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يمثل إحدى وسائل اختبار كفاية الرقابة الداخلية؟",
+    "choicesAr": [
+      "الأتمتة الروبوتية للعمليات.",
+      "إعادة الأداء.",
+      "التحليل الاستكشافي للبيانات.",
+      "التوثيق."
+    ],
+    "explanationAr": "من الطرق الشائعة لاختبار الرقابة الاستفسار والملاحظة والفحص وإعادة الأداء. وتعني إعادة الأداء أن ينفذ المراجع الضابط بصورة مستقلة مرة أخرى لتقييم دقته وفعاليته."
   },
   {
     "unit": 18,
@@ -1804,7 +1836,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The severity of the deficiency must be assessed to determine\nits possible effects. The severity and magnitude of the\npossible effects indicate the urgency of the response.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات الآتية غير صحيحة بشأن معالجة أوجه القصور في الرقابة الداخلية؟",
+    "choicesAr": [
+      "الخطوة الأولى هي تحديد السبب الجذري للقصور.",
+      "ليس من الضروري تقييم جسامة القصور.",
+      "قد تتضمن خطة معالجة أوجه القصور تدريبًا إضافيًا للموظفين.",
+      "قد يساعد الاستثمار في تقنية جديدة على معالجة أوجه القصور."
+    ],
+    "explanationAr": "يجب تقييم جسامة القصور لتحديد آثاره المحتملة. وتساعد جسامة هذه الآثار وحجمها على تحديد مدى إلحاح المعالجة وأولوياتها. وقد يلزم اتخاذ إجراء احتواء عاجل بالتوازي مع تحليل الأسباب الجذرية، ثم إعادة اختبار الضابط بعد المعالجة."
   },
   {
     "unit": 18,
@@ -1821,7 +1861,15 @@
     ],
     "answerIndex": 3,
     "explanation": "System flowcharts provide an overall view of the inputs,\nprocesses, and outputs of a system. If internal control is\ncomplex, the auditor may use flowcharts, questionnaires, or\ndecision tables to document the understanding of internal\ncontrol. However, tests of controls (tests of operating\neffectiveness) are concerned with (1) the manner in which\ncontrols were applied, (2) the consistency of application, (3) by\nwhom or by what means they were applied, (4) whether the\ncontrols depend on other controls (indirect controls), and\n(5) the time or period for which the auditor intends to rely on\nthe controls.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يوفر عادة أقل قدر من التأكيد بشأن الفعالية التشغيلية لنشاط رقابي داخلي؟",
+    "choicesAr": [
+      "الاستفسار من موظفي العميل.",
+      "فحص المستندات والتقارير.",
+      "ملاحظة موظفي العميل.",
+      "إعداد خرائط تدفق النظام."
+    ],
+    "explanationAr": "تعرض خرائط تدفق النظام صورة عامة للمدخلات والعمليات والمخرجات، وقد يستخدم المراجع الخرائط أو الاستبيانات أو جداول القرارات لتوثيق فهمه للرقابة الداخلية المعقدة. لكن اختبارات الرقابة المتعلقة بالفعالية التشغيلية تهتم بما يلي: (1) كيفية تطبيق الضوابط، (2) اتساق تطبيقها، (3) من نفذها أو الوسيلة المستخدمة في تنفيذها، (4) اعتمادها على ضوابط أخرى غير مباشرة، (5) الوقت أو الفترة التي ينوي المراجع الاعتماد فيها عليها. ومجرد إعداد خريطة تدفق ليس دليلًا كافيًا على تشغيل الضابط فعليًا."
   },
   {
     "unit": 18,
@@ -1838,7 +1886,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Observation is looking at a process or procedure (control\nactivities) being performed to identify weaknesses, if any. One\npossible weakness may be a simple failure to apply a properly\ndesigned control.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي وسائل الاختبار الآتية يُرجح أن تساعد على تحديد ما إذا كانت ضوابط المنشأة مصممة بصورة سليمة ويجري اتباعها لمنع الأحداث غير المرغوب فيها أو اكتشافها وتصحيحها؟",
+    "choicesAr": [
+      "الاستفسار من موظفي المنشأة عن الضوابط.",
+      "إجراء إجراءات تحليلية باستخدام بيانات مجمعة بدرجة كبيرة.",
+      "فحص المستندات المؤيدة لعينة من المعاملات.",
+      "ملاحظة موظفي المنشأة أثناء تطبيق الضوابط."
+    ],
+    "explanationAr": "الملاحظة هي مشاهدة عملية أو إجراء رقابي أثناء تنفيذه لتحديد أوجه الضعف إن وجدت، ومنها عدم تطبيق ضابط مصمم بصورة سليمة. وتعد الملاحظة أفضل البدائل في هذه المسألة لأنها ترتبط بالتطبيق الفعلي، لكنها بمفردها لا تثبت استمرار الفعالية طوال الفترة ولا تغني عن تقييم التصميم وأدلة الاختبار الأخرى."
   },
   {
     "unit": 18,
@@ -1889,7 +1945,15 @@
     ],
     "answerIndex": 0,
     "explanation": "To test the effectiveness of controls, common methods are\ninquiry, observation, inspection, recalculation, and\nreperformance of a control. Thus, observing an entity’s\nemployee prepare the schedule of past due accounts\nreceivable provides evidence of the effectiveness of certain\ncontrols over accounts receivable.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي اختبارات الذمم المدينة الآتية يُرجح أن يساعد على تحديد فعالية الضوابط المتعلقة بها؟",
+    "choicesAr": [
+      "ملاحظة أحد موظفي المنشأة أثناء إعداد جدول الذمم المدينة المتأخرة.",
+      "إرسال طلبات تأكيد إلى عملاء المنشأة الرئيسيين للتحقق من وجود الذمم المدينة.",
+      "فحص تحليل الذمم المدينة بحثًا عن الأرصدة غير المعتادة.",
+      "مقارنة مصروف الديون غير القابلة للتحصيل بالذمم التي تعذر تحصيلها فعليًا."
+    ],
+    "explanationAr": "تشمل الطرق الشائعة لاختبار فعالية الضوابط الاستفسار والملاحظة والفحص وإعادة الحساب وإعادة أداء الضابط. وتوفر ملاحظة الموظف أثناء إعداد جدول الذمم المتأخرة دليلًا يتعلق بتشغيل الضوابط المعنية. أما تأكيد أرصدة العملاء فهو في الأصل إجراء للتحقق من الأرصدة، ولا يثبت وحده الفعالية التشغيلية للضابط."
   },
   {
     "unit": 18,
@@ -1906,7 +1970,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Other tests should be used in combination with inquiry to\ndetermine the operating effectiveness of controls. Thus,\ninquiry by itself is not sufficient. Accordingly, inquiry combined\nwith inspection, recalculation, or reperformance may be\npreferable to inquiry and observation. An observation is\nrelevant only at a moment in time. Reperformance is\nperforming a control again to assess its accuracy and\neffectiveness.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "قد تشمل اختبارات فعالية الضوابط أيًا مما يلي؟",
+    "choicesAr": [
+      "التحليل.",
+      "المصادقات الخارجية.",
+      "إعادة الأداء.",
+      "المقارنة."
+    ],
+    "explanationAr": "ينبغي الجمع بين الاستفسار واختبارات أخرى لتحديد الفعالية التشغيلية للضوابط؛ فالاستفسار وحده غير كافٍ. وقد يكون الجمع بين الاستفسار والفحص أو إعادة الحساب أو إعادة الأداء أنسب من الاقتصار على الاستفسار والملاحظة. وتعكس الملاحظة لحظة تنفيذ محددة. أما إعادة الأداء فهي تنفيذ الضابط بصورة مستقلة مرة أخرى لتقييم دقته وفعاليته."
   },
   {
     "unit": 18,
@@ -1923,7 +1995,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Tests of controls are directed toward operating effectiveness.\nThey include (1) inquiries of entity personnel (e.g., a\nquestionnaire completed by an employee in the receiving\ndepartment); (2) inspection of documents, reports, and\nelectronic files indicating performance of the controls;\n(3) observation of the application of the controls; and\n(4) reperformance of the controls.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يُرجح أخذه في الاعتبار ضمن إجراءات تحديد ما إذا كانت الضوابط الداخلية تعمل بفعالية؟",
+    "choicesAr": [
+      "خطاب إقرارات الإدارة الذي يؤيد تسعير المخزون.",
+      "استبيان تكمله موظفة في قسم الاستلام عن واجباتها ومسؤولياتها.",
+      "ردود المحامين على استفسارات المراجع.",
+      "مصادقات الذمم المدينة التي تتحقق من أرصدة الحسابات."
+    ],
+    "explanationAr": "تستهدف اختبارات الرقابة تقييم الفعالية التشغيلية، وتشمل: (1) الاستفسار من موظفي المنشأة، مثل استبيان موظفة الاستلام؛ (2) فحص المستندات والتقارير والملفات الإلكترونية التي تدل على تنفيذ الضوابط؛ (3) ملاحظة تطبيق الضوابط؛ (4) إعادة أداء الضوابط. والاستبيان وسيلة للاستفسار، لكنه لا يكفي بمفرده لإثبات الفعالية التشغيلية، بل ينبغي دعمه بأدلة مناسبة أخرى."
   },
   {
     "unit": 18,
@@ -1940,7 +2020,15 @@
     ],
     "answerIndex": 1,
     "explanation": "When documentary evidence does not exist, tests of the\neffectiveness of the operation of controls may involve such\nmethods as observation, inquiry, or computer-assisted\ntechniques. Inquiry alone, however, does not ordinarily\nprovide sufficient appropriate evidence to support the\nconclusion that the control is operating effectively.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "قد لا تتوافر أدلة مستندية لبعض الضوابط، مثل توزيع الصلاحيات والمسؤوليات. بأي الوسائل الآتية يُرجح أن يختبر المراجع هذه الضوابط؟",
+    "choicesAr": [
+      "الوسائل المعانة بالحاسوب والحصول على أدلة مؤيدة.",
+      "الملاحظة والاستفسار.",
+      "الفحص والتحقق من المستندات المؤيدة.",
+      "المصادقة وإعادة الحساب."
+    ],
+    "explanationAr": "عند غياب الأدلة المستندية، قد تشمل اختبارات الفعالية التشغيلية للضوابط الملاحظة والاستفسار أو التقنيات المعانة بالحاسوب بحسب طبيعة الضابط. لكن الاستفسار وحده لا يوفر عادة أدلة مراجعة كافية ومناسبة تدعم الاستنتاج بأن الضابط يعمل بفعالية."
   },
   {
     "unit": 18,
@@ -1957,7 +2045,15 @@
     ],
     "answerIndex": 1,
     "explanation": "When documentary evidence does not exist, tests of the\neffectiveness of the operation of controls may involve such\nmethods as observation, inquiry, or computer-assisted\ntechniques. Inquiry alone, however, does not ordinarily\nprovide sufficient appropriate evidence to support the\nconclusion that the control is operating effectively.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ترغب منشأة في تقييم تصميم الضوابط واختبارها فيما يتعلق بإجراءات المدفوعات النقدية. إذا لم تترك هذه الضوابط مسارًا من الأدلة المستندية، فما وسائل الاختبار الأكثر احتمالًا؟",
+    "choicesAr": [
+      "المصادقة والملاحظة.",
+      "الملاحظة والاستفسار.",
+      "الإجراءات التحليلية والمصادقة.",
+      "الاستفسار والإجراءات التحليلية."
+    ],
+    "explanationAr": "عند غياب الأدلة المستندية، قد تستخدم الملاحظة والاستفسار أو التقنيات المعانة بالحاسوب لاختبار الفعالية التشغيلية للضوابط بحسب طبيعتها. ولا يكفي الاستفسار وحده عادة لتوفير أدلة كافية ومناسبة تدعم الاستنتاج بأن الضابط يعمل بفعالية."
   },
   {
     "unit": 18,
@@ -1974,7 +2070,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The following tests of control activities are presented in the\norder of their efficacy in determining effectiveness (least to\nmost): (1) inquiry, (2) observation, (3) inspection of relevant\ndocumentation, and (4) reperformance of a control. Inquiry\nalone cannot provide sufficient support for a conclusion about\nthe effectiveness of a control.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي إجراءات المراجعة الآتية ينبغي الجمع بينه وبين إجراءات مراجعة أخرى عند استخدامه لاختبار الفعالية التشغيلية للضوابط؟",
+    "choicesAr": [
+      "الملاحظة.",
+      "الفحص.",
+      "الاستفسار.",
+      "إعادة الأداء."
+    ],
+    "explanationAr": "يعرض المصدر ترتيبًا تعليميًا لوسائل اختبار أنشطة الرقابة من الأقل إلى الأكثر قوة في الاستدلال على الفعالية: (1) الاستفسار، (2) الملاحظة، (3) فحص المستندات ذات الصلة، (4) إعادة أداء الضابط. ولا يوفر الاستفسار وحده دعمًا كافيًا للاستنتاج بشأن فعالية الضابط. وتعتمد قوة كل دليل ومدى كفايته على طبيعة الضابط والمخاطر والفترة محل الاختبار، وليس على ترتيب ثابت في جميع الحالات."
   },
   {
     "unit": 18,
