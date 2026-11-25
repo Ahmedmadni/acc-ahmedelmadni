@@ -73,4 +73,5 @@
 - [x] Unit 19 bilingual review ledger: 32 review-only reasons with page references in library and ExamPrep. See `docs/CMA_UNIT19_ARABIC_WAVE8_2026-11-25.md`.
 - [x] Unit 20 Wave 1: 10 finance transformation Arabic drafts (§1 Q2/Q4–12); **10/90 (11.1%)**, 3 reviewed holds, 77 unreviewed. Q1 cloud pricing absolutism, Q3 comparative conversion risk, Q13 rollback absolutism held. See `docs/CMA_UNIT20_ARABIC_WAVE1_2026-11-25.md`.
 - [x] Unit 20 Wave 2: 10 implementation and cloud Arabic drafts (§1 Q14–15/Q17/Q20–22/Q24/Q26/Q28–29); **20/90 (22.2%)**, all 31 finance transformation records reviewed, 11 held, 59 unreviewed. See `docs/CMA_UNIT20_ARABIC_WAVE2_2026-11-25.md`.
+- [x] Unit 20 Wave 3: 10 data analytics Arabic drafts (§2 Q1–3/Q5–7/Q9–11/Q15); **30/90 (33.3%)**, 16 reviewed holds, 44 unreviewed. See `docs/CMA_UNIT20_ARABIC_WAVE3_2026-11-25.md`.
 - [ ] Revisit governance holds with official statutory scope and original-page checks; continue §2 Q17–65.
