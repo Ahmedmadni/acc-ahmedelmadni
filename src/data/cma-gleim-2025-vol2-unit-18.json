@@ -1050,7 +1050,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Internal control is a process designed to provide reasonable\nassurance regarding the achievement of organizational\nobjectives. Because of inherent limitations, however, no\nsystem can be designed to eliminate all fraud.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لا يمكن تصميم الرقابة الداخلية لتوفير تأكيد معقول بشأن تحقيق أي من الأهداف الآتية؟",
+    "choicesAr": [
+      "موثوقية التقارير المالية.",
+      "القضاء على جميع حالات الغش.",
+      "الالتزام بالقوانين واللوائح المعمول بها.",
+      "فعالية العمليات وكفاءتها."
+    ],
+    "explanationAr": "الرقابة الداخلية عملية مصممة لتوفير تأكيد معقول بشأن تحقيق أهداف المنشأة. ولكن بسبب القيود الملازمة للرقابة الداخلية، لا يمكن تصميم نظام يضمن القضاء على جميع حالات الغش."
   },
   {
     "unit": 18,
@@ -1084,7 +1092,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Inherent limitations of internal control arise from faulty\njudgment in decision making, simple error or mistake, and the\npossibility of collusion and management override. Thus, a\ncontrol (use of security guards) based on segregation of\nfunctions may be overcome by collusion among two or more\nemployees.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يدرك المراجع الداخلي وجود قيود ملازمة لأي نظام رقابة داخلية. أي الحالات الآتية تمثل أثرًا لأحد هذه القيود؟",
+    "choicesAr": [
+      "يتولى المراقب المالي تنفيذ الإيداعات النقدية وتسجيلها.",
+      "يسمح حارس الأمن لأحد موظفي المستودع بإخراج أصول الشركة دون تصريح.",
+      "تبيع المنشأة للعملاء بالأجل دون اعتماد الائتمان.",
+      "يُكلّف موظف لا يستطيع القراءة بحيازة مكتبة أشرطة الحاسوب وأدلة التشغيل المستخدمة في الوردية الثالثة."
+    ],
+    "explanationAr": "تنشأ القيود الملازمة للرقابة الداخلية من أخطاء الحكم والتقدير والأخطاء البشرية واحتمال التواطؤ وتجاوز الإدارة للضوابط. وقد يتم تجاوز ضابط الحراسة القائم على الفصل بين الوظائف بسبب تواطؤ موظفين أو أكثر. ولا يثبت وصف الواقعة وحده وجود تواطؤ؛ فقد يكون الإخفاق أيضًا نتيجة خطأ بشري في تطبيق الضابط، بخلاف غياب الضابط من الأساس."
   },
   {
     "unit": 18,
@@ -1101,7 +1117,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Independent reconciliation of bank accounts is necessary for\neffective internal control. Persons involved in making\ndisbursements or receiving payments should not reconcile the\nbank statement with the accounting records. Segregating\nthese functions reduces the opportunity for perpetrating and\nconcealing fraud.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يتولى أمين الخزانة إجراء المدفوعات بالشيكات ومطابقة كشوف البنك الشهرية مع السجلات المحاسبية. أي مما يلي يصف الأثر الرقابي لهذا الترتيب على أفضل وجه؟",
+    "choicesAr": [
+      "تتعزز الرقابة الداخلية لأن هذه المهام ينبغي أن يؤديها أمين الخزانة.",
+      "يصبح أمين الخزانة في وضع يسمح له بإجراء مدفوعات غير مصرح بها وإخفائها.",
+      "يتمكن أمين الخزانة من إجراء تعديلات غير مصرح بها على حساب النقدية.",
+      "تتعزز الرقابة لأن أمين الخزانة تتاح له فرصتان لاكتشاف المدفوعات غير الملائمة."
+    ],
+    "explanationAr": "تعد التسوية المستقلة للحسابات البنكية ضرورية للرقابة الداخلية الفعالة. وينبغي ألا يتولى الأشخاص المسؤولون عن إجراء المدفوعات أو استلام المقبوضات مطابقة كشف البنك مع السجلات المحاسبية. ويقلل الفصل بين هذه الوظائف فرص ارتكاب الغش وإخفائه."
   },
   {
     "unit": 18,
@@ -1118,7 +1142,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Independent reconciliation of bank accounts is necessary for\neffective internal control. Persons involved in making\ndisbursements or receiving payments should not reconcile the\nbank statement with the accounting records. Segregating\nthese functions reduces the opportunity for perpetrating and\nconcealing fraud.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لدى شركة متعددة الجنسيات مكتب في فرع أجنبي تتوافر فيه إمكانية تحويل الأموال. تتطلب الرقابة الداخلية الفعالة أن:",
+    "choicesAr": [
+      "لا يتولى الشخص الذي ينفذ التحويلات البنكية تسوية كشف البنك.",
+      "لا يسلم مدير الفرع شيكات الرواتب للموظفين.",
+      "يحسب موظفان في القسم نفسه بالفرع أسعار تحويل العملات الأجنبية كلٌ بصورة مستقلة.",
+      "يعتمد المقر الرئيسي تعيين كل موظف في الفرع."
+    ],
+    "explanationAr": "تعد التسوية المستقلة للحسابات البنكية ضرورية للرقابة الداخلية الفعالة. وينبغي ألا يتولى المسؤولون عن المدفوعات أو المقبوضات مطابقة كشف البنك بالسجلات المحاسبية. ويقلل الفصل بين هذه الوظائف فرص ارتكاب الغش وإخفائه."
   },
   {
     "unit": 18,
@@ -1135,7 +1167,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A common form of payroll fraud involves failure to remove\nterminated employees from the payroll and the diversion of the\npayments intended to be made to them. Reconciling time\ncards, job time tickets, and the payroll may detect this fraud.\nHowever, the perpetrator, who may be a supervisor, may be\nable to falsify the time-keeping records. In that case, a\nsurprise observation of the distribution of payroll may be\nnecessary to detect the fraud.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الضوابط الآتية يعد الأنسب من بين البدائل للتحقق من حذف الموظفين الذين انتهت خدماتهم من كشوف الرواتب؟",
+    "choicesAr": [
+      "إرسال الشيكات بالبريد إلى مساكن الموظفين.",
+      "وضع إجراءات للإيداع المباشر في الحسابات البنكية للموظفين.",
+      "مطابقة سجلات الرواتب مع سجلات أوقات العمل.",
+      "إنشاء ضوابط آلية للتحقق من حدود معدلات الأجور."
+    ],
+    "explanationAr": "من صور غش الرواتب الشائعة عدم حذف الموظفين الذين انتهت خدماتهم والاستيلاء على المدفوعات المخصصة لهم. وقد تكشف مطابقة بطاقات الوقت وسجلات ساعات العمل مع كشف الرواتب هذا الغش، ولكن قد يتمكن مرتكب الغش، مثل المشرف، من تحريف سجلات الوقت. وفي بيئة توزيع الشيكات قد تلزم ملاحظة التوزيع بصورة مفاجئة. ومن الضوابط المكملة المهمة المطابقة المستقلة مع سجل الموظفين النشطين وإشعارات إنهاء الخدمة الصادرة عن الموارد البشرية."
   },
   {
     "unit": 18,
@@ -1152,7 +1192,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Accounting for payables is a recording function. The matching\nof the supplier’s invoice, the purchase order, and the receiving\nreport (and usually the purchase requisition) should be the\nresponsibility of the accounting department. These are the\nprimary supporting documents for the payment voucher\nprepared by the accounts payable section that will be relied\nupon by the treasurer in making payment.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الملاحظات الآتية خلال المسح الأولي لدورة المدفوعات في متجر محلي متعدد الأقسام يعكس نقطة قوة رقابية؟",
+    "choicesAr": [
+      "يستخدم مديرو الأقسام نماذج مرقمة مسبقًا لطلب البضائع من الموردين.",
+      "يُزود قسم الاستلام بنسخة من أمر الشراء تتضمن وصف البضاعة والكمية المطلوبة وإجمالي السعر لكل بند.",
+      "يعد مكتب أمين الخزانة شيكات الموردين بناء على مستندات الصرف التي يعدها قسم الذمم الدائنة.",
+      "يتولى مديرو الأقسام نقل البضائع من منصة الاستلام إلى مناطق التخزين أو البيع حسب الحاجة."
+    ],
+    "explanationAr": "محاسبة الذمم الدائنة وظيفة تسجيل. وينبغي أن يتولى قسم المحاسبة مطابقة فاتورة المورد مع أمر الشراء وتقرير الاستلام، وعادةً طلب الشراء أيضًا. وتمثل هذه المستندات الأساس المؤيد لمستند الصرف الذي يعده قسم الذمم الدائنة وتعتمد عليه الخزانة في تنفيذ الدفع، وفق الصلاحيات المعتمدة."
   },
   {
     "unit": 18,
@@ -1169,7 +1217,15 @@
     ],
     "answerIndex": 2,
     "explanation": "First-line supervisors are in a position to determine whether\nemployees have actually worked the hours indicated on their\ntime cards. Accordingly, the supervisor’s approval is a\nnecessary control to prevent unearned payments.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "وجد مراجع داخلي أن بطاقات تسجيل أوقات عمل الموظفين في أحد الأقسام لا يعتمدها المشرف بصورة سليمة. أي مما يلي قد ينتج عن ذلك؟",
+    "choicesAr": [
+      "قد تصدر شيكات رواتب مكررة.",
+      "قد يستخدم معدل أجر خاطئ بالساعة لحساب إجمالي الأجر.",
+      "قد يتقاضى الموظفون أجورًا عن ساعات لم يعملوها.",
+      "قد لا توزع شيكات الرواتب على المستفيدين الصحيحين."
+    ],
+    "explanationAr": "يستطيع المشرفون المباشرون التحقق مما إذا كان الموظفون قد عملوا فعليًا الساعات المسجلة في بطاقات الوقت. لذلك يعد اعتماد المشرف ضابطًا مهمًا لمنع دفع أجور غير مستحقة، مع مراعاة استقلال المراجعة."
   },
   {
     "unit": 18,
@@ -1186,7 +1242,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Specifications for materials purchased provide an objective\nmeans of determining that the materials meet the minimum\nquality level required for production. Deviations should be\nauthorized at higher levels of management.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الضوابط الآتية يُرجح أن يقلل عيوب المنتجات التامة الناتجة عن رداءة جودة المواد الخام؟",
+    "choicesAr": [
+      "المناولة السليمة للمخزون تحت التشغيل لمنع تلفه.",
+      "تطبيق مواصفات محددة للمشتريات.",
+      "المتابعة في الوقت المناسب لانحرافات الاستخدام غير المواتية.",
+      "تحديد التالف في نهاية عملية التصنيع."
+    ],
+    "explanationAr": "توفر مواصفات المواد المشتراة أساسًا موضوعيًا للتحقق من استيفائها الحد الأدنى للجودة المطلوبة للإنتاج. وينبغي أن تعتمد المستويات الإدارية الأعلى المختصة أي استثناءات من هذه المواصفات وفق الصلاحيات."
   },
   {
     "unit": 18,
@@ -1203,7 +1267,15 @@
     ],
     "answerIndex": 1,
     "explanation": "By segregating duties, organizations make it more difficult for\none person to perpetrate a fraud. When custody of the asset\nand recordkeeping for the asset are invested in different\npersons, a fraud generally cannot be executed by one of the\ntwo parties. However, if they collude, the internal control\naspect of the segregation is nullified.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يعد الفصل بين الواجبات مفهومًا أساسيًا في نظام الرقابة الداخلية الفعال. ومع ذلك يجب أن يدرك المراجع الداخلي أن هذه الحماية قد تتعرض للتجاوز بسبب:",
+    "choicesAr": [
+      "نقص تدريب الموظفين.",
+      "التواطؤ بين الموظفين.",
+      "عدم انتظام تقييم الموظفين.",
+      "غياب المراجعة الداخلية."
+    ],
+    "explanationAr": "يجعل الفصل بين الواجبات ارتكاب الغش بواسطة فرد واحد أكثر صعوبة. فعندما يتولى أشخاص مختلفون حيازة الأصل وحفظ سجلاته، تقل قدرة أي منهما على ارتكاب الغش منفردًا وإخفائه. لكن تواطؤهما قد يعطل فعالية هذا الفصل الرقابي."
   },
   {
     "unit": 18,
@@ -1237,7 +1309,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The Accounts Payable Department should receive a copy of\nthe purchase order for internal control purposes to ensure that\nall invoices paid are for properly authorized items. The\nReceiving Department should receive a copy (with the quantity\nomitted to encourage an honest count) so that its employees\nwill know that incoming shipments were authorized and should\nbe accepted. In addition, the department issuing the\npurchasing requisition (the Inventory Control Department)\nshould receive a copy as a notification that the order has been\nplaced.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تُعد عدة نسخ من أمر الشراء لأغراض حفظ السجلات والتوزيع، فترسل نسخة إلى المورد ويحتفظ قسم المشتريات بأخرى. ولضمان تدفق المعلومات والرقابة الداخلية المناسبة، إلى أي الأقسام توزع نسخ أخرى من أمر الشراء؟",
+    "choicesAr": [
+      "الذمم الدائنة والاستلام ورقابة المخازن.",
+      "الذمم الدائنة والاستلام ورقابة المخزون.",
+      "الذمم الدائنة والذمم المدينة والاستلام.",
+      "الذمم الدائنة والاستلام وتخطيط الإنتاج."
+    ],
+    "explanationAr": "يتلقى قسم الذمم الدائنة نسخة للتحقق من أن الفواتير المدفوعة تتعلق بأصناف معتمدة. ويتلقى قسم الاستلام نسخة تُحذف منها الكمية لتشجيع العد المستقل والتحقق من اعتماد الشحنات الواردة. كما يتلقى القسم الذي أصدر طلب الشراء، وهو قسم رقابة المخزون في التنظيم المفترض في هذه المسألة، نسخة لإخطاره بإصدار الأمر. وقد يختلف توزيع النسخ حسب الهيكل التنظيمي والنظام الإلكتروني."
   },
   {
     "unit": 18,
@@ -1254,7 +1334,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The Purchasing Department is in the best position to follow up\non purchase orders because it is the department closest to the\nvendors. In effect, the Purchasing Department is fully\nresponsible for all communications with the vendor from the\ntime a purchase order is issued until the goods are received.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "إلى أي قسم تُسند مسؤولية متابعة المشكلات المتعلقة بأوامر شراء مواد ومستلزمات الإنتاج، مثل عدم تلقي تأكيد الطلب أو تأخره أو تسليمه جزئيًا أو استلام بضائع تالفة أو دون المواصفات؟",
+    "choicesAr": [
+      "قسم رقابة المخزون.",
+      "قسم رقابة المخازن.",
+      "قسم تخطيط الإنتاج.",
+      "قسم المشتريات."
+    ],
+    "explanationAr": "يعد قسم المشتريات الأنسب لمتابعة أوامر الشراء لأنه الأقرب إلى الموردين. وفي التنظيم المفترض يتولى هذا القسم التواصل مع المورد منذ إصدار أمر الشراء حتى استلام البضاعة، بالتنسيق مع جهات الاستلام والفحص والمخزون عند وجود مشكلات."
   },
   {
     "unit": 18,
@@ -1271,7 +1359,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The Accounts Payable Department prepares a voucher from a\nvendor’s invoice only after examining supporting documents.\nThese include a properly authorized purchase order and a\nreceiving report stating quantities received and their condition.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما المستندات التي يجب أن يراجعها قسم الذمم الدائنة قبل اعتماد صرف قيمة مشتريات المواد والمستلزمات وفق دورة المشتريات المفترضة؟",
+    "choicesAr": [
+      "فاتورة المورد وطلب الشراء وإقرار استلام أمر الشراء.",
+      "فاتورة المورد وإقرار استلام أمر الشراء وتقرير الاستلام.",
+      "كشف حساب المورد الشهري وأمر الشراء ومستند الصرف.",
+      "فاتورة المورد وأمر الشراء وتقرير الاستلام."
+    ],
+    "explanationAr": "يعد قسم الذمم الدائنة مستند الصرف بناء على فاتورة المورد بعد فحص المستندات المؤيدة، ومنها أمر شراء معتمد وتقرير استلام يوضح الكميات المستلمة وحالتها. وتمثل هذه المستندات أساس المطابقة الثلاثية قبل اعتماد الدفع، وفق الصلاحيات المعتمدة، دون أن يعني ذلك تأجيل إثبات الالتزام المستحق."
   },
   {
     "unit": 18,
@@ -1288,7 +1384,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Before ordering an item, the purchasing department should\nhave on hand a purchase requisition reflecting an authorized\nrequest by inventory control. Before a voucher is prepared for\npaying an invoice, the accounts payable department should\nhave the purchase requisition, a purchase order (to be certain\nthe items were indeed ordered), the vendor’s invoice, and a\nreceiving report (to be certain the items were received).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "للرقابة على المشتريات والذمم الدائنة يجب أن يتضمن نظام المعلومات مستندات مصدرية معينة. أي مجموعة تمثل المستندات المناسبة لمنشأة صناعية؟",
+    "choicesAr": [
+      "أوامر الشراء وتقارير الاستلام وفواتير الموردين.",
+      "تقارير الاستلام وفواتير الموردين.",
+      "طلبات الشراء وأوامر الشراء وتقارير الاستلام وفواتير الموردين.",
+      "طلبات الشراء وأوامر الشراء وتقارير المخزون عن البضائع المطلوبة وفواتير الموردين."
+    ],
+    "explanationAr": "قبل طلب الصنف، ينبغي أن يكون لدى قسم المشتريات طلب شراء يعكس احتياجًا معتمدًا صادرًا عن الجهة المختصة، وهي رقابة المخزون في النموذج المفترض. وقبل إعداد مستند صرف الفاتورة ينبغي أن تتوافر لدى قسم الذمم الدائنة المستندات المؤيدة، ومنها طلب الشراء وأمر الشراء للتحقق من الطلب الفعلي وفاتورة المورد وتقرير الاستلام للتحقق من استلام البضائع. ويمكن تنفيذ هذه الضوابط بمستندات إلكترونية مكافئة."
   },
   {
     "unit": 18,
