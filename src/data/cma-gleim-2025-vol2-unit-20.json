@@ -1381,7 +1381,15 @@
     ],
     "answerIndex": 0,
     "explanation": "After a problem has been formulated into any mathematical\nmodel, it may be subjected to sensitivity analysis. Sensitivity\nanalysis examines how the model’s outcomes change as the\nparameters change.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "طُوّر نموذج للتكلفة والحجم والربح في بيئة متغيرة، وتبين أن معلماته المقدرة قد تتغير بين حدود معينة. ماذا يسمى اختبار مدى تأثر نتائج النموذج بالقيم المحتملة لهذه المعلمات؟",
+    "choicesAr": [
+      "تحليل الحساسية.",
+      "تحليل منحنى التعلم.",
+      "تحليل القيمة المتوقعة.",
+      "دراسة السلاسل الزمنية."
+    ],
+    "explanationAr": "يدرس تحليل الحساسية كيفية تغير مخرجات النموذج الرياضي عند تغيير معلماته أو افتراضاته. ويساعد على تحديد المدخلات التي تؤثر بدرجة كبيرة في النتائج، ولا يشترط اختبار كل قيمة ممكنة على حدة."
   },
   {
     "unit": 20,
@@ -1415,7 +1423,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Data mining examines large amounts of data to discover\npatterns in the data (i.e., unexpected relationships among\ndata). A classic example of the use of data mining is the\ndiscovery by convenience stores that diapers and beer often\nappear on the same sales transaction in the late evening.\nThus, previously unknown information can be discovered\nusing a data-mining process.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يمكن اكتشافه باستخدام عملية التنقيب عن البيانات؟",
+    "choicesAr": [
+      "هيكل البيانات.",
+      "معلومات لم تكن معروفة سابقًا.",
+      "الذكاء الاصطناعي.",
+      "تقارير الاستعلامات القياسية."
+    ],
+    "explanationAr": "يفحص التنقيب عن البيانات كميات كبيرة من البيانات لاكتشاف أنماط وعلاقات لم تكن معروفة سابقًا، مثل تكرار شراء منتجات معينة معًا. ويورد المصدر مثالًا شائعًا عن ارتباط شراء حفاضات الأطفال ومشروب معين في معاملات المساء؛ وهو مثال توضيحي لا يكفي وحده لإثبات علاقة عامة أو سببية."
   },
   {
     "unit": 20,
@@ -1432,7 +1448,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Data mining allows a user to discover hidden relationships,\nsuch as associations, sequences of events, classifications\n(descriptions of the groups to which the item belongs), or\nclusters (new groupings previously not known). Typical\napplications of data mining are identification of potential\ncustomers and purchasing power.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يعد عامل نجاح أساسيًا في التنقيب عن البيانات ضمن مستودع بيانات كبير؟",
+    "choicesAr": [
+      "التعرف على الأنماط.",
+      "محركات بحث فعالة.",
+      "أنظمة معالجة الصور.",
+      "دقة عنوان المورد الموحد (URL)."
+    ],
+    "explanationAr": "يتيح التنقيب عن البيانات اكتشاف علاقات خفية، مثل الارتباطات وتسلسل الأحداث والتصنيفات والمجموعات العنقودية غير المعروفة سابقًا. ومن تطبيقاته تحديد العملاء المحتملين وتقدير أنماط القوة الشرائية. ويعتمد نجاح التعرف على الأنماط أيضًا على جودة البيانات والتحقق من النتائج."
   },
   {
     "unit": 20,
@@ -1449,7 +1473,15 @@
     ],
     "answerIndex": 3,
     "explanation": "One limitation of big data is that user-level data results are\nincomplete. Generally, the data available to an organization\nare restricted to data of persons who have had some contact\nwith the organization (e.g., visited the organization’s website\nor called the organization). The data are only representative of\nthe target market; thus, untapped markets could potentially\nexist, the data of which are not being captured.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات الآتية تصف أحد القيود المحتملة للبيانات الضخمة على أفضل وجه؟",
+    "choicesAr": [
+      "غالبًا ما تقدم البيانات المجمعة إجابات مباشرة للمستخدمين.",
+      "تخلو البيانات المجمعة من المعلومات غير المفيدة والمتغيرات غير الصحيحة.",
+      "تقتصر البيانات الضخمة على سياق مرئي كالرسوم والمخططات بدلًا من النصوص.",
+      "غالبًا ما لا تُجمع بيانات عن الأسواق التي لم تستهدفها المنشأة بعد."
+    ],
+    "explanationAr": "قد تكون البيانات المتاحة للمنشأة غير مكتملة أو متحيزة نحو الأشخاص الذين سبق لهم التفاعل معها، مثل زوار الموقع أو المتصلين بها. لذلك قد لا تمثل البيانات حتى السوق المستهدفة تمثيلًا كاملًا، وقد تغيب عنها أسواق لم تستكشفها المنشأة. ولا يزول تحيز التغطية لمجرد زيادة حجم البيانات."
   },
   {
     "unit": 20,
@@ -1483,7 +1515,15 @@
     ],
     "answerIndex": 2,
     "explanation": "One limitation of big data is that user-level data results require\ninterpretation prior to use. Data visualizations assist big data\nin identifying trends and correlations that run the risk of going\nundetected in text-based data.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يصف تصور البيانات على أفضل وجه؟",
+    "choicesAr": [
+      "يشمل أدوات مثل المخططات الفقاعية ومخططات باريتو والصندوق والشعيرات وتحليلات ماذا لو.",
+      "يضمن فهم جمهور أوسع للاتجاهات والارتباطات دون تحيز.",
+      "يساعد تحليلات البيانات الضخمة على عرض نتائج البيانات في سياق مرئي.",
+      "يحقق أكبر فائدة عندما تعرض الأدوات العناصر بمقاييس مختلفة وتتخطى بعض القيم لإبراز ما يركز عليه مقدم العرض."
+    ],
+    "explanationAr": "يساعد تصور البيانات على عرض النتائج وفهم الاتجاهات والارتباطات التي قد يصعب ملاحظتها في النصوص والجداول. وتظل النتائج بحاجة إلى تفسير سليم، ولا يضمن العرض المرئي وحده إزالة التحيز. وتحليل ماذا لو أسلوب تحليلي يمكن عرض نتائجه بصريًا، وليس نوعًا من المخططات بحد ذاته."
   },
   {
     "unit": 20,
@@ -1517,7 +1557,15 @@
     ],
     "answerIndex": 1,
     "explanation": "What-if analysis is a process of determining the effects on\noutcomes in a model through changes in scenarios. The\nanalyst is performing a what-if analysis by evaluating the\neffects of small changes in advertising expenses on sales to\nobtain better forecasts.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عينت الشركة B محللًا ماليًا لتحسين نتائجها. ويرغب في تطبيق أسلوب تحليلي يساعد على تقييم تأثير التغيرات الصغيرة في مصروفات الإعلان على المبيعات، ويتوقع أن يدعم تقدير آثار قرارات تخصيص الموارد. ما نوع التحليل المقصود؟",
+    "choicesAr": [
+      "أسلوب دلفي.",
+      "تحليل ماذا لو.",
+      "اختبار جودة المطابقة.",
+      "مخططات عظمة السمكة."
+    ],
+    "explanationAr": "يدرس تحليل ماذا لو تغير النتائج المتوقعة عند تعديل مدخلات النموذج أو سيناريوهاته. وفي هذه الحالة يغير المحلل افتراضات مصروفات الإعلان لدراسة أثرها المتوقع على المبيعات. وتعتمد جودة التقدير على صلاحية النموذج وافتراضاته."
   },
   {
     "unit": 20,
@@ -1551,7 +1599,15 @@
     ],
     "answerIndex": 1,
     "explanation": "What-if analysis is a process of determining the effects on\noutcomes in a model through changes in scenarios. Goal\nseeking occurs when the decision maker has a specific\noutcome in mind and needs to determine how it can be\nachieved. The accountant performs the analysis to determine\nfourth quarter cost savings so that the annual goal of $56,000\ncost savings will be achieved. This is an example of what-if\nanalysis.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يحدث محاسب تكاليف موازنة الربع الرابع. ويبلغ الهدف السنوي للوفورات $56,000، بينما بلغت الوفورات في الأرباع الأول والثاني والثالث $12,000 و$6,700 و$9,200 على الترتيب. أجرى المحاسب تحليلًا لتحديد الوفورات المطلوبة في الربع الرابع لتحقيق الهدف السنوي. ما نوع التحليل من بين البدائل؟",
+    "choicesAr": [
+      "محاكاة مونت كارلو.",
+      "تحليل ماذا لو.",
+      "التحليلات التنبؤية.",
+      "تحليل السلاسل الزمنية."
+    ],
+    "explanationAr": "يختص تحليل ماذا لو بدراسة أثر تغيير مدخلات النموذج على نتائجه، ويشمل في بعض الأدوات البحث عن الهدف (Goal Seek)، حيث تحدد النتيجة المطلوبة ثم تحسب قيمة المدخل اللازمة. وهنا يطرح المحاسب مجموع الوفورات المحققة من الهدف السنوي البالغ $56,000 لتحديد المطلوب في الربع الرابع. والتسمية الأدق لهذه العملية هي البحث عن الهدف، وهو أحد أساليب تحليل ماذا لو."
   },
   {
     "unit": 20,
@@ -1585,7 +1641,15 @@
     ],
     "answerIndex": 1,
     "explanation": "A common use of predictive analytics in the retail sector\noccurs when a customer selects an item to purchase online\nand prepares to finalize the transaction; the web page then\ndisplays additional products other customers purchased in\nconjunction with the initial item.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يمثل على أفضل وجه تطبيقًا للتحليلات التنبؤية؟",
+    "choicesAr": [
+      "يعد مدير الموارد البشرية تحليلًا يبين الإدارات ذات أعلى معدل دوران للموظفين.",
+      "يوصي الموقع بألعاب الحيوانات الأليفة ومفارشها بعد شراء العميل طعامًا لها.",
+      "ينظم مستشار تحليلًا لأسباب عدم رضا العاملين والعلاقات المحتملة بين الأسباب.",
+      "يراقب محاسب التكاليف ما إذا كان استخدام المواد المباشرة ضمن حدود التغير المقبولة خلال آخر 6 أشهر."
+    ],
+    "explanationAr": "من تطبيقات التحليلات التنبؤية المحتملة في تجارة التجزئة توصية العملاء بمنتجات إضافية استنادًا إلى أنماط الشراء السابقة، لتقدير ما قد يرغبون في شرائه. أما مجرد عرض منتجات مشتراة معًا فقد يستند أيضًا إلى قواعد ارتباط وصفية؛ ويعد البديل المتعلق بالتوصية أقرب الأمثلة إلى التنبؤ بين الخيارات."
   },
   {
     "unit": 20,
