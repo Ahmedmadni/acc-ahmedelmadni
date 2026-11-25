@@ -85,3 +85,5 @@
 - [ ] Resolve review holds against authorized original pages; distinguish Arabic drafts from verified translations and scored eligibility.
 
 - [x] Unit 1 resumed Wave 1: seven cash flow Arabic drafts (§5 Q34–38/Q40/Q42), 155/217 complete Arabic, five additional source-review holds. See `docs/CMA_UNIT1_ARABIC_RESUME_WAVE1_2026-11-25.md`.
+
+- [x] Unit 1 resumed Wave 2: ten cash flow Arabic drafts (§5 Q43–52), **165/217 (76.0%)**. US GAAP context and note receivable loan assumption documented. Original-page validation pending; continue Q53. See `docs/CMA_UNIT1_ARABIC_RESUME_WAVE2_2026-11-25.md`.
