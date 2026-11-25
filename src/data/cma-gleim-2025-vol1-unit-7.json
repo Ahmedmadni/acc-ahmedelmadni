@@ -14,7 +14,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Inventoriable (product) costs include all costs necessary for\ngood production. These include direct materials and\nconversion costs (direct labor and overhead). Inventoriable\ncosts are treated as assets until the products are sold\nbecause they represent future economic benefits. These costs\nare expensed at the time of sale.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية تصف التكاليف القابلة للتحميل على المخزون؟",
+    "choicesAr": [
+      "تشمل التكاليف الأولية للتصنيع فقط.",
+      "تشمل تكاليف التحويل فقط.",
+      "تحمل على المصروفات بمجرد تحول المنتجات إلى مخزون تام.",
+      "تعامل باعتبارها أصولًا قبل بيع المنتجات."
+    ],
+    "explanationAr": "تشمل تكاليف المنتج القابلة للتحميل على المخزون التكاليف اللازمة للإنتاج، ومنها المواد المباشرة وتكاليف التحويل (الأجور المباشرة والتكاليف الصناعية غير المباشرة). وتثبت أصولًا قبل البيع لأنها تمثل منافع اقتصادية مستقبلية، وتحمل على المصروف عند البيع، مع مراعاة أحكام انخفاض قيمة المخزون."
   },
   {
     "unit": 7,
@@ -31,7 +39,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Materials, labor, and overhead (both fixed and variable) are\nexamples of product costs. Abnormal spoilage is an example\nof a period cost. Abnormal spoilage is not inherent in a\nproduction process and should not be categorized as a\nproduct cost. Abnormal spoilage should be charged to a loss\naccount in the period that detection of the spoilage occurs.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يعد تكلفة فترة لا تكلفة منتج لدى منشأة صناعية؟",
+    "choicesAr": [
+      "المواد المباشرة.",
+      "التكاليف الصناعية غير المباشرة المتغيرة.",
+      "التكاليف الصناعية غير المباشرة الثابتة.",
+      "التالف غير الطبيعي."
+    ],
+    "explanationAr": "المواد والأجور والتكاليف الصناعية غير المباشرة الثابتة والمتغيرة أمثلة لتكاليف المنتج، في حدود التكاليف القابلة للتحميل على المخزون. أما التالف غير الطبيعي فلا يعد جزءًا ملازمًا لعملية الإنتاج العادية ولا يحمل على تكلفة المنتج، بل يثبت خسارة في فترة اكتشافه."
   },
   {
     "unit": 7,
@@ -48,7 +64,15 @@
     ],
     "answerIndex": 0,
     "explanation": "A cost driver is “a measure of activity, such as direct labor\nhours, machine hours, beds occupied, computer time used,\nflight hours, miles driven, or contracts, that is a causal factor in\nthe incurrence of cost to an entity” (IMA). It is a basis used to\nassign costs to cost objects.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما المقصود بمحركات التكلفة؟",
+    "choicesAr": [
+      "أنشطة تسبب زيادة التكاليف مع زيادة النشاط.",
+      "أساليب محاسبية تستخدم للرقابة على التكاليف.",
+      "مقاييس محاسبية لتقييم سير الأداء وفق الخطة.",
+      "أساس آلي مثل ساعات الآلات أو وقت الحاسوب أو حجم المعدات أو مساحة المصنع يستخدم لتوزيع التكاليف على الأنشطة."
+    ],
+    "explanationAr": "محرك التكلفة مقياس للنشاط يمثل عاملًا سببيًا في تكبد التكلفة، مثل ساعات العمل المباشر أو تشغيل الآلات أو إشغال الأسرّة أو استخدام الحاسوب أو ساعات الطيران أو الأميال المقطوعة أو العقود. ويستخدم أساسًا لتحميل التكاليف على أغراض التكلفة."
   },
   {
     "unit": 7,
@@ -65,7 +89,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A direct cost can be specifically associated with a single cost\nobject in an economically feasible way. An indirect cost cannot\nbe specifically associated with a single cost object. Thus, the\nspecific cost object influences whether a cost is direct or\nindirect. For example, a cost might be directly associated with\na single plant. The same cost, however, might not be directly\nassociated with a particular department in the plant.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يشيع استخدام مصطلحي التكلفة المباشرة وغير المباشرة في المحاسبة. وقد تكون تكلفة معينة مباشرة بالنسبة لقسم صناعي وغير مباشرة بالنسبة للمنتج الذي يصنعه القسم. على ماذا يعتمد تصنيف التكلفة؟",
+    "choicesAr": [
+      "سلوك التكلفة عند تغير حجم النشاط.",
+      "تحميل التكلفة على المصروف في فترة تكبدها.",
+      "غرض التكلفة الذي تربط به.",
+      "كون النفقة حتمية ولا تتغير بأي إجراء."
+    ],
+    "explanationAr": "يمكن تتبع التكلفة المباشرة إلى غرض تكلفة محدد بطريقة مجدية اقتصاديًا، بخلاف التكلفة غير المباشرة التي تحتاج إلى تخصيص. لذلك يعتمد التصنيف على غرض التكلفة؛ فقد تكون تكلفة مباشرة لمصنع بعينه ولكنها غير مباشرة لقسم معين داخله."
   },
   {
     "unit": 7,
@@ -82,7 +114,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Direct labor is a product cost and a prime cost. Product costs\nare incurred to produce units of output and are deferred to\nfuture periods to the extent that output is not sold. Prime costs\nare the direct cost of manufacturing, for example, direct\nmaterials and direct labor.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما أفضل وصف للأجور المباشرة؟",
+    "choicesAr": [
+      "تكلفة أولية.",
+      "تكلفة فترة.",
+      "تكلفة منتج.",
+      "تكلفة منتج وتكلفة أولية معًا."
+    ],
+    "explanationAr": "الأجور المباشرة تكلفة منتج وتكلفة أولية. وتتكبد تكاليف المنتج لإنتاج الوحدات وتؤجل ضمن المخزون بقدر ما لم يبع الإنتاج. وتشمل التكاليف الأولية للتصنيع المواد المباشرة والأجور المباشرة."
   },
   {
     "unit": 7,
@@ -99,7 +139,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Conversion costs consist of direct labor and factory overhead.\nThese are the costs of converting raw materials into a finished\nproduct.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في مصطلحات محاسبة التكاليف، مم تتكون تكاليف التحويل؟",
+    "choicesAr": [
+      "الأجور المباشرة وغير المباشرة.",
+      "الأجور المباشرة والمواد المباشرة.",
+      "الأجور المباشرة والتكاليف الصناعية غير المباشرة.",
+      "الأجور غير المباشرة والتكاليف الصناعية غير المباشرة المتغيرة."
+    ],
+    "explanationAr": "تتكون تكاليف التحويل من الأجور المباشرة والتكاليف الصناعية غير المباشرة، وهي تكاليف تحويل المواد الخام إلى منتج تام."
   },
   {
     "unit": 7,
@@ -116,7 +164,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Conversion costs are necessary to convert raw materials into\nfinished products. They include all manufacturing costs, for\nexample, direct labor and manufacturing overhead, other than\ndirect materials.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي لا يدخل ضمن تكاليف التحويل؟",
+    "choicesAr": [
+      "إهلاك الأصول الصناعية.",
+      "المواد المباشرة.",
+      "الأجور غير المباشرة.",
+      "المواد غير المباشرة."
+    ],
+    "explanationAr": "تكاليف التحويل هي تكاليف تحويل المواد الخام إلى منتجات تامة. وتشمل تكاليف التصنيع بخلاف المواد المباشرة، أي الأجور المباشرة والتكاليف الصناعية غير المباشرة."
   },
   {
     "unit": 7,
@@ -133,7 +189,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Prime costs are raw material costs and direct labor costs.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "إلى ماذا يشير مصطلح التكاليف الأولية (Prime Costs)؟",
+    "choicesAr": [
+      "تكاليف التصنيع المتكبدة لإنتاج وحدات المخرجات.",
+      "جميع تكاليف التصنيع بخلاف الأجور المباشرة والمواد الخام.",
+      "مجموع الأجور المباشرة والتكاليف الصناعية غير المباشرة.",
+      "مجموع تكلفة المواد الخام المباشرة والأجور المباشرة."
+    ],
+    "explanationAr": "التكاليف الأولية هي مجموع تكاليف المواد المباشرة والأجور المباشرة."
   },
   {
     "unit": 7,
@@ -167,7 +231,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Direct labor costs are wages paid to labor that can feasibly be\nspecifically identified with the production of finished goods.\nBecause the wages of machine operators are identifiable with\nthe production of finished goods, their $145,000 of salaries are\na direct labor cost. However, because the salaries and wages\nof the factory supervisors and machinery mechanics are not\nidentifiable with the production of finished goods, their $60,000\nand $25,000 of salaries are not direct labor costs.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تصنع شركة المصابيح الكهربائية، وشملت تكاليف التصنيع السنوية الرواتب التالية:\nمشغلو الآلات | $145,000\nمشرفو المصنع | 60,000\nفنيو صيانة الآلات | 25,000\nما مبلغ الأجور المباشرة للسنة؟",
+    "choicesAr": [
+      "$230,000",
+      "$205,000",
+      "$170,000",
+      "$145,000"
+    ],
+    "explanationAr": "الأجور المباشرة هي أجور العمال التي يمكن تتبعها إلى إنتاج السلع التامة بطريقة مجدية اقتصاديًا. ونظرًا إلى إمكانية تتبع أجور مشغلي الآلات إلى الإنتاج، تعد رواتبهم البالغة $145,000 أجورًا مباشرة. أما رواتب مشرفي المصنع وفنيي الصيانة، البالغة $60,000 و$25,000، فلا تتبع مباشرة للمنتج، ولذلك لا تعد أجورًا مباشرة."
   },
   {
     "unit": 7,
@@ -184,7 +256,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Product costs can be associated with a specific product.\nProduct costs include direct materials and direct labor. Factory\noverhead cannot be traced to specific products and therefore\nis allocated to all products produced. Thus, the amount of\ncosts traceable to specific products in the production process\nis $228,000 ($120,000 + $108,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فيما يلي تكاليف الإنتاج لشهر يوليو:\nالمواد المباشرة | $120,000\nالأجور المباشرة | 108,000\nالتكاليف الصناعية غير المباشرة | 6,000\nما مبلغ التكاليف التي يمكن تتبعها إلى منتجات محددة؟",
+    "choicesAr": [
+      "$234,000",
+      "$228,000",
+      "$120,000",
+      "$108,000"
+    ],
+    "explanationAr": "التكاليف المباشرة للمنتج هي المواد المباشرة والأجور المباشرة. أما التكاليف الصناعية غير المباشرة فهي أيضًا تكاليف منتج لكنها تخصص على المنتجات بدلًا من تتبعها مباشرة. لذا تبلغ التكاليف القابلة للتتبع $228,000 ($120,000 + $108,000)."
   },
   {
     "unit": 7,
@@ -201,7 +281,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Direct costs are ones that can be associated with a particular\ncost object in an economically feasible way, that is, they can\nbe traced to that object. Fixed costs are those that remain\nunchanged in total over the relevant range of production. A\nhotel manager’s salary is traceable to the single location (s)he\nmanages, and it remains fixed over a set period of time\nregardless of the number of guests.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي مثال لتكلفة تشغيل فندق مباشرة وثابتة في الوقت نفسه؟",
+    "choicesAr": [
+      "راتب مدير الفندق.",
+      "المياه.",
+      "مناديل الحمام.",
+      "إعلانات سلسلة الفنادق."
+    ],
+    "explanationAr": "التكاليف المباشرة هي ما يمكن تتبعه إلى غرض تكلفة محدد بطريقة مجدية اقتصاديًا. وتظل التكاليف الثابتة دون تغير في مجموعها ضمن المدى الملائم للنشاط. وراتب مدير الفندق يمكن تتبعه إلى الموقع الذي يديره ويظل ثابتًا خلال فترة محددة بصرف النظر عن عدد النزلاء."
   },
   {
     "unit": 7,
@@ -218,7 +306,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Prime cost consists of direct materials and direct labor.\nConversion cost consists of direct labor and manufacturing\noverhead. The per unit calculations are as follows:\nDirect materials $2,000,000 Direct labor             $1,000,000\nDirect labor        1,000,000 Manufacturing              600,000\noverhead\nTotal prime        $3,000,000 Total conversion      $1,600,000\ncosts                         costs\nDivided by:      ÷       200,000 Divided by:        ÷       200,000\nproduction level                 production level\nPer unit prime       $        15 Per unit               $        8\ncost                             conversion cost",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تنتج شركة 200,000 وحدة من سلعة، وتتحمل التكاليف التالية:\nالمواد المباشرة | $2,000,000\nأجور التصنيع المباشرة | 1,000,000\nأجور التصنيع غير المباشرة | 600,000\nما التكاليف الأولية وتكاليف التحويل للوحدة على الترتيب؟",
+    "choicesAr": [
+      "$8 and $15.",
+      "$8 and $18.",
+      "$10 and $8.",
+      "$15 and $8."
+    ],
+    "explanationAr": "تتكون التكاليف الأولية من المواد والأجور المباشرة، بينما تتكون تكاليف التحويل من الأجور المباشرة والتكاليف الصناعية غير المباشرة. وفيما يلي الحساب لكل وحدة:\nالمواد المباشرة $2,000,000 | الأجور المباشرة $1,000,000\nالأجور المباشرة 1,000,000 | التكاليف الصناعية غير المباشرة 600,000\nإجمالي التكاليف الأولية $3,000,000 | إجمالي تكاليف التحويل $1,600,000\nيقسم كل مجموع على مستوى الإنتاج: 200,000 | 200,000\nالتكاليف الأولية للوحدة $15 | تكاليف التحويل للوحدة $8."
   },
   {
     "unit": 7,
@@ -235,7 +331,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Financial accounting is primarily concerned with historical\naccounting, i.e., traditional financial statements, and with\nexternal financial reporting to creditors and shareholders.\nManagement accounting applies primarily to the planning and\ncontrol of organizational operations, considers nonquantitative\ninformation, and is usually less precise.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تختلف المحاسبة الإدارية عن المحاسبة المالية في أن المحاسبة المالية:",
+    "choicesAr": [
+      "أكثر توجهًا نحو المستقبل.",
+      "تهتم أساسًا بالتقارير المالية الخارجية.",
+      "تهتم أساسًا بالمعلومات غير الكمية.",
+      "تركز على تحليل القرارات وتنفيذها."
+    ],
+    "explanationAr": "تهتم المحاسبة المالية أساسًا بالتقارير التاريخية والقوائم المالية الموجهة لأطراف خارجية مثل الدائنين والمساهمين. أما المحاسبة الإدارية فتركز على التخطيط والرقابة على العمليات، وتستعين بالمعلومات غير الكمية والتقديرات بحسب احتياجات القرار."
   },
   {
     "unit": 7,
@@ -252,7 +356,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Cost allocation is an internal matter that does not affect\ndemand (except to the extent it results in a change in price).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يتيح تخصيص التكاليف لأغراض تكلفة محددة تحليل كل مما يلي عدا:",
+    "choicesAr": [
+      "ما إذا كان ينبغي توسيع قسم معين.",
+      "سبب زيادة مبيعات منتج معين.",
+      "ما إذا كان ينبغي إيقاف خط إنتاج.",
+      "سبب شراء منتج بدلًا من تصنيعه داخليًا."
+    ],
+    "explanationAr": "تخصيص التكاليف إجراء داخلي لا يفسر في ذاته تغير الطلب أو زيادة المبيعات، وإن كان قد يؤثر فيها بصورة غير مباشرة إذا أدى إلى تغير السعر. وتستخدم بيانات التكاليف الملائمة في قرارات التوسع والإيقاف والشراء أو التصنيع."
   },
   {
     "unit": 7,
@@ -269,7 +381,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The cost of small tools used in mounting tires cannot be\nidentified solely with the manufacture of a specific automobile.\nThis cost should be treated as factory overhead because it is\nidentifiable with the production process.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تحدد شركات عديدة ثلاث فئات رئيسية لتكاليف تصنيع المنتج: المواد المباشرة والأجور المباشرة والتكاليف الصناعية غير المباشرة. أي مما يلي تكلفة صناعية غير مباشرة في تصنيع السيارات؟",
+    "choicesAr": [
+      "تكلفة الأدوات الصغيرة المستخدمة في تركيب الإطارات لكل سيارة.",
+      "تكلفة الإطارات لكل سيارة.",
+      "تكلفة أجور العمال الذين يركبون الإطارات.",
+      "تكاليف تسليم الإطارات الخاصة بكل سيارة."
+    ],
+    "explanationAr": "لا يمكن عمليًا تتبع تكلفة الأدوات الصغيرة المستخدمة لتركيب الإطارات إلى سيارة محددة وحدها، لكنها مرتبطة بعملية الإنتاج، ولذلك تصنف ضمن التكاليف الصناعية غير المباشرة."
   },
   {
     "unit": 7,
@@ -286,7 +406,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A cost incurred for the benefit of more than one cost objective\nis known as a common cost. Allocation of common costs is a\npersistent problem in responsibility accounting. For example,\nhow should the costs of corporate headquarters be allocated\nto the segments of a conglomerate? Common cost is also a\nsynonym for joint cost. In this sense, common costs are\nincurred in the production of two or more inseparable products\n(e.g., costs of refining petroleum into gasoline, diesel fuel,\nkerosene, lubricating oils, etc.) up to the point at which the\nproducts become separable (the split-off point).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما اسم التكلفة المتكبدة لمنفعة أكثر من غرض تكلفة واحد؟",
+    "choicesAr": [
+      "تكلفة متغيرة.",
+      "تكلفة تحويل.",
+      "تكلفة أولية.",
+      "تكلفة مشتركة."
+    ],
+    "explanationAr": "التكلفة التي يستفيد منها أكثر من غرض تكلفة هي تكلفة مشتركة، ويعد تخصيصها تحديًا في محاسبة المسؤولية، مثل توزيع تكاليف المقر الرئيسي على قطاعات المجموعة. ومن صور التكاليف المشتركة تكاليف الإنتاج المشترك لمنتجين أو أكثر لا ينفصلان قبل نقطة الانفصال، مثل تكرير النفط إلى عدة منتجات. لكن ليست كل تكلفة مشتركة تكلفة إنتاج مشترك بالمعنى الفني."
   },
   {
     "unit": 7,
@@ -303,7 +431,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Prime costs are direct materials and direct labor. They are\ndirectly identifiable elements of production costs and are\ndirectly traceable to the product.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي تكلفة مما يلي يمكن تتبعها مباشرة إلى غرض التكلفة عندما يكون الغرض هو المنتج؟",
+    "choicesAr": [
+      "التكلفة المتغيرة.",
+      "التكلفة غير المباشرة.",
+      "تكلفة التحويل.",
+      "التكلفة الأولية."
+    ],
+    "explanationAr": "تشمل التكاليف الأولية المواد والأجور المباشرة، وهي عناصر إنتاج يمكن تتبعها مباشرة إلى المنتج."
   },
   {
     "unit": 7,
@@ -320,7 +456,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Conversion costs are the direct labor, indirect materials, and\nfactory overhead incurred to convert raw materials and\ntransferred-in goods in a cost center to finished goods.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما المقصود بتكاليف التحويل؟",
+    "choicesAr": [
+      "تكاليف التصنيع المتكبدة لإنتاج وحدات المخرجات.",
+      "جميع تكاليف التصنيع بخلاف الأجور المباشرة والمواد الخام.",
+      "مجموع الأجور المباشرة وجميع التكاليف الصناعية غير المباشرة.",
+      "مجموع تكلفة المواد الخام المباشرة والأجور المباشرة."
+    ],
+    "explanationAr": "تكاليف التحويل هي الأجور المباشرة والتكاليف الصناعية غير المباشرة، ومنها المواد غير المباشرة، اللازمة لتحويل المواد الخام والوحدات المحولة من مراحل سابقة إلى منتجات تامة."
   },
   {
     "unit": 7,
@@ -337,7 +481,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Cost pools are accounts in which a variety of similar costs are\naccumulated prior to allocation to cost objects. The overhead\naccount is a cost pool into which various types of overhead\nare accumulated prior to their allocation. Indirect\nmanufacturing costs are an element of overhead allocated to a\ncost pool. Ordinarily, different allocation methods are applied\nto variable and fixed costs, thus requiring them to be\nseparated. Establishing separate pools allows the\ndetermination of dual overhead rates. As a result, the\nassessment of capacity costs, the charging of appropriate\nrates to user departments, and the isolation of variances are\nfacilitated.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تحمل شركة حاسوب التكاليف الصناعية غير المباشرة على مشروع بنسبة محددة من مجمع تكاليف. ويخضع المشروع لعقد حكومي بالتكلفة مضافًا إليها هامش ربح. أي الإرشادات التالية مناسبة لتحديد كيفية تجميع التكاليف؟",
+    "choicesAr": [
+      "إنشاء مجمعات منفصلة للتكاليف المتغيرة والثابتة.",
+      "تجميع التكاليف الأولية والتكاليف الإدارية المتغيرة معًا.",
+      "إنشاء مجمع مستقل لأجور كل عامل على خط التجميع.",
+      "تجميع جميع تكاليف تصنيع المشروع في مجمع واحد."
+    ],
+    "explanationAr": "مجمع التكلفة حساب تتراكم فيه تكاليف متشابهة قبل تخصيصها لأغراض التكلفة. ويعد حساب التكاليف الصناعية غير المباشرة مثالًا لذلك. وقد تتطلب التكاليف الثابتة والمتغيرة أساليب تخصيص مختلفة، لذا يفيد الفصل بينها في تحديد معدلات تحميل مزدوجة وتقييم تكاليف الطاقة وتحميل الأقسام المستخدمة بمعدلات مناسبة وعزل الانحرافات، مع مراعاة شروط العقد."
   },
   {
     "unit": 7,
@@ -354,7 +506,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Direct costs are readily identifiable with and attributable to\nspecific units of production. Wood is a raw material (a direct\ncost) of furniture.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في عملية تصنيع تقليدية، أي مما يلي يعد عادة تكلفة مباشرة للمنتج؟",
+    "choicesAr": [
+      "إصلاح الآلات في مصنع سيارات.",
+      "الكهرباء في مصنع إلكترونيات.",
+      "الخشب في مصنع أثاث.",
+      "عمولات موظفي المبيعات."
+    ],
+    "explanationAr": "يمكن تتبع التكاليف المباشرة بسهولة إلى وحدات إنتاج محددة. والخشب مادة خام مباشرة في تصنيع الأثاث."
   },
   {
     "unit": 7,
@@ -371,7 +531,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Those tangible inputs to the manufacturing process that\ncannot practicably be traced to the product, such as wood\nscrews and glue used in the production of school desks and\nchairs, are referred to as indirect costs. Indirect costs are one\nof the three components of manufacturing overhead, the other\ntwo being indirect labor and factory operating costs.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عمليًا، كيف تصنف عادة مسامير الخشب والغراء المستخدمان في تصنيع مقاعد وطاولات المدارس؟",
+    "choicesAr": [
+      "أجور مباشرة.",
+      "تكاليف صناعية غير مباشرة.",
+      "مواد مباشرة.",
+      "تكاليف فترة."
+    ],
+    "explanationAr": "تعد المدخلات المادية التي يصعب عمليًا تتبعها إلى المنتج، مثل مسامير الخشب والغراء في هذه الحالة، مواد غير مباشرة تحمل ضمن التكاليف الصناعية غير المباشرة، التي تشمل أيضًا الأجور غير المباشرة وتكاليف تشغيل المصنع."
   },
   {
     "unit": 7,
@@ -388,7 +556,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Manufacturing costs consist of direct materials, direct labor,\nand manufacturing overhead. The cream, plant property taxes,\nand tires are all integral to the production of the final product\nand so are properly classified as manufacturing costs. Sales\ncommissions, however, are not incurred until after the product\nhas been manufactured. They are properly classified as a\nselling expense.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي لا يعد تكلفة تصنيع؟",
+    "choicesAr": [
+      "القشدة لدى منتج الآيس كريم.",
+      "عمولات المبيعات لدى مصنع سيارات.",
+      "ضرائب عقار المصنع لدى منتج الآيس كريم.",
+      "الإطارات لدى مصنع سيارات."
+    ],
+    "explanationAr": "تتكون تكاليف التصنيع من المواد والأجور المباشرة والتكاليف الصناعية غير المباشرة. والقشدة وضرائب عقار المصنع والإطارات مرتبطة بالإنتاج. أما عمولات المبيعات فتصنف ضمن تكاليف البيع لا تكاليف التصنيع، مع مراعاة قواعد تكاليف الحصول على العقود لأغراض التقارير المالية."
   },
   {
     "unit": 7,
@@ -405,7 +581,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Manufacturing costs are often grouped into the following\nclassifications: prime cost, which equals direct materials plus\ndirect labor (i.e., those costs directly attributable to a product),\nand conversion cost, which equals direct labor plus\nmanufacturing overhead (i.e., the costs of converting raw\nmaterials into the finished product). The wages earned by a\npainter working for a painting contractor are thus properly\nclassified as both a prime cost and a conversion cost.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يستخدم مقاول دهانات نظام تكاليف الأوامر. وتجمع تكلفة كل أمر بتتبع التكلفة الفعلية للدهانات والمواد الأخرى والأجور الفعلية للدهانين. وتحمل التكاليف غير المباشرة بمعدل محدد مسبقًا على أساس أجور الدهانين الفعلية. تقاضى أحد الدهانين $168 اليوم عن العمل في الأمر 08-45. كيف تصنف أجوره اليوم عند حساب التكاليف الأولية وتكاليف التحويل للأمر 08-45؟",
+    "choicesAr": [
+      "عنصر في التكاليف الأولية وتكاليف التحويل معًا.",
+      "عنصر في التكاليف الأولية فقط.",
+      "عنصر في تكاليف التحويل فقط.",
+      "ليست عنصرًا في أي منهما."
+    ],
+    "explanationAr": "التكاليف الأولية تساوي المواد المباشرة مضافًا إليها الأجور المباشرة، وتكاليف التحويل تساوي الأجور المباشرة مضافًا إليها التكاليف الصناعية غير المباشرة. لذلك تدخل أجور الدهان القابلة للتتبع إلى الأمر ضمن التصنيفين."
   },
   {
     "unit": 7,
@@ -422,7 +606,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Rent paid on the warehouse containing the finished books\ninventory is an example of an administrative expense, which is\nnot part of manufacturing overhead. This is an example of a\nnonmanufacturing cost since the warehouse contains the\nfinished books inventory and no manufacturing is occurring in\nthat warehouse. Administrative expenses are those costs\nincurred by a company not directly related to producing or\nmarketing the product.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي لا يعد تكلفة صناعية غير مباشرة لدى دار نشر كتب؟",
+    "choicesAr": [
+      "إهلاك معدات الطباعة.",
+      "أجور مشرف الإنتاج.",
+      "إيجار مستودع الكتب تامة الصنع.",
+      "التأمين ضد الحريق لمنشآت الطباعة."
+    ],
+    "explanationAr": "إيجار مستودع الكتب تامة الصنع تكلفة غير صناعية لأن عملية التصنيع انتهت قبل التخزين، بخلاف التخزين الضروري لمرحلة إنتاج لاحقة. وقد تصنف تكلفة التخزين النهائي ضمن التوزيع أو المصروفات التشغيلية الأخرى بحسب وظيفتها، لا ضمن التكاليف الصناعية غير المباشرة."
   },
   {
     "unit": 7,
@@ -439,7 +631,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The total costs identified with products are unaffected by the\ntreatment of indirect and common costs. The ability to identify\na cost with a product is determined by traceability.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تشكل التكاليف غير المباشرة والمشتركة غالبًا جزءًا مهمًا من تكلفة المنتج. ما الذي لا يعد هدفًا لتخصيصها على أغراض التكلفة؟",
+    "choicesAr": [
+      "خفض إجمالي التكاليف المرتبطة بالمنتجات.",
+      "قياس الدخل والأصول لأغراض التقارير الخارجية.",
+      "تبرير التكاليف لأغراض استردادها.",
+      "توفير معلومات لاتخاذ القرارات الاقتصادية."
+    ],
+    "explanationAr": "لا يؤدي مجرد تغيير طريقة تخصيص التكاليف غير المباشرة والمشتركة إلى خفض إجمالي التكاليف المتكبدة، وإنما يغير توزيعها بين أغراض التكلفة. وتحدد قابلية التتبع إمكان ربط التكلفة مباشرة بالمنتج."
   },
   {
     "unit": 7,
@@ -456,7 +656,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A direct cost is one that can be specifically associated with a\nsingle cost objective in an economically feasible way. Thus, a\nproduction supervisor’s salary can be directly associated with\nthe department (s)he supervises.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي تكلفة ثابتة يمكن تصنيفها مباشرة؟",
+    "choicesAr": [
+      "راتب محاسب التكاليف عندما يكون غرض التكلفة وحدة المنتج.",
+      "إيجار مستودع المخزون عندما يكون غرض التكلفة إدارة المشتريات.",
+      "راتب مشرف الإنتاج عندما يكون غرض التكلفة قسم الإنتاج.",
+      "مكافآت مجلس الإدارة عندما يكون غرض التكلفة قسم التسويق."
+    ],
+    "explanationAr": "يمكن ربط التكلفة المباشرة بغرض تكلفة محدد بطريقة مجدية اقتصاديًا. لذلك يمكن تتبع راتب مشرف الإنتاج إلى القسم الذي يشرف عليه."
   },
   {
     "unit": 7,
@@ -473,7 +681,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Conversion costs consist of labor plus fixed and variable\nmanufacturing overhead. The total is $41 ($20 + $15 + $6).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فيما يلي تكاليف الوحدة المقدرة لدى Cole Lab باستخدام التكاليف الكلية عند مستوى إنتاج 12,000 وحدة شهريًا:\nالبند | تكلفة الوحدة المقدرة\nمواد مباشرة | $32\nأجور مباشرة | 20\nتكاليف صناعية غير مباشرة متغيرة | 15\nتكاليف صناعية غير مباشرة ثابتة | 6\nتكاليف بيع متغيرة | 3\nتكاليف بيع ثابتة | 4\nما تكاليف التحويل المقدرة لكل وحدة؟",
+    "choicesAr": [
+      "$35",
+      "$41",
+      "$44",
+      "$48"
+    ],
+    "explanationAr": "تشمل تكاليف التحويل الأجور المباشرة والتكاليف الصناعية غير المباشرة الثابتة والمتغيرة. ويبلغ الإجمالي $41 ($20 + $15 + $6)."
   },
   {
     "unit": 7,
@@ -490,7 +706,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Prime costs consist of direct materials and direct labor. The\ntotal is $52 ($32 + $20).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فيما يلي تكاليف الوحدة المقدرة لدى Cole Lab باستخدام التكاليف الكلية عند مستوى إنتاج 12,000 وحدة شهريًا:\nالبند | تكلفة الوحدة المقدرة\nمواد مباشرة | $32\nأجور مباشرة | 20\nتكاليف صناعية غير مباشرة متغيرة | 15\nتكاليف صناعية غير مباشرة ثابتة | 6\nتكاليف بيع متغيرة | 3\nتكاليف بيع ثابتة | 4\nما التكاليف الأولية المقدرة لكل وحدة؟",
+    "choicesAr": [
+      "$73",
+      "$32",
+      "$67",
+      "$52"
+    ],
+    "explanationAr": "تتكون التكاليف الأولية من المواد المباشرة والأجور المباشرة. ويبلغ الإجمالي $52 ($32 + $20)."
   },
   {
     "unit": 7,
@@ -507,7 +731,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Cost accounting is a combination of (1) management\naccounting in the sense that its purpose can be to provide\ninternal reports for use in planning and control and in making\nnonroutine decisions, and (2) financial accounting because its\nproduct-costing function satisfies external reporting\nrequirements for reporting to shareholders, government, and\nvarious outside parties.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بالمعنى الواسع، ما أفضل تعريف لمحاسبة التكاليف ضمن النظام المحاسبي؟",
+    "choicesAr": [
+      "التقارير الداخلية والخارجية التي قد تستخدم في القرارات غير الروتينية وتطوير الخطط والسياسات.",
+      "التقارير الخارجية للحكومة والأطراف الخارجية والمساهمين.",
+      "التقارير الداخلية للتخطيط والرقابة الإدارية، والتقارير الخارجية بقدر ما تفي وظيفة احتساب تكلفة المنتج بمتطلباتها.",
+      "التقارير الداخلية لتخطيط العمليات الروتينية والرقابة عليها."
+    ],
+    "explanationAr": "تجمع محاسبة التكاليف بين (1) المحاسبة الإدارية من حيث توفير التقارير الداخلية للتخطيط والرقابة والقرارات غير الروتينية، و(2) المحاسبة المالية لأن وظيفة احتساب تكلفة المنتج تفي بمتطلبات التقارير الخارجية للمساهمين والحكومة والأطراف الأخرى."
   },
   {
     "unit": 7,
