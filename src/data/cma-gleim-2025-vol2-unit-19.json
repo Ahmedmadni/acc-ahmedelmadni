@@ -1412,7 +1412,15 @@
     ],
     "answerIndex": 0,
     "explanation": "One of the primary ways data can be captured is by obtaining\nalready existing data from outside the organization; for\nexample, an organization may buy or otherwise acquire data\nfrom an outside entity.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "حصلت شركة على تقارير ضريبة العقارات من مكتب تقييم العقارات بالمقاطعة لإعداد تقارير مسح لصالح مطور عقاري. في أي مرحلة من دورة حياة البيانات يندرج الحصول على البيانات من خارج المنشأة؟",
+    "choicesAr": [
+      "التقاط البيانات.",
+      "مجموعة البيانات.",
+      "نشر البيانات.",
+      "توليف البيانات."
+    ],
+    "explanationAr": "من الطرق الأساسية لالتقاط البيانات الحصول على بيانات موجودة بالفعل من خارج المنشأة، مثل شراء البيانات أو الحصول عليها بوسيلة أخرى من جهة خارجية. وينبغي مراعاة حقوق الاستخدام وجودة البيانات عند الحصول عليها."
   },
   {
     "unit": 19,
@@ -1429,7 +1437,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Data maintenance is the second stage of the data life cycle.\nAfter the data have been captured, data maintenance can be\ndefined as the supplying of data to the points at which data\nsynthesis and data usage occur.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يمكن تعريف مرحلة صيانة البيانات في دورة حياتها بأنها:",
+    "choicesAr": [
+      "الإتلاف الدوري للمستندات والسجلات الأخرى.",
+      "إدراج أنشطة خارج دورة حياة البيانات المعتادة.",
+      "إيصال البيانات إلى النقاط التي يجري فيها توليفها واستخدامها.",
+      "تحسين تخصيص الموارد."
+    ],
+    "explanationAr": "تأتي صيانة البيانات بعد التقاطها في النموذج المفترض. وتشمل تجهيز البيانات وإتاحتها للنقاط التي يجري فيها توليفها واستخدامها، مع تطبيق ضوابط الجودة والاتساق المناسبة."
   },
   {
     "unit": 19,
@@ -1446,7 +1462,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Data maintenance involves processing data without yet\nderiving any value from it for the enterprise.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "وفق النموذج التعليمي لدورة حياة البيانات، ما المصطلح الذي يشير إلى معالجة البيانات للمنشأة قبل استخلاص القيمة المباشرة منها؟",
+    "choicesAr": [
+      "تشغيل البيانات.",
+      "التقاط البيانات.",
+      "إدخال البيانات.",
+      "صيانة البيانات."
+    ],
+    "explanationAr": "تشمل صيانة البيانات تجهيزها ومعالجتها قبل استخدامها في استخراج القيمة المباشرة للأعمال. ولا يعني ذلك أن أعمال الصيانة عديمة القيمة؛ فتحسين الجودة والاتساق يدعم الاستخدامات اللاحقة."
   },
   {
     "unit": 19,
@@ -1480,7 +1504,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The data usage phase uses data in support of the enterprise.\nThis stage can be defined as the application of data to tasks\nthe enterprise needs to run and manage itself.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يصف مرحلة استخدام البيانات في دورة حياتها؟",
+    "choicesAr": [
+      "إدراج البيانات في كشوف الحساب الشهرية المرسلة للعملاء.",
+      "معالجة البيانات بترتيب منطقي.",
+      "إيصال البيانات إلى النقاط التي يجري فيها تحليلها.",
+      "تطبيق البيانات على المهام اللازمة لتشغيل المنشأة وإدارتها."
+    ],
+    "explanationAr": "تتمثل مرحلة استخدام البيانات في توظيفها لدعم المنشأة، من خلال تطبيقها على المهام اللازمة لتشغيل الأعمال وإدارتها، مثل متابعة الأداء واتخاذ القرارات."
   },
   {
     "unit": 19,
@@ -1497,7 +1529,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Data usage may have regulatory or contractual constraints on\nhow the data is used. The role of data governance may be\nchallenged to ensure that legalities are observed.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يمثل تحديًا من تحديات حوكمة البيانات؟",
+    "choicesAr": [
+      "القيود النظامية أو التعاقدية.",
+      "الإشراف على نظام الرقابة الداخلية.",
+      "تحقيق أهداف المنشأة المتعلقة بالعمليات والتقارير والامتثال.",
+      "إعداد تقرير متكامل."
+    ],
+    "explanationAr": "قد يخضع استخدام البيانات لقيود نظامية أو تعاقدية تحدد كيفية استخدامها. ومن تحديات حوكمة البيانات وضع السياسات والصلاحيات والضوابط اللازمة لمراعاة هذه القيود، بالتعاون مع الجهات القانونية والإدارية المختصة."
   },
   {
     "unit": 19,
@@ -1514,7 +1554,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The role of data governance is to ensure that legalities are\nobserved; for example, there may be regulatory or contractual\nconstraints on how data may be used.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أبرمت شركة ABC عقدًا جديدًا مع شركة XYZ للبرمجيات، وتضمن العقد عدة قيود على كيفية استخدام البيانات. ما الوظيفة المعنية بوضع ضوابط تضمن مراعاة هذه القيود؟",
+    "choicesAr": [
+      "الإدارة العليا.",
+      "حوكمة البيانات.",
+      "مزودو الخدمات الخارجيون.",
+      "إدارة الموارد."
+    ],
+    "explanationAr": "تشمل حوكمة البيانات وضع السياسات والمسؤوليات والضوابط اللازمة لمراعاة القيود النظامية والتعاقدية على استخدام البيانات. وتبقى الإدارة العليا والجهات القانونية وأصحاب العمليات مسؤولين عن تنفيذ الالتزامات وفق اختصاصاتهم."
   },
   {
     "unit": 19,
@@ -1531,7 +1579,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Data publication refers to the sending of data to a location\noutside the organization. For example, making them available\nto customers through a company website.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يعد أفضل مثال على نشر البيانات وفق النموذج المفترض لدورة حياتها؟",
+    "choicesAr": [
+      "إتاحة تقرير التكاليف للموظفين.",
+      "إعداد القوائم المالية لاستخدام الإدارة العليا.",
+      "إتاحة بيانات الأبحاث على موقع الشركة الإلكتروني ليستخدمها الآخرون.",
+      "إتاحة البيانات على الشبكة الداخلية للقسم الاكتواري لمعالجتها."
+    ],
+    "explanationAr": "يشير نشر البيانات في هذا النموذج إلى إرسال البيانات أو إتاحتها خارج المنشأة، مثل إتاحتها للعملاء عبر موقع الشركة. ولا يعني النشر بالضرورة إتاحتها للجمهور دون قيود؛ إذ تظل صلاحيات الوصول والخصوصية واجبة المراعاة."
   },
   {
     "unit": 19,
@@ -1548,7 +1604,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Data publication refers to the sending of data to a location\noutside the organization, for example, in monthly statements\nto customers.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يعد إصدار كشوف الحساب الشهرية للعملاء مثالًا على أي مرحلة من دورة حياة البيانات؟",
+    "choicesAr": [
+      "العقد الرسمي.",
+      "نشاط البيانات.",
+      "تقديم القيمة.",
+      "نشر البيانات."
+    ],
+    "explanationAr": "يشير نشر البيانات في النموذج المفترض إلى نقلها إلى جهة خارج المنشأة، مثل إرسال كشوف الحساب الشهرية إلى العملاء المخولين بالاطلاع عليها."
   },
   {
     "unit": 19,
@@ -1582,7 +1646,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Data archival involves copying data to a location where they\nare stored in case they are ever needed again. At the same\ntime, the data are removed from all active environments.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما اسم مرحلة دورة حياة البيانات التي تنقل فيها نسخة من البيانات إلى موقع تحفظ فيه لاحتمال الحاجة إليها مرة أخرى؟",
+    "choicesAr": [
+      "صيانة البيانات.",
+      "أرشفة البيانات.",
+      "تخزين البيانات.",
+      "الإزالة النهائية للبيانات."
+    ],
+    "explanationAr": "تتمثل الأرشفة في الاحتفاظ بالبيانات في موقع مخصص لإمكانية الرجوع إليها مستقبلًا، مع إخراجها من بيئات الاستخدام النشط وفق النموذج المفترض. وتخضع الأرشفة لسياسات الاحتفاظ والصلاحيات والاسترجاع والالتزامات النظامية."
   },
   {
     "unit": 19,
