@@ -981,7 +981,7 @@
       "$21,500",
       "$27,000"
     ],
-    "explanationAr": "تكلفة الصيانة مختلطة تتضمن عنصرين ثابتًا ومتغيرًا. ولحساب التكلفة الثابتة الشهرية يقسم المبلغ السنوي على 12.\nتكلفة الصيانة الثابتة الشهرية: $6,000 ÷ 12 = $500\nتكلفة الصيانة المتغيرة: 30,000 × = 21,000؛ سعر الساعة $0.70\nإجمالي تكلفة الصيانة: $21,500."
+    "explanationAr": "تكلفة الصيانة مختلطة تتضمن عنصرين ثابتًا ومتغيرًا. ولحساب التكلفة الثابتة الشهرية يقسم المبلغ السنوي على 12.\nتكلفة الصيانة الثابتة الشهرية: $6,000 ÷ 12 = $500\nتكلفة الصيانة المتغيرة: 30,000 ساعة؛ إجماليها 21,000 بمعدل $0.70 للساعة\nإجمالي تكلفة الصيانة: $21,500."
   },
   {
     "unit": 7,
@@ -1115,7 +1115,15 @@
     ],
     "answerIndex": 3,
     "explanation": "To properly understand the nature of a cost, its behavior in\ntotal and on a per-unit basis can be examined. Dividing the\ntotal costs incurred by the activity levels yields the following\nper-unit results:\n1,000 1,500 2,000\nCost A $1.42 $1.42 $1.42\nCost B 1.55 1.47 1.45\nCost C 1.00 0.67 0.50\nCost D 1.63 1.63 1.63\nCosts A and D increase steadily across the relevant range in\ntotal but remain constant on a per-unit basis; they are thus\nvariable costs. Cost B increases disproportionately across the\nrelevant range in total and decreases disproportionately on a\nper-unit basis; B is thus a semivariable cost.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تعرض منشأة ملخصًا لإجمالي تكاليف الإنتاج المقدرة عند ثلاثة مستويات إنتاج:\nحجم الإنتاج | 1,000 | 1,500 | 2,000\nالتكلفة A | $1,420 | $2,130 | $2,840\nالتكلفة B | 1,550 | 2,200 | 2,900\nالتكلفة C | 1,000 | 1,000 | 1,000\nالتكلفة D | 1,630 | 2,445 | 3,260\nما سلوك التكاليف من A إلى D على الترتيب؟",
+    "choicesAr": [
+      "مختلطة، متغيرة، ثابتة، متغيرة.",
+      "متغيرة، مختلطة، ثابتة، مختلطة.",
+      "متغيرة، ثابتة، ثابتة، متغيرة.",
+      "متغيرة، مختلطة، ثابتة، متغيرة."
+    ],
+    "explanationAr": "لفهم سلوك التكلفة، يمكن فحص إجماليها ونصيب الوحدة منها. وبقسمة التكلفة الإجمالية على حجم النشاط نحصل على:\nالحجم | 1,000 | 1,500 | 2,000\nالتكلفة A | $1.42 | $1.42 | $1.42\nالتكلفة B | 1.55 | 1.47 | 1.45\nالتكلفة C | 1.00 | 0.67 | 0.50\nالتكلفة D | 1.63 | 1.63 | 1.63\nتزيد التكلفتان A وD إجمالًا مع النشاط وتثبتان لكل وحدة، فهما متغيرتان. وتظل C ثابتة إجمالًا. أما B فتزيد إجمالًا بصورة غير تناسبية وينخفض نصيب الوحدة منها، فتعد مختلطة في سياق التصنيف المطلوب، دون افتراض خطية تامة."
   },
   {
     "unit": 7,
@@ -1132,7 +1140,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The relevant range defines the limits within which per-unit\nvariable costs remain constant and fixed costs are not\nchangeable. It is synonymous with the short run. The relevant\nrange is established by the efficiency of a company’s current\nmanufacturing plant, its agreements with labor unions and\nsuppliers, etc.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يشير المدى الملائم إلى مستويات النشاط التي:",
+    "choicesAr": [
+      "تظل فيها علاقات سلوك التكاليف ثابتة.",
+      "تتقلب فيها التكاليف.",
+      "يتغير فيها الإنتاج.",
+      "تتكبد فيها التكاليف الملائمة للقرار."
+    ],
+    "explanationAr": "يحدد المدى الملائم حدود النشاط التي تظل ضمنها التكلفة المتغيرة للوحدة والتكاليف الثابتة الإجمالية ثابتتين وفق النموذج المستخدم. ويرتبط عادة بالتخطيط قصير الأجل، وتحدده الطاقة الحالية للمصنع وكفاءته والاتفاقات مع العمال والموردين وغيرها."
   },
   {
     "unit": 7,
@@ -1149,7 +1165,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Variable cost per unit remains constant in the short run\nregardless of the level of production.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "اكتشفت شركة أن تكلفة معالجة فواتير العملاء متغيرة بالكامل ضمن المدى الملائم. أي العبارات التالية غير صحيحة؟",
+    "choicesAr": [
+      "تزيد إجمالي تكلفة معالجة الفواتير مع زيادة حجمها.",
+      "تنخفض تكلفة معالجة الفاتورة الواحدة مع زيادة حجم الفواتير.",
+      "تساوي تكلفة معالجة الفاتورة رقم 100 تكلفة معالجة الفاتورة الأولى.",
+      "يساوي متوسط تكلفة معالجة الفاتورة تكلفة معالجة فاتورة إضافية."
+    ],
+    "explanationAr": "تظل التكلفة المتغيرة للوحدة ثابتة في الأجل القصير ضمن المدى الملائم، بصرف النظر عن حجم النشاط."
   },
   {
     "unit": 7,
@@ -1166,7 +1190,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Total costs, being a mixture of fixed and variable costs, are\nassumed to be linear.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عند تحديد التكاليف الثابتة والمتغيرة، أي مما يلي افتراض معتاد بشأن سلوك التكلفة؟",
+    "choicesAr": [
+      "يفترض أن المصروفات العمومية والإدارية متغيرة.",
+      "يفترض أن سلوك التكلفة واقعي لكل مستويات النشاط من الصفر إلى الطاقة القصوى.",
+      "يفترض أن إجمالي التكاليف يمثل بخط مستقيم على الرسم البياني.",
+      "يفترض أن الفترة الملائمة 5 سنوات."
+    ],
+    "explanationAr": "يفترض عادة أن إجمالي التكاليف، المكون من عناصر ثابتة ومتغيرة، يتبع علاقة خطية ضمن المدى الملائم."
   },
   {
     "unit": 7,
@@ -1184,7 +1216,15 @@
     "answerIndex": 0,
     "explanation": "Variable costs in total vary directly and proportionally with\nchanges in volume. This is depicted as a straight line sloping\nupward to the right. Variable cost per unit, however, remains\nconstant in the short run regardless of the level of production.\nThis is depicted as a horizontal line.",
     "answerStatus": "source",
-    "sourceTextStatus": "reconstructed"
+    "sourceTextStatus": "reconstructed",
+    "stemAr": "يعد محاسب إداري رسومًا بيانية لإجمالي التكلفة المتغيرة والتكلفة المتغيرة للوحدة لاستخدامها في نموذج تخطيط قصير الأجل. يمثل المحور الرأسي المبالغ النقدية والأفقي حجم النشاط. كيف يظهر الرسمان؟",
+    "choicesAr": [
+      "الإجمالي: خط مستقيم صاعد إلى اليمين.\nالوحدة: خط مستقيم موازٍ للمحور الأفقي.",
+      "الإجمالي: منحنى صاعد إلى اليمين.\nالوحدة: خط موازٍ تقريبًا للمحور الأفقي.",
+      "الإجمالي: خط مستقيم صاعد إلى اليمين.\nالوحدة: خط مستقيم صاعد إلى اليمين.",
+      "الإجمالي: خط مستقيم موازٍ للمحور الأفقي.\nالوحدة: خط مستقيم صاعد إلى اليمين."
+    ],
+    "explanationAr": "تتغير التكاليف المتغيرة الإجمالية طرديًا وتناسبيًا مع حجم النشاط، وتمثل بخط مستقيم صاعد إلى اليمين. أما تكلفة الوحدة المتغيرة فتظل ثابتة في الأجل القصير ضمن المدى الملائم، وتمثل بخط أفقي."
   },
   {
     "unit": 7,
@@ -1201,7 +1241,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Because of the fixed portion, the per-unit cost of a mixed, or\nsemivariable, cost will decrease as production volume\nincreases.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "وجدت شركة أن إجمالي تكلفة الكهرباء يتضمن عنصرًا ثابتًا وآخر متغيرًا ضمن المدى الملائم. ويتغير العنصر المتغير طرديًا مع عدد الوحدات المنتجة. أي العبارات التالية غير صحيحة؟",
+    "choicesAr": [
+      "تزداد التكلفة الإجمالية للكهرباء مع زيادة الإنتاج.",
+      "تزداد تكلفة الكهرباء الإجمالية لكل وحدة إنتاج مع زيادة الإنتاج.",
+      "تظل تكلفة الكهرباء المتغيرة للوحدة ثابتة مع زيادة الإنتاج.",
+      "ينخفض نصيب الوحدة من تكلفة الكهرباء الثابتة مع زيادة الإنتاج."
+    ],
+    "explanationAr": "بسبب العنصر الثابت، ينخفض متوسط تكلفة الوحدة من التكلفة المختلطة عند ارتفاع حجم الإنتاج ضمن المدى الملائم."
   },
   {
     "unit": 7,
@@ -1218,7 +1266,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The company’s budget consists of a fixed cost component and\na variable cost component. The fixed cost component can be\nexpected to remain constant throughout the budget’s relevant\nrange. The variable cost component, however, changes at a\nconstant rate within the budget’s range. The increase in\nbudgeted cost of $1,200 ($21,000 – $19,800) per 1,000 units\nof production can therefore be calculated as the variable cost\nper unit of $1.20 [($21,000 – $19,800) ÷ 1,000] and the total\nfixed costs of $9,000 [$21,000 – (10,000 × $1.20)]. These\ncosts can then be used to determine the total cost of using\n12,000 units of electricity [(12,000 × $1.20) variable +\n$9,000 fixed].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تعد شركة موازنة مرنة شهرية لتكاليف التصنيع، ووضعت معادلات للتكاليف ضمن مدى ملائم من 5,000 إلى 15,000 وحدة شهريًا. تبلغ موازنة الكهرباء (تكلفة مختلطة) $19,800 عند 9,000 وحدة شهريًا، و$21,000 عند 10,000 وحدة شهريًا. فما تكلفة الكهرباء المقدرة للشهر المقبل إذا تقرر إنتاج 12,000 وحدة؟",
+    "choicesAr": [
+      "$26,400",
+      "$25,200",
+      "$23,400",
+      "$22,200"
+    ],
+    "explanationAr": "تتكون الموازنة من عنصر ثابت يتوقع بقاؤه دون تغير ضمن المدى الملائم، وعنصر متغير يتغير بمعدل ثابت. وتبلغ زيادة التكلفة $1,200 ($21,000 − $19,800) لكل 1,000 وحدة إنتاج. لذا تبلغ التكلفة المتغيرة للوحدة $1.20 [($21,000 − $19,800) ÷ 1,000] والتكاليف الثابتة $9,000 [$21,000 − (10,000 × $1.20)]. ويمكن تحديد إجمالي تكلفة الكهرباء عند إنتاج 12,000 وحدة بالمعادلة [(12,000 × $1.20) تكلفة متغيرة + $9,000 تكلفة ثابتة]."
   },
   {
     "unit": 7,
@@ -1235,7 +1291,15 @@
     ],
     "answerIndex": 0,
     "explanation": "First, state the information known about the two production\nlevels mathematically:\nVariable costs + Fixed costs = Total cost\n(75,000 × UVC) +      (1.0 × FC) = $220,000\n(100,000 × +     (1.2 × FC) = $275,000\nUVC)\nNext, state one of them in terms of fixed costs:\n(75,000 × UVC) +      (1.0 × FC) = $220,000\nFC = $220,000 – (75,000 ×\nUVC)\nSubstitute this relationship into the second equation and solve\nfor the budgeted unit variable cost:\n(100,000 × UVC) + 1.2 ($220,000 – 75,000 UVC) = $275,000\n(100,000 × UVC) + $264,000 – (90,000 × UVC) = $275,000\n(10,000 × UVC) = $11,000\nUVC = $1.10",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تقدر شركة إجمالي تكاليف الإنتاج بمبلغ $220,000 عند 75,000 وحدة و$275,000 عند 100,000 وحدة. ولأن إنتاج 100,000 وحدة يتطلب مرافق إضافية، قدرت التكاليف الثابتة بزيادة 20% عن مستواها عند 75,000 وحدة. ما التكلفة المتغيرة المقدرة للوحدة؟",
+    "choicesAr": [
+      "$1.10",
+      "$1.20",
+      "$2.20",
+      "$2.75"
+    ],
+    "explanationAr": "أولًا، نعبر عن المعلومات المتاحة في معادلتين، حيث UVC التكلفة المتغيرة للوحدة وFC التكلفة الثابتة الأساسية:\nالتكاليف المتغيرة + الثابتة = الإجمالي\n(75,000 × UVC) + (1.0 × FC) = $220,000\n(100,000 × UVC) + (1.2 × FC) = $275,000\nنعيد ترتيب المعادلة الأولى:\n(75,000 × UVC) + (1.0 × FC) = $220,000\nFC = $220,000 − (75,000 × UVC)\nنعوض في المعادلة الثانية:\n(100,000 × UVC) + 1.2 ($220,000 − 75,000 UVC) = $275,000\n(100,000 × UVC) + $264,000 − (90,000 × UVC) = $275,000\n(10,000 × UVC) = $11,000\nUVC = $1.10."
   },
   {
     "unit": 7,
@@ -1252,7 +1316,15 @@
     ],
     "answerIndex": 1,
     "explanation": "First, state the known information mathematically and derive\nthe variable portion of the total:\nFixed costs + Variable costs = Total cost\n$60,000 + Variable costs = $400,000\nVariable costs = $340,000\nNext, calculate the unit variable cost of $85,000 per office\n($340,000 ÷ 4 offices). Total budgeted cost for the upcoming\nyear can now be calculated as $570,000 [($85,000 per office ×\n6 offices) + $60,000].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "شغلت شركة أربعة مكاتب مبيعات خلال السنة الماضية، وبلغت تكاليفها $400,000 منها $60,000 ثابتة. ويتأثر إجمالي تكاليفها بعدد المكاتب التي تشغلها. باستخدام تكاليف السنة الماضية أساسًا لتوقع التكاليف السنوية، فما التكاليف المقدرة عند تشغيل ستة مكاتب؟",
+    "choicesAr": [
+      "$600,000",
+      "$570,000",
+      "$510,000",
+      "$485,000"
+    ],
+    "explanationAr": "أولًا نحدد العنصر المتغير:\nالتكاليف الثابتة + المتغيرة = الإجمالي\n$60,000 + المتغيرة = $400,000\nالمتغيرة = $340,000\nثم نحسب التكلفة المتغيرة لكل مكتب، وهي $85,000 ($340,000 ÷ 4 مكاتب). وتبلغ التكلفة المقدرة للسنة القادمة $570,000 [($85,000 لكل مكتب × 6 مكاتب) + $60,000] بافتراض ثبات العنصر الثابت عند التوسع."
   },
   {
     "unit": 7,
@@ -1286,7 +1358,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Fixed costs remain unchanged within the relevant range for a\ngiven period but per unit fixed costs do change as the level of\nactivity changes. Fixed cost per unit will decrease as the\nactivity level increases within the relevant range.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ضمن المدى الملائم، ماذا يحدث للتكلفة الثابتة لكل وحدة؟",
+    "choicesAr": [
+      "تزداد مع زيادة النشاط.",
+      "تنخفض مع انخفاض النشاط.",
+      "تظل ثابتة مع انخفاض النشاط.",
+      "تنخفض مع زيادة النشاط."
+    ],
+    "explanationAr": "تظل التكاليف الثابتة الإجمالية ثابتة ضمن المدى الملائم خلال فترة محددة، لكن نصيب الوحدة يتغير مع النشاط. وينخفض نصيب الوحدة مع زيادة النشاط داخل هذا النطاق."
   },
   {
     "unit": 7,
@@ -1303,7 +1383,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Direct materials unit costs are strictly variable at $2 ($200,000\n÷ 100,000 units). Similarly, direct labor has a variable unit cost\nof $1 ($100,000 ÷ 100,000 units). The manufacturing\noverhead costs are $100,000 fixed and $100,000 variable,\nand the variable manufacturing cost per unit is $1 ($100,000 ÷\n100,000 units). Selling costs are $100,000 fixed and $50,000\nvariable for production of 100,000 units, and the variable unit\nselling expenses is $.50 ($50,000 ÷ 100,000 units). The total\nunit variable cost is therefore $4.50 ($2 + $1 + $1 + $.50).\nFixed costs are $200,000. At a production level of 110,000\nunits, variable costs are $495,000 (110,000 units × $4.50).\nHence, total costs are $695,000 ($495,000 + $200,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أعلنت شركة التكاليف التالية للسنة المالية الماضية عندما أنتجت 100,000 وحدة:\nالأجور المباشرة | $100,000\nالمواد المباشرة | 200,000\nالتكاليف الصناعية غير المباشرة | 200,000\nمصروفات البيع والإدارة | 150,000\nجميع التكاليف متغيرة باستثناء $100,000 من التكاليف الصناعية غير المباشرة و$100,000 من مصروفات البيع والإدارة. باستخدام الموازنة المرنة، فما إجمالي تكلفة إنتاج وبيع 110,000 وحدة؟",
+    "choicesAr": [
+      "$450,000",
+      "$650,000",
+      "$695,000",
+      "$715,000"
+    ],
+    "explanationAr": "تبلغ تكلفة المواد المباشرة المتغيرة للوحدة $2 ($200,000 ÷ 100,000 وحدة)، وتكلفة الأجور المباشرة المتغيرة للوحدة $1 ($100,000 ÷ 100,000 وحدة). وتشمل التكاليف الصناعية غير المباشرة $100,000 ثابتة و$100,000 متغيرة، وتبلغ التكلفة الصناعية غير المباشرة المتغيرة للوحدة $1 ($100,000 ÷ 100,000 وحدة). وتبلغ تكاليف البيع والإدارة الثابتة $100,000 والمتغيرة $50,000 عند إنتاج 100,000 وحدة، أي $.50 لكل وحدة ($50,000 ÷ 100,000 وحدة). وبذلك تبلغ التكلفة المتغيرة للوحدة $4.50 ($2 + $1 + $1 + $.50)، والثابتة الإجمالية $200,000. وعند إنتاج 110,000 وحدة تبلغ التكاليف المتغيرة $495,000 (110,000 وحدة × $4.50)، والإجمالية $695,000 ($495,000 + $200,000)، بافتراض البقاء ضمن المدى الملائم."
   },
   {
     "unit": 7,
@@ -1337,7 +1425,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Cost A is a mixed cost because it changes with production\nlevel, but each production level does not have the same cost\nper unit of production. Cost B is fixed because it remains the\nsame regardless of production level. Cost C is variable\nbecause it changes uniformly with production level, and each\nlevel of production has the same cost per unit of production.\nCost D is mixed because it changes with production level, but\neach production level does not have the same cost per unit of\nproduction.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لاحظت شركة التكاليف التالية عند مستويات إنتاج مختلفة:\nحجم الإنتاج | 25,000 | 50,000 | 75,000\nالتكلفة A | $3,250 | $5,250 | $7,250\nالتكلفة B | 7,500 | 7,500 | 7,500\nالتكلفة C | 2,750 | 5,500 | 8,250\nالتكلفة D | 1,750 | 2,500 | 3,000\nما سلوك التكاليف A وB وC وD على الترتيب؟",
+    "choicesAr": [
+      "متغيرة، ثابتة، متغيرة، مختلطة.",
+      "مختلطة، ثابتة، متغيرة، مختلطة.",
+      "مختلطة، ثابتة، مختلطة، متغيرة.",
+      "متغيرة، ثابتة، مختلطة، متغيرة."
+    ],
+    "explanationAr": "التكلفة A مختلطة لأنها تتغير مع الإنتاج دون ثبات نصيب الوحدة. والتكلفة B ثابتة لأنها لا تتغير مع الإنتاج. والتكلفة C متغيرة لأن إجماليها يتغير تناسبيًا مع الإنتاج ويثبت نصيب الوحدة. وتعد D مختلطة في التصنيف المعروض لأنها تتغير مع النشاط دون ثبات نصيب الوحدة، إلا أن البيانات لا تدعم افتراض علاقة خطية تامة لها."
   },
   {
     "unit": 7,
@@ -1354,7 +1450,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The variable marketing costs for the new product consist of\nsales commissions and the marketing manager’s incentive\n($100,000 × 8.5% = $8,500).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "علم مدير التسويق البيانات التالية عن منتج جديد: تبلغ المبيعات المخططة $100,000 في السنة الأولى. وتقدر عمولة المبيعات بنسبة 8% من المبيعات، بالإضافة إلى حافز مدير التسويق بنسبة 1/2%. ويتطلب إعداد كتيب المنتج 20 ساعة من وقت موظفي التسويق ذوي الرواتب الثابتة بمعدل $100 للساعة، و10 ساعات عمل لمصمم خارجي بمعدل $150 للساعة. ما تكلفة التسويق المتغيرة للمنتج؟",
+    "choicesAr": [
+      "$8,000",
+      "$8,500",
+      "$10,000",
+      "$10,500"
+    ],
+    "explanationAr": "تتكون تكاليف التسويق المتغيرة مع حجم المبيعات من عمولات المبيعات وحافز مدير التسويق ($100,000 × 8.5% = $8,500). أما إعداد الكتيب فهو تكلفة مرتبطة بإطلاق المنتج وليست متغيرة مع المبيعات وفق المعطيات."
   },
   {
     "unit": 7,
