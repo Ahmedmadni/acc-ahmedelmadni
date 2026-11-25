@@ -31,7 +31,15 @@
     ],
     "answerIndex": 0,
     "explanation": "A prelisting of cash receipts in the form of checks is a\npreventive control. It is intended to deter undesirable events\nfrom occurring. Because fraud involving cash is most likely to\noccur before receipts are recorded, either remittance advices\nor a prelisting of checks should be prepared in the mail room\nso as to establish recorded accountability for cash as soon as\npossible. A cash register tape is a form of prelisting for cash\nreceived over the counter. One copy of a prelisting will go to\naccounting for posting to the cash receipts journal, and\nanother is sent to the cashier for reconciliation with checks\nand currency received.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "الإجراء الذي يتطلب إعداد كشف أولي بالمقبوضات النقدية الواردة، وإرسال نسخة منه إلى أمين الصندوق وأخرى إلى المحاسبة، يعد مثالًا لأي نوع من الرقابة؟",
+    "choicesAr": [
+      "وقائية.",
+      "تصحيحية.",
+      "كاشفة.",
+      "توجيهية."
+    ],
+    "explanationAr": "يعد إعداد كشف أولي بالشيكات الواردة إجراءً وقائيًا يهدف إلى ردع وقوع أحداث غير مرغوبة. ونظرًا إلى أن خطر اختلاس النقد يرتفع قبل تسجيل المقبوضات، ينبغي إعداد إشعارات التحويل أو كشف أولي بالشيكات في غرفة البريد لإثبات المسؤولية عنها في أقرب وقت. ويعد شريط تسجيل مبيعات الصندوق صورة من الكشف الأولي للمقبوضات المباشرة. ترسل نسخة إلى المحاسبة للقيد في يومية المقبوضات ونسخة إلى أمين الصندوق للمطابقة مع الشيكات والنقد المستلم. ويؤدي إجراء المطابقة نفسه وظيفة كاشفة."
   },
   {
     "unit": 18,
@@ -48,7 +56,15 @@
     ],
     "answerIndex": 3,
     "explanation": "One person should not be responsible for all phases of a\ntransaction, i.e., for authorization, recording, and\ncustodianship of the related assets. These duties should be\nperformed by separate individuals to reduce the opportunities\nfor any person to be in a position of both perpetrating and\nconcealing errors or fraud in the normal course of his or her\nduties. For instance, an employee who receives and lists cash\nreceipts should not be responsible for comparing the recorded\naccountability for cash with existing amounts.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يتطلب الفصل السليم بين الواجبات أن يكون الشخص الذي:",
+    "choicesAr": [
+      "يعتمد المعاملة هو من يسجلها.",
+      "يعتمد المعاملة هو من يحتفظ بعهدة الأصل الناتج عنها.",
+      "يحتفظ بعهدة الأصل مخولًا بالوصول إلى سجلاته المحاسبية.",
+      "يسجل المعاملة غير مسؤول عن مطابقة سجل الأصل المحاسبي مع الأصل الفعلي."
+    ],
+    "explanationAr": "ينبغي ألا يتولى شخص واحد جميع مراحل المعاملة، أي الاعتماد والتسجيل وحيازة الأصول ذات الصلة. ويقلل إسناد هذه الواجبات إلى أشخاص مستقلين من فرص ارتكاب الأخطاء أو الغش وإخفائها أثناء أداء العمل. فالموظف الذي يستلم المقبوضات النقدية ويعد كشفها لا ينبغي أن يتولى المطابقة المستقلة بين الرصيد المسجل والمبالغ الموجودة فعليًا."
   },
   {
     "unit": 18,
@@ -65,7 +81,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The cashier is an assistant to the treasurer and thus performs\nan asset custody function. Individuals with custodial functions\nshould not have access to the accounting records. If the\ncashier were allowed to post the receipts to the accounts\nreceivable subsidiary ledger, an opportunity for embezzlement\nwould arise that could be concealed by falsifying the books.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في نظام رقابة داخلية مصمم جيدًا يستلم فيه أمين الصندوق التحويلات الواردة من غرفة البريد، أي المهام الآتية لا ينبغي أن يؤديها؟",
+    "choicesAr": [
+      "تظهير الشيكات.",
+      "إعداد قسيمة الإيداع البنكي.",
+      "إيداع التحويلات يوميًا في بنك محلي.",
+      "ترحيل المقبوضات إلى بطاقات الأستاذ المساعد للذمم المدينة."
+    ],
+    "explanationAr": "يعاون أمين الصندوق أمين الخزانة ويؤدي وظيفة حيازة الأصول. لذا ينبغي الفصل بين حيازة الأصول وإمكانية تعديل سجلاتها المحاسبية. فإذا سُمح لأمين الصندوق بترحيل المقبوضات إلى الأستاذ المساعد للذمم المدينة نشأت فرصة للاختلاس وإخفائه بتزوير السجلات."
   },
   {
     "unit": 18,
@@ -82,7 +106,15 @@
     ],
     "answerIndex": 2,
     "explanation": "An accounting control is concerned with the safeguarding of\nassets and the reliability of financial records, whereas an\noperational or administrative control is concerned with\noperational efficiency and effectiveness. Thus, compliance\nwith methods and procedures ensuring operational efficiency\nand adherence to managerial policies is an objective of an\noperational control.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تهتم الضوابط المحاسبية بحماية الأصول وموثوقية السجلات المالية. ولذلك تصمم لتوفير تأكيد معقول بشأن تحقق جميع ما يأتي ما عدا:",
+    "choicesAr": [
+      "السماح بالوصول إلى الأصول وفق تفويض الإدارة.",
+      "تنفيذ المعاملات وفق التفويض العام أو المحدد من الإدارة.",
+      "الالتزام بالأساليب والإجراءات التي تضمن الكفاءة التشغيلية والتقيد بالسياسات الإدارية.",
+      "مطابقة الأصول المسجلة بالأصول الموجودة فعليًا على فترات دورية واتخاذ الإجراء المناسب بشأن الفروق."
+    ],
+    "explanationAr": "في التصنيف التقليدي المستخدم في السؤال، تتعلق الرقابة المحاسبية بحماية الأصول وموثوقية السجلات المالية، بينما تهتم الرقابة التشغيلية أو الإدارية بالكفاءة والفعالية التشغيلية. لذلك يعد الالتزام بإجراءات الكفاءة والسياسات الإدارية هدفًا رقابيًا تشغيليًا في هذا التصنيف. وقد تتداخل هذه الأهداف في أطر الرقابة الداخلية المتكاملة."
   },
   {
     "unit": 18,
@@ -99,7 +131,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Paychecks should not be distributed by supervisors because\nan unscrupulous person could terminate an employee and fail\nto report the termination. The supervisor could then clock in\nand out for the employee and keep the paycheck. A person\nunrelated to either payroll recordkeeping or the operating\ndepartment should distribute checks.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الحالات الآتية تمثل نقطة ضعف في الرقابة الداخلية بقسم الرواتب؟",
+    "choicesAr": [
+      "تدوير المهام بين موظفي قسم الرواتب.",
+      "توزيع شيكات الرواتب بواسطة المشرف المباشر على الموظفين.",
+      "مطابقة سجلات الرواتب مع التقارير الضريبية ربع السنوية.",
+      "استقلال وظيفة تسجيل أوقات العمل عن قسم الرواتب."
+    ],
+    "explanationAr": "ينبغي ألا يوزع المشرفون شيكات الرواتب، لأن المشرف غير الأمين قد يخفي انتهاء خدمة أحد الموظفين ويزيف سجلات حضوره للاستيلاء على راتبه. والأفضل أن يتولى توزيع الشيكات شخص مستقل عن تسجيل الرواتب والقسم التشغيلي المعني."
   },
   {
     "unit": 18,
@@ -116,7 +156,15 @@
     ],
     "answerIndex": 1,
     "explanation": "A completeness assertion concerns whether all transactions\nand accounts that should be presented in the financial\nstatements are so presented. The exclusive use of\nsequentially numbered documents facilitates control over\nexpenditures. An unexplained gap in the sequence alerts the\nauditor to the possibility that not all transactions have been\nrecorded. A failure to use prenumbered checks would\ntherefore suggest a higher assessment of control risk. If a\ncompany uses prenumbered checks, it should be easy to\ndetermine exactly which checks were used during a period.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يوثق المراجعون فهمهم للرقابة الداخلية باستخدام الاستبيانات وخرائط التدفق والأوصاف السردية. ويتضمن الاستبيان أسئلة عن الضوابط اللازمة لمنع الأخطاء والغش أو اكتشافهما. أي الموضوعات الآتية أنسب لفهم إقرار الاكتمال في دورة المصروفات (المشتريات والذمم الدائنة)؟",
+    "choicesAr": [
+      "التحقق الداخلي من كميات فواتير المبيعات وأسعارها ودقتها الحسابية.",
+      "استخدام الشيكات المرقمة مسبقًا والمساءلة عنها.",
+      "كيفية التصرف في المقبوضات النقدية.",
+      "مؤهلات موظفي المحاسبة."
+    ],
+    "explanationAr": "يتعلق إقرار الاكتمال بإدراج جميع المعاملات والحسابات الواجب عرضها في القوائم المالية. ويسهل استخدام المستندات ذات الأرقام المتسلسلة الرقابة على المدفوعات؛ إذ تنبه الفجوات غير المبررة المراجع إلى احتمال وجود معاملات غير مسجلة. وقد يرفع غياب الشيكات المرقمة مسبقًا تقدير مخاطر الرقابة. ويساعد استخدامها على تحديد الشيكات المستعملة خلال الفترة. وهذا الضابط لا يكفي وحده لإثبات اكتمال الالتزامات غير المسددة."
   },
   {
     "unit": 18,
@@ -133,7 +181,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Allowing a sales department to approve a credit memo without\na receiving report would be dangerous. Sales personnel could\noverstate sales in one period and then reverse them in\nsubsequent periods. Thus, a copy of the receiving report for\nreturned goods should be sent to the billing department for\npreparation of a credit memo after approval by a responsible\nsupervisor who is independent of the Sales Department.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يتطلب الحفاظ على الرقابة الداخلية استقلال الوظائف التنظيمية عند معالجة طلبات العملاء. أي الحالات الآتية لا تمثل فصلًا سليمًا بين الواجبات؟",
+    "choicesAr": [
+      "اعتماد قسم الائتمان أمر بيع أعده قسم المبيعات.",
+      "شحن قسم الشحن لبضاعة صرفها قسم مخزن المنتجات التامة.",
+      "إعداد الفاتورة بواسطة قسم الفوترة وترحيلها إلى حساب العميل بواسطة قسم الذمم المدينة.",
+      "اعتماد قسم المبيعات إشعارًا دائنًا بسبب إرجاع منتج، ثم ترحيله إلى حساب العميل بواسطة قسم الذمم المدينة."
+    ],
+    "explanationAr": "يشكل السماح لقسم المبيعات باعتماد إشعار دائن دون تقرير استلام خطرًا رقابيًا؛ فقد تُضخم المبيعات في فترة ثم تعكس في فترات لاحقة. ينبغي إرسال نسخة من تقرير استلام المرتجعات إلى قسم الفوترة لإعداد الإشعار الدائن بعد اعتماد مسؤول مستقل عن قسم المبيعات."
   },
   {
     "unit": 18,
@@ -150,7 +206,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Proper segregation of duties and responsibilities reduces the\nopportunity for an individual to both perpetrate and conceal an\nerror or fraud in the normal course of his or her duties. Hence,\ndifferent people should be assigned the responsibilities for\nauthorizing transactions, recordkeeping, and asset custody.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يقلل الفصل السليم بين الواجبات فرص وجود أشخاص في مواقع تتيح لهم القيام بالأمرين الآتيين معًا:",
+    "choicesAr": [
+      "تسجيل قيود اليومية وإعداد القوائم المالية.",
+      "تسجيل المقبوضات والمدفوعات النقدية.",
+      "إنشاء الرقابة الداخلية واعتماد المعاملات.",
+      "ارتكاب الأخطاء أو الغش وإخفاؤها."
+    ],
+    "explanationAr": "يقلل الفصل السليم بين الواجبات والمسؤوليات فرصة تمكن الفرد من ارتكاب خطأ أو غش وإخفائه أثناء أداء واجباته. لذلك ينبغي توزيع اعتماد المعاملات وحفظ السجلات وحيازة الأصول على أشخاص مستقلين."
   },
   {
     "unit": 18,
@@ -184,7 +248,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Assets should be compared with the recorded accountability\nas frequently as the nature and amount of the assets require,\nwithin the limits of acceptable costs of comparison. The costs\nof safeguarding assets should not exceed the expected\nbenefits.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "على أي أساس ينبغي تحديد دورية مطابقة الأصول الفعلية بالأرصدة المسجلة بهدف حماية الأصول؟",
+    "choicesAr": [
+      "مبلغ الأصول بصرف النظر عن تكلفة المطابقة.",
+      "طبيعة الأصل وقيمته وتكلفة إجراء المطابقة.",
+      "تكلفة المطابقة وما إذا كان احتمال الخسارة ناتجًا عن الأخطاء أو الغش.",
+      "قرار المراجع بالتشاور مع إدارة العميل."
+    ],
+    "explanationAr": "ينبغي مطابقة الأصول الفعلية بالأرصدة المسجلة بالتواتر الذي تتطلبه طبيعة الأصول وقيمتها، ضمن حدود التكلفة المقبولة للمطابقة. وينبغي مراعاة التناسب بين تكاليف حماية الأصول والمنافع المتوقعة."
   },
   {
     "unit": 18,
@@ -201,7 +273,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Access to stock certificates by the controller is a breakdown of\nthe fundamental segregation of duties needed for effective\ninternal control. The controller, who performs the accounting\nfunction, should not have access to the assets.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عند دراسة الرقابة الداخلية على الأوراق المالية، أي الحالات الآتية تثير قلق المراجع بصورة خاصة؟",
+    "choicesAr": [
+      "إمكانية وصول المراقب المالي للشركة إلى شهادات الأسهم.",
+      "إمكانية وصول أمين الخزانة للشركة إلى شهادات الأسهم.",
+      "إعداد المراقب المالي تسويات الاستحقاق الخاصة بالسندات.",
+      "اعتماد أمين الخزانة أو رئيس الشركة شراء استثمارات مؤقتة في الأسهم."
+    ],
+    "explanationAr": "تعد إتاحة حيازة شهادات الأسهم للمراقب المالي إخلالًا بمبدأ الفصل بين الواجبات اللازم للرقابة الفعالة. فالمراقب المالي يتولى الوظيفة المحاسبية، وينبغي ألا يجمع بينها وبين حيازة الأصول محل التسجيل."
   },
   {
     "unit": 18,
@@ -218,7 +298,15 @@
     ],
     "answerIndex": 1,
     "explanation": "In the usual retail cash sales situation, the sales clerk\nauthorizes and records the transactions and takes custody of\nassets. However, management ordinarily employs other\ncompensating controls to minimize the effects of the failure to\nsegregate functions. The cash receipts function is closely\nsupervised, cash registers provide limited access to assets,\nand an internal recording function maintains control over cash\nreceipts.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في بيئة مبيعات التجزئة النقدية، أي الضوابط الآتية غالبًا ما يكون غائبًا؟",
+    "choicesAr": [
+      "وجود موظفين أكفاء.",
+      "الفصل بين الوظائف.",
+      "الإشراف.",
+      "قصر الوصول إلى الأصول على الأشخاص المخولين."
+    ],
+    "explanationAr": "في مبيعات التجزئة النقدية المعتادة قد يتولى موظف البيع اعتماد المعاملات وتسجيلها وحيازة الأصول. وتستخدم الإدارة عادة ضوابط تعويضية للحد من آثار عدم الفصل، مثل الإشراف على المقبوضات، وتقييد الوصول إلى النقد باستخدام أجهزة تسجيل المبيعات، ووجود وظيفة تسجيل مستقلة تساعد في الرقابة على المقبوضات."
   },
   {
     "unit": 18,
@@ -235,7 +323,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Canceling vouchers and supporting papers (with perforations,\nink, etc.) upon payment prevents the payment of a duplicate\nvoucher. If the person signing the check does the canceling,\nthe documents cannot be recycled for duplicate payments.\nSecuring the paid-voucher file from access by the accounts\npayable clerk is another effective control.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الإجراءات الآتية أفضل في الحد من إعادة تقديم فواتير الموردين بعد سدادها؟",
+    "choicesAr": [
+      "اشتراط التظهير المزدوج للشيكات.",
+      "إلغاء صلاحية مستندات الصرف بواسطة موظفي المحاسبة.",
+      "إلغاء صلاحية مستندات الصرف بواسطة موظفي الخزانة.",
+      "إرسال المدفوعات مباشرة إلى المستفيدين بواسطة موظفي المحاسبة."
+    ],
+    "explanationAr": "يساعد وسم مستندات الصرف والمستندات المؤيدة بما يفيد السداد عند الدفع، باستخدام ختم أو تأشير مناسب، على منع إعادة استخدامها في مدفوعات مكررة. وإذا تولى موقع الشيك ذلك الإجراء، تعذر إعادة تدوير المستندات بالطريقة المعتادة. ويعد أيضًا تقييد وصول موظفي الذمم الدائنة إلى ملفات المستندات المسددة ضابطًا فعالًا. وفي الأنظمة الرقمية يتحقق الهدف ذاته بضوابط حالة السداد ومنع إعادة المعالجة."
   },
   {
     "unit": 18,
