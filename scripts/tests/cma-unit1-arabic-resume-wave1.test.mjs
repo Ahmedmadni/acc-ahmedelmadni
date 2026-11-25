@@ -281,3 +281,21 @@ test("Unit 8 ABC independent quality cost and service allocation calculations",(
  assert.equal(4904-30000*.15,404);
  assert.equal(7200000/60000,120);assert.equal(7500000/300000,25);assert.equal((120*36000+25*90000)/36000,182.5);
 });
+
+const unit8Wave3Pins=new Map([["3.19",[865,3,"f0efd6c4"]],["3.20",[866,2,"1399fa44"]],["3.21",[866,3,"77526e86"]],["3.24",[872,0,"83fbad22"]],["3.25",[873,2,"50ae0b94"]],["3.26",[874,1,"d7acc711"]],["3.27",[875,2,"8399e71e"]],["3.28",[876,3,"2e7a928c"]],["3.29",[877,3,"944258e8"]],["3.30",[877,1,"095ffe5f"]],["3.31",[878,1,"33aab4f2"]],["3.33",[880,2,"e3b05168"]],["3.34",[882,0,"1d91e548"]],["3.35",[883,2,"39aed4f4"]],["3.36",[884,1,"6c8dfa03"]],["3.37",[885,0,"07265736"]],["3.38",[886,3,"053bec93"]],["4.1",[888,0,"050b352a"]],["4.2",[889,0,"57d74eee"]],["4.3",[890,3,"55e2c299"]],["4.4",[891,2,"b8749a79"]],["4.5",[891,0,"97d0e3f8"]],["4.6",[892,3,"d830c5e8"]],["4.7",[894,3,"bed89af6"]],["4.8",[895,1,"4f25eae8"]],["4.10",[897,0,"b8ae57a6"]],["4.11",[898,0,"673b9a1c"]],["4.13",[901,1,"581624bf"]],["4.14",[902,1,"7d8a44b7"]]]);
+test("Unit 8 final ABC and life-cycle review preserves source, keys and numerical parity",()=>{
+ for(const [id,[page,index,hash]] of unit8Wave3Pins){const r=unit8Rows.find(r=>r.section+"."+r.number===id);assert.equal(r.page,page);assert.equal(r.answerIndex,index);assert.equal(r.answerStatus,"source");assert.equal(fingerprint(JSON.stringify([r.stem,r.choices,r.explanation,r.answerIndex,r.page])),hash);assert.equal(validateCmaTranslation({question:{en:r.stem},choices:{en:r.choices},explanation:{en:r.explanation}},{question:r.stemAr,choices:r.choicesAr,explanation:r.explanationAr}).valid,true,id);for(const [en,ar] of [[r.stem,r.stemAr],...r.choices.map((c,i)=>[c,r.choicesAr[i]]),[r.explanation,r.explanationAr]])assert.deepEqual(cmaNumericTokens(ar),cmaNumericTokens(en),id);}
+ const adapter=read("src/data/cma-questions-gleim-2025-vol1.ts");const held=["8.1.2","8.1.3","8.1.7","8.1.12","8.1.13","8.2.6","8.2.11","8.3.1","8.3.2","8.3.15","8.3.16","8.3.18","8.3.22","8.3.23","8.3.32","8.4.9","8.4.12"];assert.deepEqual(unit8Rows.filter(r=>!r.stemAr).map(r=>[r.unit,r.section,r.number].join(".")),held);for(const id of held)assert.ok(adapter.includes('"'+id+'"'),id);
+ const translated=unit8Rows.filter(r=>r.stemAr&&r.choicesAr&&r.explanationAr);assert.equal(unit8Rows.length,84);assert.deepEqual([1,2,3,4].map(s=>translated.filter(r=>r.section===s).length),[16,9,30,12]);assert.equal(translated.length,67);assert.equal(new Set(translated.map(r=>JSON.stringify([r.stem,r.choices]))).size,67);
+});
+test("Unit 8 independent ABC allocation and product life-cycle arithmetic",()=>{
+ assert.equal(450000/(50+150)*50/30000,3.75);assert.equal(300000/(12+18)*18/12000,15);assert.equal(4000000/40000,100);assert.equal(2000000/40000,50);assert.equal(6000000/300000,20);assert.equal(2000000/200000,10);assert.equal(100*10+10*20,1200);
+ assert.equal(Math.round(((60000+3000)/(8000+5000*2)+.35)*2*100),770);
+ assert.equal(20*(1.75*100+1*150)+30*(1.25*100+.75*150),13625);
+ assert.equal(5000000+7000000+200000+100000,12300000);assert.equal((2000000+3000000+1200000+1000000)/200000*1.25,45);
+ const low=3000000+(1500000+1500000+180000-30000)*5+8000*(100+100+40)*5;
+ const mid=3000000+(1500000+1500000+180000)*5+6000*(100+100+40)*5;
+ assert.equal(low,28350000);assert.equal(mid,26100000);
+ const total=260000+10000+900000+300000+40000+900000+100000+60000+900000+50000+80000;
+ assert.equal(total,3600000);assert.equal(Math.round(total/300000*1.1*100),1320);
+});
