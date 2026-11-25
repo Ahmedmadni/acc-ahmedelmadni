@@ -625,6 +625,7 @@ const staticArabicVol2 = new Set([
   ...Array.from({length:19},(_,i)=>i+47).filter(n=>n!==55).map(n=>"17.2."+n),
   ...Array.from({length:14},(_,i)=>i+1).filter(n=>![1,10].includes(n)).map(n=>"18.1."+n),
   ...Array.from({length:15},(_,i)=>i+15).filter(n=>![17,21,24].includes(n)).map(n=>"18.1."+n),
+  ...Array.from({length:15},(_,i)=>i+30).filter(n=>![35,43,44].includes(n)).map(n=>"18.1."+n),
 ]);
 const vol2QuestionById = new Map(CMA_GLEIM_2025_VOL2_QUESTIONS.map(q=>[q.id,q]));
 for (const [key, original] of vol2Records) {
@@ -875,12 +876,12 @@ for(const [n,page,index] of [[2,1034,0],[15,1045,3],[21,1051,0],[25,1055,1],[37,
   "Unit 17 risk/control reference or source hold must remain unscored: "+n);
 }
 console.log("Unit 17 Wave 6: 71/93 Arabic drafts; governance 14/28, risk/control 57/65; 22 held, zero unreviewed.");
-for(const [n,page,index] of [[1,1088,0],[10,1096,3],[17,1101,0],[21,1105,3],[24,1108,1]]){
+for(const [n,page,index] of [[1,1088,0],[10,1096,3],[17,1101,0],[21,1105,3],[24,1108,1],[35,1116,0],[43,1124,3],[44,1125,3]]){
  const original=vol2Records.get("18.1."+n);
  const mapped=vol2QuestionById.get("cma-gleim-2025-vol2-su18-s1-q"+String(n).padStart(3,"0"));
  check(original?.page===page && original.answerIndex===index && original.stemAr===undefined && original.choicesAr===undefined && original.explanationAr===undefined && mapped?.sourceLayoutReview===true && mapped?.sourceLanguage==="en" && mapped?.sourceArabicStatus===undefined && mapped?.answerIndex===original.answerIndex,"Unit 18 control classification/accrual review hold: "+n);
 }
-console.log("Unit 18 Wave 2: 24/149 Arabic drafts; control procedures 24/89; 5 reviewed holds, 120 unreviewed.");
+console.log("Unit 18 Wave 3: 36/149 Arabic drafts; control procedures 36/89; 8 reviewed holds, 105 unreviewed.");
 const unit15ReviewRows=[...vol2Records.entries()].filter(([id])=>id.startsWith("15.")).filter(([id])=>{
  const [,section,n]=id.split(".");
  return vol2QuestionById.get("cma-gleim-2025-vol2-su15-s"+section+"-q"+String(n).padStart(3,"0"))?.sourceLayoutReview===true;
