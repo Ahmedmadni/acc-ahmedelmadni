@@ -1150,7 +1150,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The last-in, first-out (LIFO) method is prohibited by IFRS. This\nmethod is based on the assumption that the newest items are\nsold first. Its effect is to include current prices in cost of goods\nsold. But the LIFO assumption ordinarily does not match\nactual inventory use.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي طرق تدفق تكلفة المخزون محظورة وفق المعايير الدولية للتقارير المالية (IFRS)؟",
+    "choicesAr": [
+      "الوارد أولًا صادر أولًا (FIFO).",
+      "التحديد العيني للتكلفة.",
+      "المتوسط المرجح للتكلفة.",
+      "الوارد أخيرًا صادر أولًا (LIFO)."
+    ],
+    "explanationAr": "تحظر المعايير الدولية طريقة LIFO، التي تفترض تحميل أحدث تكاليف المخزون على المبيعات أولًا، مما يقرب تكلفة البضاعة المباعة من الأسعار الحالية. لكن افتراض التدفق هذا لا يتطابق بالضرورة مع التدفق الفعلي للبضاعة."
   },
   {
     "unit": 2,
@@ -1167,7 +1175,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A significant advantage of the LIFO method is its matching of\ncurrent revenues with the most recent product costs. When\nprices are rising (which is most of the time), the most recent\ncosts are the highest costs, resulting in higher cost of goods\nsold and lower net income. The lower net income means lower\ntaxes.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في فترة ارتفاع الأسعار، أي طرق تسعير المخزون التالية تحقق عادة أفضل مقابلة للتكاليف بالإيرادات؟",
+    "choicesAr": [
+      "المتوسط المرجح.",
+      "الوارد أولًا صادر أولًا.",
+      "الوارد أخيرًا صادر أولًا.",
+      "التحديد العيني."
+    ],
+    "explanationAr": "من مزايا LIFO مقابلة الإيرادات الحالية بأحدث تكاليف المنتجات. وعند ارتفاع الأسعار تكون التكاليف الأحدث هي الأعلى، فتزداد تكلفة البضاعة المباعة وينخفض صافي الدخل. وقد تنخفض الضرائب إذا كانت الطريقة معتمدة ضريبيًا وتحققت الشروط المنطبقة."
   },
   {
     "unit": 2,
@@ -1184,7 +1200,15 @@
     ],
     "answerIndex": 1,
     "explanation": "A significant advantage of the LIFO method is its matching of\ncurrent revenues with the most recent product costs. When\nprices are rising (which is most of the time), the most recent\ncosts are the highest costs, resulting in higher cost of goods\nsold and lower net income. The lower net income means lower\ntaxes.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في فترات ارتفاع التكاليف، أي افتراضات تدفق تكلفة المخزون التالية يؤدي إلى ارتفاع تكلفة المبيعات؟",
+    "choicesAr": [
+      "الوارد أولًا صادر أولًا.",
+      "الوارد أخيرًا صادر أولًا.",
+      "المتوسط المرجح.",
+      "المتوسط المتحرك."
+    ],
+    "explanationAr": "تقابل طريقة LIFO الإيرادات الحالية بأحدث تكاليف المنتجات. وعند ارتفاع الأسعار تكون أحدث التكاليف أعلى، فتزداد تكلفة البضاعة المباعة وينخفض صافي الدخل. وقد تنخفض الضرائب عند السماح باستخدام الطريقة ضريبيًا."
   },
   {
     "unit": 2,
@@ -1201,7 +1225,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Under the weighted-average method, the weighted-average\ncost per unit is multiplied by the number of units sold to\ndetermine the cost of goods sold for the period. The total units\navailable for sale equaled 45,500 (8,000 + 15,000 + 10,000 +\n12,500). The total cost of all units available for sale was\n$415,000 [(8,000 × $10) + (15,000 × $8) + (10,000 × $9) +\n(12,500 × $10)]. Thus, the weighted-average cost per unit of\ninventory was $9.1209 ($415,000 ÷ 45,500), and cost of goods\nsold was $228,023 (25,000 × $9.1209).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لدى منشأة 8,000 وحدة في المخزون في 1 يناير بتكلفة $10 للوحدة. وخلال السنة باعت 25,000 وحدة واشترت المخزون التالي:\nالتاريخ | الكمية المشتراة | سعر الوحدة\n1 أبريل | 15,000 وحدة | $8\n1 يوليو | 10,000 وحدة | 9\n1 أكتوبر | 12,500 وحدة | 10\nإذا استخدمت المنشأة طريقة المتوسط المرجح الدوري، فما تكلفة البضاعة المباعة للفترة؟",
+    "choicesAr": [
+      "$186,978",
+      "$197,000",
+      "$228,023",
+      "$235,000"
+    ],
+    "explanationAr": "وفق المتوسط المرجح تُضرب تكلفة الوحدة المرجحة في عدد الوحدات المباعة. بلغ إجمالي الوحدات المتاحة للبيع 45,500 (8,000 + 15,000 + 10,000 + 12,500). وبلغت تكلفتها $415,000 [(8,000 × $10) + (15,000 × $8) + (10,000 × $9) + (12,500 × $10)]. لذا تبلغ تكلفة الوحدة بالمتوسط المرجح $9.1209 ($415,000 ÷ 45,500)، وتبلغ تكلفة البضاعة المباعة وفق تقريب المتوسط في المصدر $228,023 (25,000 × $9.1209). وقد يختلف الناتج قليلًا عند عدم تقريب المتوسط قبل الضرب."
   },
   {
     "unit": 2,
@@ -1218,7 +1250,15 @@
     ],
     "answerIndex": 2,
     "explanation": "FIFO assigns the most recent acquisition costs to ending\ninventory and the earliest acquisition costs to cost of goods\nsold. LIFO assigns the earliest acquisition costs to ending\ninventory (it is permitted by U.S. GAAP but not by IFRS).\nThus, FIFO approximates current cost for ending inventory,\nand LIFO approximates current cost of goods sold.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي طرق تسعير المخزون تقارب التكلفة الحالية عادة لكل مما يلي؟\nمخزون آخر المدة | تكلفة البضاعة المباعة",
+    "choicesAr": [
+      "FIFO FIFO",
+      "LIFO FIFO",
+      "FIFO LIFO",
+      "LIFO LIFO"
+    ],
+    "explanationAr": "تخصص FIFO أحدث تكاليف الاقتناء لمخزون آخر المدة وأقدمها لتكلفة البضاعة المباعة. وتخصص LIFO أقدم التكاليف لمخزون آخر المدة، وهي مسموحة وفق المعايير الأمريكية وليست مسموحة وفق IFRS. لذا تقارب FIFO التكلفة الحالية للمخزون، وتقارب LIFO التكلفة الحالية للبضاعة المباعة."
   },
   {
     "unit": 2,
@@ -1235,7 +1275,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Under the LIFO method, the most recent costs of acquiring or\nproducing inventory are expensed as part of cost of goods\nsold. In a time of rising prices, charging newer, higher-priced\ngoods against current revenues decreases income.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الإجراءات التالية يؤدي إلى انخفاض الدخل؟",
+    "choicesAr": [
+      "تصفية طبقات مخزون LIFO عند ارتفاع الأسعار.",
+      "التحول من FIFO إلى LIFO عند انخفاض الأسعار.",
+      "تعجيل المشتريات في نهاية السنة عند استخدام LIFO في فترات ارتفاع الأسعار.",
+      "تغيير عدد مجموعات مخزون LIFO."
+    ],
+    "explanationAr": "تحمل LIFO أحدث تكاليف شراء المخزون أو إنتاجه على تكلفة البضاعة المباعة. وعند ارتفاع الأسعار تؤدي مقابلة الإيرادات الحالية بالتكاليف الأحدث والأعلى إلى انخفاض الدخل، بافتراض تأثير المشتريات المعجلة على تكلفة المبيعات وفق نظام LIFO المستخدم."
   },
   {
     "unit": 2,
@@ -1252,7 +1300,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The FIFO method assumes that the first goods purchased are\nthe first goods sold and that ending inventory consists of the\nlatest purchases. Thus, the cost of goods sold under FIFO is\n$498,540 [(200 units × $1,055) + (170 units × $1,062) +\n(100 units × $1,070)]. Under the LIFO method, the most recent\ncosts of acquiring or producing inventory are expensed as part\nof cost of goods sold. Thus, the cost of goods sold under LIFO\nis $502,900 [(160 units × $1,076) + (190 units × $1,070) +\n(120 units × $1,062)]. In order to lower tax income, the\ncompany should use the LIFO method because the cost of\ngoods sold under LIFO is more than the cost of goods sold\nunder FIFO. Therefore, the operating income under LIFO is\n$4,360 ($502,900 – $498,540) lower than the operating\nincome under FIFO.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يبيع متجر صناديق مقلدة للتحف لعملاء حول العالم. وتوضح سجلات المخزون ما يلي:\nالبند | الكمية (وحدة) | تكلفة الوحدة\nمخزون أول المدة | 200 | $1,055\nالمشتريات:\n3 يونيو | 170 | 1,062\n18 سبتمبر | 190 | 1,070\n10 ديسمبر | 160 | 1,076\nباع المتجر 470 وحدة خلال السنة. وتدرس الإدارة اختيار LIFO أو FIFO. إذا أرادت الإدارة خفض ضرائب الدخل، فما افتراض تدفق التكلفة الذي تختاره وفق الجرد الدوري وبافتراض السماح الضريبي؟",
+    "choicesAr": [
+      "FIFO لأن تكلفة البضاعة المباعة ستزيد عن LIFO بمبلغ $9,870.",
+      "FIFO لأن الدخل التشغيلي سيقل عن LIFO بمبلغ $840.",
+      "LIFO لأن الدخل التشغيلي سيقل عن FIFO بمبلغ $4,360.",
+      "LIFO لأن تكلفة البضاعة المباعة ستزيد عن FIFO بمبلغ $5,250."
+    ],
+    "explanationAr": "تفترض FIFO تحميل تكلفة أقدم المشتريات على المبيعات وبقاء الأحدث في المخزون. وتبلغ تكلفة البضاعة المباعة وفق FIFO مبلغ $498,540 [(200 وحدة × $1,055) + (170 وحدة × $1,062) + (100 وحدة × $1,070)]. أما LIFO فتحمل أحدث تكاليف الاقتناء أو الإنتاج على المبيعات، فتبلغ تكلفة البضاعة المباعة $502,900 [(160 وحدة × $1,076) + (190 وحدة × $1,070) + (120 وحدة × $1,062)]. لذلك، وفق افتراضات السؤال، يقل الدخل الخاضع للضريبة عند استخدام LIFO لأن تكلفة المبيعات أعلى منها وفق FIFO. ويقل الدخل التشغيلي وفق LIFO بمبلغ $4,360 ($502,900 − $498,540) عن FIFO."
   },
   {
     "unit": 2,
@@ -1269,7 +1325,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The total cost of beginning inventory and purchases is\n$75,000 ($30,000 + $20,000 + $25,000), and the total number\nunits of beginning inventory and purchases is 20,000. The\naverage price of the beginning inventory and purchases is\n$3.75 ($75,000 cost ÷ 20,000 units). The total cost of goods\nsold equals $37,500 (10,000 units sold × $3.75).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم Flex نظام الجرد الدوري. وفيما يلي معاملات المخزون لشهر يناير:\n1/1 مخزون أول المدة: 10,000 وحدة بسعر $3\n1/5 شراء: 5,000 وحدة بسعر $4\n1/15 شراء: 5,000 وحدة بسعر $5\n1/20 بيع بسعر $10 للوحدة: 10,000 وحدة\nتستخدم الشركة طريقة المتوسط لتحديد قيمة المخزون. فما تكلفة البضاعة المباعة في قائمة دخل يناير؟",
+    "choicesAr": [
+      "$30,000",
+      "$37,500",
+      "$40,000",
+      "$100,000"
+    ],
+    "explanationAr": "بلغت تكلفة مخزون أول المدة والمشتريات $75,000 ($30,000 + $20,000 + $25,000)، وبلغ إجمالي الوحدات 20,000. وبلغ متوسط التكلفة $3.75 ($75,000 التكلفة ÷ 20,000 وحدة). وتبلغ تكلفة البضاعة المباعة $37,500 (10,000 وحدة مباعة × $3.75)."
   },
   {
     "unit": 2,
@@ -1286,7 +1350,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The moving-average system is only applicable to perpetual\ninventories. It requires that a new weighted average be\ncomputed after every purchase. This moving average is based\non remaining inventory held and the new inventory purchased.\nBased on the calculations below, the moving-average cost per\nunit for the 1/20 sale is $1.75, and the cost of goods sold\n(COGS) for January is $1,575 (900 units sold × $1.75). Thus,\nending inventory is $3,225 ($1,000 beginning balance +\n$1,800 purchase on 1/7 – $1,575 COGS on 1/20 + $2,000\npurchase on 1/25).\nMoving-Average\nUnits        Cost/Unit     Total Cost\nBalance 1/1 1,000           $1.00          $1,000\nPurchase 1/7    600           3.00          1,800\n1,600           $1.75            $2,800",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "خلال يناير سجلت شركة Metro، التي تستخدم الجرد المستمر، المعلومات التالية عن المخزون:\nالحركة | الوحدات | تكلفة الوحدة | إجمالي التكلفة | الوحدات المتبقية\nرصيد أول المدة | 1,000 | $1 | $1,000 | 1,000\nفي 1/1\nشراء | 600 | 3 | 1,800 | 1,600\nفي 1/7\nبيع | 900 | — | — | 700\nفي 1/20\nشراء | 400 | 5 | 2,000 | 1,100\nفي 1/25\nوفق المتوسط المتحرك، ما قيمة المخزون في 31 يناير؟",
+    "choicesAr": [
+      "$2,640",
+      "$3,225",
+      "$3,300",
+      "$3,900"
+    ],
+    "explanationAr": "تستخدم طريقة المتوسط المتحرك مع الجرد المستمر، ويعاد حساب المتوسط المرجح بعد كل عملية شراء استنادًا إلى المخزون المتبقي والمشتريات الجديدة. وفق الحسابات التالية تبلغ تكلفة الوحدة لمبيعات 1/20 مبلغ $1.75، وتبلغ تكلفة البضاعة المباعة في يناير $1,575 (900 وحدة × $1.75). لذلك يبلغ مخزون آخر المدة $3,225 ($1,000 رصيد أول المدة + $1,800 مشتريات 1/7 − $1,575 تكلفة المبيعات في 1/20 + $2,000 مشتريات 1/25).\nالمتوسط المتحرك\nالحركة | الوحدات | تكلفة الوحدة | إجمالي التكلفة\nرصيد 1/1 | 1,000 | $1.00 | $1,000\nشراء 1/7 | 600 | 3.00 | 1,800\nالإجمالي | 1,600 | $1.75 | $2,800"
   },
   {
     "unit": 2,
@@ -1303,7 +1375,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The weighted-average method determines an average cost\nonly once (at the end of the period) and is therefore applicable\nonly to a periodic system. In contrast, the moving-average\nmethod requires determination of a new weighted-average\ncost after each purchase and thus applies only to a perpetual\nsystem.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "طريقة المتوسط المرجح السنوي لتدفق تكلفة المخزون تنطبق على أي من نظامي الجرد التاليين؟\nالدوري | المستمر",
+    "choicesAr": [
+      "نعم | نعم",
+      "نعم | لا",
+      "لا | نعم",
+      "لا | لا"
+    ],
+    "explanationAr": "يُحسب المتوسط المرجح للفترة مرة واحدة عند نهايتها في نظام الجرد الدوري. أما المتوسط المتحرك فيعاد حسابه بعد كل عملية شراء، ويطبق في نظام الجرد المستمر."
   },
   {
     "unit": 2,
@@ -1320,7 +1400,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Using a periodic inventory system, the ending value is not\naffected by when the sales and purchases of units occurred.\nThe company had 5,000 units available during the period\n(1,000 on December 1, 2,000 on December 12, and 2,000 on\nDecember 30). The total cost of these 5,000 units was\n$3,887,100 ($787,500 + $1,562,400 + 1,537,200), or $777.42\nper unit ($3,887,100 ÷ 5,000 units). Since 2,400 units were\nsold, the ending inventory would be $2,021,292 (2,600 units ×\n$777.42 per unit).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 ديسمبر كان لدى شركة 1,000 وحدة في المخزون بقيمة $787,500. وفي 12 ديسمبر اشترت 2,000 وحدة مقابل $1,562,400. وباعت 2,400 وحدة في 23 ديسمبر، ثم اشترت في 30 ديسمبر 2,000 وحدة إضافية مقابل $1,537,200. إذا استخدمت الجرد الدوري والمتوسط المرجح، فما قيمة المخزون في قائمة المركز المالي في 31 ديسمبر؟",
+    "choicesAr": [
+      "$2,025,660",
+      "$2,021,292",
+      "$2,014,740",
+      "$2,007,180"
+    ],
+    "explanationAr": "في الجرد الدوري لا تتأثر قيمة مخزون آخر المدة بتوقيت عمليات البيع والشراء خلال الفترة. كان لدى الشركة 5,000 وحدة متاحة (1,000 في 1 ديسمبر، و2,000 في 12 ديسمبر، و2,000 في 30 ديسمبر). وبلغت تكلفة هذه الوحدات البالغ عددها 5,000 مبلغ $3,887,100 ($787,500 + $1,562,400 + 1,537,200)، أي $777.42 للوحدة ($3,887,100 ÷ 5,000 وحدة). وبما أن 2,400 وحدة بيعت، تبلغ قيمة مخزون آخر المدة $2,021,292 (2,600 وحدة × $777.42 للوحدة)."
   },
   {
     "unit": 2,
@@ -1337,7 +1425,15 @@
     ],
     "answerIndex": 3,
     "explanation": "During periods of inflation, the cost of inventory\npurchased/produced throughout the period increases.\nBecause last-in, first-out (LIFO) inventory accounting uses the\nmost recent inventory costs for cost of goods sold, the cost of\ngoods sold reported is generally higher than cost of goods\nsold under a different inventory accounting method. Because\nthe higher inventory costs are assigned to cost of goods sold,\nthe cheaper inventory costs from the beginning of the period\nare assigned to ending inventory. This results in a lower\nending inventory valuation.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "خلال فترات التضخم، ما الأثر المعتاد لتطبيق طريقة LIFO؟",
+    "choicesAr": [
+      "انخفاض تكلفة البضاعة المباعة وانخفاض قيمة المخزون.",
+      "انخفاض تكلفة البضاعة المباعة وارتفاع قيمة المخزون.",
+      "ارتفاع تكلفة البضاعة المباعة وارتفاع قيمة المخزون.",
+      "ارتفاع تكلفة البضاعة المباعة وانخفاض قيمة المخزون."
+    ],
+    "explanationAr": "ترتفع تكاليف المخزون المشترى أو المنتج خلال فترات التضخم. ولأن LIFO تحمل أحدث تكاليف المخزون على البضاعة المباعة، تكون تكلفة المبيعات عادة أعلى مقارنة بطرق تدفق التكلفة الأخرى. وتبقى التكاليف الأقدم والأقل ضمن مخزون آخر المدة، فتكون قيمته أقل."
   },
   {
     "unit": 2,
