@@ -103,3 +103,5 @@
 - [x] Unit 2 Wave 2: eight receivables Arabic drafts (§1 Q13–20); **17/107 (15.9%)**. Section 1 initial review complete: 17 translated, three held. Continue §2 inventory fundamentals. See `docs/CMA_UNIT2_ARABIC_WAVE2_2026-11-25.md`.
 
 - [x] Unit 2 Wave 3: seven inventory fundamentals Arabic drafts (§2 Q2/Q4–9); **24/107 (22.4%)**. Q1 opening/ending inventory label, Q3 freight responsibility, Q10 incorrect explanation subject held. Continue §2 Q11. See `docs/CMA_UNIT2_ARABIC_WAVE3_2026-11-25.md`.
+
+- [x] Unit 2 Wave 4: eight inventory fundamentals Arabic drafts (§2 Q11–18); **32/107 (29.9%)**. Section 2 initial review complete: 15 translated and three held. Continue §3 cost flow. See `docs/CMA_UNIT2_ARABIC_WAVE4_2026-11-25.md`.
