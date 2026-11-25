@@ -1293,7 +1293,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A long-lived asset (asset group) is tested for recoverability\nwhenever events or changes in circumstances indicate that its\ncarrying amount may not be recoverable. The carrying amount\nis not recoverable when it exceeds the sum of the\nundiscounted cash flows expected to result from the use and\ndisposition of the asset (asset group). If the carrying amount is\nnot recoverable, an impairment loss is recognized equal to the\nexcess of the carrying amount over the fair value.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "متى يلزم اختبار انخفاض قيمة أصل طويل الأجل (أو مجموعة أصول) تتوقع المنشأة الاحتفاظ به واستخدامه وفق المعايير الأمريكية؟",
+    "choicesAr": [
+      "في تاريخ كل قائمة مركز مالي مرحلية وسنوية.",
+      "في تاريخ القوائم السنوية فقط.",
+      "بصفة دورية.",
+      "عندما تشير أحداث أو تغيرات في الظروف إلى احتمال عدم قابلية القيمة الدفترية للاسترداد."
+    ],
+    "explanationAr": "يختبر الأصل طويل الأجل (أو مجموعة الأصول) للتحقق من قابلية الاسترداد عند وجود مؤشرات إلى احتمال عدم استرداد قيمته الدفترية. وتكون القيمة غير قابلة للاسترداد إذا تجاوزت مجموع التدفقات النقدية غير المخصومة المتوقعة من الاستخدام والاستبعاد. وعندما تفشل في اختبار الاسترداد، تثبت خسارة الانخفاض بمقدار زيادة القيمة الدفترية على القيمة العادلة، إن وجدت."
   },
   {
     "unit": 5,
@@ -1310,7 +1318,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The accumulated depreciation was $400,000 {[($1,000,000\nhistorical cost – $100,000 residual value) ÷ 9 years estimated\nuseful life] × 4 years}, so the carrying amount was $600,000\n($1,000,000 – $400,000). Thus, the loss was $65,000\n($600,000 carrying amount – $535,000 sales price).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "اشترت منشأة آلة في 1 يناير من السنة 1 مقابل $1,000,000. وعمرها الإنتاجي المقدر 9 سنوات وقيمتها المتبقية $100,000. وتستخدم القسط الثابت. وفي 31 ديسمبر من السنة 4 بيعت الآلة مقابل $535,000. ما مكسب أو خسارة الاستبعاد الواجب إثباتها؟",
+    "choicesAr": [
+      "مكسب $35,000.",
+      "خسارة $65,000.",
+      "خسارة $365,000.",
+      "خسارة $465,000."
+    ],
+    "explanationAr": "بلغ مجمع الإهلاك $400,000 {[($1,000,000 التكلفة التاريخية − $100,000 القيمة المتبقية) ÷ 9 سنوات العمر المقدر] × 4 سنوات}. لذا بلغت القيمة الدفترية $600,000 ($1,000,000 − $400,000). ومن ثم بلغت الخسارة $65,000 ($600,000 القيمة الدفترية − $535,000 سعر البيع)."
   },
   {
     "unit": 5,
@@ -1327,7 +1343,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The selling price minus the carrying amount of the machine\nequals the gain or loss on disposal. The carrying amount\nequals $205,000 ($700,000 historical cost – $495,000\naccumulated depreciation). Thus, the selling price was\n$280,000 ($205,000 + $75,000 gain).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "اشترت منشأة آلة مقابل $700,000 وأهلكتها بالقسط الثابت، وكانت قيمتها المتبقية $40,000. وبيعت الآلة في 31 ديسمبر من السنة 1، وكان مجمع إهلاكها $495,000 في ذلك التاريخ. وأثبتت المنشأة مكسب بيع $75,000 في قائمة دخل السنة المنتهية في 31 ديسمبر من السنة 1. ما سعر بيع الآلة؟",
+    "choicesAr": [
+      "$280,000",
+      "$240,000",
+      "$205,000",
+      "$115,000"
+    ],
+    "explanationAr": "يساوي مكسب أو خسارة الاستبعاد سعر البيع ناقص القيمة الدفترية للآلة. وبلغت القيمة الدفترية $205,000 ($700,000 التكلفة التاريخية − $495,000 مجمع الإهلاك). ولذلك بلغ سعر البيع $280,000 ($205,000 + $75,000 المكسب)."
   },
   {
     "unit": 5,
@@ -1344,7 +1368,15 @@
     ],
     "answerIndex": 3,
     "explanation": "An impairment loss is included in income from continuing\noperations before income taxes by a business enterprise\n(income from continuing operations in the statement of\nactivities by a not-for-profit organization). When a subtotal for\n“income from operations” is reported, the impairment loss is\nincluded.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أين تعرض المنشأة التجارية خسارة انخفاض قيمة أصل طويل الأجل (أو مجموعة أصول) محتفظ به للاستخدام وفق المعايير الأمريكية؟",
+    "choicesAr": [
+      "العمليات المتوقفة.",
+      "البنود غير العادية.",
+      "الدخل الشامل الآخر.",
+      "الدخل من العمليات المستمرة."
+    ],
+    "explanationAr": "تدرج خسارة الانخفاض ضمن الدخل من العمليات المستمرة قبل ضرائب الدخل في المنشأة التجارية، وضمن العمليات المستمرة في قائمة الأنشطة للمنشأة غير الهادفة للربح. وإذا عرض مجموع فرعي للدخل التشغيلي، تدرج خسارة الانخفاض ضمنه."
   },
   {
     "unit": 5,
@@ -1361,7 +1393,15 @@
     ],
     "answerIndex": 1,
     "explanation": "A long-lived asset (asset group) is impaired when its carrying\namount is greater than its fair value. However, a loss equal to\nthis excess is recognized for the impairment only when the\ncarrying amount is not recoverable. The carrying amount is\nnot recoverable when it exceeds the sum of the undiscounted\ncash flows expected from the use and disposition of the asset\n(asset group).\nThe asset is impaired because its carrying amount ($20,000)\nexceeds its fair value ($12,000). This loss ($20,000 – $12,000\n= $8,000) is recognized in full because the carrying amount\n($20,000) exceeds the undiscounted cash flows from the\nasset ($15,000). Thus, the carrying amount is reduced to\n$12,000.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "حددت Blake أن إحدى آلاتها تعرضت لانخفاض في القيمة. لكنها تتوقع مواصلة استخدامها لمدة 3 سنوات كاملة أخرى لعدم وجود سوق نشطة لها. وفيما يلي بياناتها في تاريخ تحديد الانخفاض:\nالتكلفة الأصلية: $22,000\nالقيمة الدفترية: 20,000\nالتدفقات النقدية المستقبلية غير المخصومة المتوقعة من الآلة: 15,000\nالقيمة العادلة (المحددة بحساب القيمة الحالية للتدفقات النقدية المستقبلية المتوقعة من الآلة): 12,000\nما القيمة الدفترية للأصل بعد إثبات خسارة الانخفاض وفق المعالجة الأمريكية؟",
+    "choicesAr": [
+      "$0",
+      "$12,000",
+      "$14,000",
+      "$15,000"
+    ],
+    "explanationAr": "تنخفض قيمة الأصل طويل الأجل (أو مجموعة الأصول) عندما تتجاوز قيمته الدفترية قيمته العادلة، لكن إثبات الخسارة في نموذج الأصول المحتفظ بها للاستخدام مشروط بعدم قابلية القيمة الدفترية للاسترداد. وتكون غير قابلة للاسترداد إذا تجاوزت مجموع التدفقات النقدية غير المخصومة المتوقعة من الاستخدام والاستبعاد.\nانخفضت قيمة الأصل لأن قيمته الدفترية ($20,000) تتجاوز قيمته العادلة ($12,000). وتثبت الخسارة كاملة ($20,000 − $12,000 = $8,000) لأن القيمة الدفترية ($20,000) تتجاوز التدفقات النقدية غير المخصومة ($15,000). ولذلك تخفض القيمة الدفترية إلى $12,000."
   },
   {
     "unit": 5,
@@ -1378,7 +1418,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The impairment loss is the difference between the carrying\namount and fair value of the asset ($20,000 – $12,000 =\n$8,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "حددت Blake أن إحدى آلاتها تعرضت لانخفاض في القيمة. لكنها تتوقع مواصلة استخدامها لمدة 3 سنوات كاملة أخرى لعدم وجود سوق نشطة لها. وفيما يلي بياناتها في تاريخ تحديد الانخفاض:\nالتكلفة الأصلية: $22,000\nالقيمة الدفترية: 20,000\nالتدفقات النقدية المستقبلية غير المخصومة المتوقعة من الآلة: 15,000\nالقيمة العادلة (المحددة بحساب القيمة الحالية للتدفقات النقدية المستقبلية المتوقعة من الآلة): 12,000\nما خسارة الانخفاض التي ينبغي أن تثبتها Blake وفق المعالجة الأمريكية؟",
+    "choicesAr": [
+      "$3,000",
+      "$5,000",
+      "$7,000",
+      "$8,000"
+    ],
+    "explanationAr": "بعد تحقق عدم قابلية الأصل للاسترداد، تساوي خسارة الانخفاض الفرق بين القيمة الدفترية والقيمة العادلة ($20,000 − $12,000 = $8,000)."
   },
   {
     "unit": 5,
@@ -1395,7 +1443,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The gain on the sale is the difference between the sale\nproceeds and the carrying amount of the asset (its remaining\nundepreciated cost). Depreciation must be taken up to the\ntime of sale. Assuming that residual value is $0, annual\ndepreciation is $10,000 ($100,000 ÷ 10 years). Thus, the gain\nis $25,000 {$80,000 sale proceeds – [$100,000 historical cost\n– ($10,000 × 4.5 years)]}.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "باعت منشأة أصلًا قابلًا للإهلاك في منتصف السنة الخامسة من عمره الإنتاجي المقدر البالغ 10 سنوات. وبلغت تكلفته الأصلية $100,000 وكان يهلك بالقسط الثابت. وإذا بيع مقابل $80,000، فما مكسب البيع بافتراض عدم وجود قيمة متبقية؟",
+    "choicesAr": [
+      "$20,000",
+      "$25,000",
+      "$30,000",
+      "$35,000"
+    ],
+    "explanationAr": "يساوي مكسب البيع الفرق بين متحصلات البيع والقيمة الدفترية للأصل (التكلفة غير المهلكة المتبقية). ويحتسب الإهلاك حتى تاريخ البيع. وبافتراض أن القيمة المتبقية $0، يبلغ الإهلاك السنوي $10,000 ($100,000 ÷ 10 سنوات). ولذلك يبلغ المكسب $25,000 {$80,000 متحصلات البيع − [$100,000 التكلفة التاريخية − ($10,000 × 4.5 سنوات)]}."
   },
   {
     "unit": 5,
@@ -1412,7 +1468,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A long-lived asset (asset group) is impaired when its carrying\namount is greater than its fair value. However, a loss equal to\nthis excess is recognized for the impairment only when the\ncarrying amount is not recoverable. The carrying amount is\nnot recoverable when it exceeds the sum of the undiscounted\ncash flows expected from the use and disposition of the asset\n(asset group).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لتحديد ما إذا كان ينبغي إثبات انخفاض قيمة أصل ثابت قابل للإهلاك ومحتفظ به للاستخدام وفق المعايير الأمريكية، ما القيمتان المستخدمتان في اختبار قابلية الاسترداد؟",
+    "choicesAr": [
+      "القيمة الدفترية والقيمة الحالية للتدفقات النقدية المستقبلية المتوقعة من الأصل.",
+      "التكلفة الأصلية والقيمة العادلة للأصل.",
+      "القيمة الدفترية والتدفقات النقدية المستقبلية غير المخصومة المتوقعة من الأصل.",
+      "التكلفة الأصلية والقيمة الدفترية للأصل."
+    ],
+    "explanationAr": "تنخفض قيمة الأصل طويل الأجل (أو مجموعة الأصول) عندما تتجاوز قيمته الدفترية قيمته العادلة. لكن إثبات خسارة بهذا الفرق مشروط بعدم قابلية القيمة الدفترية للاسترداد. وتكون غير قابلة للاسترداد إذا تجاوزت مجموع التدفقات النقدية غير المخصومة المتوقعة من استخدام الأصل واستبعاده."
   },
   {
     "unit": 5,
@@ -1429,7 +1493,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Under IFRS, an impairment loss on an asset may be reversed\nin subsequent periods if a change in the estimates used to\nmeasure the recoverable amount has occurred. But an\nimpairment loss recognized for goodwill must not be reversed.\nUnder U.S. GAAP, a previously recognized impairment loss\nmust not be reversed.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية صحيحة بشأن انخفاض قيمة الأصول طويلة الأجل المحتفظ بها للاستخدام في نموذج التكلفة؟",
+    "choicesAr": [
+      "تتطلب المعايير الأمريكية اختبارًا من خطوة واحدة، وتتطلب IFRS اختبارًا من خطوتين.",
+      "يسمح كلا الإطارين بعكس خسارة الانخفاض في الفترات اللاحقة.",
+      "يحظر كلا الإطارين عكس خسارة الانخفاض في الفترات اللاحقة.",
+      "تحظر المعايير الأمريكية عكس خسارة الانخفاض في الفترات اللاحقة، بينما تسمح IFRS به في حالات محددة."
+    ],
+    "explanationAr": "وفق IFRS يمكن عكس خسارة انخفاض أصل في الفترات اللاحقة إذا تغيرت التقديرات المستخدمة في قياس المبلغ القابل للاسترداد، وفي حدود القيمة الدفترية التي كانت ستنتج لولا الانخفاض بعد الإهلاك أو الإطفاء. ولا يجوز عكس خسارة انخفاض الشهرة. أما وفق المعايير الأمريكية فلا تعكس خسارة انخفاض الأصل طويل الأجل المحتفظ به للاستخدام."
   },
   {
     "unit": 5,
@@ -1446,7 +1518,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The recoverable amount of an asset is the higher of its fair\nvalue minus costs to sell and its value in use. Thus, the\nrecoverable amount is $90,000 [$90,000 value in use >\n($100,000 – $15,000) FV minus costs to sell].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تطبق منشأة IFRS. وفي 31 ديسمبر من السنة 1 قدرت البيانات التالية لمبنى مقرها:\nالقيمة العادلة: $100,000\nتكاليف البيع: $15,000\nقيمة الاستخدام: $90,000\nالقيمة المتبقية: $17,000\nصافي القيمة القابلة للتحقق: $82,000\nما المبلغ القابل للاسترداد للمبنى في 31 ديسمبر من السنة 1؟",
+    "choicesAr": [
+      "$85,000",
+      "$90,000",
+      "$100,000",
+      "$82,000"
+    ],
+    "explanationAr": "المبلغ القابل للاسترداد هو الأعلى من القيمة العادلة ناقص تكاليف البيع (التخلص) وقيمة الاستخدام. لذلك يبلغ $90,000 [$90,000 قيمة الاستخدام أكبر من ($100,000 − $15,000) القيمة العادلة ناقص تكاليف البيع]."
   },
   {
     "unit": 5,
@@ -1463,7 +1543,15 @@
     ],
     "answerIndex": 0,
     "explanation": "An impairment loss is recognized when a long-lived asset’s\ncarrying amount exceeds the sum of its undiscounted cash\nflows. Because the sum of the undiscounted cash flows\n($130,000) exceeds the carrying amount ($120,000), the\ncarrying amount is recoverable. Thus, no impairment is\nrecognized.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لدى شركة أصل طويل الأجل محتفظ به للاستخدام بقيمة دفترية $120,000 وتدفقات نقدية مستقبلية متوقعة $130,000 وقيمة حالية لهذه التدفقات $100,000 وقيمة سوقية $105,000. ما خسارة الانخفاض وفق المعايير الأمريكية؟",
+    "choicesAr": [
+      "$0",
+      "$5,000",
+      "$15,000",
+      "$20,000"
+    ],
+    "explanationAr": "يجرى اختبار قابلية الاسترداد بمقارنة القيمة الدفترية للأصل طويل الأجل بمجموع التدفقات النقدية غير المخصومة. ولأن مجموع التدفقات غير المخصومة ($130,000) يتجاوز القيمة الدفترية ($120,000)، فإنها قابلة للاسترداد. لذا لا تثبت خسارة انخفاض."
   },
   {
     "unit": 5,
@@ -1497,7 +1585,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The recoverable amount of an asset is the greater of its fair\nvalue minus cost to sell or value in use. Value in use is the\npresent value of the asset’s expected cash flows. The\nrecognized impairment loss is the excess of the asset’s\ncarrying amount over its recoverable amount.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "وفق IFRS تنخفض قيمة الأصل عندما تتجاوز قيمته الدفترية مبلغه القابل للاسترداد. ما المبلغ القابل للاسترداد؟",
+    "choicesAr": [
+      "الأقل من القيمة العادلة زائد تكاليف البيع أو قيمة الاستخدام.",
+      "الأعلى من القيمة العادلة زائد تكاليف البيع أو قيمة الاستخدام.",
+      "الأقل من القيمة العادلة ناقص تكاليف البيع أو قيمة الاستخدام.",
+      "الأعلى من القيمة العادلة ناقص تكاليف البيع أو قيمة الاستخدام."
+    ],
+    "explanationAr": "المبلغ القابل للاسترداد هو الأعلى من القيمة العادلة ناقص تكاليف البيع (التخلص) وقيمة الاستخدام. وتمثل قيمة الاستخدام القيمة الحالية للتدفقات النقدية المتوقعة من الأصل. وتساوي خسارة الانخفاض المعترف بها مقدار زيادة القيمة الدفترية على المبلغ القابل للاسترداد."
   },
   {
     "unit": 5,
@@ -1514,7 +1610,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The cost of an acquired entity minus the net amount assigned\nto assets acquired and liabilities assumed is goodwill.\nGoodwill is not amortized. However, goodwill is assigned to a\nreporting unit that benefited from the business combination for\nthe purpose of testing impairment. Testing occurs each year at\nthe same time, but different reporting units may be tested at\ndifferent times. Furthermore, additional testing also may be\nindicated. Potential impairment of goodwill is deemed to exist\nonly if the carrying amount (including goodwill) of a reporting\nunit is greater than its fair value. Thus, accounting for goodwill\nis based on the units of the combined entity into which the\nacquired entity was absorbed. A reporting unit is an operating\nsegment or one of its components, that is, one level below an\noperating segment. A component qualifies as a reporting unit\nif (1) it is a business for which discrete financial information is\navailable, and (2) segment management regularly reviews its\noperating results. However, similar components are\naggregated. These provisions, including the determination of\noperating segments, apply even if the reporting entity is not\nrequired to report segment information.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "على أي مستوى ينبغي اختبار انخفاض قيمة الشهرة وفق النموذج العام للمعايير الأمريكية؟",
+    "choicesAr": [
+      "كل أصل طويل الأجل قابل للتحديد.",
+      "كل وحدة تقرير.",
+      "كل وحدة استحواذ.",
+      "المنشأة بأكملها."
+    ],
+    "explanationAr": "تنشأ الشهرة في تجميع الأعمال من الفرق بين المقابل وأي حقوق ذات صلة وصافي المبالغ المخصصة للأصول والالتزامات القابلة للتحديد، وفق شروط القياس المنطبقة. ولا تطفأ الشهرة وفق النموذج الأمريكي العام للشركات العامة. وتخصص لوحدة تقرير استفادت من تجميع الأعمال بغرض اختبار الانخفاض. ويجرى الاختبار سنويًا في الوقت نفسه، مع إمكان اختلاف موعد الاختبار بين الوحدات، وقد يلزم اختبار إضافي عند وجود مؤشرات. ويظهر انخفاض الشهرة عند تجاوز القيمة الدفترية لوحدة التقرير، شاملة الشهرة، قيمتها العادلة، وتحد الخسارة بمبلغ الشهرة المخصصة. وتكون وحدة التقرير قطاعًا تشغيليًا أو مكونًا منه في المستوى الأدنى مباشرة. ويعد المكون وحدة تقرير إذا (1) كان نشاطًا تتاح عنه معلومات مالية منفصلة، و(2) كانت إدارة القطاع تراجع نتائجه التشغيلية بانتظام. وتجمع المكونات المتشابهة وفق الشروط المنطبقة. وتسري هذه الأحكام حتى على المنشآت غير الملزمة بالإفصاح عن القطاعات."
   },
   {
     "unit": 5,
@@ -1531,7 +1635,15 @@
     ],
     "answerIndex": 1,
     "explanation": "An accelerated method reduces the carrying amount of the\nasset more rapidly in the early years of the useful life than\ndoes the straight-line method. Hence, the effect of an early\nsale is to increase the gain or decrease the loss that would\nhave been recognized under the straight-line method.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عند بيع أصل ثابت بعمر إنتاجي مقدر 5 سنوات خلال السنة الثانية، كيف يؤثر استخدام طريقة إهلاك معجل بدلًا من القسط الثابت على مكسب أو خسارة البيع؟\nالمكسب | الخسارة",
+    "choicesAr": [
+      "زيادة | زيادة",
+      "زيادة | انخفاض",
+      "انخفاض | زيادة",
+      "انخفاض | انخفاض"
+    ],
+    "explanationAr": "تخفض طريقة الإهلاك المعجل القيمة الدفترية للأصل بسرعة أكبر خلال السنوات الأولى مقارنة بالقسط الثابت. ولذلك يؤدي البيع المبكر، مع ثبات سعر البيع والعوامل الأخرى، إلى زيادة المكسب أو خفض الخسارة التي كانت ستثبت وفق القسط الثابت."
   },
   {
     "unit": 5,
@@ -1548,7 +1660,15 @@
     ],
     "answerIndex": 1,
     "explanation": "A long-lived asset is impaired when its carrying amount is\ngreater than its fair value. However, a loss equal to this\nexcess is recognized for the impairment only when the\ncarrying amount is not recoverable. The carrying amount is\nnot recoverable when it exceeds the sum of the undiscounted\ncash flows expected from the use and disposition of the asset.\nTesting should occur when events or changes in\ncircumstances indicate that the carrying amount may not be\nrecoverable.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "متى ينبغي اختبار قابلية استرداد أصل طويل الأجل محتفظ به للاستخدام وفق المعايير الأمريكية؟",
+    "choicesAr": [
+      "عند إعداد القوائم المالية الخارجية.",
+      "عندما تشير الأحداث أو التغيرات في الظروف إلى احتمال عدم استرداد قيمته الدفترية.",
+      "عندما تقل قيمته الدفترية عن قيمته العادلة.",
+      "عندما تنخفض قيمته العادلة ويعد الانخفاض دائمًا."
+    ],
+    "explanationAr": "تنخفض قيمة الأصل طويل الأجل عندما تتجاوز قيمته الدفترية قيمته العادلة، لكن إثبات خسارة بهذا الفرق مشروط بعدم قابلية القيمة الدفترية للاسترداد. وتكون غير قابلة للاسترداد إذا تجاوزت مجموع التدفقات النقدية غير المخصومة المتوقعة من الاستخدام والاستبعاد. ويجرى الاختبار عند وجود أحداث أو تغيرات تشير إلى احتمال عدم قابلية الاسترداد."
   },
   {
     "unit": 5,
@@ -1565,7 +1685,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Such guidance applies to the long-lived assets of an entity that\nare to be held and used or disposed of, including those that\nare part of a group with other assets and liabilities not subject\nto such guidance. The unit of accounting for such a long-lived\nasset is the asset group. If a long-lived asset(s) is to be held\nand used, the asset group is the lowest level at which\nidentifiable cash flows are largely independent of those of\nother groups. If the carrying amount of a long-lived asset\n(asset group) is not recoverable, a loss equal to the excess of\nthat carrying amount over the fair value is recognized.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "على أي مما يلي تطبق إرشادات الاعتراف بخسائر انخفاض الأصول طويلة الأجل المحتفظ بها للاستخدام وقياسها وفق المعايير الأمريكية؟",
+    "choicesAr": [
+      "الشهرة.",
+      "مجموعة أصول.",
+      "أداة مالية.",
+      "أي أصل غير ملموس لا يخضع للإطفاء."
+    ],
+    "explanationAr": "تطبق الإرشادات على الأصول طويلة الأجل المحتفظ بها للاستخدام أو التي ستستبعد، مع مراعاة متطلبات كل حالة، بما فيها الأصول التي تعد جزءًا من مجموعة تحتوي أصولًا والتزامات أخرى لا تخضع للإرشادات ذاتها. ووحدة المحاسبة للأصل هي مجموعة الأصول. وبالنسبة للأصل المحتفظ به للاستخدام، تكون المجموعة أدنى مستوى تكون عنده التدفقات النقدية القابلة للتحديد مستقلة بدرجة كبيرة عن تدفقات المجموعات الأخرى. وإذا لم تكن القيمة الدفترية قابلة للاسترداد، تثبت خسارة بمقدار زيادتها على القيمة العادلة، إن وجدت."
   },
   {
     "unit": 5,
@@ -1599,7 +1727,15 @@
     ],
     "answerIndex": 0,
     "explanation": "When an impairment of an intangible asset is recognized, the\nprevious carrying amount of the asset is reduced by the\nimpairment loss. The adjusted carrying amount is the new\naccounting basis. Thus, it cannot be increased subsequently\nfor a change in fair value. This rule applies whether the\nintangible asset has a finite or an indefinite useful life.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بعد إثبات خسارة انخفاض أصل غير ملموس، تصبح قيمته الدفترية المعدلة أساسه المحاسبي الجديد. أي العبارات التالية صحيحة بشأن العكس اللاحق لخسارة الانخفاض المثبتة سابقًا وفق المعايير الأمريكية في الحالة المعروضة؟",
+    "choicesAr": [
+      "يحظر العكس.",
+      "يلزم العكس عندما يعد دائمًا.",
+      "يجب الإفصاح عن العكس في الإيضاحات.",
+      "يشجع العكس دون إلزام."
+    ],
+    "explanationAr": "عند إثبات انخفاض قيمة أصل غير ملموس، تخفض قيمته الدفترية السابقة بمقدار خسارة الانخفاض. وتصبح القيمة الدفترية المعدلة أساس القياس الجديد. ولذلك لا تزاد لاحقًا بسبب تغير القيمة العادلة وفق نموذج الأصول المستخدمة في المعايير الأمريكية. وتسري القاعدة على الأصل غير الملموس ذي العمر المحدد أو غير المحدد."
   },
   {
     "unit": 5,
@@ -1633,6 +1769,14 @@
     ],
     "answerIndex": 0,
     "explanation": "Intangible assets include those with finite useful lives (an\namortized intangible asset) and those with indefinite useful\nlives (a nonamortized intangible asset). An intangible asset\nwith a finite useful life (e.g., a patent) is reviewed for\nimpairment when events or changes in circumstances indicate\nthat its carrying amount may not be recovered. The test for\nimpairment is a two-step test: (1) perform the recoverability\ntest (the carrying amount is not recoverable if it exceeds the\nsum of the undiscounted future cash flows expected from the\nuse and disposition of the asset) and (2) determine the\nimpairment loss for the excess of the carrying amount over the\nfair value. A patent is an intangible asset with a finite useful\nlife, so it is subject to the recoverability test when testing for\nimpairment.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الأصول غير الملموسة التالية يخضع لاختبار قابلية الاسترداد عند اختبار انخفاض القيمة وفق المعايير الأمريكية؟",
+    "choicesAr": [
+      "براءة اختراع.",
+      "الشهرة.",
+      "تكاليف البحث والتطوير لبراءة اختراع.",
+      "علامة تجارية ذات عمر إنتاجي غير محدد."
+    ],
+    "explanationAr": "تشمل الأصول غير الملموسة أصولًا ذات عمر محدد تخضع للإطفاء وأخرى ذات عمر غير محدد لا تطفأ. ويختبر الأصل ذو العمر المحدد، مثل براءة الاختراع، عند وجود مؤشرات إلى احتمال عدم استرداد قيمته الدفترية. ويتكون اختبار الانخفاض من خطوتين: (1) اختبار قابلية الاسترداد، حيث تكون القيمة غير قابلة للاسترداد إذا تجاوزت مجموع التدفقات النقدية المستقبلية غير المخصومة المتوقعة من الاستخدام والاستبعاد، و(2) قياس الخسارة بمقدار زيادة القيمة الدفترية على القيمة العادلة، إن وجدت. وبراءة الاختراع أصل ذو عمر محدد، لذا تخضع لاختبار قابلية الاسترداد."
   }
 ]
