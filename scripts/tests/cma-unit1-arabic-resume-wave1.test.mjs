@@ -78,3 +78,11 @@ test("Unit 2 receivables wave 2 preserves source, answers and numerical parity",
  assert.equal(1000000*.02,20000);assert.equal(240000*.01+180000*.02+200000*.06,18000);assert.equal(2000000*.03,60000);assert.equal(850000-64000,786000);assert.equal(50000-(12000-48000),86000);assert.equal(50000,Number(unit2Rows.find(r=>r.section===1&&r.number===18).choices[3].replace(/[$,]/g,"")));assert.equal(300000*.08-(30000-40000),34000);assert.equal(80000*(1-.10-.05),68000);
  assert.equal(unit2Rows.filter(r=>r.section===1).length,20);assert.ok(unit2Rows.filter(r=>r.section===1&&r.stemAr).length>=17);
 });
+
+const unit2Wave3Pins=new Map([[2,[242,0,"81970b1f"]],[4,[244,3,"67af50e5"]],[5,[245,1,"5838b37b"]],[6,[246,2,"07d7f4ff"]],[7,[247,3,"0bc5b6cb"]],[8,[248,1,"fb608b29"]],[9,[249,2,"1f707e5f"]]]);
+test("Unit 2 inventory fundamentals wave 3 preserves source, answers and numerical parity",()=>{
+ for(const [n,[page,index,hash]] of unit2Wave3Pins){const r=unit2Rows.find(r=>r.section===2&&r.number===n);assert.equal(r.page,page);assert.equal(r.answerIndex,index);assert.equal(r.answerStatus,"source");assert.equal(fingerprint(JSON.stringify([r.stem,r.choices,r.explanation,r.answerIndex,r.page])),hash);assert.equal(validateCmaTranslation({question:{en:r.stem},choices:{en:r.choices},explanation:{en:r.explanation}},{question:r.stemAr,choices:r.choicesAr,explanation:r.explanationAr}).valid,true,String(n));for(const [en,ar] of [[r.stem,r.stemAr],...r.choices.map((c,i)=>[c,r.choicesAr[i]]),[r.explanation,r.explanationAr]])assert.deepEqual(cmaNumericTokens(ar),cmaNumericTokens(en),String(n));}
+ const adapter=read("src/data/cma-questions-gleim-2025-vol1.ts");for(const n of [1,3,10]){const r=unit2Rows.find(r=>r.section===2&&r.number===n);assert.equal(r.stemAr,undefined);assert.ok(adapter.includes('"2.2.'+n+'"'));}
+ assert.equal(49000+180000-62000,167000);assert.equal(120000+167000-140000,147000);assert.equal(5000+60000-55000,10000);assert.equal(900000*.6+200000,740000);assert.equal((-1000)-(-1000),0);assert.equal(0-1000,-1000);assert.equal(1000-0,1000);
+ assert.ok(unit2Rows.filter(r=>r.stemAr&&r.choicesAr&&r.explanationAr).length>=24);
+});
