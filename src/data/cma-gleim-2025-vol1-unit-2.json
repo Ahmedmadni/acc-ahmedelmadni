@@ -1817,7 +1817,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Market is the replacement cost of the inventory as determined\nin the market in which the entity buys its inventory, not the\nmarket in which it sells to customers. It is limited to a ceiling\namount equal to net realizable value and a floor amount equal\nto net realizable value minus a normal profit margin.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتطلب المبادئ المحاسبية المتعارف عليها الخروج عن مبدأ التكلفة التاريخية عند انخفاض منفعة المخزون عن تكلفته. وفق قاعدة التكلفة أو السوق أيهما أقل (LCM)، ما المقصود بالسوق؟",
+    "choicesAr": [
+      "التكلفة الأصلية مطروحًا منها مخصص التقادم.",
+      "التكلفة الأصلية مضافًا إليها هامش الربح العادي.",
+      "تكلفة استبدال المخزون.",
+      "التكلفة الأصلية مطروحًا منها تكلفة التخلص."
+    ],
+    "explanationAr": "في تطبيق قاعدة LCM وفق المعايير الأمريكية على المخزون المسعر بطريقة LIFO أو التجزئة، تعني السوق تكلفة استبدال المخزون في سوق الشراء، لا سوق البيع للعملاء. وتخضع لسقف يساوي صافي القيمة القابلة للتحقق وحد أدنى يساوي صافي القيمة القابلة للتحقق مطروحًا منه هامش الربح العادي."
   },
   {
     "unit": 2,
@@ -1834,7 +1842,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Under the LCM method, market is current replacement cost\nsubject to a maximum (ceiling) equal to net realizable value\nand a minimum (floor) equal to net realizable value minus a\nnormal profit margin. NRV equals selling price minus costs of\ncompletion and disposal. Thus, the maximum market amount\nis the $20 NRV ($22 selling price – $2 selling cost), and the\nminimum is $15 ($20 NRV – $5 normal profit margin).\nBecause the minimum exceeds the $10 replacement cost, it is\nthe market amount.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فيما يلي بيانات وحدة مخزون:\nسعر البيع: $22\nتكلفة البيع: 2\nهامش الربح العادي: 5\nتكلفة الاستبدال: 10\nوفق طريقة التكلفة أو السوق أيهما أقل (LCM)، ما قيمة السوق لهذه الوحدة؟",
+    "choicesAr": [
+      "$10.00",
+      "$15.00",
+      "$17.50",
+      "$20.00"
+    ],
+    "explanationAr": "في قاعدة LCM، السوق هي تكلفة الاستبدال الحالية المقيدة بسقف يساوي صافي القيمة القابلة للتحقق وحد أدنى يساوي صافي القيمة القابلة للتحقق مطروحًا منه هامش الربح العادي. ويساوي صافي القيمة القابلة للتحقق سعر البيع مطروحًا منه تكاليف الإكمال والتخلص. لذا يبلغ السقف $20 ($22 سعر البيع − $2 تكلفة البيع)، والحد الأدنى $15 ($20 صافي القيمة القابلة للتحقق − $5 هامش الربح العادي). ولأن الحد الأدنى أعلى من تكلفة الاستبدال $10، فإنه يمثل قيمة السوق."
   },
   {
     "unit": 2,
@@ -1851,7 +1867,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Inventory accounted for using LIFO or the retail inventory\nmethod is measured at the lower of cost or market (LCM). As\nindicated below, the $180,000 replacement cost falls between\nthe $194,000 ceiling and the $164,000 floor. Thus, it will be\nused as market in the LCM determination. Because the\n$180,000 market value is $20,000 lower than the $200,000\nhistorical cost, the inventory should be valued at $180,000 and\na $20,000 loss recognized.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "حددت شركة توزيع مخزونها في 31 ديسمبر وفق LIFO بمبلغ $200,000. وفيما يلي بيانات المخزون:\nسعر البيع المقدر: $204,000\nتكلفة التخلص المقدرة: 10,000\nهامش الربح العادي: 30,000\nتكلفة الاستبدال الحالية: 180,000\nتثبت الشركة الخسائر الناتجة عن تطبيق قاعدة التكلفة أو السوق أيهما أقل. ما الخسارة الواجب إثباتها في 31 ديسمبر؟",
+    "choicesAr": [
+      "$0",
+      "$6,000",
+      "$14,000",
+      "$20,000"
+    ],
+    "explanationAr": "وفق المعايير الأمريكية، يقاس المخزون المسعر بطريقة LIFO أو التجزئة بالتكلفة أو السوق أيهما أقل. وتقع تكلفة الاستبدال البالغة $180,000 بين السقف $194,000 والحد الأدنى $164,000؛ فتستخدم باعتبارها قيمة السوق. ولأن قيمة السوق $180,000 أقل بمبلغ $20,000 من التكلفة التاريخية $200,000، يقاس المخزون بمبلغ $180,000 وتثبت خسارة $20,000."
   },
   {
     "unit": 2,
@@ -1885,7 +1909,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Under IFRS, inventories are measured subsequent to\nacquisition at the lower of cost or net realizable value (NRV).\nNRV equals selling price minus estimated completion and\nselling costs. Given that historical cost is $91 and NRV is $85\n($100 selling price – $10 completion cost – $5 selling cost),\nthe effect on per-unit gross profit is a reduction of $6. This\namount is expensed.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تعرض منشأة تعد قوائمها وفق IFRS البيانات التالية لكل وحدة من الإنتاج تحت التشغيل:\nسعر البيع: $100\nتكاليف الإكمال: 10\nالتكلفة التاريخية: 91\nتكلفة الاستبدال: 108\nمجمل الربح العادي: 20\nتكلفة البيع: 5\nمقارنة بالتكلفة التاريخية، ما أثر قياس مخزون آخر المدة على مجمل الربح لكل وحدة؟",
+    "choicesAr": [
+      "لا أثر.",
+      "انخفاض بمبلغ $6.",
+      "انخفاض بمبلغ $26.",
+      "زيادة بمبلغ $5."
+    ],
+    "explanationAr": "وفق IFRS، يقاس المخزون لاحقًا بالتكلفة أو صافي القيمة القابلة للتحقق أيهما أقل. ويساوي صافي القيمة القابلة للتحقق سعر البيع مطروحًا منه تكاليف الإكمال والبيع المقدرة. وبما أن التكلفة التاريخية $91 وصافي القيمة القابلة للتحقق $85 ($100 سعر البيع − $10 تكلفة الإكمال − $5 تكلفة البيع)، ينخفض مجمل الربح لكل وحدة بمبلغ $6 ويثبت المبلغ مصروفًا."
   },
   {
     "unit": 2,
@@ -1902,7 +1934,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Market equals current replacement cost subject to maximum\nand minimum values. The maximum is NRV, and the minimum\nis NRV minus normal profit. When replacement cost is within\nthis range, it is used as market. Cost is given as $26,000.\nNRV is $28,000 ($40,000 selling price – $12,000 additional\nprocessing costs), and NRV minus a normal profit equals\n$24,000 [$28,000 – ($40,000 × 10%)]. Because the lowest\namount in the range ($24,000) exceeds replacement cost\n($20,000), it is used as market. Because market value\n($24,000) is less than cost ($26,000), it is also the inventory\namount.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "استنادًا إلى الجرد الفعلي في 31 ديسمبر، حددت شركة مخزون الشوكولاتة وفق LIFO بمبلغ $26,000 وتكلفة استبداله بمبلغ $20,000. وقدرت أنه بعد تكاليف تصنيع إضافية قدرها $12,000 يمكن بيع الشوكولاتة كمنتج تام مقابل $40,000. ويبلغ هامش الربح العادي 10% من المبيعات. وفق قاعدة التكلفة أو السوق أيهما أقل، ما قيمة مخزون الشوكولاتة في قائمة المركز المالي في 31 ديسمبر؟",
+    "choicesAr": [
+      "$28,000",
+      "$26,000",
+      "$24,000",
+      "$20,000"
+    ],
+    "explanationAr": "تساوي السوق تكلفة الاستبدال الحالية المقيدة بسقف هو صافي القيمة القابلة للتحقق وحد أدنى هو صافي القيمة القابلة للتحقق مطروحًا منه الربح العادي. فإذا وقعت تكلفة الاستبدال بينهما استخدمت باعتبارها السوق. التكلفة $26,000، وصافي القيمة القابلة للتحقق $28,000 ($40,000 سعر البيع − $12,000 تكاليف التصنيع الإضافية)، والحد الأدنى $24,000 [$28,000 − ($40,000 × 10%)]. ولأن الحد الأدنى ($24,000) أعلى من تكلفة الاستبدال ($20,000)، يمثل قيمة السوق. وبما أن السوق ($24,000) أقل من التكلفة ($26,000)، فهي قيمة المخزون."
   },
   {
     "unit": 2,
@@ -1919,7 +1959,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Market is current replacement cost subject to maximum and\nminimum values. The maximum is net realizable value, and\nthe minimum is net realizable value less normal profit. When\nreplacement cost is within this range, it is used as the market\namount.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "وفق طريقة التكلفة أو السوق أيهما أقل، متى تستخدم تكلفة استبدال صنف المخزون باعتبارها قيمة السوق المحددة؟",
+    "choicesAr": [
+      "عندما تقل عن صافي القيمة القابلة للتحقق مطروحًا منه هامش الربح العادي.",
+      "عندما تقل عن صافي القيمة القابلة للتحقق وتزيد على صافي القيمة القابلة للتحقق مطروحًا منه هامش الربح العادي.",
+      "عندما تزيد على صافي القيمة القابلة للتحقق.",
+      "بصرف النظر عن صافي القيمة القابلة للتحقق."
+    ],
+    "explanationAr": "السوق هي تكلفة الاستبدال الحالية المقيدة بحد أعلى يساوي صافي القيمة القابلة للتحقق وحد أدنى يساوي صافي القيمة القابلة للتحقق مطروحًا منه الربح العادي. وإذا وقعت تكلفة الاستبدال ضمن هذا النطاق، تستخدم باعتبارها قيمة السوق."
   },
   {
     "unit": 2,
@@ -1936,7 +1984,15 @@
     ],
     "answerIndex": 2,
     "explanation": "When replacement cost is below the NRV and above the NRV\nless the normal profit margin, market equals replacement cost.\nGiven that the original cost of the inventory item is below\nmarket, the original cost should be used to measure the\ninventory item under the LCM method.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تقل تكلفة استبدال صنف مخزون عن صافي القيمة القابلة للتحقق وتزيد على صافي القيمة القابلة للتحقق مطروحًا منه هامش الربح العادي. وتقل التكلفة الأصلية عن هذا الحد الأدنى. وفق قاعدة التكلفة أو السوق أيهما أقل (LCM)، بأي قيمة يقاس الصنف؟",
+    "choicesAr": [
+      "صافي القيمة القابلة للتحقق.",
+      "صافي القيمة القابلة للتحقق مطروحًا منه هامش الربح العادي.",
+      "التكلفة الأصلية.",
+      "تكلفة الاستبدال."
+    ],
+    "explanationAr": "عندما تقع تكلفة الاستبدال بين صافي القيمة القابلة للتحقق وصافي القيمة القابلة للتحقق مطروحًا منه هامش الربح العادي، تساوي السوق تكلفة الاستبدال. ولأن التكلفة الأصلية أقل من السوق، تستخدم التكلفة الأصلية في قياس الصنف وفق LCM. فالحد الأدنى يقيد السوق وليس التكلفة الأصلية."
   },
   {
     "unit": 2,
@@ -1970,7 +2026,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Both IFRS and U.S. GAAP require the cost of inventory to be\nwritten down if the utility of the goods is impaired. Under IFRS,\ninventories are measured subsequent to initial recognition at\nthe lower of cost and net realizable value (NRV), with NRV\nassessed each period. Moreover, unlike U.S. GAAP, IFRS\npermit inventory to be written up to the lower of cost and NRV\nif previously written down. The reversal is permissible only to\nthe extent of the prior write-down.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية صحيحة بشأن تسويات المخزون وفق IFRS؟",
+    "choicesAr": [
+      "لا تتطلب IFRS تسويات المخزون.",
+      "يسمح بعكس التخفيضات في فترة لاحقة.",
+      "يمكن أن يتجاوز عكس التخفيض السابق قيمة التخفيض نفسه.",
+      "لا يجوز عكس التخفيضات في فترة لاحقة."
+    ],
+    "explanationAr": "تتطلب IFRS والمعايير الأمريكية تخفيض تكلفة المخزون عند انخفاض منفعته. ووفق IFRS يقاس المخزون لاحقًا بالأقل من التكلفة وصافي القيمة القابلة للتحقق، مع إعادة تقدير الأخيرة في كل فترة. وعلى خلاف القاعدة العامة في المعايير الأمريكية، تسمح IFRS بزيادة قيمة المخزون الذي سبق تخفيضه إلى الأقل من التكلفة وصافي القيمة القابلة للتحقق المعدلة. ويقتصر العكس على مقدار التخفيض السابق."
   },
   {
     "unit": 2,
@@ -1987,7 +2051,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Under U.S. GAAP, write-downs taken to reduce inventories\ncan not be reversed for subsequent increases in value. Under\nIFRS, write-downs taken to reduce inventories can be\nreversed for subsequent increases in value, but the reversal is\nlimited to the amount of the original write-down.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تحتفظ شركة متعددة الجنسيات بسجلاتها وفق IFRS والمعايير الأمريكية. وفي السنة الماضية انخفضت قيمة مخزونها بسبب انهيار الطلب عقب طرح منافس منتجًا مبتكرًا. فخفضت المخزون إلى $0 بعدما كانت قيمته الدفترية $500,000. وفي السنة الحالية أعلنت الجهات الحكومية أن منتج المنافس معيب وسُحب من السوق. فعاد الطلب على منتجات الشركة، وقدرت صافي قيمتها القابلة للتحقق بنهاية الربع الحالي بمبلغ $750,000. كيف تسجل الشركة هذا التطور في الربع الحالي؟",
+    "choicesAr": [
+      "وفق IFRS: زيادة المخزون $0؛ وفق المعايير الأمريكية: زيادة $0.",
+      "وفق IFRS: زيادة المخزون $500,000؛ وفق المعايير الأمريكية: زيادة $0.",
+      "وفق IFRS: زيادة المخزون $750,000؛ وفق المعايير الأمريكية: زيادة $0.",
+      "وفق IFRS: زيادة المخزون $750,000؛ وفق المعايير الأمريكية: زيادة $750,000."
+    ],
+    "explanationAr": "وفق المعايير الأمريكية لا يعكس تخفيض قيمة المخزون المثبت في سنة سابقة بسبب ارتفاع قيمته لاحقًا. أما وفق IFRS فيجوز عكس التخفيض عند ارتفاع صافي القيمة القابلة للتحقق، لكن العكس محدود بمقدار التخفيض الأصلي."
   },
   {
     "unit": 2,
@@ -2021,7 +2093,15 @@
     ],
     "answerIndex": 0,
     "explanation": "A reversal of inventory write-downs is permitted under IFRS\nbut is prohibited under U.S. GAAP.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "من الفروق الأساسية بين المعايير الأمريكية وIFRS أن:",
+    "choicesAr": [
+      "يسمح بعكس تخفيض قيمة المخزون وفق IFRS؛ بينما لا يسمح به وفق القاعدة العامة للمعايير الأمريكية.",
+      "تدرج تكاليف التوزيع في تكلفة المبيعات وفق المعايير الأمريكية؛ وتستبعد وفق IFRS.",
+      "يقاس المخزون عمومًا بالأقل من التكلفة والسوق وفق IFRS؛ وبالأقل من التكلفة وصافي القيمة القابلة للتحقق وفق المعايير الأمريكية.",
+      "تدرج تكاليف التسويق في تكلفة المبيعات وفق المعايير الأمريكية؛ وتستبعد وفق IFRS."
+    ],
+    "explanationAr": "تسمح IFRS بعكس تخفيض قيمة المخزون في حدود التخفيض السابق عند تحقق شروط العكس، بينما تمنع القاعدة العامة للمعايير الأمريكية عكس التخفيض الذي أسس تكلفة جديدة في فترة سنوية سابقة."
   },
   {
     "unit": 2,
@@ -2038,7 +2118,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Inventory accounted for using LIFO or the retail inventory\nmethod is measured at the lower of cost or market. When\nreplacement cost is below the NRV and above the NRV minus\nthe normal profit margin, market equals replacement cost.\nGiven that the original cost of the inventory item is below\nmarket, the original cost should be used to measure the\ninventory item under the LCM method.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تقل تكلفة استبدال صنف مخزون مسعر وفق LIFO عن صافي القيمة القابلة للتحقق وتزيد على صافي القيمة القابلة للتحقق مطروحًا منه هامش الربح العادي. وتقل التكلفة الأصلية عن هذا الحد الأدنى. وفق طريقة التكلفة أو السوق أيهما أقل (LCM)، بأي قيمة يقاس الصنف؟",
+    "choicesAr": [
+      "صافي القيمة القابلة للتحقق.",
+      "صافي القيمة القابلة للتحقق مطروحًا منه هامش الربح العادي.",
+      "التكلفة الأصلية.",
+      "تكلفة الاستبدال."
+    ],
+    "explanationAr": "يقاس المخزون المسعر وفق LIFO أو التجزئة بالتكلفة أو السوق أيهما أقل وفق المعايير الأمريكية. وعندما تقع تكلفة الاستبدال بين صافي القيمة القابلة للتحقق والحد الأدنى المتمثل في صافي القيمة القابلة للتحقق مطروحًا منه الربح العادي، تساوي السوق تكلفة الاستبدال. ولأن التكلفة الأصلية أقل من السوق، تستخدم التكلفة الأصلية في القياس."
   },
   {
     "unit": 2,
@@ -2055,7 +2143,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Inventory accounted for using LIFO or the retail inventory\nmethod is measured at the lower of cost or market. Market is\ncurrent replacement cost subject to a ceiling and a floor. The\nmaximum is net realizable value, and the minimum is net\nrealizable value minus normal profit. When replacement cost\nis within this range, it is used as market. The original cost is\nabove the NRV minus normal profit margin but below the NRV\nand the replacement cost. Thus, market must be the NRV (if it\nis less than replacement cost) or the replacement cost (which\nis greater than NRV minus normal profit), and LCM is equal to\noriginal cost.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تقل التكلفة الأصلية لصنف مخزون عن تكلفة الاستبدال وصافي القيمة القابلة للتحقق معًا، بينما يقل صافي القيمة القابلة للتحقق مطروحًا منه هامش الربح العادي عن التكلفة الأصلية. وفق LCM، بأي قيمة يقاس الصنف المسعر باستخدام LIFO؟",
+    "choicesAr": [
+      "تكلفة الاستبدال.",
+      "صافي القيمة القابلة للتحقق.",
+      "صافي القيمة القابلة للتحقق مطروحًا منه هامش الربح العادي.",
+      "التكلفة الأصلية."
+    ],
+    "explanationAr": "وفق المعايير الأمريكية يقاس المخزون المسعر بطريقة LIFO أو التجزئة بالأقل من التكلفة والسوق. والسوق تكلفة الاستبدال المقيدة بسقف يساوي صافي القيمة القابلة للتحقق وحد أدنى يساوي صافي القيمة القابلة للتحقق مطروحًا منه الربح العادي. وإذا وقعت تكلفة الاستبدال ضمن النطاق استخدمت باعتبارها السوق. وتقع التكلفة الأصلية فوق الحد الأدنى وتحت صافي القيمة القابلة للتحقق وتكلفة الاستبدال؛ ومن ثم تكون السوق إما صافي القيمة القابلة للتحقق إذا قل عن تكلفة الاستبدال، أو تكلفة الاستبدال إذا وقعت داخل النطاق. لذا تكون التكلفة الأصلية هي الأقل."
   },
   {
     "unit": 2,
@@ -2072,7 +2168,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Inventory accounted for using LIFO or the retail inventory\nmethod is measured at the lower of cost or market (LCM).\nMarket is current replacement cost subject to a ceiling equal to\nnet realizable value and a floor equal to net realizable value\nminus a normal profit. Net realizable value is the estimated\nselling price minus costs of completion and disposal. For gear,\nthe net realizable value is $198 ($217 selling price –\n$19 completion and disposal costs). Net realizable value\nminus normal profit is $166 ($198 net realizable value –\n$32 normal profit).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم Stockholm طريقة LIFO للمحاسبة عن المخزون. وفيما يلي بيانات الأصناف لكل وحدة:\nالبند | Gear | Stuff | Wickets\nالتكلفة التاريخية | $190.00 | $106.00 | $53.00\nسعر البيع | 217.00 | 145.00 | 73.75\nتكلفة الإكمال والبيع | 19.00 | 8.00 | 2.50\nتكلفة الاستبدال الحالية | 203.00 | 105.00 | 51.00\nهامش الربح العادي | 32.00 | 29.00 | 21.25\nما سقف وحد السوق الأدنى اللذان ينبغي استخدامهما في مقارنة التكلفة أو السوق أيهما أقل لصنف Gear؟",
+    "choicesAr": [
+      "$217 و$198.",
+      "$217 و$185.",
+      "$198 و$166.",
+      "$185 و$166."
+    ],
+    "explanationAr": "وفق المعايير الأمريكية يقاس مخزون LIFO أو التجزئة بالأقل من التكلفة والسوق. والسوق تكلفة الاستبدال الحالية المقيدة بسقف يساوي صافي القيمة القابلة للتحقق وحد أدنى يساوي صافي القيمة القابلة للتحقق مطروحًا منه الربح العادي. ويساوي صافي القيمة القابلة للتحقق سعر البيع المقدر مطروحًا منه تكاليف الإكمال والتخلص. ولصنف Gear يبلغ صافي القيمة القابلة للتحقق $198 ($217 سعر البيع − $19 تكاليف الإكمال والتخلص). والحد الأدنى $166 ($198 صافي القيمة القابلة للتحقق − $32 الربح العادي)."
   },
   {
     "unit": 2,
