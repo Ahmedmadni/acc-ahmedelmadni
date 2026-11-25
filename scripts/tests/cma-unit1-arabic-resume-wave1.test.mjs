@@ -225,3 +225,17 @@ test("Unit 7 independent prime cost, conversion cost and flexible budget arithme
  assert.equal((275000-1.2*220000)/(100000-1.2*75000),1.1);
  assert.equal((400000-60000)/4*6+60000,570000);assert.equal(100000*.085,8500);
 });
+
+const unit7Wave2Pins=new Map([["3.2",[736,0,"02848f1d"]],["3.3",[736,1,"c499c09e"]],["3.4",[737,3,"3db13fe8"]],["3.6",[739,0,"f892a6e8"]],["3.7",[739,0,"ff1f7b29"]],["3.8",[740,1,"97ba62b8"]],["3.9",[741,3,"eec48705"]],["4.1",[742,1,"ec086ba6"]],["4.2",[743,2,"cfba85ab"]],["4.3",[743,1,"457045f2"]],["4.4",[744,3,"b822b7d2"]],["4.5",[745,1,"7cf586d5"]],["4.6",[747,0,"842fe699"]],["4.7",[747,1,"1ab7db8e"]],["4.8",[748,2,"da5f4cef"]],["4.10",[750,2,"a4aef7cf"]],["4.11",[750,3,"1648a39a"]],["4.12",[751,3,"78c3208e"]],["4.13",[752,2,"a028f9c3"]],["4.15",[754,2,"0069ab0b"]],["4.16",[755,0,"6b54281a"]],["4.17",[756,0,"9330f888"]],["4.18",[756,1,"5fb9de70"]],["4.19",[757,3,"59f89e4c"]],["4.20",[758,0,"b397a7c8"]],["4.21",[759,1,"11bfdb01"]],["4.22",[760,3,"92790707"]],["4.23",[761,2,"daa31a61"]]]);
+test("Unit 7 costing techniques and absorption foundations preserve source, keys and numeric parity",()=>{
+ for(const [id,[page,index,hash]] of unit7Wave2Pins){const r=unit7Rows.find(r=>r.section+"."+r.number===id);assert.equal(r.page,page);assert.equal(r.answerIndex,index);assert.equal(r.answerStatus,"source");assert.equal(fingerprint(JSON.stringify([r.stem,r.choices,r.explanation,r.answerIndex,r.page])),hash);assert.equal(validateCmaTranslation({question:{en:r.stem},choices:{en:r.choices},explanation:{en:r.explanation}},{question:r.stemAr,choices:r.choicesAr,explanation:r.explanationAr}).valid,true,id);for(const [en,ar] of [[r.stem,r.stemAr],...r.choices.map((c,i)=>[c,r.choicesAr[i]]),[r.explanation,r.explanationAr]])assert.deepEqual(cmaNumericTokens(ar),cmaNumericTokens(en),id);}
+ const adapter=read("src/data/cma-questions-gleim-2025-vol1.ts");const held=["7.3.1","7.3.5","7.4.9","7.4.14"];assert.deepEqual(unit7Rows.filter(r=>(r.section===3||r.section===4&&r.number<=23)&&!r.stemAr).map(r=>[r.unit,r.section,r.number].join(".")),held);for(const id of held)assert.ok(adapter.includes('"'+id+'"'),id);
+ assert.equal(unit7Rows.filter(r=>r.section===3&&r.stemAr).length,7);assert.equal(unit7Rows.filter(r=>r.section===4&&r.number<=23&&r.stemAr).length,21);assert.ok(unit7Rows.filter(r=>r.stemAr&&r.choicesAr&&r.explanationAr).length>=83);
+});
+test("Unit 7 independent absorption versus variable costing reconciliation",()=>{
+ assert.equal(800000+100000,900000);assert.equal(800000+100000+160000,1060000);
+ const produced=200000,sold=120000,price=40,variable=30,fixed=600000,selling=400000;
+ const rate=fixed/produced;const variableIncome=sold*(price-variable)-fixed-selling;const absorptionIncome=sold*(price-variable-rate)-selling;
+ assert.equal(rate,3);assert.equal(variableIncome,200000);assert.equal(absorptionIncome,440000);assert.equal(absorptionIncome-variableIncome,(produced-sold)*rate);
+ assert.equal(Math.round((5.2*400000+260000)/400000*100)/100,5.85);
+});
