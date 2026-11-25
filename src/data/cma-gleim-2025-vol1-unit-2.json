@@ -916,7 +916,15 @@
     ],
     "answerIndex": 1,
     "explanation": "A perpetual inventory system will result in the same dollar\namount of ending inventory as a periodic inventory system\nassuming a FIFO cost flow. Under both perpetual and periodic\nsystems, the same units are deemed to be in ending\ninventory.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما طريقة تسعير المخزون التي تعطي القيمة نفسها للمخزون وتكلفة البضاعة المباعة سواء استُخدم نظام الجرد المستمر أم الدوري؟",
+    "choicesAr": [
+      "متوسط التكلفة.",
+      "الوارد أولًا صادر أولًا (FIFO).",
+      "الوارد أخيرًا صادر أولًا (LIFO).",
+      "إما الوارد أولًا صادر أولًا أو الوارد أخيرًا صادر أولًا."
+    ],
+    "explanationAr": "يعطي الجرد المستمر القيمة النقدية نفسها لمخزون آخر المدة التي يعطيها الجرد الدوري عند تطبيق افتراض تدفق التكلفة FIFO، لأن الوحدات نفسها تُعتبر متبقية في المخزون في كلا النظامين."
   },
   {
     "unit": 2,
@@ -933,7 +941,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The FIFO method assumes that the first goods purchased are\nthe first goods sold and that ending inventory consists of the\nlatest purchases. Moreover, whether the inventory system is\nperiodic or perpetual does not affect FIFO measurement. The\ncost of goods sold is $2,445 {beginning inventory (200 units ×\n$3.50) + purchases [(250 units × $3.30) + (200 units × $3.10)\n+ (350 units × $3.00)] – ending inventory (250 units × $3.00)}.\nThus, the gross profit for Year 1 using FIFO is $2,805 [sales\n(750 units × $7.00) – cost of goods sold of $2,445].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بدأت منشأة السنة 1 بمخزون قدره 200 شمعة معطرة بتكلفة $3.50 للشمعة. وتباع الشمعة مقابل $7.00. يوضح الجدول التالي مشتريات ومبيعات الشموع خلال السنة 1:\nرقم المعاملة | الكمية المشتراة | تكلفة الوحدة | الكمية المباعة\n1 | — | — | 150\n2 | 250 | $3.30 | —\n3 | — | — | 100\n4 | 200 | 3.10 | —\n5 | — | — | 200\n6 | 350 | 3.00 | —\n7 | — | — | 300\nإذا استخدمت المنشأة طريقة FIFO مع الجرد الدوري، فما مجمل الربح للسنة 1؟",
+    "choicesAr": [
+      "$2,755",
+      "$2,805",
+      "$2,854",
+      "$2,920"
+    ],
+    "explanationAr": "تفترض طريقة FIFO أن تكلفة البضاعة المشتراة أولًا تُحمّل على المبيعات أولًا، وأن مخزون آخر المدة يتكون من أحدث المشتريات. ولا يغير اختيار الجرد الدوري أو المستمر نتيجة التسعير بهذه الطريقة. وتبلغ تكلفة البضاعة المباعة $2,445 {مخزون أول المدة (200 وحدة × $3.50) + المشتريات [(250 وحدة × $3.30) + (200 وحدة × $3.10) + (350 وحدة × $3.00)] − مخزون آخر المدة (250 وحدة × $3.00)}. وبالتالي يبلغ مجمل ربح السنة 1 وفق FIFO مبلغ $2,805 [المبيعات (750 وحدة × $7.00) − تكلفة البضاعة المباعة البالغة $2,445]."
   },
   {
     "unit": 2,
@@ -950,7 +966,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Profit will be higher when cost of goods sold is lower, other\nfactors held constant. Cost of goods sold equals beginning\ninventory, plus purchases, minus ending inventory.\nAccordingly, cost of goods sold will be lowest when the ending\ninventory is highest. In an inflationary environment, ending\ninventory is highest under FIFO because the older, less\nexpensive items are deemed to have been sold, leaving the\nmore expensive items in the ending inventory.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ارتفعت تكلفة المواد باستمرار خلال السنة. أي طرق تقدير رصيد مخزون المواد في نهاية المدة التالية تحقق أعلى ربح، بافتراض ثبات العوامل الأخرى؟",
+    "choicesAr": [
+      "الوارد أخيرًا صادر أولًا (LIFO).",
+      "الوارد أولًا صادر أولًا (FIFO).",
+      "المتوسط المرجح.",
+      "التحديد العيني للتكلفة."
+    ],
+    "explanationAr": "يزداد الربح عند انخفاض تكلفة البضاعة المباعة مع ثبات العوامل الأخرى. وتساوي تكلفة البضاعة المباعة مخزون أول المدة مضافًا إليه المشتريات مطروحًا منه مخزون آخر المدة. لذا تكون التكلفة أقل عندما يكون مخزون آخر المدة أعلى. وفي ظل ارتفاع الأسعار، تعطي FIFO أعلى قيمة لمخزون آخر المدة مقارنةً بطرق تدفق التكلفة المفترضة الأخرى، إذ تُحمّل التكاليف الأقدم والأقل على المبيعات وتبقى الوحدات الأعلى تكلفة في المخزون. أما التحديد العيني فيعتمد على الوحدات المباعة فعليًا؛ وقد يساوي نتيجة FIFO إذا بيعت الوحدات الأقدم."
   },
   {
     "unit": 2,
@@ -984,7 +1008,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Under the FIFO method, the 1,700 units of ending inventory\nare valued at the most recent prices. Ending inventory is\nassumed to include 1,000 units purchased November 24, 500\nunits purchased May 5, and 200 units purchased January 12.\nHence, the ending inventory is $3,150 [(1,000 × $1.65) + (500\n× $2.20) + (200 × $2.00)].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فيما يلي بطاقة مخزون بنظام الجرد المستمر للسنة الحالية:\nالتاريخ | الوحدات المشتراة وتكلفتها | الوحدات المباعة | الرصيد بالوحدات\n1 يناير | — | — | 0\n12 يناير | 1,000 × $2.00 | — | 1,000\n15 مارس | — | 300 | 700\n5 مايو | 500 × $2.20 | — | 1,200\n8 يوليو | — | 500 | 700\n24 نوفمبر | 1,000 × $1.65 | — | 1,700\nمعلومات إضافية:\n• لا يوجد مخزون أول المدة.\n• الأصناف المباعة في 15 مارس مشتراة في 12 يناير.\n• الأصناف المباعة في 8 يوليو مشتراة في 5 مايو.\nما قيمة مخزون آخر المدة وفق طريقة الوارد أولًا صادر أولًا (FIFO)؟",
+    "choicesAr": [
+      "$3,050",
+      "$3,150",
+      "$3,230",
+      "$3,430"
+    ],
+    "explanationAr": "وفق FIFO تُسعّر وحدات مخزون آخر المدة البالغ عددها 1,700 بأحدث الأسعار. ويُفترض أن المخزون يتضمن 1,000 وحدة مشتراة في 24 نوفمبر، و500 وحدة مشتراة في 5 مايو، و200 وحدة مشتراة في 12 يناير. لذا يبلغ مخزون آخر المدة $3,150 [(1,000 × $1.65) + (500 × $2.20) + (200 × $2.00)]. ويفترض هذا التسعير تدفق التكلفة وفق FIFO بصرف النظر عن التحديد الفعلي للوحدات المباعة."
   },
   {
     "unit": 2,
@@ -1001,7 +1033,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Of the 800 units sold during the period, the 300 units sold on\nMarch 15 were purchased on January 12 at a cost of $2.00\nper unit. The remaining 500 units were purchased on May 5 at\na cost of $2.20 per unit. The cost of goods sold under the\nspecific identification method is therefore $1,700 [(300 units ×\n$2.00) + (500 units × $2.20)].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فيما يلي بطاقة مخزون بنظام الجرد المستمر للسنة الحالية:\nالتاريخ | الوحدات المشتراة وتكلفتها | الوحدات المباعة | الرصيد بالوحدات\n1 يناير | — | — | 0\n12 يناير | 1,000 × $2.00 | — | 1,000\n15 مارس | — | 300 | 700\n5 مايو | 500 × $2.20 | — | 1,200\n8 يوليو | — | 500 | 700\n24 نوفمبر | 1,000 × $1.65 | — | 1,700\nمعلومات إضافية:\n• لا يوجد مخزون أول المدة.\n• الأصناف المباعة في 15 مارس مشتراة في 12 يناير.\n• الأصناف المباعة في 8 يوليو مشتراة في 5 مايو.\nما تكلفة البضاعة المباعة وفق طريقة التحديد العيني للتكلفة؟",
+    "choicesAr": [
+      "$1,320",
+      "$1,520",
+      "$1,600",
+      "$1,700"
+    ],
+    "explanationAr": "من إجمالي 800 وحدة مباعة خلال الفترة، كانت الوحدات البالغ عددها 300 والمباعة في 15 مارس قد اشتُريت في 12 يناير بتكلفة $2.00 للوحدة. أما الوحدات المتبقية المباعة وعددها 500 فقد اشتُريت في 5 مايو بتكلفة $2.20 للوحدة. وبالتالي تبلغ تكلفة البضاعة المباعة وفق التحديد العيني $1,700 [(300 وحدة × $2.00) + (500 وحدة × $2.20)]."
   },
   {
     "unit": 2,
@@ -1018,7 +1058,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The first-in-first-out (FIFO) method treats the oldest units as\nbeing sold first and the newest units remain in inventory.\nBecause the company has 12,000 units remaining, ending\ninventory equals $78,750 [(5,000 × $7) + (7,000 × $6.25)].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أجرت شركة تجارية معاملات المخزون التالية خلال السنة الأولى من التشغيل:\nالتاريخ | المشتريات بالوحدات وتكلفتها | المبيعات بالوحدات | الرصيد بالوحدات\n1 يناير | 10,000 × $5 | — | 10,000\n1 مارس | 6,000 × $6 | — | 16,000\n1 مايو | — | 3,000 | 13,000\n1 يوليو | 8,000 × $6.25 | — | 21,000\n1 سبتمبر | — | 12,000 | 9,000\n1 نوفمبر | 5,000 × $7 | — | 14,000\n1 ديسمبر | — | 2,000 | 12,000\nإذا استخدمت الشركة طريقة FIFO، فما قيمة مخزون آخر المدة بالتقريب؟",
+    "choicesAr": [
+      "$62,000",
+      "$70,759",
+      "$78,750",
+      "$84,000"
+    ],
+    "explanationAr": "تفترض طريقة الوارد أولًا صادر أولًا (FIFO) بيع الوحدات الأقدم أولًا وبقاء الأحدث في المخزون. وبما أن عدد الوحدات المتبقية 12,000، فإن قيمة مخزون آخر المدة تبلغ $78,750 [(5,000 × $7) + (7,000 × $6.25)]."
   },
   {
     "unit": 2,
@@ -1052,7 +1100,15 @@
     ],
     "answerIndex": 0,
     "explanation": "A total of 20,000 units was available for sale (0 beginning\ninventory + 20,000 purchased during year). Because 10,000\nremain in ending inventory, 10,000 were sold\n(20,000 available – 10,000 remaining). Under the LIFO\nmethod, the units sold were those purchased in July and\nOctober. Cost of goods sold for the year thus equaled $77,500\n[(5,000 units × $8.00 July) + (5,000 units × $7.50 October)].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 يناير، لا يوجد لدى الشركة مخزون أول المدة. وأجرت المشتريات التالية خلال السنة:\nالتاريخ | الوحدات المشتراة | تكلفة الوحدة\n1 يناير | 5,000 | $10.00\n1 أبريل | 5,000 | 9.00\n1 يوليو | 5,000 | 8.00\n1 أكتوبر | 5,000 | 7.50\nيوجد 10,000 وحدة في المخزون في 31 ديسمبر. إذا استخدمت الشركة طريقة الوارد أخيرًا صادر أولًا (LIFO) بافتراض الجرد الدوري، فما تكلفة البضاعة المباعة للسنة؟",
+    "choicesAr": [
+      "$77,500",
+      "$86,250",
+      "$87,500",
+      "$95,000"
+    ],
+    "explanationAr": "بلغ إجمالي الوحدات المتاحة للبيع 20,000 وحدة (0 مخزون أول المدة + 20,000 مشتريات السنة). وبما أن 10,000 وحدة متبقية في مخزون آخر المدة، فقد بيعت 10,000 وحدة (20,000 متاحة − 10,000 متبقية). وفق LIFO الدوري، تُحمّل تكلفة وحدات يوليو وأكتوبر على المبيعات. لذلك بلغت تكلفة البضاعة المباعة $77,500 [(5,000 وحدة × $8.00 في يوليو) + (5,000 وحدة × $7.50 في أكتوبر)]. ويُستخدم LIFO في سياق المعايير الأمريكية؛ ولا يسمح به معيار المخزون الدولي."
   },
   {
     "unit": 2,
@@ -1069,7 +1125,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Under the LIFO method, the most recent costs of acquiring or\nproducing inventory are expensed as part of cost of goods\nsold. Given inflation, this method results in the highest cost of\ngoods.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "على أي افتراض تستند ميزة طريقة الوارد أخيرًا صادر أولًا (LIFO)؟",
+    "choicesAr": [
+      "ينبغي تحميل أحدث التكاليف المتكبدة على تكلفة البضاعة المباعة.",
+      "ينبغي تحميل التكاليف على الإيرادات بترتيب تكبدها.",
+      "ينبغي تحميل تكلفة البضاعة المباعة بمتوسط التكلفة.",
+      "ينبغي تحديد التكاليف الحالية استنادًا إلى الظروف الطبيعية أو الممثلة للكفاءة وحجم التشغيل."
+    ],
+    "explanationAr": "وفق طريقة LIFO، تُحمّل أحدث تكاليف شراء المخزون أو إنتاجه على تكلفة البضاعة المباعة. وفي ظل ارتفاع الأسعار، يؤدي هذا الأسلوب عادة إلى أعلى تكلفة للبضاعة المباعة مقارنةً بطرق تدفق التكلفة الأخرى. ويجب التمييز بين السماح بالطريقة وفق المعايير الأمريكية وعدم السماح بها وفق المعايير الدولية."
   },
   {
     "unit": 2,
@@ -1086,7 +1150,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The last-in, first-out (LIFO) method is prohibited by IFRS. This\nmethod is based on the assumption that the newest items are\nsold first. Its effect is to include current prices in cost of goods\nsold. But the LIFO assumption ordinarily does not match\nactual inventory use.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي طرق تدفق تكلفة المخزون محظورة وفق المعايير الدولية للتقارير المالية (IFRS)؟",
+    "choicesAr": [
+      "الوارد أولًا صادر أولًا (FIFO).",
+      "التحديد العيني للتكلفة.",
+      "المتوسط المرجح للتكلفة.",
+      "الوارد أخيرًا صادر أولًا (LIFO)."
+    ],
+    "explanationAr": "تحظر المعايير الدولية طريقة LIFO، التي تفترض تحميل أحدث تكاليف المخزون على المبيعات أولًا، مما يقرب تكلفة البضاعة المباعة من الأسعار الحالية. لكن افتراض التدفق هذا لا يتطابق بالضرورة مع التدفق الفعلي للبضاعة."
   },
   {
     "unit": 2,
@@ -1103,7 +1175,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A significant advantage of the LIFO method is its matching of\ncurrent revenues with the most recent product costs. When\nprices are rising (which is most of the time), the most recent\ncosts are the highest costs, resulting in higher cost of goods\nsold and lower net income. The lower net income means lower\ntaxes.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في فترة ارتفاع الأسعار، أي طرق تسعير المخزون التالية تحقق عادة أفضل مقابلة للتكاليف بالإيرادات؟",
+    "choicesAr": [
+      "المتوسط المرجح.",
+      "الوارد أولًا صادر أولًا.",
+      "الوارد أخيرًا صادر أولًا.",
+      "التحديد العيني."
+    ],
+    "explanationAr": "من مزايا LIFO مقابلة الإيرادات الحالية بأحدث تكاليف المنتجات. وعند ارتفاع الأسعار تكون التكاليف الأحدث هي الأعلى، فتزداد تكلفة البضاعة المباعة وينخفض صافي الدخل. وقد تنخفض الضرائب إذا كانت الطريقة معتمدة ضريبيًا وتحققت الشروط المنطبقة."
   },
   {
     "unit": 2,
@@ -1120,7 +1200,15 @@
     ],
     "answerIndex": 1,
     "explanation": "A significant advantage of the LIFO method is its matching of\ncurrent revenues with the most recent product costs. When\nprices are rising (which is most of the time), the most recent\ncosts are the highest costs, resulting in higher cost of goods\nsold and lower net income. The lower net income means lower\ntaxes.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في فترات ارتفاع التكاليف، أي افتراضات تدفق تكلفة المخزون التالية يؤدي إلى ارتفاع تكلفة المبيعات؟",
+    "choicesAr": [
+      "الوارد أولًا صادر أولًا.",
+      "الوارد أخيرًا صادر أولًا.",
+      "المتوسط المرجح.",
+      "المتوسط المتحرك."
+    ],
+    "explanationAr": "تقابل طريقة LIFO الإيرادات الحالية بأحدث تكاليف المنتجات. وعند ارتفاع الأسعار تكون أحدث التكاليف أعلى، فتزداد تكلفة البضاعة المباعة وينخفض صافي الدخل. وقد تنخفض الضرائب عند السماح باستخدام الطريقة ضريبيًا."
   },
   {
     "unit": 2,
@@ -1137,7 +1225,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Under the weighted-average method, the weighted-average\ncost per unit is multiplied by the number of units sold to\ndetermine the cost of goods sold for the period. The total units\navailable for sale equaled 45,500 (8,000 + 15,000 + 10,000 +\n12,500). The total cost of all units available for sale was\n$415,000 [(8,000 × $10) + (15,000 × $8) + (10,000 × $9) +\n(12,500 × $10)]. Thus, the weighted-average cost per unit of\ninventory was $9.1209 ($415,000 ÷ 45,500), and cost of goods\nsold was $228,023 (25,000 × $9.1209).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لدى منشأة 8,000 وحدة في المخزون في 1 يناير بتكلفة $10 للوحدة. وخلال السنة باعت 25,000 وحدة واشترت المخزون التالي:\nالتاريخ | الكمية المشتراة | سعر الوحدة\n1 أبريل | 15,000 وحدة | $8\n1 يوليو | 10,000 وحدة | 9\n1 أكتوبر | 12,500 وحدة | 10\nإذا استخدمت المنشأة طريقة المتوسط المرجح الدوري، فما تكلفة البضاعة المباعة للفترة؟",
+    "choicesAr": [
+      "$186,978",
+      "$197,000",
+      "$228,023",
+      "$235,000"
+    ],
+    "explanationAr": "وفق المتوسط المرجح تُضرب تكلفة الوحدة المرجحة في عدد الوحدات المباعة. بلغ إجمالي الوحدات المتاحة للبيع 45,500 (8,000 + 15,000 + 10,000 + 12,500). وبلغت تكلفتها $415,000 [(8,000 × $10) + (15,000 × $8) + (10,000 × $9) + (12,500 × $10)]. لذا تبلغ تكلفة الوحدة بالمتوسط المرجح $9.1209 ($415,000 ÷ 45,500)، وتبلغ تكلفة البضاعة المباعة وفق تقريب المتوسط في المصدر $228,023 (25,000 × $9.1209). وقد يختلف الناتج قليلًا عند عدم تقريب المتوسط قبل الضرب."
   },
   {
     "unit": 2,
@@ -1154,7 +1250,15 @@
     ],
     "answerIndex": 2,
     "explanation": "FIFO assigns the most recent acquisition costs to ending\ninventory and the earliest acquisition costs to cost of goods\nsold. LIFO assigns the earliest acquisition costs to ending\ninventory (it is permitted by U.S. GAAP but not by IFRS).\nThus, FIFO approximates current cost for ending inventory,\nand LIFO approximates current cost of goods sold.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي طرق تسعير المخزون تقارب التكلفة الحالية عادة لكل مما يلي؟\nمخزون آخر المدة | تكلفة البضاعة المباعة",
+    "choicesAr": [
+      "FIFO FIFO",
+      "LIFO FIFO",
+      "FIFO LIFO",
+      "LIFO LIFO"
+    ],
+    "explanationAr": "تخصص FIFO أحدث تكاليف الاقتناء لمخزون آخر المدة وأقدمها لتكلفة البضاعة المباعة. وتخصص LIFO أقدم التكاليف لمخزون آخر المدة، وهي مسموحة وفق المعايير الأمريكية وليست مسموحة وفق IFRS. لذا تقارب FIFO التكلفة الحالية للمخزون، وتقارب LIFO التكلفة الحالية للبضاعة المباعة."
   },
   {
     "unit": 2,
@@ -1171,7 +1275,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Under the LIFO method, the most recent costs of acquiring or\nproducing inventory are expensed as part of cost of goods\nsold. In a time of rising prices, charging newer, higher-priced\ngoods against current revenues decreases income.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الإجراءات التالية يؤدي إلى انخفاض الدخل؟",
+    "choicesAr": [
+      "تصفية طبقات مخزون LIFO عند ارتفاع الأسعار.",
+      "التحول من FIFO إلى LIFO عند انخفاض الأسعار.",
+      "تعجيل المشتريات في نهاية السنة عند استخدام LIFO في فترات ارتفاع الأسعار.",
+      "تغيير عدد مجموعات مخزون LIFO."
+    ],
+    "explanationAr": "تحمل LIFO أحدث تكاليف شراء المخزون أو إنتاجه على تكلفة البضاعة المباعة. وعند ارتفاع الأسعار تؤدي مقابلة الإيرادات الحالية بالتكاليف الأحدث والأعلى إلى انخفاض الدخل، بافتراض تأثير المشتريات المعجلة على تكلفة المبيعات وفق نظام LIFO المستخدم."
   },
   {
     "unit": 2,
@@ -1188,7 +1300,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The FIFO method assumes that the first goods purchased are\nthe first goods sold and that ending inventory consists of the\nlatest purchases. Thus, the cost of goods sold under FIFO is\n$498,540 [(200 units × $1,055) + (170 units × $1,062) +\n(100 units × $1,070)]. Under the LIFO method, the most recent\ncosts of acquiring or producing inventory are expensed as part\nof cost of goods sold. Thus, the cost of goods sold under LIFO\nis $502,900 [(160 units × $1,076) + (190 units × $1,070) +\n(120 units × $1,062)]. In order to lower tax income, the\ncompany should use the LIFO method because the cost of\ngoods sold under LIFO is more than the cost of goods sold\nunder FIFO. Therefore, the operating income under LIFO is\n$4,360 ($502,900 – $498,540) lower than the operating\nincome under FIFO.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يبيع متجر صناديق مقلدة للتحف لعملاء حول العالم. وتوضح سجلات المخزون ما يلي:\nالبند | الكمية (وحدة) | تكلفة الوحدة\nمخزون أول المدة | 200 | $1,055\nالمشتريات:\n3 يونيو | 170 | 1,062\n18 سبتمبر | 190 | 1,070\n10 ديسمبر | 160 | 1,076\nباع المتجر 470 وحدة خلال السنة. وتدرس الإدارة اختيار LIFO أو FIFO. إذا أرادت الإدارة خفض ضرائب الدخل، فما افتراض تدفق التكلفة الذي تختاره وفق الجرد الدوري وبافتراض السماح الضريبي؟",
+    "choicesAr": [
+      "FIFO لأن تكلفة البضاعة المباعة ستزيد عن LIFO بمبلغ $9,870.",
+      "FIFO لأن الدخل التشغيلي سيقل عن LIFO بمبلغ $840.",
+      "LIFO لأن الدخل التشغيلي سيقل عن FIFO بمبلغ $4,360.",
+      "LIFO لأن تكلفة البضاعة المباعة ستزيد عن FIFO بمبلغ $5,250."
+    ],
+    "explanationAr": "تفترض FIFO تحميل تكلفة أقدم المشتريات على المبيعات وبقاء الأحدث في المخزون. وتبلغ تكلفة البضاعة المباعة وفق FIFO مبلغ $498,540 [(200 وحدة × $1,055) + (170 وحدة × $1,062) + (100 وحدة × $1,070)]. أما LIFO فتحمل أحدث تكاليف الاقتناء أو الإنتاج على المبيعات، فتبلغ تكلفة البضاعة المباعة $502,900 [(160 وحدة × $1,076) + (190 وحدة × $1,070) + (120 وحدة × $1,062)]. لذلك، وفق افتراضات السؤال، يقل الدخل الخاضع للضريبة عند استخدام LIFO لأن تكلفة المبيعات أعلى منها وفق FIFO. ويقل الدخل التشغيلي وفق LIFO بمبلغ $4,360 ($502,900 − $498,540) عن FIFO."
   },
   {
     "unit": 2,
@@ -1205,7 +1325,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The total cost of beginning inventory and purchases is\n$75,000 ($30,000 + $20,000 + $25,000), and the total number\nunits of beginning inventory and purchases is 20,000. The\naverage price of the beginning inventory and purchases is\n$3.75 ($75,000 cost ÷ 20,000 units). The total cost of goods\nsold equals $37,500 (10,000 units sold × $3.75).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم Flex نظام الجرد الدوري. وفيما يلي معاملات المخزون لشهر يناير:\n1/1 مخزون أول المدة: 10,000 وحدة بسعر $3\n1/5 شراء: 5,000 وحدة بسعر $4\n1/15 شراء: 5,000 وحدة بسعر $5\n1/20 بيع بسعر $10 للوحدة: 10,000 وحدة\nتستخدم الشركة طريقة المتوسط لتحديد قيمة المخزون. فما تكلفة البضاعة المباعة في قائمة دخل يناير؟",
+    "choicesAr": [
+      "$30,000",
+      "$37,500",
+      "$40,000",
+      "$100,000"
+    ],
+    "explanationAr": "بلغت تكلفة مخزون أول المدة والمشتريات $75,000 ($30,000 + $20,000 + $25,000)، وبلغ إجمالي الوحدات 20,000. وبلغ متوسط التكلفة $3.75 ($75,000 التكلفة ÷ 20,000 وحدة). وتبلغ تكلفة البضاعة المباعة $37,500 (10,000 وحدة مباعة × $3.75)."
   },
   {
     "unit": 2,
@@ -1222,7 +1350,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The moving-average system is only applicable to perpetual\ninventories. It requires that a new weighted average be\ncomputed after every purchase. This moving average is based\non remaining inventory held and the new inventory purchased.\nBased on the calculations below, the moving-average cost per\nunit for the 1/20 sale is $1.75, and the cost of goods sold\n(COGS) for January is $1,575 (900 units sold × $1.75). Thus,\nending inventory is $3,225 ($1,000 beginning balance +\n$1,800 purchase on 1/7 – $1,575 COGS on 1/20 + $2,000\npurchase on 1/25).\nMoving-Average\nUnits        Cost/Unit     Total Cost\nBalance 1/1 1,000           $1.00          $1,000\nPurchase 1/7    600           3.00          1,800\n1,600           $1.75            $2,800",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "خلال يناير سجلت شركة Metro، التي تستخدم الجرد المستمر، المعلومات التالية عن المخزون:\nالحركة | الوحدات | تكلفة الوحدة | إجمالي التكلفة | الوحدات المتبقية\nرصيد أول المدة | 1,000 | $1 | $1,000 | 1,000\nفي 1/1\nشراء | 600 | 3 | 1,800 | 1,600\nفي 1/7\nبيع | 900 | — | — | 700\nفي 1/20\nشراء | 400 | 5 | 2,000 | 1,100\nفي 1/25\nوفق المتوسط المتحرك، ما قيمة المخزون في 31 يناير؟",
+    "choicesAr": [
+      "$2,640",
+      "$3,225",
+      "$3,300",
+      "$3,900"
+    ],
+    "explanationAr": "تستخدم طريقة المتوسط المتحرك مع الجرد المستمر، ويعاد حساب المتوسط المرجح بعد كل عملية شراء استنادًا إلى المخزون المتبقي والمشتريات الجديدة. وفق الحسابات التالية تبلغ تكلفة الوحدة لمبيعات 1/20 مبلغ $1.75، وتبلغ تكلفة البضاعة المباعة في يناير $1,575 (900 وحدة × $1.75). لذلك يبلغ مخزون آخر المدة $3,225 ($1,000 رصيد أول المدة + $1,800 مشتريات 1/7 − $1,575 تكلفة المبيعات في 1/20 + $2,000 مشتريات 1/25).\nالمتوسط المتحرك\nالحركة | الوحدات | تكلفة الوحدة | إجمالي التكلفة\nرصيد 1/1 | 1,000 | $1.00 | $1,000\nشراء 1/7 | 600 | 3.00 | 1,800\nالإجمالي | 1,600 | $1.75 | $2,800"
   },
   {
     "unit": 2,
@@ -1239,7 +1375,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The weighted-average method determines an average cost\nonly once (at the end of the period) and is therefore applicable\nonly to a periodic system. In contrast, the moving-average\nmethod requires determination of a new weighted-average\ncost after each purchase and thus applies only to a perpetual\nsystem.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "طريقة المتوسط المرجح السنوي لتدفق تكلفة المخزون تنطبق على أي من نظامي الجرد التاليين؟\nالدوري | المستمر",
+    "choicesAr": [
+      "نعم | نعم",
+      "نعم | لا",
+      "لا | نعم",
+      "لا | لا"
+    ],
+    "explanationAr": "يُحسب المتوسط المرجح للفترة مرة واحدة عند نهايتها في نظام الجرد الدوري. أما المتوسط المتحرك فيعاد حسابه بعد كل عملية شراء، ويطبق في نظام الجرد المستمر."
   },
   {
     "unit": 2,
@@ -1256,7 +1400,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Using a periodic inventory system, the ending value is not\naffected by when the sales and purchases of units occurred.\nThe company had 5,000 units available during the period\n(1,000 on December 1, 2,000 on December 12, and 2,000 on\nDecember 30). The total cost of these 5,000 units was\n$3,887,100 ($787,500 + $1,562,400 + 1,537,200), or $777.42\nper unit ($3,887,100 ÷ 5,000 units). Since 2,400 units were\nsold, the ending inventory would be $2,021,292 (2,600 units ×\n$777.42 per unit).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 ديسمبر كان لدى شركة 1,000 وحدة في المخزون بقيمة $787,500. وفي 12 ديسمبر اشترت 2,000 وحدة مقابل $1,562,400. وباعت 2,400 وحدة في 23 ديسمبر، ثم اشترت في 30 ديسمبر 2,000 وحدة إضافية مقابل $1,537,200. إذا استخدمت الجرد الدوري والمتوسط المرجح، فما قيمة المخزون في قائمة المركز المالي في 31 ديسمبر؟",
+    "choicesAr": [
+      "$2,025,660",
+      "$2,021,292",
+      "$2,014,740",
+      "$2,007,180"
+    ],
+    "explanationAr": "في الجرد الدوري لا تتأثر قيمة مخزون آخر المدة بتوقيت عمليات البيع والشراء خلال الفترة. كان لدى الشركة 5,000 وحدة متاحة (1,000 في 1 ديسمبر، و2,000 في 12 ديسمبر، و2,000 في 30 ديسمبر). وبلغت تكلفة هذه الوحدات البالغ عددها 5,000 مبلغ $3,887,100 ($787,500 + $1,562,400 + 1,537,200)، أي $777.42 للوحدة ($3,887,100 ÷ 5,000 وحدة). وبما أن 2,400 وحدة بيعت، تبلغ قيمة مخزون آخر المدة $2,021,292 (2,600 وحدة × $777.42 للوحدة)."
   },
   {
     "unit": 2,
@@ -1273,7 +1425,15 @@
     ],
     "answerIndex": 3,
     "explanation": "During periods of inflation, the cost of inventory\npurchased/produced throughout the period increases.\nBecause last-in, first-out (LIFO) inventory accounting uses the\nmost recent inventory costs for cost of goods sold, the cost of\ngoods sold reported is generally higher than cost of goods\nsold under a different inventory accounting method. Because\nthe higher inventory costs are assigned to cost of goods sold,\nthe cheaper inventory costs from the beginning of the period\nare assigned to ending inventory. This results in a lower\nending inventory valuation.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "خلال فترات التضخم، ما الأثر المعتاد لتطبيق طريقة LIFO؟",
+    "choicesAr": [
+      "انخفاض تكلفة البضاعة المباعة وانخفاض قيمة المخزون.",
+      "انخفاض تكلفة البضاعة المباعة وارتفاع قيمة المخزون.",
+      "ارتفاع تكلفة البضاعة المباعة وارتفاع قيمة المخزون.",
+      "ارتفاع تكلفة البضاعة المباعة وانخفاض قيمة المخزون."
+    ],
+    "explanationAr": "ترتفع تكاليف المخزون المشترى أو المنتج خلال فترات التضخم. ولأن LIFO تحمل أحدث تكاليف المخزون على البضاعة المباعة، تكون تكلفة المبيعات عادة أعلى مقارنة بطرق تدفق التكلفة الأخرى. وتبقى التكاليف الأقدم والأقل ضمن مخزون آخر المدة، فتكون قيمته أقل."
   },
   {
     "unit": 2,
@@ -1290,7 +1450,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Under perpetual LIFO, the inventory valuation is recalculated\nas follows after every purchase and sale. The 230 units in\nending inventory consist of 150 units at $4.80 each, 30 units at\n$4.20 each, and 50 units from the beginning inventory at\n$4.00 each.\nEnding\nDate          Receipts               Sales          Inventory\n11-1     150 × $4.00 = $600                        $ 600.00\n11-5                          100 × $4.00 =          200.00\n$400\n11-7     200 × $4.20 = $840                         1,040.00\n11-9                          150 × $4.20 =           410.00\n$630\n11-11 200 × $4.40 = $880                            1,290.00\n11-17                         200 × $4.40 =\n$880\n20 × $4.20 = $84      326.00\n11-22 250 × $4.80 =                                1,526.00\n$1,200\n11-29                         100 × $4.80 =        1,046.00\n$480",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بدأت شركة Toulouse شهر نوفمبر بمخزون قدره 150 قطعة زينة بتكلفة $4.00 للقطعة. وتباع القطعة مقابل $7.00. وفيما يلي المبيعات والمشتريات خلال نوفمبر:\nالتاريخ | الكمية المشتراة | تكلفة الوحدة | الوحدات المباعة\n5 نوفمبر | — | — | 100\n7 نوفمبر | 200 | $4.20 | —\n9 نوفمبر | — | — | 150\n11 نوفمبر | 200 | 4.40 | —\n17 نوفمبر | — | — | 220\n22 نوفمبر | 250 | 4.80 | —\n29 نوفمبر | — | — | 100\nإذا استخدمت Toulouse طريقة LIFO مع الجرد المستمر، فما قيمة المخزون في 30 نوفمبر؟",
+    "choicesAr": [
+      "$936",
+      "$1,012",
+      "$1,046",
+      "$1,076"
+    ],
+    "explanationAr": "وفق LIFO المستمر يعاد تحديد قيمة المخزون بعد كل عملية شراء وبيع. ويتكون مخزون آخر المدة البالغ 230 وحدة من 150 وحدة بسعر $4.80، و30 وحدة بسعر $4.20، و50 وحدة من مخزون أول المدة بسعر $4.00.\nالتاريخ | الحركة | الرصيد بالتكلفة\n11-1: 150 × $4.00 = $600؛ الرصيد $600.00\n11-5: بيع 100 × $4.00؛ الرصيد 200.00؛ تكلفة البيع $400\n11-7: شراء 200 × $4.20 = $840؛ الرصيد 1,040.00\n11-9: بيع 150 × $4.20؛ الرصيد 410.00؛ تكلفة البيع $630\n11-11: شراء 200 × $4.40 = $880؛ الرصيد 1,290.00\n11-17: بيع 200 × $4.40 = $880، و20 × $4.20 = $84؛ الرصيد 326.00\n11-22: شراء 250 × $4.80؛ الرصيد 1,526.00؛ تكلفة الشراء $1,200\n11-29: بيع 100 × $4.80؛ الرصيد 1,046.00؛ تكلفة البيع $480."
   },
   {
     "unit": 2,
@@ -1307,7 +1475,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Under FIFO, the ending inventory consists of the most recent\ninventory purchased. The beginning inventory included 150\nunits and purchases totaled 650 units, a total of 800 units.\nSales equaled 570 units (100 + 150 + 220 + 100). Thus,\nending inventory was 230 units (800 – 570). Under FIFO,\nthese units are valued at the cost of the most recent 230 units\npurchased, or $4.80. Ending inventory is therefore $1,104\n(230 × $4.80).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بدأت شركة Toulouse شهر نوفمبر بمخزون قدره 150 قطعة زينة بتكلفة $4.00 للقطعة. وتباع القطعة مقابل $7.00. وفيما يلي المبيعات والمشتريات خلال نوفمبر:\nالتاريخ | الكمية المشتراة | تكلفة الوحدة | الوحدات المباعة\n5 نوفمبر | — | — | 100\n7 نوفمبر | 200 | $4.20 | —\n9 نوفمبر | — | — | 150\n11 نوفمبر | 200 | 4.40 | —\n17 نوفمبر | — | — | 220\n22 نوفمبر | 250 | 4.80 | —\n29 نوفمبر | — | — | 100\nإذا استخدمت Toulouse طريقة FIFO، فما قيمة المخزون في 30 نوفمبر؟",
+    "choicesAr": [
+      "$936",
+      "$1,012",
+      "$1,046",
+      "$1,104"
+    ],
+    "explanationAr": "وفق FIFO يتكون مخزون آخر المدة من أحدث المشتريات. تضمن مخزون أول المدة 150 وحدة وبلغت المشتريات 650 وحدة، بإجمالي 800 وحدة. وبلغت المبيعات 570 وحدة (100 + 150 + 220 + 100). لذا بلغ مخزون آخر المدة 230 وحدة (800 − 570). وتسعر هذه الوحدات وفق تكلفة أحدث 230 وحدة مشتراة، أي $4.80. ومن ثم تبلغ قيمة المخزون $1,104 (230 × $4.80)."
   },
   {
     "unit": 2,
@@ -1324,7 +1500,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The beginning inventory consisted of 150 units at $4.00 each.\nFollowing the November 5 sale, the inventory valuation was\n$200 (50 units × $4). The November 7 purchase added\n200 units at $4.20, after which the moving average unit cost\nwas $4.16 {[$200 + (200 units × $4.20)] ÷ (50 units +\n200 units)}. The November 9 sale of 150 units left 100 units at\n$4.16. Adding $416 (100 units × $4.16) to the $880 purchase\non November 11 brought the total inventory to 300 units with a\ntotal cost of $1,296, or $4.32 each. Thus, $4.32 was the unit\ncost of items sold on November 17.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بدأت شركة Toulouse شهر نوفمبر بمخزون قدره 150 قطعة زينة بتكلفة $4.00 للقطعة. وتباع القطعة مقابل $7.00. وفيما يلي المبيعات والمشتريات خلال نوفمبر:\nالتاريخ | الكمية المشتراة | تكلفة الوحدة | الوحدات المباعة\n5 نوفمبر | — | — | 100\n7 نوفمبر | 200 | $4.20 | —\n9 نوفمبر | — | — | 150\n11 نوفمبر | 200 | 4.40 | —\n17 نوفمبر | — | — | 220\n22 نوفمبر | 250 | 4.80 | —\n29 نوفمبر | — | — | 100\nإذا استخدمت Toulouse المتوسط المتحرك مع الجرد المستمر، فبأي تكلفة للوحدة تسجل مبيعات 220 قطعة في 17 نوفمبر؟",
+    "choicesAr": [
+      "$4.00",
+      "$4.16",
+      "$4.20",
+      "$4.32"
+    ],
+    "explanationAr": "تكون مخزون أول المدة من 150 وحدة بتكلفة $4.00 للوحدة. وبعد بيع 5 نوفمبر بلغت قيمة المخزون $200 (50 وحدة × $4). وأضاف شراء 7 نوفمبر 200 وحدة بتكلفة $4.20، فبلغ المتوسط المتحرك $4.16 {[$200 + (200 وحدة × $4.20)] ÷ (50 وحدة + 200 وحدة)}. وأبقى بيع 9 نوفمبر البالغ 150 وحدة رصيدًا قدره 100 وحدة بسعر $4.16. وبإضافة $416 (100 وحدة × $4.16) إلى مشتريات $880 في 11 نوفمبر، أصبح المخزون 300 وحدة بتكلفة إجمالية $1,296، أي $4.32 للوحدة. لذا كان $4.32 تكلفة الوحدة المباعة في 17 نوفمبر."
   },
   {
     "unit": 2,
@@ -1341,7 +1525,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The total goods available for sale is determined as follows:\nBeginning inventory 150 × $4.00 = $ 600.00\nNov. 7 purchase      200 × $4.20 =        840.00\nNov. 11 purchase 200 × $4.40 =            880.00\nNov. 22 purchase 250 × $4.80 = 1,200.00\nTotal available    800             $3,520.00\nThe weighted-average unit cost is $4.40 ($3,520 ÷ 800 units\navailable). The cost of goods sold and total sales are therefore\n$2,508 (570 units sold × $4.40) and $3,990 (570 units × $7),\nrespectively. Consequently, gross profit is $1,482 ($3,990 –\n$2,508).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بدأت شركة Toulouse شهر نوفمبر بمخزون قدره 150 قطعة زينة بتكلفة $4.00 للقطعة. وتباع القطعة مقابل $7.00. وفيما يلي المبيعات والمشتريات خلال نوفمبر:\nالتاريخ | الكمية المشتراة | تكلفة الوحدة | الوحدات المباعة\n5 نوفمبر | — | — | 100\n7 نوفمبر | 200 | $4.20 | —\n9 نوفمبر | — | — | 150\n11 نوفمبر | 200 | 4.40 | —\n17 نوفمبر | — | — | 220\n22 نوفمبر | 250 | 4.80 | —\n29 نوفمبر | — | — | 100\nإذا استخدمت Toulouse المتوسط المرجح الدوري، فما مجمل ربح نوفمبر؟",
+    "choicesAr": [
+      "$1,046",
+      "$1,482",
+      "$1,516",
+      "$1,528"
+    ],
+    "explanationAr": "تكلفة البضاعة المتاحة للبيع:\nمخزون أول المدة: 150 × $4.00 = $600.00\nشراء 7 نوفمبر: 200 × $4.20 = 840.00\nشراء 11 نوفمبر: 200 × $4.40 = 880.00\nشراء 22 نوفمبر: 250 × $4.80 = 1,200.00\nإجمالي المتاح: 800 وحدة بتكلفة $3,520.00\nيبلغ المتوسط المرجح لتكلفة الوحدة $4.40 ($3,520 ÷ 800 وحدة متاحة). وتبلغ تكلفة البضاعة المباعة والمبيعات على الترتيب $2,508 (570 وحدة مباعة × $4.40) و$3,990 (570 وحدة × $7). ومن ثم يبلغ مجمل الربح $1,482 ($3,990 − $2,508)."
   },
   {
     "unit": 2,
@@ -1358,7 +1550,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The goods available for sale are as follows:\nBeginning inventory 150 × $4.00 = $ 600.00\nNov. 7 purchase      200 × $4.20 =        840.00\nNov. 11 purchase     200 × $4.40 =        880.00\nNov. 22 purchase     250 × $4.80 = 1,200.00\nTotal available     800             $3,520.00\nThe ending inventory consists of 230 units. Under periodic\nLIFO, these are costed at the prices paid for the earliest\n230 units purchased, or 150 units at $4.00 and 80 units at\n$4.20, a total of $936. Accordingly, cost of goods sold is\n$2,584 ($3,520 goods available – $936 EI).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بدأت شركة Toulouse شهر نوفمبر بمخزون قدره 150 قطعة زينة بتكلفة $4.00 للقطعة. وتباع القطعة مقابل $7.00. وفيما يلي المبيعات والمشتريات خلال نوفمبر:\nالتاريخ | الكمية المشتراة | تكلفة الوحدة | الوحدات المباعة\n5 نوفمبر | — | — | 100\n7 نوفمبر | 200 | $4.20 | —\n9 نوفمبر | — | — | 150\n11 نوفمبر | 200 | 4.40 | —\n17 نوفمبر | — | — | 220\n22 نوفمبر | 250 | 4.80 | —\n29 نوفمبر | — | — | 100\nإذا استخدمت Toulouse طريقة LIFO مع الجرد الدوري، فما تكلفة البضاعة المباعة في نوفمبر؟",
+    "choicesAr": [
+      "$2,416",
+      "$2,444",
+      "$2,474",
+      "$2,584"
+    ],
+    "explanationAr": "تكلفة البضاعة المتاحة للبيع:\nمخزون أول المدة: 150 × $4.00 = $600.00\nشراء 7 نوفمبر: 200 × $4.20 = 840.00\nشراء 11 نوفمبر: 200 × $4.40 = 880.00\nشراء 22 نوفمبر: 250 × $4.80 = 1,200.00\nإجمالي المتاح: 800 وحدة بتكلفة $3,520.00\nيتكون مخزون آخر المدة من 230 وحدة. ووفق LIFO الدوري تسعر بأقدم تكاليف شراء 230 وحدة، أي 150 وحدة بسعر $4.00 و80 وحدة بسعر $4.20، بإجمالي $936. ومن ثم تبلغ تكلفة البضاعة المباعة $2,584 ($3,520 تكلفة المتاح − $936 مخزون آخر المدة)."
   },
   {
     "unit": 2,
@@ -1375,7 +1575,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Under FIFO, the first goods purchased are assumed to be the\nfirst sold. Using FIFO, all of the 10,000 units of inventory in\nbeginning inventory were sold and 6,000 (16,000 sold –\n10,000 beginning inventory) of the units purchased in June for\n$2.50 each were sold. This leaves in ending inventory 1,000\nunits purchased in June for $2.50 each and all 5,000 units\npurchased in November for $2.70 each.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "كان لدى شركة Sackett مخزون أول مدة قدره 10,000 وحدة اشتُريت في السنة السابقة كما يلي:\nالشهر | الوحدات | سعر الوحدة\nسبتمبر | 4,000 | $2.00\nأكتوبر | 4,000 | $2.10\nديسمبر | 2,000 | $2.30\nخلال السنة الحالية اشترت الشركة 12,000 وحدة إضافية (7,000 في يونيو بسعر $2.50 و5,000 في نوفمبر بسعر $2.70) وباعت 16,000 وحدة. وفق FIFO، ما قيمة مخزون آخر المدة؟",
+    "choicesAr": [
+      "$12,200 (4,000 × $2.00 و2,000 × $2.10)",
+      "$13,000 (4,000 × $2.10 و2,000 × $2.30)",
+      "$15,600 (6,000 × $2.60 — متوسط $2.50 و$2.70)",
+      "$16,000 (5,000 × $2.70 و1,000 × $2.50)"
+    ],
+    "explanationAr": "تفترض FIFO بيع الوحدات المشتراة أولًا قبل غيرها. لذلك بيعت كل وحدات مخزون أول المدة البالغ عددها 10,000 وحدة، كما بيعت 6,000 وحدة (16,000 مباعة − 10,000 أول المدة) من مشتريات يونيو بسعر $2.50 للوحدة. ويتبقى في المخزون 1,000 وحدة من مشتريات يونيو بسعر $2.50 للوحدة وكل وحدات مشتريات نوفمبر البالغ عددها 5,000 بسعر $2.70 للوحدة."
   },
   {
     "unit": 2,
@@ -1392,7 +1600,15 @@
     ],
     "answerIndex": 2,
     "explanation": "In a periodic system, a purchases account is used, and the\nbeginning inventory remains unchanged during the accounting\nperiod. Cost of goods sold is determined at year-end. It is the\ndifference between the goods available for sale (Beginning\ninventory + Purchases) and ending inventory.\nIn a perpetual system, purchases are directly recorded in the\ninventory account. Cost of goods sold is determined as the\ngoods are sold. LIFO may be applied to both a periodic and a\nperpetual system, but the amount of cost of goods sold may\nvary with the system chosen.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "على أي من نظامي الجرد التاليين يمكن تطبيق طريقة تدفق التكلفة LIFO؟\nالدوري | المستمر",
+    "choicesAr": [
+      "لا | لا",
+      "لا | نعم",
+      "نعم | نعم",
+      "نعم | لا"
+    ],
+    "explanationAr": "في الجرد الدوري يُستخدم حساب المشتريات ويظل رصيد مخزون أول المدة دون تغيير خلال الفترة. وتحدد تكلفة البضاعة المباعة في نهاية السنة بالفرق بين تكلفة البضاعة المتاحة للبيع (مخزون أول المدة + المشتريات) ومخزون آخر المدة. وفي الجرد المستمر تسجل المشتريات مباشرة في حساب المخزون وتحدد تكلفة البضاعة المباعة عند البيع. ويمكن تطبيق LIFO في كلا النظامين إذا سمح الإطار المحاسبي بها، لكن تكلفة المبيعات قد تختلف حسب النظام المختار."
   },
   {
     "unit": 2,
@@ -1409,7 +1625,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Under a FIFO cost flow, ending inventory and cost of goods\nsold are the same regardless of whether a perpetual or\nperiodic system is used. Under a LIFO cost flow, on the other\nhand, a perpetual inventory system will generate dollar\namounts different from those of a periodic inventory system.\nDuring a time of rising prices, goods sold and ending inventory\nwill consist of units bearing different costs. The periodic\nsystem determines the cost of sales only at year end. The\nperpetual system determines cost of sales as the sale takes\nplace. Thus, the perpetual system assumes that layers of\ninventory may be liquidated during a year even though\ninventory quantities are restored by later purchases. The\nperiodic system does not make this assumption.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "خلال فترات ارتفاع الأسعار، لأي من طرق تدفق تكلفة المخزون التالية يعطي الجرد المستمر نفس قيمة مخزون آخر المدة التي يعطيها الجرد الدوري دائمًا؟\nFIFO | LIFO",
+    "choicesAr": [
+      "نعم | لا",
+      "نعم | نعم",
+      "لا | نعم",
+      "لا | لا"
+    ],
+    "explanationAr": "وفق FIFO تتساوى تكلفة مخزون آخر المدة وتكلفة البضاعة المباعة في الجرد الدوري والمستمر. أما LIFO فقد يعطي في الجرد المستمر نتائج مختلفة عن الدوري. ففي فترات ارتفاع الأسعار قد تتكون المبيعات ومخزون آخر المدة من وحدات مختلفة التكلفة. يحدد الدوري تكلفة المبيعات في نهاية السنة، ويحددها المستمر عند كل عملية بيع؛ ولذلك قد تُستنفد طبقات مخزون خلال السنة في المستمر حتى لو عوضتها مشتريات لاحقة، بينما لا يعكس الدوري هذه الحركة بالطريقة نفسها."
   },
   {
     "unit": 2,
@@ -1426,7 +1650,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Under FIFO, the first items purchased are presumed to be the\nfirst sold. Furthermore, under FIFO, perpetual and periodic\nsystems produce the same ending inventory and cost of\ngoods sold. If 6,000 units were available and 4,000 units were\nsold, FIFO cost of goods sold equals $84,000 [(2,000 × $20)\nBI + (2,000 × $22) May 1 purchase].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "كان لدى شركة مخزون أول مدة قدره 2,000 وحدة بتكلفة $20 للوحدة. وفي 1 مايو اشترت 2,000 وحدة بتكلفة $22 للوحدة، وفي 1 سبتمبر اشترت 2,000 وحدة أخرى بتكلفة $24 للوحدة. إذا بيعت 4,000 وحدة خلال السنة، فما تكلفة البضاعة المباعة وطريقة التسعير المقابلة لها؟\nالقائمة A: التكلفة | القائمة B: الطريقة",
+    "choicesAr": [
+      "$88,000 | LIFO",
+      "$92,000 | المتوسط المرجح",
+      "$84,000 | FIFO",
+      "$88,000 | FIFO"
+    ],
+    "explanationAr": "وفق FIFO تُعد الأصناف المشتراة أولًا هي المباعة أولًا. كما يعطي الجرد المستمر والدوري النتيجة نفسها لمخزون آخر المدة وتكلفة المبيعات. وإذا كان المتاح 6,000 وحدة والمباع 4,000 وحدة، فإن تكلفة البضاعة المباعة وفق FIFO تبلغ $84,000 [(2,000 × $20) مخزون أول المدة + (2,000 × $22) مشتريات 1 مايو]."
   },
   {
     "unit": 2,
@@ -1443,7 +1675,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The LIFO basis assumes that the most recently purchased\nitems are the first to be sold. Thus, LIFO is a better\napproximation of current cost of goods sold than FIFO.\nAssuming that turnover is rapid and material amounts of\ndepreciation are not allocated to inventory, LIFO cost of goods\nsold may be an acceptable alternative to cost of goods sold\nmeasured at current cost. However, the effect of any LIFO\ninventory liquidations (decreases in earlier years’ LIFO layers)\nmust be excluded. Nevertheless, the FIFO basis more closely\napproximates the current cost of ending inventory because it\nassumes the most recent purchases are the last to be sold.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عمومًا، أي طرق تسعير المخزون تقارب التكلفة الحالية أكثر لكل مما يلي؟\nتكلفة البضاعة المباعة | مخزون آخر المدة",
+    "choicesAr": [
+      "LIFO               FIFO",
+      "LIFO               LIFO",
+      "FIFO               FIFO",
+      "FIFO               LIFO"
+    ],
+    "explanationAr": "تفترض LIFO بيع أحدث المشتريات أولًا؛ لذا تقارب تكلفة البضاعة المباعة الحالية أكثر من FIFO. وبافتراض سرعة دوران المخزون وعدم تخصيص مبالغ جوهرية من الإهلاك للمخزون، قد تكون تكلفة المبيعات وفق LIFO بديلًا مقبولًا لتقدير التكلفة الحالية. لكن ينبغي استبعاد أثر تصفية طبقات LIFO القديمة. أما FIFO فتقارب تكلفة مخزون آخر المدة الحالية أكثر لأنها تفترض بقاء أحدث المشتريات في المخزون."
   },
   {
     "unit": 2,
@@ -1477,7 +1717,15 @@
     ],
     "answerIndex": 1,
     "explanation": "LIFO assumes that the newest items of inventory are sold first.\nThus, the items remaining in inventory are recognized as if\nthey were the oldest. In a perpetual system, purchases are\ndirectly recorded in inventory. Cost of goods sold is calculated\nwhen a sale occurs and consists of the latest purchases. The\ncost of goods sold on the sale on (1) March 12 is $430 [(6 ×\n$55) + (2 × $50)] and (2) March 27 is $420 (7 × $60). The total\ncost of goods sold is $850 ($430 + $420).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فيما يلي مخزون شركة Beck:\nمخزون أول المدة: 10 أشجار بسعر $50\nشراء 4 مارس: 6 أشجار بسعر 55\nبيع 12 مارس: 8 أشجار بسعر 100\nشراء 20 مارس: 9 أشجار بسعر 60\nبيع 27 مارس: 7 أشجار بسعر 105\nشراء 30 مارس: 4 أشجار بسعر 65\nما تكلفة البضاعة المباعة وفق LIFO المستمر؟",
+    "choicesAr": [
+      "$910",
+      "$850",
+      "$808",
+      "$775"
+    ],
+    "explanationAr": "تفترض LIFO بيع أحدث وحدات المخزون أولًا، وبقاء الأقدم في المخزون. وفي الجرد المستمر تسجل المشتريات مباشرة في المخزون وتحدد تكلفة المبيعات عند البيع وفق أحدث المشتريات المتاحة. تبلغ تكلفة البيع في (1) 12 مارس مبلغ $430 [(6 × $55) + (2 × $50)]، وفي (2) 27 مارس مبلغ $420 (7 × $60). لذا تبلغ تكلفة البضاعة المباعة $850 ($430 + $420)."
   },
   {
     "unit": 2,
@@ -1494,7 +1742,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The weighted-average method is used under the periodic\ninventory method. The average cost is determined only at the\nend of the period. The weighted-average cost per unit is used\nto determine the ending inventory and the cost of goods sold\nfor the period. It is calculated as follows: [(Cost of beginning\ninventory + Cost of purchases during the period) ÷ (Units in\nbeginning inventory + Units purchased during the period)].\nTherefore, the weighted-average cost per unit for May is $6.02\n[($1,250 + $116 + $440) ÷ (200 + 20 + 80)]. Cobb’s weighted-\naverage cost of goods sold for May is $60.20 ($6.02 per unit ×\n10 units sold).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تكون مخزون Cobb في 1 مايو من 200 وحدة بتكلفة إجمالية $1,250. وتستخدم الشركة الجرد الدوري. وكانت مشتريات الشهر كما يلي:\nالتاريخ | عدد الوحدات | تكلفة الوحدة | إجمالي التكلفة\n4 مايو | 20 | $5.80 | $116.00\n17 مايو | 80 | $5.50 | $440.00\nباعت Cobb عدد 10 وحدات في 14 مايو مقابل $120. ما تكلفة البضاعة المباعة في مايو وفق المتوسط المرجح؟",
+    "choicesAr": [
+      "$60.20",
+      "$62.10",
+      "$62.50",
+      "$65.00"
+    ],
+    "explanationAr": "يستخدم المتوسط المرجح الدوري متوسط التكلفة المحسوب في نهاية الفترة لتحديد تكلفة مخزون آخر المدة والبضاعة المباعة. ويحسب بقسمة تكلفة مخزون أول المدة والمشتريات على مجموع وحداتهما. لذلك تبلغ تكلفة الوحدة بالمتوسط المرجح في مايو $6.02 [($1,250 + $116 + $440) ÷ (200 + 20 + 80)]. وتبلغ تكلفة البضاعة المباعة $60.20 ($6.02 للوحدة × 10 وحدات مباعة)."
   },
   {
     "unit": 2,
@@ -1511,7 +1767,15 @@
     ],
     "answerIndex": 2,
     "explanation": "In a periodic system, cost of goods sold and ending inventory\nare determined only at the end of the period. Under last-in,\nfirst-out (LIFO) in a periodic system, the 50,000 units sold\nconsists of the 40,000 units purchased on 1/23 at $17 per unit\nand the 10,000 units purchased on 1/20 at $15 per unit. The\ncost of goods sold on the company’s income statement for the\nmonth of January is $830,000 [(40,000 × $17) + (10,000 ×\n$15)].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم Ultra الجرد الدوري. وفيما يلي معاملات يناير:\n1/1 مخزون أول المدة: 20,000 وحدة بسعر $13\n1/20 شراء: 30,000 وحدة بسعر $15\n1/23 شراء: 40,000 وحدة بسعر $17\n1/31 بيع بسعر $20 للوحدة: 50,000 وحدة\nتستخدم Ultra طريقة LIFO لتقييم المخزون. ما تكلفة البضاعة المباعة في قائمة دخل يناير؟",
+    "choicesAr": [
+      "$710,000",
+      "$750,000",
+      "$830,000",
+      "$1,000,000"
+    ],
+    "explanationAr": "في الجرد الدوري تحدد تكلفة المبيعات ومخزون آخر المدة عند نهاية الفترة. ووفق LIFO الدوري تتكون الوحدات المباعة البالغ عددها 50,000 من 40,000 وحدة مشتراة في 1/23 بسعر $17 للوحدة و10,000 وحدة مشتراة في 1/20 بسعر $15 للوحدة. لذا تبلغ تكلفة البضاعة المباعة في يناير $830,000 [(40,000 × $17) + (10,000 × $15)]."
   },
   {
     "unit": 2,
@@ -1528,7 +1792,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The moving-average method requires the determination of a\nnew weighted-average cost after each purchase and thus is\nused only in a perpetual system. Since the only sale in March\nwas on 3/10, the cost of goods sold is $210,000 (20,000 units\nsold × $10.50).\nCost per           Inventory Total\nUnits           Unit              Balance\nBeg. balance 30,000           $10.00            $300,000\n3/1\nPurchase 3/5 10,000           12.00              120,000\n40,000       $10.50            $420,000",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم شركة Carver التجارية نظام الجرد المستمر وطريقة المتوسط المتحرك لتحديد قيمة المخزون. وفيما يلي معاملات مارس:\n3/1 مخزون أول المدة: 30,000 وحدة بسعر $10\n3/5 شراء: 10,000 وحدة بسعر $12\n3/10 بيع بسعر $20 للوحدة: 20,000 وحدة\n3/20 شراء: 20,000 وحدة بسعر $13\nما تكلفة البضاعة المباعة التي تعرضها Carver في قائمة الدخل في نهاية مارس؟",
+    "choicesAr": [
+      "$200,000",
+      "$210,000",
+      "$240,000",
+      "$260,000"
+    ],
+    "explanationAr": "تتطلب طريقة المتوسط المتحرك إعادة تحديد متوسط التكلفة المرجح بعد كل شراء؛ لذا تستخدم مع الجرد المستمر. وبما أن البيع الوحيد في مارس كان في 3/10، فإن تكلفة البضاعة المباعة تبلغ $210,000 (20,000 وحدة مباعة × $10.50).\nالحركة | الوحدات | تكلفة الوحدة | إجمالي قيمة المخزون\nرصيد أول المدة: 30,000 | $10.00 | $300,000\nفي 3/1\nشراء 3/5: 10,000 | 12.00 | 120,000\nالإجمالي: 40,000 | $10.50 | $420,000"
   },
   {
     "unit": 2,
@@ -1545,7 +1817,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Market is the replacement cost of the inventory as determined\nin the market in which the entity buys its inventory, not the\nmarket in which it sells to customers. It is limited to a ceiling\namount equal to net realizable value and a floor amount equal\nto net realizable value minus a normal profit margin.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتطلب المبادئ المحاسبية المتعارف عليها الخروج عن مبدأ التكلفة التاريخية عند انخفاض منفعة المخزون عن تكلفته. وفق قاعدة التكلفة أو السوق أيهما أقل (LCM)، ما المقصود بالسوق؟",
+    "choicesAr": [
+      "التكلفة الأصلية مطروحًا منها مخصص التقادم.",
+      "التكلفة الأصلية مضافًا إليها هامش الربح العادي.",
+      "تكلفة استبدال المخزون.",
+      "التكلفة الأصلية مطروحًا منها تكلفة التخلص."
+    ],
+    "explanationAr": "في تطبيق قاعدة LCM وفق المعايير الأمريكية على المخزون المسعر بطريقة LIFO أو التجزئة، تعني السوق تكلفة استبدال المخزون في سوق الشراء، لا سوق البيع للعملاء. وتخضع لسقف يساوي صافي القيمة القابلة للتحقق وحد أدنى يساوي صافي القيمة القابلة للتحقق مطروحًا منه هامش الربح العادي."
   },
   {
     "unit": 2,
@@ -1562,7 +1842,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Under the LCM method, market is current replacement cost\nsubject to a maximum (ceiling) equal to net realizable value\nand a minimum (floor) equal to net realizable value minus a\nnormal profit margin. NRV equals selling price minus costs of\ncompletion and disposal. Thus, the maximum market amount\nis the $20 NRV ($22 selling price – $2 selling cost), and the\nminimum is $15 ($20 NRV – $5 normal profit margin).\nBecause the minimum exceeds the $10 replacement cost, it is\nthe market amount.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فيما يلي بيانات وحدة مخزون:\nسعر البيع: $22\nتكلفة البيع: 2\nهامش الربح العادي: 5\nتكلفة الاستبدال: 10\nوفق طريقة التكلفة أو السوق أيهما أقل (LCM)، ما قيمة السوق لهذه الوحدة؟",
+    "choicesAr": [
+      "$10.00",
+      "$15.00",
+      "$17.50",
+      "$20.00"
+    ],
+    "explanationAr": "في قاعدة LCM، السوق هي تكلفة الاستبدال الحالية المقيدة بسقف يساوي صافي القيمة القابلة للتحقق وحد أدنى يساوي صافي القيمة القابلة للتحقق مطروحًا منه هامش الربح العادي. ويساوي صافي القيمة القابلة للتحقق سعر البيع مطروحًا منه تكاليف الإكمال والتخلص. لذا يبلغ السقف $20 ($22 سعر البيع − $2 تكلفة البيع)، والحد الأدنى $15 ($20 صافي القيمة القابلة للتحقق − $5 هامش الربح العادي). ولأن الحد الأدنى أعلى من تكلفة الاستبدال $10، فإنه يمثل قيمة السوق."
   },
   {
     "unit": 2,
@@ -1579,7 +1867,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Inventory accounted for using LIFO or the retail inventory\nmethod is measured at the lower of cost or market (LCM). As\nindicated below, the $180,000 replacement cost falls between\nthe $194,000 ceiling and the $164,000 floor. Thus, it will be\nused as market in the LCM determination. Because the\n$180,000 market value is $20,000 lower than the $200,000\nhistorical cost, the inventory should be valued at $180,000 and\na $20,000 loss recognized.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "حددت شركة توزيع مخزونها في 31 ديسمبر وفق LIFO بمبلغ $200,000. وفيما يلي بيانات المخزون:\nسعر البيع المقدر: $204,000\nتكلفة التخلص المقدرة: 10,000\nهامش الربح العادي: 30,000\nتكلفة الاستبدال الحالية: 180,000\nتثبت الشركة الخسائر الناتجة عن تطبيق قاعدة التكلفة أو السوق أيهما أقل. ما الخسارة الواجب إثباتها في 31 ديسمبر؟",
+    "choicesAr": [
+      "$0",
+      "$6,000",
+      "$14,000",
+      "$20,000"
+    ],
+    "explanationAr": "وفق المعايير الأمريكية، يقاس المخزون المسعر بطريقة LIFO أو التجزئة بالتكلفة أو السوق أيهما أقل. وتقع تكلفة الاستبدال البالغة $180,000 بين السقف $194,000 والحد الأدنى $164,000؛ فتستخدم باعتبارها قيمة السوق. ولأن قيمة السوق $180,000 أقل بمبلغ $20,000 من التكلفة التاريخية $200,000، يقاس المخزون بمبلغ $180,000 وتثبت خسارة $20,000."
   },
   {
     "unit": 2,
@@ -1613,7 +1909,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Under IFRS, inventories are measured subsequent to\nacquisition at the lower of cost or net realizable value (NRV).\nNRV equals selling price minus estimated completion and\nselling costs. Given that historical cost is $91 and NRV is $85\n($100 selling price – $10 completion cost – $5 selling cost),\nthe effect on per-unit gross profit is a reduction of $6. This\namount is expensed.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تعرض منشأة تعد قوائمها وفق IFRS البيانات التالية لكل وحدة من الإنتاج تحت التشغيل:\nسعر البيع: $100\nتكاليف الإكمال: 10\nالتكلفة التاريخية: 91\nتكلفة الاستبدال: 108\nمجمل الربح العادي: 20\nتكلفة البيع: 5\nمقارنة بالتكلفة التاريخية، ما أثر قياس مخزون آخر المدة على مجمل الربح لكل وحدة؟",
+    "choicesAr": [
+      "لا أثر.",
+      "انخفاض بمبلغ $6.",
+      "انخفاض بمبلغ $26.",
+      "زيادة بمبلغ $5."
+    ],
+    "explanationAr": "وفق IFRS، يقاس المخزون لاحقًا بالتكلفة أو صافي القيمة القابلة للتحقق أيهما أقل. ويساوي صافي القيمة القابلة للتحقق سعر البيع مطروحًا منه تكاليف الإكمال والبيع المقدرة. وبما أن التكلفة التاريخية $91 وصافي القيمة القابلة للتحقق $85 ($100 سعر البيع − $10 تكلفة الإكمال − $5 تكلفة البيع)، ينخفض مجمل الربح لكل وحدة بمبلغ $6 ويثبت المبلغ مصروفًا."
   },
   {
     "unit": 2,
@@ -1630,7 +1934,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Market equals current replacement cost subject to maximum\nand minimum values. The maximum is NRV, and the minimum\nis NRV minus normal profit. When replacement cost is within\nthis range, it is used as market. Cost is given as $26,000.\nNRV is $28,000 ($40,000 selling price – $12,000 additional\nprocessing costs), and NRV minus a normal profit equals\n$24,000 [$28,000 – ($40,000 × 10%)]. Because the lowest\namount in the range ($24,000) exceeds replacement cost\n($20,000), it is used as market. Because market value\n($24,000) is less than cost ($26,000), it is also the inventory\namount.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "استنادًا إلى الجرد الفعلي في 31 ديسمبر، حددت شركة مخزون الشوكولاتة وفق LIFO بمبلغ $26,000 وتكلفة استبداله بمبلغ $20,000. وقدرت أنه بعد تكاليف تصنيع إضافية قدرها $12,000 يمكن بيع الشوكولاتة كمنتج تام مقابل $40,000. ويبلغ هامش الربح العادي 10% من المبيعات. وفق قاعدة التكلفة أو السوق أيهما أقل، ما قيمة مخزون الشوكولاتة في قائمة المركز المالي في 31 ديسمبر؟",
+    "choicesAr": [
+      "$28,000",
+      "$26,000",
+      "$24,000",
+      "$20,000"
+    ],
+    "explanationAr": "تساوي السوق تكلفة الاستبدال الحالية المقيدة بسقف هو صافي القيمة القابلة للتحقق وحد أدنى هو صافي القيمة القابلة للتحقق مطروحًا منه الربح العادي. فإذا وقعت تكلفة الاستبدال بينهما استخدمت باعتبارها السوق. التكلفة $26,000، وصافي القيمة القابلة للتحقق $28,000 ($40,000 سعر البيع − $12,000 تكاليف التصنيع الإضافية)، والحد الأدنى $24,000 [$28,000 − ($40,000 × 10%)]. ولأن الحد الأدنى ($24,000) أعلى من تكلفة الاستبدال ($20,000)، يمثل قيمة السوق. وبما أن السوق ($24,000) أقل من التكلفة ($26,000)، فهي قيمة المخزون."
   },
   {
     "unit": 2,
@@ -1647,7 +1959,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Market is current replacement cost subject to maximum and\nminimum values. The maximum is net realizable value, and\nthe minimum is net realizable value less normal profit. When\nreplacement cost is within this range, it is used as the market\namount.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "وفق طريقة التكلفة أو السوق أيهما أقل، متى تستخدم تكلفة استبدال صنف المخزون باعتبارها قيمة السوق المحددة؟",
+    "choicesAr": [
+      "عندما تقل عن صافي القيمة القابلة للتحقق مطروحًا منه هامش الربح العادي.",
+      "عندما تقل عن صافي القيمة القابلة للتحقق وتزيد على صافي القيمة القابلة للتحقق مطروحًا منه هامش الربح العادي.",
+      "عندما تزيد على صافي القيمة القابلة للتحقق.",
+      "بصرف النظر عن صافي القيمة القابلة للتحقق."
+    ],
+    "explanationAr": "السوق هي تكلفة الاستبدال الحالية المقيدة بحد أعلى يساوي صافي القيمة القابلة للتحقق وحد أدنى يساوي صافي القيمة القابلة للتحقق مطروحًا منه الربح العادي. وإذا وقعت تكلفة الاستبدال ضمن هذا النطاق، تستخدم باعتبارها قيمة السوق."
   },
   {
     "unit": 2,
@@ -1664,7 +1984,15 @@
     ],
     "answerIndex": 2,
     "explanation": "When replacement cost is below the NRV and above the NRV\nless the normal profit margin, market equals replacement cost.\nGiven that the original cost of the inventory item is below\nmarket, the original cost should be used to measure the\ninventory item under the LCM method.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تقل تكلفة استبدال صنف مخزون عن صافي القيمة القابلة للتحقق وتزيد على صافي القيمة القابلة للتحقق مطروحًا منه هامش الربح العادي. وتقل التكلفة الأصلية عن هذا الحد الأدنى. وفق قاعدة التكلفة أو السوق أيهما أقل (LCM)، بأي قيمة يقاس الصنف؟",
+    "choicesAr": [
+      "صافي القيمة القابلة للتحقق.",
+      "صافي القيمة القابلة للتحقق مطروحًا منه هامش الربح العادي.",
+      "التكلفة الأصلية.",
+      "تكلفة الاستبدال."
+    ],
+    "explanationAr": "عندما تقع تكلفة الاستبدال بين صافي القيمة القابلة للتحقق وصافي القيمة القابلة للتحقق مطروحًا منه هامش الربح العادي، تساوي السوق تكلفة الاستبدال. ولأن التكلفة الأصلية أقل من السوق، تستخدم التكلفة الأصلية في قياس الصنف وفق LCM. فالحد الأدنى يقيد السوق وليس التكلفة الأصلية."
   },
   {
     "unit": 2,
@@ -1698,7 +2026,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Both IFRS and U.S. GAAP require the cost of inventory to be\nwritten down if the utility of the goods is impaired. Under IFRS,\ninventories are measured subsequent to initial recognition at\nthe lower of cost and net realizable value (NRV), with NRV\nassessed each period. Moreover, unlike U.S. GAAP, IFRS\npermit inventory to be written up to the lower of cost and NRV\nif previously written down. The reversal is permissible only to\nthe extent of the prior write-down.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية صحيحة بشأن تسويات المخزون وفق IFRS؟",
+    "choicesAr": [
+      "لا تتطلب IFRS تسويات المخزون.",
+      "يسمح بعكس التخفيضات في فترة لاحقة.",
+      "يمكن أن يتجاوز عكس التخفيض السابق قيمة التخفيض نفسه.",
+      "لا يجوز عكس التخفيضات في فترة لاحقة."
+    ],
+    "explanationAr": "تتطلب IFRS والمعايير الأمريكية تخفيض تكلفة المخزون عند انخفاض منفعته. ووفق IFRS يقاس المخزون لاحقًا بالأقل من التكلفة وصافي القيمة القابلة للتحقق، مع إعادة تقدير الأخيرة في كل فترة. وعلى خلاف القاعدة العامة في المعايير الأمريكية، تسمح IFRS بزيادة قيمة المخزون الذي سبق تخفيضه إلى الأقل من التكلفة وصافي القيمة القابلة للتحقق المعدلة. ويقتصر العكس على مقدار التخفيض السابق."
   },
   {
     "unit": 2,
@@ -1715,7 +2051,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Under U.S. GAAP, write-downs taken to reduce inventories\ncan not be reversed for subsequent increases in value. Under\nIFRS, write-downs taken to reduce inventories can be\nreversed for subsequent increases in value, but the reversal is\nlimited to the amount of the original write-down.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تحتفظ شركة متعددة الجنسيات بسجلاتها وفق IFRS والمعايير الأمريكية. وفي السنة الماضية انخفضت قيمة مخزونها بسبب انهيار الطلب عقب طرح منافس منتجًا مبتكرًا. فخفضت المخزون إلى $0 بعدما كانت قيمته الدفترية $500,000. وفي السنة الحالية أعلنت الجهات الحكومية أن منتج المنافس معيب وسُحب من السوق. فعاد الطلب على منتجات الشركة، وقدرت صافي قيمتها القابلة للتحقق بنهاية الربع الحالي بمبلغ $750,000. كيف تسجل الشركة هذا التطور في الربع الحالي؟",
+    "choicesAr": [
+      "وفق IFRS: زيادة المخزون $0؛ وفق المعايير الأمريكية: زيادة $0.",
+      "وفق IFRS: زيادة المخزون $500,000؛ وفق المعايير الأمريكية: زيادة $0.",
+      "وفق IFRS: زيادة المخزون $750,000؛ وفق المعايير الأمريكية: زيادة $0.",
+      "وفق IFRS: زيادة المخزون $750,000؛ وفق المعايير الأمريكية: زيادة $750,000."
+    ],
+    "explanationAr": "وفق المعايير الأمريكية لا يعكس تخفيض قيمة المخزون المثبت في سنة سابقة بسبب ارتفاع قيمته لاحقًا. أما وفق IFRS فيجوز عكس التخفيض عند ارتفاع صافي القيمة القابلة للتحقق، لكن العكس محدود بمقدار التخفيض الأصلي."
   },
   {
     "unit": 2,
@@ -1749,7 +2093,15 @@
     ],
     "answerIndex": 0,
     "explanation": "A reversal of inventory write-downs is permitted under IFRS\nbut is prohibited under U.S. GAAP.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "من الفروق الأساسية بين المعايير الأمريكية وIFRS أن:",
+    "choicesAr": [
+      "يسمح بعكس تخفيض قيمة المخزون وفق IFRS؛ بينما لا يسمح به وفق القاعدة العامة للمعايير الأمريكية.",
+      "تدرج تكاليف التوزيع في تكلفة المبيعات وفق المعايير الأمريكية؛ وتستبعد وفق IFRS.",
+      "يقاس المخزون عمومًا بالأقل من التكلفة والسوق وفق IFRS؛ وبالأقل من التكلفة وصافي القيمة القابلة للتحقق وفق المعايير الأمريكية.",
+      "تدرج تكاليف التسويق في تكلفة المبيعات وفق المعايير الأمريكية؛ وتستبعد وفق IFRS."
+    ],
+    "explanationAr": "تسمح IFRS بعكس تخفيض قيمة المخزون في حدود التخفيض السابق عند تحقق شروط العكس، بينما تمنع القاعدة العامة للمعايير الأمريكية عكس التخفيض الذي أسس تكلفة جديدة في فترة سنوية سابقة."
   },
   {
     "unit": 2,
@@ -1766,7 +2118,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Inventory accounted for using LIFO or the retail inventory\nmethod is measured at the lower of cost or market. When\nreplacement cost is below the NRV and above the NRV minus\nthe normal profit margin, market equals replacement cost.\nGiven that the original cost of the inventory item is below\nmarket, the original cost should be used to measure the\ninventory item under the LCM method.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تقل تكلفة استبدال صنف مخزون مسعر وفق LIFO عن صافي القيمة القابلة للتحقق وتزيد على صافي القيمة القابلة للتحقق مطروحًا منه هامش الربح العادي. وتقل التكلفة الأصلية عن هذا الحد الأدنى. وفق طريقة التكلفة أو السوق أيهما أقل (LCM)، بأي قيمة يقاس الصنف؟",
+    "choicesAr": [
+      "صافي القيمة القابلة للتحقق.",
+      "صافي القيمة القابلة للتحقق مطروحًا منه هامش الربح العادي.",
+      "التكلفة الأصلية.",
+      "تكلفة الاستبدال."
+    ],
+    "explanationAr": "يقاس المخزون المسعر وفق LIFO أو التجزئة بالتكلفة أو السوق أيهما أقل وفق المعايير الأمريكية. وعندما تقع تكلفة الاستبدال بين صافي القيمة القابلة للتحقق والحد الأدنى المتمثل في صافي القيمة القابلة للتحقق مطروحًا منه الربح العادي، تساوي السوق تكلفة الاستبدال. ولأن التكلفة الأصلية أقل من السوق، تستخدم التكلفة الأصلية في القياس."
   },
   {
     "unit": 2,
@@ -1783,7 +2143,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Inventory accounted for using LIFO or the retail inventory\nmethod is measured at the lower of cost or market. Market is\ncurrent replacement cost subject to a ceiling and a floor. The\nmaximum is net realizable value, and the minimum is net\nrealizable value minus normal profit. When replacement cost\nis within this range, it is used as market. The original cost is\nabove the NRV minus normal profit margin but below the NRV\nand the replacement cost. Thus, market must be the NRV (if it\nis less than replacement cost) or the replacement cost (which\nis greater than NRV minus normal profit), and LCM is equal to\noriginal cost.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تقل التكلفة الأصلية لصنف مخزون عن تكلفة الاستبدال وصافي القيمة القابلة للتحقق معًا، بينما يقل صافي القيمة القابلة للتحقق مطروحًا منه هامش الربح العادي عن التكلفة الأصلية. وفق LCM، بأي قيمة يقاس الصنف المسعر باستخدام LIFO؟",
+    "choicesAr": [
+      "تكلفة الاستبدال.",
+      "صافي القيمة القابلة للتحقق.",
+      "صافي القيمة القابلة للتحقق مطروحًا منه هامش الربح العادي.",
+      "التكلفة الأصلية."
+    ],
+    "explanationAr": "وفق المعايير الأمريكية يقاس المخزون المسعر بطريقة LIFO أو التجزئة بالأقل من التكلفة والسوق. والسوق تكلفة الاستبدال المقيدة بسقف يساوي صافي القيمة القابلة للتحقق وحد أدنى يساوي صافي القيمة القابلة للتحقق مطروحًا منه الربح العادي. وإذا وقعت تكلفة الاستبدال ضمن النطاق استخدمت باعتبارها السوق. وتقع التكلفة الأصلية فوق الحد الأدنى وتحت صافي القيمة القابلة للتحقق وتكلفة الاستبدال؛ ومن ثم تكون السوق إما صافي القيمة القابلة للتحقق إذا قل عن تكلفة الاستبدال، أو تكلفة الاستبدال إذا وقعت داخل النطاق. لذا تكون التكلفة الأصلية هي الأقل."
   },
   {
     "unit": 2,
@@ -1800,7 +2168,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Inventory accounted for using LIFO or the retail inventory\nmethod is measured at the lower of cost or market (LCM).\nMarket is current replacement cost subject to a ceiling equal to\nnet realizable value and a floor equal to net realizable value\nminus a normal profit. Net realizable value is the estimated\nselling price minus costs of completion and disposal. For gear,\nthe net realizable value is $198 ($217 selling price –\n$19 completion and disposal costs). Net realizable value\nminus normal profit is $166 ($198 net realizable value –\n$32 normal profit).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم Stockholm طريقة LIFO للمحاسبة عن المخزون. وفيما يلي بيانات الأصناف لكل وحدة:\nالبند | Gear | Stuff | Wickets\nالتكلفة التاريخية | $190.00 | $106.00 | $53.00\nسعر البيع | 217.00 | 145.00 | 73.75\nتكلفة الإكمال والبيع | 19.00 | 8.00 | 2.50\nتكلفة الاستبدال الحالية | 203.00 | 105.00 | 51.00\nهامش الربح العادي | 32.00 | 29.00 | 21.25\nما سقف وحد السوق الأدنى اللذان ينبغي استخدامهما في مقارنة التكلفة أو السوق أيهما أقل لصنف Gear؟",
+    "choicesAr": [
+      "$217 و$198.",
+      "$217 و$185.",
+      "$198 و$166.",
+      "$185 و$166."
+    ],
+    "explanationAr": "وفق المعايير الأمريكية يقاس مخزون LIFO أو التجزئة بالأقل من التكلفة والسوق. والسوق تكلفة الاستبدال الحالية المقيدة بسقف يساوي صافي القيمة القابلة للتحقق وحد أدنى يساوي صافي القيمة القابلة للتحقق مطروحًا منه الربح العادي. ويساوي صافي القيمة القابلة للتحقق سعر البيع المقدر مطروحًا منه تكاليف الإكمال والتخلص. ولصنف Gear يبلغ صافي القيمة القابلة للتحقق $198 ($217 سعر البيع − $19 تكاليف الإكمال والتخلص). والحد الأدنى $166 ($198 صافي القيمة القابلة للتحقق − $32 الربح العادي)."
   },
   {
     "unit": 2,
@@ -1817,7 +2193,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Inventory accounted for using LIFO or the retail inventory\nmethod is measured at the LCM. Market is the current cost to\nreplace the inventory, subject to certain limitations. Market\nshould not exceed a ceiling equal to net realizable value\n(NRV) or be less than a floor equal to NRV minus normal profit\nmargin. NRV for stuff is $137 ($145 – $8). NRV minus normal\nprofit margin is $108 ($137 – $29). The current replacement\ncost is below the floor of $108; therefore, the market is $108.\nBecause the historical cost of $106 is lower than the market of\n$108, historical cost should be the basis of valuation for stuff.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم Stockholm طريقة LIFO للمحاسبة عن المخزون. وفيما يلي بيانات الأصناف لكل وحدة:\nالبند | Gear | Stuff | Wickets\nالتكلفة التاريخية | $190.00 | $106.00 | $53.00\nسعر البيع | 217.00 | 145.00 | 73.75\nتكلفة الإكمال والبيع | 19.00 | 8.00 | 2.50\nتكلفة الاستبدال الحالية | 203.00 | 105.00 | 51.00\nهامش الربح العادي | 32.00 | 29.00 | 21.25\nما مبلغ التكلفة الذي ينبغي استخدامه لصنف Stuff في مقارنة التكلفة أو السوق أيهما أقل (LCM)؟",
+    "choicesAr": [
+      "$105",
+      "$106",
+      "$108",
+      "$137"
+    ],
+    "explanationAr": "يقاس مخزون LIFO أو التجزئة بالأقل من التكلفة والسوق وفق المعايير الأمريكية. وتساوي السوق تكلفة الاستبدال الحالية المقيدة بسقف صافي القيمة القابلة للتحقق وحد أدنى هو صافي القيمة القابلة للتحقق مطروحًا منه الربح العادي. يبلغ صافي القيمة القابلة للتحقق لصنف Stuff مبلغ $137 ($145 − $8)، والحد الأدنى $108 ($137 − $29). وتقل تكلفة الاستبدال الحالية عن الحد الأدنى $108؛ لذا تبلغ السوق $108. ولأن التكلفة التاريخية $106 أقل من السوق $108، تستخدم التكلفة التاريخية في القياس."
   },
   {
     "unit": 2,
@@ -1834,7 +2218,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Inventory accounted for using LIFO or retail inventory method\nis measured at the lower of cost or market (LCM). Market is\nthe current cost to replace the inventory, subject to certain\nlimitations. Market should not exceed a ceiling equal to net\nrealizable value (NRV) or be less than a floor equal to NRV\nminus normal profit margin. Net realizable value for wickets is\n$71.25 ($73.75 selling price – $2.50 completion and disposal\ncosts). The net realizable value minus normal profit is $50\n($71.25 net realizable value – $21.25 normal profit margin).\nThe $51 replacement cost falls between the $71.25 ceiling\nand the $50 floor and is the appropriate market value.\nBecause the $51 market value is lower than the $53 historical\ncost, it should be the basis of valuation for the wickets.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم Stockholm طريقة LIFO للمحاسبة عن المخزون. وفيما يلي بيانات الأصناف لكل وحدة:\nالبند | Gear | Stuff | Wickets\nالتكلفة التاريخية | $190.00 | $106.00 | $53.00\nسعر البيع | 217.00 | 145.00 | 73.75\nتكلفة الإكمال والبيع | 19.00 | 8.00 | 2.50\nتكلفة الاستبدال الحالية | 203.00 | 105.00 | 51.00\nهامش الربح العادي | 32.00 | 29.00 | 21.25\nما قيمة السوق التي ينبغي استخدامها لصنف Wickets وفق قاعدة التكلفة أو السوق أيهما أقل؟",
+    "choicesAr": [
+      "$51.00",
+      "$53.00",
+      "$50.00",
+      "$71.25"
+    ],
+    "explanationAr": "يقاس مخزون LIFO أو التجزئة بالأقل من التكلفة والسوق. وتساوي السوق تكلفة الاستبدال الحالية بشرط ألا تتجاوز صافي القيمة القابلة للتحقق وألا تقل عن صافي القيمة القابلة للتحقق مطروحًا منه هامش الربح العادي. ويبلغ صافي القيمة القابلة للتحقق لصنف Wickets مبلغ $71.25 ($73.75 سعر البيع − $2.50 تكاليف الإكمال والتخلص)، والحد الأدنى $50 ($71.25 صافي القيمة القابلة للتحقق − $21.25 الربح العادي). وتقع تكلفة الاستبدال $51 بين السقف $71.25 والحد الأدنى $50؛ لذا تمثل السوق. ولأن السوق $51 أقل من التكلفة التاريخية $53، تستخدم السوق في القياس."
   },
   {
     "unit": 2,
@@ -1851,7 +2243,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Inventory accounted for using LIFO or the retail inventory\nmethod is measured at the lower of cost or market. Market is\nthe current cost to replace inventory, subject to certain\nlimitations. Market should not exceed a ceiling equal to net\nrealizable value (NRV) or be less than a floor equal to NRV\nminus a normal profit margin. Because replacement cost\nexceeds NRV, the ceiling is NRV.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تزيد التكلفة الأصلية لصنف مخزون على تكلفة استبداله، وتزيد تكلفة الاستبدال على صافي القيمة القابلة للتحقق. وفق LCM، بأي قيمة يقاس الصنف عند استخدام طريقة التجزئة؟",
+    "choicesAr": [
+      "التكلفة الأصلية.",
+      "تكلفة الاستبدال.",
+      "صافي القيمة القابلة للتحقق.",
+      "صافي القيمة القابلة للتحقق مطروحًا منه هامش الربح العادي."
+    ],
+    "explanationAr": "وفق المعايير الأمريكية يقاس مخزون LIFO أو التجزئة بالأقل من التكلفة والسوق. والسوق تكلفة الاستبدال الحالية بشرط ألا تتجاوز سقف صافي القيمة القابلة للتحقق وألا تقل عن صافي القيمة القابلة للتحقق مطروحًا منه الربح العادي. ولأن تكلفة الاستبدال تتجاوز صافي القيمة القابلة للتحقق، فإن السقف يمثل السوق، وهو أقل من التكلفة الأصلية."
   },
   {
     "unit": 2,
@@ -1868,7 +2268,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Inventory accounted for using LIFO or the retail inventory\nmethod is measured at the lower of cost or market (LCM).\nInventory accounted for using any other cost method (e.g.,\nFIFO or average cost) is measured at the lower of cost or net\nrealizable value (NRV).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "وفق المعايير الأمريكية، أي طرق تدفق تكلفة المخزون التالية لا تخضع للقياس بالأقل من التكلفة وصافي القيمة القابلة للتحقق؟",
+    "choicesAr": [
+      "الوارد أولًا صادر أولًا (FIFO).",
+      "المتوسط المتحرك.",
+      "الوارد أخيرًا صادر أولًا (LIFO).",
+      "التحديد العيني."
+    ],
+    "explanationAr": "يقاس المخزون المسعر بطريقة LIFO أو التجزئة بالأقل من التكلفة والسوق (LCM)، بينما يقاس المخزون المسعر بالطرق الأخرى مثل FIFO أو المتوسط بالأقل من التكلفة وصافي القيمة القابلة للتحقق (NRV)."
   },
   {
     "unit": 2,
@@ -1885,7 +2293,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Inventory accounted for using the FIFO method (or any cost\nmethod other than LIFO or retail) is measured at the lower of\ncost or net realizable value (NRV). Because the NRV\n($125,000) is lower than the historical cost ($150,000), the\ninventory is reported on the year-end balance sheet at its NRV\nof $125,000.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم شركة طريقة FIFO للمحاسبة عن المخزون. وفيما يلي بيانات نهاية السنة المالية:\nالتكلفة التاريخية: $150,000\nتكلفة الاستبدال الحالية: 120,000\nصافي القيمة القابلة للتحقق: 125,000\nهامش الربح العادي: 15,000\nالقيمة العادلة: 140,000\nما قيمة المخزون الواجب عرضها في قائمة المركز المالي في نهاية السنة؟",
+    "choicesAr": [
+      "$150,000",
+      "$125,000",
+      "$120,000",
+      "$140,000"
+    ],
+    "explanationAr": "يقاس مخزون FIFO (أو طرق التكلفة الأخرى بخلاف LIFO والتجزئة وفق المعايير الأمريكية) بالأقل من التكلفة وصافي القيمة القابلة للتحقق. ولأن صافي القيمة القابلة للتحقق ($125,000) أقل من التكلفة التاريخية ($150,000)، يعرض المخزون بمبلغ $125,000."
   },
   {
     "unit": 2,
@@ -1902,7 +2318,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Inventory accounted for using the FIFO method (or any cost\nmethod other than LIFO or retail) is measured at the lower of\ncost or net realizable value (NRV). NRV is the estimated\nselling price in the ordinary course of business, minus\nreasonably predictable costs of completion, disposal, and\ntransportation. At year-end, the NRV of the inventory of\n$295,000 ($330,000 estimated selling price – $15,000\nestimated completion costs – $20,000 estimated costs of\ndisposal) is lower than its cost of $300,000. Thus, the\ninventory is reported at its NRV of $295,000.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "حددت شركة Lialia تكلفة مخزونها غير المكتمل في نهاية السنة وفق FIFO بمبلغ $300,000. وفيما يلي بيانات المخزون:\nسعر البيع المقدر: $330,000\nتكلفة التخلص المقدرة: 20,000\nهامش الربح العادي: 15%\nتكلفة الاستبدال الحالية: 280,000\nتكاليف الإكمال المقدرة: 15,000\nما قيمة المخزون الواجب عرضها في قائمة المركز المالي في نهاية السنة؟",
+    "choicesAr": [
+      "$295,000",
+      "$280,000",
+      "$300,000",
+      "$330,000"
+    ],
+    "explanationAr": "يقاس مخزون FIFO أو طرق التكلفة الأخرى بخلاف LIFO والتجزئة وفق المعايير الأمريكية بالأقل من التكلفة وصافي القيمة القابلة للتحقق (NRV). وصافي القيمة القابلة للتحقق هو سعر البيع المقدر في النشاط المعتاد مطروحًا منه تكاليف الإكمال والتخلص والنقل المتوقعة بشكل معقول. وفي نهاية السنة يبلغ صافي القيمة القابلة للتحقق $295,000 ($330,000 سعر البيع المقدر − $15,000 تكاليف الإكمال − $20,000 تكاليف التخلص)، وهو أقل من التكلفة $300,000؛ لذا يعرض المخزون بمبلغ $295,000."
   },
   {
     "unit": 2,
@@ -1919,7 +2343,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Inventory accounted for using the average method (or any\ncost method other than LIFO or retail) is measured at the\nlower of cost or net realizable value (NRV). NRV is the\nestimated selling price in the ordinary course of business,\nminus reasonably predictable costs of completion, disposal,\nand transportation. The cost of the inventory of $200,000 is\nlower than its NRV of $205,000 ($215,000 selling price –\n$10,000 estimated cost of disposal). Thus, the inventory is\nreported at its cost and no loss on write-down of inventory is\nrecognized.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "حددت شركة Gail تكلفة مخزونها في 12/31 من السنة 1 وفق المتوسط المتحرك بمبلغ $200,000. وفيما يلي البيانات في نهاية السنة:\nسعر البيع المقدر: $215,000\nتكلفة التخلص المقدرة: 10,000\nهامش الربح العادي: 20,000\nتكلفة الاستبدال الحالية: 190,000\nما خسارة تخفيض قيمة المخزون، إن وجدت، الواجب إثباتها في قائمة دخل السنة 1؟",
+    "choicesAr": [
+      "$10,000",
+      "$15,000",
+      "$20,000",
+      "$0"
+    ],
+    "explanationAr": "يقاس المخزون وفق المتوسط أو طرق التكلفة الأخرى بخلاف LIFO والتجزئة وفق المعايير الأمريكية بالأقل من التكلفة وصافي القيمة القابلة للتحقق (NRV). وصافي القيمة القابلة للتحقق هو سعر البيع المقدر في النشاط المعتاد مطروحًا منه تكاليف الإكمال والتخلص والنقل المتوقعة بشكل معقول. وتقل تكلفة المخزون $200,000 عن صافي القيمة القابلة للتحقق $205,000 ($215,000 سعر البيع − $10,000 تكلفة التخلص). لذا يعرض المخزون بالتكلفة ولا تثبت خسارة تخفيض."
   },
   {
     "unit": 2,
@@ -1936,7 +2368,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Inventory accounted for using the average-cost method (or\nany cost method other than LIFO or retail) is measured at the\nlower of cost or NRV. NRV is the estimated selling price in the\nordinary course of business, minus reasonably predictable\ncosts of completion, disposal, and transportation.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "كيف يقاس المخزون الذي تتم المحاسبة عنه بطريقة متوسط التكلفة في القوائم المالية؟",
+    "choicesAr": [
+      "الأقل من التكلفة والسوق (LCM).",
+      "الأقل من التكلفة والقيمة العادلة مطروحًا منها تكلفة البيع.",
+      "الأقل من التكلفة وصافي القيمة القابلة للتحقق (NRV).",
+      "القيمة العادلة."
+    ],
+    "explanationAr": "يقاس المخزون وفق المتوسط أو أي طريقة تكلفة أخرى بخلاف LIFO والتجزئة في سياق المعايير الأمريكية بالأقل من التكلفة وصافي القيمة القابلة للتحقق. ويعني الأخير سعر البيع المقدر في النشاط المعتاد مطروحًا منه تكاليف الإكمال والتخلص والنقل المتوقعة بشكل معقول."
   },
   {
     "unit": 2,
@@ -1953,7 +2393,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Inventory accounted for using LIFO or the retail inventory\nmethod is measured at the lower of cost or market (LCM).\nMarket is the current cost to replace inventory, subject to\ncertain limitations. Market cannot be greater than a ceiling\nequal to net realizable value (NRV) of $298,000\n($308,000 estimated selling price – $10,000 cost of disposal).\nIt cannot be less than a floor equal to NRV reduced by a\nnormal profit margin of $285,000 ($298,000 NRV – $13,000\nnormal profit margin). Because the current replacement cost\n($280,000) is lower than the floor ($285,000), market is\n$285,000. Thus, under the LIFO method, the inventory is\nreported at $285,000, which is lower than the $300,000 cost.\nInventory accounted for using the FIFO method (or any cost\nmethod other than LIFO or retail) is measured at the lower of\ncost or net realizable value (NRV). Thus, under FIFO method,\nthe inventory is reported at its NRV of $298,000, which is\nlower than the $300,000 cost.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "حددت شركة القيم التالية لمخزون نهاية السنة:\nالتكلفة التاريخية: $300,000\nتكلفة الاستبدال الحالية: 280,000\nسعر البيع: 308,000\nهامش الربح العادي: 13,000\nتكلفة البيع: 10,000\nما قيمة المخزون في قائمة المركز المالي وفق طريقتي التكلفة التاليتين؟\nLIFO | FIFO",
+    "choicesAr": [
+      "$280,000                       $298,000",
+      "$285,000                       $298,000",
+      "$298,000                         $300,000",
+      "$285,000                         $285,000"
+    ],
+    "explanationAr": "يقاس مخزون LIFO أو التجزئة وفق المعايير الأمريكية بالأقل من التكلفة والسوق (LCM). والسوق تكلفة الاستبدال المقيدة بسقف يساوي صافي القيمة القابلة للتحقق $298,000 ($308,000 سعر البيع − $10,000 تكلفة التخلص)، وحد أدنى يساوي صافي القيمة القابلة للتحقق مطروحًا منه هامش الربح العادي $285,000 ($298,000 − $13,000). ولأن تكلفة الاستبدال الحالية ($280,000) أقل من الحد الأدنى ($285,000)، تكون السوق $285,000. لذا يعرض مخزون LIFO بمبلغ $285,000، وهو أقل من التكلفة $300,000. أما مخزون FIFO أو طرق التكلفة الأخرى بخلاف LIFO والتجزئة فيقاس بالأقل من التكلفة وصافي القيمة القابلة للتحقق. لذلك يعرض مخزون FIFO بقيمة $298,000، وهي أقل من التكلفة $300,000."
   },
   {
     "unit": 2,
@@ -1970,7 +2418,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Inventory measured using any cost method other than LIFO or\nretail (e.g., FIFO or average cost) must be measured at the\nlower of cost or NRV. NRV is the estimated selling price in the\nordinary course of business, minus reasonably predictable\ncosts of completion, disposal, and transportation.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تقتضي المبادئ المحاسبية المتعارف عليها الخروج عن التكلفة التاريخية عند انخفاض منفعة المخزون عن تكلفته. ويمكن قياس المخزون وفق بعض طرق تدفق التكلفة بالأقل من التكلفة وصافي القيمة القابلة للتحقق (NRV). ما المقصود بصافي القيمة القابلة للتحقق هنا؟",
+    "choicesAr": [
+      "القيمة العادلة مطروحًا منها تكلفة البيع.",
+      "التكلفة الأصلية مطروحًا منها هامش الربح العادي.",
+      "سعر البيع المقدر مطروحًا منه تكاليف الإكمال والتخلص المقدرة.",
+      "القيمة العادلة مطروحًا منها هامش الربح العادي."
+    ],
+    "explanationAr": "يقاس المخزون باستخدام أي طريقة تكلفة بخلاف LIFO والتجزئة في سياق المعايير الأمريكية، مثل FIFO أو المتوسط، بالأقل من التكلفة وصافي القيمة القابلة للتحقق. ويعني الأخير سعر البيع المقدر في النشاط المعتاد مطروحًا منه تكاليف الإكمال والتخلص والنقل المتوقعة بشكل معقول."
   },
   {
     "unit": 2,
@@ -1987,7 +2443,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Inventory accounted for using LIFO or the retail inventory\nmethod is measured at the lower of cost or market (LCM).\nInventory accounted for using any other cost method (e.g.,\nFIFO, average cost, or specific identification) is measured at\nthe lower of cost or net realizable value (NRV).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "وفق المعايير الأمريكية، أي طرق تدفق تكلفة المخزون التالية تخضع للقياس اللاحق بالأقل من التكلفة والسوق (LCM)؟\nLIFO | FIFO | التجزئة | المتوسط المرجح",
+    "choicesAr": [
+      "نعم | لا | نعم | لا",
+      "نعم | نعم | لا | لا",
+      "لا | نعم | لا | نعم",
+      "لا | لا | نعم | نعم"
+    ],
+    "explanationAr": "يقاس المخزون المسعر بطريقة LIFO أو التجزئة بالأقل من التكلفة والسوق. ويقاس المخزون المسعر بطرق التكلفة الأخرى مثل FIFO أو المتوسط أو التحديد العيني بالأقل من التكلفة وصافي القيمة القابلة للتحقق."
   },
   {
     "unit": 2,
@@ -2004,7 +2468,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Inventory accounted for using a method other than LIFO or\nretail (e.g., FIFO, average cost, or specific identification) is\nmeasured subsequent to acquisition at lower of cost or net\nrealizable value (NRV). NRV equals (1) the estimated selling\nprice in the ordinary course of business minus (2) reasonably\npredictable costs of completion, disposal, and transportation.\nAccordingly, the year-end weighted-average inventory is\nmeasured at the lower of cost ($400,000) or NRV [($450,000\nsales price – $25,000 costs to complete, etc.) = $425,000],\nthat is, the $400,000 historical cost.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تقيس شركة Kusta مخزون نهاية السنة بطريقة المتوسط المرجح. وفيما يلي البيانات ذات الصلة:\nتكاليف الإكمال والتخلص والنقل: $25,000\nسعر البيع المقدر: 450,000\nتكلفة الاستبدال الحالية: 420,000\nهامش الربح العادي: 40,000\nالتكلفة: 400,000\nما مبلغ مخزون آخر المدة في قائمة المركز المالي؟",
+    "choicesAr": [
+      "$400,000",
+      "$420,000",
+      "$425,000",
+      "$450,000"
+    ],
+    "explanationAr": "يقاس المخزون بطرق التكلفة الأخرى بخلاف LIFO والتجزئة وفق المعايير الأمريكية، مثل FIFO أو المتوسط أو التحديد العيني، لاحقًا بالأقل من التكلفة وصافي القيمة القابلة للتحقق (NRV). ويساوي صافي القيمة القابلة للتحقق (1) سعر البيع المقدر في النشاط المعتاد مطروحًا منه (2) تكاليف الإكمال والتخلص والنقل المتوقعة بشكل معقول. لذا يقاس المخزون وفق المتوسط المرجح بالأقل من التكلفة ($400,000) أو صافي القيمة القابلة للتحقق [($450,000 سعر البيع − $25,000 تكاليف الإكمال وغيرها) = $425,000]، أي التكلفة التاريخية $400,000."
   },
   {
     "unit": 2,
@@ -2021,7 +2493,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Under FIFO, inventory is measured at the lower of cost or\nNRV (Estimated selling price in the ordinary course of\nbusiness – Estimated costs of completion and sale). Given\ncost of $100,000 and NRV of $90,000, inventory should be\nreported at $90,000.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "حددت شركة القيم التالية لمخزون نهاية السنة المالية:\nالتكلفة التاريخية: $100,000\nتكلفة الاستبدال الحالية: 70,000\nصافي القيمة القابلة للتحقق: 90,000\nصافي القيمة القابلة للتحقق مطروحًا منه هامش الربح العادي: 85,000\nالقيمة العادلة: 95,000\nإذا استخدمت الشركة طريقة FIFO، فما قيمة المخزون الواجب عرضها في قائمة المركز المالي؟",
+    "choicesAr": [
+      "$70,000",
+      "$85,000",
+      "$90,000",
+      "$95,000"
+    ],
+    "explanationAr": "وفق FIFO يقاس المخزون بالأقل من التكلفة وصافي القيمة القابلة للتحقق (سعر البيع المقدر في النشاط المعتاد مطروحًا منه تكاليف الإكمال والبيع المقدرة). وبما أن التكلفة $100,000 وصافي القيمة القابلة للتحقق $90,000، يعرض المخزون بمبلغ $90,000."
   },
   {
     "unit": 2,
@@ -2038,7 +2518,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Inventory accounted for using LIFO or the retail inventory\nmethod is measured at the lower of cost or market (LCM).\nMarket is the current cost to replace inventory, subject to\ncertain limitations. Market should not (1) exceed a ceiling\nequal to net realizable value (NRV) or (2) be less than a floor\nequal to NRV reduced by an allowance for an approximately\nnormal profit margin. NRV is the estimated selling price in the\nordinary course of business minus reasonably predictable\ncosts of completion and disposal. Thus, NRV (ceiling) equals\n$114,500 ($125,000 selling price – $10,500 cost of\ncompletion). If the normal profit margin equals $37,500\n($125,000 selling price × 30% normal profit margin), the floor\nequals $77,000 ($114,500 NRV – $37,500 normal profit\nmargin). Because the replacement cost of inventory ($75,000)\nis lower than the floor ($77,000), market is $77,000.\nAccordingly, the LIFO inventory must be written down to\nmarket and reported at $77,000 because market is lower than\ncost ($85,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تحتفظ Garcel بمخزون غير مكتمل وفق LIFO بتكلفة $85,000 وقيمة بيع $125,000. وتبلغ تكلفة الإكمال $10,500، وهامش الربح العادي 30% من المبيعات، وتكلفة الاستبدال $75,000. ما قيمة المخزون الواجب عرضها في قائمة المركز المالي؟",
+    "choicesAr": [
+      "$114,500",
+      "$85,000",
+      "$77,000",
+      "$75,000"
+    ],
+    "explanationAr": "يقاس مخزون LIFO أو التجزئة وفق المعايير الأمريكية بالأقل من التكلفة والسوق (LCM). والسوق تكلفة الاستبدال الحالية المقيدة بحيث (1) لا تتجاوز سقف صافي القيمة القابلة للتحقق (NRV)، و(2) لا تقل عن صافي القيمة القابلة للتحقق مطروحًا منه هامش الربح العادي. ويعني صافي القيمة القابلة للتحقق سعر البيع المقدر في النشاط المعتاد مطروحًا منه تكاليف الإكمال والتخلص المتوقعة. لذا يبلغ السقف $114,500 ($125,000 سعر البيع − $10,500 تكلفة الإكمال). وإذا كان هامش الربح العادي $37,500 ($125,000 سعر البيع × 30% هامش الربح)، فإن الحد الأدنى $77,000 ($114,500 صافي القيمة القابلة للتحقق − $37,500 الربح العادي). ولأن تكلفة الاستبدال ($75,000) أقل من الحد الأدنى ($77,000)، تكون السوق $77,000. لذلك يخفض مخزون LIFO ويعرض بمبلغ $77,000 لأن السوق أقل من التكلفة ($85,000)."
   },
   {
     "unit": 2,
@@ -2055,7 +2543,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Under FIFO, inventories are measured at the lower of cost or\nnet realizable value (NRV). NRV is the estimated selling price\nless the estimated costs of completion and disposal. The\ninventory cost is $910. The NRV is $900 ($1,000 – $100). The\nlower of the two is $900. Therefore, the company’s year-end\ninventory balance is $900.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتعلق المعلومات التالية بمخزون شركة في نهاية السنة:\nتكلفة المخزون: $910\nسعر بيع المخزون: $1,000\nهامش الربح العادي: 10% من سعر البيع\nتكلفة الاستبدال الحالية: $740\nتكلفة الإكمال والتخلص: $100\nوفق طريقة FIFO، ما رصيد المخزون في نهاية السنة؟",
+    "choicesAr": [
+      "$740",
+      "$800",
+      "$900",
+      "$910"
+    ],
+    "explanationAr": "وفق FIFO يقاس المخزون بالأقل من التكلفة وصافي القيمة القابلة للتحقق. ويساوي صافي القيمة القابلة للتحقق سعر البيع المقدر مطروحًا منه تكاليف الإكمال والتخلص المقدرة. وتبلغ التكلفة $910، وصافي القيمة القابلة للتحقق $900 ($1,000 − $100). والأقل منهما $900؛ لذا يكون رصيد المخزون في نهاية السنة $900."
   },
   {
     "unit": 2,

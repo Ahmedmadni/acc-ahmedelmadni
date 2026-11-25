@@ -1,0 +1,3 @@
+# Unit 2 Arabic Wave 6
+
+26 educational Arabic drafts: §3 Q11–32, Q34–37. Unit 2: 66/107 (61.7%), nine held, 32 unreviewed. Combined imported bank: 1421/2443. Section 3 initial review complete: 34 translated, three held. Q14 notes intermediate rounding; Q17 assumes periodic LIFO and permissible tax treatment; Q30 clarifies LIFO may differ rather than always differs. Q33 p.293 held because transition to LIFO may not support retrospective application when prior layers cannot be reconstructed; source also assumes no other net-income effects. Original keys and text preserved; numerical parity and independent calculations checked. Original-page verification pending. Next: §4 subsequent measurement.
