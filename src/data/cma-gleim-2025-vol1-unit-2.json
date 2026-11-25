@@ -1450,7 +1450,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Under perpetual LIFO, the inventory valuation is recalculated\nas follows after every purchase and sale. The 230 units in\nending inventory consist of 150 units at $4.80 each, 30 units at\n$4.20 each, and 50 units from the beginning inventory at\n$4.00 each.\nEnding\nDate          Receipts               Sales          Inventory\n11-1     150 × $4.00 = $600                        $ 600.00\n11-5                          100 × $4.00 =          200.00\n$400\n11-7     200 × $4.20 = $840                         1,040.00\n11-9                          150 × $4.20 =           410.00\n$630\n11-11 200 × $4.40 = $880                            1,290.00\n11-17                         200 × $4.40 =\n$880\n20 × $4.20 = $84      326.00\n11-22 250 × $4.80 =                                1,526.00\n$1,200\n11-29                         100 × $4.80 =        1,046.00\n$480",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بدأت شركة Toulouse شهر نوفمبر بمخزون قدره 150 قطعة زينة بتكلفة $4.00 للقطعة. وتباع القطعة مقابل $7.00. وفيما يلي المبيعات والمشتريات خلال نوفمبر:\nالتاريخ | الكمية المشتراة | تكلفة الوحدة | الوحدات المباعة\n5 نوفمبر | — | — | 100\n7 نوفمبر | 200 | $4.20 | —\n9 نوفمبر | — | — | 150\n11 نوفمبر | 200 | 4.40 | —\n17 نوفمبر | — | — | 220\n22 نوفمبر | 250 | 4.80 | —\n29 نوفمبر | — | — | 100\nإذا استخدمت Toulouse طريقة LIFO مع الجرد المستمر، فما قيمة المخزون في 30 نوفمبر؟",
+    "choicesAr": [
+      "$936",
+      "$1,012",
+      "$1,046",
+      "$1,076"
+    ],
+    "explanationAr": "وفق LIFO المستمر يعاد تحديد قيمة المخزون بعد كل عملية شراء وبيع. ويتكون مخزون آخر المدة البالغ 230 وحدة من 150 وحدة بسعر $4.80، و30 وحدة بسعر $4.20، و50 وحدة من مخزون أول المدة بسعر $4.00.\nالتاريخ | الحركة | الرصيد بالتكلفة\n11-1: 150 × $4.00 = $600؛ الرصيد $600.00\n11-5: بيع 100 × $4.00؛ الرصيد 200.00؛ تكلفة البيع $400\n11-7: شراء 200 × $4.20 = $840؛ الرصيد 1,040.00\n11-9: بيع 150 × $4.20؛ الرصيد 410.00؛ تكلفة البيع $630\n11-11: شراء 200 × $4.40 = $880؛ الرصيد 1,290.00\n11-17: بيع 200 × $4.40 = $880، و20 × $4.20 = $84؛ الرصيد 326.00\n11-22: شراء 250 × $4.80؛ الرصيد 1,526.00؛ تكلفة الشراء $1,200\n11-29: بيع 100 × $4.80؛ الرصيد 1,046.00؛ تكلفة البيع $480."
   },
   {
     "unit": 2,
@@ -1467,7 +1475,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Under FIFO, the ending inventory consists of the most recent\ninventory purchased. The beginning inventory included 150\nunits and purchases totaled 650 units, a total of 800 units.\nSales equaled 570 units (100 + 150 + 220 + 100). Thus,\nending inventory was 230 units (800 – 570). Under FIFO,\nthese units are valued at the cost of the most recent 230 units\npurchased, or $4.80. Ending inventory is therefore $1,104\n(230 × $4.80).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بدأت شركة Toulouse شهر نوفمبر بمخزون قدره 150 قطعة زينة بتكلفة $4.00 للقطعة. وتباع القطعة مقابل $7.00. وفيما يلي المبيعات والمشتريات خلال نوفمبر:\nالتاريخ | الكمية المشتراة | تكلفة الوحدة | الوحدات المباعة\n5 نوفمبر | — | — | 100\n7 نوفمبر | 200 | $4.20 | —\n9 نوفمبر | — | — | 150\n11 نوفمبر | 200 | 4.40 | —\n17 نوفمبر | — | — | 220\n22 نوفمبر | 250 | 4.80 | —\n29 نوفمبر | — | — | 100\nإذا استخدمت Toulouse طريقة FIFO، فما قيمة المخزون في 30 نوفمبر؟",
+    "choicesAr": [
+      "$936",
+      "$1,012",
+      "$1,046",
+      "$1,104"
+    ],
+    "explanationAr": "وفق FIFO يتكون مخزون آخر المدة من أحدث المشتريات. تضمن مخزون أول المدة 150 وحدة وبلغت المشتريات 650 وحدة، بإجمالي 800 وحدة. وبلغت المبيعات 570 وحدة (100 + 150 + 220 + 100). لذا بلغ مخزون آخر المدة 230 وحدة (800 − 570). وتسعر هذه الوحدات وفق تكلفة أحدث 230 وحدة مشتراة، أي $4.80. ومن ثم تبلغ قيمة المخزون $1,104 (230 × $4.80)."
   },
   {
     "unit": 2,
@@ -1484,7 +1500,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The beginning inventory consisted of 150 units at $4.00 each.\nFollowing the November 5 sale, the inventory valuation was\n$200 (50 units × $4). The November 7 purchase added\n200 units at $4.20, after which the moving average unit cost\nwas $4.16 {[$200 + (200 units × $4.20)] ÷ (50 units +\n200 units)}. The November 9 sale of 150 units left 100 units at\n$4.16. Adding $416 (100 units × $4.16) to the $880 purchase\non November 11 brought the total inventory to 300 units with a\ntotal cost of $1,296, or $4.32 each. Thus, $4.32 was the unit\ncost of items sold on November 17.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بدأت شركة Toulouse شهر نوفمبر بمخزون قدره 150 قطعة زينة بتكلفة $4.00 للقطعة. وتباع القطعة مقابل $7.00. وفيما يلي المبيعات والمشتريات خلال نوفمبر:\nالتاريخ | الكمية المشتراة | تكلفة الوحدة | الوحدات المباعة\n5 نوفمبر | — | — | 100\n7 نوفمبر | 200 | $4.20 | —\n9 نوفمبر | — | — | 150\n11 نوفمبر | 200 | 4.40 | —\n17 نوفمبر | — | — | 220\n22 نوفمبر | 250 | 4.80 | —\n29 نوفمبر | — | — | 100\nإذا استخدمت Toulouse المتوسط المتحرك مع الجرد المستمر، فبأي تكلفة للوحدة تسجل مبيعات 220 قطعة في 17 نوفمبر؟",
+    "choicesAr": [
+      "$4.00",
+      "$4.16",
+      "$4.20",
+      "$4.32"
+    ],
+    "explanationAr": "تكون مخزون أول المدة من 150 وحدة بتكلفة $4.00 للوحدة. وبعد بيع 5 نوفمبر بلغت قيمة المخزون $200 (50 وحدة × $4). وأضاف شراء 7 نوفمبر 200 وحدة بتكلفة $4.20، فبلغ المتوسط المتحرك $4.16 {[$200 + (200 وحدة × $4.20)] ÷ (50 وحدة + 200 وحدة)}. وأبقى بيع 9 نوفمبر البالغ 150 وحدة رصيدًا قدره 100 وحدة بسعر $4.16. وبإضافة $416 (100 وحدة × $4.16) إلى مشتريات $880 في 11 نوفمبر، أصبح المخزون 300 وحدة بتكلفة إجمالية $1,296، أي $4.32 للوحدة. لذا كان $4.32 تكلفة الوحدة المباعة في 17 نوفمبر."
   },
   {
     "unit": 2,
@@ -1501,7 +1525,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The total goods available for sale is determined as follows:\nBeginning inventory 150 × $4.00 = $ 600.00\nNov. 7 purchase      200 × $4.20 =        840.00\nNov. 11 purchase 200 × $4.40 =            880.00\nNov. 22 purchase 250 × $4.80 = 1,200.00\nTotal available    800             $3,520.00\nThe weighted-average unit cost is $4.40 ($3,520 ÷ 800 units\navailable). The cost of goods sold and total sales are therefore\n$2,508 (570 units sold × $4.40) and $3,990 (570 units × $7),\nrespectively. Consequently, gross profit is $1,482 ($3,990 –\n$2,508).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بدأت شركة Toulouse شهر نوفمبر بمخزون قدره 150 قطعة زينة بتكلفة $4.00 للقطعة. وتباع القطعة مقابل $7.00. وفيما يلي المبيعات والمشتريات خلال نوفمبر:\nالتاريخ | الكمية المشتراة | تكلفة الوحدة | الوحدات المباعة\n5 نوفمبر | — | — | 100\n7 نوفمبر | 200 | $4.20 | —\n9 نوفمبر | — | — | 150\n11 نوفمبر | 200 | 4.40 | —\n17 نوفمبر | — | — | 220\n22 نوفمبر | 250 | 4.80 | —\n29 نوفمبر | — | — | 100\nإذا استخدمت Toulouse المتوسط المرجح الدوري، فما مجمل ربح نوفمبر؟",
+    "choicesAr": [
+      "$1,046",
+      "$1,482",
+      "$1,516",
+      "$1,528"
+    ],
+    "explanationAr": "تكلفة البضاعة المتاحة للبيع:\nمخزون أول المدة: 150 × $4.00 = $600.00\nشراء 7 نوفمبر: 200 × $4.20 = 840.00\nشراء 11 نوفمبر: 200 × $4.40 = 880.00\nشراء 22 نوفمبر: 250 × $4.80 = 1,200.00\nإجمالي المتاح: 800 وحدة بتكلفة $3,520.00\nيبلغ المتوسط المرجح لتكلفة الوحدة $4.40 ($3,520 ÷ 800 وحدة متاحة). وتبلغ تكلفة البضاعة المباعة والمبيعات على الترتيب $2,508 (570 وحدة مباعة × $4.40) و$3,990 (570 وحدة × $7). ومن ثم يبلغ مجمل الربح $1,482 ($3,990 − $2,508)."
   },
   {
     "unit": 2,
@@ -1518,7 +1550,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The goods available for sale are as follows:\nBeginning inventory 150 × $4.00 = $ 600.00\nNov. 7 purchase      200 × $4.20 =        840.00\nNov. 11 purchase     200 × $4.40 =        880.00\nNov. 22 purchase     250 × $4.80 = 1,200.00\nTotal available     800             $3,520.00\nThe ending inventory consists of 230 units. Under periodic\nLIFO, these are costed at the prices paid for the earliest\n230 units purchased, or 150 units at $4.00 and 80 units at\n$4.20, a total of $936. Accordingly, cost of goods sold is\n$2,584 ($3,520 goods available – $936 EI).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بدأت شركة Toulouse شهر نوفمبر بمخزون قدره 150 قطعة زينة بتكلفة $4.00 للقطعة. وتباع القطعة مقابل $7.00. وفيما يلي المبيعات والمشتريات خلال نوفمبر:\nالتاريخ | الكمية المشتراة | تكلفة الوحدة | الوحدات المباعة\n5 نوفمبر | — | — | 100\n7 نوفمبر | 200 | $4.20 | —\n9 نوفمبر | — | — | 150\n11 نوفمبر | 200 | 4.40 | —\n17 نوفمبر | — | — | 220\n22 نوفمبر | 250 | 4.80 | —\n29 نوفمبر | — | — | 100\nإذا استخدمت Toulouse طريقة LIFO مع الجرد الدوري، فما تكلفة البضاعة المباعة في نوفمبر؟",
+    "choicesAr": [
+      "$2,416",
+      "$2,444",
+      "$2,474",
+      "$2,584"
+    ],
+    "explanationAr": "تكلفة البضاعة المتاحة للبيع:\nمخزون أول المدة: 150 × $4.00 = $600.00\nشراء 7 نوفمبر: 200 × $4.20 = 840.00\nشراء 11 نوفمبر: 200 × $4.40 = 880.00\nشراء 22 نوفمبر: 250 × $4.80 = 1,200.00\nإجمالي المتاح: 800 وحدة بتكلفة $3,520.00\nيتكون مخزون آخر المدة من 230 وحدة. ووفق LIFO الدوري تسعر بأقدم تكاليف شراء 230 وحدة، أي 150 وحدة بسعر $4.00 و80 وحدة بسعر $4.20، بإجمالي $936. ومن ثم تبلغ تكلفة البضاعة المباعة $2,584 ($3,520 تكلفة المتاح − $936 مخزون آخر المدة)."
   },
   {
     "unit": 2,
@@ -1535,7 +1575,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Under FIFO, the first goods purchased are assumed to be the\nfirst sold. Using FIFO, all of the 10,000 units of inventory in\nbeginning inventory were sold and 6,000 (16,000 sold –\n10,000 beginning inventory) of the units purchased in June for\n$2.50 each were sold. This leaves in ending inventory 1,000\nunits purchased in June for $2.50 each and all 5,000 units\npurchased in November for $2.70 each.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "كان لدى شركة Sackett مخزون أول مدة قدره 10,000 وحدة اشتُريت في السنة السابقة كما يلي:\nالشهر | الوحدات | سعر الوحدة\nسبتمبر | 4,000 | $2.00\nأكتوبر | 4,000 | $2.10\nديسمبر | 2,000 | $2.30\nخلال السنة الحالية اشترت الشركة 12,000 وحدة إضافية (7,000 في يونيو بسعر $2.50 و5,000 في نوفمبر بسعر $2.70) وباعت 16,000 وحدة. وفق FIFO، ما قيمة مخزون آخر المدة؟",
+    "choicesAr": [
+      "$12,200 (4,000 @ $2.00 and 2,000 @ $2.10)",
+      "$13,000 (4,000 @ $2.10 and 2,000 @ $2.30)",
+      "$15,600 (6,000 @ $2.60 – average of $2.50 and $2.70)",
+      "$16,000 (5,000 @ $2.70 and 1,000 @ $2.50)"
+    ],
+    "explanationAr": "تفترض FIFO بيع الوحدات المشتراة أولًا قبل غيرها. لذلك بيعت كل وحدات مخزون أول المدة البالغ عددها 10,000 وحدة، كما بيعت 6,000 وحدة (16,000 مباعة − 10,000 أول المدة) من مشتريات يونيو بسعر $2.50 للوحدة. ويتبقى في المخزون 1,000 وحدة من مشتريات يونيو بسعر $2.50 للوحدة وكل وحدات مشتريات نوفمبر البالغ عددها 5,000 بسعر $2.70 للوحدة."
   },
   {
     "unit": 2,
@@ -1552,7 +1600,15 @@
     ],
     "answerIndex": 2,
     "explanation": "In a periodic system, a purchases account is used, and the\nbeginning inventory remains unchanged during the accounting\nperiod. Cost of goods sold is determined at year-end. It is the\ndifference between the goods available for sale (Beginning\ninventory + Purchases) and ending inventory.\nIn a perpetual system, purchases are directly recorded in the\ninventory account. Cost of goods sold is determined as the\ngoods are sold. LIFO may be applied to both a periodic and a\nperpetual system, but the amount of cost of goods sold may\nvary with the system chosen.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "على أي من نظامي الجرد التاليين يمكن تطبيق طريقة تدفق التكلفة LIFO؟\nالدوري | المستمر",
+    "choicesAr": [
+      "لا | لا",
+      "لا | نعم",
+      "نعم | نعم",
+      "نعم | لا"
+    ],
+    "explanationAr": "في الجرد الدوري يُستخدم حساب المشتريات ويظل رصيد مخزون أول المدة دون تغيير خلال الفترة. وتحدد تكلفة البضاعة المباعة في نهاية السنة بالفرق بين تكلفة البضاعة المتاحة للبيع (مخزون أول المدة + المشتريات) ومخزون آخر المدة. وفي الجرد المستمر تسجل المشتريات مباشرة في حساب المخزون وتحدد تكلفة البضاعة المباعة عند البيع. ويمكن تطبيق LIFO في كلا النظامين إذا سمح الإطار المحاسبي بها، لكن تكلفة المبيعات قد تختلف حسب النظام المختار."
   },
   {
     "unit": 2,
@@ -1569,7 +1625,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Under a FIFO cost flow, ending inventory and cost of goods\nsold are the same regardless of whether a perpetual or\nperiodic system is used. Under a LIFO cost flow, on the other\nhand, a perpetual inventory system will generate dollar\namounts different from those of a periodic inventory system.\nDuring a time of rising prices, goods sold and ending inventory\nwill consist of units bearing different costs. The periodic\nsystem determines the cost of sales only at year end. The\nperpetual system determines cost of sales as the sale takes\nplace. Thus, the perpetual system assumes that layers of\ninventory may be liquidated during a year even though\ninventory quantities are restored by later purchases. The\nperiodic system does not make this assumption.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "خلال فترات ارتفاع الأسعار، لأي من طرق تدفق تكلفة المخزون التالية يعطي الجرد المستمر نفس قيمة مخزون آخر المدة التي يعطيها الجرد الدوري دائمًا؟\nFIFO | LIFO",
+    "choicesAr": [
+      "نعم | لا",
+      "نعم | نعم",
+      "لا | نعم",
+      "لا | لا"
+    ],
+    "explanationAr": "وفق FIFO تتساوى تكلفة مخزون آخر المدة وتكلفة البضاعة المباعة في الجرد الدوري والمستمر. أما LIFO فقد يعطي في الجرد المستمر نتائج مختلفة عن الدوري. ففي فترات ارتفاع الأسعار قد تتكون المبيعات ومخزون آخر المدة من وحدات مختلفة التكلفة. يحدد الدوري تكلفة المبيعات في نهاية السنة، ويحددها المستمر عند كل عملية بيع؛ ولذلك قد تُستنفد طبقات مخزون خلال السنة في المستمر حتى لو عوضتها مشتريات لاحقة، بينما لا يعكس الدوري هذه الحركة بالطريقة نفسها."
   },
   {
     "unit": 2,
@@ -1586,7 +1650,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Under FIFO, the first items purchased are presumed to be the\nfirst sold. Furthermore, under FIFO, perpetual and periodic\nsystems produce the same ending inventory and cost of\ngoods sold. If 6,000 units were available and 4,000 units were\nsold, FIFO cost of goods sold equals $84,000 [(2,000 × $20)\nBI + (2,000 × $22) May 1 purchase].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "كان لدى شركة مخزون أول مدة قدره 2,000 وحدة بتكلفة $20 للوحدة. وفي 1 مايو اشترت 2,000 وحدة بتكلفة $22 للوحدة، وفي 1 سبتمبر اشترت 2,000 وحدة أخرى بتكلفة $24 للوحدة. إذا بيعت 4,000 وحدة خلال السنة، فما تكلفة البضاعة المباعة وطريقة التسعير المقابلة لها؟\nالقائمة A: التكلفة | القائمة B: الطريقة",
+    "choicesAr": [
+      "$88,000              LIFO",
+      "$92,000         Weighted-average",
+      "$84,000              FIFO",
+      "$88,000              FIFO"
+    ],
+    "explanationAr": "وفق FIFO تُعد الأصناف المشتراة أولًا هي المباعة أولًا. كما يعطي الجرد المستمر والدوري النتيجة نفسها لمخزون آخر المدة وتكلفة المبيعات. وإذا كان المتاح 6,000 وحدة والمباع 4,000 وحدة، فإن تكلفة البضاعة المباعة وفق FIFO تبلغ $84,000 [(2,000 × $20) مخزون أول المدة + (2,000 × $22) مشتريات 1 مايو]."
   },
   {
     "unit": 2,
@@ -1603,7 +1675,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The LIFO basis assumes that the most recently purchased\nitems are the first to be sold. Thus, LIFO is a better\napproximation of current cost of goods sold than FIFO.\nAssuming that turnover is rapid and material amounts of\ndepreciation are not allocated to inventory, LIFO cost of goods\nsold may be an acceptable alternative to cost of goods sold\nmeasured at current cost. However, the effect of any LIFO\ninventory liquidations (decreases in earlier years’ LIFO layers)\nmust be excluded. Nevertheless, the FIFO basis more closely\napproximates the current cost of ending inventory because it\nassumes the most recent purchases are the last to be sold.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عمومًا، أي طرق تسعير المخزون تقارب التكلفة الحالية أكثر لكل مما يلي؟\nتكلفة البضاعة المباعة | مخزون آخر المدة",
+    "choicesAr": [
+      "LIFO               FIFO",
+      "LIFO               LIFO",
+      "FIFO               FIFO",
+      "FIFO               LIFO"
+    ],
+    "explanationAr": "تفترض LIFO بيع أحدث المشتريات أولًا؛ لذا تقارب تكلفة البضاعة المباعة الحالية أكثر من FIFO. وبافتراض سرعة دوران المخزون وعدم تخصيص مبالغ جوهرية من الإهلاك للمخزون، قد تكون تكلفة المبيعات وفق LIFO بديلًا مقبولًا لتقدير التكلفة الحالية. لكن ينبغي استبعاد أثر تصفية طبقات LIFO القديمة. أما FIFO فتقارب تكلفة مخزون آخر المدة الحالية أكثر لأنها تفترض بقاء أحدث المشتريات في المخزون."
   },
   {
     "unit": 2,
@@ -1637,7 +1717,15 @@
     ],
     "answerIndex": 1,
     "explanation": "LIFO assumes that the newest items of inventory are sold first.\nThus, the items remaining in inventory are recognized as if\nthey were the oldest. In a perpetual system, purchases are\ndirectly recorded in inventory. Cost of goods sold is calculated\nwhen a sale occurs and consists of the latest purchases. The\ncost of goods sold on the sale on (1) March 12 is $430 [(6 ×\n$55) + (2 × $50)] and (2) March 27 is $420 (7 × $60). The total\ncost of goods sold is $850 ($430 + $420).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فيما يلي مخزون شركة Beck:\nمخزون أول المدة: 10 أشجار بسعر $50\nشراء 4 مارس: 6 أشجار بسعر 55\nبيع 12 مارس: 8 أشجار بسعر 100\nشراء 20 مارس: 9 أشجار بسعر 60\nبيع 27 مارس: 7 أشجار بسعر 105\nشراء 30 مارس: 4 أشجار بسعر 65\nما تكلفة البضاعة المباعة وفق LIFO المستمر؟",
+    "choicesAr": [
+      "$910",
+      "$850",
+      "$808",
+      "$775"
+    ],
+    "explanationAr": "تفترض LIFO بيع أحدث وحدات المخزون أولًا، وبقاء الأقدم في المخزون. وفي الجرد المستمر تسجل المشتريات مباشرة في المخزون وتحدد تكلفة المبيعات عند البيع وفق أحدث المشتريات المتاحة. تبلغ تكلفة البيع في (1) 12 مارس مبلغ $430 [(6 × $55) + (2 × $50)]، وفي (2) 27 مارس مبلغ $420 (7 × $60). لذا تبلغ تكلفة البضاعة المباعة $850 ($430 + $420)."
   },
   {
     "unit": 2,
@@ -1654,7 +1742,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The weighted-average method is used under the periodic\ninventory method. The average cost is determined only at the\nend of the period. The weighted-average cost per unit is used\nto determine the ending inventory and the cost of goods sold\nfor the period. It is calculated as follows: [(Cost of beginning\ninventory + Cost of purchases during the period) ÷ (Units in\nbeginning inventory + Units purchased during the period)].\nTherefore, the weighted-average cost per unit for May is $6.02\n[($1,250 + $116 + $440) ÷ (200 + 20 + 80)]. Cobb’s weighted-\naverage cost of goods sold for May is $60.20 ($6.02 per unit ×\n10 units sold).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تكون مخزون Cobb في 1 مايو من 200 وحدة بتكلفة إجمالية $1,250. وتستخدم الشركة الجرد الدوري. وكانت مشتريات الشهر كما يلي:\nالتاريخ | عدد الوحدات | تكلفة الوحدة | إجمالي التكلفة\n4 مايو | 20 | $5.80 | $116.00\n17 مايو | 80 | $5.50 | $440.00\nباعت Cobb عدد 10 وحدات في 14 مايو مقابل $120. ما تكلفة البضاعة المباعة في مايو وفق المتوسط المرجح؟",
+    "choicesAr": [
+      "$60.20",
+      "$62.10",
+      "$62.50",
+      "$65.00"
+    ],
+    "explanationAr": "يستخدم المتوسط المرجح الدوري متوسط التكلفة المحسوب في نهاية الفترة لتحديد تكلفة مخزون آخر المدة والبضاعة المباعة. ويحسب بقسمة تكلفة مخزون أول المدة والمشتريات على مجموع وحداتهما. لذلك تبلغ تكلفة الوحدة بالمتوسط المرجح في مايو $6.02 [($1,250 + $116 + $440) ÷ (200 + 20 + 80)]. وتبلغ تكلفة البضاعة المباعة $60.20 ($6.02 للوحدة × 10 وحدات مباعة)."
   },
   {
     "unit": 2,
@@ -1671,7 +1767,15 @@
     ],
     "answerIndex": 2,
     "explanation": "In a periodic system, cost of goods sold and ending inventory\nare determined only at the end of the period. Under last-in,\nfirst-out (LIFO) in a periodic system, the 50,000 units sold\nconsists of the 40,000 units purchased on 1/23 at $17 per unit\nand the 10,000 units purchased on 1/20 at $15 per unit. The\ncost of goods sold on the company’s income statement for the\nmonth of January is $830,000 [(40,000 × $17) + (10,000 ×\n$15)].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم Ultra الجرد الدوري. وفيما يلي معاملات يناير:\n1/1 مخزون أول المدة: 20,000 وحدة بسعر $13\n1/20 شراء: 30,000 وحدة بسعر $15\n1/23 شراء: 40,000 وحدة بسعر $17\n1/31 بيع بسعر $20 للوحدة: 50,000 وحدة\nتستخدم Ultra طريقة LIFO لتقييم المخزون. ما تكلفة البضاعة المباعة في قائمة دخل يناير؟",
+    "choicesAr": [
+      "$710,000",
+      "$750,000",
+      "$830,000",
+      "$1,000,000"
+    ],
+    "explanationAr": "في الجرد الدوري تحدد تكلفة المبيعات ومخزون آخر المدة عند نهاية الفترة. ووفق LIFO الدوري تتكون الوحدات المباعة البالغ عددها 50,000 من 40,000 وحدة مشتراة في 1/23 بسعر $17 للوحدة و10,000 وحدة مشتراة في 1/20 بسعر $15 للوحدة. لذا تبلغ تكلفة البضاعة المباعة في يناير $830,000 [(40,000 × $17) + (10,000 × $15)]."
   },
   {
     "unit": 2,
@@ -1688,7 +1792,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The moving-average method requires the determination of a\nnew weighted-average cost after each purchase and thus is\nused only in a perpetual system. Since the only sale in March\nwas on 3/10, the cost of goods sold is $210,000 (20,000 units\nsold × $10.50).\nCost per           Inventory Total\nUnits           Unit              Balance\nBeg. balance 30,000           $10.00            $300,000\n3/1\nPurchase 3/5 10,000           12.00              120,000\n40,000       $10.50            $420,000",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم شركة Carver التجارية نظام الجرد المستمر وطريقة المتوسط المتحرك لتحديد قيمة المخزون. وفيما يلي معاملات مارس:\n3/1 مخزون أول المدة: 30,000 وحدة بسعر $10\n3/5 شراء: 10,000 وحدة بسعر $12\n3/10 بيع بسعر $20 للوحدة: 20,000 وحدة\n3/20 شراء: 20,000 وحدة بسعر $13\nما تكلفة البضاعة المباعة التي تعرضها Carver في قائمة الدخل في نهاية مارس؟",
+    "choicesAr": [
+      "$200,000",
+      "$210,000",
+      "$240,000",
+      "$260,000"
+    ],
+    "explanationAr": "تتطلب طريقة المتوسط المتحرك إعادة تحديد متوسط التكلفة المرجح بعد كل شراء؛ لذا تستخدم مع الجرد المستمر. وبما أن البيع الوحيد في مارس كان في 3/10، فإن تكلفة البضاعة المباعة تبلغ $210,000 (20,000 وحدة مباعة × $10.50).\nالحركة | الوحدات | تكلفة الوحدة | إجمالي قيمة المخزون\nرصيد أول المدة: 30,000 | $10.00 | $300,000\nفي 3/1\nشراء 3/5: 10,000 | 12.00 | 120,000\nالإجمالي: 40,000 | $10.50 | $420,000"
   },
   {
     "unit": 2,
