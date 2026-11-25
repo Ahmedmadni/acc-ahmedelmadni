@@ -2233,7 +2233,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Human judgment is faulty, and controls may fail because of\nhuman error.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يعد قيدًا ملازمًا للرقابة الداخلية؟",
+    "choicesAr": [
+      "الجمع بين واجبات متعارضة.",
+      "عدم الفصل بين الواجبات.",
+      "الخطأ في الحكم البشري.",
+      "عدم وجود لجنة مراجعة."
+    ],
+    "explanationAr": "قد يخطئ الإنسان في تقدير المواقف واتخاذ القرارات، وقد تفشل الضوابط بسبب أخطاء بشرية حتى إذا صممت بصورة مناسبة. أما غياب الفصل اللازم بين الواجبات فيمثل قصورًا في تصميم الرقابة، وليس قيدًا ملازمًا لها."
   },
   {
     "unit": 19,
@@ -2250,7 +2258,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Two or more people may collude, or management may\noverride internal control.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يمثل قيدًا ملازمًا للرقابة الداخلية؟",
+    "choicesAr": [
+      "المعاينة الحكمية.",
+      "التواطؤ.",
+      "الفصل بين الواجبات.",
+      "مراجعة الموظفين لأعمال زملائهم."
+    ],
+    "explanationAr": "قد يتواطأ شخصان أو أكثر لتجاوز الضوابط، وقد تتجاوز الإدارة الرقابة بصورة غير مناسبة. وهذه من القيود الملازمة التي تحول دون توفير تأكيد مطلق بشأن تحقيق الأهداف."
   },
   {
     "unit": 19,
@@ -2267,7 +2283,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Internal control has inherent limitations. The performance of\nincompatible duties, however, is a failure to assign different\npeople the functions of authorization, recording, and asset\ncustody, not an inherent limitation of internal control.\nSegregation of duties is a category of control activities.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي لا يعد قيدًا ملازمًا للفعالية المحتملة للرقابة الداخلية في المنشأة؟",
+    "choicesAr": [
+      "الجمع بين واجبات متعارضة.",
+      "تجاوز الإدارة للضوابط.",
+      "الخطأ في الحكم.",
+      "التواطؤ بين الموظفين."
+    ],
+    "explanationAr": "للرقابة الداخلية قيود ملازمة، لكن الجمع غير المنضبط بين واجبات الاعتماد والتسجيل وحيازة الأصول يمثل قصورًا في الفصل بين الواجبات، وليس قيدًا ملازمًا بحد ذاته. ويعد الفصل بين الواجبات أحد الأنشطة الرقابية، ويمكن تطبيق ضوابط بديلة عند تعذر الفصل الكامل."
   },
   {
     "unit": 19,
@@ -2284,7 +2308,15 @@
     ],
     "answerIndex": 0,
     "explanation": "One of the inherent limitations of internal control is that it can\nbe circumvented by collusion among persons both within and\noutside the entity. Thus, a control based on segregation of\nduties will be ineffective if a person in a position to commit\nfraud colludes with a person who can conceal it.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يصف على أفضل وجه قيدًا ملازمًا ينبغي للمراجع مراعاته عند تقييم الفعالية المحتملة للرقابة الداخلية؟",
+    "choicesAr": [
+      "يمكن تجاوز الضوابط اليدوية أو الآلية التي تعتمد فعاليتها على الفصل بين الواجبات من خلال التواطؤ.",
+      "توفر كفاءة موظفي العميل ونزاهتهم بيئة مناسبة للرقابة وتؤكد تحقق الرقابة الفعالة.",
+      "تكون الإجراءات المصممة لضمان تنفيذ المعاملات وتسجيلها وفق الاعتمادات المناسبة فعالة ضد الغش الذي ترتكبه الإدارة.",
+      "لا تتجاوز المنافع المتوقعة من الرقابة الداخلية الفعالة عادة تكاليفها."
+    ],
+    "explanationAr": "قد يضعف التواطؤ بين أشخاص من داخل المنشأة أو خارجها فعالية الضوابط القائمة على الفصل بين الواجبات. ولذلك لا يكفي الفصل وحده لتوفير ضمان مطلق ضد الغش، بل ينبغي دعمه بالرقابة المستقلة ومراجعة الاستثناءات وتقييم المخاطر."
   },
   {
     "unit": 19,
@@ -2301,7 +2333,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Management’s philosophy and operating style is one factor\naffecting the control environment as described in the COSO\nmodel for internal control. Such characteristics as\nmanagement’s attitudes and actions toward financial reporting\nand its emphasis on meeting budget, profit, and other goals\nhave a significant influence on the control environment,\nespecially when management is dominated by one or a few\nindividuals. When incentives or pressures are present to\nachieve certain performance goals, the auditor should\nheighten his or her concern about the possibility of fraud.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "متى يرجح أن يؤثر توجه الإدارة العدواني في إعداد التقارير المالية وتركيزها على تحقيق الأرباح المتوقعة تأثيرًا كبيرًا في بيئة الرقابة؟",
+    "choicesAr": [
+      "عندما تؤدي لجنة المراجعة دورًا فعالًا في الإشراف على سياسات التقارير المالية.",
+      "عندما تؤثر سياسات تضعها أطراف خارجية في الممارسات المحاسبية للمنشأة.",
+      "عندما يهيمن على الإدارة شخص واحد يمتلك أيضًا أسهمًا في المنشأة.",
+      "عندما تستطيع المراجعة الداخلية التواصل مباشرة مع مجلس الإدارة والإدارة."
+    ],
+    "explanationAr": "تؤثر فلسفة الإدارة وأسلوب عملها ومواقفها تجاه التقارير المالية والأهداف الربحية في بيئة الرقابة. ويزداد خطر تجاوز الضوابط عندما تتركز السلطة لدى شخص واحد أو عدد قليل من الأشخاص دون إشراف كافٍ. وعند وجود حوافز أو ضغوط لتحقيق أهداف الأداء ينبغي للمراجع زيادة اهتمامه بمخاطر الغش، دون افتراض وقوعه لمجرد وجود هذه الضغوط."
   },
   {
     "unit": 19,
@@ -2318,7 +2358,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Through words and actions, management communicates its\nattitude toward integrity and ethical values. In this way,\nmanagement sets the tone at the top. Demonstrating\nappropriate behavior by example is the most effective method\nto transmit a message of ethical behavior throughout an\norganization.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "وفق إطار COSO، ما الوسيلة الأكثر فعالية من بين البدائل لإيصال رسالة السلوك الأخلاقي إلى جميع أنحاء المنشأة؟",
+    "choicesAr": [
+      "إظهار السلوك السليم من خلال القدوة العملية.",
+      "تعزيز قدرة المراجعة الداخلية على ردع السلوك غير السليم والإبلاغ عنه.",
+      "إزالة الضغوط لتحقيق أهداف غير واقعية، خصوصًا النتائج قصيرة الأجل.",
+      "تحديد مستويات الكفاءة لكل وظيفة وترجمتها إلى المعارف والمهارات المطلوبة."
+    ],
+    "explanationAr": "تنقل الإدارة موقفها تجاه النزاهة والقيم الأخلاقية من خلال أقوالها وأفعالها، وبذلك ترسخ التوجه الأخلاقي من قمة الهرم الإداري. وتمثل القدوة العملية أفضل الخيارات المعروضة لإيصال الرسالة، مع ضرورة دعمها بالحوافز المناسبة والمساءلة وقنوات الإبلاغ."
   },
   {
     "unit": 19,
@@ -2335,7 +2383,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Through words and actions, management communicates its\nattitude toward integrity and ethical values. In this way,\nmanagement sets the tone at the top. By visibly participating\nin a global information security campaign, management’s\ncommitment to the security of company information is evident\nto all team members.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يرغب مسؤول تنفيذي كبير في منشأة دولية في إظهار أهمية أمن معلومات الشركة لجميع أعضاء فريق العمل. ما الإجراء الأنسب من بين البدائل؟",
+    "choicesAr": [
+      "المشاركة بصورة واضحة وعلنية في حملة عالمية لأمن المعلومات.",
+      "تخصيص موارد إضافية في الموازنة لخدمات المراجعة الخارجية.",
+      "مراجعة تقييمات مخاطر أمن المعلومات وقبولها في اجتماع للموظفين.",
+      "الإشارة في نشرة الشركة إلى سياسات الموارد البشرية الأمريكية بشأن الخصوصية."
+    ],
+    "explanationAr": "توضح الإدارة من خلال أقوالها وأفعالها مدى التزامها بالقيم والمسؤوليات المؤسسية. وتساعد المشاركة الواضحة في حملة لأمن المعلومات على إيصال رسالة الالتزام لجميع الموظفين. ولا تغني المشاركة وحدها عن الموارد والضوابط الفعلية ومتابعة نتائجها."
   },
   {
     "unit": 19,
@@ -2386,7 +2442,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Human judgment is faulty, and controls may fail because of\nsimple error or mistake. For example, design changes for an\nautomated order entry system may be faulty because the\ndesigners did not understand the system or because\nprogrammers did not correctly code the design changes.\nErrors also may arise when automated reports are\nmisinterpreted by users. Furthermore, manual or automated\ncontrols can be circumvented by collusion, and management\nmay inappropriately override internal control.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العوامل الآتية يرجح اعتباره قيدًا ملازمًا للرقابة الداخلية في المنشأة؟",
+    "choicesAr": [
+      "تعقيد نظام معالجة المعلومات.",
+      "الحكم البشري في عملية اتخاذ القرار.",
+      "عدم فعالية مجلس الإدارة.",
+      "عدم وجود حوافز إدارية لتحسين بيئة الرقابة."
+    ],
+    "explanationAr": "قد يخطئ الأشخاص في الحكم أو الفهم أو التنفيذ. ومن الأمثلة تصميم تعديلات غير مناسبة لنظام إدخال الطلبات الآلي أو أخطاء البرمجة أو تفسير التقارير بطريقة خاطئة. وقد تتجاوز الإدارة الضوابط بصورة غير مناسبة أو يضعف التواطؤ الضوابط اليدوية والآلية. أما أوجه القصور في الإشراف أو الحوافز فهي مخاطر أو أوجه ضعف قابلة للمعالجة."
   },
   {
     "unit": 19,
@@ -2403,7 +2467,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Because of its inherent limitations, internal control can be\ndesigned and operated to provide only reasonable assurance\nthat the entity’s objectives are met. Examples of inherent\nlimitations include (1) human judgment is faulty, (2) controls\nmay fail because of human error, (3) manual or automated\ncontrols can be circumvented by collusion, and\n(4) management may inappropriately override internal control.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يمثل مثالًا على قيد ملازم لنظام الرقابة الداخلية؟",
+    "choicesAr": [
+      "الفصل بين واجبات الموظفين.",
+      "الخطأ البشري في اتخاذ القرارات.",
+      "عدم فعالية مجلس الإدارة.",
+      "عدم كفاية عدد موظفي المراجعة الداخلية."
+    ],
+    "explanationAr": "نظرًا للقيود الملازمة، لا توفر الرقابة الداخلية إلا تأكيدًا معقولًا بشأن تحقيق الأهداف. ومن أمثلة القيود: (1) احتمال الخطأ في الحكم البشري، و(2) فشل الضوابط نتيجة الأخطاء البشرية، و(3) إمكانية تجاوز الضوابط اليدوية أو الآلية بالتواطؤ، و(4) تجاوز الإدارة للضوابط بصورة غير مناسبة. أما ضعف مجلس الإدارة أو نقص موارد المراجعة الداخلية فقد يمثلان قصورًا رقابيًا قابلًا للمعالجة."
   },
   {
     "unit": 19,

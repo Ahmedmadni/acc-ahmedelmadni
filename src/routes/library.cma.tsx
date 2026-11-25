@@ -18,6 +18,7 @@ import { getCmaUnit15SourceReview } from "@/lib/cma-unit15-source-review";
 import { getCmaUnit16SourceReview } from "@/lib/cma-unit16-source-review";
 import { getCmaUnit17SourceReview } from "@/lib/cma-unit17-source-review";
 import { getCmaUnit18SourceReview } from "@/lib/cma-unit18-source-review";
+import { getCmaUnit19SourceReview } from "@/lib/cma-unit19-source-review";
 import { CmaAnswerSupport } from "@/components/library/CmaAnswerSupport";
 import { CmaPart2OnlineBank } from "@/components/library/CmaPart2OnlineBank";
 import { CMA_STUDY_UNIT_CASES, CMA_TOPIC_GUIDES } from "@/data/cma-guides";
@@ -708,6 +709,7 @@ function CmaPage() {
                         getCmaUnit16SourceReview(q.id)?.message[lang] ??
                         getCmaUnit17SourceReview(q.id)?.message[lang] ??
                         getCmaUnit18SourceReview(q.id)?.message[lang] ??
+                        getCmaUnit19SourceReview(q.id)?.message[lang] ??
                         (lang === "ar"
                           ? "مراجعة مصدر مطلوبة: قد تحتاج بيانات السؤال أو تنسيقها أو إجابته إلى مطابقة الصفحة الأصلية. المقارنة بمفتاح الإجابة مبدئية وليست درجة معتمدة."
                           : "Source review required: the question data, layout or answer may need comparison with the original page. The answer-key comparison is provisional and unscored.")}

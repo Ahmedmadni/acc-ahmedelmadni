@@ -69,4 +69,6 @@
 - [x] Unit 19 Wave 5: 9 data lifecycle Arabic drafts (§2 Q16–18/Q20–24/Q26); **54/110 (49.1%)**, 20 reviewed holds, 36 unreviewed. Q19 synthesis/analytics overlap, Q25 archival trigger, Q27 archive inference, Q28 inferred key held. See `docs/CMA_UNIT19_ARABIC_WAVE5_2026-11-25.md`.
 - [x] Unit 19 Wave 6: 6 records management Arabic drafts (§2 Q29–32/Q34–35); **60/110 (54.5%)**, §2 25/39, all 39 reviewed; 25 reviewed holds, 25 unreviewed. Q33 proof/retention assumptions, Q36 usefulness ambiguity, Q37–39 litigation/preservation claims held. See `docs/CMA_UNIT19_ARABIC_WAVE6_2026-11-25.md`.
 - [x] Unit 19 Wave 7: 9 COSO Arabic drafts (§3 Q2–4/Q6/Q9–13); **69/110 (62.7%)**, 29 reviewed holds, 12 unreviewed. Q1 staffing risk, Q5 authentication/encryption mismatch, Q7 external-party responsibilities, Q8 senior management ambiguity held. See `docs/CMA_UNIT19_ARABIC_WAVE7_2026-11-25.md`.
+- [x] Unit 19 Wave 8: 9 COSO Arabic drafts (§3 Q14–20/Q23–24); **78/110 (70.9%)**, all reviewed, 32 held, zero unreviewed. Q21/Q25 rationale and Q22 duplicate of Unit 17.2.4 held.
+- [x] Unit 19 bilingual review ledger: 32 review-only reasons with page references in library and ExamPrep. See `docs/CMA_UNIT19_ARABIC_WAVE8_2026-11-25.md`.
 - [ ] Revisit governance holds with official statutory scope and original-page checks; continue §2 Q17–65.
