@@ -5078,7 +5078,15 @@
     ],
     "answerIndex": 3,
     "explanation": "In a consolidated balance sheet, reciprocal balances, such as\nreceivables and payables, between a parent and a\nconsolidated subsidiary are eliminated in their entirety,\nregardless of the portion of the subsidiary’s stock held by the\nparent. Thus, Wright should report $0 as intraentity\nreceivables.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لدى شركة Wright عدة شركات تابعة مدرجة في قوائمها الموحدة. وفي ميزان مراجعتها بتاريخ 31 ديسمبر، ظهرت الأرصدة التالية داخل المجموعة قبل الاستبعاد:\nالبند | مدين | دائن\nذمم مدينة متداولة على Main | $32,000 | —\nذمم مدينة غير متداولة على Main | 114,000 | —\nسلفة نقدية إلى Corn | 6,000 | —\nسلفة نقدية من King | — | $15,000\nذمم دائنة لصالح King | — | 101,000\nما مبلغ الذمم المدينة داخل المجموعة الذي ينبغي عرضه في قائمة المركز المالي الموحدة في 31 ديسمبر؟",
+    "choicesAr": [
+      "$152,000",
+      "$146,000",
+      "$36,000",
+      "$0"
+    ],
+    "explanationAr": "تُستبعد الأرصدة المتبادلة بين الأم والتابعة الموحدة، كالذمم المدينة والدائنة، بالكامل بصرف النظر عن نسبة ملكية الأم. لذا تبلغ الذمم المدينة داخل المجموعة في القائمة الموحدة $0."
   },
   {
     "unit": 1,
@@ -5095,7 +5103,15 @@
     ],
     "answerIndex": 0,
     "explanation": "In a consolidated balance sheet, reciprocal balances, such as\nreceivables and payables, between a parent and a\nconsolidated subsidiary should be eliminated in their entirety\nregardless of the portion of the subsidiary’s stock held by the\nparent. Thus, the entire $70,000 advance should be\neliminated in the preparation of the year-end consolidated\nbalance sheet.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تمتلك Par نسبة 60% من رأس المال القائم لشركة Sub. وفي 1 مايو قدمت Par سلفة نقدية إلى Sub بمبلغ $70,000، ظلت قائمة في 31 ديسمبر. ما الجزء المستبعد منها عند إعداد قائمة المركز المالي الموحدة في 31 ديسمبر؟",
+    "choicesAr": [
+      "$70,000",
+      "$42,000",
+      "$28,000",
+      "$0"
+    ],
+    "explanationAr": "تُستبعد الأرصدة المتبادلة بين الأم والتابعة الموحدة، كالذمم المدينة والدائنة، بالكامل بصرف النظر عن نسبة ملكية الأم لأسهم التابعة. لذلك تُستبعد السلفة البالغة $70,000 بالكامل عند إعداد قائمة المركز المالي الموحدة في نهاية السنة."
   },
   {
     "unit": 1,
@@ -5112,7 +5128,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Given that all of the goods were sold, no adjustment is\nnecessary for intraentity profit in ending inventory.\nAccordingly, the parent’s cost should be included in\nconsolidated cost of goods sold, and the price received by the\nsubsidiary should be included in consolidated sales. The\nrequired adjustment is to eliminate the sale recorded by the\nparent and the cost of goods sold recorded by the subsidiary.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تمتلك Perez نسبة 80% من شركة Senior. وخلال السنة المنتهية باعت Perez بضائع بهامش ربح إجمالي 40% إلى Senior، التي باعت جميع هذه البضائع خلال السنة. كيف يعدل مجموع بنود قائمتي دخلهما في القوائم الموحدة للسنة؟",
+    "choicesAr": [
+      "تخفض المبيعات وتكلفة البضاعة المباعة بمقدار المبيعات داخل المجموعة.",
+      "تخفض المبيعات وتكلفة البضاعة المباعة بمقدار 80% من المبيعات داخل المجموعة.",
+      "يخفض صافي الدخل بمقدار 80% من إجمالي ربح المبيعات داخل المجموعة.",
+      "لا يلزم تعديل."
+    ],
+    "explanationAr": "بما أن جميع البضائع بيعت خارج المجموعة، فلا يلزم تعديل أرباح داخلية غير محققة في مخزون آخر المدة. وتدرج تكلفة البضاعة لدى الأم ضمن تكلفة البضاعة المباعة الموحدة، وسعر البيع المحصل من خارج المجموعة لدى التابعة ضمن المبيعات الموحدة. ويستبعد البيع المسجل لدى الأم وتكلفة البضاعة المباعة المقابلة المسجلة لدى التابعة."
   },
   {
     "unit": 1,
@@ -5129,7 +5153,15 @@
     ],
     "answerIndex": 2,
     "explanation": "In consolidated financial statements, the effects of intraentity\ntransactions should be eliminated. The original amount\nrecorded for the acquisition by Water Co. of the equipment\nfrom Fire Co. was the carrying amount on Fire’s balance sheet\nplus the gain on the sale. In the consolidated financial\nstatements, the equipment should be reported at the amount\npreviously recorded on Fire’s balance sheet. This amount is\nthe original cost recorded by Water minus the gain recognized\nby Fire when the transaction took place.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تمتلك Water نسبة 80% من الأسهم العادية القائمة لشركة Fire. وفي 31 ديسمبر من السنة 3 باعت Fire معدات إلى Water بسعر يزيد على قيمتها الدفترية لديها ولكنه يقل عن تكلفتها الأصلية. بأي قيمة دفترية تعرض المعدات في قائمة المركز المالي الموحدة بتاريخ 31 ديسمبر من السنة 3؟",
+    "choicesAr": [
+      "التكلفة الأصلية المسجلة لدى Water.",
+      "التكلفة الأصلية المسجلة لدى Fire.",
+      "التكلفة الأصلية المسجلة لدى Water مطروحًا منها ربح Fire المسجل.",
+      "التكلفة الأصلية المسجلة لدى Water مطروحًا منها 80% من ربح Fire المسجل."
+    ],
+    "explanationAr": "تستبعد آثار المعاملات داخل المجموعة في القوائم الموحدة. سجلت Water اقتناء المعدات من Fire بالقيمة الدفترية لدى Fire مضافًا إليها ربح البيع. وفي القوائم الموحدة تعرض المعدات بقيمتها الدفترية السابقة لدى Fire، أي تكلفة Water مطروحًا منها ربح Fire المثبت عند المعاملة، بافتراض عدم وجود تعديلات توحيد أخرى على القيمة الدفترية."
   },
   {
     "unit": 1,
@@ -5146,7 +5178,15 @@
     ],
     "answerIndex": 1,
     "explanation": "In a consolidated balance sheet, reciprocal balances, such as\nreceivables and payables, between a parent and a subsidiary\nare eliminated in their entirety, regardless of the portion of the\nsubsidiary’s stock held by the parent. The $100,000 note\npayable by the subsidiary to the parent is not included in total\nconsolidated liabilities. Thus, total liabilities are $550,000\n($450,000 + $200,000 – $100,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تمتلك King نسبة 70% من الأسهم العادية القائمة لشركة Simmon. يبلغ إجمالي التزامات King مبلغ $450,000 والتزامات Simmon مبلغ $200,000. وتتضمن قوائم Simmon ورقة دفع لصالح King بقيمة $100,000. ما إجمالي الالتزامات الواجب عرضه في القوائم الموحدة؟",
+    "choicesAr": [
+      "$520,000",
+      "$550,000",
+      "$590,000",
+      "$650,000"
+    ],
+    "explanationAr": "تستبعد الأرصدة المتبادلة بين الأم والتابعة، كالذمم المدينة والدائنة، بالكامل بصرف النظر عن نسبة ملكية الأم. ولا تدخل ورقة الدفع البالغة $100,000 المستحقة من التابعة للأم ضمن الالتزامات الموحدة. لذا يبلغ إجمالي الالتزامات $550,000 ($450,000 + $200,000 − $100,000)."
   },
   {
     "unit": 1,
@@ -5163,7 +5203,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A business combination is an acquisition of net assets, and\nthe subsidiary’s equity balances are not included. Thus, in the\nabsence of a bargain purchase and NCIs, total equity of the\nconsolidated entity immediately after acquisition is the same\nas the total equity of the parent. Consequently, equity reported\nin the consolidated balance sheet prepared immediately after\nthe acquisition of Subtle by Pent is $2,600,000 ($2,000,000\ncommon stock + $500,000 retained earnings + $100,000\naccumulated OCI).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "استحوذت Pent على 100% من رأس المال القائم لشركة Subtle مقابل $890,000 نقدًا. وقبل الاستحواذ مباشرة أظهرت قائمتا المركز المالي ما يلي:\nالبند | Pent | Subtle\nالأصول | $4,000,000 | $1,500,000\nالالتزامات | $1,400,000 | $720,000\nالأسهم العادية | 2,000,000 | 620,000\nالأرباح المحتجزة | 500,000 | 80,000\nالدخل الشامل الآخر المتراكم | 100,000 | 80,000\nالالتزامات وحقوق الملكية | $4,000,000 | $1,500,000\nفي تاريخ الشراء زادت القيمة العادلة لأصول Subtle على مجموع قيمها الدفترية بمبلغ $100,000. ما إجمالي حقوق الملكية في قائمة المركز المالي الموحدة المعدة بعد الشراء مباشرة؟",
+    "choicesAr": [
+      "$3,490,000",
+      "$3,480,000",
+      "$3,380,000",
+      "$2,600,000"
+    ],
+    "explanationAr": "يمثل تجميع الأعمال اقتناء صافي الأصول، وتستبعد أرصدة حقوق ملكية التابعة. وفي غياب الشراء بسعر منخفض والحقوق غير المسيطرة، يساوي إجمالي حقوق الملكية الموحدة بعد الاستحواذ النقدي مباشرة إجمالي حقوق ملكية الأم. وتبلغ حقوق الملكية الموحدة بعد استحواذ Pent على Subtle مبلغ $2,600,000 ($2,000,000 الأسهم العادية + $500,000 الأرباح المحتجزة + $100,000 الدخل الشامل الآخر المتراكم)."
   },
   {
     "unit": 1,
@@ -5180,7 +5228,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A business combination is an acquisition of net assets -- the\nsubsidiary’s equity accounts are not included. Thus, in the\nabsence of a bargain purchase and NCIs, total equity of the\nconsolidated entity immediately after acquisition is the same\nas the total equity of the parent. Consequently, the sum of the\ngiven equity balances of the acquirer ($1,000,000 + $250,000\n= $1,250,000) is the amount of consolidated equity.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "استحوذت Beni على 100% من حقوق التصويت القائمة لشركة Carr مقابل $430,000 نقدًا. وقبل الاستحواذ مباشرة أظهرت قائمتا المركز المالي ما يلي:\nالبند | Beni | Carr\nالأصول | $2,000,000 | $750,000\nالالتزامات | $750,000 | $400,000\nالأسهم العادية | 1,000,000 | 310,000\nالأرباح المحتجزة | 250,000 | 40,000\nالالتزامات وحقوق الملكية | $2,000,000 | $750,000\nفي تاريخ الاستحواذ زادت القيمة العادلة لأصول Carr على مجموع قيمها الدفترية بمبلغ $50,000. ما الرصيد الموحد لحسابات حقوق الملكية في قائمة المركز المالي المعدة بعد الاستحواذ مباشرة؟",
+    "choicesAr": [
+      "$1,680,000",
+      "$1,650,000",
+      "$1,600,000",
+      "$1,250,000"
+    ],
+    "explanationAr": "يمثل تجميع الأعمال اقتناء صافي الأصول، وتستبعد حسابات حقوق ملكية التابعة. وفي غياب الشراء بسعر منخفض والحقوق غير المسيطرة، يساوي إجمالي حقوق الملكية بعد الاستحواذ النقدي مباشرة إجمالي حقوق ملكية الأم. لذا فإن مجموع أرصدة حقوق ملكية المستحوذ ($1,000,000 + $250,000 = $1,250,000) هو إجمالي حقوق الملكية الموحدة."
   },
   {
     "unit": 1,
@@ -5197,7 +5253,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Based on fair value, goodwill is the excess of (1) the sum of\n(a) the consideration transferred ($8,000,000), (b) any\nnoncontrolling interest in the acquiree ($0), and (c) the\nacquirer’s previously held equity interest in the acquiree ($0)\nover (2) the net of the identifiable assets acquired and\nliabilities assumed ($5,000,000). Thus, goodwill is $3,000,000,\nand the increase in net assets is $8,000,000. The acquisition-\nrelated cost (the finder’s fee) is expensed.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في تجميع أعمال أصدرت Major أسهمًا ممتازة دون حق تصويت وغير قابلة للتحويل بقيمة عادلة $8 ملايين مقابل جميع الأسهم العادية القائمة لشركة Minor. وفي تاريخ الاستحواذ بلغت القيمة الدفترية لصافي أصول Minor القابلة للتحديد $4 ملايين وقيمتها العادلة $5 ملايين. وأصدرت Major أسهمًا ممتازة بقيمة عادلة $800,000 لفرد مقابل أتعاب الوساطة في ترتيب المعاملة. ما الزيادة في صافي الأصول التي ينبغي أن تثبتها Major؟",
+    "choicesAr": [
+      "$4,000,000",
+      "$5,000,000",
+      "$8,000,000",
+      "$8,800,000"
+    ],
+    "explanationAr": "تُقاس الشهرة باعتبارها زيادة (1) مجموع (أ) المقابل المحول ($8,000,000)، و(ب) الحقوق غير المسيطرة ($0)، و(ج) حصة الملكية السابقة للمستحوذ ($0)، على (2) صافي الأصول القابلة للتحديد المقتناة والالتزامات المتحملة ($5,000,000). لذا تبلغ الشهرة $3,000,000، وزيادة صافي الأصول $8,000,000. وتُحمّل أتعاب الوساطة المتعلقة بالاستحواذ على المصروفات، ولأنها سُددت بإصدار أسهم فإن زيادة حقوق الملكية الناتجة عن إصدارها تقابل المصروف دون زيادة صافي الأصول."
   },
   {
     "unit": 1,
@@ -5231,6 +5295,14 @@
     ],
     "answerIndex": 0,
     "explanation": "Because consolidated statements present amounts for the\nparent and subsidiary as if they were one economic entity, the\neffects of intraentity transactions must be eliminated. Thus,\nreciprocal balances, e.g., a receivable and a payable for an\nadvance, between the parent and subsidiary are eliminated in\nfull. This procedure is followed even if a noncontrolling interest\nexists. Accordingly, no amount for the advance is reported in\nthe consolidated statements.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تمتلك Rowe نسبة 80% من رأس المال القائم لشركة Cowan. وفي 1 نوفمبر قدمت Rowe سلفة نقدية إلى Cowan بقيمة $100,000. ما المبلغ المعروض بشأن السلفة في قائمة المركز المالي الموحدة لشركة Rowe في 31 ديسمبر؟",
+    "choicesAr": [
+      "$0",
+      "$20,000",
+      "$80,000",
+      "$100,000"
+    ],
+    "explanationAr": "تعرض القوائم الموحدة الأم والتابعة كما لو كانتا كيانًا اقتصاديًا واحدًا، لذا تستبعد آثار المعاملات داخل المجموعة. وتستبعد الأرصدة المتبادلة، مثل الذمم المدينة والدائنة المتعلقة بالسلفة، بالكامل حتى عند وجود حقوق غير مسيطرة. ومن ثم لا يعرض أي مبلغ عن السلفة في القوائم الموحدة."
   }
 ]
