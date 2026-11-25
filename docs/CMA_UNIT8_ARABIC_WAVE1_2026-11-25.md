@@ -1,0 +1,5 @@
+# Unit 8 Wave 1
+
+26 Arabic educational drafts: job-order 16/21 and process costing 10/11. Initial review of both sections complete. Unit 8 26/84 (31.0%), six held, 52 unreviewed. Combined imported bank 1888/2443. Canonical English, keys and numeric tokens preserved. Independent job-cost and WIP arithmetic checks added. Normal spoilage assigned to good units passing inspection; abnormal spoilage recognized separately. Q1.11 explicitly assumes normal spoilage.
+
+Holds: 8.1.2 opening finished goods inconsistent with subsequent job completion; 8.1.3 size of overhead allocation difference alone does not establish more reliable causal allocation; 8.1.7 and 8.1.13 wording started and completed conflicts with unit flow; 8.1.12 overhead stated as labor-hour rate but computed on labor cost; 8.2.6 assumes zero carrying amount for normal spoilage and conflates inventory capitalization with immediate expense. Original-page verification pending. Next section 3 activity-based costing and section 4 life-cycle costing.
