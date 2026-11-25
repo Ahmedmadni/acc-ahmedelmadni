@@ -741,15 +741,7 @@
     ],
     "answerIndex": 1,
     "explanation": "Job-order costing is used when each end product is unique.\nProcess cost accounting assigns costs to inventoriable goods\nor services. It applies to relatively homogeneous products that\nare mass produced on a continuous basis (e.g., petroleum\nproducts, thread, and computer monitors). A gravel pit\noperation produces homogeneous end products on a\ncontinuous basis that are inventoriable. Thus, it is most likely\nto use process costing.",
-    "answerStatus": "source",
-    "stemAr": "ما طريقة احتساب التكاليف التي يرجح استخدامها في محجر الحصى؟",
-    "choicesAr": [
-      "تكاليف الأوامر.",
-      "تكاليف المراحل.",
-      "تكاليف المراحل حتى نقطة الانفصال ثم تكاليف الأوامر.",
-      "لا شيء من الإجابات صحيح."
-    ],
-    "explanationAr": "تستخدم تكاليف الأوامر عندما يكون كل منتج نهائي متميزًا. أما تكاليف المراحل فتخصص التكاليف للسلع أو الخدمات القابلة للتحميل على المخزون وفق طبيعتها، وتناسب المنتجات المتجانسة نسبيًا التي تنتج بكميات كبيرة وباستمرار، مثل المنتجات البترولية والخيوط وشاشات الحاسوب. وينتج محجر الحصى منتجات متجانسة بصورة مستمرة قابلة للتخزين؛ لذا يرجح استخدام تكاليف المراحل."
+    "answerStatus": "source"
   },
   {
     "unit": 8,
@@ -800,7 +792,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Multiple rates are appropriate when a process differs\nsubstantially among departments or when products do not go\nthrough all departments or all processes. The trend in cost\naccounting is toward activity-based costing, which divides\nproduction into numerous activities and identifies the cost\ndriver(s) most relevant to each. The result is a more accurate\ntracing of costs.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "متى يفضل استخدام معدلات متعددة أو معدلات تحميل خاصة بالأقسام بدلًا من معدل تحميل واحد على مستوى الشركة؟",
+    "choicesAr": [
+      "عندما يقتصر التصنيع على منتج واحد يمر بأقسام متماثلة بتسلسل ثابت.",
+      "عندما تصنع منتجات متنوعة لا تمر بالأقسام نفسها أو لا تستخدم أساليب التصنيع نفسها.",
+      "عندما تكون محركات التكلفة، مثل العمل المباشر، متماثلة في جميع العمليات.",
+      "عندما يتعذر تحديد محركات التكلفة بدقة وفق علاقات السبب والنتيجة."
+    ],
+    "explanationAr": "تناسب المعدلات المتعددة الحالات التي تختلف فيها العمليات جوهريًا بين الأقسام أو التي لا تمر فيها جميع المنتجات بكل الأقسام أو العمليات. ويقسم نظام التكاليف على أساس الأنشطة الإنتاج إلى أنشطة عديدة ويحدد محركات التكلفة الأكثر ارتباطًا بكل نشاط، بما يساعد على تحميل التكاليف بدقة أكبر."
   },
   {
     "unit": 8,
@@ -817,7 +817,15 @@
     ],
     "answerIndex": 0,
     "explanation": "ABC differs from traditional product costing because it uses\nmultiple allocation bases and therefore allocates overhead\nmore accurately. The result is that ABC often charges low-\nvolume products with more overhead than a traditional\nsystem. For example, the cost of machine setup may be the\nsame for production runs of widely varying sizes. This\nrelationship is reflected in an ABC system that allocates setup\ncosts on the basis of the number of setups. However, a\ntraditional system using an allocation base such as machine\nhours may underallocate setup costs to low-volume products.\nMany companies adopting ABC find that they have been\nlosing money on low-volume products because costs were\nactually higher than originally thought.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "إلى ماذا يؤدي عادة استخدام التكاليف على أساس الأنشطة (ABC)؟",
+    "choicesAr": [
+      "ارتفاع تكلفة وحدة المنتجات منخفضة الحجم بدرجة كبيرة مقارنة بنظام التكاليف التقليدي.",
+      "انخفاض تكلفة وحدة المنتجات منخفضة الحجم بدرجة كبيرة مقارنة بالنظام التقليدي.",
+      "انخفاض تكاليف تجهيز الآلات المحملة على المنتجات منخفضة الحجم.",
+      "مساواة تكاليف تجهيز الآلات بين خطوط المنتجات كافة."
+    ],
+    "explanationAr": "يستخدم نظام التكاليف على أساس الأنشطة أسس تحميل متعددة، مما قد يحقق تخصيصًا أدق للتكاليف غير المباشرة. وغالبًا يحمل المنتجات منخفضة حجم الإنتاج بتكاليف غير مباشرة أكبر من النظام التقليدي، خصوصًا إذا كانت تستهلك أنشطة كثيرة لكل دفعة. فقد تتساوى تكلفة تجهيز الآلات لدفعات مختلفة الأحجام. ويعكس نظام ABC ذلك بتحميل تكاليف التجهيز وفق عدد مرات التجهيز، بينما قد يقلل النظام التقليدي القائم على ساعات تشغيل الآلات نصيب المنتجات منخفضة الحجم. وقد يكشف تطبيق النظام أن بعض المنتجات أقل ربحية مما كان مقدرًا."
   },
   {
     "unit": 8,
@@ -834,7 +842,15 @@
     ],
     "answerIndex": 2,
     "explanation": "With the automation of factories and the corresponding\nemphasis on activity-based costing (ABC), companies are\nfinding new ways of allocating indirect factory overhead. One\nchange is that corporate-wide application rates are being used\nless often because a closer matching of costs with cost drivers\nprovides better information to management. ABC results in a\nmore accurate application of indirect costs because it provides\nmore refined data. Instead of a single cost goal for a process,\na department, or even an entire plant, an indirect cost pool is\nestablished for each identified activity. The related cost driver,\nthe factor that changes the cost of the activity, also is\nidentified.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "نظرًا للتغيرات في العمليات الأساسية للعديد من المنشآت، أي مما يلي لا يمثل اتجاهًا في تخصيص التكاليف غير المباشرة؟",
+    "choicesAr": [
+      "معالجة الأجور باعتبارها تكلفة تصنيع غير مباشرة عندما يتعذر تتبعها في مصنع مؤتمت.",
+      "استخدام زمن عبور الإنتاج كأساس تحميل لزيادة الوعي بتكاليف إطالة هذا الزمن.",
+      "تفضيل معدل تحميل موحد على مستوى الشركة وفق ساعات تشغيل الآلات بدلًا من تحمل تكلفة التخصيص التفصيلي.",
+      "استخدام مجمعات متعددة لتكاليف الآلات لقياس تكلفة المنتجات حسب الوقت في مركز تشغيل الآلات."
+    ],
+    "explanationAr": "مع أتمتة المصانع والاهتمام بالتكاليف على أساس الأنشطة، ظهرت أساليب جديدة لتخصيص التكاليف الصناعية غير المباشرة. ومن هذه التغيرات تقليل الاعتماد على معدل تحميل موحد عندما توفر مطابقة التكاليف بمحركاتها معلومات أفضل للإدارة. ويتيح نظام ABC تخصيصًا أكثر تفصيلًا بإنشاء مجمع تكلفة غير مباشرة لكل نشاط محدد بدلًا من مجمع واحد للعملية أو القسم أو المصنع، وتحديد محرك التكلفة المرتبط به، أي العامل المؤثر في تكلفة النشاط."
   },
   {
     "unit": 8,
@@ -851,7 +867,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Distribution is the transfer of goods from producers to\ncustomers or from distribution centers to merchandisers. Thus,\ndistribution manages outflows, and purchasing manages\ninflows. Among the interrelated issues involved in distribution\nare (1) selection of distribution channels, (2) inventory\nplacement, (3) means of transportation, (4) shipment\nschedules, (5) routes, and (6) carriers. Accordingly, the\nnumber of shipments is the cost driver most highly correlated\nwith the incurrence of the indirect costs of distribution.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تصنف شركة تنتج ثلاثة منتجات تكاليفها حسب خمس وظائف: التصميم والإنتاج والتسويق والتوزيع وخدمة العملاء. ولأغراض التسعير تخصص جميع التكاليف للمنتجات الثلاثة. وتتبع التكاليف المباشرة لكل وظيفة مباشرة إلى المنتجات، وتجمع التكاليف غير المباشرة للوظائف الخمس في مجمعات منفصلة ثم تخصص للمنتجات باستخدام أسس مناسبة. ما أفضل أساس محتمل لتخصيص تكاليف وظيفة التوزيع غير المباشرة؟",
+    "choicesAr": [
+      "عدد مكالمات العملاء الهاتفية.",
+      "عدد الشحنات.",
+      "عدد موظفي المبيعات.",
+      "القيمة النقدية للمبيعات."
+    ],
+    "explanationAr": "التوزيع هو نقل السلع من المنتجين إلى العملاء أو من مراكز التوزيع إلى التجار. لذلك يدير التوزيع التدفقات الخارجة بينما تدير المشتريات التدفقات الداخلة. وتشمل مسائل التوزيع المترابطة (1) اختيار قنوات التوزيع، (2) تحديد مواقع المخزون، (3) وسائل النقل، (4) جداول الشحن، (5) المسارات، و(6) الناقلين. لذا يرجح أن يكون عدد الشحنات أكثر محركات التكلفة ارتباطًا بتكبد تكاليف التوزيع غير المباشرة بين الخيارات المعروضة."
   },
   {
     "unit": 8,
@@ -868,7 +892,15 @@
     ],
     "answerIndex": 3,
     "explanation": "ABC identifies the causal relationship between the incurrence\nof cost and activities, determines the drivers of the activities,\nestablishes cost pools related to the drivers and activities, and\nassigns costs to ultimate cost objects on the basis of the\ndemands (resources or drivers consumed) placed on the\nactivities by those cost objects. Hence, ABC assigns overhead\ncosts based on multiple allocation bases or cost drivers. Under\nthe traditional, single-base system, the amount allocated is\n$3,987.50 ($27,500 × 14.5%). Under ABC, the amount\nallocated is $4,513 [(12 × $11.50) + (17,500 × $.14) + (25 ×\n$77)], or $525.50 more than under the traditional system.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "استخدم مصنع مستحضرات تجميل نظامًا تقليديًا لتحميل تكاليف الرقابة على الجودة على جميع المنتجات بمعدل 14.5% من الأجور المباشرة. وتبلغ الأجور المباشرة الشهرية لمستحضرات المكياج $27,500. ويدرس المصنع تطبيق نظام ABC لتوزيع تكاليف الرقابة على الجودة بصورة أكثر عدالة. وفيما يلي البيانات الشهرية:\nالنشاط | محرك التكلفة | المعدل | الكمية\nفحص المواد الواردة | نوع المادة | $11.50 لكل نوع | 12 نوعًا\nالفحص أثناء الإنتاج | عدد الوحدات | $0.14 لكل وحدة | 17,500 وحدة\nاعتماد المنتج | الطلب | $77 لكل طلب | 25 طلبًا\nما تكلفة الرقابة على الجودة المحملة شهريًا على مستحضرات المكياج باستخدام ABC؟",
+    "choicesAr": [
+      "$88.64 لكل طلب.",
+      "أقل بمبلغ $525.50 من تكلفة النظام التقليدي.",
+      "$8,500.50.",
+      "أعلى بمبلغ $525.50 من تكلفة النظام التقليدي."
+    ],
+    "explanationAr": "يحدد نظام ABC العلاقة السببية بين تكبد التكلفة والأنشطة، ويحدد محركات الأنشطة ومجمعات التكاليف المرتبطة بها، ويخصص التكاليف لأغراض التكلفة النهائية بحسب استهلاكها للموارد والأنشطة. ولذلك يستخدم أسس تحميل متعددة. ووفق النظام التقليدي يبلغ المبلغ المحمل $3,987.50 ($27,500 × 14.5%). أما وفق ABC فيبلغ $4,513 [(12 × $11.50) + (17,500 × $.14) + (25 × $77)]، أي أكثر بمبلغ $525.50 من النظام التقليدي."
   },
   {
     "unit": 8,
@@ -885,7 +917,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Under activity-based costing (ABC), the number of allocation\nbases increases dramatically over those of a traditional\n(volume-based) costing accumulation system. First, every\nactivity must be allocated to an indirect cost pool using\nresource drivers (“1st-stage allocations”), and every indirect\ncost pool must be allocated to final products using activity\ndrivers (“2nd-stage allocations”). This use of a larger number\nof allocation pools and bases leads to more accurate costing\nresults.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم شركة رابحة تضم خمسة أقسام معدلات تحميل موحدة على مستوى الشركة رغم تنوع عملياتها. وتدرس التحول إلى معدلات الأقسام أو التكاليف على أساس الأنشطة (ABC). أي الطريقتين يرجح أن تستخدم عددًا أكبر من أسس التخصيص وتحقق نتائج أكثر دقة؟\nعدد أكبر من أسس التخصيص | نتائج تكلفة أدق",
+    "choicesAr": [
+      "معدلات الأقسام | معدلات الأقسام",
+      "معدلات الأقسام | ABC",
+      "ABC | معدلات الأقسام",
+      "ABC | ABC"
+    ],
+    "explanationAr": "يزيد عدد أسس التحميل في نظام ABC عادة مقارنة بنظام التكاليف التقليدي القائم على حجم النشاط. فتحمل تكاليف الموارد على مجمعات الأنشطة باستخدام محركات الموارد (تخصيص المرحلة 1)، ثم تحمل مجمعات تكاليف الأنشطة على المنتجات النهائية باستخدام محركات الأنشطة (تخصيص المرحلة 2). وقد يحقق استخدام عدد أكبر من المجمعات والأسس المناسبة نتائج أدق."
   },
   {
     "unit": 8,
@@ -902,7 +942,15 @@
     ],
     "answerIndex": 3,
     "explanation": "When there is no beginning finished goods inventory, the only\ndifference in net income arising from the use of variant costing\nmethods is the treatment of costs that show up on the balance\nsheet because they are buried in the various ending\ninventories. In the company’s case, therefore, an identical net\nincome figure across the three different costing system\noptions will only occur when there are no ending inventories.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تبدأ شركة عملياتها وتدرس ثلاثة بدائل لتحميل التكاليف الصناعية غير المباشرة على الوحدات المنتجة: معدل موحد على مستوى الشركة أو معدلات الأقسام أو ABC. وستنتج أنواعًا متعددة من المنتجات في مصنع واحد، ولا تمر جميع المنتجات بكل الأقسام. في أي حالة مستقلة مما يلي يتساوى صافي دخل السنة الأولى بصرف النظر عن طريقة التخصيص المختارة؟",
+    "choicesAr": [
+      "اقتراب تكاليف الإنتاج من الموازنة.",
+      "عدم اختلاف مزيج المبيعات عن المزيج المدرج في الموازنة.",
+      "كون جميع التكاليف الصناعية غير المباشرة ثابتة.",
+      "انعدام جميع أرصدة مخزون آخر المدة."
+    ],
+    "explanationAr": "في غياب مخزون أول المدة، ومع افتراض ثبات إجمالي التكاليف المحملة وعدم وجود فروق أخرى، ينشأ اختلاف صافي الدخل بين طرق تخصيص التكاليف من اختلاف التكلفة المؤجلة ضمن أرصدة المخزون في قائمة المركز المالي. لذا يتساوى صافي الدخل بين البدائل المعروضة عند انعدام أرصدة مخزون آخر المدة."
   },
   {
     "unit": 8,
@@ -919,7 +967,15 @@
     ],
     "answerIndex": 0,
     "explanation": "A cost allocation base is the common denominator for\nsystematically correlating indirect costs and a cost object. The\ncost driver of the indirect costs is ordinarily the allocation\nbase. In a homogeneous cost pool, all costs should have the\nsame or a similar cause-and-effect relationship with the cost\nallocation base.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تخصيص التكاليف عملية تحميل التكاليف غير المباشرة على غرض التكلفة. وتجمع التكاليف غير المباشرة في مجمعات ثم تخصص باستخدام أساس تحميل مشترك. ما الخاصية التي ينبغي أن تتوافر في أساس تخصيص مجمع تكلفة متجانس؟",
+    "choicesAr": [
+      "وجود علاقة سبب ونتيجة مع بنود التكلفة في المجمع.",
+      "توزيع التكاليف بالتساوي على أغراض التكلفة رغم تفاوت استهلاكها للموارد.",
+      "كونه مقياسًا غير مالي، مثل عدد مرات التجهيز، لأن المقاييس غير المالية أكثر موضوعية.",
+      "الارتباط الإحصائي المرتفع ببنود التكلفة بوصفه المعيار الوحيد للاختيار."
+    ],
+    "explanationAr": "أساس تخصيص التكلفة مقياس مشترك للربط المنظم بين التكاليف غير المباشرة وغرض التكلفة. وعادة يستخدم محرك التكاليف غير المباشرة أساسًا للتخصيص. وينبغي أن تشترك تكاليف المجمع المتجانس في علاقة سببية واحدة أو متشابهة مع أساس التخصيص."
   },
   {
     "unit": 8,
@@ -936,7 +992,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A difficulty in applying ABC is that, although the first three\nlevels of activities pertain to specific products or services,\nfacility-level activities do not. Thus, facility-level costs are not\naccurately assignable to products. The theoretically sound\nsolution may be to treat these costs as period costs.\nNevertheless, organizations that apply ABC ordinarily assign\nthem to products to obtain a full absorption cost suitable for\nexternal financial reporting in accordance with GAAP.\nHowever, for internal purposes, facility-level costs should be\ntreated as period costs to avoid distorting decisions about cost\nefficiency, pricing, and profitability.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يمكن تصنيف الأنشطة ومحركاتها وتكاليفها إلى مستوى الوحدة والدفعة والمنتج والمنشأة. عند إعداد معلومات ABC للأغراض الداخلية، أي التكاليف يرجح معاملتها كتكاليف فترة؟",
+    "choicesAr": [
+      "مستوى الوحدة.",
+      "مستوى الدفعة.",
+      "مستوى المنتج.",
+      "مستوى المنشأة."
+    ],
+    "explanationAr": "من صعوبات تطبيق ABC أن مستويات الأنشطة الأخرى ترتبط بمنتجات أو خدمات محددة، بينما لا ترتبط أنشطة مستوى المنشأة بها مباشرة. ولذلك يصعب تخصيص تكاليف المنشأة بدقة لكل منتج. وقد يكون من الملائم للأغراض الداخلية معاملتها كتكاليف فترة لتجنب تشويه قرارات الكفاءة والتسعير والربحية. أما التقارير الخارجية فتتطلب تحميل المخزون بنصيبه من تكاليف التصنيع المؤهلة وفق المعايير المحاسبية، وليس جميع تكاليف المنشأة بالضرورة."
   },
   {
     "unit": 8,
@@ -953,7 +1017,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Analysis by activity provides for better cost control because of\nidentification of nonvalue-adding activities. A value-added\nactivity contributes to customer satisfaction or meets a need of\nthe entity. A nonvalue-adding activity does not make such a\ncontribution. It can be eliminated, reduced, or redesigned\nwithout impairing the quantity, quality, or responsiveness of\nthe product or service desired by customers or the entity. For\nexample, raw materials storage may be greatly reduced or\neliminated in a just-in-time (JIT) production system without\naffecting customer value.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يتبع مصنع مبادئ التكاليف على أساس الأنشطة في تخصيص التكاليف وتحديد تكلفة المنتج. وصنفت الأنشطة إلى أنشطة مضيفة للقيمة وأخرى غير مضيفة للقيمة لكل منتج. أي الأنشطة التالية غير مضيف للقيمة عادة؟",
+    "choicesAr": [
+      "الهندسة والتصميم.",
+      "المعالجة الحرارية.",
+      "التثقيب باستخدام الآلات.",
+      "تخزين المواد الخام."
+    ],
+    "explanationAr": "يساعد تحليل الأنشطة على تحسين الرقابة على التكاليف من خلال تحديد الأنشطة غير المضيفة للقيمة. فالنشاط المضيف للقيمة يسهم في رضا العميل أو يلبي حاجة للمنشأة. أما النشاط غير المضيف للقيمة فلا يقدم هذه المساهمة، ويمكن حذفه أو تقليله أو إعادة تصميمه دون الإضرار بكمية المنتج أو جودته أو سرعة الاستجابة المطلوبة. وقد يقل تخزين المواد الخام بدرجة كبيرة أو يلغى في نظام الإنتاج في الوقت المحدد (JIT) دون التأثير في القيمة المقدمة للعميل، إذا سمحت ظروف التوريد."
   },
   {
     "unit": 8,
@@ -970,7 +1042,15 @@
     ],
     "answerIndex": 3,
     "explanation": "ABC assigns overhead costs on the basis of multiple cost\ndrivers instead of only one driver. Using the three cost drivers\nin the question produces the following calculation:\nNumber of types\nof materials (12 × $12)         $ 144\nNumber of units (17,500 × $.14) 2,450\nNumber of orders (30 × $77)         2,310\nTotal                            $4,904\nUnder the old method of allocation based on direct labor, the\nallocated amount would have been 4,500 ($30,000 × 15%), or\n$404 lower than under ABC.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "استخدمت شركة نظامًا تقليديًا لتحميل تكاليف الرقابة على الجودة على جميع المنتجات بمعدل 15% من الأجور المباشرة. وبلغت الأجور المباشرة الشهرية للمنتج الرئيسي $30,000. وتدرس الشركة نظام ABC لتوزيع تكاليف الجودة بصورة أكثر عدالة. وفيما يلي بيانات المنتج الرئيسي، وتشمل الأنشطة (1) فحص المواد الواردة، و(2) الفحص أثناء الإنتاج، و(3) اعتماد المنتج، وتخصص التكاليف بحسب محركاتها:\nالنشاط | محرك التكلفة | المعدل | الكمية\n(1) | عدد أنواع المواد | $12 لكل نوع | 12 نوعًا\n(2) | عدد الوحدات | $0.14 لكل وحدة | 17,500 وحدة\n(3) | عدد الطلبات | $77 لكل طلب | 30 طلبًا\nما تكلفة الرقابة على الجودة الشهرية المحملة على المنتج الرئيسي وفق ABC؟",
+    "choicesAr": [
+      "$150 لكل طلب.",
+      "أقل بمبلغ $404 من النظام التقليدي.",
+      "$4,500",
+      "أعلى بمبلغ $404 من النظام التقليدي."
+    ],
+    "explanationAr": "يخصص نظام ABC التكاليف غير المباشرة وفق محركات متعددة بدلًا من محرك واحد. وباستخدام المحركات الثلاثة في السؤال نحصل على:\nأنواع المواد (12 × $12) | $ 144\nعدد الوحدات (17,500 × $.14) | 2,450\nعدد الطلبات (30 × $77) | 2,310\nالإجمالي | $4,904\nووفق الطريقة السابقة القائمة على الأجور المباشرة كان المبلغ المحمل 4,500 ($30,000 × 15%)، أي أقل بمبلغ $404 من نظام ABC."
   },
   {
     "unit": 8,
@@ -987,7 +1067,15 @@
     ],
     "answerIndex": 1,
     "explanation": "ABC determines the activities that will serve as cost objects\nand then accumulates a cost pool for each activity using the\nappropriate activity base (cost driver). It is a system that may\nbe employed with job order or process costing methods. Thus,\nwhen there is only one product, the allocation of costs to the\nproduct is trivial. All of the cost is assigned to the one product;\nthe particular method used to allocate the costs does not\nmatter.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية عن التكاليف على أساس الأنشطة (ABC) خاطئة؟",
+    "choicesAr": [
+      "يفيد نظام ABC في تخصيص تكاليف التسويق والتوزيع.",
+      "يرجح أن يؤدي ABC إلى اختلافات جوهرية عن النظام التقليدي إذا صنعت المنشأة منتجًا واحدًا بدلًا من منتجات متعددة.",
+      "محركات التكلفة في ABC هي العوامل المسببة لتكبد التكاليف.",
+      "يحد ABC من الدعم المتبادل غير المبرر بين المنتجات مقارنة بالنظم التقليدية."
+    ],
+    "explanationAr": "يحدد ABC الأنشطة التي تمثل أغراض تكلفة ثم يجمع تكاليف كل نشاط باستخدام أساس النشاط المناسب، أي محرك التكلفة. ويمكن تطبيقه مع تكاليف الأوامر أو المراحل. وعندما يوجد منتج واحد فقط، تخصص إليه جميع التكاليف ذات الصلة في نموذج السؤال؛ لذا لا ينتج اختلاف تخصيص بين منتجات متعددة. وقد يظل النظام مفيدًا لتحليل العمليات والطاقة غير المستغلة."
   },
   {
     "unit": 8,
@@ -1038,7 +1126,15 @@
     ],
     "answerIndex": 0,
     "explanation": "This service organization produces three “products” (the three\noccupant categories), and the “units produced” equal\noccupant days. According to the ABC analysis, production\ninvolves two activities: (1) provision of residential space and\nmeals and (2) OOA. The drivers of these activities are\noccupant days and nursing hours, respectively. Thus, the cost\npool rate for the first activity (residential space and meals) is\n$120 per occupant day ($7,200,000 ÷ 60,000 days), and the\ncost pool rate for the second activity (OOA) is $25 ($7,500,000\n÷ 300,000 hours). The total cost for providing services to\noccupants in the low-usage category is $6,570,000 [($120 ×\n36,000 days) + ($25 × 90,000 hours)]. The daily cost rate for\nthese occupants is therefore $182.50 ($6,570,000 ÷ 36,000\noccupant days).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تقدم منشأة للرعاية السكنية خدمات الإقامة والوجبات وخدمات مساعدة أخرى (OOA) للمقيمين. وتستخدم نظامًا تقليديًا يحسب لكل مقيم معدلًا يوميًا يساوي التكلفة السنوية للإقامة والوجبات والمساعدة مقسومة على إجمالي أيام الإقامة. لكن تحليل ABC أظهر تفاوتًا كبيرًا في استخدام المساعدة. وصنف المقيمين إلى ثلاث فئات (استخدام منخفض ومتوسط ومرتفع)، وحدد ساعات التمريض محركًا لتكلفة المساعدة، وأيام الإقامة محركًا لتكلفة الإقامة والوجبات. وفيما يلي البيانات السنوية:\nالفئة | أيام الإقامة | ساعات التمريض\nاستخدام منخفض | 36,000 | 90,000\nاستخدام متوسط | 18,000 | 90,000\nاستخدام مرتفع | 6,000 | 120,000\nالإجمالي | 60,000 | 300,000\nبلغت التكلفة السنوية للمساعدة $7.5 مليون، وتكلفة الإقامة والوجبات $7.2 مليون. ما معدل التكلفة اليومي وفق ABC؟",
+    "choicesAr": [
+      "$182.50 للمقيمين في فئة الاستخدام المنخفض.",
+      "$145.00 للمقيمين في فئة الاستخدام المتوسط.",
+      "$245.00 للمقيمين في فئة الاستخدام المرتفع.",
+      "$620.00 لجميع المقيمين."
+    ],
+    "explanationAr": "تقدم المنشأة ثلاثة أنواع من الخدمات بحسب فئات المقيمين، وتقاس وحدات المخرجات بأيام الإقامة. ووفق ABC توجد أنشطة تتمثل في (1) توفير الإقامة والوجبات و(2) المساعدة الأخرى. ومحركاتها أيام الإقامة وساعات التمريض على الترتيب. ويبلغ معدل مجمع تكلفة النشاط الأول $120 لكل يوم إقامة ($7,200,000 ÷ 60,000 يوم)، ومعدل مجمع النشاط الثاني $25 لكل ساعة ($7,500,000 ÷ 300,000 ساعة). لذا تبلغ التكلفة الإجمالية للفئة منخفضة الاستخدام $6,570,000 [($120 × 36,000 يوم) + ($25 × 90,000 ساعة)]. ويبلغ معدل التكلفة اليومي لهذه الفئة $182.50 ($6,570,000 ÷ 36,000 يوم إقامة)."
   },
   {
     "unit": 8,
