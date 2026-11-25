@@ -1,0 +1,7 @@
+# CMA Unit 19 — Arabic Wave 3 (25 November 2026)
+
+Reviewed §1 Q28–46; 14 Arabic educational drafts. Total 35/110 (31.8%); accounting systems 35/46, all 46 reviewed, 11 held; 64 unreviewed in sections 2–3. English canonical/default. Original keys, text and previous Arabic unchanged.
+
+Coverage: payroll authorization, time reconciliation, procurement and receiving separation, conflict-of-interest controls, sales authorization, shipment population selection, credit memos, billing completeness, database redundancy and timely information. Q34 summarizes the control scenario in Arabic without unnecessary fraud mechanics; the canonical original remains unchanged. Q36/Q43 qualify traditional document routing; Q42 avoids assuming identical invoice and shipment numbering.
+
+Holds: Q28 p1230 options A and C overlap in authorizing employee additions or changes; clarify scope. Q29 p1231 gives payroll bank-account entry authority without independent review; direct deposit alone does not resolve this risk. Q32 p1233 omits invoice matching despite broad material-error assurance claim. Q35 p1236 assigns requisition initiation universally to inventory control, despite varied organization structures. Q40 p1240 stem matches sales order/shipping copy, but rationale requires comparison to invoice; clarify actual billing control. All original keys preserved and scoring holds enabled. No visual source verification. Next: §2 Data Governance.

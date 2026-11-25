@@ -675,7 +675,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Human resources is responsible for authorizing and executing\nemployee transactions, such as hiring, firing, and changing\npay rates and deductions.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تخشى الإدارة إجراء تغييرات غير مصرح بها في الرواتب. أي الإجراءات التنظيمية الآتية هو المناسب لمنع هذه التغييرات؟",
+    "choicesAr": [
+      "يطابق قسم الرواتب بطاقات الحضور وسجلات أوقات العمل.",
+      "يوزع قسم الموارد البشرية شيكات الرواتب.",
+      "يعتمد قسم الموارد البشرية تعيين جميع الموظفين ومعدلات أجورهم.",
+      "ينفذ قسم الذمم الدائنة التحويلات البنكية للرواتب والضرائب المتعلقة بها."
+    ],
+    "explanationAr": "في النموذج التنظيمي المفترض تتولى الموارد البشرية اعتماد المعاملات المتعلقة بالموظفين، مثل التعيين وإنهاء الخدمة وتغييرات معدلات الأجور والاستقطاعات، وفق الصلاحيات والسياسات المعتمدة. ويظل تسجيل الرواتب ومعالجتها وصرفها خاضعًا لضوابط مستقلة."
   },
   {
     "unit": 19,
@@ -692,7 +700,15 @@
     ],
     "answerIndex": 0,
     "explanation": "To ensure that employees are paid only for actual hours\nworked, timekeeping reconciles the clock cards and job time\ntickets after they are approved by production supervisors.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتم مطابقة بطاقات الحضور وسجلات الوقت حسب أوامر العمل قبل إرسال ملخص ساعات العمل حسب الوظيفة والموظف إلى قسم الرواتب. ما الهدف الرقابي المتضمن في هذه المطابقة؟",
+    "choicesAr": [
+      "التحقق من دفع الأجور عن ساعات العمل الفعلية فقط.",
+      "التحقق من دفع المبلغ الصحيح للموظفين.",
+      "التحقق من أن الموظفين لم يعملوا إلا ساعات معتمدة.",
+      "التحقق من أن الموظفين مصرح لهم بالعمل."
+    ],
+    "explanationAr": "تساعد مطابقة سجلات الوقت بعد اعتماد مشرفي الإنتاج لها على التحقق من أن الأجور تحسب عن ساعات العمل الفعلية. لكن المطابقة لا تضمن بمفردها صحة الساعات إذا كانت السجلات غير صحيحة أو متواطأً على إعدادها."
   },
   {
     "unit": 19,
@@ -726,7 +742,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Purchasing locates an authorized vendor in the vendor file,\nprepares a purchase order, and updates the purchase order\nfile.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في نظام رقابة داخلية مصمم جيدًا، يجوز السماح للموظف نفسه بالقيام بأي مما يلي؟",
+    "choicesAr": [
+      "تحديد الموردين المعتمدين وإعداد أوامر الشراء.",
+      "إعداد تقارير الاستلام واعتماد أوامر الشراء.",
+      "اعتماد مستندات الصرف والوصول إلى نماذج أوامر الشراء غير المستخدمة.",
+      "إعداد طلبات الشراء وتحديث الأستاذ العام."
+    ],
+    "explanationAr": "يحدد قسم المشتريات موردًا معتمدًا من سجل الموردين ويعد أمر الشراء ويحدث سجل الأوامر. ويمكن الجمع بين هذه المهام ضمن صلاحيات محددة، بشرط استقلال اعتماد الموردين والمشتريات والاستلام والصرف بحسب تصميم الضوابط."
   },
   {
     "unit": 19,
@@ -743,7 +767,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Segregating the order authorization and receiving functions\nwould help improve internal control. Discrepancies in the\nnumber of parts received will be discovered if a receiving\nreport had been prepared by an employee other than the one\nordering the goods.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في دراسة حالة رقابية، تلقى المراجع الداخلي بلاغًا عن مدفوعات غير مستحقة لمورد تربطه صلة قرابة بمدير خط الإنتاج، الذي يملك صلاحيات طلب قطع الغيار واستلامها. وتبين من السيناريو وجود مستندات استلام غير مؤيدة بتسليم فعلي. أي الضوابط الآتية يُرجح أن يمنع وقوع هذه المخالفة؟",
+    "choicesAr": [
+      "تحديد مستويات إنفاق مسبقة لجميع الموردين أثناء تقديم العروض.",
+      "فصل وظيفة الاستلام عن اعتماد مشتريات قطع الغيار.",
+      "التحقق الداخلي من الكميات والأسعار والدقة الحسابية لفواتير الموردين.",
+      "إرسال تقارير الاستلام إلى المشتريات لمطابقتها بأوامر الشراء ثم إرسالها إلى الذمم الدائنة."
+    ],
+    "explanationAr": "يساعد الفصل بين اعتماد الطلب والاستلام الفعلي على منع اعتماد المدفوعات بناء على مستندات استلام غير صحيحة. ويسهل إعداد تقرير الاستلام بواسطة شخص مستقل عن جهة اعتماد الشراء اكتشاف الفروق في الكميات. وتدعم ذلك رقابة الموردين وتعارض المصالح والمطابقة المستندية."
   },
   {
     "unit": 19,
@@ -777,7 +809,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Warehouse does not need to receive a copy of the purchase\norder; it receives a copy of the receiving report with the goods.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تعد نسخ متعددة من أمر الشراء لحفظ السجلات وتوزيعها، وترسل نسخة للمورد وتحتفظ المشتريات بأخرى. وفق الدورة المستندية التقليدية المفترضة، توزع نسخة من الأمر على الجهات الآتية جميعًا ما عدا:",
+    "choicesAr": [
+      "الذمم الدائنة.",
+      "الاستلام.",
+      "رقابة المخزون.",
+      "المستودع."
+    ],
+    "explanationAr": "في النموذج المفترض لا يحتاج المستودع إلى نسخة من أمر الشراء، بل يتلقى نسخة من تقرير الاستلام مع البضاعة. أما توزيع نسخ أوامر الشراء وصلاحيات الاطلاع عليها فيختلف في الأنظمة الحديثة بحسب مسؤوليات الأقسام وضوابط النظام."
   },
   {
     "unit": 19,
@@ -794,7 +834,15 @@
     ],
     "answerIndex": 0,
     "explanation": "A risk exposure typical of the purchasing function is that\npurchases may be made from vendors with respect to whom\nbuyers or other employees have a conflict of interest. The\nresult may be excessive prices or amounts, or poor quality of\ngoods and services acquired. Accordingly, additions to the\nvendor file should be authorized at an appropriate level and\nnot by the buyers. Similarly, bidders’ lists should be approved\nby supervisory personnel.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أظهر المسح الأولي لوظيفة المشتريات أن مديري الأقسام يبدؤون طلبات الشراء التي يعتمدها مدير المصنع، وأن المشتريات تعد أوامر الشراء بنماذج مرقمة مسبقًا وخاضعة للرقابة. ويحدث المشترون سجل الموردين الرسمي عند ظهور مصادر توريد جديدة. ويمكن طلب المشتريات العاجلة هاتفيًا بشرط إصدار أمر شراء مكتوب قبل قبول التسليم. ويرسل قسم الاستلام تقرير الاستلام وقائمة التعبئة إلى رقابة المخزون قبل تحديث سجلات المخزون. أي مما يلي يمثل ضعفًا محتملًا في هذا النظام؟",
+    "choicesAr": [
+      "احتمال الشراء من مورد يسيطر عليه أحد المشترين بأسعار أعلى من المعتاد.",
+      "احتمال إجراء مشتريات غير مصرح بها بواسطة مديري الأقسام.",
+      "احتمال تحديث المخزون قبل الاستلام الفعلي للبضائع.",
+      "احتمال استلام البضائع قبل إعداد أمر الشراء."
+    ],
+    "explanationAr": "من مخاطر المشتريات تعارض مصالح المشترين أو الموظفين مع الموردين، وما قد يترتب عليه من أسعار أو كميات مفرطة أو تدني جودة السلع والخدمات. ولذلك ينبغي اعتماد إضافة الموردين من جهة مخولة مستقلة عن المشترين، واعتماد قوائم مقدمي العروض من مستوى إشرافي مناسب."
   },
   {
     "unit": 19,
@@ -811,7 +859,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Shipping must verify that the packing slip and goods received\nfrom warehouse match the approved sales order before goods\nare shipped.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "قبل شحن البضائع، أي الخطوات الآتية ينبغي تنفيذها في دورة المبيعات والذمم المدينة المفترضة؟",
+    "choicesAr": [
+      "يعد قسم الفوترة فاتورة البضائع ويرسلها للعميل.",
+      "يرحل قسم الذمم المدينة المعاملة إلى الأستاذ المساعد للذمم المدينة.",
+      "تحدث رقابة المخزون السجلات بالبضائع المزمع شحنها.",
+      "تطابق نسخة الشحن من أمر البيع مع قائمة التعبئة."
+    ],
+    "explanationAr": "ينبغي لقسم الشحن التحقق من تطابق قائمة التعبئة والبضائع المستلمة من المستودع مع أمر البيع المعتمد قبل شحنها. ويساعد ذلك على التحقق من اعتماد الشحنة وصحة الأصناف والكميات، دون أن يحل محل ضوابط الفوترة والتسجيل اللاحقة."
   },
   {
     "unit": 19,
@@ -828,7 +884,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The auditor should select the sample from all goods that have\nbeen shipped. A packing slip and a bill of lading are created\nfor every good that has been shipped. Thus, the auditor\nshould sample, from shipping, copies of packing slips to trace\nthe existence of associated sales orders.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يريد المراجع التحقق من وجود أمر بيع لكل صنف تم شحنه. من أي مصدر ينبغي اختيار العينة؟",
+    "choicesAr": [
+      "قوائم التعبئة.",
+      "الأستاذ المساعد للذمم المدينة.",
+      "الفواتير.",
+      "أوامر البيع."
+    ],
+    "explanationAr": "ينبغي اختيار العينة من مجتمع البضائع التي شحنت فعليًا. وفي الدورة المفترضة تعد قائمة التعبئة ومستند الشحن لكل شحنة. ولذلك يختار المراجع من نسخ قوائم التعبئة لدى قسم الشحن ويتتبعها إلى أوامر البيع المرتبطة. وينبغي التأكد من أن مجتمع العينة يعكس الشحن الفعلي، لا مجرد بضائع أعدت للشحن."
   },
   {
     "unit": 19,
@@ -862,7 +926,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Allowing a sales employee to approve a credit memo without a\nreceiving report would be unacceptably risky. Sales personnel\ncould overstate sales in one period and then reverse them in\nsubsequent periods. Thus, a copy of the receiving report for\nreturned goods should be sent to billing for the preparation of\na credit memo after approved by a responsible supervisor who\nis independent of sales.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يلزم استقلال الوظائف عند معالجة طلبات العملاء للمحافظة على الرقابة الداخلية. أي الحالات الآتية لا تمثل فصلًا سليمًا بين الواجبات؟",
+    "choicesAr": [
+      "اعتماد الائتمان لأمر بيع أعده قسم المبيعات.",
+      "شحن البضائع بواسطة قسم الشحن بعد سحبها من المخزون بواسطة المستودع.",
+      "اعتماد قسم المبيعات إشعارًا دائنًا بسبب مردودات المنتجات ثم ترحيله بواسطة الذمم المدينة إلى حساب العميل.",
+      "إعداد الفاتورة بواسطة الفوترة وترحيلها إلى حسابات العملاء بواسطة الذمم المدينة."
+    ],
+    "explanationAr": "ينطوي اعتماد موظفي المبيعات للإشعارات الدائنة دون دليل مستقل على استلام المرتجعات على مخاطر رقابية، منها المبالغة في المبيعات في فترة وعكسها في فترة لاحقة. لذلك ينبغي تأييد الإشعار الدائن بتقرير الاستلام واعتماده بواسطة مسؤول مستقل عن المبيعات وفق الصلاحيات قبل تسجيله."
   },
   {
     "unit": 19,
@@ -879,7 +951,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Shipping documents are prepared at the time of shipment.\nThey are prenumbered to facilitate detection of unrecorded\nshipments. A gap in the sequence of the documents may\nindicate an irregularity. An employee outside of shipping\nshould account for these documents. Sales invoices are\ngenerated by the organization’s computer system at the same\ntime as the shipping documents and should have the same\nnumbers. Thus, every shipping document should be matched\nwith a sales invoice to ensure proper billing.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الإجراءات الآتية يساعد على ضمان فوترة جميع شحنات المخزون للعملاء؟",
+    "choicesAr": [
+      "فصل واجبات تسجيل المبيعات عن حفظ أرصدة حسابات العملاء.",
+      "ترقيم فواتير المبيعات مسبقًا وحصرها بصورة مستقلة وتتبعها إلى يومية المبيعات.",
+      "مطابقة إشعار التأكيد بقائمة التعبئة قبل سحب البضاعة من المستودع.",
+      "ترقيم مستندات الشحن مسبقًا وحصرها بصورة مستقلة ومطابقتها بفواتير المبيعات."
+    ],
+    "explanationAr": "تعد مستندات الشحن عند الشحن وترقم بالتسلسل لتيسير اكتشاف الشحنات غير المسجلة. وقد يشير انقطاع التسلسل إلى خلل يستلزم التحقيق. وينبغي أن يحصر طرف مستقل مستندات الشحن ويطابق كل مستند بالفاتورة المرتبطة، حتى عند اختلاف نظام الترقيم بين المستندات والفواتير. ويدعم ذلك اكتمال الفوترة."
   },
   {
     "unit": 19,
@@ -896,7 +976,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Upon the receipt of the packing slip and bill of lading from\nshipping, inventory control matches them with the approved\nsales order and updates the inventory records.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عند استلام قائمة التعبئة من <القائمة أ>، ينبغي لرقابة المخزون مطابقتها مع أمر البيع المعتمد ثم <القائمة ب>. القائمة أ — القائمة ب",
+    "choicesAr": [
+      "الشحن — تحديث سجلات المخزون.",
+      "المبيعات — إعداد إشعار التأكيد.",
+      "الفوترة — إرسالها إلى قسم الفوترة.",
+      "المستودع — إرسال الفاتورة إلى العميل."
+    ],
+    "explanationAr": "في الدورة المستندية المفترضة تتلقى رقابة المخزون قائمة التعبئة ومستند الشحن من قسم الشحن، وتطابقهما بأمر البيع المعتمد ثم تحدث سجلات المخزون وفق حدث الشحن الفعلي وضوابط النظام."
   },
   {
     "unit": 19,
@@ -913,7 +1001,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The human resources department provides the authorization\nfor payroll-related transactions, e.g., hiring, termination, and\nchanges in pay rates and deductions.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الأقسام الآتية يُرجح أن يعتمد تغييرات معدلات الأجور والاستقطاعات من رواتب الموظفين؟",
+    "choicesAr": [
+      "الموارد البشرية.",
+      "المدير المالي.",
+      "المراقب المالي.",
+      "الرواتب."
+    ],
+    "explanationAr": "تتولى الموارد البشرية في النموذج المفترض اعتماد معاملات الموظفين، مثل التعيين وإنهاء الخدمة وتغييرات معدلات الأجور والاستقطاعات، وفق السياسات ومصفوفة الصلاحيات. وقد يلزم اعتماد جهات إضافية وفق نوع التغيير والمتطلبات النظامية."
   },
   {
     "unit": 19,
@@ -930,7 +1026,15 @@
     ],
     "answerIndex": 0,
     "explanation": "In a database system, storage structures are created that\nrender the applications programs independent of the physical\nor logical arrangement of the data. Because separate files for\ndifferent applications programs are unnecessary, data\nredundancy can be substantially reduced.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "من بين البدائل الآتية، ما أكبر مزايا بنية قاعدة البيانات القائمة على خادم؟",
+    "choicesAr": [
+      "إمكانية تقليل تكرار البيانات.",
+      "التحول إلى قاعدة البيانات منخفض التكلفة ويمكن إنجازه سريعًا.",
+      "تعدد نسخ عناصر البيانات مفيد للتحقق من الاتساق.",
+      "تقليل إجراءات أمن البيانات."
+    ],
+    "explanationAr": "تساعد بنية قاعدة البيانات على استقلال التطبيقات عن تفاصيل تنظيم البيانات المادية، وبدرجات متفاوتة عن تنظيمها المنطقي. ومن خلال مشاركة البيانات بين التطبيقات تقل الحاجة إلى ملفات مستقلة تحتوي البيانات نفسها، مما يقلل التكرار غير الضروري. ولا يعني ذلك أن التحول منخفض التكلفة أو أن الضوابط الأمنية أقل أهمية."
   },
   {
     "unit": 19,
@@ -947,7 +1051,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The use of information technology typically increases the\ntimeliness of information. Transactions are often recorded in\nreal time, and information is available almost instantaneously.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي النتائج الآتية تعد منفعة محتملة لاستخدام تقنية المعلومات في الرقابة الداخلية؟",
+    "choicesAr": [
+      "معالجة المعاملات غير المعتادة أو غير المتكررة.",
+      "تحسين توقيت إتاحة المعلومات.",
+      "احتمال فقد البيانات.",
+      "تسجيل معاملات غير مصرح بها."
+    ],
+    "explanationAr": "يساعد استخدام تقنية المعلومات عادة على تحسين توقيت إتاحة المعلومات. فقد تسجل المعاملات في الوقت الفعلي وتصبح المعلومات متاحة بسرعة، حسب تصميم النظام وتكامله. ولا تضمن السرعة وحدها دقة البيانات أو صحة المعاملات."
   },
   {
     "unit": 19,
