@@ -967,7 +967,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Revenue and gross profit are recognized over the 3 years of\nthe construction period using the input method based on costs\nincurred in measuring the progress toward completion. At the\nend of Year 2, 64% [($700,000 + $500,000) ÷ ($700,000 +\n$500,000 + $675,000)] of expected costs have been incurred.\nAt the end of Year 2, the total expected gross profit from the\ncontract is $625,000 [$2,500,000 – ($700,000 + $500,000 +\n$675,000)]. Thus, the gross profit in the first 2 years of the\ncontract is $400,000 ($625,000 × 64%). In Year 1, gross profit\nof $175,000 [$500,000 total expected gross profit estimated at\nthe end of Year 1 × ($700,000 ÷ $2,000,000) progress of\ncompletion at the end of Year 1] was recognized. Thus, the\ngross profit recognized in Year 2 is $225,000 ($400,000 gross\nprofit for the first 2 years – $175,000 gross profit recognized in\nYear 1).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 يناير من السنة 1 أبرمت Big عقدًا لبناء جسر على أرض العميل مقابل $2,500,000. ويتوقع اكتمال الجسر بنهاية السنة 3. وتحدد Big أن التقدم نحو الإكمال قابل للقياس بشكل معقول باستخدام مدخل التكاليف المتكبدة. وفي بداية العقد قدرت التكلفة الإجمالية بـ$1,700,000. وفيما يلي (1) التكاليف الفعلية لكل سنة، و(2) التكاليف المتوقعة للإكمال، و(3) المبالغ المفوترة للعميل:\nالبند | السنة 1 | السنة 2 | السنة 3\nالتكاليف المتكبدة سنويًا | $700,000 | $500,000 | $800,000\nالتكاليف المتوقعة في السنوات التالية | 1,300,000 | 675,000 | 0\nالمبالغ المفوترة والمحصلة سنويًا | 700,000 | 950,000 | 850,000\nما مجمل ربح العقد المعترف به في قائمة دخل السنة 2؟",
+    "choicesAr": [
+      "$400,000",
+      "$225,000",
+      "$450,000",
+      "$0"
+    ],
+    "explanationAr": "يعترف بالإيراد ومجمل الربح على مدى 3 سنوات الإنشاء باستخدام مدخل التكاليف المتكبدة. وفي نهاية السنة 2 بلغت التكاليف المتكبدة 64% [($700,000 + $500,000) ÷ ($700,000 + $500,000 + $675,000)] من التكاليف المتوقعة. وفي نهاية السنة 2 بلغ إجمالي مجمل الربح المتوقع $625,000 [$2,500,000 − ($700,000 + $500,000 + $675,000)]. لذا بلغ مجمل الربح لأول 2 سنة من العقد $400,000 ($625,000 × 64%). وفي السنة 1 اعترف بمجمل ربح $175,000 [$500,000 إجمالي الربح المتوقع بنهاية السنة 1 × ($700,000 ÷ $2,000,000) نسبة الإكمال بنهاية السنة 1]. لذلك يبلغ مجمل ربح السنة 2 مبلغ $225,000 ($400,000 مجمل الربح لأول 2 سنة − $175,000 المعترف به في السنة 1)."
   },
   {
     "unit": 5,
@@ -1009,7 +1017,15 @@
     ],
     "answerIndex": 0,
     "explanation": "In this contract, revenue is recognized over time based on\nprogress toward completion. The progress toward completion\nis measured using the input method based on costs incurred.\nThe construction was completed in Year 3. Accordingly, by the\nend of Year 3, the entire $2,500,000 of revenues should be\nrecognized. At the end of Year 2, 64% [($700,000 + $500,000)\n÷ ($700,000 + $500,000 + $675,000)] of the estimated\nconstruction costs had been incurred. Thus, revenue of\n$900,000 [$2,500,000 × (100% – 64%)] is recognized in Year\n3.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 يناير من السنة 1 أبرمت Big عقدًا لبناء جسر على أرض العميل مقابل $2,500,000. ويتوقع اكتمال الجسر بنهاية السنة 3. وتحدد Big أن التقدم نحو الإكمال قابل للقياس بشكل معقول باستخدام مدخل التكاليف المتكبدة. وفي بداية العقد قدرت التكلفة الإجمالية بـ$1,700,000. وفيما يلي (1) التكاليف الفعلية لكل سنة، و(2) التكاليف المتوقعة للإكمال، و(3) المبالغ المفوترة للعميل:\nالبند | السنة 1 | السنة 2 | السنة 3\nالتكاليف المتكبدة سنويًا | $700,000 | $500,000 | $800,000\nالتكاليف المتوقعة في السنوات التالية | 1,300,000 | 675,000 | 0\nالمبالغ المفوترة والمحصلة سنويًا | 700,000 | 950,000 | 850,000\nما إيراد العقد المعترف به في قائمة دخل السنة 3؟",
+    "choicesAr": [
+      "$900,000",
+      "$850,000",
+      "$2,500,000",
+      "$833,333"
+    ],
+    "explanationAr": "يعترف بالإيراد على مدى الزمن وفق التقدم نحو الإكمال باستخدام مدخل التكاليف المتكبدة. واكتمل الإنشاء في السنة 3. لذلك يجب بحلول نهاية السنة 3 الاعتراف بإجمالي إيراد $2,500,000. وفي نهاية السنة 2 بلغت التكاليف المتكبدة 64% [($700,000 + $500,000) ÷ ($700,000 + $500,000 + $675,000)] من إجمالي التكاليف المقدرة. لذا يعترف بإيراد $900,000 [$2,500,000 × (100% − 64%)] في السنة 3."
   },
   {
     "unit": 5,
