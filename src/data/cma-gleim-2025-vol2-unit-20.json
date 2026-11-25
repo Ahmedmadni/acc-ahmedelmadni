@@ -1036,15 +1036,7 @@
     ],
     "answerIndex": 0,
     "explanation": "Regression analysis is used to find an equation for the linear\nrelationship among variables. The behavior of the dependent\nvariable is explained in terms of one or more independent\nvariables. Regression analysis often is used to estimate a\ndependent variable (such as cost) given a known independent\nvariable (such as production).",
-    "answerStatus": "source",
-    "stemAr": "ما الوظيفة التي تؤديها معادلة الانحدار؟",
-    "choicesAr": [
-      "تقدير المتغير التابع أو المتغيرات التابعة.",
-      "تضمين عوامل خارج المدى الملائم.",
-      "الاعتماد على دالة الهدف ودوال القيود.",
-      "تقدير المتغير المستقل."
-    ],
-    "explanationAr": "يستخدم الانحدار لتقدير العلاقة بين المتغيرات. وفي الانحدار الخطي يفسر سلوك المتغير التابع باستخدام متغير مستقل أو عدة متغيرات مستقلة. ومن تطبيقاته تقدير التكلفة المتوقعة عند مستوى إنتاج معلوم، مع مراعاة نطاق البيانات وافتراضات النموذج."
+    "answerStatus": "source"
   },
   {
     "unit": 20,
@@ -1103,15 +1095,7 @@
     ],
     "answerIndex": 2,
     "explanation": "Simple regression uses the algebraic formula for a straight\nline, y = a + bx, where x is the independent variable. Multiple\nregression is used when there is more than one independent\nvariable. Multiple regression allows a firm to identify many\nfactors (independent variables) and to weight each one\naccording to its influences on the overall outcome (y = a +\nb1x1 + b2x2 + b3x3 + etc.).",
-    "answerStatus": "source",
-    "stemAr": "في تقدير التكلفة، يختلف الانحدار البسيط عن الانحدار المتعدد في أن الانحدار البسيط يستخدم فقط:",
-    "choicesAr": [
-      "متغيرًا تابعًا واحدًا، بينما يستخدم الانحدار المتعدد جميع البيانات المتاحة لتقدير دالة التكلفة.",
-      "المتغيرات التابعة، بينما يمكن للانحدار المتعدد استخدام المتغيرات التابعة والمستقلة معًا.",
-      "متغيرًا مستقلًا واحدًا، بينما يستخدم الانحدار المتعدد أكثر من متغير مستقل.",
-      "متغيرًا تابعًا واحدًا، بينما يستخدم الانحدار المتعدد أكثر من متغير تابع."
-    ],
-    "explanationAr": "تأخذ معادلة الانحدار الخطي البسيط الشكل y = a + bx، حيث x هو المتغير المستقل. ويستخدم الانحدار المتعدد أكثر من متغير مستقل، ويقدر معاملًا لكل عامل لتفسير أثره في الناتج مع ثبات العوامل الأخرى، وفق النموذج:\ny = a + b1x1 + b2x2 + b3x3 + ...\nولا تثبت المعاملات السببية بمجرد تقديرها."
+    "answerStatus": "source"
   },
   {
     "unit": 20,
@@ -1153,15 +1137,7 @@
     ],
     "answerIndex": 0,
     "explanation": "The letter x in the standard regression equation is the\nindependent variable. For example, in a regression to\ndetermine the total cost of production, x equals units\nproduced.",
-    "answerStatus": "source",
-    "stemAr": "ما الوصف الأنسب للرمز x في معادلة الانحدار المعتادة؟",
-    "choicesAr": [
-      "متغير مستقل.",
-      "متغير تابع.",
-      "معامل ثابت.",
-      "معامل التحديد."
-    ],
-    "explanationAr": "يمثل x المتغير المستقل في معادلة الانحدار المعتادة. ففي نموذج تقدير إجمالي تكلفة الإنتاج يمكن أن يمثل x عدد الوحدات المنتجة، وهو متغير تفسيري تستخدم قيمته لتقدير التكلفة."
+    "answerStatus": "source"
   },
   {
     "unit": 20,
