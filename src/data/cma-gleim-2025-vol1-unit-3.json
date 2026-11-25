@@ -1301,7 +1301,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The cost of acquiring and preparing land for its expected use\nis capitalized. The amount to be recorded in the land account\nis $83,420, consisting of the $75,800 purchase price, the $820\nclosing costs, and the $6,800 site preparation costs.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فوض مجلس إدارة شركة رئيسها بدفع ما يصل إلى $90,000 لشراء أرض مجاورة للمصنع الرئيسي. تفاوض الرئيس على سعر $75,800، وبلغت الأتعاب القانونية لإتمام الشراء $820. قام مقاول بإزالة العوائق وردم وتسوية الأرض مقابل $6,800، وحفر أساسات المبنى الجديد مقابل $4,300. وأقيم مبنى مسبق الصنع بتكلفة $181,000 وعمر مقدر 20 سنة دون قيمة متبقية. وبلغت تكلفة مواقف السيارات والممرات $7,060، وستحتاج إلى الاستبدال بعد 15 سنة. ما المبلغ الصحيح الذي يسجل في حساب الأرض؟",
+    "choicesAr": [
+      "$76,620",
+      "$83,420",
+      "$87,720",
+      "$90,480"
+    ],
+    "explanationAr": "ترسمل تكاليف اقتناء الأرض وتجهيزها للاستخدام المقصود. ويبلغ المبلغ المسجل في حساب الأرض $83,420، ويتكون من سعر الشراء $75,800 وتكاليف إتمام الشراء $820 وتكاليف تجهيز الموقع $6,800."
   },
   {
     "unit": 3,
@@ -1318,7 +1326,15 @@
     ],
     "answerIndex": 1,
     "explanation": "These assets are known variously as property, plant, and\nequipment (PPE); fixed assets; or plant assets.\n1. PPE are tangible. They have physical existence.\n2. PPE may be either personal property (something\nmovable, e.g., equipment) or real property (such as\nland or a building).\n3. PPE are used in the ordinary operations of an entity\nand are not held primarily for investment, resale, or\ninclusion in another product. But they are often sold.\n4. PPE are noncurrent. They are not expected to be\nused up within 1 year or the normal operating cycle of\nthe business, whichever is longer.\nHowever, an asset need not be newly purchased to be\nproperly described as PPE.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الخصائص التالية ليست لازمة لتصنيف أصل ضمن العقارات والآلات والمعدات؟",
+    "choicesAr": [
+      "محتفظ به للاستخدام لا للاستثمار.",
+      "مُشترى حديثًا.",
+      "عمر متوقع يزيد على سنة 1.",
+      "ملموس."
+    ],
+    "explanationAr": "تعرف هذه الأصول بالعقارات والآلات والمعدات أو الأصول الثابتة أو أصول المصنع.\n1. هي أصول ملموسة ذات وجود مادي.\n2. قد تكون منقولات مثل المعدات أو عقارات مثل الأرض والمبنى.\n3. تستخدم في العمليات العادية ولا يحتفظ بها أساسًا للاستثمار أو إعادة البيع أو الإدماج في منتج آخر، وإن أمكن بيعها لاحقًا.\n4. هي أصول غير متداولة، ولا يتوقع استهلاكها خلال سنة 1 أو دورة التشغيل العادية أيهما أطول، وفق سياق السؤال.\nولا يشترط أن يكون الأصل مشتَرى حديثًا."
   },
   {
     "unit": 3,
@@ -1335,7 +1351,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Under the double-declining balance method, the full cost of\nthe asset, or $100,000, is depreciated, but not below salvage\nvalue. Because the straight-line rate for a 10-year asset is\n10% (100% ÷ 10), the double-declining balance rate is 20%\n(10% × 2). The first year’s depreciation is $20,000 ($100,000\n× 20%), leaving a carrying amount for the second year of\n$80,000 ($100,000 – $20,000). The second year’s\ndepreciation is thus $16,000 ($80,000 × 20%).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "اشترت شركة معدات تصنيع بمبلغ $100,000 بعمر إنتاجي مقدر 10 سنوات وقيمة متبقية $15,000. ما إهلاك السنة الثانية وفق طريقة الرصيد المتناقص المضاعف؟",
+    "choicesAr": [
+      "$8,500",
+      "$13,600",
+      "$16,000",
+      "$20,000"
+    ],
+    "explanationAr": "تطبق طريقة الرصيد المتناقص المضاعف معدلها على كامل تكلفة الأصل $100,000 في البداية، دون تخفيض القيمة الدفترية عن القيمة المتبقية. وبما أن العمر 10 سنوات فإن معدل القسط الثابت 10% (100% ÷ 10)، ومعدل الرصيد المتناقص المضاعف 20% (10% × 2). إهلاك السنة الأولى $20,000 ($100,000 × 20%)، وتتبقى قيمة دفترية للسنة الثانية $80,000 ($100,000 − $20,000). لذا يبلغ إهلاك السنة الثانية $16,000 ($80,000 × 20%)."
   },
   {
     "unit": 3,
@@ -1352,7 +1376,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Interest should be capitalized for (1) assets constructed or\notherwise produced for an entity’s own use, including those\nconstructed or produced by others; (2) assets intended for\nsale or lease that are constructed or produced as discrete\nprojects (e.g., ships); and (3) certain equity-based\ninvestments. An asset constructed for an entity’s own use\nqualifies for capitalization of interest if (1) relevant\nexpenditures have been made, (2) activities necessary to\nprepare the asset for its intended use are in progress, and\n(3) interest is being incurred. The investee must have activities\nin progress necessary to commence its planned principal\noperations and be expending funds to obtain qualifying assets\nfor its operations.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي أنواع الأصول التالية مؤهل لرسملة الفوائد؟",
+    "choicesAr": [
+      "الأصول المستخدمة بالفعل في أنشطة تحقيق الدخل.",
+      "الأصول الجاهزة لاستخدامها المقصود.",
+      "الأصول التي تنشأ لاستخدام المنشأة نفسها.",
+      "المخزون الذي يصنع بكميات كبيرة بصورة مستمرة."
+    ],
+    "explanationAr": "وفق المعايير الأمريكية ترسمل الفائدة بالنسبة إلى (1) الأصول المنشأة أو المنتجة لاستخدام المنشأة، بما فيها ما ينشئه الغير؛ (2) الأصول المعدة للبيع أو التأجير والمنشأة كمشروعات مستقلة مثل السفن؛ (3) بعض الاستثمارات المحاسب عنها بطريقة حقوق الملكية. ويؤهل الأصل المنشأ للاستخدام الذاتي إذا (1) تكبدت نفقات ذات صلة، (2) كانت أنشطة تجهيزه للاستخدام جارية، (3) كانت الفائدة تتكبد. وفي حالة الاستثمار المؤهل تكون أنشطة بدء العمليات الأساسية للمنشأة المستثمر فيها جارية، وتُنفق أموال لاقتناء أصول مؤهلة."
   },
   {
     "unit": 3,
@@ -1369,7 +1401,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The straight-line depreciation that should have been charged\nto the equipment had it been properly capitalized is $30,000\n[$100,000 × (3 ÷ 10 years)]. Thus, after correction of the error,\nthe carrying amount of the equipment will be $70,000\n($100,000 – $30,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "اشترت شركة معدات قبل 3 سنوات وسجلتها خطأ كمصروف. بلغت التكلفة $100,000 دون قيمة متبقية وبعمر مقدر 10 سنوات. وتستخدم الشركة القسط الثابت للمعدات المماثلة. اكتشف الخطأ في نهاية السنة 3 قبل إصدار القوائم. ما القيمة الدفترية الصحيحة للمعدات بعد تصحيح الخطأ؟",
+    "choicesAr": [
+      "$30,000",
+      "$70,000",
+      "$80,000",
+      "$100,000"
+    ],
+    "explanationAr": "كان ينبغي إثبات إهلاك بالقسط الثابت بمبلغ $30,000 [$100,000 × (3 ÷ 10 سنوات)]. وبعد تصحيح الخطأ تصبح القيمة الدفترية $70,000 ($100,000 − $30,000)."
   },
   {
     "unit": 3,
@@ -1386,7 +1426,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The SYD method multiplies a constant depreciable base (cost\nminus residual value) by a declining fraction. The numerator is\nthe number of years of the useful life minus the years elapsed\n(5 – 0 = 5). The denominator is the sum of the digits of the\nyears in the asset’s useful life (1 + 2 + 3 + 4 + 5). The first\nyear’s depreciation expense is therefore $16,667 [$50,000 ×\n(5 ÷ 15)].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم شركة طريقة مجموع أرقام السنوات (SYD) للإهلاك. في 1 يناير اشترت آلة بمبلغ $50,000 بعمر مقدر 5 سنوات ودون قيمة متبقية. ما إهلاك السنة الأولى؟",
+    "choicesAr": [
+      "$10,000",
+      "$15,000",
+      "$16,667",
+      "$20,000"
+    ],
+    "explanationAr": "تضرب طريقة مجموع أرقام السنوات أساس الإهلاك الثابت (التكلفة ناقص القيمة المتبقية) في كسر متناقص. البسط هو العمر الإنتاجي ناقص السنوات المنقضية (5 − 0 = 5). والمقام مجموع أرقام سنوات العمر (1 + 2 + 3 + 4 + 5). لذا يبلغ إهلاك السنة الأولى $16,667 [$50,000 × (5 ÷ 15)]."
   },
   {
     "unit": 3,
@@ -1403,7 +1451,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The Year 2 beginning carrying amount is $193,000 ($295,000\n– $102,000), and the Year 2 ending carrying amount is\n$221,000 ($340,000 – $119,000). The carrying amount of PPE\ndisposed of is $7,000 ($193,000 beginning balance +\n$65,000 acquired during Year 2 – $30,000 depreciation\nexpense – $221,000 ending balance).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فيما يلي بيانات مختارة من قائمتي المركز المالي في 31 ديسمبر من السنة 1 و31 ديسمبر من السنة 2:\nالبند | 12/31 السنة 1 | 12/31 السنة 2\nالعقارات والآلات والمعدات | $295,000 | $340,000\nمجمع الإهلاك | (102,000) | (119,000)\nمعلومات إضافية للسنة 2:\n1. اقتنيت معدات مقابل $65,000.\n2. بلغ مصروف الإهلاك $30,000.\nما القيمة الدفترية (التكلفة ناقص مجمع الإهلاك) للأصول المستبعدة في السنة 2؟",
+    "choicesAr": [
+      "$7,000",
+      "$17,000",
+      "$20,000",
+      "$32,000"
+    ],
+    "explanationAr": "بلغت القيمة الدفترية أول السنة 2 مبلغ $193,000 ($295,000 − $102,000)، وآخر السنة 2 مبلغ $221,000 ($340,000 − $119,000). وبافتراض عدم وجود حركات أخرى، تبلغ القيمة الدفترية للأصول المستبعدة $7,000 ($193,000 أول المدة + $65,000 مقتنيات السنة 2 − $30,000 الإهلاك − $221,000 آخر المدة)."
   },
   {
     "unit": 3,
@@ -1420,7 +1476,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Expenditures on capital assets that improve the asset’s\nperformance or extend its useful life are capitalized as part of\nthe asset’s cost. Accordingly, the building repairs are\ncapitalized. The substitution of a better computer system is\nclassified as an improvement, and the costs also should be\ncapitalized. Moreover, the entity capitalizes the costs of a\nrearrangement of the configurations of the offices and open\nwork spaces that (1) requires material outlays, (2) is separable\nfrom recurring expenses, and (3) provides probable future\nbenefits. However, expenditures that merely maintain the\nasset at an acceptable level of productivity are expensed as\nthey are incurred. Thus, the costs of painting the building are\nroutine, minor outlays that should be expensed immediately.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تمتلك منشأة مرافقها الحالية منذ 1981، وصرح المدير التنفيذي بنفقات لإصلاح المبنى وتحسينه خلال السنة. بدأ المبنى يهبط، وكان سيستمر 8 سنوات فقط دون الإصلاح. عُززت الأساسات وأضيفت أعمدة في القبو بتكلفة $47,200، فأصبح عمر المبنى المتبقي المقدر 20 سنة. ولتركيب شبكة محلية LAN والاستعداد للجيل التالي من الحواسيب، حُدثت خطوط الهاتف والكهرباء مقابل $81,300، بعمر مقدر 25 سنة. وأعيد ترتيب المكاتب ومساحات العمل لتقليل التعرض للانبعاثات الإلكترونية بتكلفة مواد $31,000. وبلغ شراء وتركيب أجهزة وبرمجيات الشبكة $102,700، وستستبدل بعد 6 سنوات دون حاجة لإعادة ترتيب المكاتب. وبعد التحسينات طلي المبنى داخليًا وخارجيًا مقابل $9,450.\nبصفتك المراقب المالي، أي إجراء توصي به وفق المبادئ المحاسبية المتعارف عليها؟",
+    "choicesAr": [
+      "تحميل جميع النفقات على مصروفات السنة عدا إعادة الترتيب ($31,000)، التي تطفأ على فترة لا تتجاوز 20 سنة.",
+      "رسملة جميع النفقات باعتبارها إضافات وتحسينات وإعادة ترتيب.",
+      "رسملة جميع التكاليف عدا تحديث الهاتف والكهرباء والطلاء باعتبارها صيانة.",
+      "رسملة جميع التكاليف عدا الطلاء باعتباره صيانة."
+    ],
+    "explanationAr": "ترسمل النفقات التي تحسن أداء الأصل أو تطيل عمره الإنتاجي عند تحقق شروط الاعتراف؛ لذا ترسمل إصلاحات المبنى وتحسين نظام الحاسوب. كما ترسمل إعادة ترتيب المكاتب والمساحات إذا (1) تطلبت نفقات جوهرية، (2) أمكن فصلها عن المصروفات المتكررة، (3) حققت منافع مستقبلية محتملة. أما ما يحافظ فقط على مستوى الإنتاجية المقبول فيثبت مصروفًا عند تكبده، ومنه الطلاء الدوري البسيط. وتراعى طبيعة الأجهزة والبرمجيات في تبويب الأصول."
   },
   {
     "unit": 3,
@@ -1437,7 +1501,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Subsequent costs are added to the carrying amount of an item\nof PPE if it is probable that, as a result, future economic\nbenefits will be received, and the costs are reliably\nmeasurable. An extended useful life, improved output quantity\nor quality, and reduced operating costs are all future economic\nbenefits.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ركبت منشأة خط تجميع في السنة 1. وبعد أربع سنوات استثمرت $100,000 لأتمتته، مما زاد قيمته السوقية وطاقته الإنتاجية دون تغيير عمره الإنتاجي. ما المعالجة المحاسبية الصحيحة لتكلفة الأتمتة؟",
+    "choicesAr": [
+      "إثباتها مصروفًا في السنة 5.",
+      "إنشاء حساب مستقل للمبلغ $100,000.",
+      "توزيع تكلفة الأتمتة بين الأصل ومجمع الإهلاك.",
+      "رسملة التكلفة في حساب العقارات والآلات والمعدات."
+    ],
+    "explanationAr": "تضاف التكاليف اللاحقة إلى القيمة الدفترية للأصل إذا كان من المحتمل تدفق منافع اقتصادية مستقبلية منها وأمكن قياسها بموثوقية. وتشمل المنافع إطالة العمر وتحسين كمية الإنتاج أو جودته وخفض تكاليف التشغيل."
   },
   {
     "unit": 3,
@@ -1471,7 +1543,15 @@
     ],
     "answerIndex": 1,
     "explanation": "An asset classified under property, plant, and equipment is\nmeasured initially at cost. This amount includes the purchase\nprice and any directly attributable costs of bringing the asset to\nworking condition for its intended use. Directly attributable\ncosts include costs of, for example, site preparation, initial\ndelivery and handling, installation, professional fees (e.g.,\nthose of architects and engineers), and dismantling and\nremoving the asset and restoring the site. The purchase price\nis determined by adding any import fees and nonrefundable\npurchase taxes and subtracting any trade discounts and\nrebates.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي ليس أساسًا مناسبًا لقياس التكلفة التاريخية للعقارات والآلات والمعدات؟",
+    "choicesAr": [
+      "إدراج تكاليف التسليم والمناولة والتركيب ضمن تكلفة الأصل المنتج.",
+      "إدراج سعر الشراء دون خصم الخصومات التجارية.",
+      "إضافة تحسينات المعدات اللاحقة التي تحقق منافع اقتصادية مستقبلية تزيد على مستوى الأداء المقدر أصلًا.",
+      "إدراج تكاليف تشييد مبنى المصنع من الحفر حتى الاكتمال ضمن تكلفة الأصل."
+    ],
+    "explanationAr": "يقاس الأصل أولًا بالتكلفة، وتشمل سعر الشراء والتكاليف المباشرة اللازمة لجعله جاهزًا للاستخدام المقصود، مثل تجهيز الموقع والتسليم والمناولة والتركيب والأتعاب المهنية وتفكيك الأصل وإزالته وإعادة الموقع وفق شروط الاعتراف ذات الصلة. ويحدد سعر الشراء بإضافة رسوم الاستيراد وضرائب الشراء غير القابلة للاسترداد وطرح الخصومات التجارية والحسومات."
   },
   {
     "unit": 3,
@@ -1488,7 +1568,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The units-of-production method allocates cost based on\noutput. The net amount reported as an asset for the quarry\nusing this method is $840,000 [(350,000 cubic yards ÷\n500,000 total cubic yards) × $1,200,000].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 يناير من السنة 1 اشترت منشأة محجرًا مهجورًا مقابل $1,200,000 لاستخدامه مكبًا للنفايات لخدمة عقود الجمع مع المدن القريبة خلال 20 سنة. وتستهلك المحجر بطريقة وحدات الإنتاج استنادًا إلى قياس المساح لحجم الحفرة. بلغ الحجم 500,000 ياردة مكعبة عند الشراء و350,000 ياردة مكعبة في نهاية السنة 5. ما صافي مبلغ المحجر المعروض في قائمة المركز المالي في 31 ديسمبر من السنة 5؟",
+    "choicesAr": [
+      "$1,200,000",
+      "$900,000",
+      "$840,000",
+      "$360,000"
+    ],
+    "explanationAr": "تخصص طريقة وحدات الإنتاج التكلفة على أساس الاستخدام. وبافتراض عدم وجود قيمة متبقية أو تعديلات أخرى، يبلغ صافي قيمة المحجر $840,000 [(350,000 ياردة مكعبة ÷ 500,000 ياردة مكعبة إجمالي) × $1,200,000]."
   },
   {
     "unit": 3,
@@ -1505,7 +1593,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Depreciation expense equals cost minus residual value, times\nthe estimated hours of use in Year 2 divided by the total\nestimated hours of use. Thus, depreciation expense is\n$80,500 [($300,000 – $70,000) × (700 hours ÷ 2,000 hours)].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بلغت التكلفة الأولية لآلة جديدة $300,000 وعمرها المقدر 2,000 ساعة استخدام خلال 3 سنوات وقيمتها المتبقية $70,000. ويقدر استخدامها بـ500 ساعة في السنة الأولى و700 ساعة في الثانية و800 ساعة في الثالثة. ما مصروف إهلاك السنة 2 وفق طريقة وحدات الإنتاج؟",
+    "choicesAr": [
+      "$57,500",
+      "$75,000",
+      "$80,500",
+      "$105,000"
+    ],
+    "explanationAr": "يساوي الإهلاك التكلفة مطروحًا منها القيمة المتبقية مضروبة في ساعات استخدام السنة 2 مقسومة على إجمالي الساعات المقدرة. لذلك يبلغ الإهلاك $80,500 [($300,000 − $70,000) × (700 ساعة ÷ 2,000 ساعة)]."
   },
   {
     "unit": 3,
@@ -1522,7 +1618,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Under the double-declining balance method, the full cost of\nthe asset, or $40,300 ($38,600 + $1,700), is depreciated, but\nnot below salvage value. Because the straight-line rate for a 5-\nyear asset is 20% (100% ÷ 5), the double-declining balance\nrate is 40% (20% × 2). The first year’s depreciation is $16,120\n($40,300 × 40%), leaving a carrying amount for the second\nyear of $24,180 ($40,300 – $16,120). The second year’s\ndepreciation is thus $9,672 ($24,180 × 40%).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "اشترت منشأة شاحنة مقابل $38,600 لنقل المعدات إلى مواقع العمل. ولُحمت صناديق تخزين في صندوق الشاحنة بتكلفة $1,700. ويقدر المراقب المالي العمر الإنتاجي بـ5 سنوات والقيمة المتبقية بـ$1,000. ما مصروف الإهلاك للسنة الثانية وفق الرصيد المتناقص المضاعف؟",
+    "choicesAr": [
+      "$9,024",
+      "$9,264",
+      "$9,432",
+      "$9,672"
+    ],
+    "explanationAr": "يطبق معدل الرصيد المتناقص المضاعف في البداية على كامل تكلفة الأصل $40,300 ($38,600 + $1,700) دون النزول عن القيمة المتبقية. ولأن العمر 5 سنوات يكون معدل القسط الثابت 20% (100% ÷ 5)، والمعدل المضاعف 40% (20% × 2). إهلاك السنة الأولى $16,120 ($40,300 × 40%)، وتبقى قيمة دفترية للسنة الثانية $24,180 ($40,300 − $16,120). لذا يبلغ إهلاك السنة الثانية $9,672 ($24,180 × 40%)."
   },
   {
     "unit": 3,
@@ -1539,7 +1643,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Sum-of-the-years’-digits depreciation has the highest\ndepreciation expense in the early years of an asset’s life,\nresulting in lower net income.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي طرق الإهلاك التالية تؤدي إلى أقل صافي دخل معلن خلال السنوات الأولى من عمر أصل قابل للإهلاك؟",
+    "choicesAr": [
+      "الإهلاك المركب.",
+      "إهلاك المجموعة.",
+      "القسط الثابت.",
+      "مجموع أرقام السنوات."
+    ],
+    "explanationAr": "من بين الطرق المعروضة، تحمل طريقة مجموع أرقام السنوات إهلاكًا أعلى في السنوات الأولى مقارنة بالطرق القائمة على القسط الثابت، مما يخفض صافي الدخل مع ثبات العوامل الأخرى."
   },
   {
     "unit": 3,
@@ -1556,7 +1668,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Group and composite depreciation methods use the straight-\nline technique for an aggregate of assets. The composite\nmethod is used for dissimilar assets.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "موزع منتجات حريرية في سنته الأولى. اشترى عشرة حواسيب بسعر $3,500 لكل منها وعمر مقدر 6 سنوات؛ وخمسة مكاتب بسعر $500 لكل منها وعمر 10 سنوات؛ وجهازي معالجة نصوص بسعر $300 لكل منهما وعمر 4 سنوات. لا يتوقع قيمة متبقية لأي منها. ويريد طريقة سهلة تعكس مصروف إهلاك مناسبًا في كل فترة. ما الطريقة الأنسب؟",
+    "choicesAr": [
+      "الإهلاك المركب.",
+      "إهلاك المجموعة.",
+      "طريقة المخزون.",
+      "طريقة الاستبدال."
+    ],
+    "explanationAr": "تستخدم طريقة المجموعة والطريقة المركبة أسلوب القسط الثابت لمجموعة أصول. وتستخدم الطريقة المركبة للأصول غير المتجانسة."
   },
   {
     "unit": 3,
@@ -1573,7 +1693,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The units-of-production depreciation method allocates asset\ncost based on the level of production. As production varies, so\nwill the credit to accumulated depreciation. Consequently,\nwhen an asset’s service potential declines with use, the units-\nof-production method is the most appropriate method.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في أي الحالات التالية تكون طريقة وحدات الإنتاج للإهلاك أكثر ملاءمة؟",
+    "choicesAr": [
+      "تنخفض قدرة الأصل على تقديم الخدمات مع الاستخدام.",
+      "تنخفض قدرة الأصل مع مرور الزمن.",
+      "يتعرض الأصل لتقادم سريع.",
+      "تزداد إصلاحات الأصل وصيانته مع الاستخدام."
+    ],
+    "explanationAr": "تخصص طريقة وحدات الإنتاج تكلفة الأصل القابلة للإهلاك حسب مستوى الإنتاج. ومع تغير الإنتاج يتغير المبلغ الدائن لمجمع الإهلاك. لذا تكون الطريقة ملائمة عندما تنخفض القدرة الخدمية للأصل مع الاستخدام."
   },
   {
     "unit": 3,
