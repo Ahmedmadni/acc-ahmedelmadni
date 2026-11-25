@@ -3765,7 +3765,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Cash flows from investing activities for the year include the\n$2,800,000 inflow from the sale of available-for-sale securities\nand the $1,500,000 cash outflow for the purchase of land\n($2,800,000 − $1,500,000 = $1,300,000 net cash inflow).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فيما يلي معلومات مالية مختارة لشركة كريستينا عن السنة المنتهية:\nصافي الدخل: $2,000,000\nزيادة صافي الذمم المدينة: 300,000\nانخفاض المخزون: 100,000\nزيادة الذمم الدائنة: 200,000\nمصروف الإهلاك: 400,000\nربح بيع الأوراق المالية المتاحة للبيع: 700,000\nنقد مستحق من إصدار أسهم عادية: 800,000\nنقد مدفوع لتوزيعات الأرباح: 80,000\nنقد مدفوع لشراء أرض: 1,500,000\nنقد محصل من بيع الأوراق المالية المتاحة للبيع: 2,800,000\nما صافي التدفقات النقدية من الأنشطة الاستثمارية للسنة؟",
+    "choicesAr": [
+      "$(1,500,000)",
+      "$1,220,000",
+      "$1,300,000",
+      "$2,800,000"
+    ],
+    "explanationAr": "تشمل التدفقات الاستثمارية تدفقًا داخلًا بقيمة $2,800,000 من بيع الأوراق المالية المتاحة للبيع وتدفقًا خارجًا بقيمة $1,500,000 لشراء الأرض. الصافي = $2,800,000 − $1,500,000 = $1,300,000 تدفق نقدي داخل."
   },
   {
     "unit": 1,
@@ -3782,7 +3790,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The following is the net cash flow from operating activities\ncalculated using the indirect method:\nNet income                                  $2,000,000\nAdd: Decrease in inventory                     100,000\nAdd: Increase in accounts payable              200,000\nAdd: Depreciation expense                      400,000\nMinus: Increase in net accounts receivable (300,000)\nMinus: Gain on sale of securities             (700,000)\nNet cash provided by operating activities    $1,700,000\nThe adjustment from cost of goods sold (an accrual\naccounting amount used to calculate net income) to cash paid\nto suppliers requires two steps: (1) from cost of goods sold to\npurchases and (2) from purchases to cash paid to suppliers.\nThe $100,000 decrease in inventory is added to net income. It\nindicates that purchases were $100,000 less than cost of\ngoods sold. The $200,000 increase in accounts payable is\nadded to net income. It indicates that cash paid to suppliers\nwas $200,000 less than purchases. Thus, the net effect of the\nchanges in inventory and accounts payable is that cash paid\nto suppliers was $300,000 ($100,000 + $200,000) less than\nthe accrual basis cost of goods sold. Depreciation expense\n($400,000) is a noncash item included in net income. Hence, it\nis added to net income. The net accounts receivable balance\nincreased by $300,000, implying that cash collections were\nless than sales. If sales, collections, write-offs, and recognition\nof bad debt expense were the only relevant transactions,\n$300,000 should be subtracted from net income. Use of the\nchange in net accounts receivable as a reconciliation\nadjustment is a short-cut method. It yields the same net\nadjustment to net income as separately including the effects of\nthe change in gross accounts receivable, bad debt expense (a\nnoncash item resulting in an addition), and bad debt write-offs\n(a subtraction to reflect that write-offs did not result in\ncollections). The sale of securities is an investing activity. It\nalso is subtracted from net income.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فيما يلي معلومات مالية مختارة لشركة كريستينا عن السنة المنتهية:\nصافي الدخل: $2,000,000\nزيادة صافي الذمم المدينة: 300,000\nانخفاض المخزون: 100,000\nزيادة الذمم الدائنة: 200,000\nمصروف الإهلاك: 400,000\nربح بيع الأوراق المالية المتاحة للبيع: 700,000\nنقد مستحق من إصدار أسهم عادية: 800,000\nنقد مدفوع لتوزيعات الأرباح: 80,000\nنقد مدفوع لشراء أرض: 1,500,000\nنقد محصل من بيع الأوراق المالية المتاحة للبيع: 2,800,000\nبافتراض استخدام الطريقة غير المباشرة، ما صافي التدفقات النقدية التشغيلية للسنة؟",
+    "choicesAr": [
+      "$1,700,000",
+      "$2,000,000",
+      "$2,400,000",
+      "$3,100,000"
+    ],
+    "explanationAr": "صافي التدفقات التشغيلية بالطريقة غير المباشرة:\nصافي الدخل $2,000,000\nيضاف: انخفاض المخزون 100,000\nيضاف: زيادة الذمم الدائنة 200,000\nيضاف: الإهلاك 400,000\nيطرح: زيادة صافي الذمم المدينة (300,000)\nيطرح: ربح بيع الأوراق المالية (700,000)\nصافي النقد من التشغيل $1,700,000\nيتطلب تحويل تكلفة البضاعة المباعة إلى المدفوع للموردين خطوتين: (1) تحديد المشتريات، و(2) تحديد النقد المدفوع عنها. انخفاض المخزون $100,000 يعني أن المشتريات أقل من تكلفة البضاعة المباعة بمبلغ $100,000. وزيادة الدائنين $200,000 تعني أن المدفوع للموردين أقل من المشتريات بمبلغ $200,000. وبالتالي يكون النقد المدفوع أقل من تكلفة البضاعة المباعة بمبلغ $300,000 ($100,000 + $200,000). ويضاف مصروف الإهلاك ($400,000) لأنه غير نقدي. أما زيادة صافي الذمم المدينة $300,000 فتعني أن التحصيل أقل من المبيعات في حدود الافتراضات المعطاة. إذا اقتصرت المعاملات على المبيعات والتحصيل والشطب ومصروف الديون المعدومة، يطرح $300,000 من صافي الدخل. ويختصر تعديل صافي الذمم أثر تغير إجمالي الذمم ومصروف الديون المعدومة والشطب. بيع الأوراق المالية نشاط استثماري؛ لذا يطرح ربح البيع من صافي الدخل عند حساب التدفق التشغيلي، وليس كامل متحصلات البيع."
   },
   {
     "unit": 1,
@@ -3799,7 +3815,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The following is the net cash flow from operating activities\ncalculated using the indirect method:\nNet income                                  $ 920,000\nAdd: Increase in accounts payable                45,000\nAdd: Increase in deferred tax liability          16,000\nAdd: Depreciation expense                      110,000\nMinus: Increase in net accounts receivable      (73,000)\nNet cash provided by operating activities    $1,018,000\nThe adjustment from cost of goods sold (an accrual\naccounting amount used to calculate net income) to cash paid\nto suppliers requires two steps: (1) from cost of goods sold to\npurchases and (2) from purchases to cash paid to suppliers.\nAn increase in inventory is subtracted from net income. It\nindicates that purchases were greater than cost of goods sold.\nA decrease in inventory is added to net income. It indicates\nthat purchases were less than cost of goods sold. However,\nthe change in inventory is not given, so it is assumed to be\nzero. The increase in accounts payable is added to net\nincome. It indicates that cash paid to suppliers was $45,000\nless than purchases. Thus, the net effect of the changes in\ninventory and accounts payable is that cash paid to suppliers\nwas $45,000 ($0 + $45,000) less than the accrual basis cost\nof goods sold. The increase in a deferred income tax liability\n(debit income tax expense, credit deferred liability) is a\nnoncash item. The adjustment is a $16,000 addition to net\nincome. Depreciation ($110,000) also is a noncash item that is\nadded to net income. The net accounts receivable balance\nincreased by $73,000, implying that cash collections were less\nthan sales. If sales, collections, write-offs, and recognition of\nbad debt expense were the only relevant transactions,\n$73,000 should be subtracted from net income. Use of the\nchange in net accounts receivable as a reconciliation\nadjustment is a short-cut method. It yields the same net\nadjustment to net income as separately including the effects of\nthe change in gross accounts receivable, bad debt expense (a\nnoncash item resulting in an addition), and bad debt write-offs\n(reflecting that write-offs did not result in collections).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "حققت منشأة النتائج التالية للسنة المالية المنتهية:\nصافي الدخل $920,000\nمصروف الإهلاك 110,000\nزيادة الذمم الدائنة 45,000\nزيادة صافي الذمم المدينة 73,000\nزيادة التزام ضريبة الدخل المؤجلة 16,000\nما صافي التدفقات النقدية من الأنشطة التشغيلية؟",
+    "choicesAr": [
+      "$928,000",
+      "$986,000",
+      "$1,018,000",
+      "$1,074,000"
+    ],
+    "explanationAr": "صافي النقد من التشغيل بالطريقة غير المباشرة:\nصافي الدخل $920,000\nيضاف: زيادة الذمم الدائنة 45,000\nيضاف: زيادة الالتزام الضريبي المؤجل 16,000\nيضاف: الإهلاك 110,000\nيطرح: زيادة صافي الذمم المدينة (73,000)\nصافي النقد من التشغيل $1,018,000\nيتطلب تحويل تكلفة البضاعة المباعة إلى النقد المدفوع للموردين خطوتين: (1) تحديد المشتريات، و(2) تحديد المدفوع للموردين. زيادة المخزون تطرح من صافي الدخل وانخفاضه يضاف إليه. ولعدم ذكر تغير المخزون يفترض عدم تغيره. زيادة الذمم الدائنة تعني أن المدفوع أقل من المشتريات بمبلغ $45,000، وبذلك يقل النقد المدفوع عن تكلفة البضاعة المباعة بمبلغ $45,000 ($0 + $45,000). وبافتراض أن زيادة الالتزام الضريبي المؤجل ناتجة عن مصروف الضريبة غير النقدي ضمن صافي الدخل، تضاف $16,000. ويضاف الإهلاك ($110,000) لأنه مصروف غير نقدي. زيادة صافي الذمم المدينة $73,000 تشير إلى أن التحصيل أقل من المبيعات. وإذا اقتصرت المعاملات ذات الصلة على المبيعات والتحصيل والشطب ومصروف الديون المعدومة، يطرح $73,000. ويختصر تعديل صافي الذمم آثار تغير الإجمالي ومصروف الديون المعدومة والشطب."
   },
   {
     "unit": 1,
@@ -3816,7 +3840,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The statement of cash flows reports the cash effects of\ntransactions. The accrual-basis gain on the stock is not\nrelevant.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "قبل ثلاثة أعوام اشترت شركة أسهمًا بتكلفة $100,000. وبيعت هذه الأسهم بمبلغ $150,000 خلال السنة المالية الحالية. بافتراض تصنيف الاستثمار ضمن الأنشطة الاستثمارية، كيف يظهر أثر المعاملة في هذا القسم من قائمة التدفقات النقدية؟",
+    "choicesAr": [
+      "صفر.",
+      "$50,000",
+      "$100,000",
+      "$150,000"
+    ],
+    "explanationAr": "تعرض قائمة التدفقات النقدية الأثر النقدي للمعاملة، أي كامل متحصلات البيع، وليس ربح البيع المحاسبي على أساس الاستحقاق. ويستند التصنيف الاستثماري هنا إلى الافتراض المذكور في السؤال."
   },
   {
     "unit": 1,
@@ -3833,7 +3865,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The net operating cash flow may be determined by reconciling\nit with net income.\nNet income                             $ 82,000\nAdd: Decrease in receivables              6,000\nAdd: Depreciation expense                20,000\nMinus: Increase in inventories          (12,000)\nMinus: Decrease in payables              (3,000)\nMinus: Gain on sale of equipment        (10,000)\nNet cash provided by operating activities $ 83,000\nAn increase in current operating assets and a decrease in\ncurrent operating liabilities must be subtracted from net\nincome. Therefore, the increase in inventories of $12,000 and\nthe decrease in accounts payable of $3,000 must be\nsubtracted from net income.\nA decrease in current operating assets and an increase in\ncurrent operating liabilities must be added to net income.\nTherefore, the decrease in receivables of $6,000 must be\nadded to net income. A gain on sale of equipment is a gain\nwhose cash effect is related to investing activities. Thus, the\ngain on sale of equipment of $10,000 must be subtracted from\nnet income. The depreciation expense for the year of $20,000\n($83,000 ending accumulated depreciation + $7,000\naccumulated depreciation on equipment sold – $70,000\nbeginning accumulated depreciation) is a noncash expense\nincluded in net income. Thus, it must be added to net income\nto determine the net cash flow from operating activities.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "جمع مراقب مالي المعلومات التالية لإعداد قائمة التدفقات النقدية. صافي دخل السنة الحالية $82,000. خلال السنة بيعت معدات قديمة تكلفتها $60,000 وصافي قيمتها الدفترية $53,000 نقدًا بربح $10,000. واشتريت معدات جديدة بمبلغ $100,000. وفيما يلي أرصدة مختارة للسنة السابقة والحالية على الترتيب:\nالنقد: $39,000 | $85,000\nصافي الذمم المدينة: 43,000 | 37,000\nالمخزون: 93,000 | 105,000\nالمعدات: 360,000 | 400,000\nمجمع إهلاك المعدات: 70,000 | 83,000\nالذمم الدائنة: 22,000 | 19,000\nأوراق الدفع: 100,000 | 100,000\nالأسهم العادية: 250,000 | 250,000\nالأرباح المبقاة: 93,000 | 175,000\nما صافي التدفقات النقدية التشغيلية للسنة الحالية؟",
+    "choicesAr": [
+      "$63,000",
+      "$73,000",
+      "$83,000",
+      "$93,000"
+    ],
+    "explanationAr": "يحسب صافي النقد التشغيلي بمطابقة صافي الدخل:\nصافي الدخل $82,000\nيضاف: انخفاض الذمم المدينة 6,000\nيضاف: الإهلاك 20,000\nيطرح: زيادة المخزون (12,000)\nيطرح: انخفاض الذمم الدائنة (3,000)\nيطرح: ربح بيع المعدات (10,000)\nصافي التدفق التشغيلي $83,000\nتطرح زيادة الأصول التشغيلية المتداولة وانخفاض الالتزامات التشغيلية المتداولة. لذلك تطرح زيادة المخزون $12,000 وانخفاض الذمم الدائنة $3,000. ويضاف انخفاض الذمم المدينة $6,000. ويطرح ربح بيع المعدات $10,000 لأن المتحصلات تتعلق بالنشاط الاستثماري. أما الإهلاك للسنة فهو $20,000 ($83,000 مجمع الإهلاك في نهاية السنة + $7,000 مجمع إهلاك المعدات المباعة − $70,000 رصيد البداية)، وهو مصروف غير نقدي يضاف إلى صافي الدخل."
   },
   {
     "unit": 1,
@@ -3867,7 +3907,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Cash repayments of an amount borrowed are cash outflows\nfrom financing activities on the statement of cash flows.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بالنسبة لشركة صناعية، أي مما يلي يدخل ضمن التدفقات النقدية الخارجة من الأنشطة التمويلية في قائمة التدفقات النقدية؟",
+    "choicesAr": [
+      "دفع الرواتب والأجور.",
+      "سداد أصل ديون الشركة.",
+      "إصدار أسهم جديدة.",
+      "دفع فوائد ديون الشركة."
+    ],
+    "explanationAr": "يعد سداد أصل المبلغ المقترض تدفقًا نقديًا خارجًا من الأنشطة التمويلية. ويستند تمييزه عن مدفوعات الفائدة في السؤال إلى التصنيف التقليدي وفق US GAAP؛ وقد تختلف قواعد تصنيف الفوائد بحسب إطار التقارير المالية المطبق."
   },
   {
     "unit": 1,
@@ -3901,7 +3949,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The following equation should be solved for the cash outflow:\nEnding = Beginning balance – Depreciation –\nequipment Carrying amount of the asset sold + Cash\nbalance paid for equipment\nThe cash outflow for the purchase of equipment therefore may\nbe determined as follows:\nEquipment at year-end (net)       $304,000\nBeginning balance                 (295,700)\nDepreciation                         22,400\nCarrying amount of asset sold\n($40,000 sale – $21,600 gain) 18,400\nCash outflow – Purchase price     $ 49,100",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تعد محاسبة قائمة التدفقات النقدية بالطريقة غير المباشرة. وجدت أن صافي رصيد المعدات في السنة السابقة (بعد طرح مجمع الإهلاك) بلغ $295,700، وفي السنة الحالية بلغ $304,000. وبلغ مصروف الإهلاك خلال السنة $22,400. وباعت الشركة معدات بمبلغ $40,000 محققة ربحًا قدره $21,600. ما التدفق النقدي الخارج لشراء المعدات خلال السنة، بافتراض أن الإضافات نقدية ولا توجد تغيرات أخرى؟",
+    "choicesAr": [
+      "$4,300",
+      "$49,100",
+      "$52,300",
+      "$70,700"
+    ],
+    "explanationAr": "تحسب المدفوعات من معادلة حركة صافي المعدات: رصيد النهاية = رصيد البداية − الإهلاك − القيمة الدفترية للأصل المباع + النقد المدفوع لشراء المعدات.\nصافي المعدات في نهاية السنة $304,000\nيطرح رصيد البداية (295,700)\nيضاف الإهلاك 22,400\nتضاف القيمة الدفترية للأصل المباع ($40,000 متحصلات البيع − $21,600 الربح) 18,400\nالتدفق النقدي الخارج لشراء المعدات $49,100."
   },
   {
     "unit": 1,
