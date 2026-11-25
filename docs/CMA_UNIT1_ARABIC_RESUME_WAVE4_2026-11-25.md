@@ -1,0 +1,3 @@
+# Unit 1 resumed Arabic Wave 4
+
+Three educational Arabic drafts: §5 Q67–69. Unit 1: 177/217 (81.6%); combined imported bank: 1330/2443. Source and keys preserved; numerical parity and independent arithmetic checked. Section 5: 60/69 translated, nine held. New holds: Q64 p.179 explanation refers to Year 1 while the calculation concerns Year 2; Q65 p.180 table-reflowed stem contains answer fragment; Q66 p.182 ambiguously describes disposal gain as an increase, not the period's gain. Original page validation pending. Next: §6, 30 untranslated questions. Unit 1 also has one §4 hold. No source-page certification.
