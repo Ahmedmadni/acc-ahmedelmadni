@@ -22,3 +22,11 @@ test("Unit 1 cash flow wave 2 preserves source, numbers and answers",()=>{
  assert.equal([500000,300000,100000][1],300000);
  assert.ok(rows.filter(r=>r.stemAr&&r.choicesAr&&r.explanationAr).length>=165);
 });
+
+const wave3Pins=new Map([[53,[167,0,"72afe936"]],[55,[169,1,"4e342621"]],[56,[170,1,"fcc7960c"]],[57,[171,0,"6906acb2"]],[58,[172,3,"d8a01a25"]],[60,[174,0,"ed616788"]],[61,[176,0,"55e96a11"]],[62,[177,2,"52e457ab"]],[63,[178,3,"8baebfa7"]]]);
+test("Unit 1 cash flow wave 3 preserves source, answers and numerical parity",()=>{
+ for(const [n,[page,index,hash]] of wave3Pins){const r=rows.find(r=>r.section===5&&r.number===n);assert.equal(r.page,page);assert.equal(r.answerIndex,index);assert.equal(r.answerStatus,"source");assert.equal(fingerprint(JSON.stringify([r.stem,r.choices,r.explanation,r.answerIndex,r.page])),hash);assert.equal(validateCmaTranslation({question:{en:r.stem},choices:{en:r.choices},explanation:{en:r.explanation}},{question:r.stemAr,choices:r.choicesAr,explanation:r.explanationAr}).valid,true,String(n));for(const [en,ar] of [[r.stem,r.stemAr],...r.choices.map((c,i)=>[c,r.choicesAr[i]]),[r.explanation,r.explanationAr]])assert.deepEqual(cmaNumericTokens(ar),cmaNumericTokens(en),String(n));}
+ const adapter=read("src/data/cma-questions-gleim-2025-vol1.ts");for(const n of [54,59]){const r=rows.find(r=>r.section===5&&r.number===n);assert.equal(r.stemAr,undefined);assert.ok(adapter.includes('"1.5.'+n+'"'));}
+ assert.equal(25000-8000-3000,14000);assert.equal(-80000-60000,-140000);assert.equal(10000-5000,5000);assert.equal(1000*15,15000);assert.equal(-300+250+200+100,250);
+ assert.ok(rows.filter(r=>r.stemAr&&r.choicesAr&&r.explanationAr).length>=174);
+});
