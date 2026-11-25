@@ -131,7 +131,7 @@ const pendingAnswerRoundingReviews = new Set(["14.2.23"]);
  * The sourceLayoutReview flag is the shared compatibility safety gate.
  */
 // Unit 15 §6 Q28 asks for actual machine hours but volume variance only identifies standard allowed hours.
-const pendingAnswerConsistencyReviews = new Set(["14.6.21", "15.6.28", "15.6.58", "15.6.61", "15.8.26", "15.8.31", "16.1.42", "16.3.9", "16.3.10", "16.3.11", "16.3.26", "16.3.43", "16.3.53", "16.4.9", "16.5.13", "16.5.21", "16.5.22", "16.5.25", "16.5.28", "16.5.33", "16.5.34", "17.1.1", "17.1.2", "17.1.3", "17.1.4", "17.1.5", "17.1.6", "17.1.10", "17.1.11", "17.1.12", "17.1.14", "17.1.18", "17.1.20", "17.1.22", "17.1.26", "17.2.2", "17.2.21", "17.2.37", "17.2.43", "17.2.46"]);
+const pendingAnswerConsistencyReviews = new Set(["14.6.21", "15.6.28", "15.6.58", "15.6.61", "15.8.26", "15.8.31", "16.1.42", "16.3.9", "16.3.10", "16.3.11", "16.3.26", "16.3.43", "16.3.53", "16.4.9", "16.5.13", "16.5.21", "16.5.22", "16.5.25", "16.5.28", "16.5.33", "16.5.34", "17.1.1", "17.1.2", "17.1.3", "17.1.4", "17.1.5", "17.1.6", "17.1.10", "17.1.11", "17.1.12", "17.1.14", "17.1.18", "17.1.20", "17.1.22", "17.1.26", "17.2.2", "17.2.21", "17.2.37", "17.2.43", "17.2.46", "17.2.55"]);
 
 /** §5 Q10 is a follow-up to Montero's preceding case: its isolated stem
  * contains neither the prior cash collections nor the cash expense schedule.
