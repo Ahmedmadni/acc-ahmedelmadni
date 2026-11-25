@@ -8,6 +8,13 @@
       "when": 1794638373663,
       "tag": "0000_restrict_kb_internal_links_admin",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1795594193086,
+      "tag": "0001_november_2026_iasb_articles",
+      "breakpoints": true
     }
   ]
 }
