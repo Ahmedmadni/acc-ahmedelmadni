@@ -105,3 +105,5 @@
 - [x] Unit 2 Wave 3: seven inventory fundamentals Arabic drafts (§2 Q2/Q4–9); **24/107 (22.4%)**. Q1 opening/ending inventory label, Q3 freight responsibility, Q10 incorrect explanation subject held. Continue §2 Q11. See `docs/CMA_UNIT2_ARABIC_WAVE3_2026-11-25.md`.
 
 - [x] Unit 2 Wave 4: eight inventory fundamentals Arabic drafts (§2 Q11–18); **32/107 (29.9%)**. Section 2 initial review complete: 15 translated and three held. Continue §3 cost flow. See `docs/CMA_UNIT2_ARABIC_WAVE4_2026-11-25.md`.
+
+- [x] Unit 2 Wave 5: eight cost flow Arabic drafts (§3 Q1–3/Q5–7/Q9–10); **40/107 (37.4%)**. Q4 legacy revenue recognition criteria and Q8 accounting policy versus estimate ambiguity held. Continue §3 Q11. See `docs/CMA_UNIT2_ARABIC_WAVE5_2026-11-25.md`.
