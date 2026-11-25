@@ -4844,7 +4844,15 @@
     ],
     "answerIndex": 3,
     "explanation": "In a consolidated balance sheet, reciprocal balances, such as\nreceivables and payables, between a parent and subsidary\nare eliminated in their entirety. The portion of the subsidiary’s\nstock held by the parent is irrelevant.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "إذا أظهرت قائمة المركز المالي المنفصلة لشركة أم رصيدًا مدينًا مستحقًا من شركة تابعة قدره $10,000 ورصيدًا دائنًا مستحقًا للتابعة نفسها قدره $5,000، فكيف يُعرض هذان الرصيدان في قائمة المركز المالي الموحدة؟",
+    "choicesAr": [
+      "يُعرض الرصيد المدين دون الدائن.",
+      "يُعرض الرصيد الدائن ويُعامل الرصيد المدين باعتباره خسارة ائتمانية.",
+      "تُجرى مقاصة بين الرصيدين ويُعرض صافي الرصيد.",
+      "يُستبعد الرصيدان المدين والدائن."
+    ],
+    "explanationAr": "عند إعداد قائمة المركز المالي الموحدة، تُستبعد الأرصدة المتبادلة بين الأم والتابعة، مثل الذمم المدينة والدائنة، بالكامل. ولا تؤثر نسبة ملكية الأم لأسهم التابعة في هذا الاستبعاد."
   },
   {
     "unit": 1,
@@ -4861,7 +4869,15 @@
     ],
     "answerIndex": 2,
     "explanation": "In a financial entity combination that results in a parent-\nsubsidiary relationship, the parent and subsidiary(ies) remain\nseparate legal entities, but the combination is one economic\nentity.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "إذا كانت شركة أم تمتلك بالكامل أربع شركات تابعة، فكم عدد المنشآت من منظور مساهمي الشركة الأم؟",
+    "choicesAr": [
+      "كيان قانوني واحد وكيان اقتصادي واحد.",
+      "خمسة كيانات اقتصادية وكيان قانوني واحد.",
+      "خمسة كيانات قانونية وكيان اقتصادي واحد فقط.",
+      "أربعة كيانات قانونية وكيان موحد واحد."
+    ],
+    "explanationAr": "عندما ينتج عن تجميع المنشآت المالية علاقة بين شركة أم وشركات تابعة، تظل الأم والتابعات كيانات قانونية مستقلة، لكنها تشكل معًا كيانًا اقتصاديًا واحدًا لأغراض التوحيد."
   },
   {
     "unit": 1,
@@ -4895,7 +4911,15 @@
     ],
     "answerIndex": 1,
     "explanation": "All entities in which a parent has a controlling financial interest\nthrough direct or indirect ownership of a majority voting\ninterest ordinarily must be consolidated. However, a\nsubsidiary is not consolidated when control does not rest with\nthe majority owner. Primor has direct control of Sublette and\nindirect control of Minos and should consolidate both.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تمتلك شركة Primor الصناعية 75% من حقوق التصويت في شركة Sublette الاستثمارية. وتمتلك Sublette نسبة 60% من حقوق التصويت في شركة Minos للتأمين. هل ينبغي استخدام طريقة التوحيد أم طريقة حقوق الملكية لكل من Sublette وMinos في القوائم المالية الموحدة لشركة Primor؟",
+    "choicesAr": [
+      "التوحيد لشركة Sublette وطريقة حقوق الملكية لشركة Minos.",
+      "التوحيد لكل من Sublette وMinos.",
+      "طريقة حقوق الملكية لشركة Sublette والتوحيد لشركة Minos.",
+      "طريقة حقوق الملكية لكل من Sublette وMinos."
+    ],
+    "explanationAr": "في الظروف العادية، يجب توحيد جميع المنشآت التي تمتلك فيها الأم حصة مالية مسيطرة من خلال امتلاك أغلبية حقوق التصويت مباشرة أو بصورة غير مباشرة. ومع ذلك، لا تُوحَّد المنشأة التابعة إذا لم تكن السيطرة بيد مالك الأغلبية. وبافتراض عدم انطباق استثناء خاص من التوحيد، تسيطر Primor مباشرة على Sublette وغير مباشرة على Minos؛ ولذلك توحد الشركتين."
   },
   {
     "unit": 1,
@@ -4912,7 +4936,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Consolidated financial statements should reflect the economic\nactivities of an entity measured without regard to the\nboundaries of the legal entity. Accounting information pertains\nto an entity, the boundaries of which are not necessarily those\nof the legal entity. For instance, a parent and subsidiary are\nlegally separate but are treated as a single entity in\nconsolidated statements.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عند وجود علاقة بين شركة أم وشركة تابعة، تعكس القوائم المالية الموحدة أي مفهوم محاسبي؟",
+    "choicesAr": [
+      "الموثوقية.",
+      "الأهمية النسبية.",
+      "الكيان القانوني.",
+      "الكيان الاقتصادي."
+    ],
+    "explanationAr": "ينبغي أن تعكس القوائم الموحدة الأنشطة الاقتصادية للمنشأة دون التقيد بحدود الكيان القانوني. فقد تختلف حدود المنشأة التي تتعلق بها المعلومات المحاسبية عن الحدود القانونية. فعلى سبيل المثال، تكون الشركة الأم والتابعة منفصلتين قانونيًا، ولكنهما تعاملان ككيان اقتصادي واحد في القوائم الموحدة."
   },
   {
     "unit": 1,
@@ -4929,7 +4961,15 @@
     ],
     "answerIndex": 2,
     "explanation": "When one entity controls another, consolidated financial\nstatements must be issued regardless of the percentage of\nownership. Control is the direct or indirect ability to determine\nthe direction of management and policies of the investee. This\nusually means one entity’s direct or indirect ownership of more\nthan 50% of the outstanding voting interests of another entity.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لأغراض توحيد المصالح المالية، ما المقصود بأغلبية حقوق التصويت؟",
+    "choicesAr": [
+      "50% من الأسهم القائمة ذات حق التصويت في منشأة أخرى والمملوكة مباشرة أو غير مباشرة.",
+      "50% من الأسهم القائمة ذات حق التصويت وما لا يقل عن 50% من الأسهم القائمة دون حق تصويت في منشأة أخرى، سواء كانت الملكية مباشرة أو غير مباشرة.",
+      "أكثر من 50% من الأسهم القائمة ذات حق التصويت في منشأة أخرى والمملوكة مباشرة أو غير مباشرة.",
+      "أكثر من 50% من الأسهم القائمة ذات حق التصويت وما لا يقل عن 50% من الأسهم القائمة دون حق تصويت في منشأة أخرى، سواء كانت الملكية مباشرة أو غير مباشرة."
+    ],
+    "explanationAr": "عندما تسيطر منشأة على أخرى، يجب إعداد القوائم المالية الموحدة، بصرف النظر عن نسبة الملكية، مع مراعاة الاستثناءات المحاسبية المنطبقة. وتعني السيطرة القدرة المباشرة أو غير المباشرة على توجيه إدارة المنشأة المستثمر فيها وسياساتها. وفي نموذج حقوق التصويت، يتحقق ذلك عادة بامتلاك أكثر من 50% من حقوق التصويت القائمة في المنشأة الأخرى بصورة مباشرة أو غير مباشرة."
   },
   {
     "unit": 1,
@@ -4946,7 +4986,15 @@
     ],
     "answerIndex": 3,
     "explanation": "When (1) the net of the acquisition-date fair values of the\nidentifiable assets acquired and liabilities assumed exceeds\n(2) the sum of the acquisition-date fair values of (a) the\nconsideration transferred, (b) any noncontrolling interest in the\nacquiree, and (c) the acquirer’s previously held equity interest\nin the acquiree, the acquirer recognizes the excess as a gain\nfrom bargain purchase.\nAcquisition-date fair value of consideration                    $\ntransferred (100,000 shares × $10)                    1,000,000\nAcquisition-date fair value of identifiable net\nassets acquired                                       (1,400,000)\nGain from a bargain purchase                          $ (400,000)",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "استحوذت شركة Acquirer نقدًا بسعر $10 للسهم على 100,000 سهم من الأسهم العادية القائمة لشركة Acquiree. وبلغ إجمالي القيمة العادلة للأصول القابلة للتحديد المقتناة مطروحًا منها الالتزامات المتحملة $1.4 مليون في تاريخ الاستحواذ، بما في ذلك القيمة العادلة للعقارات والآلات والمعدات (وهي أصولها غير المتداولة الوحيدة) البالغة $250,000. ما الذي يجب أن تعكسه القوائم الموحدة لشركة Acquirer وتابعتها المملوكة بالكامل؟",
+    "choicesAr": [
+      "رصيد دائن مؤجل قدره $150,000.",
+      "شهرة قدرها $150,000.",
+      "مكسب قدره $150,000.",
+      "مكسب قدره $400,000."
+    ],
+    "explanationAr": "عندما يتجاوز (1) صافي القيم العادلة في تاريخ الاستحواذ للأصول القابلة للتحديد المقتناة والالتزامات المتحملة (2) مجموع القيم العادلة في تاريخ الاستحواذ لكل من (أ) المقابل المحول، و(ب) الحقوق غير المسيطرة، و(ج) حصة الملكية السابقة للمستحوذ في المنشأة المستحوذ عليها، يُثبت الفرق مكسبًا من شراء بسعر منخفض بعد إعادة التحقق من القياسات المطلوبة.\nالقيمة العادلة للمقابل المحول في تاريخ الاستحواذ (100,000 سهم × $10): 1,000,000\nالقيمة العادلة لصافي الأصول القابلة للتحديد المقتناة: (1,400,000)\nالفرق في هذا العرض: $ (400,000)، ويُثبت باعتباره مكسبًا موجبًا وليس خسارة."
   },
   {
     "unit": 1,
@@ -4963,7 +5011,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A bargain purchase is recognized in the consolidated financial\nstatements as an ordinary gain at the acquisition date. A\nbargain purchase occurs when the net of the acquisition-date\nfair values of identifiable assets acquired and liabilities\nassumed exceeds the sum of the acquisition-date fair values\nof the consideration transferred, any noncontrolling interest\nrecognized, and any previously held equity interest in the\nacquiree.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "كيف ينبغي للمستحوذ إثبات الشراء بسعر منخفض عند الاستحواذ على نشاط أعمال؟",
+    "choicesAr": [
+      "شهرة سالبة في قائمة المركز المالي.",
+      "شهرة في قائمة المركز المالي.",
+      "مكسب ضمن الأرباح في تاريخ الاستحواذ.",
+      "مكسب مؤجل يُطفأ ضمن الأرباح خلال الفترات المستقبلية المتوقع استفادتها."
+    ],
+    "explanationAr": "يُثبت الشراء بسعر منخفض في القوائم الموحدة باعتباره مكسبًا ضمن الأرباح في تاريخ الاستحواذ، بعد إعادة التحقق من تحديد الأصول والالتزامات وقياس عناصر العملية. ويحدث عندما يتجاوز صافي القيم العادلة في تاريخ الاستحواذ للأصول القابلة للتحديد المقتناة والالتزامات المتحملة مجموع القيم العادلة للمقابل المحول والحقوق غير المسيطرة المثبتة وأي حصة ملكية سابقة في المنشأة المستحوذ عليها."
   },
   {
     "unit": 1,
@@ -4997,7 +5053,15 @@
     ],
     "answerIndex": 0,
     "explanation": "On the acquisition date, the retained earnings in the\nconsolidated financial statements are the retained earnings of\nthe parent company (Pardelle Inc). The shareholders’ equity\naccounts of the subsidiary company (Soran Co.) are\neliminated in the consolidation process and not reported in the\nconsolidated financial statements.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "استحوذت شركة Pardelle على 80% من الأسهم العادية القائمة لشركة Soran في 31 ديسمبر من السنة 1. وبلغت الأرباح المحتجزة لشركة Pardelle مبلغ $600,000، ولشركة Soran مبلغ $400,000 في تاريخ الاستحواذ. ما مقدار الأرباح المحتجزة الموحدة التي ينبغي عرضها في قائمة المركز المالي الموحدة في تاريخ الاستحواذ؟",
+    "choicesAr": [
+      "$600,000",
+      "$680,000",
+      "$920,000",
+      "$1,000,000"
+    ],
+    "explanationAr": "في تاريخ الاستحواذ، تمثل الأرباح المحتجزة في القوائم الموحدة الأرباح المحتجزة للشركة الأم Pardelle، بافتراض عدم وجود تعديلات أخرى تؤثر فيها. وتُستبعد حسابات حقوق ملكية الشركة التابعة Soran في عملية التوحيد ولا تعرض باعتبارها حقوق ملكية مستقلة في القوائم الموحدة."
   },
   {
     "unit": 1,
