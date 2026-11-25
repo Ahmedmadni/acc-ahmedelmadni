@@ -1698,7 +1698,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The COSO Internal Control – Integrated Framework consists\nprimarily of a definition of internal control, categories of\nobjectives, components and related principles, and\nrequirements of an effective system of internal control.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات الآتية بشأن إطار COSO المتكامل للرقابة الداخلية صحيحة؟",
+    "choicesAr": [
+      "أصدرت جمعية ISACA هذا الإطار.",
+      "جرى تحديث إطار COSO لإدارة مخاطر المنشأة ليصبح إطار COSO المتكامل للرقابة الداخلية.",
+      "تُلزم اللوائح الشركات المدرجة بتطبيق هذا الإطار في تصميم نظم الرقابة الداخلية.",
+      "يتضمن الإطار الأهداف والمكونات والمبادئ ذات الصلة."
+    ],
+    "explanationAr": "يتضمن إطار COSO المتكامل للرقابة الداخلية بصورة أساسية تعريف الرقابة الداخلية وفئات الأهداف والمكونات والمبادئ المرتبطة بها ومتطلبات فعالية نظام الرقابة الداخلية."
   },
   {
     "unit": 17,
@@ -1715,7 +1723,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The COSO Internal Control – Integrated Framework consists\nprimarily of a definition of internal control, categories of\nobjectives, components and related principles, and\nrequirements of an effective system of internal control.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يتضمن إطار COSO المتكامل للرقابة الداخلية تعريفًا لـ:",
+    "choicesAr": [
+      "الرقابة الداخلية ومتطلبات نظام رقابة داخلية يتسم بالكفاءة.",
+      "حوكمة البيانات ومتطلبات نظام فعال للرقابة على تقنية المعلومات.",
+      "المراجعة الداخلية ومتطلبات نظام فعال للرقابة الداخلية.",
+      "الرقابة الداخلية ومتطلبات نظام فعال للرقابة الداخلية."
+    ],
+    "explanationAr": "يتضمن إطار COSO المتكامل للرقابة الداخلية بصورة أساسية تعريف الرقابة الداخلية وفئات الأهداف والمكونات والمبادئ المرتبطة بها ومتطلبات فعالية نظام الرقابة الداخلية."
   },
   {
     "unit": 17,
@@ -1732,7 +1748,15 @@
     ],
     "answerIndex": 2,
     "explanation": "According to the COSO Internal Control – Integrated\nFramework, the components of internal control consist of the\ncontrol environment, risk assessment, control activities,\ninformation and communication, and monitoring.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يعد أحد مكونات الرقابة الداخلية وفق إطار COSO المتكامل للرقابة الداخلية؟",
+    "choicesAr": [
+      "الأداء.",
+      "المراجعة والتنقيح.",
+      "المعلومات والاتصال.",
+      "الحوكمة والثقافة."
+    ],
+    "explanationAr": "وفق إطار COSO المتكامل للرقابة الداخلية، تتمثل مكونات الرقابة الداخلية في بيئة الرقابة، وتقييم المخاطر، والأنشطة الرقابية، والمعلومات والاتصال، والمتابعة."
   },
   {
     "unit": 17,
@@ -1749,7 +1773,15 @@
     ],
     "answerIndex": 2,
     "explanation": "According to the COSO Internal Control – Integrated\nFramework, the components of internal control consist of the\ncontrol environment, risk assessment, control activities,\ninformation and communication, and monitoring.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يمثل مجموعة من مكونات الرقابة الداخلية وفق إطار COSO المتكامل للرقابة الداخلية؟",
+    "choicesAr": [
+      "الامتثال والعمليات والتقارير.",
+      "المبادئ والإطار والعملية.",
+      "المتابعة والأنشطة الرقابية وتقييم المخاطر.",
+      "الوظيفة والقطاع ووحدة التشغيل."
+    ],
+    "explanationAr": "وفق إطار COSO المتكامل للرقابة الداخلية، تتمثل مكونات الرقابة الداخلية في بيئة الرقابة، وتقييم المخاطر، والأنشطة الرقابية، والمعلومات والاتصال، والمتابعة. أما العمليات والتقارير والامتثال فهي فئات الأهداف وليست مكونات."
   },
   {
     "unit": 17,
@@ -1766,7 +1798,15 @@
     ],
     "answerIndex": 1,
     "explanation": "According to the COSO Internal Control – Integrated\nFramework, a system of internal control is effective if it\nprovides reasonable assurance of achieving an entity’s\nobjectives relating to operations, reporting, and compliance.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يكون نظام الرقابة الداخلية فعالًا إذا وفر تأكيدًا معقولًا بشأن تحقيق أهداف المنشأة. أي مما يلي يمثل إحدى فئات الأهداف المحددة في إطار COSO المتكامل للرقابة الداخلية؟",
+    "choicesAr": [
+      "الابتكار.",
+      "العمليات.",
+      "تقييم المخاطر.",
+      "الإنتاجية."
+    ],
+    "explanationAr": "وفق إطار COSO المتكامل للرقابة الداخلية، يوفر النظام الفعال تأكيدًا معقولًا بشأن تحقيق أهداف المنشأة المتعلقة بالعمليات والتقارير والامتثال."
   },
   {
     "unit": 17,
@@ -1783,7 +1823,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Internal Control – Integrated Framework, a system of internal\ncontrol is effective if it provides reasonable assurance of\nachieving an entity’s objectives relating to operations,\nreporting, and compliance.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يكون نظام الرقابة الداخلية فعالًا إذا وفر تأكيدًا معقولًا بشأن تحقيق أهداف المنشأة. أي مما يلي يمثل فئات الأهداف المحددة في إطار COSO المتكامل للرقابة الداخلية؟",
+    "choicesAr": [
+      "الداخلية والخارجية والشاملة.",
+      "المحددة والقابلة للقياس والقابلة للتحقيق.",
+      "الامتثال والعمليات والتقارير.",
+      "الاستراتيجية والامتثال والعمليات."
+    ],
+    "explanationAr": "وفق إطار COSO المتكامل للرقابة الداخلية، يوفر النظام الفعال تأكيدًا معقولًا بشأن تحقيق أهداف المنشأة المتعلقة بالعمليات والتقارير والامتثال."
   },
   {
     "unit": 17,
@@ -1800,7 +1848,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The COSO Internal Control – Integrated Framework can be\nrepresented by a cube with rows, slices, and columns. The\nrows are the five components, the slices are the three\nobjectives, and the columns are an entity’s organizational\nstructure, which includes entity level, division, operating unit,\nand function.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يدخل ضمن الهيكل التنظيمي للمنشأة وفق مكعب إطار COSO المتكامل للرقابة الداخلية؟",
+    "choicesAr": [
+      "العمليات والتقارير والامتثال.",
+      "الامتثال وإدارة المخاطر والمراجعة الداخلية.",
+      "مستوى المنشأة والقطاع ووحدة التشغيل.",
+      "الوظيفة والإدارة والشركة التابعة."
+    ],
+    "explanationAr": "يمكن تمثيل إطار COSO المتكامل للرقابة الداخلية بمكعب يوضح ثلاثة أبعاد: المكونات الخمسة، وفئات الأهداف الثلاث، والهيكل التنظيمي للمنشأة الذي يشمل مستوى المنشأة والقطاع ووحدة التشغيل والوظيفة."
   },
   {
     "unit": 17,
@@ -1817,7 +1873,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The COSO Internal Control – Integrated Framework can be\nrepresented by a cube with rows, slices, and columns. The\nrows are the five components, the slices are the three\nobjectives, and the columns are an entity’s organizational\nstructure, which includes entity level, division, operating unit,\nand function.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يعد جزءًا من بُعد الهيكل التنظيمي للمنشأة وفق مكعب إطار COSO المتكامل للرقابة الداخلية؟",
+    "choicesAr": [
+      "العملية.",
+      "الوظيفة.",
+      "النشاط.",
+      "المعاملة."
+    ],
+    "explanationAr": "يمكن تمثيل إطار COSO المتكامل للرقابة الداخلية بمكعب يوضح ثلاثة أبعاد: المكونات الخمسة، وفئات الأهداف الثلاث، والهيكل التنظيمي للمنشأة الذي يشمل مستوى المنشأة والقطاع ووحدة التشغيل والوظيفة."
   },
   {
     "unit": 17,
@@ -1851,7 +1915,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Within the COSO Internal Control – Integrated Framework, the\ncomponents are control environment, risk assessment, control\nactivities, information and communication, and monitoring;\nentity structure includes entity level, division, operating unit,\nand function; and objectives include operations, reporting, and\ncompliance.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "وفق إطار COSO المتكامل للرقابة الداخلية، أي الاختيارات الآتية يعرض مثالًا لمكون ومستوى من الهيكل التنظيمي وفئة هدف على الترتيب؟",
+    "choicesAr": [
+      "تقييم المخاطر والعمليات والتقارير.",
+      "المتابعة ومستوى المنشأة والامتثال.",
+      "القدرة ووحدة التشغيل والرقابة.",
+      "بيئة الرقابة والوظيفة والتعلم."
+    ],
+    "explanationAr": "في إطار COSO المتكامل للرقابة الداخلية، تشمل المكونات بيئة الرقابة وتقييم المخاطر والأنشطة الرقابية والمعلومات والاتصال والمتابعة؛ ويشمل الهيكل التنظيمي مستوى المنشأة والقطاع ووحدة التشغيل والوظيفة؛ وتشمل فئات الأهداف العمليات والتقارير والامتثال."
   },
   {
     "unit": 17,
@@ -1868,7 +1940,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Within the COSO Internal Control – Integrated Framework,\ncomponents include control environment, risk assessment,\ncontrol activities, information and communication, and\nmonitoring; entity structure includes entity level, division,\noperating unit, and function; and objectives include operations,\nreporting, and compliance.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "وفق إطار COSO المتكامل للرقابة الداخلية، يمثل الامتثال والمعلومات والاتصال والوظيفة أمثلة على أي أبعاد مكعب COSO بالترتيب؟",
+    "choicesAr": [
+      "هدف، ومكون، وهيكل تنظيمي.",
+      "هيكل تنظيمي، ومكون، وقطاع.",
+      "مكون، ومبدأ، وهيكل تنظيمي.",
+      "هدف، وهدف، وهيكل تنظيمي."
+    ],
+    "explanationAr": "في إطار COSO المتكامل للرقابة الداخلية، تشمل المكونات بيئة الرقابة وتقييم المخاطر والأنشطة الرقابية والمعلومات والاتصال والمتابعة؛ ويشمل الهيكل التنظيمي مستوى المنشأة والقطاع ووحدة التشغيل والوظيفة؛ وتشمل فئات الأهداف العمليات والتقارير والامتثال."
   },
   {
     "unit": 17,
@@ -1885,7 +1965,15 @@
     ],
     "answerIndex": 0,
     "explanation": "An effective system of internal control requires that each of the\nfive components of internal control and the relevant principles\nis present and functioning. “Present” refers to whether the\ncomponents and relevant principles exist in the design and\nimplementation of an internal control system.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "وفق إطار COSO المتكامل للرقابة الداخلية، أي المصطلحات الآتية يشير إلى التحقق من وجود مكونات الرقابة الداخلية والمبادئ ذات الصلة في تصميم نظام الرقابة الداخلية وتنفيذه؟",
+    "choicesAr": [
+      "موجودة (Present).",
+      "كفؤة (Efficient).",
+      "عاملة (Functioning).",
+      "تعمل معًا (Operating together)."
+    ],
+    "explanationAr": "يتطلب نظام الرقابة الداخلية الفعال وجود كل مكون من المكونات الخمسة للرقابة الداخلية والمبادئ ذات الصلة وأن تكون عاملة. ويشير مصطلح موجودة (Present) إلى وجود المكونات والمبادئ ذات الصلة في تصميم النظام وتنفيذه."
   },
   {
     "unit": 17,
@@ -1902,7 +1990,15 @@
     ],
     "answerIndex": 1,
     "explanation": "An effective system of internal control requires that each of the\nfive components of internal control and the relevant principles\nis present and functioning. “Functioning” refers to whether the\ncomponents and relevant principles continue to exist in the\noperation of an internal control system.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "وفق إطار COSO المتكامل للرقابة الداخلية، أي المصطلحات الآتية يشير إلى التحقق من استمرار وجود مكونات الرقابة الداخلية والمبادئ ذات الصلة أثناء تشغيل نظام الرقابة الداخلية؟",
+    "choicesAr": [
+      "فعالة (Effective).",
+      "عاملة (Functioning).",
+      "تعمل معًا (Operating together).",
+      "موجودة (Present)."
+    ],
+    "explanationAr": "يتطلب نظام الرقابة الداخلية الفعال وجود كل مكون من المكونات الخمسة للرقابة الداخلية والمبادئ ذات الصلة وأن تكون عاملة. ويشير مصطلح عاملة (Functioning) إلى استمرار وجود المكونات والمبادئ ذات الصلة أثناء تشغيل النظام."
   },
   {
     "unit": 17,
@@ -1919,7 +2015,15 @@
     ],
     "answerIndex": 1,
     "explanation": "An effective system of internal control requires that each of the\nfive components of internal control and the relevant principles\nis present and functioning. The five components should\noperate together in an integrated manner. “Operating\ntogether” refers to whether all five components collectively\nreduce the risk of not achieving an objective to an acceptable\nlevel.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "وفق إطار COSO المتكامل للرقابة الداخلية، أي المصطلحات الآتية يشير إلى التحقق من أن جميع مكونات الرقابة الداخلية تخفض مجتمعة خطر عدم تحقيق هدف إلى مستوى مقبول؟",
+    "choicesAr": [
+      "موجودة (Present).",
+      "تعمل معًا (Operating together).",
+      "كافية (Adequate).",
+      "عاملة (Functioning)."
+    ],
+    "explanationAr": "يتطلب نظام الرقابة الداخلية الفعال وجود كل مكون من المكونات الخمسة للرقابة الداخلية والمبادئ ذات الصلة وأن تكون عاملة. وينبغي أن تعمل المكونات الخمسة معًا بصورة متكاملة. ويعني مصطلح تعمل معًا (Operating together) أن المكونات الخمسة مجتمعة تخفض خطر عدم تحقيق الهدف إلى مستوى مقبول."
   },
   {
     "unit": 17,
@@ -1936,7 +2040,15 @@
     ],
     "answerIndex": 3,
     "explanation": "According to the COSO Internal Control – Integrated\nFramework, an effective internal control system requires that\neach of the five components of internal control and the\nrelevant principles is present and functioning. The five\ncomponents should operate together in an integrated manner.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "وفق إطار COSO المتكامل للرقابة الداخلية، يتطلب نظام الرقابة الداخلية الفعال أن:",
+    "choicesAr": [
+      "تلغي مكونات الرقابة الداخلية مجتمعة خطر عدم تحقيق الهدف.",
+      "يكون كل مكون من مكونات الرقابة الداخلية والأهداف المقابلة له موجودًا وعاملًا.",
+      "يعمل كل مكون من مكونات الرقابة الداخلية بصورة مستقلة.",
+      "يكون كل مكون من مكونات الرقابة الداخلية والمبادئ ذات الصلة موجودًا وعاملًا."
+    ],
+    "explanationAr": "يتطلب نظام الرقابة الداخلية الفعال وجود كل مكون من المكونات الخمسة للرقابة الداخلية والمبادئ ذات الصلة وأن تكون عاملة. وينبغي أن تعمل المكونات الخمسة معًا بصورة متكاملة."
   },
   {
     "unit": 17,
@@ -1953,7 +2065,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The use of judgment is required when designing,\nimplementing, and conducting internal control.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "وفق إطار COSO المتكامل للرقابة الداخلية، أي العبارات الآتية صحيحة؟",
+    "choicesAr": [
+      "تتغير مبادئ الإطار مع تطبيق التقنيات الناشئة.",
+      "يعفي استخدام مقدمي خدمات خارجيين المنشأة من مسؤوليتها عن الرقابة الداخلية.",
+      "يتطلب الإطار استخدام الحكم المهني في تصميم الرقابة الداخلية وتشغيلها.",
+      "صُمم الإطار للمنشآت الكبيرة دون الصغيرة."
+    ],
+    "explanationAr": "يلزم استخدام الحكم المهني عند تصميم الرقابة الداخلية وتنفيذها وتشغيلها. ولا يعفي إسناد الخدمات إلى جهات خارجية المنشأة من مسؤوليتها الرقابية."
   },
   {
     "unit": 17,
@@ -1970,7 +2090,15 @@
     ],
     "answerIndex": 1,
     "explanation": "According to the COSO Internal Control – Integrated\nFramework, the components of internal control consist of the\ncontrol environment, risk assessment, control activities,\ninformation and communication, and monitoring.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يعد أحد مكونات الرقابة الداخلية المحددة في إطار COSO المتكامل للرقابة الداخلية؟",
+    "choicesAr": [
+      "البيئة الداخلية.",
+      "بيئة الرقابة.",
+      "تحديد الأهداف.",
+      "الاستراتيجية."
+    ],
+    "explanationAr": "وفق إطار COSO المتكامل للرقابة الداخلية، تتمثل مكونات الرقابة الداخلية في بيئة الرقابة، وتقييم المخاطر، والأنشطة الرقابية، والمعلومات والاتصال، والمتابعة."
   },
   {
     "unit": 17,
@@ -1987,7 +2115,15 @@
     ],
     "answerIndex": 2,
     "explanation": "According to the COSO Internal Control – Integrated\nFramework, the components of internal control consist of the\ncontrol environment, risk assessment, control activities,\ninformation and communication, and monitoring.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يمثل مجموعة من مكونات الرقابة الداخلية المحددة في إطار COSO المتكامل للرقابة الداخلية؟",
+    "choicesAr": [
+      "تحديد الأحداث والمعلومات والاتصال وتقييم المخاطر.",
+      "البيئة الداخلية والأنشطة الرقابية والمتابعة.",
+      "المعلومات والاتصال وبيئة الرقابة والأنشطة الرقابية.",
+      "الحوكمة وقابلية تحمل المخاطر وبيئة الرقابة."
+    ],
+    "explanationAr": "وفق إطار COSO المتكامل للرقابة الداخلية، تتمثل مكونات الرقابة الداخلية في بيئة الرقابة، وتقييم المخاطر، والأنشطة الرقابية، والمعلومات والاتصال، والمتابعة."
   },
   {
     "unit": 17,
@@ -2004,6 +2140,14 @@
     ],
     "answerIndex": 2,
     "explanation": "Within the COSO Internal Control – Integrated Framework,\nobjectives include operations, reporting, and compliance;\ncomponents include the control environment, risk assessment,\ncontrol activities, information and communication, and\nmonitoring; and entity structure includes the entity level,\ndivision, operating unit, and function.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "وفق إطار COSO المتكامل للرقابة الداخلية، أي الاختيارات الآتية يقدم مثالًا لفئة هدف ومكون ومستوى من الهيكل التنظيمي؟\nترتيب الأعمدة: الأهداف؛ المكونات؛ الهيكل التنظيمي.",
+    "choicesAr": [
+      "التخصيص؛ تقييم المخاطر؛ مستوى المنشأة.",
+      "العمليات؛ المتابعة والمراجعة؛ الوظيفة.",
+      "التقارير؛ الأنشطة الرقابية؛ القطاع.",
+      "الامتثال؛ خلق القيمة؛ القطاع."
+    ],
+    "explanationAr": "في إطار COSO المتكامل للرقابة الداخلية، تشمل المكونات بيئة الرقابة وتقييم المخاطر والأنشطة الرقابية والمعلومات والاتصال والمتابعة؛ ويشمل الهيكل التنظيمي مستوى المنشأة والقطاع ووحدة التشغيل والوظيفة؛ وتشمل فئات الأهداف العمليات والتقارير والامتثال."
   }
 ]
