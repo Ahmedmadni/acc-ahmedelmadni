@@ -716,7 +716,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Cost of sales equals beginning inventory, plus purchases or\ncost of goods manufactured, minus ending inventory. Hence,\nover (under) statement of inventory affects cost of sales and\nincome. The Year 1 pretax income was affected by the\n$23,000 Year 1 overstatement of year-end inventory. This\nerror understated Year 1 cost of sales and overstated pretax\nincome. The corrected income is $115,000 ($138,000 –\n$23,000). The same $23,000 error caused Year 2 income to\nbe understated by overstating beginning inventory. In addition,\nthe $61,000 understatement of Year 2 year-end inventory also\ncaused Year 2 income to be understated. Thus, the corrected\nYear 2 pretax income is $338,000 ($254,000 + $23,000 +\n$61,000). The $61,000 understatement at the end of Year 2\ncaused Year 3 income to be overstated by understating\nbeginning inventory. Income for Year 3 is understated by the\n$17,000 of year-end inventory understatement. Accordingly,\nthe corrected income is $124,000 ($168,000 – $61,000 +\n$17,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "اكتُشفت أخطاء المخزون التالية لدى شركة Lithuania:\n• ظهر مخزون نهاية السنة 1 بأكثر من قيمته الصحيحة بمبلغ $23,000.\n• ظهر مخزون نهاية السنة 2 بأقل من قيمته الصحيحة بمبلغ $61,000.\n• ظهر مخزون نهاية السنة 3 بأقل من قيمته الصحيحة بمبلغ $17,000.\nكان الدخل المعلن قبل الضرائب كما يلي:\nالسنة | الدخل قبل الضرائب\nالسنة 1 | $138,000\nالسنة 2 | 254,000\nالسنة 3 | 168,000\nما الدخل الصحيح قبل الضرائب للسنوات 1 و2 و3 على الترتيب؟",
+    "choicesAr": [
+      "$161,000 و$170,000 و$212,000.",
+      "$115,000 و$338,000 و$124,000.",
+      "$161,000 و$338,000 و$90,000.",
+      "$115,000 و$338,000 و$212,000."
+    ],
+    "explanationAr": "تساوي تكلفة المبيعات مخزون أول المدة مضافًا إليه المشتريات أو تكلفة البضاعة المصنعة، مطروحًا منه مخزون آخر المدة. لذا تؤثر أخطاء المخزون في تكلفة المبيعات والدخل. تأثر دخل السنة 1 قبل الضرائب بالمبالغة البالغة $23,000 في مخزون نهاية السنة 1؛ فانخفضت تكلفة مبيعات السنة 1 عن قيمتها الصحيحة وارتفع الدخل قبل الضرائب. ويبلغ الدخل الصحيح $115,000 ($138,000 − $23,000). كما تسبب الخطأ نفسه البالغ $23,000 في انخفاض دخل السنة 2 بسبب المبالغة في مخزون أول المدة. وأدى نقص مخزون نهاية المدة البالغ $61,000 في السنة 2 إلى انخفاض دخل السنة 2 أيضًا. ومن ثم يبلغ دخل السنة 2 الصحيح قبل الضرائب $338,000 ($254,000 + $23,000 + $61,000). وأدى نقص المخزون بمبلغ $61,000 في نهاية السنة 2 إلى المبالغة في دخل السنة 3 بسبب نقص مخزون أول المدة. كما انخفض دخل السنة 3 بمبلغ $17,000 بسبب نقص مخزون آخر المدة. لذلك يبلغ الدخل الصحيح $124,000 ($168,000 − $61,000 + $17,000)."
   },
   {
     "unit": 2,
@@ -733,7 +741,15 @@
     ],
     "answerIndex": 3,
     "explanation": "FOB destination means that title passes upon delivery at the\ndestination, the seller bears the risk of loss during transit, and\nthe seller is responsible for the expense of delivering the\ngoods to the designated point. Consequently, the packaging,\nshipping, and handling costs are not included in the buyer’s\ninventory. The amount that Kerr should include is therefore the\npurchase price of $50,000.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 28 ديسمبر، اشترت شركة Kerr الصناعية بضائع تكلفتها $50,000 بشروط التسليم في الوجهة (FOB destination). وكانت بعض التكاليف المتعلقة ببيع البضائع وتسليمها كما يلي:\nالتعبئة للشحن: $1,000\nالشحن: 1,500\nرسوم المناولة الخاصة: 2,000\nاستُلمت البضائع في 31 ديسمبر. ما التكلفة التي ينبغي إدراجها ضمن المخزون في قائمة المركز المالي لشركة Kerr في 31 ديسمبر؟",
+    "choicesAr": [
+      "$54,500",
+      "$53,500",
+      "$52,000",
+      "$50,000"
+    ],
+    "explanationAr": "تعني شروط التسليم في الوجهة انتقال الملكية عند التسليم في الوجهة وتحمل البائع مخاطر الفقد أثناء النقل ومسؤوليته عن تكاليف توصيل البضائع إلى المكان المحدد، وفق الشروط المفترضة في السؤال. لذلك لا تضاف تكاليف التعبئة والشحن والمناولة التي يتحملها البائع إلى مخزون المشتري مرة أخرى. والمبلغ الواجب إدراجه هو سعر الشراء البالغ $50,000."
   },
   {
     "unit": 2,
@@ -750,7 +766,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Inventory is a current asset. Thus, overstating the ending\nbalance overstates current assets. Gross profit equals net\nsales minus cost of goods sold. Cost of goods sold is\ndecreased by ending inventory. Overstating the ending\ninventory understates cost of goods sold and overstates gross\nprofit.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "اكتُشفت مبالغة جوهرية في قيمة مخزون آخر المدة بعد إصدار القوائم المالية السنوية للشركة للجمهور. ما أثر الخطأ على القوائم المالية في نهاية السنة؟\nالأصول المتداولة | مجمل الربح",
+    "choicesAr": [
+      "أقل من الصحيح | أعلى من الصحيح",
+      "أعلى من الصحيح | أعلى من الصحيح",
+      "أقل من الصحيح | أقل من الصحيح",
+      "أعلى من الصحيح | أقل من الصحيح"
+    ],
+    "explanationAr": "المخزون أصل متداول؛ ولذلك تؤدي المبالغة في رصيد آخر المدة إلى المبالغة في الأصول المتداولة. ويساوي مجمل الربح صافي المبيعات مطروحًا منه تكلفة البضاعة المباعة. ويؤدي طرح مخزون آخر المدة من تكلفة البضاعة المتاحة للبيع إلى تحديد تكلفة البضاعة المباعة. لذا فإن المبالغة في مخزون آخر المدة تخفض تكلفة البضاعة المباعة عن قيمتها الصحيحة وترفع مجمل الربح عن قيمته الصحيحة."
   },
   {
     "unit": 2,
@@ -767,7 +791,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Cost of goods sold (COGS) equals beginning inventory, plus\npurchases during the period, minus ending inventory. Thus, a\n$1,000 overstatement of the ending inventory results in a\n$1,000 understatement of cost of goods sold. The $1,000\nunderstatement of COGS results in a $1,000 overstatement of\ngross profit, and $1,000 overstatement of retained earnings.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ظهر رصيد مخزون آخر المدة لمنشأة بأكثر من قيمته الصحيحة بمبلغ $1,000. أي العبارات التالية صحيحة وفق نظام الجرد الدوري، مع افتراض عدم وجود أثر ضريبي؟",
+    "choicesAr": [
+      "ظهرت الأرباح المحتجزة بأكثر من قيمتها الصحيحة بمبلغ $1,000.",
+      "ظهرت تكلفة البضاعة المباعة بأكثر من قيمتها الصحيحة بمبلغ $1,000.",
+      "ظهرت تكلفة البضاعة المتاحة للبيع بأكثر من قيمتها الصحيحة بمبلغ $1,000.",
+      "ظهر مجمل الربح بأقل من قيمته الصحيحة بمبلغ $1,000."
+    ],
+    "explanationAr": "تساوي تكلفة البضاعة المباعة (COGS) مخزون أول المدة مضافًا إليه مشتريات الفترة ومطروحًا منه مخزون آخر المدة. لذا فإن المبالغة بمبلغ $1,000 في مخزون آخر المدة تؤدي إلى انخفاض تكلفة البضاعة المباعة بمبلغ $1,000 عن قيمتها الصحيحة. ويؤدي انخفاض التكلفة بمبلغ $1,000 إلى المبالغة في مجمل الربح بمبلغ $1,000 وفي الأرباح المحتجزة بمبلغ $1,000، بافتراض عدم وجود أثر ضريبي."
   },
   {
     "unit": 2,
@@ -784,7 +816,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Cost of goods sold equals beginning inventory, plus cost of\ngoods manufactured for a manufacturer or purchased by a\nretailer, minus ending inventory. An understated ending\ninventory will result in an overstated cost of goods sold and an\nunderstated net income.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم شركة نظام الجرد الدوري، وظهرت تكلفة مخزون آخر المدة بأقل من قيمتها الصحيحة بمبلغ $4,000. أي مما يلي يصف أثر الخطأ على تكلفة البضاعة المباعة وصافي الدخل للسنة الحالية على الترتيب؟\nتكلفة البضاعة المباعة | صافي الدخل",
+    "choicesAr": [
+      "أقل من الصحيح | أقل من الصحيح",
+      "أقل من الصحيح | أعلى من الصحيح",
+      "أعلى من الصحيح | أقل من الصحيح",
+      "أعلى من الصحيح | أعلى من الصحيح"
+    ],
+    "explanationAr": "تساوي تكلفة البضاعة المباعة مخزون أول المدة مضافًا إليه تكلفة البضاعة المصنعة للمنشأة الصناعية أو المشتريات للمنشأة التجارية، مطروحًا منه مخزون آخر المدة. ويؤدي نقص قيمة مخزون آخر المدة إلى المبالغة في تكلفة البضاعة المباعة وإظهار صافي الدخل بأقل من قيمته الصحيحة."
   },
   {
     "unit": 2,
@@ -801,7 +841,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The inventory balance prior to adjustments was $1.5 million.\nThe merchandise shipped FOB shipping point to Herc should\nbe included because title passed when the goods were\nshipped. The goods in the shipping area should be included\nbecause title did not pass until the goods were shipped in\nYear 2. Thus, inventory reported at December 31, Year 1,\nshould be $1,710,000 ($1,500,000 + $90,000 + $120,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بلغ مخزون شركة Herc في 31 ديسمبر من السنة 1 مبلغ $1.5 مليون وفق الجرد الفعلي المسعر بالتكلفة، قبل التسويات اللازمة لما يلي:\n• بضاعة تكلفتها $90,000 شحنها مورد بشروط التسليم في نقطة الشحن (FOB shipping point) في 30 ديسمبر من السنة 1، واستُلمت وسُجلت في 5 يناير من السنة 2.\n• استُبعدت بضائع موجودة في منطقة الشحن من المخزون رغم عدم شحنها حتى 4 يناير من السنة 2. وكانت هذه البضائع قد فُوترت للعميل بشروط التسليم في نقطة الشحن في 30 ديسمبر من السنة 1، وبلغت تكلفتها $120,000.\nما قيمة المخزون الواجب عرضها في قائمة المركز المالي لشركة Herc في 31 ديسمبر من السنة 1؟",
+    "choicesAr": [
+      "$1,500,000",
+      "$1,590,000",
+      "$1,620,000",
+      "$1,710,000"
+    ],
+    "explanationAr": "بلغ رصيد المخزون قبل التسويات $1.5 مليون. وتُدرج البضاعة المشحونة إلى Herc بشروط التسليم في نقطة الشحن لأن الملكية انتقلت عند شحنها، وفق شروط السؤال. وتُدرج البضاعة الموجودة في منطقة الشحن لأن الملكية لم تنتقل حتى شحنها في السنة 2. لذا يبلغ المخزون في 31 ديسمبر من السنة 1 مبلغ $1,710,000 ($1,500,000 + $90,000 + $120,000)."
   },
   {
     "unit": 2,
@@ -818,7 +866,15 @@
     ],
     "answerIndex": 0,
     "explanation": "A consignment sale is an arrangement between the owner of\ngoods and a sales agent. Consigned goods are not sold but\nrather transferred to the agent (consignee) for possible sale.\nThe consignor records sales only when the goods are sold to\nthird parties by the consignee. Thus, unsold consigned goods\nare included in inventory at cost.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما المعالجة المحاسبية المناسبة للبضائع المحتفظ بها على سبيل الأمانة للبيع بالعمولة؟",
+    "choicesAr": [
+      "تُدرج البضائع ضمن مخزون آخر المدة لدى الموكل (مالك البضاعة).",
+      "تُدرج البضائع ضمن مخزون آخر المدة لدى الوكيل بالعمولة.",
+      "تُدرج البضائع ضمن تكلفة البضاعة المباعة لدى الوكيل فقط عند بيعها.",
+      "تُدرج البضائع ضمن تكلفة البضاعة المباعة لدى الموكل عند تسليمها للوكيل."
+    ],
+    "explanationAr": "البيع بالعمولة على سبيل الأمانة هو ترتيب بين مالك البضائع ووكيل البيع. ولا تُعد البضاعة مبيعة بمجرد نقلها للوكيل لبيعها المحتمل. ويثبت الموكل المبيعات عند بيع الوكيل البضائع لأطراف خارجية في الترتيب المعروض. لذا تظل البضاعة غير المبيعة ضمن مخزون الموكل بالتكلفة، مع مراعاة قواعد قياس المخزون اللاحقة."
   },
   {
     "unit": 2,
@@ -835,7 +891,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Items should be included in inventory when Super Toy Store\nhas control over the items. For the goods purchased under\nFOB shipping point, control of the goods passes to Super Toy\nStore when the seller makes a proper tender of delivery of the\ngoods to the carrier (i.e., on December 31). For the goods sold\nunder FOB destination, Super Toy Store has control until the\ngoods arrive at the destination (i.e., on January 3). Goods held\non consignment are never recorded as inventory by the\nconsignee (i.e., Super Toy Store). Thus, Super Toy Store’s\nending inventory on December 31 includes the inventory on\nhand, the purchased merchandise, and the merchandise\nshipped but not yet delivered, for a total of $543,000\n($350,000 + $118,000 + $75,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أظهرت سجلات مخزون متجر Super Toy Store في 31 ديسمبر ما يلي:\nالمخزون الموجود فعليًا في 31 ديسمبر: $350,000\nبضاعة مشتراة بشروط التسليم في نقطة الشحن (FOB shipping point)، شحنها المورد في 31 ديسمبر، والتسليم المتوقع في 4 يناير: 118,000\nبضاعة شُحنت للعملاء في 28 ديسمبر بشروط التسليم في الوجهة (FOB destination)، والتسليم المتوقع في 3 يناير: 75,000\nبضاعة يحتفظ بها المتجر على سبيل الأمانة للبيع بالعمولة، غير مدرجة ضمن المخزون الموجود: 38,000\nما مخزون آخر المدة للمتجر في 31 ديسمبر؟",
+    "choicesAr": [
+      "$350,000",
+      "$393,000",
+      "$468,000",
+      "$543,000"
+    ],
+    "explanationAr": "تُدرج الأصناف ضمن المخزون عندما يكون للمتجر السيطرة عليها. بالنسبة للبضاعة المشتراة بشروط التسليم في نقطة الشحن، تنتقل السيطرة للمتجر عند تسليم البائع البضاعة للناقل وفق الشروط المتفق عليها، أي في 31 ديسمبر. وبالنسبة للبضاعة المبيعة بشروط التسليم في الوجهة، يحتفظ المتجر بالسيطرة حتى وصول البضاعة للوجهة، أي في 3 يناير. ولا يسجل الوكيل (المتجر) بضائع الأمانة ضمن مخزونه طالما يحتفظ الموكل بالسيطرة. لذلك يشمل مخزون المتجر في 31 ديسمبر المخزون الموجود والبضاعة المشتراة والبضاعة المشحونة التي لم تُسلّم بعد، بإجمالي $543,000 ($350,000 + $118,000 + $75,000)."
   },
   {
     "unit": 2,
