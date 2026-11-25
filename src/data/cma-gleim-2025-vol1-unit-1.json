@@ -3974,7 +3974,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The amount of total dividends declared during the year can be\ncalculated as follows:\nBeginning retained earnings              $100,000\nNet income for the year                     40,000\nEnding retained earnings                 (125,000)\nDividends declared during the year $ 15,000\nSince $8,000 is the amount of stock dividends declared, the\namount of cash dividends declared this year is $7,000\n($15,000 – $8,000). The amount of cash dividends paid during\nthe year can be calculated as follows:\nDecrease in the cash dividends payable account\nduring the period                                 $ 5,000\nCash dividends declared during the year                7,000\nCash paid for dividends during the year        $12,000\nNOTE: Stock dividends declared does not affect the dividends\npayable account.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بلغ رصيد الأرباح المحتجزة لشركة $100,000 في بداية السنة و$125,000 في نهايتها. وبلغ صافي الدخل خلال الفترة $40,000. أظهرت قائمة المركز المالي انخفاض حساب توزيعات الأرباح المستحقة الدفع بمقدار $5,000 خلال السنة، رغم إعلان توزيعات نقدية وتوزيعات في صورة أسهم. بلغ مقدار توزيعات الأسهم $8,000. ما المبلغ الذي ينبغي عرضه في قائمة التدفقات النقدية للسنة باعتباره توزيعات أرباح نقدية مدفوعة؟",
+    "choicesAr": [
+      "$20,000",
+      "$15,000",
+      "$12,000",
+      "$5,000"
+    ],
+    "explanationAr": "يُحسب إجمالي التوزيعات المعلنة خلال السنة كما يلي:\nالأرباح المحتجزة أول السنة: $100,000\nصافي دخل السنة: $40,000\nالأرباح المحتجزة آخر السنة: (125,000)\nإجمالي التوزيعات المعلنة: $15,000\nبما أن توزيعات الأسهم المعلنة بلغت $8,000، فإن التوزيعات النقدية المعلنة بلغت $7,000 ($15,000 − $8,000).\nويُحسب المدفوع نقدًا كما يلي:\nانخفاض توزيعات الأرباح النقدية المستحقة الدفع: $5,000\nالتوزيعات النقدية المعلنة: $7,000\nإجمالي التوزيعات المدفوعة نقدًا: $12,000.\nملاحظة: لا تؤثر توزيعات الأسهم في حساب توزيعات الأرباح النقدية المستحقة الدفع."
   },
   {
     "unit": 1,
@@ -3991,7 +3999,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A statement of cash flows provides information about the cash\nreceipts and cash payments of an entity during a period. This\ninformation helps investors, creditors, and other users to\nassess the entity’s ability to generate cash and cash\nequivalents and the needs of the entity to use those cash\nflows. Historical cash flow data indicate the amount, timing,\nand certainty of future cash flows. It is also a means of\nverifying past cash flow assessments and of determining the\nrelationship between profits and net cash flows and the effects\nof changing prices.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تحلل إدارة منشأة القوائم المالية لشركة لأنها تدرس بجدية شراء مجموعة من أسهمها العادية تمنح المنشأة تأثيرًا مهمًا عليها. ما القائمة المالية التي ينبغي الاعتماد عليها أساسًا لتقييم مبالغ التدفقات النقدية المستقبلية للشركة وتوقيتها ومدى التأكد منها؟",
+    "choicesAr": [
+      "قائمة الدخل.",
+      "قائمة التغيرات في حقوق الملكية.",
+      "قائمة التدفقات النقدية.",
+      "قائمة المركز المالي."
+    ],
+    "explanationAr": "توفر قائمة التدفقات النقدية معلومات عن المقبوضات والمدفوعات النقدية خلال فترة معينة. وتساعد المستثمرين والدائنين وغيرهم على تقييم قدرة المنشأة على توليد النقد وما يعادله واحتياجاتها لاستخدامه. كما تساعد البيانات التاريخية في تقدير مبالغ التدفقات المستقبلية وتوقيتها ومدى التأكد منها، والتحقق من التقديرات السابقة، وفهم العلاقة بين الأرباح وصافي التدفقات النقدية وآثار تغير الأسعار."
   },
   {
     "unit": 1,
@@ -4008,7 +4024,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Cash flows from purchases, sales, and maturities of trading\ndebt securities are cash flows from operating activities.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي من الأوراق المالية التالية يُرجح تصنيف التدفقات النقدية الناشئة عن معاملاتها ضمن الأنشطة التشغيلية؟",
+    "choicesAr": [
+      "الأوراق المالية المحتفظ بها حتى الاستحقاق.",
+      "أوراق الدين المالية المحتفظ بها للمتاجرة.",
+      "أوراق الدين المالية المتاحة للبيع.",
+      "أوراق الدين المالية غير المتداولة."
+    ],
+    "explanationAr": "تُصنف التدفقات الناتجة عن شراء أوراق الدين المالية المحتفظ بها للمتاجرة وبيعها واستحقاقها ضمن الأنشطة التشغيلية في سياق السؤال وفق المعايير الأمريكية، عندما يكون اقتناؤها خصيصًا لإعادة البيع."
   },
   {
     "unit": 1,
@@ -4025,7 +4049,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Under the indirect method, net income must be adjusted for\nany of the following items:\n1. Noncash revenue and expenses that were included in\nnet income,\n2. Items included in net income whose cash effects\nrelate to investing or financing cash flows,\n3. All deferrals of past operating cash flows, and\n4. All accruals of expected future operating cash flows.\nThus, amortization expense (noncash expense) must be\nadded back, and the gain on the sale of equipment (investing\nactivity) and the increase in inventory over the prior year\n(deferral of past operating cash flows) must be subtracted.\nNet income                    $1,500,000\nAmortization expense               150,000\nGain on sale of equipment          (50,000)\nIncrease in WIP inventory (300,000)\nCash flow from operations $1,300,000",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فيما يلي بيانات مالية لشركة تُعد قائمة التدفقات النقدية:\nمصروف الإطفاء: $150,000\nتوزيعات نقدية مدفوعة لحملة الأسهم العادية: 75,000\nصافي الدخل: 1,500,000\nزيادة مخزون الإنتاج تحت التشغيل مقارنة بالسنة السابقة: 300,000\nربح بيع معدات: 50,000\nباستخدام الطريقة غير المباشرة، ما التدفق النقدي من الأنشطة التشغيلية؟",
+    "choicesAr": [
+      "$1,225,000",
+      "$1,300,000",
+      "$1,350,000",
+      "$1,375,000"
+    ],
+    "explanationAr": "وفق الطريقة غير المباشرة، يُعدل صافي الدخل لاستبعاد آثار:\n1. الإيرادات والمصروفات غير النقدية الداخلة في صافي الدخل.\n2. البنود الداخلة في صافي الدخل التي ترتبط آثارها النقدية بالاستثمار أو التمويل.\n3. تأجيلات التدفقات التشغيلية السابقة.\n4. استحقاقات التدفقات التشغيلية المستقبلية المتوقعة.\nلذلك يُضاف مصروف الإطفاء غير النقدي، ويُطرح ربح بيع المعدات المرتبط بالاستثمار وزيادة المخزون المرتبطة بالنشاط التشغيلي.\nصافي الدخل: $1,500,000\nمصروف الإطفاء: 150,000\nربح بيع المعدات: (50,000)\nزيادة مخزون الإنتاج تحت التشغيل: (300,000)\nصافي التدفق التشغيلي: $1,300,000."
   },
   {
     "unit": 1,
@@ -4042,7 +4074,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The primary purpose is to provide information about the cash\nreceipts and cash payments of a business entity during a\nperiod. This information helps investors, creditors, and other\nusers to assess the entity’s ability to generate net cash\ninflows, meet its obligations, pay dividends, and secure\nexternal financing. It also helps assess reasons for the\ndifferences between net income and net cash flow and the\neffects of cash and noncash financing and investing activities.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما الغرض الأساسي من قائمة التدفقات النقدية؟",
+    "choicesAr": [
+      "تقديم معلومات عن الفروق بين صافي الدخل والمقبوضات والمدفوعات النقدية المرتبطة به.",
+      "تقديم معلومات عن قدرة المنشأة على توليد صافي تدفقات نقدية مستقبلية موجبة.",
+      "تقديم معلومات عن المقبوضات والمدفوعات النقدية للمنشأة خلال فترة معينة.",
+      "تقديم معلومات عن قدرة المنشأة على الوفاء باحتياجاتها النقدية التشغيلية."
+    ],
+    "explanationAr": "الغرض الأساسي هو بيان المقبوضات والمدفوعات النقدية للمنشأة خلال الفترة. وتساعد هذه المعلومات المستثمرين والدائنين وغيرهم في تقييم قدرتها على توليد صافي تدفقات نقدية داخلة، والوفاء بالتزاماتها، ودفع التوزيعات، والحصول على تمويل خارجي. كما تساعد على تفسير الفروق بين صافي الدخل وصافي التدفقات النقدية وآثار الأنشطة الاستثمارية والتمويلية النقدية وغير النقدية."
   },
   {
     "unit": 1,
@@ -4059,7 +4099,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Investing activities include making and collecting loans.\nWhether the debtor is a related party affects disclosure\nrequirements, not the classification of the cash inflow.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي من المتحصلات التالية يُعرض ضمن الأنشطة الاستثمارية في قائمة التدفقات النقدية؟",
+    "choicesAr": [
+      "متحصلات إصدار ورقة دفع.",
+      "تحصيل ورقة قبض من طرف ذي علاقة.",
+      "تحصيل حساب مدين متأخر من عميل.",
+      "استرداد ضريبي."
+    ],
+    "explanationAr": "تشمل الأنشطة الاستثمارية منح القروض وتحصيل أصلها. وكون المدين طرفًا ذا علاقة يؤثر في متطلبات الإفصاح لا في تصنيف التدفق النقدي، بافتراض أن ورقة القبض تمثل قرضًا وليس ذمة تجارية."
   },
   {
     "unit": 1,
@@ -4076,7 +4124,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Investing activities include (1) making and collecting loans; (2)\nacquiring and disposing of debt or equity instruments; and (3)\nacquiring and disposing of property, plant, and equipment and\nother productive assets (but not materials in inventory) held for\nor used in the production of goods and services.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي من المعاملات التالية ينبغي تصنيفها ضمن الأنشطة الاستثمارية في قائمة التدفقات النقدية للمنشأة؟",
+    "choicesAr": [
+      "زيادة الحسابات المدينة.",
+      "بيع العقارات والآلات والمعدات.",
+      "دفع توزيعات نقدية للمساهمين.",
+      "إصدار أسهم عادية للمساهمين."
+    ],
+    "explanationAr": "تشمل الأنشطة الاستثمارية (1) منح القروض وتحصيلها؛ (2) اقتناء أدوات الدين أو حقوق الملكية والتصرف فيها لأغراض الاستثمار؛ (3) اقتناء العقارات والآلات والمعدات والأصول الإنتاجية الأخرى والتصرف فيها، باستثناء مواد المخزون، والمحتفظ بها أو المستخدمة في إنتاج السلع والخدمات."
   },
   {
     "unit": 1,
@@ -4093,7 +4149,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Investing activities include the lending of money; the collection\nof those loans; and the acquisition, sale, or other disposal of\n(1) loans and other securities that are not cash equivalents\nand that have not been acquired specifically for resale and (2)\nproperty, plant, equipment, and other productive assets. Thus,\nthe purchase of debt and equity securities, sale of debt and\nequity securities, and acquisition of a long-term certificate of\ndeposit (not a cash equivalent) are investing activities\nassuming the debt securities are not trading securities. The\nreceipts of interest and dividends are cash flows from\noperating activities. The net cash used in investing activities\ntherefore equals $41,000 ($26,000 – $35,000 + $50,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أجرت شركة Alp المعاملات التالية خلال السنة الحالية:\n• اشترت 2,000 سهم في شركة Maybel مقابل $26,000.\n• باعت استثمارًا في سندات مصنفة متاحة للبيع مقابل $35,000، وكانت قيمته الدفترية $33,000.\n• اشترت شهادة إيداع بقيمة $50,000 لأجل 4 سنوات من بنك، وصنفتها محتفظًا بها حتى الاستحقاق. (حصلت الشركة خلال السنة على فوائد قدرها $3,750).\n• حصلت على توزيعات أرباح قدرها $1,200 من استثمارات الأسهم.\nما صافي النقد المستخدم في الأنشطة الاستثمارية في قائمة التدفقات النقدية لشركة Alp للسنة الحالية؟",
+    "choicesAr": [
+      "$37,250",
+      "$38,050",
+      "$39,800",
+      "$41,000"
+    ],
+    "explanationAr": "تشمل الأنشطة الاستثمارية منح القروض وتحصيلها واقتناء أو بيع أو التصرف في (1) القروض والأوراق المالية الأخرى التي لا تعد من معادلات النقد ولم تُقتن خصيصًا لإعادة البيع، و(2) العقارات والآلات والمعدات والأصول الإنتاجية الأخرى. لذا فإن شراء وبيع أدوات الدين وحقوق الملكية لأغراض الاستثمار واقتناء شهادة إيداع طويلة الأجل لا تعد من معادلات النقد تدخل ضمن الاستثمار، بافتراض أن أدوات الدين ليست للمتاجرة. وتُصنف الفوائد وتوزيعات الأرباح المقبوضة ضمن التشغيل وفق المعايير الأمريكية في سياق السؤال. وبذلك يبلغ صافي النقد المستخدم في الاستثمار $41,000 ($26,000 − $35,000 + $50,000)."
   },
   {
     "unit": 1,
@@ -4110,7 +4174,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Financing activities include the repayment or settlement of\ndebt obligations. Financing activities do not include the\npayment of interest. Thus, the payment of principal is an\noutflow from financing activities. The payments for interest are\noperating cash flows.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 يوليو من السنة 1، وقعت شركة Dewey عقد إيجار مبنى لمدة 20 سنة وصنفته عقد إيجار تمويليًا. دفعت الشركة الأقساط الشهرية عند استحقاقها. كيف ينبغي عرض أثر مدفوعات الإيجار في قسم الأنشطة التمويلية بقائمة التدفقات النقدية للسنة 1؟",
+    "choicesAr": [
+      "تدفق داخل يعادل القيمة الحالية لمدفوعات الإيجار المستقبلية في 1 يوليو من السنة 1 مطروحًا منها مدفوعات الأصل والفائدة للسنة 1.",
+      "تدفق خارج يعادل مدفوعات أصل الالتزام والفائدة عن الإيجار في السنة 1.",
+      "تدفق خارج يعادل مدفوعات أصل الالتزام فقط في السنة 1.",
+      "لا تُعرض مدفوعات الإيجار ضمن الأنشطة التمويلية."
+    ],
+    "explanationAr": "تشمل الأنشطة التمويلية سداد أصل التزامات الدين أو تسويتها. ووفق المعايير الأمريكية، لا تشمل مدفوعات الفوائد؛ لذا يُصنف سداد أصل التزام الإيجار التمويلي تدفقًا خارجًا تمويليًا، بينما تُصنف الفوائد المدفوعة ضمن التدفقات التشغيلية."
   },
   {
     "unit": 1,
@@ -4127,7 +4199,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The $300,000 dividend should be classified as a financing\ncash outflow. The payment of interest is an operating cash\noutflow, and the payment to acquire the common stock of\nMarks is an investing cash outflow.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تُعد شركة Abbott قائمة التدفقات النقدية للسنة. وشملت مدفوعاتها النقدية خلال السنة ما يلي:\nفوائد مدفوعة على سندات مستحقة الدفع: $500,000\nتوزيعات أرباح مدفوعة للمساهمين: 300,000\nمدفوعات لشراء 1,000 سهم عادي في شركة Marks: 100,000\nما إجمالي التدفقات النقدية الخارجة من الأنشطة التمويلية التي تعرضها الشركة وفق المعايير المحاسبية الأمريكية (U.S. GAAP)؟",
+    "choicesAr": [
+      "$0",
+      "$300,000",
+      "$800,000",
+      "$900,000"
+    ],
+    "explanationAr": "تُصنف توزيعات الأرباح البالغة $300,000 كتدفق نقدي خارج من الأنشطة التمويلية. أما الفوائد المدفوعة فتُصنف تدفقًا خارجًا تشغيليًا، والمدفوعات لاقتناء الأسهم العادية في شركة Marks فتُصنف تدفقًا خارجًا استثماريًا."
   },
   {
     "unit": 1,
