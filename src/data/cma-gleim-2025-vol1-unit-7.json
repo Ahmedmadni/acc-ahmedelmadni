@@ -1926,7 +1926,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Contribution margin is the excess of revenues over all variable\ncosts (including both manufacturing and nonmanufacturing\nvariable costs) that vary with an output-related cost driver. The\ncontribution margin equals the revenues that contribute toward\ncovering the fixed costs and providing a net income.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "هامش المساهمة هو زيادة الإيرادات على:",
+    "choicesAr": [
+      "تكلفة البضاعة المباعة.",
+      "تكاليف التصنيع.",
+      "التكاليف المباشرة.",
+      "جميع التكاليف المتغيرة."
+    ],
+    "explanationAr": "هامش المساهمة هو الفرق بين الإيرادات وجميع التكاليف المتغيرة الصناعية وغير الصناعية التي تتغير مع محرك تكلفة مرتبط بالمخرجات. ويمثل المبلغ المتاح لتغطية التكاليف الثابتة وتحقيق الربح."
   },
   {
     "unit": 7,
@@ -1943,7 +1951,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Under an absorption costing system, income can be\nmanipulated by producing more products than are sold\nbecause more fixed manufacturing overhead will be allocated\nto the ending inventory. When inventory increases, some fixed\ncosts are capitalized rather than expensed. Decreasing\nproduction, however, will result in lower income because more\nof the fixed manufacturing overhead will be expensed in the\ncurrent period.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تدفع شركة مكافآت لمديريها على أساس الدخل التشغيلي، وتستخدم التكاليف الكلية وتحمل التكاليف الصناعية غير المباشرة وفق ساعات العمل المباشر. أي التصرفات التالية لا يؤدي عادة إلى زيادة المكافآت وفق الحوافز التي يدرسها السؤال؟",
+    "choicesAr": [
+      "إنتاج المنتجات التي تتطلب أكبر قدر من العمل المباشر.",
+      "تأجيل نفقات مثل الصيانة إلى فترة لاحقة.",
+      "زيادة خطط الإنتاج بغض النظر عن طلب العملاء.",
+      "خفض إنتاج الأصناف التي تتطلب أكبر قدر من العمل المباشر."
+    ],
+    "explanationAr": "يمكن أن يشجع نظام التكاليف الكلية على تضخيم الدخل قصير الأجل بإنتاج وحدات تتجاوز المبيعات، لأن جزءًا من التكاليف الصناعية الثابتة يؤجل في مخزون آخر المدة. أما خفض الإنتاج فقد يؤدي إلى تحميل جزء أكبر من التكاليف الثابتة على مصروفات الفترة. وهذا تحليل لمشكلة الحوافز لا توصية بالتلاعب بالإنتاج أو تأجيل الصيانة الضرورية."
   },
   {
     "unit": 7,
@@ -1960,7 +1976,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Under variable costing, only the variable costs of\nmanufacturing attach to the units of output; fixed costs are\nexpensed in the period in which they are incurred. Thus, the\nvariations in cost directly attributable to changes in production\nlevel are immediately apparent under variable costing.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي من مزايا استخدام التكاليف المتغيرة؟",
+    "choicesAr": [
+      "تتوافق مع قانون ضريبة الدخل الأمريكي.",
+      "تتوافق مع المبادئ المحاسبية المتعارف عليها لأغراض التقارير الخارجية.",
+      "تجعل علاقات التكلفة بحجم النشاط أكثر وضوحًا.",
+      "أكثر ملاءمة لاستراتيجيات التسعير طويلة الأجل."
+    ],
+    "explanationAr": "وفق التكاليف المتغيرة تحمل وحدات الإنتاج بتكاليف التصنيع المتغيرة فقط، وتثبت التكاليف الثابتة مصروفًا في الفترة التي تتكبد فيها. لذلك تتضح التغيرات في التكلفة الناتجة مباشرة عن تغير مستوى الإنتاج."
   },
   {
     "unit": 7,
@@ -1994,7 +2018,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Absorption (full) costing is the accounting method that\nconsiders all manufacturing costs as product costs. These\ncosts include variable and fixed manufacturing costs whether\ndirect or indirect. Variable (direct) costing considers only\nvariable manufacturing costs to be product costs, i.e.,\ninventoriable. Fixed manufacturing costs are considered\nperiod costs and are expensed as incurred. If production is\nincreased without increasing sales, inventories will rise.\nHowever, all fixed costs associated with production will be an\nexpense of the period under variable costing. Thus, this action\nwill not artificially increase profits and improve the manager’s\nreview.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عند المقارنة بين التكاليف الكلية والمتغيرة، أي العبارات التالية خاطئة؟",
+    "choicesAr": [
+      "تتيح التكاليف الكلية للمديرين زيادة الأرباح التشغيلية قصيرة الأجل بزيادة المخزون.",
+      "عندما تتجاوز المبيعات الإنتاج يكون الربح التشغيلي وفق التكاليف المتغيرة أعلى في الحالة المعتادة.",
+      "يميل المدير الذي يقيم على أساس الربح بالتكاليف المتغيرة إلى زيادة الإنتاج في نهاية الفترة بغرض تحسين تقييمه من خلال تأجيل التكاليف الثابتة.",
+      "الربح التشغيلي وفق التكاليف الكلية يتأثر بحجم المبيعات والإنتاج معًا."
+    ],
+    "explanationAr": "تحمل التكاليف الكلية المنتج بتكاليف التصنيع المؤهلة الثابتة والمتغيرة، سواء كانت مباشرة أو غير مباشرة. أما التكاليف المتغيرة فتحمل المنتج بتكاليف التصنيع المتغيرة فقط وتثبت تكاليف التصنيع الثابتة مصروف فترة. فإذا زاد الإنتاج دون زيادة المبيعات، زاد المخزون، لكن جميع التكاليف الصناعية الثابتة تحمل على الفترة وفق التكاليف المتغيرة. لذلك لا ترفع هذه الزيادة الربح بصورة مصطنعة من خلال تأجيل تلك التكاليف."
   },
   {
     "unit": 7,
@@ -2011,7 +2043,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Because fixed factory overhead is more closely related to the\ncapacity to produce than to the production of specific units,\nvariable costing more accurately depicts the variations in cost\nresulting from changes in the level of output.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي أفضل مبرر لاستخدام التكاليف المتغيرة؟",
+    "choicesAr": [
+      "ترتبط التكاليف الصناعية غير المباشرة الثابتة بطاقة الإنتاج أكثر من ارتباطها بإنتاج وحدات محددة.",
+      "جميع التكاليف متغيرة على المدى الطويل.",
+      "التكاليف المتغيرة مقبولة لأغراض تقارير ضريبة الدخل.",
+      "تحقق التكاليف المتغيرة عادة دخلًا تشغيليًا أعلى من التكاليف الكلية."
+    ],
+    "explanationAr": "لأن التكاليف الصناعية غير المباشرة الثابتة ترتبط بطاقة الإنتاج أكثر من ارتباطها بإنتاج وحدات محددة، توضح التكاليف المتغيرة بصورة أفضل التغيرات في التكلفة الناتجة عن تغير حجم المخرجات ضمن المدى الملائم."
   },
   {
     "unit": 7,
@@ -2028,7 +2068,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Under variable costing, only variable costs (direct materials,\ndirect labor, and variable overhead) are considered product\ncosts.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "إذا استخدمت شركة صناعية التكاليف المتغيرة لقياس المخزون، فما التكاليف التي تحمل عليه؟",
+    "choicesAr": [
+      "المواد الخام المباشرة والأجور المباشرة والتكاليف الصناعية غير المباشرة المتغيرة فقط.",
+      "المواد الخام المباشرة والأجور المباشرة والتكاليف الصناعية غير المباشرة الثابتة والمتغيرة فقط.",
+      "المواد الخام المباشرة والأجور المباشرة والتكاليف الصناعية غير المباشرة المتغيرة ومصروفات البيع والإدارة المتغيرة فقط.",
+      "المواد الخام المباشرة والأجور المباشرة فقط."
+    ],
+    "explanationAr": "وفق التكاليف المتغيرة تعد تكاليف التصنيع المتغيرة فقط تكاليف منتج، وتشمل المواد المباشرة والأجور المباشرة بافتراض كونها متغيرة في هذه المسألة، والتكاليف الصناعية غير المباشرة المتغيرة."
   },
   {
     "unit": 7,
@@ -2045,7 +2093,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Fuel, food service, and airport landing fees are all variable and\ntraceable to individual flights.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تعد شركة طيران قائمة دخل وفق هامش المساهمة لتحليل تكاليفها المتغيرة وربحية التشغيل بالتفصيل. أي مجموعة تكاليف تستخدم لتقييم التكلفة المتغيرة لكل رحلة على مسار معين؟",
+    "choicesAr": [
+      "رواتب طاقم الرحلة والوقود وصيانة المحركات.",
+      "الوقود وخدمة الوجبات ورسوم الهبوط في المطار.",
+      "إهلاك الطائرة ومناولة الأمتعة وتسويق الشركة.",
+      "تشغيل نظام الاتصالات وخدمة الوجبات وأفراد الخدمات الأرضية."
+    ],
+    "explanationAr": "الوقود وخدمة الوجبات ورسوم الهبوط في المطار تكاليف تتغير عادة مع تنفيذ الرحلات ويمكن تتبعها إلى رحلات محددة وفق افتراضات السؤال. وقد يختلف السلوك الفعلي حسب عقود الخدمات ومستوى النشاط."
   },
   {
     "unit": 7,
@@ -2062,7 +2118,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Under variable costing, only costs that vary with the level of\nproduction are treated as product costs. Thus, internal income\nfigures will vary closely with sales. Under absorption costing,\nall production costs (both variable and fixed) are treated as\nproduct costs. Thus, external income figures are influenced by\nboth units sold and productive output.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم منشأة التكاليف المباشرة (المتغيرة) في التقارير الداخلية والتكاليف الكلية في القوائم المالية الخارجية. أي مما يلي يرجح أن تظهره مقارنة التقارير الداخلية والخارجية؟",
+    "choicesAr": [
+      "اختلاف معالجة مصروفات البيع والإدارة الثابتة.",
+      "تكلفة وحدة مخزون أعلى في التقارير المقدمة للإدارة منها في التقارير المقدمة للمساهمين.",
+      "عرض هامش المساهمة بدلًا من مجمل الربح في تقارير المساهمين.",
+      "دخل داخلي يرتبط بصورة وثيقة بالمبيعات ودخل خارجي يتأثر بالوحدات المباعة والإنتاج معًا."
+    ],
+    "explanationAr": "وفق التكاليف المتغيرة تحمل على المنتج تكاليف التصنيع التي تتغير مع الإنتاج، ولذلك يرتبط الدخل الداخلي بالمبيعات بصورة أوضح. أما وفق التكاليف الكلية فتحمل على المنتج تكاليف التصنيع المؤهلة الثابتة والمتغيرة، ومن ثم يتأثر الدخل الخارجي بالمبيعات والإنتاج وتغيرات المخزون."
   },
   {
     "unit": 7,
@@ -2079,7 +2143,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Factory insurance (item 1) is a factory operating cost, one of\nthe three components of manufacturing overhead (the other\ntwo being indirect materials and indirect labor). Since it is a\nmanufacturing cost, it must be treated as a product cost under\nabsorption costing, and since it is fixed over the relevant\nrange, it must be treated as a period cost under variable\ncosting. Direct labor (item 2) is treated as a product cost under\nboth systems. Finished goods shipping (item 3) is a variable\nselling and administrative cost, and, as such, is treated as a\nperiod cost under both systems.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يوضح المعالجة الصحيحة لكل من (1) تأمين المصنع، و(2) الأجور المباشرة، و(3) تكاليف شحن الإنتاج التام وفق التكاليف الكلية والمتغيرة؟\nالتكاليف الكلية: تكلفة منتج | تكلفة فترة\nالتكاليف المتغيرة: تكلفة منتج | تكلفة فترة",
+    "choicesAr": [
+      "1, 2 | 3 | 2 | 1, 3",
+      "2 | 1, 3 | 1, 2 | 3",
+      "1, 2 | 3 | 1 | 2, 3",
+      "1 | 2, 3 | 2, 3 | 1"
+    ],
+    "explanationAr": "تأمين المصنع (البند 1) تكلفة تشغيل صناعية ضمن التكاليف الصناعية غير المباشرة إلى جانب المواد والأجور غير المباشرة. وهو تكلفة منتج وفق التكاليف الكلية وتكلفة فترة وفق التكاليف المتغيرة لثباته ضمن المدى الملائم. وتعامل الأجور المباشرة (البند 2) بوصفها تكلفة منتج في النظامين بافتراض أنها متغيرة. أما شحن الإنتاج التام (البند 3) فهو تكلفة بيع متغيرة تصنف تكلفة فترة في النظامين."
   },
   {
     "unit": 7,
@@ -2096,7 +2168,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Absorption and variable costing differ in their treatment of\nfixed overhead: It is capitalized as inventory under absorption\ncosting and not under variable costing. Thus, the difference in\noperating income between the two can be explained by the\ndifference between the ending inventory in units and the\nbeginning inventory in units, multiplied by the budgeted fixed\nmanufacturing cost per unit.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عند مقارنة التكاليف الكلية والمتغيرة، بماذا يمكن تفسير الفرق في الدخل التشغيلي، بافتراض ثبات معدل تحميل تكاليف التصنيع الثابتة؟",
+    "choicesAr": [
+      "الفرق بين الوحدات المباعة والمنتجة مضروبًا في سعر بيع الوحدة.",
+      "الفرق بين وحدات مخزون آخر المدة وأول المدة مضروبًا في تكلفة التصنيع الثابتة المقدرة للوحدة.",
+      "الفرق بين وحدات مخزون آخر المدة وأول المدة مضروبًا في سعر بيع الوحدة.",
+      "الفرق بين الوحدات المباعة والمنتجة مضروبًا في تكلفة التصنيع المتغيرة المقدرة للوحدة."
+    ],
+    "explanationAr": "تختلف الطريقتان في معالجة التكاليف الصناعية الثابتة، إذ تؤجل ضمن المخزون وفق التكاليف الكلية ولا تؤجل وفق التكاليف المتغيرة. لذا يفسر الفرق بين الدخلين بالتغير في التكاليف الصناعية الثابتة المحتواة في المخزون. وعند ثبات معدل التحميل وعدم وجود فروق أخرى، يحسب بالفرق بين وحدات مخزون آخر المدة وأولها مضروبًا في تكلفة التصنيع الثابتة المقدرة للوحدة."
   },
   {
     "unit": 7,
@@ -2113,7 +2193,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The monetary value of ending inventory is never higher under\ndirect costing than under absorption costing because fewer\ncosts are capitalized under direct costing.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتحمل شركة تكاليف صناعية غير مباشرة ثابتة كبيرة لإنتاج منتجها الوحيد، وهو كاتم صوت السيارات. لأغراض التقارير الداخلية، متى تكون قيمة مخزون الإنتاج التام آخر المدة أعلى وفق التكاليف المباشرة (المتغيرة) مقارنة بالتكاليف الكلية؟",
+    "choicesAr": [
+      "عندما يزيد عدد الوحدات المنتجة على المباعة خلال السنة.",
+      "عندما يزيد عدد الوحدات المباعة على المنتجة خلال السنة.",
+      "في جميع الحالات التي يوجد فيها مخزون إنتاج تام آخر المدة.",
+      "لا شيء من هذه الحالات."
+    ],
+    "explanationAr": "مع تطبيق أساس القياس نفسه وعدم وجود تعديلات أخرى، لا تزيد القيمة النقدية لمخزون آخر المدة وفق التكاليف المتغيرة على قيمته وفق التكاليف الكلية لأن الأخيرة تتضمن أيضًا نصيب المخزون من تكاليف التصنيع الثابتة."
   },
   {
     "unit": 7,
@@ -2130,7 +2218,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Under absorption costing, the fixed portion of manufacturing\noverhead is “absorbed” into the cost of each unit of product.\nProduct cost thus include all manufacturing costs, both fixed\nand variable. The total manufacturing cost is equal to\n$2,340,000 [($5.20 × 400,000) + $260,000]. The cost per unit\nis thus $5.85 ($2,340,000 ÷ 400,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تنتج شركة الهواتف الذكية وتبيعها. وفيما يلي بيانات السنة الماضية:\nالتكلفة المتغيرة للوحدة | $5.20\nإجمالي التكاليف الصناعية غير المباشرة الثابتة | $260,000\nإجمالي مصروفات البيع والإدارة الثابتة | $180,000\nالوحدات المنتجة والمباعة | 400,000\nما تكلفة الوحدة وفق التكاليف الكلية، بافتراض أن التكلفة المتغيرة المعروضة صناعية؟",
+    "choicesAr": [
+      "$4.55",
+      "$5.00",
+      "$5.85",
+      "$6.30"
+    ],
+    "explanationAr": "وفق التكاليف الكلية تحمل كل وحدة بنصيبها من التكاليف الصناعية غير المباشرة الثابتة إضافة إلى تكاليف التصنيع المتغيرة. وتبلغ تكلفة التصنيع الإجمالية $2,340,000 [($5.20 × 400,000) + $260,000]. ومن ثم تبلغ تكلفة الوحدة $5.85 ($2,340,000 ÷ 400,000)."
   },
   {
     "unit": 7,
