@@ -14,7 +14,15 @@
     ],
     "answerIndex": 1,
     "explanation": "An investment in equity securities that does not result in\nsignificant influence or control over the investee is reported at\nfair value, and unrealized holding gains and losses are\nincluded in earnings. Consequently, the securities should be\nreported as $28,000.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 31 ديسمبر كانت لدى شركة Ott استثمارات في أوراق مالية لحقوق الملكية كما يلي:\nالشركة | التكلفة | القيمة العادلة\nMan | $10,000 | $8,000\nKemo | 9,000 | 11,000\nFenn | 11,000 | 9,000\nالإجمالي | $30,000 | $28,000\nبأي مبلغ تعرض Ott هذه الأوراق المالية في قائمة المركز المالي في 31 ديسمبر؟",
+    "choicesAr": [
+      "$26,000",
+      "$28,000",
+      "$29,000",
+      "$30,000"
+    ],
+    "explanationAr": "وفق المعايير الأمريكية، يقاس الاستثمار في أوراق حقوق الملكية الذي لا ينتج عنه تأثير مهم أو سيطرة بالقيمة العادلة، مع إثبات مكاسب وخسائر الحيازة غير المحققة في الأرباح، بافتراض انطباق هذا النموذج. لذلك تعرض الأوراق بمبلغ $28,000."
   },
   {
     "unit": 3,
@@ -31,7 +39,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Unrealized holding gains and losses on an investment in\nequity securities that do not result in significant influence or\ncontrol over the investee are reported in earnings. On a\nstatement of financial position, these securities are reported at\nfair value.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بأي أساس تعرض المنشأة استثمارًا في أوراق مالية لحقوق الملكية قابلة للتداول لا يمنحها تأثيرًا مهمًا أو سيطرة على المنشأة المستثمر فيها، وفق المعايير الأمريكية؟",
+    "choicesAr": [
+      "الأقل من التكلفة والسوق، مع إثبات مكاسب وخسائر الحيازة في الأرباح.",
+      "الأقل من التكلفة والسوق، مع إثبات مكاسب الحيازة في الأرباح في حدود الخسائر المثبتة سابقًا.",
+      "القيمة العادلة، مع إثبات مكاسب الحيازة في الأرباح في حدود الخسائر المثبتة سابقًا.",
+      "القيمة العادلة، مع إثبات مكاسب وخسائر الحيازة في الأرباح."
+    ],
+    "explanationAr": "تثبت مكاسب وخسائر الحيازة غير المحققة للاستثمار في أوراق حقوق الملكية الذي لا يمنح تأثيرًا مهمًا أو سيطرة ضمن الأرباح وفق النموذج الأمريكي المعروض. وتعرض هذه الأوراق في قائمة المركز المالي بالقيمة العادلة."
   },
   {
     "unit": 3,
@@ -65,7 +81,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A realized loss or gain is recognized when an individual equity\nsecurity is sold or otherwise disposed of. Wall would have\nincluded the $2,000 ($31,500 – $29,500) decline in the fair\nvalue of the equity securities (an unrealized holding loss) in\nearnings at 12/31/Yr 6. Consequently, the realized loss on\ndisposal at 12/15/Yr 7 is $2,900 {$29,500 carrying amount –\n[(2,000 shares × $14) – $1,400]}.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "خلال السنة 6 اشترت Wall عدد 2,000 سهم عادي من Hemp مصنفة أوراقًا مالية للمتاجرة مقابل $31,500. وتمثل الأسهم 2% من ملكية Hemp. بلغت القيمة العادلة للاستثمار $29,500 في 31 ديسمبر من السنة 6. وباعت Wall جميع الأسهم بسعر $14 للسهم في 15 ديسمبر من السنة 7، متكبدة عمولات وساطة وضرائب قدرها $1,400. ما الخسارة التي تثبتها Wall في قائمة دخل السنة المنتهية في 31 ديسمبر من السنة 7؟",
+    "choicesAr": [
+      "$4,900",
+      "$3,500",
+      "$2,900",
+      "$1,500"
+    ],
+    "explanationAr": "تثبت مكاسب أو خسائر الاستبعاد عند بيع ورقة حقوق الملكية. وقد أثبتت Wall انخفاض القيمة العادلة البالغ $2,000 ($31,500 − $29,500) كخسارة حيازة غير محققة ضمن أرباح 12/31 من السنة 6. لذا تبلغ خسارة الاستبعاد في 12/15 من السنة 7 مبلغ $2,900 {$29,500 القيمة الدفترية − [(2,000 سهم × $14) − $1,400]}."
   },
   {
     "unit": 3,
@@ -82,7 +106,15 @@
     ],
     "answerIndex": 1,
     "explanation": "An investment in equity securities that does not result in\nsignificant influence or control over the investee is measured\nat fair value in the financial statements. Changes in fair value\nare included in earnings. In Year 1, Lane recorded the\nunrealized holding gain of $6,000 ($92,000 FV – $86,000\ncost). In Year 2, Lane recorded a realized gain of $12,500\n[$104,500 price – ($86,000 cost + $6,000 unrealized gain\nrecorded in Year 1)]. Also in Year 2, Lane recorded the\nunrealized holding loss of $2,000 ($73,000 cost – $71,000\nyear-end FV). Accordingly, the Year 2 effect is a gain of\n$10,500 ($12,500 – $2,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في نهاية السنة 1 احتفظت Lane باستثمار في أوراق حقوق ملكية تكلفته $86,000 وقيمته السوقية $92,000. وخلال السنة 2 بيعت جميع الأوراق مقابل $104,500. وفي نهاية السنة 2 اقتنت Lane أوراقًا إضافية بتكلفة $73,000 وقيمة سوقية في نهاية السنة $71,000. ما أثر هذه المعاملات على قائمة دخل السنة 2؟",
+    "choicesAr": [
+      "خسارة $2,000.",
+      "مكسب $10,500.",
+      "مكسب $16,500.",
+      "مكسب $18,500."
+    ],
+    "explanationAr": "يقاس الاستثمار الذي لا يمنح تأثيرًا مهمًا أو سيطرة بالقيمة العادلة وفق النموذج الأمريكي المعروض، وتثبت تغيراتها في الأرباح. وفي السنة 1 أثبتت Lane مكسب حيازة غير محقق قدره $6,000 ($92,000 قيمة عادلة − $86,000 تكلفة). وفي السنة 2 أثبتت مكسب بيع قدره $12,500 [$104,500 سعر البيع − ($86,000 تكلفة + $6,000 مكسب غير محقق مثبت في السنة 1)]. كما أثبتت في السنة 2 خسارة حيازة غير محققة $2,000 ($73,000 تكلفة − $71,000 قيمة عادلة آخر السنة). لذلك يبلغ أثر السنة 2 مكسبًا قدره $10,500 ($12,500 − $2,000)."
   },
   {
     "unit": 3,
@@ -99,7 +131,15 @@
     ],
     "answerIndex": 1,
     "explanation": "At each balance sheet date, an investment in equity securities\nthat does not result in significant influence or control over the\ninvestee is measured at fair value. During the year, Janson\npurchased 5,000 shares and sold 4,750 shares for an ending\nbalance of 250 shares. At year end, the fair value of each\nshare is $10, so the year-end balance is $2,500 (250 shares ×\n$10 per share).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تداولت Janson أسهم Flax القابلة للتداول خلال السنة 1 كما يلي:\nالتاريخ | عدد الأسهم المشتراة (المباعة) | سعر السهم\n3 فبراير، السنة 1 | 1,100 | $11\n15 أبريل، السنة 1 | 2,500 | 9\n28 مايو، السنة 1 | (750) | 13\n5 يوليو، السنة 1 | 1,400 | 12\n30 سبتمبر، السنة 1 | (4,000) | 15\nلم تحدث معاملات أخرى خلال بقية السنة. وفي 31 ديسمبر من السنة 1 بلغ سعر سهم Flax مبلغ $10. تستخدم Janson أساس الوارد أخيرًا صادر أولًا في التداول. ما صافي قيمة الاستثمار في نهاية السنة؟",
+    "choicesAr": [
+      "$(250)",
+      "$2,500",
+      "$2,750",
+      "$3,750"
+    ],
+    "explanationAr": "في تاريخ كل قائمة مركز مالي يقاس الاستثمار في أوراق حقوق الملكية الذي لا يمنح تأثيرًا مهمًا أو سيطرة بالقيمة العادلة وفق النموذج المعروض. واشترت Janson خلال السنة 5,000 سهم وباعت 4,750 سهمًا، فتبقى 250 سهمًا. وفي نهاية السنة بلغت القيمة العادلة للسهم $10، فيكون الرصيد $2,500 (250 سهمًا × $10 للسهم)."
   },
   {
     "unit": 3,
@@ -133,7 +173,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The company holds 25% (10,000 ÷ 40,000) of the\ncorporation’s voting common stock. Under the equity method,\n(1) an investor recognizes its share of the investee’s net\nincome as an increase in the investment account:\n$200,000 × 25% = $50,000\n(2) a dividend from the investee is treated as a return of an\ninvestment:\n$160,000 × 25% = $40,000\nThus, at the end of the year, the balance in the investment in\nthe corporation account is $160,000 ($150,000 + $50,000 –\n$40,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تمتلك شركة 10,000 سهم من أسهم شركة أخرى يبلغ عدد أسهمها القائمة 40,000. وخلال السنة حققت الشركة المستثمر فيها صافي دخل $200,000 ودفعت توزيعات $160,000. وبلغ رصيد الاستثمار وفق طريقة حقوق الملكية في بداية السنة $150,000. ما رصيد الاستثمار في نهاية السنة؟",
+    "choicesAr": [
+      "$110,000",
+      "$150,000",
+      "$160,000",
+      "$240,000"
+    ],
+    "explanationAr": "تمتلك الشركة 25% (10,000 ÷ 40,000) من الأسهم العادية ذات حق التصويت. وفق طريقة حقوق الملكية: (1) تثبت حصة المستثمر في صافي دخل المنشأة المستثمر فيها زيادة في حساب الاستثمار: $200,000 × 25% = $50,000. (2) تعامل التوزيعات باعتبارها استردادًا من الاستثمار: $160,000 × 25% = $40,000. لذا يبلغ الرصيد في نهاية السنة $160,000 ($150,000 + $50,000 − $40,000)، بافتراض عدم وجود تعديلات أخرى."
   },
   {
     "unit": 3,
@@ -150,7 +198,15 @@
     ],
     "answerIndex": 3,
     "explanation": "If an investor can exercise significant influence over an\ninvestee, the investment should be accounted for by the equity\nmethod. When a corporation owns 20% or more of the voting\npower of the investee, the ability to exercise significant\ninfluence is presumed.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "اقتنت شركة حصة تصويت قدرها 30% في شركة أخرى. ما الطريقة المستخدمة عادة للمحاسبة عن الاستثمار طويل الأجل في دفاتر المستثمر؟",
+    "choicesAr": [
+      "الأقل من التكلفة والسوق.",
+      "التكلفة.",
+      "التوحيد.",
+      "حقوق الملكية."
+    ],
+    "explanationAr": "إذا استطاع المستثمر ممارسة تأثير مهم على المنشأة المستثمر فيها، يستخدم طريقة حقوق الملكية، ما لم ينطبق استثناء. وعند امتلاك 20% أو أكثر من قوة التصويت يفترض وجود تأثير مهم ما لم يثبت خلاف ذلك."
   },
   {
     "unit": 3,
@@ -167,7 +223,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Under the equity method, an investor debits an investment\nand credits revenue for its share of the investee’s earnings.\nThe receipt of a cash dividend from the investee is treated as\na return of an investment. Thus, it is credited to the investment\nbut does not affect equity-based earnings. A change in fair\nvalue has no effect on an investment in securities accounted\nfor under the equity method.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يستخدم مستثمر طريقة حقوق الملكية للاستثمار في الأسهم العادية. هل تتأثر حصته في أرباح المنشأة المستثمر فيها بكل مما يلي؟\nالتوزيعات النقدية | تغير القيمة العادلة للأسهم العادية",
+    "choicesAr": [
+      "لا | نعم",
+      "لا | لا",
+      "نعم | لا",
+      "نعم | نعم"
+    ],
+    "explanationAr": "وفق طريقة حقوق الملكية يجعل المستثمر حساب الاستثمار مدينًا ودخل الاستثمار دائنًا بحصته من الأرباح. وتعامل التوزيعات النقدية باعتبارها استردادًا من الاستثمار فتخفض رصيده ولا تؤثر في دخل حقوق الملكية. كما لا يعدل الاستثمار لمجرد تغير سعره السوقي، مع مراعاة أحكام الانخفاض في القيمة."
   },
   {
     "unit": 3,
@@ -184,7 +248,15 @@
     ],
     "answerIndex": 3,
     "explanation": "After the date of acquisition, an equity-based investment in\ncommon stock account of an investor is increased by its share\nof the earnings of the investee, decreased by its share of the\nlosses of the investee, and decreased by its share of cash\ndividends received from the investee.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يستخدم مستثمر طريقة حقوق الملكية للاستثمار في الأسهم العادية. بعد تاريخ الاقتناء، كيف يتغير حساب الاستثمار؟",
+    "choicesAr": [
+      "لا يتأثر بحصة المستثمر في أرباح أو خسائر المنشأة المستثمر فيها.",
+      "لا يتأثر بالأرباح ولكنه ينخفض بحصة الخسائر.",
+      "يزداد بحصة الأرباح ولا يتأثر بحصة الخسائر.",
+      "يزداد بحصة الأرباح وينخفض بحصة الخسائر."
+    ],
+    "explanationAr": "بعد الاقتناء يزيد حساب الاستثمار بحصة المستثمر في أرباح المنشأة المستثمر فيها، وينخفض بحصته في الخسائر وبالتوزيعات النقدية المستلمة، مع مراعاة حدود الاعتراف بالخسائر والتعديلات الأخرى."
   },
   {
     "unit": 3,
@@ -201,7 +273,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Because the investor can exercise significant influence over\nthe investee’s operating and financial policies, the investment\nshould be accounted for using the equity method. The\n$700,000 paid for the investment is equal to 20% of the $3.5\nmillion fair value. The carrying amount and fair value of the net\nassets were the same. Under these circumstances, revenue\nfrom the investment is 20% of the reported net income of\n$400,000, or $80,000. The cash dividend does not affect the\namount of income to be reported.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 يناير اقتنت شركة حصة 20% من الأسهم العادية لشركة E كاستثمار طويل الأجل. دفعت $700,000 عندما كانت القيمة العادلة والدفترية لصافي أصول E مبلغ $3.5 مليون. وتستطيع ممارسة تأثير مهم على سياساتها التشغيلية والمالية. وفي السنة المنتهية في 31 ديسمبر حققت E صافي دخل $400,000 وأعلنت ودفعت توزيعات نقدية $160,000. ما دخل الاستثمار الذي تعرضه الشركة للسنة؟",
+    "choicesAr": [
+      "$32,000",
+      "$48,000",
+      "$80,000",
+      "$112,000"
+    ],
+    "explanationAr": "نظرًا إلى وجود تأثير مهم، تستخدم طريقة حقوق الملكية. ويساوي المقابل المدفوع $700,000 نسبة 20% من القيمة العادلة البالغة $3.5 مليون. والقيمة الدفترية مساوية للعادلة. وعليه فإن دخل الاستثمار يساوي 20% من صافي الدخل المعلن $400,000، أي $80,000. ولا تؤثر التوزيعات النقدية في الدخل."
   },
   {
     "unit": 3,
@@ -218,7 +298,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Under the fair value method and the cost method, (used only if\nthe fair value method and the equity method are not\napplicable), dividends from an investee should be accounted\nfor by the investor as dividend income unless a liquidating\ndividend is received. Thus, assuming that the dividend is not\nliquidating, it has no effect on the investment account under\nthe fair value method. Under the equity method, the investor\nrecognizes its equity in the undistributed earnings of the\ninvestee. Consequently, cash dividends decrease the\ninvestment account because the dividend is considered to be\na return of investment.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "استلمت شركة توزيعًا نقديًا من استثمار في أسهم عادية. هل تثبت زيادة في حساب الاستثمار وفق كل من طريقة القيمة العادلة وطريقة حقوق الملكية؟\nالقيمة العادلة | حقوق الملكية",
+    "choicesAr": [
+      "لا | لا",
+      "نعم | نعم",
+      "نعم | لا",
+      "لا | نعم"
+    ],
+    "explanationAr": "وفق نموذج القيمة العادلة، تعالج التوزيعات العادية كدخل توزيعات، ولا تزيد حساب الاستثمار. وقد تختلف معالجة توزيعات التصفية. أما وفق طريقة حقوق الملكية فيثبت المستثمر حصته من أرباح المنشأة المستثمر فيها، وتخفض التوزيعات النقدية حساب الاستثمار باعتبارها استردادًا من الاستثمار."
   },
   {
     "unit": 3,
@@ -235,7 +323,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Under the equity method, the investor’s share of the investee’s\nnet income is accounted for as an addition to the carrying\namount of the investment on the investor’s books. Losses and\ndividends are reflected as reductions of the carrying amount.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عند استخدام المستثمر طريقة حقوق الملكية للاستثمار في الأسهم العادية، متى يزيد حساب الاستثمار؟",
+    "choicesAr": [
+      "عند إثبات حصته النسبية من صافي دخل المنشأة المستثمر فيها.",
+      "عند استلام توزيعات نقدية منها.",
+      "عند الإطفاء الدوري للشهرة المتعلقة بالشراء.",
+      "عند إثبات إهلاك يتعلق بزيادة القيمة العادلة للأصول القابلة للإهلاك عن قيمتها الدفترية في تاريخ الشراء."
+    ],
+    "explanationAr": "وفق طريقة حقوق الملكية تضاف حصة المستثمر من صافي دخل المنشأة المستثمر فيها إلى القيمة الدفترية للاستثمار. وتخفض الخسائر والتوزيعات القيمة الدفترية."
   },
   {
     "unit": 3,
@@ -252,7 +348,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Under the equity method, the receipt of a cash dividend from\nthe investee should be credited to the investment account. It is\na return of, not a return on, the investment. However, the\nequity method is not applicable to preferred stock. Thus, the\ncompany should report $60,000 of revenue when the\npreferred dividends are declared.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تمتلك شركة 30% من الأسهم العادية القائمة و100% من الأسهم الممتازة القائمة غير التراكمية وغير المصوتة لشركة A. وفي السنة 1 أعلنت A توزيعات قدرها $100,000 على الأسهم العادية و$60,000 على الأسهم الممتازة. وتمارس الشركة تأثيرًا مهمًا على A وتطبق طريقة حقوق الملكية على استثمار الأسهم العادية. ما دخل التوزيعات الذي تعرضه في قائمة الدخل للسنة المنتهية في 31 ديسمبر من السنة 1؟",
+    "choicesAr": [
+      "$0",
+      "$30,000",
+      "$60,000",
+      "$90,000"
+    ],
+    "explanationAr": "وفق طريقة حقوق الملكية تخفض التوزيعات النقدية المستلمة حساب الاستثمار، فهي استرداد منه لا دخل إضافي عليه. وبافتراض أن الأسهم الممتازة المعروضة ليست في جوهرها أسهمًا عادية خاضعة لطريقة حقوق الملكية، تثبت الشركة دخل توزيعات قدره $60,000 عند إعلان توزيعاتها."
   },
   {
     "unit": 3,
@@ -269,7 +373,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The corporation’s purchase of 30% of E presumably allows it\nto exercise significant influence. Hence, it should apply the\nequity method. The investor’s share of the investee’s income\nis a function of the percentage of ownership and the length of\ntime the investment was held. The income from this\ninvestment was therefore $18,000 [$120,000 × 30% ×\n(6 months ÷ 12 months)].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 يوليو من السنة 1 اشترت شركة 3,000 سهم من أصل 10,000 سهم عادي قائم لشركة E بسعر $20 للسهم ولم تختر خيار القيمة العادلة. وفي 15 ديسمبر من السنة 1 دفعت E توزيعات $40,000 لمساهميها العاديين. وبلغ صافي دخل E للسنة المنتهية في 31 ديسمبر من السنة 1 مبلغ $120,000 تحقق بالتساوي على مدار السنة. ما دخل الاستثمار في قائمة دخل السنة 1؟",
+    "choicesAr": [
+      "$36,000",
+      "$18,000",
+      "$12,000",
+      "$6,000"
+    ],
+    "explanationAr": "يفترض أن اقتناء حصة 30% من E يمنح تأثيرًا مهمًا، فتطبق طريقة حقوق الملكية. وتتحدد حصة المستثمر في دخل المنشأة المستثمر فيها وفق نسبة الملكية ومدة الاحتفاظ بالاستثمار. لذا يبلغ الدخل $18,000 [$120,000 × 30% × (6 أشهر ÷ 12 شهرًا)]."
   },
   {
     "unit": 3,
@@ -286,7 +398,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Under the equity method, an investor recognizes increases in\nearnings and the investment account for its share of the\ninvestee’s net income for the period and decreases in the\ninvestment account for dividends. Best Billiard should\nrecognize a $10,000 increase in the investment account for\nSupreme Table’s income and a $15,000 decrease in the\naccount for dividends. Thus, the account will experience a net\ndecrease in book value.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تمتلك Best Billiard نسبة 40% من أسهم Supreme Table بتكلفة تاريخية $300,000. وأعلنت Supreme Table أرباح السنة السابقة، وكانت حصة Best Billiard منها $10,000. كما استلمت توزيعات $15,000 في السنة السابقة. وتستخدم طريقة حقوق الملكية. ما العرض الصحيح للاستثمار؟",
+    "choicesAr": [
+      "انخفاض القيمة الدفترية للاستثمار في Supreme Table.",
+      "زيادة القيمة الدفترية للاستثمار في Supreme Table.",
+      "عرض الاستثمار بالتكلفة الأصلية.",
+      "إعداد قوائم موحدة مع Supreme Table."
+    ],
+    "explanationAr": "وفق طريقة حقوق الملكية يزيد المستثمر دخل الاستثمار ورصيده بحصته من صافي دخل المنشأة المستثمر فيها، ويخفض رصيد الاستثمار بالتوزيعات. فتثبت Best Billiard زيادة $10,000 في الاستثمار مقابل الأرباح وانخفاضًا $15,000 مقابل التوزيعات. لذلك تنخفض القيمة الدفترية بالصافي."
   },
   {
     "unit": 3,
@@ -303,7 +423,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Investment in equity securities that does not result in control or\nsignificant influence over the investee is measured at fair\nvalue each balance sheet date. Since the equity investment is\ntraded in an active market, the fair value of the investment is\nreadily determinable. Thus, the investment is measured at\n$400,000, the quoted price for an identical investment.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لدى شركة استثمار في حقوق الملكية بتكلفة تاريخية $500,000 يتداول في سوق نشطة. وفي 31 ديسمبر من السنة 1 بلغ السعر المعلن لاستثمار مطابق $400,000، ولاستثمار مشابه $430,000. وقدرت الشركة القيمة وفق نموذج داخلي للقيمة الحالية للتدفقات النقدية بمبلغ $410,000. ما قيمة الاستثمار في 31 ديسمبر من السنة 1؟",
+    "choicesAr": [
+      "$400,000",
+      "$410,000",
+      "$430,000",
+      "$500,000"
+    ],
+    "explanationAr": "يقاس استثمار أوراق حقوق الملكية الذي لا يمنح سيطرة أو تأثيرًا مهمًا بالقيمة العادلة في تاريخ كل قائمة مركز مالي وفق النموذج المعروض. ولأن الاستثمار يتداول في سوق نشطة، يمكن تحديد قيمته العادلة مباشرة. لذا يقاس بمبلغ $400,000، وهو السعر المعلن لاستثمار مطابق، بافتراض إمكان الوصول إلى السوق."
   },
   {
     "unit": 3,
@@ -320,7 +448,15 @@
     ],
     "answerIndex": 3,
     "explanation": "An investment in voting stock that enables the investor to\nexercise significant influence over the investee should be\naccounted for by the equity method (assuming that the fair\nvalue option is not elected). Because neither investment gives\nGoll Co. the ability to exercise significant influence over either\ncompany, neither the investment in Rose Co. nor the\ninvestment in Jave Co. should be accounted for using the\nequity method.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تمتلك Goll حصة 25% من الأسهم العادية لشركة Rose وحصة 18% من الأسهم العادية لشركة Jave. ولا يمنح أي من الاستثمارين Goll القدرة على ممارسة تأثير مهم على السياسات التشغيلية والمالية لأي منهما. أي الاستثمارين يخضع لطريقة حقوق الملكية؟",
+    "choicesAr": [
+      "كلاهما Rose وJave.",
+      "Rose فقط.",
+      "Jave فقط.",
+      "لا Rose ولا Jave."
+    ],
+    "explanationAr": "يحاسب عن الاستثمار في أسهم التصويت الذي يمنح تأثيرًا مهمًا وفق طريقة حقوق الملكية، بافتراض عدم اختيار خيار القيمة العادلة. ونظرًا إلى أن أيًا من الاستثمارين لا يمنح Goll تأثيرًا مهمًا، فلا تستخدم طريقة حقوق الملكية لأي منهما."
   },
   {
     "unit": 3,
@@ -337,7 +473,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Under the equity method, the investor recognizes in income its\nshare of the investee’s earnings or losses in the periods for\nwhich they are reported by the investee. Thus, Chatham’s\nequity income (investment income) for the period is $25,000\n($100,000 net income reported by Boyrum × 25%). Under the\nequity method, dividends from the investee are treated as a\nreturn of an investment. They decrease the investment\nbalance but have no effect on the investor’s income.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تمتلك Chatham نسبة 25% من أسهم التصويت لشركة Boyrum وتطبق طريقة حقوق الملكية. وقد أعلنت Boyrum دخلًا $100,000 ودفعت توزيعات نقدية $30,000 خلال الفترة. ما دخل الاستثمار الذي تعرضه Chatham؟",
+    "choicesAr": [
+      "$0",
+      "$7,500",
+      "$17,500",
+      "$25,000"
+    ],
+    "explanationAr": "وفق طريقة حقوق الملكية يثبت المستثمر حصته من أرباح أو خسائر المنشأة المستثمر فيها في الفترات التي تعلن عنها. لذا يبلغ دخل Chatham من الاستثمار $25,000 ($100,000 صافي دخل Boyrum × 25%). وتعامل التوزيعات باعتبارها استردادًا من الاستثمار، فتخفض رصيده ولا تؤثر في دخل المستثمر."
   },
   {
     "unit": 3,
@@ -354,7 +498,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The equity method should be used when the investor has\nsignificant influence over an investee and has not elected the\nfair value option. An investment of 20% or more, but not more\nthan 50%, in the voting stock of the investee generally results\nin a significant influence over an investee.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي من نسب ملكية أسهم المنشأة المستثمر فيها التالية تشير عادة إلى تطبيق طريقة حقوق الملكية؟",
+    "choicesAr": [
+      "5%",
+      "15%",
+      "25%",
+      "75%"
+    ],
+    "explanationAr": "تستخدم طريقة حقوق الملكية عند وجود تأثير مهم وعدم اختيار خيار القيمة العادلة. ويُفترض عادة وجود تأثير مهم عند امتلاك 20% أو أكثر، وبما لا يتجاوز 50% من أسهم التصويت، ما لم تظهر أدلة على خلاف ذلك أو تتحقق السيطرة."
   },
   {
     "unit": 3,
@@ -371,7 +523,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The equity method should be used because Well Co.\nexercises significant influence over Rea. The investment in\nRea equals $435,000 [$400,000 investment + ($500,000 net\nincome × 10%) – ($150,000 of dividends × 10%)].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 2 يناير اشترت Well نسبة 10% من الأسهم العادية القائمة لشركة Rea مقابل $400,000، وهو مبلغ يساوي القيمة الدفترية والعادلة للحصة المقتناة في صافي أصول Rea. ولم تختر خيار القيمة العادلة. ونظرًا إلى أنها أكبر مساهم منفرد وأن مسؤوليها يشكلون أغلبية مجلس الإدارة، فإنها تمارس تأثيرًا مهمًا وفق معطيات السؤال. وحققت Rea صافي دخل $500,000 ودفعت توزيعات $150,000. ما قيمة الاستثمار في Rea في قائمة المركز المالي في 31 ديسمبر؟",
+    "choicesAr": [
+      "$450,000",
+      "$435,000",
+      "$400,000",
+      "$385,000"
+    ],
+    "explanationAr": "تستخدم طريقة حقوق الملكية لأن Well تمارس تأثيرًا مهمًا على Rea، بافتراض عدم تحقق السيطرة. ويساوي الاستثمار $435,000 [$400,000 الاستثمار + ($500,000 صافي الدخل × 10%) − ($150,000 التوزيعات × 10%)]."
   },
   {
     "unit": 3,
@@ -388,7 +548,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Under the fair value method, dividends from an investment in\nequity securities should be accounted for by the investor as\ndividend income unless a liquidating dividend is received.\nThus, assuming that the dividend is not liquidating, it has no\neffect on the investment balance under the fair value method.\nUnder the equity method, the investor recognizes its equity in\nthe undistributed earnings of the investee. Consequently, cash\ndividends decrease the investment balance because the\ndividend is considered to be a return of investment.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "استلمت Peel توزيعًا نقديًا من استثمار في أسهم عادية. هل تثبت زيادة في رصيد الاستثمار وفق كل من طريقة القيمة العادلة وطريقة حقوق الملكية؟\nالقيمة العادلة | حقوق الملكية",
+    "choicesAr": [
+      "لا | لا",
+      "نعم | نعم",
+      "نعم | لا",
+      "لا | نعم"
+    ],
+    "explanationAr": "وفق القيمة العادلة تثبت التوزيعات العادية من استثمار أوراق حقوق الملكية كدخل توزيعات، ولا تؤثر في رصيد الاستثمار مباشرة. وقد تختلف توزيعات التصفية. أما وفق حقوق الملكية فيثبت المستثمر حصته من أرباح المنشأة المستثمر فيها، وتخفض التوزيعات النقدية رصيد الاستثمار باعتبارها استردادًا منه."
   },
   {
     "unit": 3,
@@ -422,7 +590,15 @@
     ],
     "answerIndex": 2,
     "explanation": "If an investor with significant influence over an investee has\nnot elected to account for the investment using the fair value\noption, it must apply the equity method. Thus, the carrying\namount of the investment is increased (decreased) by the\ninvestor’s share of the investee’s net income (dividends paid).\nThe year-end carrying amount is $250,000 [$200,000 +\n($600,000 × 25%) – ($400,000 × 25%)].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تمتلك Larkin نسبة 25% من الأسهم العادية لشركة Devon منذ عدة سنوات، ولديها القدرة على ممارسة تأثير مهم عليها. وفيما يلي بيانات السنة الأخيرة:\nالقيمة الدفترية للاستثمار في بداية السنة: $200,000\nصافي دخل Devon للسنة: 600,000\nإجمالي التوزيعات المدفوعة لمساهمي Devon خلال السنة: 400,000\nما القيمة الدفترية لاستثمار Larkin في نهاية السنة؟",
+    "choicesAr": [
+      "$100,000",
+      "$200,000",
+      "$250,000",
+      "$350,000"
+    ],
+    "explanationAr": "إذا لم يختر المستثمر ذو التأثير المهم خيار القيمة العادلة، يطبق طريقة حقوق الملكية. وتزيد القيمة الدفترية بحصته من صافي الدخل وتنخفض بحصته من التوزيعات. لذا تبلغ القيمة في نهاية السنة $250,000 [$200,000 + ($600,000 × 25%) − ($400,000 × 25%)]."
   },
   {
     "unit": 3,
@@ -439,7 +615,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Under the equity method, the investor recognizes in income its\nshare of the investee’s earnings or losses in the periods for\nwhich they are reported by the investee. Therefore, the\ninvestment in Turf account is increased by the investor’s share\nof the investee’s income of $16,250 ($65,000 × 25%).\nDividends from the investee are treated as a return of an\ninvestment. Thus, the investment account is decreased by the\ndividends received of $7,500 ($30,000 × 25%). The year-end\ncarrying amount of investment in Turf is therefore $558,750\n($550,000 + $16,250 – $7,500).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في بداية السنة المالية اشترت End نسبة 25% من شركة Turf مقابل $550,000. وفي نهاية السنة أعلنت Turf صافي دخل $65,000 وأعلنت ودفعت توزيعات نقدية $30,000. وتستخدم End طريقة حقوق الملكية. ما قيمة الاستثمار في Turf في قائمة المركز المالي في نهاية السنة؟",
+    "choicesAr": [
+      "$550,000",
+      "$558,750",
+      "$566,250",
+      "$573,750"
+    ],
+    "explanationAr": "وفق طريقة حقوق الملكية يثبت المستثمر حصته من أرباح أو خسائر المنشأة المستثمر فيها في فتراتها. لذا يزيد حساب الاستثمار في Turf بحصة المستثمر من الدخل البالغة $16,250 ($65,000 × 25%). وتعامل التوزيعات كاسترداد من الاستثمار، فينخفض الحساب بحصة التوزيعات $7,500 ($30,000 × 25%). لذلك تبلغ القيمة الدفترية في نهاية السنة $558,750 ($550,000 + $16,250 − $7,500)."
   },
   {
     "unit": 3,
@@ -456,7 +640,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Assuming the fair value option has not been elected,\nunrealized holding gains and losses on available-for-sale debt\nsecurities are reported in other comprehensive income.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية عن الأوراق المالية القابلة للتداول غير صحيحة وفق المعايير الأمريكية؟",
+    "choicesAr": [
+      "تثبت المكاسب والخسائر غير المحققة لمحفظة أوراق حقوق الملكية للمتاجرة في قائمة الدخل.",
+      "تثبت المكاسب والخسائر غير المحققة لمحفظة أوراق الدين المتاحة للبيع في قائمة الدخل.",
+      "تتكون محفظة المحتفظ بها حتى الاستحقاق من أوراق الدين فقط.",
+      "يمكن تحويل أوراق الدين من المحتفظ بها حتى الاستحقاق إلى المتاحة للبيع."
+    ],
+    "explanationAr": "بافتراض عدم اختيار خيار القيمة العادلة، تعرض مكاسب وخسائر الحيازة غير المحققة لأوراق الدين المتاحة للبيع في الدخل الشامل الآخر، مع مراعاة أحكام خسائر الائتمان والتحوط."
   },
   {
     "unit": 3,
@@ -473,7 +665,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Available-for-sale debt securities should be measured at fair\nvalue in the balance sheet. Thus, the bond should be reported\nat its fair value of $945,000 to reflect the unrealized holding\ngain (change in fair value).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 2 يوليو من السنة 4 اشترت Wynn كاستثمار قصير الأجل سندًا لشركة Kean بقيمة اسمية $1 مليون وفائدة 8% مقابل $910,000 بالإضافة إلى الفائدة المستحقة، بعائد 10%. تستحق السندات في 1 يناير من السنة 11 وتدفع الفائدة سنويًا في 1 يناير. وفي 31 ديسمبر من السنة 4 بلغت قيمتها العادلة $945,000. وفي 13 فبراير من السنة 5 باعتها Wynn مقابل $920,000. بأي مبلغ تعرض السند في قائمة المركز المالي في 31 ديسمبر من السنة 4 إذا صنف متاحًا للبيع؟",
+    "choicesAr": [
+      "$910,000",
+      "$920,000",
+      "$945,000",
+      "$950,000"
+    ],
+    "explanationAr": "تقاس أوراق الدين المتاحة للبيع بالقيمة العادلة في قائمة المركز المالي. لذا يعرض السند بقيمته العادلة البالغة $945,000 لتعكس تغير القيمة العادلة ومكسب الحيازة غير المحقق."
   },
   {
     "unit": 3,
@@ -490,7 +690,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Unrealized holding gains and losses on available-for-sale debt\nsecurities, including those classified as current assets, are not\nincluded in earnings but ordinarily are reported in OCI, net of\ntax effects (ignored in this question). At December 31, Year 2,\nOCI should have been debited for $10,000 for the excess of\ncost over fair value to reflect an unrealized holding loss. At\nDecember 31, Year 3, OCI should be credited to reflect a\n$30,000 unrealized holding gain ($120,000 fair value at\n12/31/Year 3 – $90,000 fair value at 12/31/Year 2).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فيما يلي بيانات أوراق الدين المتاحة للبيع لدى Lark:\nالبند | 31 ديسمبر السنة 2 | السنة 3\nالتكلفة | $100,000 | $100,000\nالقيمة العادلة | 90,000 | 120,000\nتعد الفروق بين التكلفة والقيمة العادلة مؤقتة. وقد عولج الانخفاض بشكل صحيح في 31 ديسمبر من السنة 2. مع تجاهل الضرائب، بأي مبلغ يجعل الدخل الشامل الآخر (OCI) دائنًا في 31 ديسمبر من السنة 3؟",
+    "choicesAr": [
+      "$0",
+      "$10,000",
+      "$20,000",
+      "$30,000"
+    ],
+    "explanationAr": "تعرض مكاسب وخسائر الحيازة غير المحققة لأوراق الدين المتاحة للبيع، بما فيها المصنفة أصولًا متداولة، عادةً في الدخل الشامل الآخر بعد الضرائب (المتجاهلة هنا)، لا ضمن الأرباح، بافتراض عدم وجود خسائر ائتمانية. وفي 31 ديسمبر من السنة 2 كان ينبغي جعل الدخل الشامل الآخر مدينًا بمبلغ $10,000 لزيادة التكلفة على القيمة العادلة. وفي 31 ديسمبر من السنة 3 يجعل دائنًا لإثبات مكسب حيازة غير محقق $30,000 ($120,000 القيمة العادلة في 12/31 السنة 3 − $90,000 القيمة العادلة في 12/31 السنة 2)."
   },
   {
     "unit": 3,
@@ -507,7 +715,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Assuming the fair value option has not been elected, held-to-\nmaturity securities are reported at amortized cost, with no\nunrealized gains or losses reported.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بأي أساس تقاس الاستثمارات المصنفة محتفظًا بها حتى الاستحقاق؟",
+    "choicesAr": [
+      "القيمة العادلة، مع إثبات المكاسب والخسائر غير المحققة في صافي الدخل.",
+      "القيمة العادلة، مع إثبات المكاسب والخسائر غير المحققة في الدخل الشامل الآخر.",
+      "تكلفة الاستبدال دون إثبات مكاسب أو خسائر غير محققة.",
+      "التكلفة المطفأة دون إثبات مكاسب أو خسائر حيازة غير محققة."
+    ],
+    "explanationAr": "بافتراض عدم اختيار خيار القيمة العادلة، تعرض الأوراق المحتفظ بها حتى الاستحقاق بالتكلفة المطفأة، دون إثبات تغيرات القيمة العادلة غير المحققة، مع مراعاة مخصص خسائر الائتمان."
   },
   {
     "unit": 3,
@@ -524,7 +740,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Without an election of the fair value option, investments in\ndebt securities that the investor has the ability and positive\nintent to hold until maturity must be classified as held-to-\nmaturity and measured at amortized cost.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "اشترت Kale سندات بخصم من السوق المفتوحة كاستثمار، ولديها النية والقدرة على الاحتفاظ بها حتى الاستحقاق. دون اختيار خيار القيمة العادلة، بأي أساس تحاسب عنها؟",
+    "choicesAr": [
+      "التكلفة.",
+      "التكلفة المطفأة.",
+      "القيمة العادلة.",
+      "الأقل من التكلفة والسوق."
+    ],
+    "explanationAr": "عند عدم اختيار خيار القيمة العادلة، تصنف أوراق الدين التي لدى المستثمر نية مؤكدة وقدرة على الاحتفاظ بها حتى الاستحقاق ضمن المحتفظ بها حتى الاستحقاق، وتقاس بالتكلفة المطفأة، مع مراعاة خسائر الائتمان."
   },
   {
     "unit": 3,
@@ -541,7 +765,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The temporary decline below cost of the fair value of\navailable-for-sale debt securities is recorded in OCI, assuming\nthey are not designated as being hedged in a fair value hedge.\nThus, temporary changes in the valuation of these securities\ndo not flow through net income. A realized gain occurs when\nsecurities are sold at an amount greater than their cost basis.\nRealized gains are included in net income regardless of the\nclassification of the securities.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بالنسبة لأوراق الدين المتاحة للبيع المدرجة ضمن الأصول غير المتداولة، أي البنود التالية يدخل في صافي دخل الفترة؟\nI. خسائر حيازة غير محققة خلال الفترة\nII. مكاسب محققة خلال الفترة\nIII. تغيرات القيمة العادلة خلال الفترة",
+    "choicesAr": [
+      "III فقط.",
+      "II فقط.",
+      "I وII فقط.",
+      "I وII وIII."
+    ],
+    "explanationAr": "يسجل انخفاض القيمة العادلة المؤقت غير المرتبط بالائتمان لأوراق الدين المتاحة للبيع في الدخل الشامل الآخر، بافتراض عدم تخصيصها لتحوط القيمة العادلة. لذلك لا تدخل تغيرات التقييم هذه في صافي الدخل. ويتحقق المكسب عند بيع الأوراق بأكثر من أساس تكلفتها المعدل؛ وتدخل المكاسب المحققة في صافي الدخل بصرف النظر عن التصنيف."
   },
   {
     "unit": 3,
@@ -558,7 +790,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Investments in debt securities must be classified as held-to-\nmaturity and measured at amortized cost in the balance sheet\nif the reporting entity has the positive intent and ability to hold\nthem to maturity. Debt securities that are not expected to be\nsold in the near term and that are not held-to-maturity should\nbe classified as available-for-sale. Available-for-sale debt\nsecurities should be reported at fair value, with unrealized\nholding gains and losses (except those on securities\ndesignated as being hedged in a fair value hedge) excluded\nfrom net income and reported in OCI.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عندما تزيد القيمة العادلة لاستثمار في أوراق الدين على تكلفته المطفأة، كيف تعرض الأوراق التالية في نهاية السنة دون اختيار خيار القيمة العادلة؟\nالمحتفظ بها حتى الاستحقاق | المتاحة للبيع",
+    "choicesAr": [
+      "التكلفة المطفأة | التكلفة المطفأة",
+      "التكلفة المطفأة | القيمة العادلة",
+      "القيمة العادلة | القيمة العادلة",
+      "القيمة العادلة | التكلفة المطفأة"
+    ],
+    "explanationAr": "تصنف أوراق الدين محتفظًا بها حتى الاستحقاق وتقاس بالتكلفة المطفأة إذا كانت للمنشأة نية مؤكدة وقدرة على الاحتفاظ بها حتى الاستحقاق. وتصنف الأوراق غير المحتفظ بها للمتاجرة أو حتى الاستحقاق متاحة للبيع، وتعرض بالقيمة العادلة. وتثبت مكاسب وخسائر الحيازة غير المحققة عادة في الدخل الشامل الآخر، مع مراعاة أحكام الائتمان والتحوط."
   },
   {
     "unit": 3,
@@ -592,7 +832,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Unrealized holding gains and losses on trading debt securities\nmust be recognized in earnings. Unrealized holding gains and\nlosses on available-for-sale debt securities are recognized in\nother comprehensive income.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "هل يعالج الفرق الذي تزيد به القيمة العادلة لورقة دين على تكلفتها في القوائم المالية عند تصنيفها ضمن كل مما يلي؟\nالمتاجرة | المتاحة للبيع",
+    "choicesAr": [
+      "لا | لا",
+      "لا | نعم",
+      "نعم | نعم",
+      "نعم | لا"
+    ],
+    "explanationAr": "تثبت مكاسب وخسائر الحيازة غير المحققة لأوراق الدين للمتاجرة ضمن الأرباح، بينما تثبت مكاسب وخسائر الحيازة غير المحققة لأوراق الدين المتاحة للبيع عادةً ضمن الدخل الشامل الآخر."
   },
   {
     "unit": 3,
@@ -609,7 +857,15 @@
     ],
     "answerIndex": 1,
     "explanation": "When fair value exceeds the carrying amount of held-to-\nmaturity securities, GAAP do not permit recognition of the\nunrealized holding gain. Accordingly, these debt securities\nshould be reported at their carrying amount (amortized cost).\nHowever, fair value accounting applies to available-for-sale\nand trading securities.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عندما تزيد القيمة العادلة لاستثمار في الأوراق المالية على قيمته الدفترية، كيف يعرض كل من الأصلين التاليين في نهاية السنة؟\nالمحتفظ بها حتى الاستحقاق | المتاحة للبيع",
+    "choicesAr": [
+      "القيمة العادلة | القيمة الدفترية",
+      "القيمة الدفترية | القيمة العادلة",
+      "القيمة الدفترية | القيمة الدفترية",
+      "القيمة العادلة | القيمة العادلة"
+    ],
+    "explanationAr": "عندما تزيد القيمة العادلة على القيمة الدفترية لأوراق الدين المحتفظ بها حتى الاستحقاق، لا تثبت مكاسب الحيازة غير المحققة وفق المعايير الأمريكية عند تطبيق التكلفة المطفأة. وتعرض هذه الأوراق بقيمتها الدفترية، بينما تطبق القيمة العادلة على الأوراق المتاحة للبيع والمتاجرة."
   },
   {
     "unit": 3,
@@ -626,7 +882,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The unrealized holding loss $(30,000) on the trading debt\nsecurity (Security A) is included in earnings. Unrealized\nholding gains and losses on available-for-sale debt securities,\nwhether classified as current or noncurrent, are included in\nother comprehensive income until realized. Thus, the net debit\nto other comprehensive income is $30,000 ($45,000 loss on Z\n– $10,000 gain of Y – $5,000 gain on B).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 31 ديسمبر كانت لدى Hull أوراق الدين التالية التي اشترتها خلال السنة الأولى للتشغيل:\nالورقة | التكلفة | القيمة العادلة | مكسب (خسارة) غير محقق\nالأصول المتداولة:\nA | $90,000 | $60,000 | $(30,000)\nB | 15,000 | 20,000 | 5,000\nالإجمالي | $105,000 | $80,000 | $(25,000)\nالأصول غير المتداولة:\nY | $70,000 | $80,000 | $10,000\nZ | 90,000 | 45,000 | (45,000)\nالإجمالي | $160,000 | $125,000 | $(35,000)\nتعد جميع تغيرات القيمة العادلة مؤقتة. وتصنف A للمتاجرة وبقية الأوراق متاحة للبيع. ما المبالغ التي تحمل على الأرباح والدخل الشامل الآخر في 31 ديسمبر؟\nالأرباح | الدخل الشامل الآخر",
+    "choicesAr": [
+      "$(60,000)             $0",
+      "$(30,000)             $(30,000)",
+      "$(25,000)            $(30,000)",
+      "$(25,000)            $0"
+    ],
+    "explanationAr": "تدرج خسارة الحيازة غير المحققة $(30,000) لورقة الدين A للمتاجرة ضمن الأرباح. وتدرج مكاسب وخسائر الحيازة غير المحققة لأوراق الدين المتاحة للبيع، سواء كانت متداولة أو غير متداولة، ضمن الدخل الشامل الآخر عادةً حتى تحققها، بافتراض عدم وجود خسائر ائتمانية أو أثر ضريبي. لذلك يبلغ صافي المبلغ المدين للدخل الشامل الآخر $30,000 ($45,000 خسارة Z − $10,000 مكسب Y − $5,000 مكسب B)."
   },
   {
     "unit": 3,
@@ -643,7 +907,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Fair value accounting applies to both trading and available-for-\nsale debt securities. The difference in treatment is that the\nunrealized holding gains and losses are included in earnings\nfor trading securities and in other comprehensive income for\navailable-for-sale securities, assuming the latter are not\ndesignated as being hedged in a fair value hedge. Thus, these\nsecurities should be reported in the assets section of the\nbalance sheet at their fair values of $320,000 and $450,000,\nrespectively.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بدأت Reed عملياتها في 1 يناير. وفيما يلي بيانات استثماراتها في أوراق الدين في 31 ديسمبر:\nالبند | المتاجرة | المتاحة للبيع\nالتكلفة | $360,000 | $550,000\nالقيمة العادلة | 320,000 | 450,000\nالأقل من التكلفة والقيمة العادلة لكل ورقة | 304,000 | 420,000\nإذا عدت الانخفاضات مؤقتة، فما قيمة الأوراق التي تعرض في قسم الأصول في قائمة المركز المالي في 31 ديسمبر؟\nالمتاجرة | المتاحة للبيع",
+    "choicesAr": [
+      "$360,000          $550,000",
+      "$360,000          $450,000",
+      "$320,000          $450,000",
+      "$304,000          $420,000"
+    ],
+    "explanationAr": "تطبق القيمة العادلة على أوراق الدين للمتاجرة والمتاحة للبيع. ويختلف عرض مكاسب وخسائر الحيازة غير المحققة، فتدخل في الأرباح للمتاجرة وفي الدخل الشامل الآخر للمتاحة للبيع، بافتراض عدم تخصيص الأخيرة لتحوط القيمة العادلة وعدم وجود خسائر ائتمانية. لذا تعرض الأوراق ضمن الأصول بقيمها العادلة $320,000 و$450,000 على الترتيب."
   },
   {
     "unit": 3,
@@ -660,7 +932,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Trading debt securities are bought and held primarily for sale\nin the near term. They are purchased and sold frequently.\nThey are initially recorded at cost but are remeasured at fair\nvalue at each balance sheet date, with the unrealized holding\ngains or losses recognized in earnings.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما تسمية أوراق الدين المحتفظ بها أساسًا للبيع في الأجل القريب لتحقيق دخل من فروق الأسعار قصيرة الأجل؟",
+    "choicesAr": [
+      "أوراق متاحة للبيع.",
+      "عمليات متوقفة.",
+      "أوراق محتفظ بها حتى الاستحقاق.",
+      "أوراق للمتاجرة."
+    ],
+    "explanationAr": "تشترى أوراق الدين للمتاجرة ويحتفظ بها أساسًا للبيع في الأجل القريب. وتتسم عادة بكثرة عمليات الشراء والبيع. وتقاس لاحقًا بالقيمة العادلة في تاريخ كل قائمة مركز مالي مع إثبات مكاسب وخسائر الحيازة غير المحققة في الأرباح."
   },
   {
     "unit": 3,
@@ -677,7 +957,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Unrealized holding gains and losses on trading debt securities\nare included in earnings and are therefore reported in the\nincome statement.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أين تعرض المكاسب والخسائر غير المحققة لأوراق الدين للمتاجرة؟",
+    "choicesAr": [
+      "قائمة المركز المالي.",
+      "قائمة الدخل.",
+      "الإيضاحات المتممة للقوائم المالية.",
+      "قائمة الأرباح المحتجزة."
+    ],
+    "explanationAr": "تدرج مكاسب وخسائر الحيازة غير المحققة لأوراق الدين للمتاجرة ضمن الأرباح؛ لذا تعرض في قائمة الدخل."
   },
   {
     "unit": 3,
@@ -746,7 +1034,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Available-for-sale debt securities are measured at fair value at\neach balance sheet date. Unrealized holding gains and losses\nresulting from the remeasurement to fair value are reported in\nother comprehensive income (OCI).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "استثمرت Long في أوراق مالية قابلة للتداول. وفي نهاية السنة أدرجت تغيرات القيمة العادلة للاستثمار ضمن الدخل الشامل الآخر. كيف تصنف Long الاستثمار وفق التصنيفات الأمريكية؟",
+    "choicesAr": [
+      "أوراق محتفظ بها حتى الاستحقاق.",
+      "أوراق للمتاجرة.",
+      "أوراق حقوق ملكية.",
+      "أوراق دين متاحة للبيع."
+    ],
+    "explanationAr": "تقاس أوراق الدين المتاحة للبيع بالقيمة العادلة في تاريخ كل قائمة مركز مالي. وتدرج مكاسب وخسائر الحيازة غير المحققة الناتجة عن إعادة القياس عادةً ضمن الدخل الشامل الآخر."
   },
   {
     "unit": 3,
@@ -763,7 +1059,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Under U.S. GAAP, trading securities are those held principally\nfor sale in the near term. They are classified as current and\nconsist of debt securities with readily determinable fair values.\nUnrealized holding gains and losses on trading securities are\nreported in earnings. Hence, these securities are reported at\nfair value.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بأي أساس يقاس الاستثمار في أوراق المتاجرة في قائمة المركز المالي؟",
+    "choicesAr": [
+      "تكلفة اقتناء الأصل.",
+      "الدخل المتراكم مطروحًا منه التوزيعات المتراكمة منذ الاقتناء.",
+      "الأقل من التكلفة والسوق.",
+      "القيمة العادلة."
+    ],
+    "explanationAr": "وفق المعايير الأمريكية يحتفظ بأوراق المتاجرة أساسًا للبيع في الأجل القريب، وتصنف عادة ضمن الأصول المتداولة. وتثبت مكاسب وخسائر الحيازة غير المحققة ضمن الأرباح؛ لذا تعرض هذه الأوراق بالقيمة العادلة."
   },
   {
     "unit": 3,
@@ -780,7 +1084,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Under U.S. GAAP, available-for-sale securities are\ninvestments in debt securities. They are measured at fair\nvalue in the balance sheet.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بأي أساس يقاس الاستثمار في الأوراق المتاحة للبيع في قائمة المركز المالي؟",
+    "choicesAr": [
+      "تكلفة اقتناء الأصل.",
+      "الدخل المتراكم مطروحًا منه التوزيعات المتراكمة منذ الاقتناء.",
+      "القيمة العادلة.",
+      "القيمة الاسمية للأوراق."
+    ],
+    "explanationAr": "وفق المعايير الأمريكية تمثل الأوراق المتاحة للبيع استثمارات في أوراق الدين، وتقاس بالقيمة العادلة في قائمة المركز المالي."
   },
   {
     "unit": 3,
@@ -797,7 +1109,15 @@
     ],
     "answerIndex": 1,
     "explanation": "When a security is classified as held-to-maturity, no unrealized\nholding gains or losses are recognized. Thus, unrealized\nholding gains and losses on held-to-maturity securities will not\naffect net income.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "وفق المعايير الأمريكية، أي العبارات التالية تصف أثر إعادة تصنيف ورقة مالية من متاحة للبيع إلى محتفظ بها حتى الاستحقاق؟",
+    "choicesAr": [
+      "يتأثر الدخل الشامل مستقبلًا بالمكاسب والخسائر غير المحققة.",
+      "لا يتأثر صافي الدخل مستقبلًا بالمكاسب والخسائر غير المحققة.",
+      "تتأثر قائمة المركز المالي بالمكاسب والخسائر غير المحققة.",
+      "لا يتغير علاج المكاسب والخسائر غير المحققة."
+    ],
+    "explanationAr": "عندما تصنف ورقة محتفظًا بها حتى الاستحقاق، لا تثبت تغيرات قيمتها العادلة اللاحقة كمكاسب أو خسائر حيازة غير محققة، فلا تؤثر في صافي الدخل بهذه الصفة. ويظل علاج رصيد الدخل الشامل الآخر المتراكم عند التحويل وخسائر الائتمان خاضعًا لقواعده الخاصة."
   },
   {
     "unit": 3,
@@ -814,7 +1134,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Available-for-sale debt securities are measured at fair value in\nthe financial statements. Unrealized holding gains or losses on\ntheir remeasurement to fair value are reported in OCI. On\n12/31/Year 3, the amount reported was $130,000. The\nincrease in the fair value in Year 4 of $30,000 ($160,000 –\n$130,000) is recognized as an unrealized holding gain in Year\n4 OCI. The OCI for the period is closed to accumulated OCI\nthat is reported in the equity section of the balance sheet.\nThus, the unrealized holding gain of $30,000 increases the\naccumulated OCI in Year 4. The statement of changes in\nequity reports the changes in all the equity accounts, including\naccumulated OCI.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فيما يلي بيانات استثمار Ball في أوراق دين متاحة للبيع:\nالتاريخ | التكلفة | القيمة العادلة\n31 ديسمبر السنة 3 | $150,000 | $130,000\n31 ديسمبر السنة 4 | 150,000 | 160,000\nتعد الفروق مؤقتة، وقد عولج الانخفاض بشكل صحيح في 31 ديسمبر من السنة 3. ما الزيادة التي تظهر في قائمة التغيرات في حقوق الملكية للسنة 4، بافتراض تجاهل الضرائب؟",
+    "choicesAr": [
+      "$30,000",
+      "$20,000",
+      "$10,000",
+      "$0"
+    ],
+    "explanationAr": "تقاس أوراق الدين المتاحة للبيع بالقيمة العادلة. وتعرض مكاسب وخسائر الحيازة غير المحققة الناتجة عن إعادة القياس في الدخل الشامل الآخر. وفي 12/31 من السنة 3 بلغ الرصيد المعروض $130,000. وتثبت الزيادة في القيمة العادلة في السنة 4 بمبلغ $30,000 ($160,000 − $130,000) كمكسب غير محقق ضمن الدخل الشامل الآخر للسنة 4. ويقفل الدخل الشامل الآخر للفترة في رصيده المتراكم ضمن حقوق الملكية. ومن ثم يزيد المكسب $30,000 رصيد الدخل الشامل الآخر المتراكم في السنة 4. وتبين قائمة التغيرات في حقوق الملكية التغيرات في جميع حساباتها."
   },
   {
     "unit": 3,
@@ -831,7 +1159,15 @@
     ],
     "answerIndex": 3,
     "explanation": "An investment in debt securities may be classified as (1)\ntrading (if held for sale in the near term), (2) held-to-maturity (if\nthe holder has the positive intent and ability to hold until the\nmaturity date), or (3) available-for-sale (if not classified as\ntrading or held-to-maturity).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يمكن تصنيف الاستثمارات في أوراق الدين كما يلي وفق المعايير الأمريكية:\nI. أوراق متاحة للبيع\nII. أوراق محتفظ بها حتى الاستحقاق\nIII. أوراق للمتاجرة",
+    "choicesAr": [
+      "I فقط.",
+      "I وII فقط.",
+      "I وIII فقط.",
+      "I وII وIII."
+    ],
+    "explanationAr": "يمكن تصنيف استثمار أوراق الدين إلى (1) المتاجرة إذا احتفظ به للبيع في الأجل القريب، أو (2) المحتفظ به حتى الاستحقاق إذا وجدت النية المؤكدة والقدرة على الاحتفاظ به حتى الاستحقاق، أو (3) المتاح للبيع إذا لم يصنف ضمن الفئتين السابقتين."
   },
   {
     "unit": 3,
@@ -848,7 +1184,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Debt securities that are bought and held primarily for sale in\nthe near term are classified as trading securities.\nConsequently, the bonds and the short-term notes are trading\nsecurities. They are initially recorded at cost but are\nsubsequently measured at fair value at each balance sheet\ndate. Quoted market prices in active markets are the best\nevidence of fair value. Based on market quotes at year end,\nthe bonds had a fair value of $105,000, and the short-term\nnotes had a fair value of $50,000. The total is $155,000.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في نهاية السنة احتفظت Rim باستثمارات بقصد بيعها في الأجل القريب، تتكون من سندات بقيمة اسمية $100,000 وفائدة 8% وأجل 5 سنوات اشتريت مقابل $92,000، وأوراق دين قصيرة الأجل اشتريت مقابل $35,000. وفي نهاية السنة بلغ سعر السندات في السوق $105,000 والقيمة السوقية للأوراق قصيرة الأجل $50,000. ما قيمة أوراق المتاجرة في قائمة المركز المالي في نهاية السنة؟",
+    "choicesAr": [
+      "$50,000",
+      "$127,000",
+      "$142,000",
+      "$155,000"
+    ],
+    "explanationAr": "تصنف أوراق الدين المشتراة والمحتفظ بها أساسًا للبيع في الأجل القريب ضمن أوراق المتاجرة؛ لذا تصنف السندات والأوراق قصيرة الأجل كذلك. وتقاس لاحقًا بالقيمة العادلة في تاريخ كل قائمة مركز مالي. وتعد الأسعار المعلنة في الأسواق النشطة أفضل دليل عليها. ووفق أسعار نهاية السنة بلغت القيمة العادلة للسندات $105,000 وللأوراق قصيرة الأجل $50,000، بإجمالي $155,000."
   },
   {
     "unit": 3,
@@ -865,7 +1209,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Debt securities classified as held-to-maturity are measured at\namortized cost if the reporting entity has the positive intent\nand ability to hold them to maturity.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بأي أساس تقاس الاستثمارات المصنفة أوراق دين محتفظًا بها حتى الاستحقاق؟",
+    "choicesAr": [
+      "تكلفة الاقتناء.",
+      "التكلفة المطفأة.",
+      "الأقل من التكلفة والسوق.",
+      "القيمة العادلة."
+    ],
+    "explanationAr": "تقاس أوراق الدين المحتفظ بها حتى الاستحقاق بالتكلفة المطفأة عند وجود النية المؤكدة والقدرة على الاحتفاظ بها حتى الاستحقاق، مع مراعاة مخصص خسائر الائتمان."
   },
   {
     "unit": 3,
@@ -882,7 +1234,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Unrealized holding gains and losses resulting from the\nremeasurement to fair value of available-for-sale debt\ninvestments are reported in other comprehensive income\n(OCI). Related tax effects are also recognized directly to OCI.\nThus, the net-of-tax unrealized gain of $75,000 [$100,000 × (1\n– 25%)] is recognized in OCI and no entries to net income are\nneeded.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "خلال السنة الحالية حققت Cooley مكسب حيازة غير محقق قدره $100,000 من استثمار دين متاح للبيع. ويبلغ معدل ضريبة الشركات 25%. ما مقدار المكسب الذي يدرج في صافي الدخل والدخل الشامل الآخر في نهاية السنة؟\nصافي الدخل | الدخل الشامل الآخر",
+    "choicesAr": [
+      "$100,000           $0",
+      "$75,000           $25,000",
+      "$25,000           $75,000",
+      "$0                $75,000"
+    ],
+    "explanationAr": "تعرض مكاسب وخسائر الحيازة غير المحققة الناتجة عن إعادة قياس استثمارات الدين المتاحة للبيع بالقيمة العادلة في الدخل الشامل الآخر. كما تثبت الآثار الضريبية المتعلقة بها مباشرة فيه. ومن ثم يثبت صافي المكسب بعد الضريبة $75,000 [$100,000 × (1 − 25%)] في الدخل الشامل الآخر، دون تأثير في صافي الدخل."
   },
   {
     "unit": 3,
@@ -899,7 +1259,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Unrealized holding gains resulting from the remeasurement to\nfair value of available-for-sale debt investments are reported in\nother comprehensive income (OCI). Related tax effects are\nalso recognized directly to OCI. Thus, no unrealized gain is\nrecognized in the income statement at December 31.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 31 ديسمبر تضمنت أوراق الدين لدى Dodd أوراقًا متاحة للبيع بتكلفة $24,000 وقيمة عادلة $30,000. وبلغ معدل ضريبة الدخل 20%. ما المكسب أو الخسارة غير المحققة الواجب إثباتها في قائمة الدخل في 31 ديسمبر؟",
+    "choicesAr": [
+      "خسارة $6,000.",
+      "$0.",
+      "مكسب $4,800.",
+      "مكسب $6,000."
+    ],
+    "explanationAr": "تعرض مكاسب الحيازة غير المحققة الناتجة عن إعادة قياس استثمارات الدين المتاحة للبيع بالقيمة العادلة في الدخل الشامل الآخر، كما تعرض الآثار الضريبية المتعلقة بها فيه مباشرة. لذا لا يثبت أي مكسب غير محقق في قائمة الدخل في 31 ديسمبر."
   },
   {
     "unit": 3,
@@ -933,7 +1301,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The cost of acquiring and preparing land for its expected use\nis capitalized. The amount to be recorded in the land account\nis $83,420, consisting of the $75,800 purchase price, the $820\nclosing costs, and the $6,800 site preparation costs.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فوض مجلس إدارة شركة رئيسها بدفع ما يصل إلى $90,000 لشراء أرض مجاورة للمصنع الرئيسي. تفاوض الرئيس على سعر $75,800، وبلغت الأتعاب القانونية لإتمام الشراء $820. قام مقاول بإزالة العوائق وردم وتسوية الأرض مقابل $6,800، وحفر أساسات المبنى الجديد مقابل $4,300. وأقيم مبنى مسبق الصنع بتكلفة $181,000 وعمر مقدر 20 سنة دون قيمة متبقية. وبلغت تكلفة مواقف السيارات والممرات $7,060، وستحتاج إلى الاستبدال بعد 15 سنة. ما المبلغ الصحيح الذي يسجل في حساب الأرض؟",
+    "choicesAr": [
+      "$76,620",
+      "$83,420",
+      "$87,720",
+      "$90,480"
+    ],
+    "explanationAr": "ترسمل تكاليف اقتناء الأرض وتجهيزها للاستخدام المقصود. ويبلغ المبلغ المسجل في حساب الأرض $83,420، ويتكون من سعر الشراء $75,800 وتكاليف إتمام الشراء $820 وتكاليف تجهيز الموقع $6,800."
   },
   {
     "unit": 3,
@@ -950,7 +1326,15 @@
     ],
     "answerIndex": 1,
     "explanation": "These assets are known variously as property, plant, and\nequipment (PPE); fixed assets; or plant assets.\n1. PPE are tangible. They have physical existence.\n2. PPE may be either personal property (something\nmovable, e.g., equipment) or real property (such as\nland or a building).\n3. PPE are used in the ordinary operations of an entity\nand are not held primarily for investment, resale, or\ninclusion in another product. But they are often sold.\n4. PPE are noncurrent. They are not expected to be\nused up within 1 year or the normal operating cycle of\nthe business, whichever is longer.\nHowever, an asset need not be newly purchased to be\nproperly described as PPE.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الخصائص التالية ليست لازمة لتصنيف أصل ضمن العقارات والآلات والمعدات؟",
+    "choicesAr": [
+      "محتفظ به للاستخدام لا للاستثمار.",
+      "مُشترى حديثًا.",
+      "عمر متوقع يزيد على سنة 1.",
+      "ملموس."
+    ],
+    "explanationAr": "تعرف هذه الأصول بالعقارات والآلات والمعدات أو الأصول الثابتة أو أصول المصنع.\n1. هي أصول ملموسة ذات وجود مادي.\n2. قد تكون منقولات مثل المعدات أو عقارات مثل الأرض والمبنى.\n3. تستخدم في العمليات العادية ولا يحتفظ بها أساسًا للاستثمار أو إعادة البيع أو الإدماج في منتج آخر، وإن أمكن بيعها لاحقًا.\n4. هي أصول غير متداولة، ولا يتوقع استهلاكها خلال سنة 1 أو دورة التشغيل العادية أيهما أطول، وفق سياق السؤال.\nولا يشترط أن يكون الأصل مشتَرى حديثًا."
   },
   {
     "unit": 3,
@@ -967,7 +1351,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Under the double-declining balance method, the full cost of\nthe asset, or $100,000, is depreciated, but not below salvage\nvalue. Because the straight-line rate for a 10-year asset is\n10% (100% ÷ 10), the double-declining balance rate is 20%\n(10% × 2). The first year’s depreciation is $20,000 ($100,000\n× 20%), leaving a carrying amount for the second year of\n$80,000 ($100,000 – $20,000). The second year’s\ndepreciation is thus $16,000 ($80,000 × 20%).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "اشترت شركة معدات تصنيع بمبلغ $100,000 بعمر إنتاجي مقدر 10 سنوات وقيمة متبقية $15,000. ما إهلاك السنة الثانية وفق طريقة الرصيد المتناقص المضاعف؟",
+    "choicesAr": [
+      "$8,500",
+      "$13,600",
+      "$16,000",
+      "$20,000"
+    ],
+    "explanationAr": "تطبق طريقة الرصيد المتناقص المضاعف معدلها على كامل تكلفة الأصل $100,000 في البداية، دون تخفيض القيمة الدفترية عن القيمة المتبقية. وبما أن العمر 10 سنوات فإن معدل القسط الثابت 10% (100% ÷ 10)، ومعدل الرصيد المتناقص المضاعف 20% (10% × 2). إهلاك السنة الأولى $20,000 ($100,000 × 20%)، وتتبقى قيمة دفترية للسنة الثانية $80,000 ($100,000 − $20,000). لذا يبلغ إهلاك السنة الثانية $16,000 ($80,000 × 20%)."
   },
   {
     "unit": 3,
@@ -984,7 +1376,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Interest should be capitalized for (1) assets constructed or\notherwise produced for an entity’s own use, including those\nconstructed or produced by others; (2) assets intended for\nsale or lease that are constructed or produced as discrete\nprojects (e.g., ships); and (3) certain equity-based\ninvestments. An asset constructed for an entity’s own use\nqualifies for capitalization of interest if (1) relevant\nexpenditures have been made, (2) activities necessary to\nprepare the asset for its intended use are in progress, and\n(3) interest is being incurred. The investee must have activities\nin progress necessary to commence its planned principal\noperations and be expending funds to obtain qualifying assets\nfor its operations.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي أنواع الأصول التالية مؤهل لرسملة الفوائد؟",
+    "choicesAr": [
+      "الأصول المستخدمة بالفعل في أنشطة تحقيق الدخل.",
+      "الأصول الجاهزة لاستخدامها المقصود.",
+      "الأصول التي تنشأ لاستخدام المنشأة نفسها.",
+      "المخزون الذي يصنع بكميات كبيرة بصورة مستمرة."
+    ],
+    "explanationAr": "وفق المعايير الأمريكية ترسمل الفائدة بالنسبة إلى (1) الأصول المنشأة أو المنتجة لاستخدام المنشأة، بما فيها ما ينشئه الغير؛ (2) الأصول المعدة للبيع أو التأجير والمنشأة كمشروعات مستقلة مثل السفن؛ (3) بعض الاستثمارات المحاسب عنها بطريقة حقوق الملكية. ويؤهل الأصل المنشأ للاستخدام الذاتي إذا (1) تكبدت نفقات ذات صلة، (2) كانت أنشطة تجهيزه للاستخدام جارية، (3) كانت الفائدة تتكبد. وفي حالة الاستثمار المؤهل تكون أنشطة بدء العمليات الأساسية للمنشأة المستثمر فيها جارية، وتُنفق أموال لاقتناء أصول مؤهلة."
   },
   {
     "unit": 3,
@@ -1001,7 +1401,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The straight-line depreciation that should have been charged\nto the equipment had it been properly capitalized is $30,000\n[$100,000 × (3 ÷ 10 years)]. Thus, after correction of the error,\nthe carrying amount of the equipment will be $70,000\n($100,000 – $30,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "اشترت شركة معدات قبل 3 سنوات وسجلتها خطأ كمصروف. بلغت التكلفة $100,000 دون قيمة متبقية وبعمر مقدر 10 سنوات. وتستخدم الشركة القسط الثابت للمعدات المماثلة. اكتشف الخطأ في نهاية السنة 3 قبل إصدار القوائم. ما القيمة الدفترية الصحيحة للمعدات بعد تصحيح الخطأ؟",
+    "choicesAr": [
+      "$30,000",
+      "$70,000",
+      "$80,000",
+      "$100,000"
+    ],
+    "explanationAr": "كان ينبغي إثبات إهلاك بالقسط الثابت بمبلغ $30,000 [$100,000 × (3 ÷ 10 سنوات)]. وبعد تصحيح الخطأ تصبح القيمة الدفترية $70,000 ($100,000 − $30,000)."
   },
   {
     "unit": 3,
@@ -1018,7 +1426,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The SYD method multiplies a constant depreciable base (cost\nminus residual value) by a declining fraction. The numerator is\nthe number of years of the useful life minus the years elapsed\n(5 – 0 = 5). The denominator is the sum of the digits of the\nyears in the asset’s useful life (1 + 2 + 3 + 4 + 5). The first\nyear’s depreciation expense is therefore $16,667 [$50,000 ×\n(5 ÷ 15)].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم شركة طريقة مجموع أرقام السنوات (SYD) للإهلاك. في 1 يناير اشترت آلة بمبلغ $50,000 بعمر مقدر 5 سنوات ودون قيمة متبقية. ما إهلاك السنة الأولى؟",
+    "choicesAr": [
+      "$10,000",
+      "$15,000",
+      "$16,667",
+      "$20,000"
+    ],
+    "explanationAr": "تضرب طريقة مجموع أرقام السنوات أساس الإهلاك الثابت (التكلفة ناقص القيمة المتبقية) في كسر متناقص. البسط هو العمر الإنتاجي ناقص السنوات المنقضية (5 − 0 = 5). والمقام مجموع أرقام سنوات العمر (1 + 2 + 3 + 4 + 5). لذا يبلغ إهلاك السنة الأولى $16,667 [$50,000 × (5 ÷ 15)]."
   },
   {
     "unit": 3,
@@ -1035,7 +1451,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The Year 2 beginning carrying amount is $193,000 ($295,000\n– $102,000), and the Year 2 ending carrying amount is\n$221,000 ($340,000 – $119,000). The carrying amount of PPE\ndisposed of is $7,000 ($193,000 beginning balance +\n$65,000 acquired during Year 2 – $30,000 depreciation\nexpense – $221,000 ending balance).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فيما يلي بيانات مختارة من قائمتي المركز المالي في 31 ديسمبر من السنة 1 و31 ديسمبر من السنة 2:\nالبند | 12/31 السنة 1 | 12/31 السنة 2\nالعقارات والآلات والمعدات | $295,000 | $340,000\nمجمع الإهلاك | (102,000) | (119,000)\nمعلومات إضافية للسنة 2:\n1. اقتنيت معدات مقابل $65,000.\n2. بلغ مصروف الإهلاك $30,000.\nما القيمة الدفترية (التكلفة ناقص مجمع الإهلاك) للأصول المستبعدة في السنة 2؟",
+    "choicesAr": [
+      "$7,000",
+      "$17,000",
+      "$20,000",
+      "$32,000"
+    ],
+    "explanationAr": "بلغت القيمة الدفترية أول السنة 2 مبلغ $193,000 ($295,000 − $102,000)، وآخر السنة 2 مبلغ $221,000 ($340,000 − $119,000). وبافتراض عدم وجود حركات أخرى، تبلغ القيمة الدفترية للأصول المستبعدة $7,000 ($193,000 أول المدة + $65,000 مقتنيات السنة 2 − $30,000 الإهلاك − $221,000 آخر المدة)."
   },
   {
     "unit": 3,
@@ -1052,7 +1476,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Expenditures on capital assets that improve the asset’s\nperformance or extend its useful life are capitalized as part of\nthe asset’s cost. Accordingly, the building repairs are\ncapitalized. The substitution of a better computer system is\nclassified as an improvement, and the costs also should be\ncapitalized. Moreover, the entity capitalizes the costs of a\nrearrangement of the configurations of the offices and open\nwork spaces that (1) requires material outlays, (2) is separable\nfrom recurring expenses, and (3) provides probable future\nbenefits. However, expenditures that merely maintain the\nasset at an acceptable level of productivity are expensed as\nthey are incurred. Thus, the costs of painting the building are\nroutine, minor outlays that should be expensed immediately.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تمتلك منشأة مرافقها الحالية منذ 1981، وصرح المدير التنفيذي بنفقات لإصلاح المبنى وتحسينه خلال السنة. بدأ المبنى يهبط، وكان سيستمر 8 سنوات فقط دون الإصلاح. عُززت الأساسات وأضيفت أعمدة في القبو بتكلفة $47,200، فأصبح عمر المبنى المتبقي المقدر 20 سنة. ولتركيب شبكة محلية LAN والاستعداد للجيل التالي من الحواسيب، حُدثت خطوط الهاتف والكهرباء مقابل $81,300، بعمر مقدر 25 سنة. وأعيد ترتيب المكاتب ومساحات العمل لتقليل التعرض للانبعاثات الإلكترونية بتكلفة مواد $31,000. وبلغ شراء وتركيب أجهزة وبرمجيات الشبكة $102,700، وستستبدل بعد 6 سنوات دون حاجة لإعادة ترتيب المكاتب. وبعد التحسينات طلي المبنى داخليًا وخارجيًا مقابل $9,450.\nبصفتك المراقب المالي، أي إجراء توصي به وفق المبادئ المحاسبية المتعارف عليها؟",
+    "choicesAr": [
+      "تحميل جميع النفقات على مصروفات السنة عدا إعادة الترتيب ($31,000)، التي تطفأ على فترة لا تتجاوز 20 سنة.",
+      "رسملة جميع النفقات باعتبارها إضافات وتحسينات وإعادة ترتيب.",
+      "رسملة جميع التكاليف عدا تحديث الهاتف والكهرباء والطلاء باعتبارها صيانة.",
+      "رسملة جميع التكاليف عدا الطلاء باعتباره صيانة."
+    ],
+    "explanationAr": "ترسمل النفقات التي تحسن أداء الأصل أو تطيل عمره الإنتاجي عند تحقق شروط الاعتراف؛ لذا ترسمل إصلاحات المبنى وتحسين نظام الحاسوب. كما ترسمل إعادة ترتيب المكاتب والمساحات إذا (1) تطلبت نفقات جوهرية، (2) أمكن فصلها عن المصروفات المتكررة، (3) حققت منافع مستقبلية محتملة. أما ما يحافظ فقط على مستوى الإنتاجية المقبول فيثبت مصروفًا عند تكبده، ومنه الطلاء الدوري البسيط. وتراعى طبيعة الأجهزة والبرمجيات في تبويب الأصول."
   },
   {
     "unit": 3,
@@ -1069,7 +1501,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Subsequent costs are added to the carrying amount of an item\nof PPE if it is probable that, as a result, future economic\nbenefits will be received, and the costs are reliably\nmeasurable. An extended useful life, improved output quantity\nor quality, and reduced operating costs are all future economic\nbenefits.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ركبت منشأة خط تجميع في السنة 1. وبعد أربع سنوات استثمرت $100,000 لأتمتته، مما زاد قيمته السوقية وطاقته الإنتاجية دون تغيير عمره الإنتاجي. ما المعالجة المحاسبية الصحيحة لتكلفة الأتمتة؟",
+    "choicesAr": [
+      "إثباتها مصروفًا في السنة 5.",
+      "إنشاء حساب مستقل للمبلغ $100,000.",
+      "توزيع تكلفة الأتمتة بين الأصل ومجمع الإهلاك.",
+      "رسملة التكلفة في حساب العقارات والآلات والمعدات."
+    ],
+    "explanationAr": "تضاف التكاليف اللاحقة إلى القيمة الدفترية للأصل إذا كان من المحتمل تدفق منافع اقتصادية مستقبلية منها وأمكن قياسها بموثوقية. وتشمل المنافع إطالة العمر وتحسين كمية الإنتاج أو جودته وخفض تكاليف التشغيل."
   },
   {
     "unit": 3,
@@ -1103,7 +1543,15 @@
     ],
     "answerIndex": 1,
     "explanation": "An asset classified under property, plant, and equipment is\nmeasured initially at cost. This amount includes the purchase\nprice and any directly attributable costs of bringing the asset to\nworking condition for its intended use. Directly attributable\ncosts include costs of, for example, site preparation, initial\ndelivery and handling, installation, professional fees (e.g.,\nthose of architects and engineers), and dismantling and\nremoving the asset and restoring the site. The purchase price\nis determined by adding any import fees and nonrefundable\npurchase taxes and subtracting any trade discounts and\nrebates.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي ليس أساسًا مناسبًا لقياس التكلفة التاريخية للعقارات والآلات والمعدات؟",
+    "choicesAr": [
+      "إدراج تكاليف التسليم والمناولة والتركيب ضمن تكلفة الأصل المنتج.",
+      "إدراج سعر الشراء دون خصم الخصومات التجارية.",
+      "إضافة تحسينات المعدات اللاحقة التي تحقق منافع اقتصادية مستقبلية تزيد على مستوى الأداء المقدر أصلًا.",
+      "إدراج تكاليف تشييد مبنى المصنع من الحفر حتى الاكتمال ضمن تكلفة الأصل."
+    ],
+    "explanationAr": "يقاس الأصل أولًا بالتكلفة، وتشمل سعر الشراء والتكاليف المباشرة اللازمة لجعله جاهزًا للاستخدام المقصود، مثل تجهيز الموقع والتسليم والمناولة والتركيب والأتعاب المهنية وتفكيك الأصل وإزالته وإعادة الموقع وفق شروط الاعتراف ذات الصلة. ويحدد سعر الشراء بإضافة رسوم الاستيراد وضرائب الشراء غير القابلة للاسترداد وطرح الخصومات التجارية والحسومات."
   },
   {
     "unit": 3,
@@ -1120,7 +1568,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The units-of-production method allocates cost based on\noutput. The net amount reported as an asset for the quarry\nusing this method is $840,000 [(350,000 cubic yards ÷\n500,000 total cubic yards) × $1,200,000].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 يناير من السنة 1 اشترت منشأة محجرًا مهجورًا مقابل $1,200,000 لاستخدامه مكبًا للنفايات لخدمة عقود الجمع مع المدن القريبة خلال 20 سنة. وتستهلك المحجر بطريقة وحدات الإنتاج استنادًا إلى قياس المساح لحجم الحفرة. بلغ الحجم 500,000 ياردة مكعبة عند الشراء و350,000 ياردة مكعبة في نهاية السنة 5. ما صافي مبلغ المحجر المعروض في قائمة المركز المالي في 31 ديسمبر من السنة 5؟",
+    "choicesAr": [
+      "$1,200,000",
+      "$900,000",
+      "$840,000",
+      "$360,000"
+    ],
+    "explanationAr": "تخصص طريقة وحدات الإنتاج التكلفة على أساس الاستخدام. وبافتراض عدم وجود قيمة متبقية أو تعديلات أخرى، يبلغ صافي قيمة المحجر $840,000 [(350,000 ياردة مكعبة ÷ 500,000 ياردة مكعبة إجمالي) × $1,200,000]."
   },
   {
     "unit": 3,
@@ -1137,7 +1593,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Depreciation expense equals cost minus residual value, times\nthe estimated hours of use in Year 2 divided by the total\nestimated hours of use. Thus, depreciation expense is\n$80,500 [($300,000 – $70,000) × (700 hours ÷ 2,000 hours)].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بلغت التكلفة الأولية لآلة جديدة $300,000 وعمرها المقدر 2,000 ساعة استخدام خلال 3 سنوات وقيمتها المتبقية $70,000. ويقدر استخدامها بـ500 ساعة في السنة الأولى و700 ساعة في الثانية و800 ساعة في الثالثة. ما مصروف إهلاك السنة 2 وفق طريقة وحدات الإنتاج؟",
+    "choicesAr": [
+      "$57,500",
+      "$75,000",
+      "$80,500",
+      "$105,000"
+    ],
+    "explanationAr": "يساوي الإهلاك التكلفة مطروحًا منها القيمة المتبقية مضروبة في ساعات استخدام السنة 2 مقسومة على إجمالي الساعات المقدرة. لذلك يبلغ الإهلاك $80,500 [($300,000 − $70,000) × (700 ساعة ÷ 2,000 ساعة)]."
   },
   {
     "unit": 3,
@@ -1154,7 +1618,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Under the double-declining balance method, the full cost of\nthe asset, or $40,300 ($38,600 + $1,700), is depreciated, but\nnot below salvage value. Because the straight-line rate for a 5-\nyear asset is 20% (100% ÷ 5), the double-declining balance\nrate is 40% (20% × 2). The first year’s depreciation is $16,120\n($40,300 × 40%), leaving a carrying amount for the second\nyear of $24,180 ($40,300 – $16,120). The second year’s\ndepreciation is thus $9,672 ($24,180 × 40%).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "اشترت منشأة شاحنة مقابل $38,600 لنقل المعدات إلى مواقع العمل. ولُحمت صناديق تخزين في صندوق الشاحنة بتكلفة $1,700. ويقدر المراقب المالي العمر الإنتاجي بـ5 سنوات والقيمة المتبقية بـ$1,000. ما مصروف الإهلاك للسنة الثانية وفق الرصيد المتناقص المضاعف؟",
+    "choicesAr": [
+      "$9,024",
+      "$9,264",
+      "$9,432",
+      "$9,672"
+    ],
+    "explanationAr": "يطبق معدل الرصيد المتناقص المضاعف في البداية على كامل تكلفة الأصل $40,300 ($38,600 + $1,700) دون النزول عن القيمة المتبقية. ولأن العمر 5 سنوات يكون معدل القسط الثابت 20% (100% ÷ 5)، والمعدل المضاعف 40% (20% × 2). إهلاك السنة الأولى $16,120 ($40,300 × 40%)، وتبقى قيمة دفترية للسنة الثانية $24,180 ($40,300 − $16,120). لذا يبلغ إهلاك السنة الثانية $9,672 ($24,180 × 40%)."
   },
   {
     "unit": 3,
@@ -1171,7 +1643,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Sum-of-the-years’-digits depreciation has the highest\ndepreciation expense in the early years of an asset’s life,\nresulting in lower net income.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي طرق الإهلاك التالية تؤدي إلى أقل صافي دخل معلن خلال السنوات الأولى من عمر أصل قابل للإهلاك؟",
+    "choicesAr": [
+      "الإهلاك المركب.",
+      "إهلاك المجموعة.",
+      "القسط الثابت.",
+      "مجموع أرقام السنوات."
+    ],
+    "explanationAr": "من بين الطرق المعروضة، تحمل طريقة مجموع أرقام السنوات إهلاكًا أعلى في السنوات الأولى مقارنة بالطرق القائمة على القسط الثابت، مما يخفض صافي الدخل مع ثبات العوامل الأخرى."
   },
   {
     "unit": 3,
@@ -1188,7 +1668,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Group and composite depreciation methods use the straight-\nline technique for an aggregate of assets. The composite\nmethod is used for dissimilar assets.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "موزع منتجات حريرية في سنته الأولى. اشترى عشرة حواسيب بسعر $3,500 لكل منها وعمر مقدر 6 سنوات؛ وخمسة مكاتب بسعر $500 لكل منها وعمر 10 سنوات؛ وجهازي معالجة نصوص بسعر $300 لكل منهما وعمر 4 سنوات. لا يتوقع قيمة متبقية لأي منها. ويريد طريقة سهلة تعكس مصروف إهلاك مناسبًا في كل فترة. ما الطريقة الأنسب؟",
+    "choicesAr": [
+      "الإهلاك المركب.",
+      "إهلاك المجموعة.",
+      "طريقة المخزون.",
+      "طريقة الاستبدال."
+    ],
+    "explanationAr": "تستخدم طريقة المجموعة والطريقة المركبة أسلوب القسط الثابت لمجموعة أصول. وتستخدم الطريقة المركبة للأصول غير المتجانسة."
   },
   {
     "unit": 3,
@@ -1205,7 +1693,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The units-of-production depreciation method allocates asset\ncost based on the level of production. As production varies, so\nwill the credit to accumulated depreciation. Consequently,\nwhen an asset’s service potential declines with use, the units-\nof-production method is the most appropriate method.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في أي الحالات التالية تكون طريقة وحدات الإنتاج للإهلاك أكثر ملاءمة؟",
+    "choicesAr": [
+      "تنخفض قدرة الأصل على تقديم الخدمات مع الاستخدام.",
+      "تنخفض قدرة الأصل مع مرور الزمن.",
+      "يتعرض الأصل لتقادم سريع.",
+      "تزداد إصلاحات الأصل وصيانته مع الاستخدام."
+    ],
+    "explanationAr": "تخصص طريقة وحدات الإنتاج تكلفة الأصل القابلة للإهلاك حسب مستوى الإنتاج. ومع تغير الإنتاج يتغير المبلغ الدائن لمجمع الإهلاك. لذا تكون الطريقة ملائمة عندما تنخفض القدرة الخدمية للأصل مع الاستخدام."
   },
   {
     "unit": 3,
@@ -1222,7 +1718,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Under the revaluation model, if the fair value of an item of\nproperty, plant, and equipment can be reliably measured, it\nmust be carried subsequent to initial recognition at a revalued\namount. This amount is fair value at the date of the revaluation\nminus any subsequent accumulated depreciation and\nimpairment losses. The revaluation model is permitted by\nIFRS, not U.S. GAAP.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "وفق IFRS ونموذج إعادة التقييم، بأي مبلغ يقاس بند من العقارات والآلات والمعدات؟",
+    "choicesAr": [
+      "التكلفة ناقص مجمع الإهلاك.",
+      "التكلفة ناقص القيمة المتبقية.",
+      "القيمة العادلة ناقص أي مجمع إهلاك وخسائر انخفاض قيمة لاحقة.",
+      "الأقل من التكلفة وصافي القيمة القابلة للتحقق."
+    ],
+    "explanationAr": "وفق نموذج إعادة التقييم، إذا أمكن قياس القيمة العادلة للأصل بموثوقية، يعرض بعد الاعتراف الأولي بمبلغ إعادة التقييم، وهو القيمة العادلة في تاريخ إعادة التقييم مطروحًا منها مجمع الإهلاك وخسائر انخفاض القيمة اللاحقة. وتسمح IFRS بهذا النموذج بخلاف القاعدة العامة للمعايير الأمريكية."
   },
   {
     "unit": 3,
@@ -1239,7 +1743,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The amount to be recorded as the acquisition cost of a\nmachine includes all costs necessary to prepare it for its\nintended use. Thus, the cost of a machine used in the\nmanufacturing operations of a company includes the cost of\ntesting and preparing the machine for use and the shipping\ncosts. The acquisition cost is $155,000 ($125,000 + $20,000 +\n$10,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "اشترت شركة آلة لعمليات التصنيع بتكلفة $125,000 ودفعت شحنًا $20,000، وأنفقت $10,000 إضافية لاختبار الآلة وتجهيزها للاستخدام. ما تكلفة الآلة المسجلة؟",
+    "choicesAr": [
+      "$155,000",
+      "$145,000",
+      "$135,000",
+      "$125,000"
+    ],
+    "explanationAr": "تشمل تكلفة اقتناء الآلة جميع التكاليف الضرورية لجعلها جاهزة للاستخدام المقصود، ومنها الاختبار والتجهيز والشحن. وتبلغ تكلفة الاقتناء $155,000 ($125,000 + $20,000 + $10,000)."
   },
   {
     "unit": 3,
@@ -1256,7 +1768,15 @@
     ],
     "answerIndex": 1,
     "explanation": "An entity may choose either the cost model or the fair value\nmodel as its accounting policy. But it must apply that policy to\nall of its investment property. Under the cost model,\ninvestment property is carried at its cost minus any\naccumulated depreciation and impairment losses. Under the\nfair value model, investment property is measured at fair\nvalue, and gain or loss from a change in its fair value is\nrecognized immediately in profit or loss.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "وفق IFRS، أي سياسة محاسبية يمكن للمنشأة تطبيقها على العقارات الاستثمارية بعد الاعتراف الأولي؟",
+    "choicesAr": [
+      "نموذج التكلفة أو إعادة التقييم.",
+      "نموذج التكلفة أو القيمة العادلة.",
+      "نموذج القيمة العادلة فقط.",
+      "نموذج القيمة العادلة أو إعادة التقييم."
+    ],
+    "explanationAr": "يجوز للمنشأة اختيار نموذج التكلفة أو القيمة العادلة سياسةً محاسبية، وتطبق السياسة بصفة عامة على عقاراتها الاستثمارية مع مراعاة الاستثناءات المحددة. ووفق نموذج التكلفة تعرض العقارات بالتكلفة ناقص مجمع الإهلاك وخسائر الانخفاض. ووفق نموذج القيمة العادلة تقاس بالقيمة العادلة وتثبت مكاسب أو خسائر تغيرها فورًا في الربح أو الخسارة."
   },
   {
     "unit": 3,
@@ -1273,7 +1793,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A betterment (improvement) occurs when a replacement asset\nis substituted for an existing asset, and the result is increased\nproductivity, capacity, or expected useful life. If the\nimprovement benefits future periods, it should be capitalized.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "هل تعد نفقة تركيب نظام كهربائي محسن نفقة رأسمالية أم إيرادية؟\nنفقة رأسمالية | نفقة إيرادية",
+    "choicesAr": [
+      "لا | نعم",
+      "لا | لا",
+      "نعم | لا",
+      "نعم | نعم"
+    ],
+    "explanationAr": "يحدث التحسين عندما يحل أصل بديل محل أصل قائم وينتج عن ذلك زيادة الإنتاجية أو الطاقة أو العمر الإنتاجي المتوقع. فإذا حقق التحسين منافع للفترات المستقبلية واستوفى شروط الاعتراف، ترسمل تكلفته."
   },
   {
     "unit": 3,
@@ -1290,7 +1818,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The assets purchased that are capitalized as property, plant,\nand equipment (PPE) are the computer equipment and\nautomobile. Therefore, PPE is $310,000 ($280,000 +\n$30,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بدأت منشأة العمل في 1 يناير وأنفقت $900,000 في الشهر الأول على البنود التالية:\nحملة إعلانات يناير: $40,000\nمعدات حاسوب: 280,000\nوثيقة تأمين لمدة 12 شهرًا: 120,000\nإيجار مبنى يناير: 60,000\nرواتب يناير: 340,000\nمستلزمات مكتبية: 10,000\nسيارة: 30,000\nمرافق يناير: 20,000\nالإجمالي: $900,000\nما إجمالي المدفوعات النقدية التي ترسمل ضمن العقارات والآلات والمعدات؟",
+    "choicesAr": [
+      "$80,000",
+      "$310,000",
+      "$370,000",
+      "$440,000"
+    ],
+    "explanationAr": "الأصول المشتراة التي ترسمل ضمن العقارات والآلات والمعدات هي معدات الحاسوب والسيارة. لذلك تبلغ الأصول $310,000 ($280,000 + $30,000)."
   },
   {
     "unit": 3,
@@ -1307,7 +1843,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Depreciation is the process of systematically and rationally\nallocating the depreciable cost of a tangible capital asset over\nits expected useful life. Estimated useful life is an estimated\nperiod over which services or economic benefits are expected\nto be obtained by the asset. Thus, the amusement park should\ndepreciate its asset over a 15-year life since that is the period\nover which it is expected to be used.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ركبت مدينة ملاهٍ Majesty لعبة جديدة. ورغم أن متوسط عمرها 40 سنة، تتوقع الشركة استمرار شعبيتها 15 سنة، وبعدها ستفكك وتستبدل بلعبة أخرى. ويتوقف الإقبال على الاقتصاد المحلي الذي يصعب التنبؤ به. ما طريقة الإهلاك الأنسب؟",
+    "choicesAr": [
+      "الرصيد المتناقص.",
+      "القسط الثابت بعمر 15 سنة.",
+      "القسط الثابت بعمر 40 سنة.",
+      "وحدات الإنتاج."
+    ],
+    "explanationAr": "الإهلاك تخصيص منتظم ومنطقي للتكلفة القابلة للإهلاك على العمر الإنتاجي المتوقع للأصل الملموس. ويمثل العمر الإنتاجي الفترة المتوقع الحصول خلالها على الخدمات أو المنافع الاقتصادية. لذا تهلك مدينة الملاهي الأصل على مدى 15 سنة، وهي فترة الاستخدام المتوقعة، ويكون القسط الثابت مناسبًا عند عدم إمكان تقدير نمط آخر بموثوقية."
   },
   {
     "unit": 3,
@@ -1324,7 +1868,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The costs needed to bring the asset to the condition and\nlocation necessary for its intended use must be capitalized to\nthe initial cost of the asset. Therefore, freight-in cost\nassociated with the purchase of machinery should be\ncapitalized, and interest costs incurred from a loan taken to\nfinance the purchase should be expensed as incurred.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "اشترت منشأة آلات جديدة من مورد قبل نهاية السنة ودفعت تكاليف الشحن، واقترضت من بنك لتمويل الشراء. ما المعالجة المحاسبية الصحيحة لتكاليف الشحن والفوائد المتعلقة بالشراء؟",
+    "choicesAr": [
+      "تحميل الشحن والفوائد فورًا على المصروفات.",
+      "رسملة الشحن والفوائد ضمن العقارات والآلات والمعدات.",
+      "رسملة الفوائد وتحميل الشحن فورًا على المصروفات.",
+      "رسملة الشحن وتحميل الفوائد فورًا على المصروفات."
+    ],
+    "explanationAr": "ترسمل التكاليف اللازمة لجعل الأصل في الموقع والحالة الضروريين لاستخدامه المقصود. لذلك ترسمل تكاليف شحن الآلات، وتحمل فوائد القرض على المصروفات عند تكبدها بافتراض أن الآلات المشتراة جاهزة للاستخدام ولا تمثل أصلًا مؤهلًا لرسملة تكاليف الاقتراض."
   },
   {
     "unit": 3,
@@ -1341,7 +1893,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The capitalized costs of the building are the costs that are\nnecessary for the purchase or construction of the building and\nthat will result in future economic benefits. These include the\npurchase price, the costs of renovating and preparing the\nstructure for its expected use, the expenses of excavating the\nsite to build the foundation, the cost of construction, and the\ninterest costs incurred during construction of a building for the\nentity’s own use. The purchase price of the land, the cost of\nrazing the old building, and the title insurance and legal fees to\npurchase the land are capitalized as the cost of the land, not\nthe building. The initial cost of the building is $1,945,000\n($1,850,000 new building construction costs + $95,000\narchitect’s fees).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "اشترت Pine أرضًا بمبلغ $450,000 لتكون موقع مصنع. وهدم مبنى قائم قبل بدء الإنشاء. المعلومات الإضافية:\nتكلفة هدم المبنى القديم: $60,000\nتأمين الملكية والأتعاب القانونية لشراء الأرض: 30,000\nأتعاب المعماري: 95,000\nتكلفة بناء المبنى الجديد: 1,850,000\nما التكلفة التي ترسملها Pine للمبنى المكتمل؟",
+    "choicesAr": [
+      "$2,005,000",
+      "$1,975,000",
+      "$1,945,000",
+      "$1,910,000"
+    ],
+    "explanationAr": "تشمل تكلفة المبنى التكاليف اللازمة لشرائه أو تشييده التي تحقق منافع مستقبلية، ومنها سعر الشراء، وتجهيز الهيكل، وحفر الأساسات، والإنشاء، والفوائد المؤهلة أثناء الإنشاء للاستخدام الذاتي. وفي سياق السؤال ترسمل تكلفة شراء الأرض وهدم المبنى القديم وتأمين الملكية وأتعاب شراء الأرض ضمن الأرض لا المبنى. وتبلغ التكلفة الأولية للمبنى $1,945,000 ($1,850,000 إنشاء + $95,000 أتعاب المعماري)."
   },
   {
     "unit": 3,
@@ -1358,7 +1918,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Repair and maintenance costs are incurred to maintain plant\nassets in operating condition. The continuing, frequent, and\nlow-cost repairs and the replacement of a broken gear meet\nthe definition of repairs and maintenance expense.\nAccordingly, the amount that should be charged to repairs and\nmaintenance is $80,000 ($70,000 + $10,000). The renovation\ncost increased the quality of production during the expected\nuseful life of the group of machines. This $100,000 cost\nshould be capitalized.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "خلال السنة تكبدت Murdock النفقات التالية المتعلقة بآلات ومعدات المصنع:\n• تجديد آلات بمبلغ $100,000 لزيادة كفاءة الإنتاج خلال عمرها المتبقي 5 سنوات. اكتمل المشروع في 31 ديسمبر.\n• إصلاحات مستمرة ومتكررة منخفضة التكلفة بمبلغ $70,000.\n• استبدال ترس مكسور في آلة بتكلفة $10,000.\nما إجمالي المصروف المحمل على الإصلاح والصيانة خلال السنة؟",
+    "choicesAr": [
+      "$70,000",
+      "$80,000",
+      "$170,000",
+      "$180,000"
+    ],
+    "explanationAr": "تهدف تكاليف الإصلاح والصيانة إلى إبقاء الأصول في حالة تشغيل. وتعد الإصلاحات المتكررة منخفضة التكلفة واستبدال الترس المكسور صيانة عادية في هذا السؤال، لا استبدال مكون رأسمالي جوهري. لذلك يبلغ مصروف الإصلاح والصيانة $80,000 ($70,000 + $10,000). أما التجديد الذي حسن الإنتاج خلال العمر المتوقع للآلات فتبلغ تكلفته $100,000 وترسمل."
   },
   {
     "unit": 3,
@@ -1375,7 +1943,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Expenditures that increase the quality or quantity of a\nmachine’s output should be capitalized whether or not its\nuseful life is extended. Thus, the amount of the cost to be\ncapitalized equals $320,000 ($168,000 + $72,000 + $52,000 +\n$28,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 2 نوفمبر تكبدت Corley التكاليف التالية لإحدى آلات الطباعة:\nشراء ملحق للترتيب والتدبيس: $168,000\nتركيب الملحق: 72,000\nقطع غيار لعمرة الآلة: 52,000\nأجور وتكاليف غير مباشرة للعمرة: 28,000\nأدت العمرة إلى زيادة جوهرية في الإنتاج. ولم يزد الملحق أو العمرة العمر الإنتاجي المقدر. ما إجمالي التكاليف التي ترسمل؟",
+    "choicesAr": [
+      "$0",
+      "$168,000",
+      "$240,000",
+      "$320,000"
+    ],
+    "explanationAr": "ترسمل النفقات التي تزيد جودة إنتاج الآلة أو كميته عند تحقق شروط الاعتراف، سواء طال العمر الإنتاجي أم لا. لذا يبلغ المبلغ المرسمل $320,000 ($168,000 + $72,000 + $52,000 + $28,000)."
   },
   {
     "unit": 3,
@@ -1392,7 +1968,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The gain (loss) on disposal of the machine is calculated as the\ndifference between the proceeds received and the carrying\namount of the machine on the transaction date. The carrying\namount of the machine on July 1, Year 10, is $4,500 [$90,000\ndepreciable base of the machine × (0.5 years of remaining\nuseful life ÷ 10 years total useful life)]. Therefore, the gain on\ndisposal is $500 ($5,000 – $4,500).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "اشترت Ott آلة بتكلفة أصلية $90,000 في 2 يناير من السنة 1، وعمر مقدر 10 سنوات دون قيمة متبقية. وتستخدم القسط الثابت. وفي 1 يوليو من السنة 10 باعت الآلة مقابل $5,000. ما مكسب أو خسارة الاستبعاد؟",
+    "choicesAr": [
+      "خسارة $500.",
+      "مكسب $500.",
+      "خسارة $4,500.",
+      "مكسب $4,500."
+    ],
+    "explanationAr": "يحسب مكسب أو خسارة الاستبعاد بالفرق بين المتحصلات والقيمة الدفترية في تاريخ المعاملة. وتبلغ القيمة الدفترية في 1 يوليو من السنة 10 مبلغ $4,500 [$90,000 أساس الإهلاك × (0.5 سنة متبقية ÷ 10 سنوات إجمالي العمر)]، وفق افتراض نصف السنة. لذا يبلغ مكسب الاستبعاد $500 ($5,000 − $4,500)."
   },
   {
     "unit": 3,
@@ -1409,7 +1993,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Under IFRS, measurement of PPE subsequent to initial\nrecognition may be at fair value at the revaluation date (minus\nsubsequent depreciation and impairment losses). The\nassumption is that the PPE can be reliably measured. If an\nitem of PPE is revalued, every item in its class also should be\nrevalued.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "وفق IFRS، عند اختيار نموذج إعادة التقييم لقياس العقارات والآلات والمعدات، أي العبارات التالية صحيحة؟",
+    "choicesAr": [
+      "عند إعادة تقييم أصل، يعاد تقييم كامل الفئة التي ينتمي إليها.",
+      "يمكن إعادة تقييم أصول فردية فقط ضمن الفئة التي ينتمي إليها الأصل.",
+      "يجب إعادة التقييم كل 3 سنوات على الأقل.",
+      "تثبت زيادات القيمة الدفترية الناتجة عن أول إعادة تقييم ضمن الربح أو الخسارة."
+    ],
+    "explanationAr": "وفق IFRS يمكن قياس العقارات والآلات والمعدات بعد الاعتراف الأولي بالقيمة العادلة في تاريخ إعادة التقييم ناقص الإهلاك وخسائر الانخفاض اللاحقة، بافتراض إمكان قياس القيمة العادلة بموثوقية. وعند إعادة تقييم بند، يعاد تقييم كامل فئته."
   },
   {
     "unit": 3,
@@ -1426,7 +2018,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Under U.S. GAAP, items of PPE cannot be carried above their\nhistorical cost. They are carried at historical cost minus\naccumulated depreciation and impairment losses.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية خاطئة بشأن العقارات والآلات والمعدات وفق نماذج القياس اللاحق المعتادة؟",
+    "choicesAr": [
+      "وفق المعايير الأمريكية، يجوز قياس الأصل بمبلغ أعلى من تكلفته التاريخية بإعادة التقييم.",
+      "وفق IFRS، يجوز قياس الأصل بمبلغ أعلى من تكلفته التاريخية.",
+      "وفق IFRS، يجوز قياس الأصل بقيمته العادلة عند إعادة التقييم.",
+      "وفق المعايير الأمريكية، يجوز قياس الأصل بتكلفته التاريخية."
+    ],
+    "explanationAr": "لا يسمح النموذج الأمريكي العام بإعادة تقييم هذه الأصول إلى مبلغ أعلى من تكلفتها التاريخية؛ بل تعرض بالتكلفة التاريخية مطروحًا منها مجمع الإهلاك وخسائر الانخفاض."
   },
   {
     "unit": 3,
@@ -1443,7 +2043,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Any indication that an asset may be impaired requires the\nentity to estimate its recoverable amount. The recoverable\namount is the higher of an asset’s fair value minus costs to\nsell and its value in use. Value in use is the present value of\nestimated future cash flows expected from (1) continuing use\nof an asset and (2) its disposal at the end of its useful life. Fair\nvalue minus costs to sell is the amount obtainable from the\nsale of an asset in an arm’s length transaction between\nknowledgeable, willing parties, minus costs of disposal.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "وفق IFRS، ما المبلغ القابل للاسترداد للأصل؟",
+    "choicesAr": [
+      "الأعلى من قيمة الاستخدام والقيمة العادلة ناقص تكاليف التخلص.",
+      "سعر البيع المقدر في النشاط المعتاد ناقص تكاليف الإكمال والبيع المقدرة.",
+      "القيمة الحالية للتدفقات النقدية المستقبلية المتوقعة من الأصل.",
+      "المبلغ الممكن الحصول عليه من بيع الأصل بمعاملة مستقلة بين أطراف مطلعة وراغبة ناقص تكاليف التخلص."
+    ],
+    "explanationAr": "عند وجود مؤشر انخفاض في القيمة تقدر المنشأة المبلغ القابل للاسترداد، وهو الأعلى من القيمة العادلة ناقص تكاليف التخلص وقيمة الاستخدام. وتمثل قيمة الاستخدام القيمة الحالية للتدفقات المقدرة من (1) استمرار استخدام الأصل و(2) التخلص منه في نهاية عمره. وتمثل القيمة العادلة ناقص تكاليف التخلص سعر البيع في معاملة منظمة بين مشاركي السوق في تاريخ القياس ناقص تكاليف التخلص."
   },
   {
     "unit": 3,
@@ -1460,7 +2068,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Under IFRS, an impairment test is a one-step test. The\ncarrying amount of an asset is compared with its recoverable\namount. An impairment loss is recognized for the excess of\nthe carrying amount over the recoverable amount. The\nrecoverable amount is the greater of an asset’s (1) fair value\nminus cost to sell or (2) value in use (i.e., the present value of\nan asset’s expected cash flows).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تجري شركة اختبار انخفاض قيمة أحد أصولها طويلة الأجل. تتطلب IFRS، بخلاف نموذج المعايير الأمريكية للأصول المحتفظ بها للاستخدام، مقارنة القيمة الدفترية للأصل بماذا؟",
+    "choicesAr": [
+      "القيمة العادلة.",
+      "سعر الشراء.",
+      "المبلغ القابل للاسترداد.",
+      "التدفقات النقدية المستقبلية غير المخصومة."
+    ],
+    "explanationAr": "وفق IFRS تقارن القيمة الدفترية بالمبلغ القابل للاسترداد مباشرةً، وتثبت خسارة الانخفاض بمقدار زيادة القيمة الدفترية عليه. والمبلغ القابل للاسترداد هو الأكبر من (1) القيمة العادلة ناقص تكاليف التخلص أو (2) قيمة الاستخدام، أي القيمة الحالية للتدفقات النقدية المتوقعة."
   },
   {
     "unit": 3,
@@ -1477,7 +2093,15 @@
     ],
     "answerIndex": 1,
     "explanation": "In accounting, depreciation is the systematic and rational\nallocation of the cost of the productive capacity of a fixed\nasset to the accounting periods the asset benefits. The asset’s\nhistorical cost minus expected salvage value is the basis for\nthe allocation.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما المقصود بإهلاك أصل من أصول المصنع؟",
+    "choicesAr": [
+      "تقييم الأصل لأغراض قائمة المركز المالي.",
+      "تخصيص تكلفة الأصل على فترات استخدامه.",
+      "تجميع أموال لاستبدال الأصل.",
+      "تقييم الأصل وفق بيانات تكلفة الاستبدال الحالية."
+    ],
+    "explanationAr": "الإهلاك تخصيص منتظم ومنطقي لتكلفة القدرة الإنتاجية للأصل الثابت على الفترات التي تستفيد منه. ويستند التخصيص إلى التكلفة التاريخية مطروحًا منها القيمة المتبقية المقدرة في نموذج التكلفة."
   },
   {
     "unit": 3,
@@ -1494,7 +2118,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Under the activity method, depreciation is a function of use,\nnot the passage of time. If the estimated activity level (stated,\nfor example, in units of production) is higher in the later years\nof the asset’s useful life, depreciation expense will be higher.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "وفق أي طرق الإهلاك التالية يمكن أن يرتفع مصروف الإهلاك في السنوات المتأخرة من العمر الإنتاجي؟",
+    "choicesAr": [
+      "القسط الثابت.",
+      "طريقة النشاط القائمة على وحدات الإنتاج.",
+      "مجموع أرقام السنوات.",
+      "الرصيد المتناقص."
+    ],
+    "explanationAr": "وفق طريقة النشاط يعتمد الإهلاك على الاستخدام لا مرور الزمن. فإذا ارتفع مستوى النشاط المقدر، مثل وحدات الإنتاج، في السنوات المتأخرة من العمر الإنتاجي، ارتفع مصروف الإهلاك فيها."
   },
   {
     "unit": 3,
@@ -1511,7 +2143,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Under the straight-line, activity, and SYD methods, the\ndepreciable base is $40,000 ($45,000 original cost – $5,000\nestimated salvage value). Under the straight-line method, this\nbase is allocated equally to the 5 years, resulting in a\ndepreciation expense of $8,000. Under the units-of-output\nmethod, the $40,000 is allocated evenly across the estimated\nmileage to produce a depreciation charge of $.50 per mile.\nThus, first-year depreciation expense is $10,000 (20,000 miles\n× $.50). Under SYD, the depreciable base is multiplied by the\nSYD factor (Years of useful life remaining at beginning of year\n÷ Sum of the digits). SYD depreciation expense in the first\nyear is therefore $13,333 [$40,000 × (5 ÷ 15)]. Under the DDB\nmethod, the $45,000 original cost is multiplied by a rate that is\nequal to twice the straight-line rate (2 × 20% = 40%). The\nresult is a depreciation expense of $18,000 ($45,000 × 40%)\nin the first year.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "اشترت Tunis سيارة نقل بمبلغ $45,000 وعمر إنتاجي مقدر 5 سنوات أو 80,000 ميل، وقيمة متبقية $5,000. بلغت المسافة الفعلية في السنة الأولى 20,000 ميل. أي الطرق التالية ينتج عنها أعلى إهلاك للسنة الأولى؟",
+    "choicesAr": [
+      "القسط الثابت.",
+      "طريقة النشاط.",
+      "مجموع أرقام السنوات.",
+      "الرصيد المتناقص المضاعف."
+    ],
+    "explanationAr": "أساس الإهلاك في القسط الثابت والنشاط ومجموع أرقام السنوات هو $40,000 ($45,000 التكلفة − $5,000 القيمة المتبقية). ويوزع القسط الثابت هذا الأساس بالتساوي على 5 سنوات، فيبلغ الإهلاك $8,000. وفي طريقة وحدات الإنتاج توزع $40,000 على الأميال المقدرة بمعدل $.50 للميل. فيبلغ إهلاك السنة الأولى $10,000 (20,000 ميل × $.50). وفي مجموع أرقام السنوات يضرب الأساس في كسر السنوات المتبقية أول السنة على مجموع أرقامها، فيبلغ الإهلاك $13,333 [$40,000 × (5 ÷ 15)]. وفي الرصيد المتناقص المضاعف تضرب التكلفة الأصلية $45,000 في ضعف معدل القسط الثابت (2 × 20% = 40%)، فيبلغ إهلاك السنة الأولى $18,000 ($45,000 × 40%)."
   },
   {
     "unit": 3,
@@ -1528,7 +2168,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Similar to the sum-of-the-years’ digits method, the double\ndeclining balance method is an accelerated method of\ndepreciation resulting in decreasing depreciation charges over\nthe asset’s useful life. Under this method, depreciation\nexpense is calculated as follows: Carrying amount × Double\nthe straight-line rate of depreciation. The carrying amount is\ncost less accumulated depreciation (NOTE: salvage value is\nnot considered). The straight-line rate of depreciation is\ncalculated as follows: 100% ÷ Useful life. Here, that rate is\n20% (100% ÷ 5 years). Accordingly, Freer’s depreciation\nexpense in the first year under the double declining balance\nmethod is $20,000 [$50,000 × (2 × 20%)], which is greater\nthan the other methods.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "اشترت Freer آلة بمبلغ $50,000 لاستخدامها في إنتاج منتجاتها لمدة خمس سنوات، وقيمتها المتبقية $5,000. وتتوقع إنتاج 90,000 وحدة في السنة الأولى وإجمالي 450,000 وحدة. أي الطرق التالية تعطي أكبر إهلاك للسنة الأولى؟",
+    "choicesAr": [
+      "القسط الثابت.",
+      "مجموع أرقام السنوات.",
+      "الرصيد المتناقص المضاعف.",
+      "وحدات الإنتاج."
+    ],
+    "explanationAr": "كما في مجموع أرقام السنوات، تعد طريقة الرصيد المتناقص المضاعف طريقة معجلة ينخفض فيها الإهلاك مع مرور العمر الإنتاجي. ويحسب المصروف بضرب القيمة الدفترية في ضعف معدل القسط الثابت. والقيمة الدفترية هي التكلفة ناقص مجمع الإهلاك، دون طرح القيمة المتبقية عند تحديد أساس المعدل، مع عدم النزول عنها. ومعدل القسط الثابت = 100% ÷ العمر الإنتاجي، وهنا 20% (100% ÷ 5 سنوات). لذا يبلغ إهلاك السنة الأولى $20,000 [$50,000 × (2 × 20%)]، وهو أكبر من الطرق الأخرى."
   },
   {
     "unit": 3,
@@ -1545,7 +2193,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The acquisition cost of the machine includes all costs\nnecessary to prepare it for its intended use. Hence, the\ndepreciable cost is $420,000 ($400,000 invoice price + $4,000\ndelivery expense + $9,000 site preparation + $7,000 electrical\nwork). Under the DDB method, salvage value is ignored at the\nbeginning. Thus, the full $420,000 is subject to depreciation.\nGiven a 5-year life, the annual straight-line rate is 20%, and\nthe DDB rate is 40%. Depreciation for the first year is therefore\n$168,000 ($420,000 × 40%).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "اقتنت Pretoria آلة جديدة بتكلفة $400,000 وتكبدت شحنًا إلى المصنع $4,000. ودفعت $9,000 لإنشاء وتجهيز موقع الآلة و$7,000 لتركيب التوصيلات الكهربائية اللازمة. تقدر عمرها الإنتاجي بـ5 سنوات وقيمتها المتبقية بـ$30,000. وبافتراض الاقتناء في 1 يناير وإهلاك سنة كاملة، ما مصروف الإهلاك وفق الرصيد المتناقص المضاعف؟",
+    "choicesAr": [
+      "$148,000",
+      "$168,000",
+      "$160,000",
+      "$161,600"
+    ],
+    "explanationAr": "تشمل تكلفة اقتناء الآلة جميع التكاليف اللازمة لتجهيزها للاستخدام المقصود. لذلك تبلغ التكلفة $420,000 ($400,000 سعر الفاتورة + $4,000 التسليم + $9,000 تجهيز الموقع + $7,000 الأعمال الكهربائية). وفي الرصيد المتناقص المضاعف لا تطرح القيمة المتبقية من أساس المعدل أولًا، فتطبق الطريقة على كامل $420,000 مع احترام الحد الأدنى للقيمة المتبقية. وبعمر 5 سنوات يبلغ معدل القسط الثابت 20% والمعدل المضاعف 40%. لذا يبلغ إهلاك السنة الأولى $168,000 ($420,000 × 40%)."
   },
   {
     "unit": 3,
@@ -1562,7 +2218,15 @@
     ],
     "answerIndex": 1,
     "explanation": "DDB is an accelerated depreciation method that determines\nperiodic depreciation expense by multiplying the carrying\namount at the beginning of each period by a constant rate that\nis equal to twice the straight-line rate of depreciation. Given\nthat this machine has a 10-year useful life, the DDB rate is\n20%. Each year the carrying amount of the asset decreases\nby the depreciation expense recognized. Salvage value is\nignored in determining the carrying amount except as a\nminimum below which the asset may not be depreciated. The\ncarrying amount at the end of the first year was $384,000\n[$480,000 cost × (100% – 20%)]. Thus, second-year\ndepreciation is $76,800 ($384,000 × 20%).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "اشترت Sydney آلة ركبت ووضعت في الخدمة في 1 يناير من السنة 1 بتكلفة $480,000. وقدرت القيمة المتبقية بـ$80,000. وتهلك على 10 سنوات بالرصيد المتناقص المضاعف. ما مصروف الإهلاك للسنة المنتهية في 31 ديسمبر من السنة 2؟",
+    "choicesAr": [
+      "$96,000",
+      "$76,800",
+      "$64,000",
+      "$61,440"
+    ],
+    "explanationAr": "الرصيد المتناقص المضاعف طريقة معجلة تحسب مصروف الفترة بضرب القيمة الدفترية أول الفترة في معدل ثابت يعادل ضعف معدل القسط الثابت. ونظرًا إلى أن العمر 10 سنوات، يبلغ المعدل 20%. وتنخفض القيمة الدفترية سنويًا بمصروف الإهلاك. ولا تطرح القيمة المتبقية من أساس المعدل، بل تعد حدًا أدنى للقيمة الدفترية. وبلغت القيمة الدفترية في نهاية السنة الأولى $384,000 [$480,000 التكلفة × (100% − 20%)]. لذا يبلغ إهلاك السنة الثانية $76,800 ($384,000 × 20%)."
   },
   {
     "unit": 3,
@@ -1579,7 +2243,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Under the DDB method, the assets are depreciated at a\nconstant rate of 40% (200% × 20% straight-line rate). This rate\nis applied in both of the first 2 years. For Year 3, straight-line\nis used based on the remaining carrying amount. The\ncalculation is as follows:\nYear 1: $50,000 × 40%                          $20,000\nYear 2: ($50,000 – $20,000) × 40%               12,000\nYear 3: ($50,000 – $20,000 – $12,000) ÷ 3     6,000\nAccumulated depreciation, 12/31/Year 3      $38,000",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "اشترت Turtle معدات في 2 يناير من السنة 1 بمبلغ $50,000 وعمر خدمة مقدر 5 سنوات. وتطبق على أصول عمرها 5 سنوات طريقة الرصيد المتناقص المضاعف بنسبة 200% من معدل القسط الثابت في أول 2 سنة، ثم تتحول إلى القسط الثابت. ما مجمع الإهلاك في قائمة المركز المالي بتاريخ 31 ديسمبر من السنة 3؟",
+    "choicesAr": [
+      "$30,000",
+      "$38,000",
+      "$39,200",
+      "$42,000"
+    ],
+    "explanationAr": "في الرصيد المتناقص المضاعف يطبق معدل ثابت 40% (200% × 20% معدل القسط الثابت)، في أول 2 سنة. وفي السنة 3 يستخدم القسط الثابت على القيمة الدفترية المتبقية، بافتراض عدم وجود قيمة متبقية.\nالسنة 1: $50,000 × 40% = $20,000\nالسنة 2: ($50,000 − $20,000) × 40% = 12,000\nالسنة 3: ($50,000 − $20,000 − $12,000) ÷ 3 = 6,000\nمجمع الإهلاك في 12/31 من السنة 3: $38,000."
   },
   {
     "unit": 3,
@@ -1647,7 +2319,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Under the SYD method, the amount to be depreciated is\n$40,000 ($50,000 original cost – $10,000 salvage). The\nportion expensed each year is based on a fraction, the\ndenominator of which is the summation of the years of life of\nthe asset being depreciated. For an asset with a 5-year life,\nthe denominator is 15 (5 + 4 + 3 + 2 + 1). The numerator\nequals the years remaining at the beginning of the year. For\nYear 3, the fraction is 3 ÷ 15, and depreciation expense is\n$8,000 [$40,000 × (3 ÷ 15)].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتعلق البيانات التالية بإحدى مركبات Roswell المشتراة في 1 يناير من السنة 1:\nتكلفة المركبة: $50,000\nالعمر الإنتاجي المقدر بالسنوات: 5\nالعمر الإنتاجي المقدر بالأميال: 100,000\nالقيمة المتبقية المقدرة: $10,000\nالأميال الفعلية:\nالسنة 1: 30,000\nالسنة 2: 20,000\nالسنة 3: 15,000\nالسنة 4: 25,000\nالسنة 5: 12,000\nلم تتغير التقديرات خلال عمر الأصل.\nما مصروف إهلاك السنة 3 وفق مجموع أرقام السنوات؟",
+    "choicesAr": [
+      "$6,000",
+      "$8,000",
+      "$10,000",
+      "$16,000"
+    ],
+    "explanationAr": "وفق مجموع أرقام السنوات يبلغ المبلغ القابل للإهلاك $40,000 ($50,000 التكلفة − $10,000 القيمة المتبقية). ويحدد الجزء المحمل سنويًا بكسر مقامه مجموع أرقام سنوات العمر. وبعمر 5 سنوات يكون المقام 15 (5 + 4 + 3 + 2 + 1). والبسط عدد السنوات المتبقية أول السنة. وفي السنة 3 يكون الكسر 3 ÷ 15، ويبلغ الإهلاك $8,000 [$40,000 × (3 ÷ 15)]."
   },
   {
     "unit": 3,
@@ -1664,7 +2344,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Under the activity method, periodic depreciation is based on\nthe proportion of expected total production that occurred. For\nYears 1 through 4, the total depreciation was $36,000\n{($50,000 – $10,000) × [(30,000 + 20,000 + 15,000 + 25,000)\n÷ 100,000]}. Accordingly, the remaining depreciable base was\n$4,000 ($50,000 cost – $10,000 salvage – $36,000). Given\nthat the 12,000 miles driven in Year 5 exceeded the remaining\nestimated production of 10,000 miles (100,000 – 30,000 –\n20,000 – 15,000 – 25,000), only the $4,000 of the remaining\ndepreciable base should be recognized in Year 5.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتعلق البيانات التالية بإحدى مركبات Roswell المشتراة في 1 يناير من السنة 1:\nتكلفة المركبة: $50,000\nالعمر الإنتاجي المقدر بالسنوات: 5\nالعمر الإنتاجي المقدر بالأميال: 100,000\nالقيمة المتبقية المقدرة: $10,000\nالأميال الفعلية:\nالسنة 1: 30,000\nالسنة 2: 20,000\nالسنة 3: 15,000\nالسنة 4: 25,000\nالسنة 5: 12,000\nلم تتغير التقديرات خلال عمر الأصل.\nما مصروف إهلاك السنة 5 وفق طريقة النشاط؟",
+    "choicesAr": [
+      "$4,000",
+      "$4,800",
+      "$5,000",
+      "$6,000"
+    ],
+    "explanationAr": "وفق طريقة النشاط يعتمد إهلاك الفترة على نسبة الاستخدام الفعلي إلى إجمالي الاستخدام المتوقع. وخلال السنوات 1 إلى 4 بلغ إجمالي الإهلاك $36,000 {($50,000 − $10,000) × [(30,000 + 20,000 + 15,000 + 25,000) ÷ 100,000]}. ومن ثم تبقى أساس قابل للإهلاك قدره $4,000 ($50,000 التكلفة − $10,000 المتبقية − $36,000). ولأن 12,000 ميل في السنة 5 تجاوزت الاستخدام المقدر المتبقي البالغ 10,000 ميل (100,000 − 30,000 − 20,000 − 15,000 − 25,000)، يثبت فقط المبلغ المتبقي القابل للإهلاك $4,000 في السنة 5."
   },
   {
     "unit": 3,
@@ -1681,7 +2369,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The sum-of-the-years’-digits (SYD) method multiplies a\nconstant depreciable base (Cost – Salvage value) by a\ndeclining fraction. It is a declining-rate, declining-charge\nmethod. Consequently, the depreciable base is $18,000\n($20,000 – $2,000). The SYD fraction’s numerator is the\nnumber of years of useful life minus the prior years elapsed.\nThe denominator is the sum of the digits of all the years in the\nasset’s life. The numerator is 1 year (4 – 3), and the\ndenominator is 10 (1 + 2 + 3 + 4). The depreciation for the last\nyear is $1,800 [$18,000 × (1 ÷ 10)], so the declining balance\nafter 3 years of the 4-year period (Year 2-Year 4) is $3,800\n($1,800 remaining depreciable base + $2,000 salvage value).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم Spiro مجموع أرقام السنوات لإهلاك معدات اشترتها في يناير من السنة 2 مقابل $20,000. وقدرت القيمة المتبقية بـ$2,000 والعمر الإنتاجي بـ4 سنوات. ما القيمة الدفترية للأصل في 31 ديسمبر من السنة 4؟",
+    "choicesAr": [
+      "$1,800",
+      "$2,000",
+      "$3,800",
+      "$4,500"
+    ],
+    "explanationAr": "تضرب طريقة مجموع أرقام السنوات أساسًا ثابتًا للإهلاك (التكلفة ناقص القيمة المتبقية) في كسر متناقص. فهي طريقة ذات معدل ومصروف متناقصين. ويبلغ الأساس القابل للإهلاك $18,000 ($20,000 − $2,000). وبسط الكسر هو العمر الإنتاجي ناقص السنوات المنقضية، ومقامه مجموع أرقام سنوات العمر. وبالنسبة للسنة الأخيرة يكون البسط 1 سنة (4 − 3) والمقام 10 (1 + 2 + 3 + 4). ويبلغ إهلاك السنة الأخيرة $1,800 [$18,000 × (1 ÷ 10)]. ومن ثم تكون القيمة الدفترية بعد 3 سنوات من العمر البالغ 4 سنوات (السنة 2 إلى السنة 4) هي $3,800 ($1,800 أساس الإهلاك المتبقي + $2,000 القيمة المتبقية)."
   },
   {
     "unit": 3,
@@ -1698,7 +2394,15 @@
     ],
     "answerIndex": 2,
     "explanation": "When using a declining-balance method, a constant rate is\napplied to the changing carrying amount of the asset. The\ncarrying amount for the first period’s calculation is the\nacquisition cost ($108,000). The constant rate for the DDB\nmethod is twice the straight-line rate [(100% ÷ 4 years) × 2].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "اشترت Caracas حاسوبًا في 1 يناير مقابل $108,000 بعمر إنتاجي مقدر 4 سنوات وقيمة متبقية $18,000. وستستخدم الرصيد المتناقص المضاعف. ما معادلة الإهلاك الواجب عرضه في نهاية السنة الأولى؟",
+    "choicesAr": [
+      "($108,000 – $18,000) × (25% × 2)",
+      "($108,000 – $18,000) × (25% × 1/2)",
+      "($108,000) × (25% × 2)",
+      "($108,000) × (25% × 1/2)"
+    ],
+    "explanationAr": "في الرصيد المتناقص يطبق معدل ثابت على القيمة الدفترية المتغيرة. والقيمة الدفترية المستخدمة أول فترة هي تكلفة الاقتناء ($108,000). والمعدل الثابت في الرصيد المتناقص المضاعف هو ضعف معدل القسط الثابت [(100% ÷ 4 سنوات) × 2]، مع عدم النزول عن القيمة المتبقية."
   },
   {
     "unit": 3,
@@ -1715,7 +2419,15 @@
     ],
     "answerIndex": 2,
     "explanation": "SYD depreciation is calculated on a constant depreciable\nbase equal to the original cost minus the salvage value,\nmultiplied by the SYD fraction. The SYD fraction’s numerator\nis the number of years of remaining useful life of the asset.\nThus, the numerator is 4 (10 years – 6 years). The\ndenominator is the sum of the digits of the total years of the\nexpected useful life. In this case, the denominator is 55 {[(1 +\n2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10)] or [10 (10 + 1) ÷ 2)]}.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم طريقة مجموع أرقام السنوات لإهلاك آلة عمرها الإنتاجي المقدر 10 سنوات. ما الكسر المطبق على التكلفة القابلة للإهلاك في السنة السابعة؟",
+    "choicesAr": [
+      "7/10",
+      "7/55",
+      "4/55",
+      "3/10"
+    ],
+    "explanationAr": "يحسب الإهلاك بضرب أساس ثابت يساوي التكلفة الأصلية مطروحًا منها القيمة المتبقية في كسر مجموع أرقام السنوات. والبسط هو سنوات العمر المتبقية. لذا يكون البسط 4 (10 سنوات − 6 سنوات). والمقام مجموع أرقام سنوات العمر المتوقع، وهنا 55 {[(1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10)] أو [10 × (10 + 1) ÷ 2]}."
   },
   {
     "unit": 3,
@@ -1732,7 +2444,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Under the double-declining balance method, the salvage value\nis ignored in determining the carrying amount, but the asset is\nnot depreciated below the salvage value. Given an estimated\nuseful life of 8 years, the declining balance percentage is 25%\n(100% ÷ 8 × 2). The depreciation expense in the first year of\noperation is $35,000 ($140,000 × 25%), and the carrying\namount of the machine at the end of the first year is $105,000\n($140,000 – $35,000). The depreciation expense in the\nsecond year is $26,250 ($105,000 × 25%). The carrying\namount of the machine at the end of the second year of\noperations is $78,750 ($105,000 – $26,250).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "اشترت Hall آلة في 1 يناير بتكلفة $140,000 وعمر إنتاجي مقدر ثماني سنوات وقيمة متبقية $60,000. واختارت الرصيد المتناقص المضاعف. ما القيمة الدفترية للآلة في نهاية السنة الثانية من التشغيل؟",
+    "choicesAr": [
+      "$60,000",
+      "$61,250",
+      "$78,750",
+      "$80,000"
+    ],
+    "explanationAr": "في الرصيد المتناقص المضاعف لا تطرح القيمة المتبقية من أساس المعدل، لكن لا يجوز تخفيض القيمة الدفترية عنها. وبعمر 8 سنوات يكون المعدل 25% (100% ÷ 8 × 2). إهلاك السنة الأولى $35,000 ($140,000 × 25%)، والقيمة الدفترية في نهايتها $105,000 ($140,000 − $35,000). وإهلاك السنة الثانية $26,250 ($105,000 × 25%). لذا تبلغ القيمة الدفترية في نهاية السنة الثانية $78,750 ($105,000 − $26,250)."
   },
   {
     "unit": 3,
@@ -1749,7 +2469,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Under the double-declining balance depreciation method, the\nperiodic depreciation expense is calculated by multiplying the\ncarrying amount at the beginning of the period by two times\nthe percentage of the straight-line rate of depreciation.\nSalvage value is ignored in determining the carrying amount,\nbut the asset is not depreciated below the salvage value. The\ncarrying amount at the beginning of the first year is its cost of\n$60,000. The straight-line rate of depreciation is 10% (100% ÷\n10). The depreciation expense under the double-declining\nmethod is thus $12,000 ($60,000 × 2 × 10%).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 يناير اشترت Nick شاحنة توصيل مقابل $60,000 بقيمة متبقية $2,000 وعمر إنتاجي مقدر 10 سنوات. ويقدر عمرها التشغيلي بـ100,000 ميل. وخلال السنة الأولى قطعت 19,000 ميل. وتستخدم الرصيد المتناقص المضاعف. ما إهلاك السنة الأولى؟",
+    "choicesAr": [
+      "$5,800",
+      "$11,020",
+      "$11,600",
+      "$12,000"
+    ],
+    "explanationAr": "في الرصيد المتناقص المضاعف يحسب الإهلاك بضرب القيمة الدفترية في بداية الفترة في ضعف معدل القسط الثابت. ولا تطرح القيمة المتبقية من أساس المعدل، لكنها تحد القيمة الدفترية الدنيا. والقيمة الدفترية في بداية السنة الأولى هي التكلفة $60,000. ومعدل القسط الثابت 10% (100% ÷ 10). لذا يبلغ الإهلاك $12,000 ($60,000 × 2 × 10%)."
   },
   {
     "unit": 3,
@@ -1766,7 +2494,15 @@
     ],
     "answerIndex": 1,
     "explanation": "A recognized intangible asset is amortized over its useful life if\nthat useful life is finite, that is, unless the useful life is\ndetermined to be indefinite. The useful life of an intangible\nasset is indefinite if no foreseeable limit exists on the period\nover which it will contribute, directly or indirectly, to the\nreporting entity’s cash flows.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "متى يُطفأ الأصل غير الملموس المعترف به على مدى عمره الإنتاجي؟",
+    "choicesAr": [
+      "إلا إذا تعذر تحديد نمط استهلاك المنافع الاقتصادية للأصل بموثوقية.",
+      "إذا كان عمره الإنتاجي محددًا.",
+      "إلا إذا تعذر تحديد المدة الدقيقة لعمره.",
+      "إذا كان عمره غير محدد ولكنه ليس لانهائيًا."
+    ],
+    "explanationAr": "يطفأ الأصل غير الملموس على مدى عمره الإنتاجي إذا كان محددًا، بخلاف الأصل ذي العمر غير المحدد. ويكون العمر غير محدد عندما لا يوجد حد منظور للفترة التي يتوقع أن يساهم فيها الأصل، مباشرة أو غير مباشرة، في التدفقات النقدية للمنشأة."
   },
   {
     "unit": 3,
@@ -1783,7 +2519,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The corporation will amortize the cost of the patent on a\nstraight-line basis at the rate of $1,300 per year ($22,100 ÷\n17). The costs of a successful legal defense of a patent are\ncapitalized and amortized over the shorter of the remaining\nlegal life or the estimated useful life of the patent. Because the\nlegal costs to defend the patent were incurred when the patent\nhad 9.5 years of life remaining, they will be amortized at a rate\nof $1,200 per year ($11,400 ÷ 9.5). Because Year 8 only\nincludes a half year’s depreciation for the legal costs, total\namortization expense for that year is $1,900 ($1,300 + $600).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "اشترت شركة براءة اختراع في بداية السنة 1 مقابل $22,100 على أن تطفأ على مدى 17 سنة. وفي 1 يوليو من السنة 8 تكبدت تكاليف قانونية $11,400 للدفاع الناجح عن البراءة. ما مصروف الإطفاء الذي ينبغي إثباته في السنة 8؟",
+    "choicesAr": [
+      "$2,500",
+      "$1,971",
+      "$1,900",
+      "$1,300"
+    ],
+    "explanationAr": "تطفئ الشركة تكلفة البراءة بالقسط الثابت بمعدل سنوي $1,300 ($22,100 ÷ 17). وفي المعالجة الأمريكية المفترضة هنا، ترسمل تكاليف الدفاع القانوني الناجح عن البراءة عند استيفاء شروط الاعتراف وتطفأ على الأقصر من العمر القانوني المتبقي والعمر الإنتاجي المقدر. ولأن تكاليف الدفاع تكبدت عندما تبقى من عمر البراءة 9.5 سنة، فإن معدل إطفائها السنوي $1,200 ($11,400 ÷ 9.5). وتشمل السنة 8 نصف سنة فقط من إطفاء التكاليف القانونية؛ لذلك يبلغ إجمالي الإطفاء $1,900 ($1,300 + $600)."
   },
   {
     "unit": 3,
@@ -1800,7 +2544,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Generally, R&D costs are expensed as incurred. Legal fees\nand registration fees are excluded from the definition of R&D.\nThus, the patent registration fees should be capitalized as a\ncost associated with an internally developed patent. The\npatent’s R&D costs should have been expensed as they were\nincurred.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي التكاليف التالية المرتبطة ببراءة اختراع مطورة داخليًا ينبغي رسملتها وفق المعالجة الأمريكية العامة؟\nالبحث والتطوير | تسجيل البراءة",
+    "choicesAr": [
+      "لا | نعم",
+      "لا | لا",
+      "نعم | لا",
+      "نعم | نعم"
+    ],
+    "explanationAr": "تثبت تكاليف البحث والتطوير عمومًا مصروفًا عند تكبدها وفق المعايير الأمريكية، مع مراعاة الاستثناءات المحددة. وتستبعد الأتعاب القانونية ورسوم التسجيل من تعريف البحث والتطوير. لذلك ترسمل رسوم التسجيل المرتبطة بالبراءة عند تحقق شروط الاعتراف، بينما تحمل تكاليف البحث والتطوير الخاصة بها على المصروفات."
   },
   {
     "unit": 3,
@@ -1817,7 +2569,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A patent is amortized over the shorter of its useful life or legal\nlife, so annual amortization on this patent is $1,700 ($17,000 ÷\n10 years). The depreciation expense for the year of acquisition\nis $850 [$1,700 × (6 ÷ 12 months)]. The patent should\ntherefore be reported at December 31 at $16,150 ($17,000 –\n$850).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 يوليو حصلت شركة على براءة اختراع لعملية تصنيع جديدة تزيد كفاءة الإنتاج. بلغت التكلفة $17,000، والعمر الإنتاجي المتوقع للعملية 10 سنوات، رغم أن العمر القانوني للبراءة 17 سنة. تتبع الشركة السنة الميلادية وتعد قائمة المركز المالي في 31 ديسمبر. بأي مبلغ تعرض البراءة في 31 ديسمبر من سنة الاقتناء؟",
+    "choicesAr": [
+      "$15,300",
+      "$16,000",
+      "$16,150",
+      "$16,500"
+    ],
+    "explanationAr": "تطفأ البراءة على الأقصر من عمرها الإنتاجي أو القانوني في الحالة المعروضة؛ لذا يبلغ الإطفاء السنوي $1,700 ($17,000 ÷ 10 سنوات). ويبلغ مصروف إطفاء سنة الاقتناء $850 [$1,700 × (6 ÷ 12 شهرًا)]، بافتراض إتاحتها للاستخدام في تاريخ الاقتناء. ومن ثم تعرض في 31 ديسمبر بمبلغ $16,150 ($17,000 − $850)."
   },
   {
     "unit": 3,
@@ -1834,7 +2594,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Goodwill is tested for impairment at least annually but is never\namortized for public companies. Trademarks, however, may\nbe amortized but only if they have finite useful lives.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي من الأصول التالية المقتناة خلال السنة بمعاملة تبادل يمكن أن يخضع للإطفاء لدى الشركات العامة؟\nالشهرة | العلامات التجارية",
+    "choicesAr": [
+      "لا | لا",
+      "لا | نعم",
+      "نعم | نعم",
+      "نعم | لا"
+    ],
+    "explanationAr": "تختبر الشهرة للانخفاض في القيمة سنويًا على الأقل ولا تطفأ لدى الشركات العامة وفق النموذج المعروض. أما العلامات التجارية فيمكن أن تخضع للإطفاء إذا كان عمرها الإنتاجي محددًا."
   },
   {
     "unit": 3,
@@ -1851,7 +2619,15 @@
     ],
     "answerIndex": 3,
     "explanation": "U.S. GAAP require that R&D costs be expensed as incurred,\nwhile IFRS separate research costs from development costs.\nUnder IFRS, research costs are to be expensed, while\ndevelopment costs can be capitalized.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية تصف المعالجة العامة لتكاليف البحث والتطوير وفق المعايير الأمريكية والمعايير الدولية IFRS؟",
+    "choicesAr": [
+      "يسمح كلا الإطارين برسملة تكاليف البحث والتطوير عمومًا.",
+      "لا يسمح أي من الإطارين برسملة تكاليف البحث والتطوير.",
+      "تسمح المعايير الأمريكية برسملة البحث والتطوير وتلزم IFRS بإثباتهما مصروفًا.",
+      "تتطلب المعايير الأمريكية إثبات البحث والتطوير مصروفًا عمومًا، وتتطلب IFRS إثبات البحث مصروفًا وتسمح برسملة التطوير المستوفي للشروط."
+    ],
+    "explanationAr": "تقتضي القاعدة العامة للمعايير الأمريكية إثبات تكاليف البحث والتطوير مصروفًا عند تكبدها مع وجود استثناءات محددة. وتفصل IFRS بين البحث والتطوير: تثبت تكاليف البحث مصروفًا، بينما يجب رسملة تكاليف التطوير ابتداءً من تحقق شروط الاعتراف بالأصل غير الملموس."
   },
   {
     "unit": 3,
@@ -1868,7 +2644,15 @@
     ],
     "answerIndex": 0,
     "explanation": "An intangible asset is an identifiable nonmonetary\n(nonfinancial) asset without physical substance. Inventory is a\ntangible asset. Thus, goods on consignment are not intangible\nassets.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي لا يعد أصلًا غير ملموس؟",
+    "choicesAr": [
+      "بضاعة محتفظ بها للبيع بالعمولة.",
+      "براءات الاختراع.",
+      "حقوق النشر.",
+      "العلامات التجارية."
+    ],
+    "explanationAr": "الأصل غير الملموس أصل غير نقدي قابل للتحديد وليس له وجود مادي. والمخزون أصل ملموس؛ ولذلك لا تعد بضاعة الأمانة أصلًا غير ملموس، سواء كانت مملوكة للموكل أو محتفظًا بها لدى الوكيل."
   },
   {
     "unit": 3,
@@ -1885,7 +2669,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Patents may be purchased or developed internally. The initial\ncapitalized cost of a purchased patent is normally the fair\nvalue of the consideration given, that is, its purchase price\nplus incidental costs, such as registration and attorney’s fees.\nInternally developed patents are less likely to be capitalized\nbecause related R&D costs generally are expensed when\nincurred. Thus, only relatively minor costs can be capitalized,\nfor example, patent registration fees and legal fees.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي النفقات التالية تؤهل للرسملة كأصل وفق المعالجة الأمريكية العامة؟",
+    "choicesAr": [
+      "تكلفة المواد المستخدمة في اختبار النموذج الأولي.",
+      "تكاليف اختبار النموذج الأولي وتعديل تصميمه.",
+      "رواتب المهندسين القائمين بتطوير منتج جديد.",
+      "التكاليف القانونية للحصول على براءة اختراع لمنتج جديد."
+    ],
+    "explanationAr": "يمكن شراء البراءة أو تطويرها داخليًا. وتكون تكلفة البراءة المشتراة عادةً قيمة المقابل المدفوع مضافًا إليها التكاليف العرضية اللازمة للاقتناء مثل رسوم التسجيل وأتعاب المحاماة. أما تكاليف البحث والتطوير للبراءات المطورة داخليًا فتثبت عمومًا مصروفًا عند تكبدها، مع مراعاة الاستثناءات. ويمكن رسملة تكاليف مثل رسوم التسجيل والأتعاب القانونية عند تحقق شروط الاعتراف."
   },
   {
     "unit": 3,
@@ -1902,7 +2694,15 @@
     ],
     "answerIndex": 0,
     "explanation": "R&D costs generally are expensed as incurred. However,\nlegal work in connection with patent applications or litigation\nand the sale or licensing of patents are specifically excluded\nfrom the definition of R&D. Hence, the legal costs of filing a\npatent should be capitalized. The patent should be amortized\nover its estimated economic life of 10 years. Amortization for\nthe year equals $1,700 [($34,000 ÷ 10) × (6 ÷ 12)]. Thus, the\nreported amount of the patent at year end equals $32,300\n($34,000 – $1,700).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "خلال السنة المنتهية تكبدت شركة تكاليف بحث وتطوير $136,000 في مختبراتها بشأن براءة اختراع منحت في 1 يوليو. وبلغت تكاليف تسجيلها $34,000. وعمرها القانوني 20 سنة وعمرها الاقتصادي المقدر 10 سنوات. ما صافي مبلغ البراءة بعد مجمع الإطفاء في قائمة المركز المالي في 31 ديسمبر؟",
+    "choicesAr": [
+      "$32,300",
+      "$33,150",
+      "$161,500",
+      "$165,000"
+    ],
+    "explanationAr": "تثبت تكاليف البحث والتطوير عمومًا مصروفًا عند تكبدها وفق المعايير الأمريكية. وتستبعد الأعمال القانونية المتعلقة بطلبات البراءات أو التقاضي وبيع البراءات أو ترخيصها من تعريف البحث والتطوير. لذا ترسمل تكاليف تقديم طلب البراءة المؤهلة. وتطفأ البراءة على عمرها الاقتصادي المقدر 10 سنوات. ويبلغ إطفاء السنة $1,700 [($34,000 ÷ 10) × (6 ÷ 12)]. لذلك تبلغ قيمة البراءة في نهاية السنة $32,300 ($34,000 − $1,700)."
   },
   {
     "unit": 3,
@@ -1919,7 +2719,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The amortization period for an intangible asset distinct from\ngoodwill is the shorter of its useful life or the legal life\nremaining after acquisition.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لبراءة اختراع مشتراة عمر قانوني متبق قدره 15 سنة. كيف تعالج؟",
+    "choicesAr": [
+      "تثبت مصروفًا في سنة الاقتناء.",
+      "تطفأ على مدى 15 سنة بصرف النظر عن عمرها الإنتاجي.",
+      "تطفأ على مدى عمرها الإنتاجي إذا كان أقل من 15 سنة.",
+      "تطفأ على مدى 40 سنة."
+    ],
+    "explanationAr": "فترة إطفاء الأصل غير الملموس ذي العمر المحدد، مثل البراءة في الحالة المعروضة، هي الأقصر من عمره الإنتاجي وعمره القانوني المتبقي بعد الاقتناء، مع مراعاة التجديدات التي تستوفي شروط إدراجها في العمر الإنتاجي."
   },
   {
     "unit": 3,
@@ -1936,7 +2744,15 @@
     ],
     "answerIndex": 1,
     "explanation": "An intangible asset is carried at cost minus any accumulated\namortization and impairment losses, or at a revalued amount.\nThe revaluation model is similar to that for items of PPE (initial\nrecognition of an asset at cost). However, fair value must be\ndetermined based on an active market.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "وفق IFRS، متى يجوز لمنشأة اقتنت أصلًا غير ملموس استخدام نموذج إعادة التقييم للقياس اللاحق؟",
+    "choicesAr": [
+      "عند إمكان تحديد العمر الإنتاجي للأصل بموثوقية.",
+      "عند وجود سوق نشطة للأصل غير الملموس.",
+      "عند إمكان قياس تكلفة الأصل بموثوقية.",
+      "عندما يكون الأصل غير الملموس أصلًا نقديًا."
+    ],
+    "explanationAr": "يعرض الأصل غير الملموس بالتكلفة ناقص مجمع الإطفاء وخسائر الانخفاض، أو بمبلغ إعادة التقييم. ويشبه نموذج إعادة التقييم نموذج العقارات والآلات والمعدات من حيث الاعتراف الأولي بالتكلفة، إلا أنه يجب تحديد القيمة العادلة بالرجوع إلى سوق نشطة."
   },
   {
     "unit": 3,
@@ -1953,7 +2769,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Legal fees incurred in the successful defense of a patent\nshould be capitalized as part of the cost of the patent and then\namortized over its remaining useful life because that useful life\nis finite. Legal fees incurred in an unsuccessful defense\nshould be expensed as the costs are incurred.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "متى ترسمل الأتعاب القانونية التي تتكبدها شركة للدفاع عن حقوق براءة الاختراع وفق المعالجة الأمريكية المفترضة؟\nنتيجة ناجحة | نتيجة غير ناجحة",
+    "choicesAr": [
+      "نعم | نعم",
+      "نعم | لا",
+      "لا | لا",
+      "لا | نعم"
+    ],
+    "explanationAr": "ترسمل الأتعاب القانونية المرتبطة بالدفاع الناجح عن البراءة عند استيفاء شروط الاعتراف وتضاف إلى تكلفتها ثم تطفأ على عمرها الإنتاجي المتبقي المحدد. أما أتعاب الدفاع غير الناجح فتحمل على المصروفات عند تكبدها."
   },
   {
     "unit": 3,
@@ -1987,7 +2811,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Under IFRS, (1) costs incurred during the research phase of\nan internal project are expensed as incurred since the\ncompany cannot demonstrate that an intangible asset exists\nthat will generate probable future economic benefits; and\n(2) costs incurred during the development phase of an internal\nproject can be capitalized and recognized as an intangible\nasset if, and only if, the company can demonstrate all of the\nfollowing:\n1. The technical feasibility to complete the intangible\nasset\n2. Its intention to complete and use or sell the intangible\nasset\n3. Its ability to sell or use the intangible asset\n4. Availability of resources to complete and use or sell\nthe intangible asset\n5. The way in which the asset will generate probable\nfuture economic benefits\n6. Its ability to reliably measure expenditures attributable\nto the asset",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية صحيحة بشأن المقارنة بين المعايير الأمريكية والمعايير الدولية للتقارير المالية (IFRS)؟",
+    "choicesAr": [
+      "تثبت تكاليف التطوير عمومًا مصروفًا وفق المعايير الأمريكية، وترسمل وفق IFRS إذا استوفت شروطًا محددة.",
+      "تثبت تكاليف البحث مصروفًا وفق المعايير الأمريكية وترسمل وفق IFRS إذا استوفت شروطًا محددة.",
+      "يجب إثبات جميع تكاليف البحث والتطوير مصروفًا وفق كلا الإطارين.",
+      "لا ترسمل الشهرة المتولدة داخليًا وفق المعايير الأمريكية، ولكن يجوز رسملتها وفق IFRS."
+    ],
+    "explanationAr": "وفق IFRS: (1) تحمل تكاليف مرحلة البحث في المشروع الداخلي على المصروفات عند تكبدها؛ إذ لا تستطيع الشركة إثبات وجود أصل غير ملموس يحقق منافع اقتصادية مستقبلية محتملة؛ (2) يجب رسملة تكاليف مرحلة التطوير والاعتراف بأصل غير ملموس ابتداءً من إثبات جميع الشروط التالية:\n1. الجدوى الفنية لإكمال الأصل.\n2. نية إكماله واستخدامه أو بيعه.\n3. القدرة على استخدامه أو بيعه.\n4. توافر الموارد اللازمة لإكماله واستخدامه أو بيعه.\n5. كيفية توليده منافع اقتصادية مستقبلية محتملة.\n6. القدرة على قياس النفقات المنسوبة إليه بموثوقية."
   },
   {
     "unit": 3,
@@ -2021,7 +2853,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Amortization is a means of allocating an initial cost to the\nperiods that benefit from that cost. It is similar to depreciation,\na term associated with long-lived tangible assets, and\ndepletion, which is associated with natural resources.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما المقصود بعملية إطفاء الأصول غير الملموسة مثل حقوق النشر وبراءات الاختراع؟",
+    "choicesAr": [
+      "تحديد التدفق النقدي التشغيلي للفترة الحالية.",
+      "التخصيص المنتظم لتكلفة الأصل غير الملموس على فترات استخدامه.",
+      "تجميع أموال لاستبدال الأصل في نهاية عمره الإنتاجي.",
+      "العكس المنتظم لتغير مستويات الأسعار العامة خلال الفترة."
+    ],
+    "explanationAr": "الإطفاء وسيلة لتخصيص التكلفة القابلة للإطفاء على الفترات المستفيدة منها. ويشبه الإهلاك المرتبط بالأصول الملموسة طويلة الأجل والاستنفاد المرتبط بالموارد الطبيعية."
   },
   {
     "unit": 3,
@@ -2038,7 +2878,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Internally developed intangibles other than goodwill are most\noften initially recorded at the amount of the incidental costs\nonly. Thus, cost of patent registration is capitalized as patent\ncost and reported in the financial statements as an intangible\nasset.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي أنواع الأصول التالية يعرض عادةً في قائمة المركز المالي كأصل غير ملموس وفق المعالجة الأمريكية العامة؟",
+    "choicesAr": [
+      "الأوراق المالية المشتقة.",
+      "تكاليف البحث والتطوير.",
+      "تحسينات العقارات المستأجرة.",
+      "تكاليف تسجيل براءات الاختراع."
+    ],
+    "explanationAr": "تسجل الأصول غير الملموسة المطورة داخليًا بخلاف الشهرة، وفق المعالجة الأمريكية العامة المعروضة، عادةً بتكاليفها العرضية المؤهلة فقط. لذلك ترسمل تكلفة تسجيل البراءة باعتبارها جزءًا من تكلفتها وتعرض في القوائم المالية كأصل غير ملموس عند تحقق شروط الاعتراف."
   },
   {
     "unit": 3,
@@ -2089,7 +2937,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The legal costs associated with the successful litigation of a\npatent defense are capitalized because they benefit future\nperiods, while unsuccessful litigation costs must be expensed\nas incurred. Thus, only the $100,000 of legal costs associated\nwith unsuccessful outcomes are expensed in Year 3.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في السنة 3 تكبدت شركة تكاليف قانونية $500,000 للدفاع عن عدة براءات. ويشمل المبلغ $400,000 مرتبطًا بنتائج ناجحة و$100,000 بنتائج غير ناجحة. ما مبلغ التكاليف القانونية الذي ينبغي إثباته مصروفًا للسنة 3؟",
+    "choicesAr": [
+      "$500,000",
+      "$400,000",
+      "$100,000",
+      "$0"
+    ],
+    "explanationAr": "ترسمل تكاليف الدفاع القانوني الناجح عن البراءات عند استيفاء شروط الاعتراف وفق المعالجة الأمريكية المعروضة، لأنها تحقق منافع مستقبلية. أما تكاليف الدفاع غير الناجح فتحمل على المصروفات عند تكبدها. لذلك تحمل التكاليف البالغة $100,000 المرتبطة بالنتائج غير الناجحة على مصروفات السنة 3، بخلاف أي إطفاء أو انخفاض في القيمة قد يلزم إثباته منفصلًا."
   },
   {
     "unit": 3,
@@ -2106,7 +2962,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The accounting treatment of the costs of the legal defense of a\npatent depends on the outcome of the litigation. The costs of\nsuccessful litigation are capitalized because they will benefit\nfuture periods. The costs of unsuccessful litigation are\nexpended as incurred.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تكبدت Bay أتعابًا قانونية للدفاع عن حقوق براءتها. متى ترسمل هذه الأتعاب وفق المعالجة الأمريكية المفترضة؟\nنتيجة ناجحة | نتيجة غير ناجحة",
+    "choicesAr": [
+      "نعم | نعم",
+      "نعم | لا",
+      "لا | لا",
+      "لا | نعم"
+    ],
+    "explanationAr": "تتوقف معالجة تكاليف الدفاع القانوني عن البراءة على نتيجة التقاضي في السياق المعروض. وترسمل تكاليف التقاضي الناجح عند تحقق شروط الاعتراف لأنها تحقق منافع للفترات المستقبلية. أما تكاليف التقاضي غير الناجح فتحمل على المصروفات عند تكبدها."
   },
   {
     "unit": 3,
@@ -2123,6 +2987,14 @@
     ],
     "answerIndex": 3,
     "explanation": "Research and development (R&D) costs must be expensed as\nincurred. Activities typically characterized as R&D include the\ndesign, construction, and testing of preproduction prototypes\nand models. Accordingly, the company will expense the entire\nR&D costs of $1,100,000 ($1,000,000 + $100,000) incurred in\nrespect to the prototype.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تكبد قسم البحث بشركة $1,000,000 تكاليف مواد وأجور وتكاليف غير مباشرة لإنشاء نموذج أولي لمنتج جديد، و$100,000 لاختباره وتعديله. أي العبارات التالية تصف المعالجة الصحيحة لتكاليف النموذج وفق المعالجة الأمريكية العامة؟",
+    "choicesAr": [
+      "رسملة $1,100,000 وإطفاؤها على عمر المبيعات المتوقع للمنتج.",
+      "رسملة $1,100,000 وإطفاؤها على عمر النموذج.",
+      "رسملة $1,000,000 وإطفاؤها على عمر النموذج وإثبات $100,000 مصروفًا عند تكبدها.",
+      "إثبات $1,100,000 مصروفًا عند تكبدها."
+    ],
+    "explanationAr": "تحمل تكاليف البحث والتطوير عمومًا على المصروفات عند تكبدها وفق المعايير الأمريكية، بافتراض عدم انطباق استثناء. ومن أنشطته تصميم وإنشاء واختبار النماذج الأولية قبل الإنتاج. وعليه تحمل الشركة كامل تكاليف البحث والتطوير المرتبطة بالنموذج الأولي البالغة $1,100,000 ($1,000,000 + $100,000) على المصروفات."
   }
 ]

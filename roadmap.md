@@ -111,3 +111,13 @@
 - [x] Unit 2 Wave 6: 26 additional cost flow Arabic drafts (§3 Q11–32/Q34–37); **66/107 (61.7%)**. Section 3 initial review complete: 34 translated, three held. Q33 retrospective LIFO transition assumption held. Continue §4 subsequent measurement. See `docs/CMA_UNIT2_ARABIC_WAVE6_2026-11-25.md`.
 
 - [x] Unit 2 Wave 7: 28 subsequent measurement drafts (§4 Q1–3/Q5–8/Q10–11/Q13–31); **94/107 (87.9%)**, 13 held, zero unreviewed. Initial review complete; continue Unit 3. See `docs/CMA_UNIT2_ARABIC_WAVE7_2026-11-25.md`.
+
+- [x] Unit 3 complete initial Arabic review: 109/125 (87.2%), 16 held, zero unreviewed across all five sections. See `docs/CMA_UNIT3_ARABIC_REVIEW_2026-11-25.md`. Continue Unit 4 after CI.
+
+- [x] Unit 4 initial Arabic review: 71/86 (82.6%), 15 held, zero unreviewed across contingencies, leases, income taxes and bonds. See `docs/CMA_UNIT4_ARABIC_REVIEW_2026-11-25.md`. Continue Unit 5 after CI.
+
+- [x] Unit 5 Wave 1: 15/21 revenue contracts drafts; six held; Unit 5 15/75 (20%). Corrected Unit 4 §4 Q14 rounding mismatch in regression: exact result 10,328.80; nearest available option 10,328, ordinary rounded value 10,329. Continue §2 over-time recognition. See `docs/CMA_UNIT5_ARABIC_WAVE1_2026-11-25.md`.
+
+- [x] Unit 5 Wave 2: 30/33 over-time revenue drafts, three held; Unit 5 45/75 (60%), nine held, 21 unreviewed. Continue §3 impairment and disposal. See `docs/CMA_UNIT5_ARABIC_WAVE2_2026-11-25.md`.
+
+- [x] Unit 5 Wave 3: 18/21 impairment and disposal drafts, three held; Unit 5 initial review complete, 63/75 (84%), 12 held, zero unreviewed. See `docs/CMA_UNIT5_ARABIC_WAVE3_2026-11-25.md`. Continue Unit 6 after CI.

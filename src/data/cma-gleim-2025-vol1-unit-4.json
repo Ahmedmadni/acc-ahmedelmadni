@@ -14,7 +14,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Gain contingencies are not recorded; they are recognized only\nwhen realized. A gain contingency must be adequately\ndisclosed.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "شركة مدعية في قضيتين تتعلقان بانتهاك براءات الاختراع. في الأولى نسخ منافس أحد منتجاتها، ويقدر المحامون التعويض بمبلغ $5,000,000، ويتوقعون استمرار التقاضي من 2 إلى 3 سنوات. وفي الثانية يرى المحامون أن موقف الشركة ضعيف، وفرصة الفوز 50%، والتعويض المحتمل بين $250,000 و$1,000,000. ما المبلغ المناسب لإثباته كمكسب محتمل؟",
+    "choicesAr": [
+      "$0",
+      "$5,000,000",
+      "$5,125,000",
+      "$5,250,000"
+    ],
+    "explanationAr": "وفق المعالجة الأمريكية العامة، لا تثبت المكاسب المحتملة قبل تحققها، ويُفصح عنها بصورة مناسبة دون الإيحاء بتحققها."
   },
   {
     "unit": 4,
@@ -31,7 +39,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A material contingent loss must be accrued when the following\ntwo conditions are met:\n1. It is probable that, at the balance sheet date, an asset\nhas been impaired or a liability has been incurred.\n2. The amount of the loss can be reasonably estimated.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "متى ينبغي إثبات التزام ناشئ عن خسارة محتملة؟",
+    "choicesAr": [
+      "إذا أمكن تقدير مبلغ الخسارة بشكل معقول.",
+      "إذا كان وقوع الأحداث المستقبلية المحتملة ممكنًا بدرجة معقولة.",
+      "إذا كان وقوع الأحداث ممكنًا بدرجة معقولة وأمكن تقدير الخسارة.",
+      "إذا كان وقوع الأحداث مرجحًا وأمكن تقدير الخسارة بشكل معقول."
+    ],
+    "explanationAr": "وفق المعايير الأمريكية تستحق الخسارة المحتملة الجوهرية عند تحقق الشرطين:\n1. يرجح وجود انخفاض في قيمة أصل أو نشوء التزام في تاريخ قائمة المركز المالي.\n2. يمكن تقدير مبلغ الخسارة بشكل معقول."
   },
   {
     "unit": 4,
@@ -65,7 +81,15 @@
     ],
     "answerIndex": 3,
     "explanation": "An assurance-type warranty creates a loss contingency. The\naccrual method therefore should be used if (1) incurrence of\nwarranty expense is probable, (2) the amount can be\nreasonably estimated, and (3) the amount is material. Thus, a\nprovision for costs incurred under an assurance-type warranty\nis made when the related revenue is recognized. Expense for\nthe assurance-type warranty equals 4% of sales for the\nperiod, or $120,000 ($3,000,000 × 4%).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تصنع شركة أجهزة صوتية تشمل ضمانًا لمدة 2 سنة لتأكيد خلو المنتج من العيوب. وتقدر تكلفة الضمان بـ4% من المبيعات خلال فترة الضمان. بلغت المبيعات خلال السنة $3 ملايين، والتكاليف الفعلية للضمان $67,500. ما مصروف الضمان في قائمة دخل السنة المنتهية في 31 ديسمبر؟",
+    "choicesAr": [
+      "$52,500",
+      "$60,000",
+      "$67,500",
+      "$120,000"
+    ],
+    "explanationAr": "ينشأ عن ضمان التأكيد خسارة محتملة. ويطبق الاستحقاق إذا (1) رجح تكبد مصروف الضمان، (2) أمكن تقديره بشكل معقول، (3) كان جوهريًا. لذا يثبت مخصص الضمان عند الاعتراف بالإيراد المرتبط به. ويبلغ المصروف 4% من مبيعات الفترة، أي $120,000 ($3,000,000 × 4%)."
   },
   {
     "unit": 4,
@@ -82,7 +106,15 @@
     ],
     "answerIndex": 2,
     "explanation": "An assurance-type warranty creates a loss contingency.\nBecause the product is new, the balance of the estimated\nwarranty liability at the beginning of the year is $0. If 3,000\nunits were sold at an estimated $8 per unit warranty cost, the\ntotal credits to the liability account equaled $24,000 (3,000 ×\n$8). Given that actual warranty costs of $7,000 were debited\nto the account, the ending balance must have been $17,000\n($24,000 – $7,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 أبريل بدأت شركة بيع منتج جديد بضمان تأكيد معياري لمدة 1 سنة. ومن أصل 5,000 وحدة بالمخزون في 1 أبريل، بيعت 3,000 وحدة حتى 30 يونيو. وقدرت تكلفة الضمان المتوسطة بـ$8 لكل وحدة مباعة. وبلغت تكاليف الضمان الفعلية من 1 أبريل حتى 30 يونيو مبلغ $7,000. ما التزام الضمان المقدر في 30 يونيو؟",
+    "choicesAr": [
+      "$9,000",
+      "$16,000",
+      "$17,000",
+      "$33,000"
+    ],
+    "explanationAr": "ينشأ عن ضمان التأكيد خسارة محتملة. ولأن المنتج جديد فإن رصيد أول المدة لالتزام الضمان $0. وبيعت 3,000 وحدة بتكلفة ضمان مقدرة $8 للوحدة؛ لذا بلغ مجموع المبالغ الدائنة للالتزام $24,000 (3,000 × $8). وخصمت التكاليف الفعلية $7,000 من الالتزام، فيبلغ رصيده $17,000 ($24,000 − $7,000)."
   },
   {
     "unit": 4,
@@ -99,7 +131,15 @@
     ],
     "answerIndex": 3,
     "explanation": "An assurance-type warranty creates a loss contingency. The\naccrual method therefore should be used if (1) incurrence of\nwarranty expense is probable, (2) the amount can be\nreasonably estimated, and (3) the amount is material. Thus, a\nprovision for costs incurred under an assurance-type warranty\nis made when the related revenue is recognized.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تبيع منشأة أجهزة تشمل ضمان تأكيد لمدة 3 سنوات. وينفذ الصيانة فني مستقل بموجب عقد معها. وتقدر تكلفة الضمان بـ$30 لكل جهاز مباع. متى تثبت المنشأة هذه التكاليف؟",
+    "choicesAr": [
+      "بالتساوي على عمر الضمان.",
+      "عند تنفيذ الصيانة.",
+      "عند دفع مستحقات الفني.",
+      "عند بيع الأجهزة."
+    ],
+    "explanationAr": "ينشأ عن ضمان التأكيد خسارة محتملة، ويطبق الاستحقاق إذا (1) رجح تكبد مصروف الضمان، (2) أمكن تقديره بشكل معقول، (3) كان جوهريًا. لذا يثبت مخصص تكاليف ضمان التأكيد عند الاعتراف بالإيراد المرتبط به."
   },
   {
     "unit": 4,
@@ -116,7 +156,15 @@
     ],
     "answerIndex": 2,
     "explanation": "An assurance-type warranty creates a loss contingency. The\naccrual method therefore should be used if (1) incurrence of\nwarranty expense is probable, (2) the amount can be\nreasonably estimated, and (3) the amount is material. Thus, a\nprovision for costs incurred under an assurance-type warranty\nis made when the related revenue is recognized. Because this\nproduct is new, the beginning balance in the estimated\nwarranty liability account at the beginning of Year 3 is $0. For\nYear 3, the estimated warranty costs related to dollar sales\nare 6% (2% + 4%) of sales or $36,000 ($600,000 × 6%). For\nYear 4, the estimated warranty costs are $60,000 ($1,000,000\nsales × 6%). These amounts are charged to warranty expense\nand increase the estimated warranty liability account. This\nliability account is decreased for expenditures of $9,000 and\n$30,000 in Year 3 and Year 4, respectively. Accordingly, the\nestimated warranty liability at 12/31/Yr 4 is $57,000 ($0 +\n$36,000 – $9,000 + $60,000 – $30,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في السنة 3 طرح منتج جديد بضمان تأكيد ضد العيوب لمدة 2 سنة. وتقدر تكلفة الضمان بنسبة 2% من المبيعات خلال 12 شهرًا بعد البيع و4% خلال ثاني 12 شهرًا. وفيما يلي المبيعات والتكاليف الفعلية للسنتين المنتهيتين في 31 ديسمبر من السنة 3 والسنة 4:\nالسنة | المبيعات | تكاليف الضمان الفعلية\nالسنة 3 | $600,000 | $9,000\nالسنة 4 | 1,000,000 | 30,000\nالإجمالي | $1,600,000 | $39,000\nما التزام الضمان المقدر في 31 ديسمبر من السنة 4؟",
+    "choicesAr": [
+      "$0",
+      "$39,000",
+      "$57,000",
+      "$96,000"
+    ],
+    "explanationAr": "ينشأ عن ضمان التأكيد خسارة محتملة ويطبق الاستحقاق إذا (1) رجح تكبد المصروف، (2) أمكن تقديره، (3) كان جوهريًا. ويثبت المخصص عند الاعتراف بالإيراد. ولأن المنتج جديد فإن رصيد أول السنة 3 هو $0. وفي السنة 3 تبلغ التكلفة المقدرة 6% (2% + 4%) من المبيعات، أي $36,000 ($600,000 × 6%). وفي السنة 4 تبلغ $60,000 ($1,000,000 × 6%). تحمل هذه المبالغ على مصروف الضمان وتزيد الالتزام، ويخفض الالتزام بالتكاليف الفعلية $9,000 و$30,000 في السنة 3 والسنة 4 على الترتيب. لذا يبلغ الالتزام في 12/31 من السنة 4 مبلغ $57,000 ($0 + $36,000 − $9,000 + $60,000 − $30,000)."
   },
   {
     "unit": 4,
@@ -150,7 +198,15 @@
     ],
     "answerIndex": 0,
     "explanation": "A liability arising from a loss contingency should be recorded if\nthe contingent future event will probably occur and the amount\nof the loss can be reasonably estimated.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تواجه شركة دعوى فصل تعسفي بمبلغ $500,000. ويرى محاميها أن احتمال فوز المدعي وحصوله على المبلغ الكامل يقارب 80%، ويتوقع استمرار القضية من 2 إلى 3 سنوات. ما العرض المالي الأنسب لهذه الخسارة المحتملة؟",
+    "choicesAr": [
+      "إثبات خسارة محتملة بمبلغ $500,000.",
+      "إثبات خسارة محتملة بمبلغ $400,000.",
+      "الإفصاح فقط في الإيضاحات.",
+      "عدم الإثبات أو الإفصاح."
+    ],
+    "explanationAr": "وفق المعايير الأمريكية يثبت الالتزام الناشئ عن خسارة محتملة عندما يكون نشوء الالتزام مرجحًا ويمكن تقدير مبلغ الخسارة بشكل معقول. ولا يضرب مبلغ التعويض في احتمال الفوز في هذه المسألة ذات الالتزام الفردي."
   },
   {
     "unit": 4,
@@ -167,7 +223,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Gain contingencies are not recognized until they are realized.\nBecause the appeal is not expected to be decided before Year\n6, Caso should not record any revenue from the lawsuit in the\nYear 4 income statement. This gain contingency should be\ndisclosed; however, care should be taken to avoid misleading\nimplications as to the likelihood of realization.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في مايو من السنة 1 رفعت Caso دعوى ضد Wayne تطالب بتعويض $1.9 مليون عن انتهاك براءة اختراع. وفي نوفمبر من السنة 4 قضت المحكمة بتعويض $1.5 مليون، لكن لا يتوقع البت في استئناف Wayne قبل السنة 6. ويرى محامي Caso أن الفوز مرجح بتعويض يتراوح بين $800,000 و$1.1 مليون، والمبلغ الأكثر احتمالًا $1 مليون. ما الدخل من القضية الذي تثبته Caso في السنة المنتهية في 31 ديسمبر من السنة 4؟",
+    "choicesAr": [
+      "$0",
+      "$800,000",
+      "$1,000,000",
+      "$1,500,000"
+    ],
+    "explanationAr": "لا تثبت المكاسب المحتملة قبل تحققها وفق المعالجة الأمريكية المعروضة. ولأن الاستئناف لن يحسم قبل السنة 6، لا تثبت Caso إيرادًا من القضية في قائمة دخل السنة 4. ويُفصح عن المكسب المحتمل مع تجنب الإيحاء المضلل باحتمال تحققه."
   },
   {
     "unit": 4,
@@ -184,7 +248,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Loss contingencies should be accrued when information\navailable prior to issuance of financial statements indicates\nthat it is probable that an asset has been impaired or a liability\nhas been incurred, and the amount of loss can be reasonably\nestimated. Probable is defined as a condition in which future\nevents are likely to occur.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "متى تستحق خسارة محتملة في دفاتر المنشأة؟",
+    "choicesAr": [
+      "إذا كان نشوء الالتزام ممكنًا بدرجة معقولة وكان مبلغ الخسارة معلومًا.",
+      "إذا رجح نشوء الالتزام وكان مبلغ الخسارة مجهولًا.",
+      "إذا رجح نشوء الالتزام وأمكن تقدير مبلغ الخسارة بشكل معقول.",
+      "إذا كان احتمال نشوء الالتزام بعيدًا وأمكن تقدير الخسارة."
+    ],
+    "explanationAr": "تستحق الخسارة المحتملة عندما تشير المعلومات المتاحة قبل إصدار القوائم إلى رجحان انخفاض قيمة أصل أو نشوء التزام في تاريخ التقرير وإمكان تقدير الخسارة بشكل معقول. والمقصود بالمرجح أن وقوع الحدث محتمل بدرجة كبيرة وفق المعايير الأمريكية."
   },
   {
     "unit": 4,
@@ -201,7 +273,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Under the conservatism restraint, when alternative accounting\nmethods are appropriate, the one having the less favorable\neffect on net income and total assets is preferable. Thus, a\nloss, not a gain, contingency may be recorded in the financial\nstatements. If the probability of realization of a gain is high, the\ncontingency is disclosed in the notes.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "شركة Conlon مدعية في قضية انتهاك براءة اختراع. واحتمال الحكم لصالحها مرتفع ويمكن تقدير مبلغ التسوية بشكل معقول. ما المعالجة الصحيحة؟",
+    "choicesAr": [
+      "إثبات مكسب محتمل بالحد الأدنى للتسوية المقدرة.",
+      "إثبات مكسب محتمل بمبلغ التسوية المرجحة.",
+      "الإفصاح فقط في الإيضاحات.",
+      "لا يلزم أي عرض حاليًا."
+    ],
+    "explanationAr": "وفق المعالجة الأمريكية للمكاسب المحتملة، لا يثبت المكسب غير المتحقق في القوائم. وإذا كان احتمال تحققه مرتفعًا، يفصح عنه في الإيضاحات دون تضليل بشأن درجة التأكد."
   },
   {
     "unit": 4,
@@ -218,7 +298,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A contingent loss is accrued when two conditions are met: It is\nprobable that at a balance sheet date an asset is overstated or\na liability has been incurred, and the amount of the loss can\nbe reasonably estimated. If both conditions are not met, but\nthe probability of the loss is at least reasonably possible, the\namount of the loss must be disclosed. This loss is reasonably\npossible and reasonably estimable, and it therefore should be\ndisclosed but not accrued as a liability. The financial\nstatements should disclose the nature of the loss contingency\nand the amount or range of the possible loss. If an estimate\ncannot be made, the notes should state this.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "قد تتكبد شركة أجهزة منزلية خسارة بسبب اكتشاف عيب في أحد منتجاتها. وقوع الخسارة ممكن بدرجة معقولة ويمكن تقدير تكاليفها. كيف تعالج؟\nالاستحقاق | الإفصاح في الإيضاحات",
+    "choicesAr": [
+      "نعم | لا",
+      "نعم | نعم",
+      "لا | نعم",
+      "لا | لا"
+    ],
+    "explanationAr": "تستحق الخسارة المحتملة إذا رجح في تاريخ التقرير انخفاض قيمة أصل أو نشوء التزام وأمكن تقدير المبلغ. وإذا لم يتحقق الشرطان مع كون احتمال الخسارة ممكنًا بدرجة معقولة على الأقل، يفصح عن الخسارة. وهنا الخسارة ممكنة بدرجة معقولة وقابلة للتقدير، فيفصح عنها دون إثبات التزام. وتوضح الإيضاحات طبيعتها ومبلغها أو نطاقها، وإذا تعذر التقدير يذكر ذلك."
   },
   {
     "unit": 4,
@@ -235,7 +323,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Contingencies are probable (likely to occur), reasonably\npossible, or remote. When contingent losses are probable and\nthe amount can be reasonably estimated, the amount of the\nloss should be recognized. If the amount cannot be\nreasonably estimated but the loss is at least reasonably\npossible, full disclosure should be made, including a statement\nthat an estimate cannot be made.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عند عرض الأمور المحتملة، أي العبارات التالية صحيحة؟",
+    "choicesAr": [
+      "لا يستحق ضمان دين الغير إلا إذا كانت الخسارة وشيكة.",
+      "يفصح عن الخسارة المحتملة إذا كان احتمالها بعيدًا.",
+      "يجب أن يتضمن الإفصاح عن الخسارة المحتملة تقديرًا نقديًا دائمًا.",
+      "يفصح عن الخسارة المرجحة غير القابلة للتقدير مع ذكر تعذر تقديرها."
+    ],
+    "explanationAr": "تصنف الخسائر المحتملة وفق المعايير الأمريكية إلى مرجحة، وممكنة بدرجة معقولة، وبعيدة الاحتمال. وإذا رجحت الخسارة وأمكن تقديرها بشكل معقول تثبت. وإذا تعذر تقديرها وكان احتمالها ممكنًا بدرجة معقولة على الأقل، يفصح عنها مع بيان تعذر التقدير، مع مراعاة القواعد الخاصة بالضمانات."
   },
   {
     "unit": 4,
@@ -252,7 +348,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Because the loss is probable and can be reasonably\nestimated, it should be accrued if the amount is material. If the\nestimate is stated within a given range, and no amount within\nthat range appears to be a better estimate than any other, the\nminimum of the range should be accrued. Thus, Steel should\nreport a $500,000 contingent liability.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 5 فبراير من السنة 2 رفع موظف دعوى بقيمة $2 مليون ضد Steel عن أضرار ناجمة عن انفجار مصنع في 29 ديسمبر من السنة 1. ويتوقع المحامي خسارة القضية بمبلغ بين $500,000 و$1 مليون. وعرض الموظف التسوية خارج المحكمة مقابل $900,000، لكن الشركة رفضت. ما الالتزام من الدعوى في قائمة المركز المالي في 31 ديسمبر من السنة 1؟",
+    "choicesAr": [
+      "$2,000,000",
+      "$1,000,000",
+      "$900,000",
+      "$500,000"
+    ],
+    "explanationAr": "لأن الخسارة مرجحة وقابلة للتقدير، تستحق إذا كانت جوهرية. وفق المعايير الأمريكية إذا كان التقدير نطاقًا ولم يكن أي مبلغ فيه أفضل من غيره، يثبت الحد الأدنى ويفصح عن التعرض الإضافي عند اللزوم. لذلك تثبت Steel التزامًا محتملًا $500,000، بافتراض عدم كون عرض التسوية أفضل تقدير."
   },
   {
     "unit": 4,
@@ -269,7 +373,15 @@
     ],
     "answerIndex": 0,
     "explanation": "A contingent loss is accrued when it is probable that, at a\nbalance sheet date, an asset is overstated or a liability has\nbeen incurred and the amount of the loss can be reasonably\nestimated. If both conditions are not met but the probability of\nthe loss is at least reasonably possible, the amount of the loss\nmust be disclosed. This loss is reasonably possible and\nreasonably estimable. Hence, it should be disclosed but not\naccrued.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 10 نوفمبر من السنة 4 وقع حادث لشاحنة Garry مع سيارة يقودها Dacey. وفي 10 يناير من السنة 5 تلقت Garry إشعارًا بدعوى تعويض عن إصابات بقيمة $800,000. ويرى المحامي أن الحكم ضدها ممكن بدرجة معقولة، بنطاق $250,000 إلى $500,000، وأن $400,000 أفضل تقدير. وتنتهي السنة في 31 ديسمبر، وصدرت قوائم السنة 4 في 6 مارس من السنة 5. ما الخسارة المستحقة في 31 ديسمبر من السنة 4؟",
+    "choicesAr": [
+      "$0",
+      "$250,000",
+      "$400,000",
+      "$500,000"
+    ],
+    "explanationAr": "تستحق الخسارة المحتملة عندما يرجح في تاريخ التقرير انخفاض قيمة أصل أو نشوء التزام ويمكن تقدير المبلغ. وإذا لم يتحقق الشرطان وكان احتمال الخسارة ممكنًا بدرجة معقولة على الأقل، يفصح عنها. وهنا الخسارة ممكنة بدرجة معقولة ويمكن تقديرها، لذا يفصح عنها دون استحقاق."
   },
   {
     "unit": 4,
@@ -286,7 +398,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A contingent loss is accrued when two conditions are met: (1)\nIt is probable that at a balance sheet date an asset is\noverstated or a liability has been incurred, and (2) the amount\nof the loss can be reasonably estimated. Gain contingencies\nshould not be recognized until they are realized. A gain\ncontingency should be disclosed, but care should be taken to\navoid misleading implications as to the likelihood of\nrealization. Because the award in favor of Doll is probable and\ncan be reasonably estimated, a loss should be recognized in\nYear 4 by Brooker. However, Doll should not recognize the\ngain until Year 5.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في السنة 4 أحيل نزاع عقدي بين Doll وBrooker للتحكيم الملزم. وفي السنة 4 أشار محاميا الطرفين بصورة خاصة إلى إمكان تقدير التعويض المرجح لصالح Doll. وفي السنة 5 حكم المحكم لصالح Doll. متى يثبت الطرفان المكسب والخسارة؟\nمكسب Doll | خسارة Brooker",
+    "choicesAr": [
+      "السنة 4 | السنة 4",
+      "السنة 4 | السنة 5",
+      "السنة 5 | السنة 4",
+      "السنة 5 | السنة 5"
+    ],
+    "explanationAr": "تستحق الخسارة المحتملة عند تحقق (1) رجحان انخفاض قيمة أصل أو نشوء التزام في تاريخ التقرير، و(2) إمكان تقديرها بشكل معقول. ولا تثبت المكاسب المحتملة قبل تحققها، وإنما يفصح عنها دون تضليل بشأن احتمال التحقق. وبما أن التعويض لصالح Doll مرجح وقابل للتقدير، تثبت Brooker الخسارة في السنة 4، بينما تثبت Doll المكسب في السنة 5 عند تحقق شروط الاعتراف."
   },
   {
     "unit": 4,
@@ -303,7 +423,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Gain contingencies are recognized only when realized. A\nprobable favorable judgment and reasonably estimated\namount of damages may be disclosed in the notes to the\nfinancial statements, but no amount should be recognized as\na contingency gain until realized.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تعد Green قوائم نهاية السنة ولديها دعوى ضد منافس بتعويض $5,000,000. ويرى محاموها أن الحكم لصالحها مرجح وأن مبلغ التعويض قابل للتقدير بشكل معقول. وتكبدت أتعابًا قانونية $100,000، ومعدل ضريبة الدخل 30%. ما المكسب المحتمل الذي تثبته؟",
+    "choicesAr": [
+      "$0",
+      "$3,430,000",
+      "$3,500,000",
+      "$4,900,000"
+    ],
+    "explanationAr": "لا تثبت المكاسب المحتملة قبل تحققها. ويمكن الإفصاح عن الحكم المرجح ومبلغ التعويض القابل للتقدير في الإيضاحات، لكن لا يثبت مكسب محتمل قبل تحققه."
   },
   {
     "unit": 4,
@@ -320,7 +448,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A contingent liability must be accrued when, based on the\ninformation available prior to the issuance of the financial\nstatements, the loss is probable and the amount of the loss\ncan be reasonably estimated. The most likely amount of the\nloss ($1,300,000) should be accrued if the estimate is stated\nwithin a range.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "خلال السنة 2 رفع موظف سابق دعوى ضد Dane بسبب الفصل التعسفي في نوفمبر من السنة 1. ويرى المحامي أن الموظف سيفوز على الأرجح بتعويض بين $1,000,000 و$1,500,000، والمبلغ الأكثر احتمالًا $1,300,000. ولن تصدر قوائم السنة المنتهية في 31 ديسمبر من السنة 1 حتى فبراير من السنة 2. ما الالتزام الواجب عرضه في 31 ديسمبر من السنة 1؟",
+    "choicesAr": [
+      "$0",
+      "$1,000,000",
+      "$1,300,000",
+      "$1,500,000"
+    ],
+    "explanationAr": "يستحق الالتزام المحتمل عندما تشير المعلومات المتاحة قبل إصدار القوائم إلى خسارة مرجحة وقابلة للتقدير ترتبط بظروف قائمة في تاريخ التقرير. وإذا ورد التقدير في نطاق، يثبت أفضل تقدير للخسارة ($1,300,000) وفق المعايير الأمريكية."
   },
   {
     "unit": 4,
@@ -355,7 +491,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A material contingent loss must be accrued (debit loss and\ncredit contingent liability) when (1) it is probable that, at a\nbalance sheet date, an asset has been impaired or a liability\nhas been incurred and (2) the amount of the loss can be\nreasonably estimated. If the amount of loss cannot be\nreasonably estimated but the probability of the loss is at least\nreasonably possible, the nature of the contingency must be\ndescribed in the notes to the financial statements.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "كيف تعالج شركة الالتزام المحتمل إذا كانت الخسارة مرجحة ولكن لا يمكن تقديرها بشكل معقول؟",
+    "choicesAr": [
+      "لا يعرض الالتزام.",
+      "يعرض التزامًا قصير الأجل.",
+      "يعرض التزامًا طويل الأجل.",
+      "يفصح عنه فقط في الإيضاحات."
+    ],
+    "explanationAr": "تستحق الخسارة المحتملة الجوهرية (من حـ/ الخسارة إلى حـ/ الالتزام) عندما (1) يرجح في تاريخ التقرير انخفاض قيمة أصل أو نشوء التزام، و(2) يمكن تقدير مبلغها بشكل معقول. وإذا تعذر التقدير وكان احتمال الخسارة ممكنًا بدرجة معقولة على الأقل، يفصح عن طبيعتها في الإيضاحات وعن تعذر تقديرها."
   },
   {
     "unit": 4,
@@ -372,7 +516,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A material contingent loss must be accrued when (1) it is\nprobable that, at a balance sheet date, an asset has been\nimpaired or a liability has been incurred, and (2) the amount of\nthe loss can be reasonably estimated. Because the probability\nof the loss is reasonably possible, and not probable, no\naccrual is required. The nature of the contingency and an\nestimate of the amount of the possible loss or the range of\nloss must be disclosed when the probability of the loss is\nreasonably possible. Thus, Stark is only required to disclose\nthe range of the loss in the notes to the financial statements.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "قبل إصدار قوائم 31 ديسمبر أصبحت Stark مدعى عليها في قضية عن حدث وقع في أكتوبر. ويرى محاميها أن الحكم ضدها ممكن بدرجة معقولة، وأن التعويض يتراوح بين $100,000 و$150,000. ما المبلغ المستحق و/أو المفصح عنه في قوائم 31 ديسمبر؟\nاستحقاق الالتزام المحتمل | الإفصاح عن الالتزام المحتمل",
+    "choicesAr": [
+      "$100,000                    $100,000 - $150,000",
+      "$100,000                    $150,000",
+      "$0                         $100,000 - $150,000",
+      "$0                         $150,000"
+    ],
+    "explanationAr": "تستحق الخسارة المحتملة الجوهرية إذا (1) رجح في تاريخ التقرير انخفاض قيمة أصل أو نشوء التزام، و(2) أمكن تقدير المبلغ. ولأن الخسارة ممكنة بدرجة معقولة لا مرجحة، لا يلزم الاستحقاق. ويفصح عن طبيعة الخسارة وتقدير مبلغها أو نطاقها؛ لذا تفصح Stark فقط عن نطاق الخسارة في الإيضاحات."
   },
   {
     "unit": 4,
@@ -389,7 +541,15 @@
     ],
     "answerIndex": 0,
     "explanation": "A material contingent loss must be accrued when (1) it is\nprobable that, at a balance sheet date, an asset has been\nimpaired or a liability has been incurred, and (2) the amount of\nthe loss can be reasonably estimated. If one or both\nconditions are not met, no loss is accrued.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لم تثبت True خسارة مرجحة من دعوى قضائية في قوائمها المالية. أي تفسير لعدم الاستحقاق يتفق مع المبادئ المحاسبية المتعارف عليها؟",
+    "choicesAr": [
+      "لا يمكن تقدير الخسارة بشكل معقول.",
+      "يمكن تقدير نطاق للخسارة لكن لا يوجد مبلغ أدق من غيره.",
+      "إثبات المبلغ في القوائم يضعف دفاع الشركة.",
+      "لا يلزم الاستحقاق لأن مبلغ الخسارة المقدر أفصح عنه في الإيضاحات."
+    ],
+    "explanationAr": "تستحق الخسارة المحتملة الجوهرية عندما (1) يرجح في تاريخ التقرير انخفاض قيمة أصل أو نشوء التزام، و(2) يمكن تقدير المبلغ بشكل معقول. وإذا لم يتحقق أحد الشرطين فلا تستحق الخسارة، مع مراعاة متطلبات الإفصاح."
   },
   {
     "unit": 4,
@@ -406,7 +566,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Gain contingencies are recognized only when realized. A gain\ncontingency must be adequately disclosed in the notes to the\nfinancial statements.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تراجع Tiger Rags إفصاحاتها عن المكاسب المحتملة. متى ينبغي إثبات المكسب؟",
+    "choicesAr": [
+      "عند تحققه.",
+      "عندما يتحدد بوضوح.",
+      "عندما يكون ممكنًا بدرجة معقولة وقابلًا للتقدير.",
+      "عندما يكون مرجحًا وقابلًا للتقدير."
+    ],
+    "explanationAr": "لا تثبت المكاسب المحتملة قبل تحققها وفق المعالجة الأمريكية العامة. ويفصح عنها بصورة مناسبة في الإيضاحات دون المبالغة في احتمال التحقق."
   },
   {
     "unit": 4,
@@ -423,7 +591,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Because the extended warranty was purchased separately, it\nis classified as a service-type warranty. Revenue from a\nservice-type warranty is recognized over the coverage period.\nBecause warranty costs are expected to be incurred evenly\nover the life of the warranty contracts, the revenue should be\nrecognized on the straight-line basis over the life of the\nextended warranty contract.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "باعت Kamchatka سلعة معمرة في 1 يناير من السنة 1 وحصل العميل تلقائيًا على ضمان معياري ضد عيوب التصنيع لمدة 1 سنة. واشترى ضمانًا ممتدًا يضيف 2 سنة حتى نهاية السنة 3. وتوقعت الشركة عند البيع تكبد تكاليف الضمان بالتساوي على مدة العقود. وقدم العميل مطالبة واحدة خلال فترة 3 سنوات في السنة 2. متى تثبت الشركة إيراد الضمان الممتد؟",
+    "choicesAr": [
+      "في 1 يناير من السنة 1.",
+      "في السنتين 2 و3.",
+      "عند المطالبة في السنة 2.",
+      "في 31 ديسمبر من السنة 3 عند انتهاء الضمان."
+    ],
+    "explanationAr": "لأن الضمان الممتد اشتري بصورة منفصلة، يصنف ضمان خدمة (التزام أداء منفصل). ويثبت الإيراد على مدى فترة التغطية، وبما أن الخدمة تقدم بالتساوي حسب معطيات المسألة، يثبت إيراد الضمان الممتد بالقسط الثابت على مدة العقد."
   },
   {
     "unit": 4,
@@ -440,7 +616,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A standard warranty against manufacturing defects is an\nassurance-type warranty. This warranty creates a loss\ncontingency. A liability for warranty costs is recognized on the\ndate the product is sold. Because this product is new, the\nbeginning balance in the estimated warranty liability account\nat the beginning of Year 1 is $0. For Year 1, the estimated\nwarranty costs related to dollar sales are 6% (2% + 4%) of\nsales, or $9,000 ($150,000 × 6%). For Year 2, the estimated\nwarranty costs are $15,000 ($250,000 × 6%). These amounts\nare charged to warranty expense and the estimated warranty\nliability account. This liability account is decreased for\nexpenditures of $2,250 and $7,500 in Year 1 and Year 2,\nrespectively. Hence, the estimated warranty liability\nat 12/31/Year 2 is $14,250 ($9,000 – $2,250 + $15,000 –\n$7,500).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في السنة 1 قدمت Gum منتجًا جديدًا بضمان معياري ضد العيوب لمدة 2 سنة. وتقدر تكاليف الضمان بـ2% من المبيعات خلال 12 شهرًا بعد البيع و4% خلال ثاني 12 شهرًا. وفيما يلي المبيعات والتكاليف الفعلية في السنتين المنتهيتين في 31 ديسمبر من السنة 1 والسنة 2:\nالسنة | المبيعات | تكاليف الضمان الفعلية\nالسنة 1 | $150,000 | $2,250\nالسنة 2 | 250,000 | 7,500\nالإجمالي | $400,000 | $9,750\nما التزام الضمان المقدر في قائمة المركز المالي في 31 ديسمبر من السنة 2؟",
+    "choicesAr": [
+      "$2,500",
+      "$3,250",
+      "$11,250",
+      "$14,250"
+    ],
+    "explanationAr": "ضمان عيوب التصنيع المعياري ضمان تأكيد ينشأ عنه خسارة محتملة. ويثبت الالتزام عند بيع المنتج والاعتراف بالإيراد. ولأن المنتج جديد فإن رصيد أول السنة 1 هو $0. وفي السنة 1 تبلغ التكلفة المقدرة 6% (2% + 4%) من المبيعات، أي $9,000 ($150,000 × 6%). وفي السنة 2 تبلغ $15,000 ($250,000 × 6%). تحمل هذه المبالغ على مصروف الضمان وتزيد الالتزام، ويخفض الالتزام بالتكاليف الفعلية $2,250 و$7,500 في السنة 1 والسنة 2 على الترتيب. لذا يبلغ الالتزام في 12/31 من السنة 2 مبلغ $14,250 ($9,000 − $2,250 + $15,000 − $7,500)."
   },
   {
     "unit": 4,
@@ -457,7 +641,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Under the accrual method, the total estimated warranty costs\nare charged to operating expense in the year of sale. The total\nestimated warranty cost per unit is $2,000 ($500 + $1,500). In\nYear 2, 200 units were sold, so the warranty expense\nrecognized is $400,000.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يبلغ سعر بيع وحدة منتج شركة جديدة $20,000. ويحصل المشترون على ضمان تأكيد لمدة 2 سنة، بتكلفة متوقعة $500 للوحدة في سنة البيع و$1,500 في السنة التالية. باعت الشركة 160 وحدة في السنة الأولى و200 في الثانية. وبلغت المدفوعات الفعلية للضمان $40,000 و$260,000 في السنة 1 والسنة 2 على الترتيب. ما مصروف الضمان في السنة الثانية؟",
+    "choicesAr": [
+      "$100,000",
+      "$260,000",
+      "$340,000",
+      "$400,000"
+    ],
+    "explanationAr": "وفق الاستحقاق تحمل كامل تكلفة الضمان المقدرة على مصروف التشغيل في سنة البيع. ويبلغ تقدير تكلفة الوحدة $2,000 ($500 + $1,500). وفي السنة 2 بيعت 200 وحدة، لذا يبلغ مصروف الضمان $400,000."
   },
   {
     "unit": 4,
@@ -474,7 +666,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A standard warranty against manufacturing defects is an\nassurance-type warranty. This warranty creates a loss\ncontingency. A liability for warranty costs is recognized on the\ndate the product is sold. Warranty expense equals 2% of\nsales. In Year 2, warranty expense is $6,000 ($300,000 × 2%).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تبيع Wall منتجًا بضمان معياري ضد عيوب التصنيع لمدة 2 سنة. وتقدر تكاليف الإصلاح بـ2% من صافي المبيعات. وخلال أول 2 سنة كانت المبيعات والتكاليف كما يلي:\nالسنة 1:\nإجمالي المبيعات: $250,000\nتكاليف الإصلاح: 4,500\nالسنة 2:\nإجمالي المبيعات: $300,000\nتكاليف الإصلاح: 5,000\nما مصروف الضمان للسنة 2؟",
+    "choicesAr": [
+      "$1,000",
+      "$5,000",
+      "$5,900",
+      "$6,000"
+    ],
+    "explanationAr": "الضمان المعياري ضد عيوب التصنيع ضمان تأكيد ينشأ عنه خسارة محتملة. ويثبت التزام الضمان عند بيع المنتج. ويبلغ المصروف 2% من المبيعات. وفي السنة 2 يبلغ المصروف $6,000 ($300,000 × 2%)."
   },
   {
     "unit": 4,
@@ -491,7 +691,15 @@
     ],
     "answerIndex": 1,
     "explanation": "A liability for warranty costs is recognized when the related\nrevenue is recognized (i.e., on the day the product is sold).\nEven if the warranty covers a period longer than the period in\nwhich the product is sold, the entire liability for the expected\nwarranty costs must be recognized on the day the product is\nsold. Thus, in the first calendar year a warranty liability of\n$100,000 (1,000 units × $100 estimated warranty cost per\nunit) was recognized. Actual payments for warranty costs\nreduce the amount of warranty liability recognized. Thus, at\nthe end of the first calendar year, the balance of the warranty\nliability is $88,000 ($100,000 warranty liability initially\nrecognized – $12,000 actual warranty costs incurred during\nthe first year).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بدأت Hill إنتاج منتج جديد. وفي السنة الميلادية الأولى باعت 1,000 وحدة بسعر $1,200 للوحدة بضمان لمدة سنتين. وتقدر متوسط تكلفة الضمان بـ$100 للوحدة. وتكبدت تكاليف فعلية $12,000 في السنة الأولى و$22,000 في الثانية. وتستخدم طريقة استحقاق مصروف الضمان. ما رصيد التزام الضمان المقدر في نهاية السنة الميلادية الأولى؟",
+    "choicesAr": [
+      "$66,000",
+      "$88,000",
+      "$100,000",
+      "$112,000"
+    ],
+    "explanationAr": "يثبت التزام الضمان عند الاعتراف بالإيراد المرتبط به، أي عند بيع المنتج في سياق السؤال. وحتى إذا تجاوزت التغطية فترة البيع، يثبت كامل الالتزام المتوقع عند البيع. لذا أثبتت في السنة الأولى التزامًا $100,000 (1,000 وحدة × $100 تكلفة ضمان مقدرة للوحدة). وتخفض تكاليف الضمان الفعلية الالتزام. وفي نهاية السنة الأولى يبلغ الرصيد $88,000 ($100,000 الالتزام الأولي − $12,000 التكاليف الفعلية خلال السنة الأولى)."
   },
   {
     "unit": 4,
@@ -508,7 +716,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A contingent loss must be accrued when, based on\ninformation available prior to the issuance of the financial\nstatements, two conditions are met: (1) It is probable that an\nasset has been impaired or a liability has been incurred at a\nbalance sheet date, and (2) the amount of the loss can be\nreasonably estimated. Because the liability was settled before\nthe financial statements were issued, it was certain that a\nliability had been incurred, and the amount could be\nspecifically determined. Thus, the contingent loss must be\naccrued. Disclosure of the amount of the accrual is necessary\nto keep the financial statements from being misleading, given\nthat the settlement was significantly greater than expected.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "سوت Ace قضية في 1 فبراير من السنة 2 تتعلق بحدث وقع في السنة 1. وقدر الالتزام في 31 ديسمبر من السنة 1 بمبلغ يقل كثيرًا عن التسوية النهائية. والمعاملة جوهرية ولم تصدر قوائم السنة 1. كيف تعرض التسوية في قوائم السنة 1؟",
+    "choicesAr": [
+      "الإفصاح عن التسوية فقط.",
+      "استحقاق التسوية فقط.",
+      "لا إفصاح ولا استحقاق.",
+      "الإفصاح والاستحقاق معًا."
+    ],
+    "explanationAr": "تستحق الخسارة المحتملة وفق المعلومات المتاحة قبل إصدار القوائم إذا (1) رجح في تاريخ التقرير انخفاض أصل أو نشوء التزام، و(2) أمكن تقدير الخسارة. ولأن التسوية قبل الإصدار تؤكد التزامًا قائمًا في تاريخ التقرير وتحدد مبلغه، تعدل القوائم لإثباته. ويُفصح عن مبلغ الاستحقاق عند اللزوم لتجنب التضليل، نظرًا إلى الفرق الجوهري عن التقدير السابق."
   },
   {
     "unit": 4,
@@ -525,7 +741,15 @@
     ],
     "answerIndex": 2,
     "explanation": "As an accounting policy for short-term leases, a lessee may\nelect not to recognize the right-of-use asset and lease liability\nif, at the commencement date, the lease (1) has a term of 12\nmonths or less and (2) does not include a purchase option that\nthe lessee is reasonably certain to exercise.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "إذا كانت مدة الإيجار أقل من 12 شهرًا، فمتى يجوز للمستأجر اختيار عدم إثبات أصل حق الاستخدام والتزام الإيجار وفق المعايير الأمريكية؟",
+    "choicesAr": [
+      "ينقل العقد ملكية الأصل إلى المستأجر في نهاية المدة.",
+      "تساوي القيمة الحالية لمجموع (1) الدفعات و(2) القيمة المتبقية المضمونة من المستأجر 90% أو أكثر من القيمة العادلة للأصل.",
+      "لا يتضمن العقد خيار شراء يكون المستأجر متأكدًا بدرجة معقولة من ممارسته.",
+      "تمثل المدة الجزء الأكبر من العمر الاقتصادي المتبقي للأصل."
+    ],
+    "explanationAr": "يجوز للمستأجر اختيار سياسة محاسبية للإيجارات قصيرة الأجل بعدم إثبات أصل حق الاستخدام والتزام الإيجار إذا كان العقد عند بدء الإيجار (1) مدته 12 شهرًا أو أقل و(2) لا يتضمن خيار شراء يكون المستأجر متأكدًا بدرجة معقولة من ممارسته."
   },
   {
     "unit": 4,
@@ -559,7 +783,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A lessee classifies a lease as a finance lease or an operating\nlease. A finance lease meets at least one of five classification\ncriteria. The lease does not (1) transfer ownership of the\nleased asset to the lessee or (2) contain a purchase option the\nlessee is reasonably certain to exercise. (3) The lease term\nalso is for 67% (4 years ÷ 6 years) of the leased asset’s\nremaining economic life, not a major part (at least 75%). (4)\nFurthermore, the present value of the sum of the lease\npayments is 75% of the leased asset’s fair value, not\nsubstantially all (at least 90%). However, (5) the leased asset\nis so specialized that it is expected to have no alternative use\nto the lessor at the end of the lease term. Consequently, a\ncriterion for classification of the lease as a finance lease is\nmet.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 يناير من السنة 1 أبرم مستأجر عقد إيجار لمدة 4 سنوات لا ينقل الملكية في نهاية المدة. ويتضمن خيار شراء لا يتوقع ممارسته بدرجة معقولة. وللأصل (1) عمر اقتصادي 6 سنوات، (2) لا قيمة متبقية، (3) قيمة حالية للدفعات السنوية تعادل 75% من قيمته العادلة. وإذا لم يكن للأصل استخدام بديل لدى المؤجر في نهاية المدة، فما تصنيف العقد لدى المستأجر وفق المعايير الأمريكية؟",
+    "choicesAr": [
+      "تشغيلي.",
+      "من نوع البيع.",
+      "قصير الأجل.",
+      "تمويلي."
+    ],
+    "explanationAr": "يصنف المستأجر العقد تمويليًا أو تشغيليًا وفق المعايير الأمريكية. ويكفي تحقق أحد معايير التصنيف الخمسة. لا يتحقق (1) نقل الملكية أو (2) خيار شراء مؤكد الممارسة بدرجة معقولة. أما (3) فالمدة 67% (4 سنوات ÷ 6 سنوات) من العمر الاقتصادي المتبقي، فلا تمثل الجزء الأكبر وفق المؤشر الإرشادي (75% على الأقل). و(4) القيمة الحالية للدفعات 75% من القيمة العادلة، فلا تمثل معظمها وفق المؤشر (90% على الأقل). لكن (5) الأصل متخصص إلى درجة عدم توقع استخدام بديل لدى المؤجر في نهاية المدة، فيتحقق معيار الإيجار التمويلي."
   },
   {
     "unit": 4,
@@ -576,7 +808,15 @@
     ],
     "answerIndex": 0,
     "explanation": "A lease is classified as a finance lease by the lessee if, at\nlease commencement date, any of the following five criteria is\nsatisfied: (1) the lease transfers ownership of the leased asset\nto the lessee by the end of the lease term, (2) the lease\nincludes an option to purchase the leased asset that the\nlessee is reasonably certain to exercise, (3) the lease term is\nfor the major part (generally is considered to be at least 75%)\nof the remaining economic life of the leased asset, (4) the\npresent value of the sum of the lease payments and any\nresidual value guaranteed by the lessee equals or exceeds\nsubstantially all (generally is considered to be at least 90%) of\nthe fair value of the leased asset, or (5) the leased asset is of\nsuch a specialized nature that it is expected to have no\nalternative use to the lessor at the end of the lease term.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي معيار لتصنيف الإيجار تمويليًا في دفاتر المستأجر وفق المعايير الأمريكية؟",
+    "choicesAr": [
+      "وجود خيار شراء يكون المستأجر متأكدًا بدرجة معقولة من ممارسته.",
+      "عدم انتقال ملكية الأصل إلى المستأجر.",
+      "مدة الإيجار 65% أو أكثر من العمر الإنتاجي المقدر للأصل.",
+      "القيمة الحالية للحد الأدنى للدفعات 70% أو أكثر من القيمة السوقية العادلة للأصل."
+    ],
+    "explanationAr": "يصنف المستأجر العقد تمويليًا إذا تحقق عند البدء أحد المعايير الخمسة: (1) تنتقل الملكية بنهاية المدة، (2) يتضمن العقد خيار شراء مؤكد الممارسة بدرجة معقولة، (3) تمثل المدة الجزء الأكبر من العمر الاقتصادي المتبقي (ومن المؤشرات الإرشادية 75% على الأقل)، (4) تعادل القيمة الحالية لمجموع الدفعات وأي قيمة متبقية مضمونة من المستأجر معظم القيمة العادلة أو تتجاوزها (ومن المؤشرات 90% على الأقل)، أو (5) يكون الأصل متخصصًا بحيث لا يتوقع وجود استخدام بديل للمؤجر عند انتهاء المدة."
   },
   {
     "unit": 4,
@@ -610,7 +850,15 @@
     ],
     "answerIndex": 1,
     "explanation": "A lease is classified as a finance lease by the lessee if, at\nlease commencement date, any one of five criteria is satisfied.\nOne criterion is that the present value of the sum of the lease\npayments and any residual value guaranteed by the lessee\nequals or exceeds substantially all (generally considered to be\nat least 90%) of the fair value of the leased asset.\nConsequently, if the fair value of the computer on January 1,\nYear 1, is $14,000, the lease is a finance lease because the\npresent value of the lease payments is 93% ($13,000 ÷\n$14,000) of the fair value of the computer.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 يناير من السنة 1 أبرمت Frost عقدًا لمدة 2 سنة مع Ananz لاستئجار حاسوب جديد. تبدأ المدة في 1 يناير من السنة 1 وتنتهي في 31 ديسمبر من السنة 2. ويدفع المستأجر دفعتين سنويتين بمبلغ $8,000 لكل منهما. وتبلغ القيمة الحالية للدفعات $13,000. أي الظروف التالية تستلزم التصنيف تمويليًا وفق المعايير الأمريكية؟",
+    "choicesAr": [
+      "العمر الاقتصادي للحاسوب 3 سنوات.",
+      "القيمة العادلة للحاسوب في 1 يناير من السنة 1 هي $14,000.",
+      "لا يوجد خيار شراء للحاسوب عند نهاية المدة.",
+      "تبقى ملكية الحاسوب لدى Ananz خلال المدة وبعد انتهائها."
+    ],
+    "explanationAr": "يصنف الإيجار تمويليًا عند تحقق أحد المعايير الخمسة في تاريخ البدء. ومن المعايير أن تساوي القيمة الحالية لمجموع الدفعات والقيمة المتبقية المضمونة من المستأجر معظم القيمة العادلة أو تتجاوزها (ومن المؤشرات الإرشادية 90% على الأقل). لذا إذا كانت القيمة العادلة في 1 يناير من السنة 1 هي $14,000، فإن الإيجار تمويلي لأن القيمة الحالية للدفعات تبلغ 93% ($13,000 ÷ $14,000) من القيمة العادلة."
   },
   {
     "unit": 4,
@@ -627,7 +875,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The lease liability consists of the present value of the lease\npayments. The lease liability is reduced by the portion of the\nlease payment attributable to the lease liability. This amount is\nthe lease payment minus the interest component of the\npayment. Thus, the liability is decreased by the lease payment\neach period minus the portion of the payment allocable to\ninterest.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تدفع Quick دفعات إيجارها في نهاية كل فترة. بماذا ينخفض التزام الإيجار التمويلي دوريًا؟",
+    "choicesAr": [
+      "دفعة الإيجار ناقص الجزء المخصص للفائدة.",
+      "دفعة الإيجار زائد إطفاء الأصل المرتبط.",
+      "دفعة الإيجار ناقص إطفاء الأصل المرتبط.",
+      "كامل دفعة الإيجار."
+    ],
+    "explanationAr": "يقاس التزام الإيجار أولًا بالقيمة الحالية للدفعات. وينخفض الالتزام بالجزء من الدفعة المخصص لسداد أصل الالتزام، أي مبلغ الدفعة ناقص مكون الفائدة. لذا ينخفض الالتزام في كل فترة بالدفعة ناقص الجزء المخصص للفائدة."
   },
   {
     "unit": 4,
@@ -644,7 +900,15 @@
     ],
     "answerIndex": 1,
     "explanation": "This lease is classified as a finance lease because the leased\nmachine is transferred to Cole at the end of the lease term.\nThe lease liability and right-of-use (ROU) asset are initially\nrecognized at the present value of the lease payments of\n$108,000. The lessee amortizes the ROU on a straight-line\nbasis. When, at the end of the lease term, the ownership of\nthe leased asset is transferred to the lessee or the lessee is\nreasonably certain to exercise the purchase option, the\namortization period is the useful life of the leased asset. Thus,\ncurrent amortization expense is $9,000 [($108,000 right-of-use\nasset – $0 salvage value) ÷ 12-year economic life].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 2 يناير وقعت Cole عقد إيجار غير قابل للإلغاء لمدة 8 سنوات لآلة جديدة مقابل دفعات سنوية $15,000 في بداية كل سنة. وعمر الآلة الإنتاجي 12 سنة دون قيمة متبقية. وتنتقل الملكية إلى Cole بانتهاء المدة. وتستخدم القسط الثابت. وبلغت القيمة الحالية لإجمالي الدفعات في 2 يناير مبلغ $108,000 وفق معدل مناسب. ما إطفاء أصل حق الاستخدام للسنة الحالية؟",
+    "choicesAr": [
+      "$0",
+      "$9,000",
+      "$13,500",
+      "$15,000"
+    ],
+    "explanationAr": "يصنف العقد تمويليًا بسبب انتقال ملكية الآلة في نهاية المدة. ويبلغ أساس القياس الأولي لأصل حق الاستخدام $108,000، وهو القيمة الحالية لكامل الدفعات في السؤال، بما فيها دفعة البدء؛ أما الالتزام عند البدء فيستبعد المدفوع بالفعل. ويطفأ الأصل بالقسط الثابت على العمر الإنتاجي عند انتقال الملكية أو التأكد بدرجة معقولة من ممارسة خيار الشراء. لذا يبلغ الإطفاء $9,000 [($108,000 أصل حق الاستخدام − $0 القيمة المتبقية) ÷ 12 سنة العمر الاقتصادي]."
   },
   {
     "unit": 4,
@@ -678,7 +942,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The lease is classified as a finance lease by the lessee\nbecause the ownership of the leased asset is transferred to\nthe lessee at the end of the lease term. The lessee must\nrecord a finance lease by debiting a right-of-use asset and\ncrediting a lease liability.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أبرمت Neary عقدًا لاستئجار حواسيب من Baldwin ابتداءً من 1 يناير من السنة 1. وفيما يلي البيانات:\nمدة الإيجار: 4 سنوات\nالعمر الإنتاجي للحواسيب: 5 سنوات\nالقيمة الحالية لدفعات الإيجار المستقبلية: $100,000\nالقيمة العادلة للأصل في تاريخ الإيجار: 105,000\nمعدل الفائدة الضمني المعروف للمستأجر: 10%\nتنتقل ملكية الأصل من Baldwin إلى Neary في نهاية المدة. وصنفت Neary العقد عقد إيجار رأسمالي (تمويلي بالمصطلح الحالي) وتستخدم القسط الثابت للأصول المماثلة.\nكيف يعرض العقد في دفاتر Neary في 1 يناير من السنة 1؟",
+    "choicesAr": [
+      "أصل فقط.",
+      "أصل والتزام.",
+      "التزام فقط.",
+      "مصروف والتزام."
+    ],
+    "explanationAr": "يصنف العقد تمويليًا لانتقال ملكية الأصل إلى المستأجر في نهاية المدة. ويثبت المستأجر أصل حق الاستخدام مدينًا والتزام الإيجار دائنًا، مع مراعاة أي دفعات عند البدء."
   },
   {
     "unit": 4,
@@ -695,7 +967,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Under a finance lease, the lessee recognizes a right-of-use\nasset and lease liability at an amount equal to the present\nvalue of the lease payments ($100,000) given no initial direct\ncosts. Because the lease provides for the transfer of\nownership, the lease is a finance lease, and the lessee should\namortize the right-of-use asset using the straight-line method\nover the estimated useful life (5 years). Annual expense is\n$20,000 ($100,000 ÷ 5 years).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أبرمت Neary عقدًا لاستئجار حواسيب من Baldwin ابتداءً من 1 يناير من السنة 1. وفيما يلي البيانات:\nمدة الإيجار: 4 سنوات\nالعمر الإنتاجي للحواسيب: 5 سنوات\nالقيمة الحالية لدفعات الإيجار المستقبلية: $100,000\nالقيمة العادلة للأصل في تاريخ الإيجار: 105,000\nمعدل الفائدة الضمني المعروف للمستأجر: 10%\nتنتقل ملكية الأصل من Baldwin إلى Neary في نهاية المدة. وصنفت Neary العقد عقد إيجار رأسمالي (تمويلي بالمصطلح الحالي) وتستخدم القسط الثابت للأصول المماثلة.\nما مصروف الإطفاء السنوي الذي تثبته Neary للحواسيب؟",
+    "choicesAr": [
+      "$20,000",
+      "$21,000",
+      "$25,000",
+      "$26,250"
+    ],
+    "explanationAr": "وفق الإيجار التمويلي وفي غياب تكاليف مباشرة أولية أو دفعات مقدمة أو حوافز، يثبت أصل حق الاستخدام والتزام الإيجار بالقيمة الحالية للدفعات ($100,000). وبما أن العقد ينقل الملكية، يطفأ الأصل بالقسط الثابت على عمره الإنتاجي المقدر (5 سنوات). ويبلغ المصروف السنوي $20,000 ($100,000 ÷ 5 سنوات)، بافتراض عدم وجود قيمة متبقية."
   },
   {
     "unit": 4,
@@ -712,7 +992,15 @@
     ],
     "answerIndex": 1,
     "explanation": "A short-term lease has a term of 12 or fewer months and does\nnot include a purchase option reasonably expected to be\nexercised. For this type of lease, the lessee may elect not to\nrecognize the right-of-use asset and lease liability.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "إذا استخدم المستأجر تمويلًا خارج قائمة المركز المالي، فأي مما يلي قد يفسر اقتناء حق استخدام الأصول؟",
+    "choicesAr": [
+      "نقدًا.",
+      "بعقود إيجار قصيرة الأجل.",
+      "بعقود إيجار تمويلية.",
+      "بتسهيل ائتماني."
+    ],
+    "explanationAr": "الإيجار قصير الأجل مدته 12 شهرًا أو أقل ولا يتضمن خيار شراء مؤكد الممارسة بدرجة معقولة وفق المعايير الأمريكية. ويمكن اختيار عدم إثبات أصل حق الاستخدام والتزام الإيجار لهذا النوع."
   },
   {
     "unit": 4,
@@ -729,7 +1017,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A lease is classified as a sales-type lease by the lessor and as\na finance lease by the lessee if, at lease commencement, the\nlease includes an option to purchase the leased asset that the\nlessee is reasonably certain to exercise.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يحقق معيارًا لتصنيف الإيجار تمويليًا لدى المستأجر؟",
+    "choicesAr": [
+      "العقد يتعلق بمعدات غير متخصصة.",
+      "ضمان طرف ثالث للقيمة المتبقية.",
+      "القيمة الحالية للدفعات 75% من القيمة العادلة للأصل.",
+      "المستأجر متأكد بدرجة معقولة من ممارسة خيار الشراء."
+    ],
+    "explanationAr": "يصنف العقد تمويليًا لدى المستأجر ومن نوع البيع لدى المؤجر وفق المعايير الأمريكية إذا تضمن عند البدء خيار شراء يكون المستأجر متأكدًا بدرجة معقولة من ممارسته."
   },
   {
     "unit": 4,
@@ -763,7 +1059,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The lease transfers ownership; thus, W Co. is entitled to claim\namortization on the equipment. Given an amortizable base of\n$10,000 and a 5-year useful life, the annual amortization\nexpense is $2,000 ($10,000 ÷ 5 years).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 يوليو من السنة 1 أجرت V معدات تصنيع إلى W لاستخدامها في الإنتاج. والعقد غير قابل للإلغاء وينقل الملكية. وفي تاريخ البدء بلغ أساس الإطفاء $10,000 ويطبق القسط الثابت على العمر الإنتاجي المتبقي 5 سنوات. عن الفترة السنوية المنتهية في 31 ديسمبر من السنة 2، ما مبلغ الإطفاء ومن يثبته؟",
+    "choicesAr": [
+      "$1,000؛ V.",
+      "$2,000؛ W.",
+      "$1,000؛ W.",
+      "$2,000؛ V."
+    ],
+    "explanationAr": "لأن الإيجار ينقل الملكية، يثبت W إطفاء أصل حق الاستخدام. وبأساس إطفاء $10,000 وعمر 5 سنوات يبلغ الإطفاء السنوي $2,000 ($10,000 ÷ 5 سنوات)."
   },
   {
     "unit": 4,
@@ -814,7 +1118,15 @@
     ],
     "answerIndex": 1,
     "explanation": "As an accounting policy for short-term leases, a lessee may\nelect not to recognize the right-of-use asset and lease liability.\nA short-term lease is a lease that has a lease term of 12\nmonths or less and does not include a purchase option that\nthe lessee is reasonably certain to exercise. Under this short-\nterm lease exception, the lessee recognizes lease payments\nas rent expense on the straight-line basis over the full lease\nterm.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي شرط لاختيار المستأجر سياسة عدم إثبات أصل حق الاستخدام والتزام الإيجار وفق المعايير الأمريكية؟",
+    "choicesAr": [
+      "القيمة العادلة للأصل $5,000 أو أقل.",
+      "مدة العقد 12 شهرًا أو أقل في تاريخ البدء.",
+      "وجود قيمة متبقية مضمونة من المستأجر.",
+      "مدة العقد 24 شهرًا أو أقل عند البدء وينقل الملكية إلى المستأجر في النهاية."
+    ],
+    "explanationAr": "يجوز اختيار سياسة عدم إثبات أصل حق الاستخدام والتزام الإيجار للإيجارات قصيرة الأجل. وهي عقود مدتها 12 شهرًا أو أقل ولا تشمل خيار شراء مؤكد الممارسة بدرجة معقولة. وبموجب الإعفاء يثبت المستأجر الدفعات مصروف إيجار بالقسط الثابت على كامل المدة."
   },
   {
     "unit": 4,
@@ -831,7 +1143,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A lessee’s finance and operating leases result in the same\naccounting for (1) initial recognition and measurement of the\nright-of-use asset and the lease liability and (2) subsequent\nmeasurement of the lease liability. The reduction of the lease\nliability is the excess of the periodic lease payment over the\ninterest expense recognized during the period.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أبرمت Quinn بصفتها مستأجرًا عقدين مع Jacob Equipment. وصنفت A تمويليًا وB تشغيليًا. ومدة كل عقد 5 سنوات والدفعات السنوية متساوية. أي المعالجات التالية متماثلة في العقدين؟",
+    "choicesAr": [
+      "تصنيف الدفعات النقدية ضمن التدفقات التشغيلية الخارجة.",
+      "إطفاء أصل حق الاستخدام بالقسط الثابت على العمر الإنتاجي للأصل.",
+      "إثبات مصروف إيجار واحد متساوٍ كل فترة.",
+      "تسجيل انخفاض التزام الإيجار عند سداد الدفعات الدورية."
+    ],
+    "explanationAr": "تتماثل محاسبة الإيجار التمويلي والتشغيلي لدى المستأجر من حيث (1) الاعتراف والقياس الأولي لأصل حق الاستخدام والالتزام، و(2) القياس اللاحق للالتزام. ويبلغ انخفاض الالتزام الفرق بين الدفعة الدورية والفائدة المحتسبة خلال الفترة."
   },
   {
     "unit": 4,
@@ -848,7 +1168,15 @@
     ],
     "answerIndex": 0,
     "explanation": "For finance and operating leases, a lessee must recognize a\nlease liability and a right-of-use asset at the lease\ncommencement date. A lease liability is measured initially at\nthe present value of the lease payments to be made over the\nlease term.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "هل يستخدم المستأجر القيمة الحالية لدفعات الإيجار لتحديد مبلغ الالتزام في كل من التصنيفين التاليين؟\nالإيجار التمويلي | الإيجار التشغيلي",
+    "choicesAr": [
+      "نعم | نعم",
+      "نعم | لا",
+      "لا | لا",
+      "لا | نعم"
+    ],
+    "explanationAr": "في الإيجار التمويلي والتشغيلي يثبت المستأجر عند بدء العقد التزام الإيجار وأصل حق الاستخدام، مع مراعاة الإعفاءات. ويقاس الالتزام أولًا بالقيمة الحالية للدفعات غير المسددة التي ستدفع خلال مدة العقد."
   },
   {
     "unit": 4,
@@ -882,7 +1210,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Taxable income consists of pretax income adjusted for those\nitems that give rise to tax differences. Taxable income is\ntherefore $3,400,000 ($5,000,000 – $600,000 – $1,000,000),\nand current tax expense is $1,360,000 ($3,400,000 × 40%).\nThe interest on municipal bonds is a permanent difference\nbecause it is tax-exempt, i.e., it is recognized in GAAP income\nbut never in taxable income. Permanent differences have no\ndeferred tax effects. However, the gain on the sale of land is a\ntemporary difference because it is included in GAAP income\nthis year and is included in taxable income in the future. This\ntemporary difference gives rise to a future taxable amount,\nspecifically, a $400,000 deferred tax liability ($1,000,000 ×\n40%). This credit to the deferred tax liability account is\nbalanced by a debit to income tax expense. Total income tax\nexpense for the year is therefore $1,760,000 ($1,360,000\ncurrent portion + $400,000 deferred portion).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فيما يلي بيانات مالية مختارة للسنة المنتهية:\nالدخل قبل الضريبة: $5,000,000\nفوائد مستلمة من سندات البلديات: 600,000\nمكسب بيع أرض مثبت هذه السنة ولا يخضع للضريبة حتى السنة التالية: 1,000,000\nمعدل الضريبة لكل السنوات: 40%\nأرصدة أول المدة:\nضريبة الدخل المستحقة: 0\nالتزام ضريبي مؤجل: $50,000\nما إجمالي مصروف ضريبة الدخل في قائمة دخل السنة؟",
+    "choicesAr": [
+      "$960,000",
+      "$1,360,000",
+      "$1,760,000",
+      "$2,640,000"
+    ],
+    "explanationAr": "يعدل الدخل قبل الضريبة بالفروق الضريبية، فيبلغ الدخل الخاضع للضريبة $3,400,000 ($5,000,000 − $600,000 − $1,000,000)، والضريبة الجارية $1,360,000 ($3,400,000 × 40%). وتعد فوائد سندات البلديات المعفاة وفق افتراض السؤال فرقًا دائمًا لا يترتب عليه أثر ضريبي مؤجل. أما مكسب بيع الأرض فيمثل فرقًا مؤقتًا خاضعًا للضريبة مستقبلًا، وينشئ زيادة في الالتزام الضريبي المؤجل بمبلغ $400,000 ($1,000,000 × 40%)، يقابلها مصروف ضريبي مؤجل. لذا يبلغ إجمالي المصروف $1,760,000 ($1,360,000 جاري + $400,000 مؤجل)، بافتراض عدم تغير الالتزام المؤجل السابق لسبب آخر."
   },
   {
     "unit": 4,
@@ -916,7 +1252,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A temporary difference exists when (1) the reported amount of\nan asset or liability in the financial statements differs from the\ntax basis of that asset or liability, and (2) the difference will\nresult in taxable or deductible amounts in future years when\nthe asset is recovered or the liability is settled at its reported\namount. A temporary difference may also exist although it\ncannot be identified with a specific asset or liability recognized\nfor financial reporting purposes. Temporary differences most\ncommonly arise when either expenses or revenues are\nrecognized for tax purposes either earlier or later than in the\ndetermination of financial income.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تنشأ الفروق المؤقتة عندما تصبح المصروفات قابلة للخصم ضريبيًا:\nبعد إثباتها في الدخل المحاسبي | قبل إثباتها في الدخل المحاسبي",
+    "choicesAr": [
+      "لا | لا",
+      "لا | نعم",
+      "نعم | نعم",
+      "نعم | لا"
+    ],
+    "explanationAr": "ينشأ الفرق المؤقت عندما (1) تختلف القيمة الدفترية لأصل أو التزام عن أساسه الضريبي، و(2) ينتج عن الفرق مبالغ خاضعة للضريبة أو قابلة للخصم مستقبلًا عند استرداد الأصل أو تسوية الالتزام بقيمته الدفترية. وقد يوجد فرق مؤقت دون ارتباطه بأصل أو التزام محدد معترف به في القوائم. وتنشأ الفروق غالبًا عندما يختلف توقيت الاعتراف بالإيرادات أو المصروفات للأغراض الضريبية عنه للأغراض المحاسبية."
   },
   {
     "unit": 4,
@@ -933,7 +1277,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Deferred tax expense or benefit is the net change during the\nyear in the entity’s deferred tax liabilities and assets. It is\naggregated with the current tax expense or benefit to\ndetermine total income tax expense for the year. The amount\nof income taxes payable (current tax expense) is $400,000\n($1,000,000 × 40%). The deferred tax assets increased by\n$8,000 ($17,000 – $9,000) and the deferred tax liabilities\nincreased by $10,000 ($23,000 – $13,000). Thus, Lucas’s\nincome tax expense for Year 2 is $402,000 ($400,000 current\ntax expense – $8,000 increase in the deferred tax assets +\n$10,000 increase in the deferred tax liabilities).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "حسبت Lucas أرصدة الضرائب المؤجلة التالية لأحدث 2 سنة، وتعد الأصول الضريبية المؤجلة قابلة للتحقق بالكامل:\nالبند | السنة 1 | السنة 2\nأصل ضريبي مؤجل | $9,000 | $17,000\nالتزام ضريبي مؤجل | 13,000 | 23,000\nإذا بلغ الدخل الخاضع للضريبة $1,000,000 في السنة 2 ومعدل الضريبة 40%، فما مصروف الضريبة في قائمة دخل السنة 2؟",
+    "choicesAr": [
+      "$400,000",
+      "$402,000",
+      "$404,000",
+      "$406,000"
+    ],
+    "explanationAr": "مصروف أو منفعة الضريبة المؤجلة هو صافي تغير الأصول والالتزامات الضريبية المؤجلة خلال السنة المرتبط بالربح أو الخسارة. ويضاف إلى الضريبة الجارية لتحديد الإجمالي. وتبلغ الضريبة الجارية $400,000 ($1,000,000 × 40%). وزادت الأصول الضريبية المؤجلة $8,000 ($17,000 − $9,000)، وزادت الالتزامات الضريبية المؤجلة $10,000 ($23,000 − $13,000). لذا يبلغ مصروف ضريبة السنة 2 مبلغ $402,000 ($400,000 جاري − $8,000 زيادة الأصل + $10,000 زيادة الالتزام)، بافتراض عدم وجود آثار مثبتة خارج الربح أو الخسارة."
   },
   {
     "unit": 4,
@@ -984,7 +1336,15 @@
     ],
     "answerIndex": 0,
     "explanation": "A tax rate other than the current tax rate may be used to\ncalculate the deferred income tax amount on the statement of\nfinancial position if a future tax rate has been enacted into law.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "متى يجوز استخدام معدل ضريبي غير المعدل الجاري لحساب ضريبة الدخل المؤجلة في قائمة المركز المالي وفق المعايير الأمريكية؟",
+    "choicesAr": [
+      "عندما يكون المعدل المستقبلي قد صدر به قانون نافذ.",
+      "عندما يرجح حدوث تغيير مستقبلي في المعدل.",
+      "عند اختيار تطبيق معدلات سابقة.",
+      "عند وجود خسارة تشغيلية قابلة للترحيل إلى سنوات سابقة."
+    ],
+    "explanationAr": "وفق المعايير الأمريكية تستخدم المعدلات المقررة قانونًا والمتوقع تطبيقها عند انعكاس الفروق المؤقتة، ولذلك يجوز استخدام معدل مستقبلي مختلف إذا صدر به قانون."
   },
   {
     "unit": 4,
@@ -1001,7 +1361,15 @@
     ],
     "answerIndex": 0,
     "explanation": "To provide a fair presentation, GAAP require that income tax\nexpense for the period be allocated among continuing\noperations, discontinued operations, other comprehensive\nincome, and items debited or credited directly to equity.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لماذا ينشأ توزيع ضريبة الدخل داخل الفترة المحاسبية؟",
+    "choicesAr": [
+      "قد تعرض بنود تدخل في تحديد الدخل الخاضع للضريبة في أقسام مختلفة من القوائم المالية.",
+      "يجب توزيع الضريبة بين الفترات الحالية والمستقبلية.",
+      "تظهر إيرادات ومصروفات في القوائم قبل أو بعد إدراجها في الدخل الخاضع للضريبة.",
+      "تظهر إيرادات ومصروفات في القوائم وتستبعد من الدخل الخاضع للضريبة."
+    ],
+    "explanationAr": "لتحقيق العرض العادل توزع ضريبة الدخل المتعلقة بالفترة على العمليات المستمرة والعمليات المتوقفة والدخل الشامل الآخر والبنود المثبتة مباشرة في حقوق الملكية بحسب القواعد المنطبقة."
   },
   {
     "unit": 4,
@@ -1018,7 +1386,15 @@
     ],
     "answerIndex": 1,
     "explanation": "A temporary difference results when the GAAP basis and the\ntax basis of an asset or liability differ. The effect is that a\ntaxable or deductible amount will occur in future years when\nthe asset is recovered or the liability is settled. But some\ntemporary differences are not related to an asset or liability for\nfinancial reporting. Thus, temporary differences occur when\nrevenues or gains, or expenses or losses, are used to\ncalculate net income under GAAP in a year before or after\nbeing used to calculate taxable income.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عند المحاسبة عن ضريبة الدخل، في أي الحالات ينشأ فرق مؤقت؟",
+    "choicesAr": [
+      "يدخل بند في حساب صافي الدخل لكنه لا يخضع للضريبة ولا يقبل الخصم.",
+      "يدخل بند في صافي الدخل في سنة وفي الدخل الخاضع للضريبة في سنة أخرى.",
+      "لم يعد بند خاضعًا للضريبة بسبب تغيير القانون.",
+      "استخدام أساس الاستحقاق."
+    ],
+    "explanationAr": "ينشأ الفرق المؤقت عندما يختلف الأساس المحاسبي لأصل أو التزام عن أساسه الضريبي، مما ينتج عنه مبلغ خاضع للضريبة أو قابل للخصم مستقبلًا عند الاسترداد أو التسوية. وبعض الفروق المؤقتة لا ترتبط بأصل أو التزام لأغراض التقارير المالية. لذا قد تنشأ عندما تدخل الإيرادات أو المكاسب أو المصروفات أو الخسائر في حساب الدخل المحاسبي قبل أو بعد إدراجها في حساب الدخل الخاضع للضريبة."
   },
   {
     "unit": 4,
@@ -1035,7 +1411,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Interperiod tax allocation is designed to recognize a tax asset\nor liability for the tax consequences of temporary differences\nthat exist between a company’s financial accounting records\nand its tax records at the balance sheet date. These\ntemporary differences result when the GAAP basis and the tax\nbasis of an asset or liability differ.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما هدف توزيع ضريبة الدخل بين الفترات؟",
+    "choicesAr": [
+      "تسوية آثار الفروق الدائمة والمؤقتة الظاهرة في القوائم الحالية.",
+      "إثبات أصل أو التزام ضريبي لآثار الفروق المؤقتة القائمة في تاريخ قائمة المركز المالي.",
+      "تعديل مصروف الضريبة ليتفق مع الالتزام الضريبي الظاهر في قائمة المركز المالي.",
+      "الإفصاح عن توزيع الأرباح إلى السلطة الضريبية."
+    ],
+    "explanationAr": "يهدف توزيع الضريبة بين الفترات إلى إثبات أصل أو التزام ضريبي عن آثار الفروق المؤقتة القائمة بين السجلات المحاسبية والضريبية في تاريخ قائمة المركز المالي، والتي تنتج عن اختلاف القيمة المحاسبية للأصل أو الالتزام عن أساسه الضريبي."
   },
   {
     "unit": 4,
@@ -1052,7 +1436,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A deferred tax liability or asset is recognized for the estimated\nfuture tax effects of temporary differences and carryforwards.\nA temporary difference is created when a taxpayer accounts\nfor a sale on the accrual basis but uses the cash basis for tax\npurposes. When the income under U.S. GAAP is greater than\ntaxable income, as it is in this situation, a deferred tax liability\nshould be recognized. This is the only answer choice that\ncould possibly result in a liability.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بالنسبة لشركة تخضع لقانون ضريبة الدخل الأمريكي وتعد قوائمها وفق المعايير الأمريكية، أي مما يلي يستلزم إثبات التزام ضريبي مؤجل؟",
+    "choicesAr": [
+      "اشتراكات مستلمة مقدمًا يعترف بها على مدى الاشتراك.",
+      "استحقاق مصروف ضمان المنتجات الذي سيتكبد ويدفع مستقبلًا.",
+      "فوائد مستلمة من سندات الولايات والبلديات.",
+      "مبيعات محاسبية على أساس الاستحقاق وتخضع للضريبة على الأساس النقدي."
+    ],
+    "explanationAr": "يثبت أصل أو التزام ضريبي مؤجل عن الآثار الضريبية المستقبلية للفروق المؤقتة والترحيلات وفق شروط الاعتراف. وينشأ فرق مؤقت عندما يحاسب عن المبيعات على أساس الاستحقاق بينما تخضع للضريبة عند التحصيل. وفي هذه الحالة يؤدي الاعتراف بالإيراد محاسبيًا قبل خضوعه للضريبة إلى فرق مؤقت خاضع للضريبة مستقبلًا والتزام ضريبي مؤجل."
   },
   {
     "unit": 4,
@@ -1069,7 +1461,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Because the tax basis uses an accelerated method,\ndepreciation expense and accumulated depreciation will be\ngreater. Moreover, taxable income will be lower than financial\nnet income. Consequently, tax-basis retained earnings will be\nless than that in the general purpose financial statements.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم شركة القسط الثابت للتقارير المالية والإهلاك المعجل للأغراض الضريبية. أي الأرصدة التالية يكون أقل في القوائم المعدة على الأساس الضريبي مقارنة بالقوائم ذات الغرض العام؟",
+    "choicesAr": [
+      "مجمع الإهلاك.",
+      "النقد.",
+      "الأرباح المحتجزة.",
+      "إجمالي تكلفة العقارات والآلات والمعدات."
+    ],
+    "explanationAr": "لأن الأساس الضريبي يستخدم الإهلاك المعجل، يكون مصروف الإهلاك ومجمعه أكبر في السنوات الأولى. ويكون الدخل الخاضع للضريبة أقل من الدخل المحاسبي، وبالتالي تكون الأرباح المحتجزة وفق الأساس الضريبي أقل في تلك السنوات مع ثبات العوامل الأخرى."
   },
   {
     "unit": 4,
@@ -1086,7 +1486,15 @@
     ],
     "answerIndex": 3,
     "explanation": "An amortization schedule for the first 2 years of Evangel’s\nbonds can be prepared as follows:\nBeginn              Equal            Equals     Endin\ning     Times        s:   Min          :        g\nCarryi      :      Intere   us:     Discou     Carryi\nng      Effecti      st   Cas         nt       ng\nYe     Amoun       ve       Expe     h      Amorti     Amou\nar         t      Rate       nse   Paid       zed        nt\n1     $96,207    10%      $9,621 $9,000     $621     $96,828\n2      96,828    10%        9,683 9,000       683     97,511",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 يناير أصدرت Evangel سندات بفائدة 9% وقيمة اسمية $100,000 تستحق بعد 5 سنوات. صدرت مقابل $96,207 بعائد 10%، مما نتج عنه خصم إصدار $3,793. وتستخدم الشركة طريقة الفائدة الفعلية لإطفاء الخصم. وتدفع الفائدة سنويًا في 31 ديسمبر.\nما مصروف الفائدة الذي يعرض في قائمة دخل السنة الثانية؟",
+    "choicesAr": [
+      "$8,779",
+      "$9,000",
+      "$9,559",
+      "$9,683"
+    ],
+    "explanationAr": "يمكن إعداد جدول إطفاء خصم السندات لأول 2 سنة كما يلي:\nالسنة | القيمة الدفترية أول المدة | معدل الفائدة الفعلي | مصروف الفائدة | النقد المدفوع | الخصم المطفأ | القيمة الدفترية آخر المدة\n1 | $96,207 | 10% | $9,621 | $9,000 | $621 | $96,828\n2 | 96,828 | 10% | 9,683 | 9,000 | 683 | 97,511."
   },
   {
     "unit": 4,
@@ -1103,7 +1511,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Total interest expense for the year equals the carrying amount\nof the bonds times the effective rate (yield), or $9,621\n($96,207 × 10%). Subtracting the cash interest payment from\nthis leaves the amount of discount amortized, or $621 ($9,621\n– $9,000). Subtracting this amount from the previous\nunamortized discount ($3,793) leaves a remaining\nunamortized discount at the end of Year 1 of $3,172.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 يناير أصدرت Evangel سندات بفائدة 9% وقيمة اسمية $100,000 تستحق بعد 5 سنوات. صدرت مقابل $96,207 بعائد 10%، مما نتج عنه خصم إصدار $3,793. وتستخدم الشركة طريقة الفائدة الفعلية لإطفاء الخصم. وتدفع الفائدة سنويًا في 31 ديسمبر.\nما خصم السندات غير المطفأ في نهاية السنة الأولى؟",
+    "choicesAr": [
+      "$621",
+      "$2,452",
+      "$3,172",
+      "$3,793"
+    ],
+    "explanationAr": "يساوي مصروف الفائدة القيمة الدفترية مضروبة في معدل العائد الفعلي، أي $9,621 ($96,207 × 10%). وبطرح الفائدة النقدية يكون الخصم المطفأ $621 ($9,621 − $9,000). وبطرحه من الخصم غير المطفأ السابق ($3,793)، يتبقى في نهاية السنة 1 مبلغ $3,172."
   },
   {
     "unit": 4,
@@ -1120,7 +1536,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Total interest expense for the year equals the carrying amount\nof the bonds times the effective rate (yield), or $9,621\n($96,207 × 10%). Subtracting the cash interest payment from\nthis leaves the amount of discount amortized ($9,621 – $9,000\n= $621). Subtracting this amount from the previous\nunamortized discount ($3,793) leaves a remaining\nunamortized discount at the end of Year 1 of $3,172.\nSubtracting this amount from the face amount of the bonds\n($100,000) provides a carrying amount of $96,828.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 يناير أصدرت Evangel سندات بفائدة 9% وقيمة اسمية $100,000 تستحق بعد 5 سنوات. صدرت مقابل $96,207 بعائد 10%، مما نتج عنه خصم إصدار $3,793. وتستخدم الشركة طريقة الفائدة الفعلية لإطفاء الخصم. وتدفع الفائدة سنويًا في 31 ديسمبر.\nما صافي القيمة الدفترية للسندات المستحقة في نهاية السنة الأولى؟",
+    "choicesAr": [
+      "$94,866",
+      "$95,586",
+      "$96,828",
+      "$97,548"
+    ],
+    "explanationAr": "يساوي مصروف الفائدة القيمة الدفترية مضروبة في العائد الفعلي، أي $9,621 ($96,207 × 10%). وبطرح الفائدة النقدية ينتج الخصم المطفأ ($9,621 − $9,000 = $621). وبطرحه من الخصم السابق ($3,793) يتبقى في نهاية السنة 1 مبلغ $3,172. وبطرح هذا المبلغ من القيمة الاسمية ($100,000) نحصل على قيمة دفترية قدرها $96,828."
   },
   {
     "unit": 4,
@@ -1137,7 +1561,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Total interest expense for the year equals the carrying amount\nof the bonds times the effective rate (yield), or $9,621\n($96,207 × 10%).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 يناير أصدرت Evangel سندات بفائدة 9% وقيمة اسمية $100,000 تستحق بعد 5 سنوات. صدرت مقابل $96,207 بعائد 10%، مما نتج عنه خصم إصدار $3,793. وتستخدم الشركة طريقة الفائدة الفعلية لإطفاء الخصم. وتدفع الفائدة سنويًا في 31 ديسمبر.\nما مصروف الفائدة في قائمة الدخل في نهاية السنة الأولى؟",
+    "choicesAr": [
+      "$8,659",
+      "$9,000",
+      "$9,621",
+      "$10,000"
+    ],
+    "explanationAr": "يساوي مصروف الفائدة للسنة القيمة الدفترية للسندات مضروبة في العائد الفعلي، أي $9,621 ($96,207 × 10%) بعد التقريب."
   },
   {
     "unit": 4,
@@ -1154,7 +1586,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A premium on bonds payable arises when the amount\nreceived from sale of the bonds at issuance exceeds the face\nvalue of the bonds. This situation occurs if, at the time the\nbonds are sold, their stated rate is greater than the current\nmarket rate.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "متى تنشأ علاوة إصدار السندات المستحقة؟",
+    "choicesAr": [
+      "عند حلول موعد الفائدة نصف السنوية.",
+      "عندما يقل معدل السوق بعد الإصدار عن المعدل الاسمي للسندات.",
+      "عندما تتجاوز متحصلات بيع السندات عند الإصدار قيمتها الاسمية.",
+      "عند رسملة تكلفة إصدار السندات."
+    ],
+    "explanationAr": "تنشأ علاوة الإصدار عندما تتجاوز متحصلات بيع السندات عند الإصدار قيمتها الاسمية، ويحدث ذلك عادة عندما يزيد معدل الفائدة الاسمي عند البيع على معدل السوق السائد، مع ثبات العوامل الأخرى."
   },
   {
     "unit": 4,
@@ -1205,7 +1645,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The annual cash payment is the face amount of the bonds\ntimes the stated rate ($100,000 × 9% = $9,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 يناير أصدرت Evangel سندات بفائدة 9% وقيمة اسمية $100,000 تستحق بعد 5 سنوات. صدرت مقابل $96,207 بعائد 10%، مما نتج عنه خصم إصدار $3,793. وتستخدم الشركة طريقة الفائدة الفعلية لإطفاء الخصم. وتدفع الفائدة سنويًا في 31 ديسمبر.\nما مبلغ الفائدة التي ستدفعها Evangel في نهاية السنة الأولى؟",
+    "choicesAr": [
+      "$8,659",
+      "$9,000",
+      "$9,621",
+      "$10,000"
+    ],
+    "explanationAr": "تساوي الدفعة النقدية السنوية القيمة الاسمية مضروبة في معدل الفائدة الاسمي ($100,000 × 9% = $9,000)."
   },
   {
     "unit": 4,
@@ -1222,7 +1670,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Interest payable equals the face amount of the bonds, times\nthe nominal (stated) interest rate, times the portion of the\ninterest period included in the accounting period. The yield\nrate and sale between interest periods for an amount including\naccrued interest do not affect interest payable. Accordingly,\ninterest payable equals $16,000 [($800,000 × 8%) × (3 ÷\n12 months)].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 نوفمبر أصدرت Mason سندات بقيمة $800,000 لأجل 10 سنوات وفائدة 8% مؤرخة في 1 أكتوبر. وبيعت بعائد 10% مقابل $700,000 بالإضافة إلى الفائدة المستحقة. تدفع الفائدة في 1 أبريل و1 أكتوبر من كل سنة. ما الفائدة المستحقة الدفع في قائمة المركز المالي في 31 ديسمبر؟",
+    "choicesAr": [
+      "$17,500",
+      "$16,000",
+      "$11,667",
+      "$10,667"
+    ],
+    "explanationAr": "تساوي الفائدة المستحقة القيمة الاسمية مضروبة في معدل الفائدة الاسمي ونسبة الفترة المنقضية. ولا يؤثر العائد الفعلي أو بيع السندات بين تاريخي دفع الفائدة مع تحصيل الفائدة المستحقة في مبلغ الفائدة التعاقدية المستحقة للدفع. لذا تبلغ $16,000 [($800,000 × 8%) × (3 ÷ 12 شهرًا)]."
   },
   {
     "unit": 4,
@@ -1239,7 +1695,15 @@
     ],
     "answerIndex": 1,
     "explanation": "A bond issued “at 97” is issued at a price equal to 97% of its\nface amount (400 bonds × $1,000 face amount × .97 =\n$388,000). At the issue date, no time has passed, so no\namortization has occurred, and the accrued interest is credited\nto either interest payable or interest expense. The reported\namount is therefore $388,000 ($400,000 – $12,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 يناير من السنة 2 أصدرت Oak عدد 400 سند بمعدل 8% وقيمة اسمية $1,000 للسند بسعر 97 بالإضافة إلى الفائدة المستحقة. والسندات مؤرخة في 1 أكتوبر من السنة 1 وتستحق في 1 أكتوبر من السنة 11. وتدفع الفائدة نصف سنويًا في 1 أبريل و1 أكتوبر. بلغت الفائدة المستحقة من 1 أكتوبر السنة 1 إلى 1 يناير السنة 2 مبلغ $8,000. ما صافي السندات المستحقة بعد الخصم في 1 يناير من السنة 2؟",
+    "choicesAr": [
+      "$380,300",
+      "$388,000",
+      "$388,300",
+      "$392,000"
+    ],
+    "explanationAr": "الإصدار بسعر 97 يعني إصدار السندات بنسبة 97% من قيمتها الاسمية (400 سند × $1,000 × .97 = $388,000). وفي تاريخ الإصدار لم تنقض فترة لإطفاء الخصم، وتسجل الفائدة المحصلة عن الفترة السابقة منفصلة عن أصل الالتزام. لذا يبلغ المبلغ المعروض $388,000 ($400,000 − $12,000)."
   },
   {
     "unit": 4,
@@ -1256,7 +1720,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Interest payable does not vary with the issue price of bonds. It\nequals their face amount times the stated (contractual) rate at\nthe beginning of the period.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عند استخدام طريقة الفائدة الفعلية لإطفاء علاوة إصدار السندات، كيف تحسب الفائدة التعاقدية المستحقة عن فترة الفائدة؟",
+    "choicesAr": [
+      "القيمة الاسمية للسندات أول الفترة × معدل الفائدة التعاقدي للفترة.",
+      "القيمة الاسمية أول الفترة × معدل الفائدة الفعلي.",
+      "القيمة الدفترية أول الفترة × معدل الفائدة التعاقدي.",
+      "القيمة الدفترية أول الفترة × معدل الفائدة الفعلي."
+    ],
+    "explanationAr": "لا تتغير الفائدة التعاقدية المستحقة بتغير سعر إصدار السندات. فهي تساوي قيمتها الاسمية مضروبة في معدل الفائدة الاسمي التعاقدي للفترة."
   },
   {
     "unit": 4,
@@ -1273,7 +1745,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Bond discount must appear as a direct deduction from the\nface amount of the bond payable to report the effective liability\nfor the bonds. Thus, the bond liability is shown net of\nunamortized discount.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "كيف يعرض خصم إصدار السندات غير المطفأ في قائمة المركز المالي للمصدر؟",
+    "choicesAr": [
+      "خصم مباشر من القيمة الاسمية للدين.",
+      "خصم مباشر من القيمة الحالية للدين.",
+      "تكلفة مؤجلة مستقلة.",
+      "جزء من تكاليف الإصدار."
+    ],
+    "explanationAr": "يطرح خصم إصدار السندات مباشرة من قيمتها الاسمية لعرض القيمة الدفترية للالتزام. ولذلك يعرض الالتزام بعد خصم الجزء غير المطفأ."
   },
   {
     "unit": 4,
@@ -1290,7 +1770,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The carrying amount of a bond payable is equal to its maturity\n(face) amount plus any unamortized premium or minus any\nunamortized discount. Amortization results in a reduction of\nthe discount or premium. Consequently, the carrying amount\nof a bond is increased when discount is amortized and\ndecreased when premium is amortized.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "كيف تتأثر القيمة الدفترية للسندات المستحقة بإطفاء كل مما يلي؟\nخصم الإصدار | علاوة الإصدار",
+    "choicesAr": [
+      "زيادة | زيادة",
+      "انخفاض | انخفاض",
+      "زيادة | انخفاض",
+      "انخفاض | زيادة"
+    ],
+    "explanationAr": "تساوي القيمة الدفترية للسندات قيمتها الاسمية عند الاستحقاق مضافًا إليها العلاوة غير المطفأة أو مطروحًا منها الخصم غير المطفأ. ويخفض الإطفاء رصيد الخصم أو العلاوة. لذلك تزيد القيمة الدفترية عند إطفاء الخصم وتنخفض عند إطفاء العلاوة."
   },
   {
     "unit": 4,
@@ -1307,7 +1795,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Under the effective interest method, interest expense for the 6\nmonths since the bond was issued is equal to the carrying\namount of the bond multiplied by the effective interest rate for\nhalf a year. Thus, interest expense is $10,328 [$206,576 ×\n10% × (6 months ÷ 12 months)].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 يوليو تلقت Dover مبلغ $206,576 مقابل سندات قيمتها الاسمية $200,000 وفائدتها 12%، بعائد 10%. ما مصروف الفائدة عن 6 أشهر منتهية في 31 ديسمبر؟",
+    "choicesAr": [
+      "$12,394",
+      "$12,000",
+      "$10,328",
+      "$10,000"
+    ],
+    "explanationAr": "وفق طريقة الفائدة الفعلية، يساوي مصروف الفائدة عن 6 أشهر من الإصدار القيمة الدفترية مضروبة في معدل الفائدة الفعلي لنصف سنة وفق اصطلاح العائد في المسألة. لذا يبلغ المصروف $10,328 [$206,576 × 10% × (6 أشهر ÷ 12 شهرًا)] وهو أقرب اختيار إلى الناتج الحسابي غير المقرب؛ إذ إن التقريب المعتاد إلى أقرب دولار يعطي مبلغًا أعلى بدولار واحد."
   },
   {
     "unit": 4,
@@ -1324,7 +1820,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The face amount of the bonds is $1,000,000 (1,000 × $1,000),\nand the unamortized premium is $14,000 (given). The carrying\namount is thus $1,014,000. The other data are irrelevant.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 يناير من السنة 1 أصدرت Gilson عدد 1,000 سند قابل للاستدعاء بفائدة 9% وقيمة اسمية $1,000 مقابل $1,030,000. والسندات مؤرخة في 1 يناير من السنة 1 وتستحق في 31 ديسمبر من السنة 15. وتدفع الفائدة نصف سنويًا في 1 يناير و1 يوليو. ويمكن للمصدر استدعاؤها بسعر 102 في أي تاريخ دفع فائدة بعد 31 ديسمبر من السنة 5. وبلغت العلاوة غير المطفأة $14,000 في 31 ديسمبر من السنة 8، وسعر السوق 99 في ذلك التاريخ. ما القيمة الدفترية للسندات في قائمة المركز المالي في 31 ديسمبر من السنة 8؟",
+    "choicesAr": [
+      "$1,020,000",
+      "$1,016,000",
+      "$1,014,000",
+      "$990,000"
+    ],
+    "explanationAr": "تبلغ القيمة الاسمية $1,000,000 (1,000 × $1,000)، والعلاوة غير المطفأة $14,000 كما ورد في السؤال. لذا تبلغ القيمة الدفترية $1,014,000 وفق نموذج التكلفة المطفأة، بافتراض عدم حدوث استدعاء أو وجود تكاليف إصدار أخرى."
   },
   {
     "unit": 4,
@@ -1341,7 +1845,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Interest expense for the 6 months since the bonds were\nissued is $21,900 [$438,000 carrying amount × 10% effective\nrate × (6 ÷ 12)]. The periodic cash payment is $20,000\n[$500,000 face amount × 8% stated rate × (6 ÷ 12)]. The\n$1,900 ($21,900 – $20,000) difference is the amount of\ndiscount to be amortized for this 6-month interest period.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 يوليو من السنة 3 حصلت Lundy على $438,000 مقابل إصدار 500 سند بفائدة 8% وقيمة اسمية $1,000 للسند، بعائد 10%. والسندات مؤرخة في 1 يوليو من السنة 3 وتستحق في 1 يوليو من السنة 13. وتدفع الفائدة نصف سنويًا في 1 يناير و1 يوليو. باستخدام الفائدة الفعلية، ما خصم الإصدار المطفأ خلال 6 أشهر منتهية في 31 ديسمبر من السنة 3؟",
+    "choicesAr": [
+      "$3,800",
+      "$3,100",
+      "$2,480",
+      "$1,900"
+    ],
+    "explanationAr": "يبلغ مصروف الفائدة خلال 6 أشهر من الإصدار $21,900 [$438,000 القيمة الدفترية × 10% المعدل الفعلي × (6 ÷ 12)]. وتبلغ الدفعة النقدية $20,000 [$500,000 القيمة الاسمية × 8% المعدل الاسمي × (6 ÷ 12)]. والفرق $1,900 ($21,900 − $20,000) هو الخصم المطفأ خلال فترة الفائدة البالغة 6 أشهر، وفق اصطلاح العائد في المسألة."
   },
   {
     "unit": 4,
@@ -1358,7 +1870,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Under the effective interest method, interest expense is equal\nto the carrying amount of the bonds at the beginning of the\ninterest period times the effective interest rate. The carrying\namount of the bonds at December 1, Year 1 (the issuance\ndate), was $5,194,770. The annual yield rate was 16%.\nInterest expense is therefore equal to $415,582 [$5,194,770 ×\n16% × (6 months ÷ 12 months)] for the first 6 months of the\nyear. For the same period, interest paid was $360,000\n[$6,000,000 × 12% × (6 months ÷ 12 months)]. Hence, the\nsemiannual discount amortization was $55,582 ($415,582\ninterest expense – $360,000 interest paid), and the carrying\namount of the bonds for the second 6-month period was\n$5,250,352 ($5,194,770 + $55,582). For this period, the\nsemiannual interest expense was $420,028 [$5,250,352 ×\n16% × (6 months ÷ 12 months)]. Total interest expense for the\nyear is equal to $835,610 ($415,582 + $420,028).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أصدرت Clare سندات بقيمة $6 ملايين أمريكية وفائدة 12% في 1 ديسمبر من السنة 1، تستحق في 1 ديسمبر من السنة 6، وتدفع الفائدة في 1 ديسمبر و1 يونيو. وبيعت السندات مقابل $5,194,770 أمريكي بعائد 16%. إذا أطفئ الخصم بالفائدة الفعلية، فما مصروف الفائدة للسنة المالية المنتهية في 30 نوفمبر من السنة 2 بشأن إصدار السندات البالغ $6 ملايين؟",
+    "choicesAr": [
+      "$623,372",
+      "$720,000",
+      "$831,163",
+      "$835,610"
+    ],
+    "explanationAr": "وفق الفائدة الفعلية يساوي مصروف الفائدة القيمة الدفترية أول فترة الفائدة مضروبة في معدل الفائدة الفعلي للفترة. وبلغت القيمة الدفترية في 1 ديسمبر من السنة 1 (تاريخ الإصدار) $5,194,770. والعائد السنوي وفق اصطلاح المسألة 16%. لذا يبلغ مصروف الفائدة $415,582 [$5,194,770 × 16% × (6 أشهر ÷ 12 شهرًا)] لأول 6 أشهر. وفي الفترة نفسها بلغت الفائدة المدفوعة $360,000 [$6,000,000 × 12% × (6 أشهر ÷ 12 شهرًا)]. لذا بلغ إطفاء الخصم نصف السنوي $55,582 ($415,582 مصروف − $360,000 مدفوع)، والقيمة الدفترية لفترة 6 أشهر الثانية $5,250,352 ($5,194,770 + $55,582). وبلغ مصروف الفائدة لهذه الفترة $420,028 [$5,250,352 × 16% × (6 أشهر ÷ 12 شهرًا)]. ومن ثم يبلغ إجمالي المصروف السنوي $835,610 ($415,582 + $420,028)."
   },
   {
     "unit": 4,
@@ -1375,7 +1895,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Accrued interest expense is $23,475 [$469,500 carrying\namount × 10% effective rate × (6 ÷ 12)]. Accrued interest\npayable is $22,500 [$500,000 face amount × 9% stated rate ×\n(6 ÷ 12)]. The difference of $975 is the amount of discount\namortization for the period. The amount that should be\nreported as bonds payable equals $470,475 ($469,500\ncarrying amount at January 2 + $975 current-period discount\namortized).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 2 يناير من السنة 1 أصدرت West سندات بفائدة 9% وقيمة $500,000 تستحق في 2 يناير من السنة 11. وصدرت مقابل $469,500 بعائد 10%. وتدفع الفائدة سنويًا في 31 ديسمبر. وتستخدم الشركة طريقة الفائدة الفعلية لإطفاء الخصم. ما مبلغ السندات المستحقة في قائمة المركز المالي في 30 يونيو من السنة 1؟",
+    "choicesAr": [
+      "$469,500",
+      "$470,475",
+      "$471,025",
+      "$500,000"
+    ],
+    "explanationAr": "مصروف الفائدة المستحق $23,475 [$469,500 القيمة الدفترية × 10% المعدل الفعلي × (6 ÷ 12)]. والفائدة المستحقة الدفع $22,500 [$500,000 القيمة الاسمية × 9% المعدل الاسمي × (6 ÷ 12)]. والفرق $975 يمثل إطفاء الخصم للفترة. لذا تبلغ السندات المستحقة $470,475 ($469,500 القيمة الدفترية في 2 يناير + $975 الخصم المطفأ)، وفق تقريب نصف السنة."
   },
   {
     "unit": 4,
@@ -1392,7 +1920,15 @@
     ],
     "answerIndex": 3,
     "explanation": "For the first year, interest expense is $93,900 ($939,000\ncarrying amount × 10% yield rate). The periodic interest\npayment is $90,000 ($1,000,000 face amount × 9% coupon\nrate). The $3,900 ($93,900 – $90,000) difference is the\namount of bond discount amortized. Thus, the $61,000\nunamortized bond discount at the beginning of the year should\nbe reduced by $3,900 to a year-end balance of $57,100.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 يناير من السنة 4 أصدرت Celt سندات بفائدة 9% وقيمة اسمية $1 مليون تستحق في 1 يناير من السنة 14. صدرت مقابل $939,000 بعائد 10%، وبلغ خصم الإصدار $61,000. وتستخدم الشركة طريقة الفائدة الفعلية وتدفع الفائدة سنويًا في 31 ديسمبر. ما الخصم غير المطفأ في 31 ديسمبر من السنة 4؟",
+    "choicesAr": [
+      "$51,000",
+      "$51,610",
+      "$52,000",
+      "$57,100"
+    ],
+    "explanationAr": "يبلغ مصروف الفائدة للسنة الأولى $93,900 ($939,000 القيمة الدفترية × 10% العائد). وتبلغ دفعة الفائدة $90,000 ($1,000,000 القيمة الاسمية × 9% معدل الكوبون). والفرق $3,900 ($93,900 − $90,000) هو الخصم المطفأ. لذا يخفض الخصم غير المطفأ أول السنة $61,000 بمبلغ $3,900 إلى رصيد آخر السنة $57,100."
   },
   {
     "unit": 4,
@@ -1409,7 +1945,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Under the effective interest method, interest expense is the\ncarrying amount of the bonds at the beginning of the interest\nperiod times the market (yield) rate of interest. Assuming\ninterest is paid annually on June 30, interest expense for the\nyear ended June 30, Year 4, is $6,300 ($105,000 carrying\namount × 6% effective rate), and the periodic interest payment\nis $7,000 ($100,000 face amount × 7% stated rate). The\ndifference ($7,000 – $6,300 = $700) is the amount of premium\namortized. The remaining unamortized premium is therefore\n$4,300 ($5,000 – $700).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لدى Webb سند قائم بفائدة 7% وأجل 10 سنوات وقيمة اسمية $100,000. وبيع أصلًا بعائد سنوي 6%. وتستخدم طريقة الفائدة الفعلية لإطفاء العلاوة. بلغت القيمة الدفترية في 30 يونيو من السنة 3 مبلغ $105,000. ما العلاوة غير المطفأة في قائمة المركز المالي في 30 يونيو من السنة 4؟",
+    "choicesAr": [
+      "$1,050",
+      "$3,950",
+      "$4,300",
+      "$4,500"
+    ],
+    "explanationAr": "وفق الفائدة الفعلية يساوي مصروف الفائدة القيمة الدفترية أول الفترة مضروبة في معدل العائد. وبافتراض دفع الفائدة سنويًا في 30 يونيو، يبلغ مصروف السنة المنتهية في 30 يونيو من السنة 4 مبلغ $6,300 ($105,000 القيمة الدفترية × 6% العائد الفعلي)، وتبلغ دفعة الفائدة $7,000 ($100,000 القيمة الاسمية × 7% المعدل الاسمي). والفرق ($7,000 − $6,300 = $700) هو العلاوة المطفأة. لذا تتبقى علاوة غير مطفأة $4,300 ($5,000 − $700)."
   },
   {
     "unit": 4,
@@ -1426,7 +1970,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Debt is sold at a discount when it sells for less than its face\namount, that is, when the contract (stated) interest rate is less\nthan the market (effective) interest rate. Under the effective\ninterest method required by GAAP, the difference between\ninterest expense and interest paid is the discount amortization.\nWhen debt is issued at a discount, interest expense exceeds\ninterest (cash) paid. The entry is to debit interest expense,\ncredit discount, and credit cash. Consequently, interest\nexpense equals the sum of the periodic interest payments and\nthe discount.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عند إصدار دين بخصم، فإن إجمالي مصروف الفائدة على مدة الدين يساوي الفائدة النقدية المدفوعة:",
+    "choicesAr": [
+      "ناقص الخصم.",
+      "ناقص الخصم وناقص القيمة الاسمية.",
+      "زائد الخصم.",
+      "زائد الخصم وزائد القيمة الاسمية."
+    ],
+    "explanationAr": "يصدر الدين بخصم عند بيعه بأقل من قيمته الاسمية، أي عندما يقل المعدل الاسمي عن معدل السوق الفعلي عادة. ووفق الفائدة الفعلية يمثل الفرق بين مصروف الفائدة والمدفوع النقدي إطفاء الخصم. وعند الإصدار بخصم يتجاوز المصروف الفائدة المدفوعة، ويكون القيد مدينًا بمصروف الفائدة ودائنًا بالخصم والنقد. لذلك يساوي إجمالي المصروف مجموع دفعات الفائدة والخصم، بافتراض عدم وجود تكاليف إصدار أخرى."
   },
   {
     "unit": 4,
@@ -1443,7 +1995,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The annual interest expense (June 1-May 31) of the bonds is\n$51,009 ($728,700 × 7%). The cash interest paid is $56,000\n($700,000 × 8%). The difference of $4,991 ($56,000 –\n$51,009) is the portion to amortize the premium. The balance\nof the premiums on bonds payable account after the first\npayment is $23,709 ($28,700 – $4,991).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 يونيو أصدرت Greendale سندات بقيمة $700,000 وأجل 5 سنوات وفائدة 8% تدفع سنويًا في 31 مايو. وبيعت مقابل $728,700 عندما كان معدل السوق 7%. وتستخدم طريقة الفائدة الفعلية لإطفاء العلاوة. ما رصيد علاوة الإصدار بعد دفعة الفائدة الأولى مباشرة؟",
+    "choicesAr": [
+      "$22,960",
+      "$23,709",
+      "$33,691",
+      "$34,440"
+    ],
+    "explanationAr": "يبلغ مصروف الفائدة السنوي (من 1 يونيو إلى 31 مايو) $51,009 ($728,700 × 7%). والفائدة النقدية المدفوعة $56,000 ($700,000 × 8%). والفرق $4,991 ($56,000 − $51,009) يمثل إطفاء العلاوة. لذلك يبلغ رصيد علاوة الإصدار بعد الدفعة الأولى $23,709 ($28,700 − $4,991)."
   },
   {
     "unit": 4,
@@ -1460,6 +2020,14 @@
     ],
     "answerIndex": 3,
     "explanation": "Under the effective interest method, interest expense is equal\nto the carrying amount of the bonds at the beginning of the\nperiod times the effective interest rate. The cash interest paid\nis equal to the face amount of the bonds times the stated\ninterest rate. The difference is the amortization of discount of\nthe bonds. The amortization of discount of the bonds\nincreases the carrying amount of the bonds. Because the\ncarrying amount of the bonds increases each period, interest\nexpense on the bonds increases as well.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية تصف مصروف الفائدة على السندات المستحقة عند إصدارها بخصم واستخدام طريقة الفائدة الفعلية؟",
+    "choicesAr": [
+      "يتساوى مصروف الفائدة كل سنة.",
+      "ينخفض مصروف الفائدة كل سنة.",
+      "يزداد مصروف الفائدة بالمبلغ نفسه كل سنة.",
+      "يزداد مصروف الفائدة بمبلغ أكبر كل سنة."
+    ],
+    "explanationAr": "وفق الفائدة الفعلية يساوي مصروف الفائدة القيمة الدفترية أول الفترة مضروبة في المعدل الفعلي. وتساوي الفائدة النقدية القيمة الاسمية مضروبة في المعدل الاسمي. ويمثل الفرق إطفاء الخصم الذي يزيد القيمة الدفترية. وبافتراض دفعات ومعدلات ثابتة وفترات متساوية، يزيد مصروف الفائدة تدريجيًا بمقادير متزايدة."
   }
 ]

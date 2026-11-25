@@ -1,0 +1,3 @@
+# Unit 5 Wave 2
+
+30 new educational Arabic drafts (§2 Q1–23, Q26, Q28–33). Section 2 initial review complete, 30/33 translated, three held. Unit 5: 45/75 (60%), nine held and 21 unreviewed. Combined imported bank: 1674/2443. English source text and keys unchanged; numerical parity and independent contract calculations checked. Loss examples contextualized within applicable construction loss guidance. Q24 held for legacy completed-contract guidance; Q25 held for unspecified over-time recognition criteria; Q27 held for allocation and distinct performance obligation assumptions across software, hosting and maintenance. Original-page verification pending. Next §3 impairment and disposal.

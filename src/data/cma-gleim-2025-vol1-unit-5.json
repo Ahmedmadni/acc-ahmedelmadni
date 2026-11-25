@@ -14,7 +14,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The transaction price is the amount of consideration to which\nan entity expects to be entitled in exchange for transferring\npromised goods or services to a customer. It excludes\namounts collected on behalf of third parties. Thus, the amount\ncollected for city occupancy taxes must not be included in the\ntransaction price. In addition, any consideration payable to the\ncustomer, such as coupons, credit, or vouchers, reduces the\ntransaction price. Accordingly, the total transaction price of the\ncontract is $17,000 [(10 × 10 × $200) – $3,000].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أبرم فندق عقدًا مع عميل لتوفير 10 غرف لمدة 10 ليال بسعر $200 للغرفة في الليلة. ويحصّل بالإضافة إلى السعر ضريبة إشغال للمدينة بمبلغ $7 للغرفة في الليلة. ووفق العرض الترويجي يحصل كل عميل يشتري أكثر من 50 ليلة غرفة على خصم $3,000 من إجمالي الشراء. ما إجمالي سعر المعاملة للعقد؟",
+    "choicesAr": [
+      "$20,000",
+      "$17,700",
+      "$17,000",
+      "$20,700"
+    ],
+    "explanationAr": "سعر المعاملة هو مبلغ المقابل الذي تتوقع المنشأة استحقاقه مقابل نقل السلع أو الخدمات الموعودة إلى العميل. ويستبعد المبالغ المحصلة نيابة عن الغير، ومنها ضريبة الإشغال هنا. كما يخفض المقابل المدفوع للعميل، مثل القسائم والخصومات، سعر المعاملة ما لم يكن مقابل سلعة أو خدمة متميزة. لذا يبلغ سعر المعاملة $17,000 [(10 × 10 × $200) − $3,000]."
   },
   {
     "unit": 5,
@@ -31,7 +39,15 @@
     ],
     "answerIndex": 1,
     "explanation": "An entity recognizes revenue when (or as) it satisfies a\nperformance obligation by transferring a promised good or\nservice (an asset) to a customer. Accordingly, ABC recognizes\nrevenue when a luncheon is served.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تقدم ABC خدمات ضيافة متخصصة في وجبات غداء الشركات الكبرى. وتشترط تقديم الطلبات قبل الموعد بـ2 أسبوع. وتصدر الفواتير في اليوم 10 من الشهر التالي للخدمة، ويستحق السداد خلال 30 يومًا من تاريخ الفاتورة. متى ينبغي الاعتراف بالإيراد؟",
+    "choicesAr": [
+      "عندما يقدم العميل الطلب.",
+      "عند تقديم وجبة الغداء.",
+      "عند إرسال الفاتورة.",
+      "عند استلام سداد العميل."
+    ],
+    "explanationAr": "تعترف المنشأة بالإيراد عندما (أو مع) الوفاء بالتزام الأداء بنقل سلعة أو خدمة موعودة إلى العميل. لذلك تعترف ABC بالإيراد عند تقديم وجبة الغداء."
   },
   {
     "unit": 5,
@@ -48,7 +64,15 @@
     ],
     "answerIndex": 0,
     "explanation": "An entity recognizes revenue when (or as) it satisfies a\nperformance obligation by transferring a promised good or\nservice (an asset) to a customer. Because transfers ordinarily\noccur at the point of sale, the most appropriate time to\nrecognize revenue is when the sale occurs.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أسس شخص شركة لإنتاج مضارب وكرات البيسبول، ويريد تحديد سياسة الاعتراف بالإيراد. وفق مبدأ الاعتراف بالإيراد، ما التوقيت الأنسب؟",
+    "choicesAr": [
+      "عند حدوث البيع.",
+      "عند تحصيل النقد.",
+      "عند اكتمال الإنتاج.",
+      "عند إعداد القوائم المالية ربع السنوية."
+    ],
+    "explanationAr": "تعترف المنشأة بالإيراد عندما (أو مع) الوفاء بالتزام الأداء بنقل السلعة أو الخدمة الموعودة للعميل. ولأن السيطرة تنتقل عادة عند البيع في الحالة المعروضة، فإن هذا هو التوقيت المناسب، وليس مجرد إصدار فاتورة أو تحصيل مبلغ."
   },
   {
     "unit": 5,
@@ -65,7 +89,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Revenue is recognized when a performance obligation is\nsatisfied by transferring a promised good or service to a\ncustomer. It happens when the customer obtains control of the\ngood or service (i.e., an asset). Control of an asset is\ntransferred to the customer when the customer (1) has the\nability to direct the use of the asset and (2) obtains\nsubstantially all of the remaining benefits (potential cash flows)\nfrom the asset.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "متى يعد الأصل الموعود منقولًا إلى العميل بما يحقق الوفاء الكامل بالتزام الأداء في العقد؟",
+    "choicesAr": [
+      "عندما يحصل العميل على السيطرة على الأصل.",
+      "عندما يستطيع توجيه استخدام المنتج.",
+      "عندما يحوز الأصل ماديًا.",
+      "عندما يسدد كامل قيمة الأصل."
+    ],
+    "explanationAr": "يعترف بالإيراد عند الوفاء بالتزام الأداء بنقل السلعة أو الخدمة الموعودة إلى العميل، أي عندما يحصل على السيطرة. وتنتقل السيطرة عندما (1) يستطيع العميل توجيه استخدام الأصل و(2) يحصل على معظم منافعه المتبقية (التدفقات النقدية المحتملة)."
   },
   {
     "unit": 5,
@@ -99,7 +131,15 @@
     ],
     "answerIndex": 1,
     "explanation": "An entity recognizes revenue when (or as) it satisfies a\nperformance obligation by transferring a promised good or\nservice (an asset) to a customer. A performance obligation\ncan be satisfied either over time or at a point in time. Under\nthe former scenario, an entity recognizes revenue as it\nsatisfies the performance obligation. Thus, the company\nshould recognize the advancement evenly over the year as\nthe services are performed.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تقدم شركة خدمات تسميد ومكافحة الحشرات والأمراض للأشجار والنباتات والشجيرات بموجب عقود. ومقابل $50 شهريًا تزور الشركة مقر المشترك وتستخدم الخلطات المناسبة، وتقدم زيارات إضافية عند الحاجة بين المواعيد الدورية. ويفضل بعض المشتركين سداد سنة كاملة مقدمًا بسعر سنوي $540. متى تعترف الشركة بالإيراد المتعلق بالمشترك الذي يسدد مقدمًا؟",
+    "choicesAr": [
+      "عند تحصيل النقد.",
+      "بالتساوي على مدار السنة مع تقديم الخدمات.",
+      "في نهاية سنة العقد بعد تقديم جميع الخدمات.",
+      "في نهاية السنة المالية."
+    ],
+    "explanationAr": "تعترف المنشأة بالإيراد عندما (أو مع) الوفاء بالتزام الأداء بنقل سلعة أو خدمة موعودة. وقد يتحقق الوفاء على مدى الزمن أو في نقطة زمنية. وفي الحالة الأولى يعترف بالإيراد مع الوفاء بالتزام الأداء؛ لذا يعترف بالمبلغ المقدم بالتساوي على مدار السنة بافتراض تقديم الخدمة بصورة منتظمة."
   },
   {
     "unit": 5,
@@ -133,7 +173,15 @@
     ],
     "answerIndex": 3,
     "explanation": "An entity recognizes revenue when (or as) it satisfies a\nperformance obligation by transferring a promised good or\nservice (an asset) to a customer. An airline’s performance\nobligation regarding airline tickets is to ensure promised flights\noccur. Thus, an airline should recognize revenue from airline\ntickets when related flights occur.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "متى ينبغي لشركة طيران الاعتراف بإيراد تذاكر الطيران؟",
+    "choicesAr": [
+      "عند حجز مقاعد المسافرين.",
+      "عند تأكيد الحجوزات.",
+      "عند إصدار التذاكر.",
+      "عند تنفيذ الرحلات المتعلقة بالتذاكر."
+    ],
+    "explanationAr": "تعترف المنشأة بالإيراد عندما (أو مع) الوفاء بالتزام الأداء بنقل السلعة أو الخدمة الموعودة. ويتمثل التزام شركة الطيران في تقديم خدمة النقل الموعودة. لذلك يعترف بإيراد التذاكر عند تنفيذ الرحلات المتعلقة بها، بافتراض عدم انطباق أحكام خاصة بالتذاكر غير المستخدمة."
   },
   {
     "unit": 5,
@@ -150,7 +198,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The transfer of the software license and the performance of\ninstallation services are separately identifiable from other\npromises in the contract. The installation services do not\nsignificantly modify or customize the software itself. In\naddition, on the basis of the entity’s customary business\npractice, at contract inception, it made an implicit promise to\nprovide technical support services. The entity’s past practice\nof providing these services creates a valid expectation that the\ncustomer will receive these services. Consequently, the entity\nidentifies the following performance obligations in the contract:\n(1) software license, (2) installation services, and (3) technical\nsupport services.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أبرم مطور برمجيات عقدًا مع عميل جديد لبيع ترخيص برنامج وتقديم خدمات التركيب. ويبيع أحيانًا الترخيص والتركيب بصورة منفصلة. وتقدم منشآت أخرى خدمات التركيب عادة، ولا تعدل الخدمة البرنامج تعديلًا جوهريًا. وتاريخيًا قدم المطور للعملاء الجدد دعمًا فنيًا لمدة 5 سنوات دون مقابل إضافي. ولا يحدد العقد شروط الدعم. وفق مبدأ الاعتراف بالإيراد من عقود العملاء، ما التزامات الأداء المحددة في العقد؟",
+    "choicesAr": [
+      "التزام أداء واحد: (1) ترخيص البرنامج وخدمات التركيب معًا.",
+      "التزاما أداء: (1) ترخيص البرنامج و(2) خدمات التركيب.",
+      "ثلاثة التزامات أداء: (1) ترخيص البرنامج و(2) خدمات التركيب و(3) الدعم الفني.",
+      "التزاما أداء: (1) ترخيص البرنامج والتركيب معًا و(2) الدعم الفني."
+    ],
+    "explanationAr": "يمكن تحديد نقل ترخيص البرنامج وتقديم خدمات التركيب بصورة منفصلة عن بقية الوعود في العقد. ولا يعدل التركيب البرنامج تعديلًا جوهريًا ولا يخصصه. وبناء على الممارسة التجارية المعتادة، ينشأ عند إبرام العقد وعد ضمني بتقديم الدعم الفني، إذ تخلق الممارسة السابقة توقعًا صحيحًا لدى العميل بالحصول عليه. لذلك تحدد المنشأة التزامات الأداء التالية: (1) ترخيص البرنامج و(2) خدمات التركيب و(3) الدعم الفني، بافتراض أن العميل يستطيع الانتفاع بكل منها منفردًا أو مع موارد متاحة بسهولة."
   },
   {
     "unit": 5,
@@ -167,7 +223,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The standalone selling price is the price at which an entity\nwould sell a promised good or service separately to a\ncustomer. The best evidence of a standalone selling price is\nthe observable price of a good or service when it is sold\nseparately in similar circumstances and to similar customers\n(e.g., a contractually stated price or list price of a good or\nservice).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما أفضل دليل على سعر البيع المستقل لسلعة أو خدمة موعودة للعميل؟",
+    "choicesAr": [
+      "التكلفة المتوقعة.",
+      "التكلفة المتوقعة مضافًا إليها هامش مناسب.",
+      "سعر يمكن ملاحظته.",
+      "سعر بيع المنافس."
+    ],
+    "explanationAr": "سعر البيع المستقل هو السعر الذي تبيع به المنشأة السلعة أو الخدمة الموعودة بصورة منفصلة. وأفضل دليل عليه هو السعر الملحوظ عند البيع المنفصل في ظروف مماثلة ولعملاء مماثلين. وقد يكون السعر المذكور في العقد أو قائمة الأسعار دليلًا إذا كان يمثل فعلًا سعر البيع المستقل، ولا يفترض ذلك تلقائيًا."
   },
   {
     "unit": 5,
@@ -184,7 +248,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The transaction price should be allocated to performance\nobligations in the contract based on their standalone selling\nprices. The sum of the products’ standalone selling prices is\n$320,000 ($40,000 + $120,000 + $160,000), and the\nstandalone selling price of product X is $40,000. Thus,\n$31,250 [($40,000 ÷ $320,000) × $250,000] of the total\ncontract price should be allocated to product X.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أبرمت منشأة عقدًا لبيع المنتجات X وY وZ مقابل $250,000. وتنتقل السيطرة عليها في أوقات مختلفة. وحددت المنشأة تسليم كل منتج بوصفه التزام أداء متميزًا. ويباع X وY بانتظام بصورة منفصلة بأسعار بيع مستقلة قابلة للملاحظة تبلغ $40,000 و$120,000 على الترتيب. وقدر سعر البيع المستقل للمنتج Z بمبلغ $160,000 باستخدام مدخل تقييم السوق المعدل. وتقرر أن خصم العميل لا يتعلق بمنتجات محددة في العقد. ما الإيراد المعترف به عند بيع X؟",
+    "choicesAr": [
+      "$40,000",
+      "$22,500",
+      "$31,250",
+      "$62,500"
+    ],
+    "explanationAr": "يوزع سعر المعاملة على التزامات الأداء وفق أسعار البيع المستقلة النسبية. ويبلغ مجموع هذه الأسعار $320,000 ($40,000 + $120,000 + $160,000)، وسعر البيع المستقل للمنتج X هو $40,000. لذلك يخصص له $31,250 [($40,000 ÷ $320,000) × $250,000] من إجمالي سعر العقد."
   },
   {
     "unit": 5,
@@ -219,7 +291,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A contract is accounted for under the revenue recognition\nstandard if all the following criteria are met: (1) The contract\nwas approved by both parties, (2) the contract has commercial\nsubstance, (3) each party’s rights regarding (a) goods or\nservices to be transferred and (b) the payment terms can be\nidentified, and (4) it is probable that the entity will collect the\nconsideration to which it is entitled according to the contract.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي ليس معيارًا لازمًا للمحاسبة عن عقد مع عميل وفق معيار الاعتراف بالإيراد؟",
+    "choicesAr": [
+      "أن يكون للعقد مضمون تجاري.",
+      "أن يمكن تحديد شروط السداد.",
+      "أن يتوقع استرداد تكاليف الوفاء بالعقد.",
+      "أن يمكن تحديد حقوق كل طرف المتعلقة بالسلع أو الخدمات التي ستنقل."
+    ],
+    "explanationAr": "يحاسب عن العقد وفق معيار الإيراد إذا تحققت الشروط التالية: (1) اعتماد الطرفين للعقد والتزامهما بالتنفيذ، (2) وجود مضمون تجاري، (3) إمكان تحديد (أ) حقوق الطرفين بشأن السلع أو الخدمات و(ب) شروط السداد، (4) رجحان تحصيل المقابل الذي تستحقه المنشأة وفق العقد. أما استرداد تكاليف الوفاء فليس شرطًا مستقلًا للاعتراف بالعقد."
   },
   {
     "unit": 5,
@@ -236,7 +316,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Under the accrual basis of accounting, revenue is recognized\nwhen earned. Revenue is earned when (or as) a performance\nobligation is satisfied. In this case, the delivery of 50,000\ngallons on December 21 would have been earned during Year\n1. Accordingly, Company A would accrue $150,000 (50,000\ngallons × $3) as revenue on December 31, Year 1. The\nremaining half of the order would be recognized in January.\nThe timing of the cash payment is not a consideration of when\nthe revenue is to be recognized.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 أكتوبر من السنة 1 باعت A لشركة B كمية 100,000 جالون من المنتج X بسعر $3 للجالون. وسلمت خمسين ألف جالون في 21 ديسمبر من السنة 1، والباقي في 8 يناير من السنة 2. وشروط السداد: 50% في 1 أكتوبر من السنة 1، و25% عند التسليم الأول، و25% عند التسليم الثاني. ما الإيراد الذي تثبته A في 31 ديسمبر من السنة 1؟",
+    "choicesAr": [
+      "$75,000",
+      "$150,000",
+      "$225,000",
+      "$300,000"
+    ],
+    "explanationAr": "وفق أساس الاستحقاق يعترف بالإيراد عندما (أو مع) الوفاء بالتزام الأداء. وفي هذه الحالة حقق تسليم 50,000 جالون في 21 ديسمبر الإيراد خلال السنة 1. لذلك تثبت A إيرادًا $150,000 (50,000 جالون × $3) في 31 ديسمبر من السنة 1، وتعترف بالباقي في يناير. ولا يحدد توقيت السداد النقدي توقيت الاعتراف بالإيراد، بافتراض انتقال السيطرة عند التسليم."
   },
   {
     "unit": 5,
@@ -270,7 +358,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Under the accrual method, revenues and gains are realized\nwhen goods or services have been exchanged for cash or\nclaims to cash, not when that cash is collected. Consequently,\ngiven that total cash collected for Year 2 sales is $275,000\n($200,000 Year 2 + $75,000 Year 3), revenue for Year 2 is\n$275,000.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فيما يلي بيانات إحدى الشركات:\nالمتحصلات النقدية من العملاء | السنة 1 | السنة 2 | السنة 3\nمن مبيعات السنة 1 | $95,000 | $120,000 | —\nمن مبيعات السنة 2 | — | 200,000 | $75,000\nمن مبيعات السنة 3 | — | 50,000 | 225,000\nما إيراد السنة 2 وفق أساس الاستحقاق؟",
+    "choicesAr": [
+      "$200,000",
+      "$275,000",
+      "$320,000",
+      "$370,000"
+    ],
+    "explanationAr": "وفق أساس الاستحقاق يعترف بالإيراد عند الوفاء بالتزام الأداء مقابل النقد أو الحق في المقابل، لا عند التحصيل. ولأن إجمالي المتحصلات من مبيعات السنة 2 بلغ $275,000 ($200,000 في السنة 2 + $75,000 في السنة 3)، فإن إيراد السنة 2 يبلغ $275,000، بافتراض أن المبالغ المعروضة تمثل كامل المقابل المستحق."
   },
   {
     "unit": 5,
@@ -287,7 +383,15 @@
     ],
     "answerIndex": 2,
     "explanation": "An entity recognizes revenue for the transfer of promised\ngoods or services to customers in an amount that reflects the\nconsideration to which the entity expects to be entitled in the\nexchange. Revenue is recognized when the performance\nobligation is satisfied. Consideration received for an obligation\nyet to be satisfied (i.e., advance payment) is recorded as\ndeferred (or unearned) income, a liability. Thus, cash\ncollections from sales of season tickets are recorded initially\nas unearned income. As the service is performed (as the\nperformance obligation is satisfied by playing the games),\nportions of this liability are reclassified as earned income. The\nentity should recognize $1 million as income in Year 1\n[($3,000,000 ÷ 6 months) × 2 months]. The remaining $2\nmillion will be reported as a liability for Year 1.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تبيع منشأة تملك فريق كرة سلة محترفًا جديدًا اشتراكات موسمية لمبارياته. ويمتد الموسم الأول من نوفمبر السنة 1 إلى أبريل السنة 2، بواقع 10 مباريات شهريًا. وفي السنة 1 حصلت $3 ملايين من بيع الاشتراكات مقدمًا. وتنتهي سنتها المالية في 31 ديسمبر. وفق هذه المعلومات، ماذا ينبغي أن تعرض؟",
+    "choicesAr": [
+      "إيراد $3 ملايين في قائمة دخل السنة 1.",
+      "إيراد $2 مليون في قائمة دخل السنة 1.",
+      "إيراد $1 مليون في قائمة دخل السنة 1.",
+      "لا إيراد من الاشتراكات الموسمية."
+    ],
+    "explanationAr": "تعترف المنشأة بالإيراد عند نقل السلع أو الخدمات الموعودة بمبلغ المقابل المتوقع استحقاقه، وعند الوفاء بالتزام الأداء. ويسجل المقابل المحصل مقدمًا عن التزام لم ينفذ باعتباره التزام عقد (إيرادًا غير مكتسب). ومع تقديم الخدمة بإقامة المباريات، يحول جزء من الالتزام إلى إيراد مكتسب. وتعترف المنشأة بإيراد $1 مليون في السنة 1 [($3,000,000 ÷ 6 أشهر) × 2 شهر]، ويعرض المتبقي $2 مليون التزامًا في السنة 1."
   },
   {
     "unit": 5,
@@ -338,7 +442,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The standalone selling price is the price at which an entity\nwould sell a promised good or service separately to a\ncustomer. The best evidence of a standalone selling price is\nthe observable price of a good or service when it is sold\nseparately in similar circumstances and to similar customers\n(e.g., a contractually stated price or list price of a good or\nservice).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما أفضل دليل على سعر البيع المستقل عند وجود التزامات أداء مختلفة في العقد؟",
+    "choicesAr": [
+      "التكلفة المتوقعة.",
+      "التكلفة المتوقعة زائد هامش مناسب.",
+      "سعر يمكن ملاحظته.",
+      "سعر بيع المنافس."
+    ],
+    "explanationAr": "سعر البيع المستقل هو السعر الذي تبيع به المنشأة السلعة أو الخدمة الموعودة بصورة منفصلة إلى العميل. وأفضل دليل عليه سعرها الملحوظ عند بيعها بصورة منفصلة في ظروف مماثلة ولعملاء مماثلين. ولا يعتبر سعر العقد أو قائمة الأسعار سعرًا مستقلًا تلقائيًا إلا إذا دعمته الأدلة."
   },
   {
     "unit": 5,
@@ -355,7 +467,15 @@
     ],
     "answerIndex": 2,
     "explanation": "After separate performance obligations are identified and the\ntransaction price is determined, the transaction price is\nallocated to performance obligations in the contract based on\ntheir standalone selling prices. The standalone selling price is\nthe price at which an entity would sell a promised good or\nservice separately to a customer. The best evidence of a\nstandalone selling price is the observable price of a good or\nservice when it is sold separately in similar circumstances and\nto similar customers (e.g., a contractually stated price or list\nprice of a good or service).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يتضمن عقد مع عميل أكثر من التزام أداء. على أي أساس يوزع سعر المعاملة عادة على التزامات الأداء؟",
+    "choicesAr": [
+      "المدخل المتبقي.",
+      "مجمل الربح المتوقع لالتزامات الأداء.",
+      "أسعار يمكن ملاحظتها مباشرة.",
+      "التكاليف المتوقعة للوفاء بالتزامات الأداء."
+    ],
+    "explanationAr": "بعد تحديد التزامات الأداء المنفصلة وسعر المعاملة، يوزع السعر عليها على أساس أسعار البيع المستقلة النسبية، مع مراعاة الاستثناءات الخاصة بالخصومات والمقابل المتغير. وسعر البيع المستقل هو سعر البيع المنفصل للعميل. وأفضل دليل عليه السعر الملحوظ للبيع المنفصل في ظروف مماثلة ولعملاء مماثلين. وعند عدم توافره يجب تقديره بأسلوب مناسب."
   },
   {
     "unit": 5,
@@ -372,7 +492,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The entity is using a cost-to-cost accounting method. The\ninput method based on costs incurred to measure the\nprogress toward completion recognizes gross profit or revenue\nbased on the ratio of costs to date to estimated total costs.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تحسب منشأة الدخل المعترف به في السنة الثالثة من عقد إنشاء مدته 5 سنوات. وتستخدم مدخل التكاليف المتكبدة لقياس التقدم نحو الإكمال. ما النسبة المستخدمة في حساب الدخل؟",
+    "choicesAr": [
+      "تكاليف السنة 3 إلى إجمالي الفواتير.",
+      "تكاليف السنة 3 إلى إجمالي التكاليف المقدرة.",
+      "إجمالي التكاليف المتكبدة حتى تاريخه إلى إجمالي الفواتير.",
+      "إجمالي التكاليف المتكبدة حتى تاريخه إلى إجمالي التكاليف المقدرة."
+    ],
+    "explanationAr": "تستخدم المنشأة طريقة التكلفة إلى التكلفة. ويعتمد قياس التقدم والاعتراف بالإيراد أو مجمل الربح التراكمي على نسبة التكاليف المتكبدة حتى تاريخه إلى إجمالي التكاليف المقدرة، مع استبعاد المدخلات التي لا تعكس تقدم الأداء. ويطرح المعترف به سابقًا لتحديد مبلغ الفترة."
   },
   {
     "unit": 5,
@@ -389,7 +517,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The input method based on costs incurred provides for the\nrecognition of gross profit based on the relationship between\nthe costs incurred to date and estimated total costs for the\ncompletion of the contract. The total anticipated gross profit is\nmultiplied by the ratio of the costs incurred to date to the total\nestimated costs, and the product is reduced by previously\nrecognized gross profit. The percentage-of-completion at\n12/31/Yr 4 is 75% [$1,800,000 ÷ ($1,800,000 + $600,000)].\nThe total anticipated gross profit is $600,000 ($3,000,000\ncontract price – $2,400,000 expected total costs).\nConsequently, a gross profit of $150,000 [($600,000 total\ngross profit × 75%) – $300,000 previously recognized gross\nprofit] is recognized for Year 4.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم Haft باستمرار مدخل التكاليف المتكبدة لقياس التقدم نحو إكمال المشروع. وفي 10 يناير من السنة 3 بدأت عقد إنشاء بقيمة $3 ملايين. وقدرت تكلفة الإنشاء عند البدء بـ$2,250,000. وفيما يلي بيانات التقدم:\nمجمل الربح المعترف به في 12/31 السنة 3: $300,000\nالتكاليف المتكبدة من 1/10 السنة 3 حتى 12/31 السنة 4: 1,800,000\nالتكلفة المقدرة للإكمال في 12/31 السنة 4: 600,000\nما مجمل الربح في قائمة دخل السنة المنتهية في 31 ديسمبر من السنة 4؟",
+    "choicesAr": [
+      "$450,000",
+      "$300,000",
+      "$262,500",
+      "$150,000"
+    ],
+    "explanationAr": "يعتمد مدخل التكاليف المتكبدة على نسبة التكاليف التراكمية إلى إجمالي التكلفة المقدرة للإكمال. ويضرب مجمل الربح المتوقع في هذه النسبة ثم يطرح مجمل الربح المعترف به سابقًا. وتبلغ نسبة الإكمال في 12/31 السنة 4 مقدار 75% [$1,800,000 ÷ ($1,800,000 + $600,000)]. ويبلغ مجمل الربح المتوقع $600,000 ($3,000,000 سعر العقد − $2,400,000 إجمالي التكلفة المتوقعة). لذلك يعترف بمجمل ربح $150,000 [($600,000 × 75%) − $300,000 المعترف به سابقًا] في السنة 4."
   },
   {
     "unit": 5,
@@ -406,7 +542,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The cost-to-cost method recognizes revenues, costs, and\ngross profit depending on the progress made on the contract.\nGross profit recognized in the last year of the contract equals\nthe contract price, minus actual total costs, minus gross profit\npreviously recognized.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي البنود التالية يستخدم في حساب مجمل الربح المعترف به في السنة الرابعة والأخيرة من عقد يقاس تقدمه بمدخل التكاليف المتكبدة؟\nإجمالي التكاليف الفعلية | مجمل الربح المعترف به سابقًا",
+    "choicesAr": [
+      "نعم | نعم",
+      "نعم | لا",
+      "لا | نعم",
+      "لا | لا"
+    ],
+    "explanationAr": "تعترف طريقة التكلفة إلى التكلفة بالإيراد والتكاليف ومجمل الربح بحسب التقدم في العقد. ويساوي مجمل ربح السنة الأخيرة سعر العقد مطروحًا منه إجمالي التكاليف الفعلية ومجمل الربح المعترف به سابقًا."
   },
   {
     "unit": 5,
@@ -423,7 +567,15 @@
     ],
     "answerIndex": 3,
     "explanation": "In Year 1, one-third of the estimated costs of this construction\nproject were incurred [$5,400,000 ÷ ($5,400,000 +\n$10,800,000)]. The entity should therefore have recognized\none-third of the estimated gross profit in Year 1. At year-end,\nthe estimated gross profit was $1,800,000 [$18,000,000 price\n– $16,200,000 total estimated costs ($5,400,000 costs\nincurred + $10,800,000 estimated costs to complete)]. In\nYear 1, $600,000 ($1,800,000 × 1/3) should have been\nrecognized as gross profit.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم Gow مدخل التكاليف المتكبدة لقياس تقدم عقد إنشاء طويل الأجل. وفي السنة 1 بدأت عقدًا بقيمة $18 مليونًا اكتمل في السنة 2. وفيما يلي بيانات السنة 1:\nالتكاليف المتكبدة: $5,400,000\nالمتحصلات: 4,200,000\nالتكاليف المقدرة للإكمال: 10,800,000\nما مجمل الربح الذي تعترف به Gow في السنة 1؟",
+    "choicesAr": [
+      "$1,400,000",
+      "$1,200,000",
+      "$900,000",
+      "$600,000"
+    ],
+    "explanationAr": "في السنة 1 تكبدت المنشأة ثلث التكلفة المقدرة [$5,400,000 ÷ ($5,400,000 + $10,800,000)]. ولذلك تعترف بثلث مجمل الربح المقدر في السنة 1. وفي نهاية السنة بلغ مجمل الربح المتوقع $1,800,000 [$18,000,000 سعر العقد − $16,200,000 إجمالي التكلفة المقدرة ($5,400,000 متكبدة + $10,800,000 متبقية)]. وفي السنة 1 يعترف بمجمل ربح $600,000 ($1,800,000 × 1/3)."
   },
   {
     "unit": 5,
@@ -440,7 +592,15 @@
     ],
     "answerIndex": 0,
     "explanation": "In Year 1, one-half of the estimated costs of this construction\nproject were incurred [$1,750,000 ÷ ($1,750,000 +\n$1,750,000)]. The company should therefore recognize one-\nhalf of the estimated gross profit in Year 1. At year-end, the\nestimated gross profit is $700,000, equal to the contract price\nminus total estimated costs [$4,200,000 – ($1,750,000 +\n$1,750,000)]. In Year 1, $350,000 should be recognized as\ngross profit ($700,000 × 50%).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بدأت Kechara مشروع إنشاء طويل الأجل على أرض العميل في السنة 1. وفيما يلي البيانات:\nسعر العقد: $4,200,000\nالتكاليف المتكبدة في السنة 1: 1,750,000\nالتكاليف المقدرة للإكمال: 1,750,000\nالمبالغ المفوترة: 900,000\nالمتحصلات من الفواتير: 800,000\nيقاس التقدم نحو الإكمال بمدخل التكاليف المتكبدة. ما مجمل الربح المعروض في قائمة دخل السنة 1؟",
+    "choicesAr": [
+      "$350,000",
+      "$150,000",
+      "$133,333",
+      "$100,000"
+    ],
+    "explanationAr": "في السنة 1 تكبدت المنشأة نصف التكلفة المقدرة [$1,750,000 ÷ ($1,750,000 + $1,750,000)]. لذلك تعترف بنصف مجمل الربح المقدر في السنة 1. ويبلغ مجمل الربح المتوقع في نهاية السنة $700,000، وهو سعر العقد ناقص إجمالي التكلفة المقدرة [$4,200,000 − ($1,750,000 + $1,750,000)]. وفي السنة 1 يعترف بمجمل ربح $350,000 ($700,000 × 50%)."
   },
   {
     "unit": 5,
@@ -457,7 +617,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Determining the annual recognized gross profit requires\ncalculation of the estimated total gross profit.\nYear 1     Year 2\nContract price                $700,000 $700,000\nMinus: Estimated total costs\nCosts to date                $300,000 $390,000\nEstimated costs to complete 250,000 130,000\nEstimated total costs        $550,000 $520,000\nEstimated total gross profit $150,000 $180,000\nThe completion percentage for Year 2 is the ratio of costs\nincurred to date to estimated total costs ($390,000 ÷ $520,000\n= 75%). The cumulative gross profit recognized at the end of\nYear 2 is therefore $135,000 ($180,000 × 75%). Because\n$65,000 was recognized in Year 1, the amount recognized in\nYear 2 is $70,000 ($135,000 – $65,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم Paulson مدخل التكاليف المتكبدة لقياس التقدم في عقود الإنشاء طويلة الأجل. وفيما يلي بيانات عقد بقيمة $700,000، كانت تكلفته المقدرة $500,000 ومدته 3 سنوات:\nالبند | السنة 1 | السنة 2 | السنة 3\nالتكلفة التراكمية | $300,000 | $390,000 | $530,000\nالتكلفة المتبقية في نهاية السنة | 250,000 | 130,000 | 0\nفواتير التقدم | 325,000 | 220,000 | 155,000\nالمتحصلات | 300,000 | 200,000 | 200,000\nبافتراض الاعتراف بمجمل ربح $65,000 في السنة 1، ما مجمل ربح السنة 2؟",
+    "choicesAr": [
+      "$35,000",
+      "$70,000",
+      "$135,000",
+      "$170,000"
+    ],
+    "explanationAr": "يتطلب حساب مجمل الربح السنوي تقدير إجمالي مجمل الربح:\nالبند | السنة 1 | السنة 2\nسعر العقد | $700,000 | $700,000\nيطرح: إجمالي التكاليف المقدرة\nالتكلفة حتى تاريخه | $300,000 | $390,000\nالتكاليف المقدرة للإكمال | 250,000 | 130,000\nإجمالي التكلفة المقدرة | $550,000 | $520,000\nإجمالي مجمل الربح المقدر | $150,000 | $180,000\nنسبة الإكمال في السنة 2 هي نسبة التكاليف التراكمية إلى إجمالي التكلفة المقدرة ($390,000 ÷ $520,000 = 75%). لذا يبلغ مجمل الربح التراكمي في نهاية السنة 2 مبلغ $135,000 ($180,000 × 75%). وبما أنه اعترف بـ$65,000 في السنة 1، فإن مجمل الربح المعترف به في السنة 2 يبلغ $70,000 ($135,000 − $65,000)."
   },
   {
     "unit": 5,
@@ -474,7 +642,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Revenue must be recognized over time, that is, over the\n2 years of the construction period, because (1) the robot has\nno alternative use to the entity and (2) the entity has an\nenforceable right to payment for the performance completed to\ndate. In Year 1, 50% ($250,000 ÷ $500,000) of expected costs\nhas been incurred. Using the input method based on costs\nincurred, the entity recognizes 50% of the expected revenue\nfrom the contract for Year 1 ($800,000 contract price × 50% =\n$400,000). The total gross profit from the contract is expected\nto be $300,000 ($800,000 – $500,000). Thus, $150,000\n($300,000 × 50%) of gross profit ($400,000 revenue –\n$250,000 cost of goods sold) is recognized in Year 1. In\nYear 2, the contract is completed, and the total gross profit\nfrom the contract is $200,000 [$800,000 contract price –\n($250,000 + $350,000) total costs incurred]. Because\n$150,000 of gross profit was recognized in Year 1, $50,000\n($200,000 – $150,000) of gross profit is recognized in Year 2.\nThe total revenue from the contract is $800,000. Revenue of\n$400,000 was recognized in Year 1, so Year 2 revenue is\n$400,000 ($800,000 – $400,000). Cost of goods sold in Year 2\nequals the actual costs incurred of $350,000.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 يناير من السنة 1 أبرمت منشأة عقدًا لبناء روبوت لعميل، ويتوقع اكتماله في نهاية السنة 2. وحددت المنشأة أن الروبوت لا استخدام بديل له لديها، وأن لها حقًا واجب النفاذ في مقابل الأداء المنجز حتى تاريخه، وأن التقدم قابل للقياس بشكل معقول باستخدام مدخل التكاليف المتكبدة. يبلغ سعر العقد $800,000 وإجمالي التكلفة المتوقعة $500,000. وفيما يلي البيانات:\nالبند | السنة 1 | السنة 2\nالتكاليف المتكبدة سنويًا | $250,000 | $350,000\nالتكاليف المتوقعة مستقبلًا | 250,000 | 0\nما الإيراد وتكلفة المبيعات ومجمل الربح المعترف بها في السنة 2؟\nالإيراد | تكلفة المبيعات | مجمل الربح",
+    "choicesAr": [
+      "$400,000        $350,000            $50,000",
+      "$400,000         $250,000            $150,000",
+      "$800,000         $350,000            $450,000",
+      "$800,000         $600,000            $200,000"
+    ],
+    "explanationAr": "يعترف بالإيراد على مدى الزمن، أي خلال 2 سنة الإنشاء، لأن (1) الروبوت لا استخدام بديل له لدى المنشأة و(2) لها حق واجب النفاذ في مقابل الأداء المنجز. وفي السنة 1 تكبدت 50% ($250,000 ÷ $500,000) من التكاليف المتوقعة. ووفق مدخل التكاليف تعترف بـ50% من الإيراد المتوقع للسنة 1 ($800,000 × 50% = $400,000). ويبلغ مجمل الربح المتوقع $300,000 ($800,000 − $500,000). لذا يعترف بمجمل ربح $150,000 ($300,000 × 50%)، وهو ($400,000 إيراد − $250,000 تكلفة المبيعات) في السنة 1. وفي السنة 2 يكتمل العقد، ويبلغ مجمل ربحه الكلي $200,000 [$800,000 − ($250,000 + $350,000) إجمالي التكلفة]. وبما أنه اعترف بـ$150,000 في السنة 1، يعترف بـ$50,000 ($200,000 − $150,000) في السنة 2. وإجمالي الإيراد $800,000. واعترف بـ$400,000 في السنة 1، لذلك يبلغ إيراد السنة 2 مبلغ $400,000 ($800,000 − $400,000). وتساوي تكلفة المبيعات في السنة 2 التكلفة الفعلية $350,000."
   },
   {
     "unit": 5,
@@ -491,7 +667,15 @@
     ],
     "answerIndex": 0,
     "explanation": "When the outcome of the contract is not reasonably\nmeasurable but the costs incurred in satisfying the\nperformance obligation are expected to be recovered, revenue\nmust be recognized only to the extent of the costs incurred.\nRevenue recognized is based on a zero profit margin until the\nentity can reasonably measure the outcome of the\nperformance obligation.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أبرمت منشأة عقدًا لإنشاء مبنى وحددت بشكل مناسب أن التزام الأداء ينفذ على مدى الزمن. وفي مرحلة مبكرة لا يمكن قياس نتيجة العقد بشكل معقول، لكنها تتوقع استرداد التكاليف المتكبدة. كيف يعترف بإيراد العقد؟",
+    "choicesAr": [
+      "في حدود التكاليف المتكبدة فقط.",
+      "عند اكتمال الإنشاء فقط.",
+      "بالتساوي على مدة العقد بطريقة القسط الثابت.",
+      "على أساس التقدم نحو إكمال المشروع."
+    ],
+    "explanationAr": "عندما يتعذر قياس نتيجة العقد بشكل معقول مع توقع استرداد تكاليف الوفاء بالتزام الأداء، يعترف بالإيراد فقط في حدود التكاليف المتكبدة القابلة للاسترداد. ويكون هامش الربح صفرًا حتى تتمكن المنشأة من قياس التقدم بشكل معقول."
   },
   {
     "unit": 5,
@@ -508,7 +692,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The expected gross profit is $500,000 ($2,500,000 price –\n$2,000,000 expected cost). Recognized gross profit in Year 1\nis $125,000 [$500,000 × ($500,000 ÷ $2,000,000)].\nCumulative recognized gross profit in Year 2 is $350,000\n{$500,000 × [($500,000 + $900,000) ÷ $2,000,000]}.\nRecognized gross profit in Year 3 is $150,000 [($2,500,000\nprice – $500,000 – $900,000 – $600,000) actual gross profit –\n$350,000 previously recognized].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يتطلب عقد Frame بناء جسر على أرض العميل خلال 3 سنوات. وتبلغ التكلفة الإجمالية المتوقعة $2,000,000 والمقابل $2,500,000. وبلغت التكاليف الفعلية $500,000 و$900,000 و$600,000 على الترتيب خلال كل من السنوات 3. وبلغت دفعات التقدم المحصلة $600,000 و$1,200,000 و$700,000 على الترتيب. بافتراض استخدام مدخل التكاليف المتكبدة، ما مجمل ربح السنة الأخيرة؟",
+    "choicesAr": [
+      "$120,000",
+      "$125,000",
+      "$140,000",
+      "$150,000"
+    ],
+    "explanationAr": "مجمل الربح المتوقع $500,000 ($2,500,000 السعر − $2,000,000 التكلفة المتوقعة). ومجمل الربح في السنة 1 يساوي $125,000 [$500,000 × ($500,000 ÷ $2,000,000)]. ومجمل الربح التراكمي في السنة 2 يساوي $350,000 {$500,000 × [($500,000 + $900,000) ÷ $2,000,000]}. ومجمل الربح في السنة 3 يساوي $150,000 [($2,500,000 − $500,000 − $900,000 − $600,000) إجمالي الربح الفعلي − $350,000 المعترف به سابقًا]."
   },
   {
     "unit": 5,
@@ -525,7 +717,15 @@
     ],
     "answerIndex": 3,
     "explanation": "When revenue is recognized over time, the progress toward\ncomplete satisfaction of a performance obligation must be\nmeasured. This progress must be measured either by the\noutput method or the input method. To determine the\nappropriate method, an entity must consider the nature of the\ngood or service that it promised to transfer to the customer.\nThe chosen method should measure the entity’s performance\nin transferring control of the promised asset to the customer.\nThe input method recognizes revenue on the basis of (1) the\nentity’s inputs to the satisfaction of the performance obligation\nrelative to (2) the total expected inputs to the satisfaction of\nthat performance obligation. Examples of input methods\ninclude (1) resources consumed, (2) labor hours expended,\n(3) costs incurred, (4) time elapsed, or (5) machine hours\nused. When an entity’s inputs are incurred evenly over time,\nrecognition of revenue on a straight-line basis may be\nappropriate.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عند الاعتراف بإيراد عقود العملاء على مدى الزمن، بأي طريقة يمكن قياس التقدم نحو الوفاء الكامل بالتزام الأداء؟",
+    "choicesAr": [
+      "طريقة النقطة الزمنية.",
+      "طريقة هامش الربح الصفري.",
+      "طريقة مجمل الربح المقدر.",
+      "مدخل المدخلات."
+    ],
+    "explanationAr": "عند الاعتراف بالإيراد على مدى الزمن يجب قياس التقدم نحو الوفاء الكامل بالتزام الأداء، باستخدام مدخل المخرجات أو المدخلات. ويختار الأسلوب الذي يعكس أداء المنشأة في نقل السيطرة على السلعة أو الخدمة الموعودة. ويقيس مدخل المدخلات الإيراد بناء على نسبة (1) المدخلات المستخدمة للوفاء بالتزام الأداء إلى (2) إجمالي المدخلات المتوقعة. ومن أمثلته: (1) الموارد المستهلكة، (2) ساعات العمل، (3) التكاليف المتكبدة، (4) الزمن المنقضي، (5) ساعات تشغيل الآلات. وقد يناسب القسط الثابت عندما تتكبد المدخلات بالتساوي على مدى الزمن."
   },
   {
     "unit": 5,
@@ -542,7 +742,15 @@
     ],
     "answerIndex": 1,
     "explanation": "As soon as an estimated loss becomes evident, it must be\nrecognized in full. The total of the costs incurred in Year 1 plus\nestimated costs to complete is $3,100,000 ($930,000 +\n$2,170,000). Because this sum exceeds the $3 million fixed-\nprice construction contract amount, a $100,000 loss should be\nrecognized.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم Hansen مدخل التكاليف المتكبدة للاعتراف بالإيراد. وفي السنة 1 بدأت عقد إنشاء بسعر ثابت قدره $3 ملايين. وأظهرت السجلات للسنة المنتهية في 31 ديسمبر من السنة 1:\nالتكاليف المتكبدة: $930,000\nالتكاليف المقدرة للإكمال: 2,170,000\nالمبالغ المفوترة: 1,100,000\nالمتحصلات: 700,000\nما الخسارة الواجب الاعتراف بها في السنة 1؟",
+    "choicesAr": [
+      "$230,000",
+      "$100,000",
+      "$30,000",
+      "$0"
+    ],
+    "explanationAr": "وفق نموذج خسائر عقود الإنشاء المنطبق على المسألة، يعترف بكامل الخسارة المتوقعة فور اتضاحها. ويبلغ مجموع التكاليف المتكبدة في السنة 1 والمتبقية المقدرة $3,100,000 ($930,000 + $2,170,000). ولأن المجموع يتجاوز سعر العقد الثابت البالغ $3 ملايين، يعترف بخسارة $100,000."
   },
   {
     "unit": 5,
@@ -559,7 +767,15 @@
     ],
     "answerIndex": 1,
     "explanation": "At the end of Year 1, Project 1 is 66 2/3% complete [$240,000\n÷ ($240,000 + $120,000)] and Project 2 is 87 1/2% complete\n[$280,000 ÷ ($280,000 + $40,000)]. Each project’s percentage\nof completion is multiplied by its expected total gross profit.\nAccordingly, Pell recognizes $40,000 [($420,000 contract\nprice – $240,000 costs incurred – $120,000 additional\nestimated costs) × 66 2/3%] of gross profit for Project 1.\nHowever, Project 2 estimates indicate a loss of $20,000\n($300,000 – $280,000 – $40,000). Because the full amount of\na loss is reported immediately irrespective of the accounting\nmethod used, a gross profit of $20,000 [$40,000 Project 1 +\n$(20,000) Project 2] is recognized.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فيما يلي بيانات مشروعات الإنشاء طويلة الأجل لشركة Pell التي بدأت في السنة 1:\nالبند | المشروع 1 | المشروع 2\nسعر العقد | $420,000 | $300,000\nالتكاليف المتكبدة خلال السنة 1 | 240,000 | 280,000\nالتكاليف المقدرة للإكمال | 120,000 | 40,000\nالمفوتر للعملاء خلال السنة 1 | 150,000 | 270,000\nالمحصل من العملاء خلال السنة 1 | 90,000 | 250,000\nإذا استخدمت Pell مدخل التكاليف المتكبدة، فما مجمل الربح أو الخسارة في قائمة دخل السنة 1؟",
+    "choicesAr": [
+      "$(20,000)",
+      "$20,000",
+      "$22,500",
+      "$40,000"
+    ],
+    "explanationAr": "في نهاية السنة 1 بلغ تقدم المشروع 1 نسبة 66 2/3% [$240,000 ÷ ($240,000 + $120,000)] والمشروع 2 نسبة 87 1/2% [$280,000 ÷ ($280,000 + $40,000)]. ويضرب تقدم المشروع المربح في إجمالي مجمل ربحه المتوقع. وبذلك تعترف Pell بمبلغ $40,000 [($420,000 − $240,000 − $120,000) × 66 2/3%] مجمل ربح المشروع 1. أما تقديرات المشروع 2 فتشير إلى خسارة $20,000 ($300,000 − $280,000 − $40,000). ووفق نموذج خسائر عقود الإنشاء المنطبق يعترف بكامل الخسارة فورًا، لذا يكون مجمل الربح الصافي $20,000 [$40,000 المشروع 1 + $(20,000) المشروع 2]."
   },
   {
     "unit": 5,
@@ -576,7 +792,15 @@
     ],
     "answerIndex": 2,
     "explanation": "At the end of Year 1, total cost was expected to be $400 ($100\nincurred + $300 estimated cost to complete), and estimated\ntotal profit was $600 ($1,000 price – $400 estimated total\ncost). Thus, the amount of profit recognized in Year 1 was\n$150 [$600 × ($100 cost incurred ÷ $400 estimated total\ncost)]. The project was completed in Year 2 at an additional\ncost of $200. Actual profit was therefore $700 ($1,000 – $300\nactual total cost). Profit recognized in Year 2 is $550 ($700\ntotal – $150 recognized in Year 1).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تعترف شركة إنشاء بإيرادات عقودها على مدى الزمن باستخدام مدخل التكاليف المتكبدة. وفيما يلي البيانات:\nالبند | السنة 1 | السنة 2\nتكاليف الإنشاء | $100 | $200\nالتكلفة المقدرة للإكمال في نهاية السنة | 300 | 0\nسعر العقد $1,000. ما الربح المعترف به في السنة 2؟",
+    "choicesAr": [
+      "$150",
+      "$400",
+      "$550",
+      "$800"
+    ],
+    "explanationAr": "في نهاية السنة 1 كانت التكلفة الإجمالية المتوقعة $400 ($100 متكبدة + $300 مقدرة للإكمال)، وإجمالي الربح المقدر $600 ($1,000 السعر − $400 التكلفة). لذلك بلغ الربح المعترف به في السنة 1 مبلغ $150 [$600 × ($100 ÷ $400)]. واكتمل المشروع في السنة 2 بتكلفة إضافية $200. لذا بلغ الربح الفعلي $700 ($1,000 − $300 إجمالي التكلفة الفعلية). والربح المعترف به في السنة 2 هو $550 ($700 إجمالي − $150 معترف به في السنة 1)."
   },
   {
     "unit": 5,
@@ -593,7 +817,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Using the cost-to-cost method, the estimated loss from the\nproject is $1,000,000 ($7,000,000 contract price – $2,000,000\nactual costs in the first year – $6,000,000 estimated remaining\ncosts to complete the project). As soon as an estimated loss\non any project becomes apparent, it must be recognized in\nfull. Therefore, the total $1,000,000 loss must be recognized.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لدى Howard البيانات التالية للسنة الأولى من عقد إنشاء قيمته $7,000,000:\nالتكاليف الفعلية: $2,000,000\nالتكاليف المقدرة للإكمال: 6,000,000\nفواتير التقدم: 1,800,000\nالمتحصلات النقدية: 1,500,000\nما مجمل الربح أو الخسارة باستخدام مدخل التكاليف المتكبدة؟",
+    "choicesAr": [
+      "$(1,000,000)",
+      "$(200,000)",
+      "$800,000",
+      "$1,750,000"
+    ],
+    "explanationAr": "باستخدام التكلفة إلى التكلفة تبلغ خسارة المشروع المقدرة $1,000,000 ($7,000,000 سعر العقد − $2,000,000 تكلفة السنة الأولى − $6,000,000 التكاليف المتبقية المقدرة). ووفق نموذج خسائر عقود الإنشاء المنطبق يعترف بكامل الخسارة عند اتضاحها، أي $1,000,000."
   },
   {
     "unit": 5,
@@ -610,7 +842,15 @@
     ],
     "answerIndex": 2,
     "explanation": "When the outcome of the contract is not reasonably\nmeasurable but the costs incurred in satisfying the\nperformance obligation are expected to be recovered, revenue\nmust be recognized only to the extent of the costs incurred.\nRevenue recognized is based on a zero profit margin until the\nentity can reasonably measure the outcome of the\nperformance obligation.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تعترف منشأة بإيراد عقد طويل الأجل على مدى الزمن. وفي بداية التنفيذ لا تستطيع قياس النتيجة بشكل معقول لكنها تتوقع استرداد التكاليف المتكبدة. على أي أساس يعترف بالإيراد؟",
+    "choicesAr": [
+      "مدخل المخرجات.",
+      "القسط الثابت.",
+      "هامش ربح صفري.",
+      "طريقة العقد المكتمل."
+    ],
+    "explanationAr": "عندما يتعذر قياس تقدم الوفاء بالتزام الأداء بشكل معقول مع توقع استرداد التكاليف المتكبدة، يعترف بالإيراد فقط في حدود تلك التكاليف القابلة للاسترداد. ويكون هامش الربح صفرًا حتى يمكن قياس التقدم بشكل معقول."
   },
   {
     "unit": 5,
@@ -627,7 +867,15 @@
     ],
     "answerIndex": 1,
     "explanation": "An entity must recognize revenue when (or as) it satisfies each\nperformance obligation in the contract by transferring the\npromised good or service to a customer. Because the\ncustomer controls the building as it is constructed, the contract\nmeets the criteria for recognition of revenue over time. Thus,\nthe contractor must recognize revenue as progress is made\ntoward completion of the contract.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لدى مقاول عقد بسعر ثابت لإنشاء مبنى على أرض العميل. ويتوقع اكتماله خلال 2 سنة. وترسل فواتير التقدم للعميل كل ربع سنة. ما التوقيت المناسب للاعتراف بالإيراد إذا أمكن قياس نتيجة العقد بشكل معقول؟",
+    "choicesAr": [
+      "بعد توقيع العقد.",
+      "مع التقدم نحو إكمال العقد.",
+      "عند تحصيل النقد.",
+      "فقط في حدود التكاليف المتكبدة."
+    ],
+    "explanationAr": "تعترف المنشأة بالإيراد عندما أو مع الوفاء بكل التزام أداء بنقل السلعة أو الخدمة الموعودة للعميل. ولأن العميل يسيطر على المبنى أثناء إنشائه وفق الحالة المعروضة، تتحقق شروط الاعتراف على مدى الزمن. لذا يعترف المقاول بالإيراد وفق التقدم نحو إكمال العقد."
   },
   {
     "unit": 5,
@@ -644,7 +892,15 @@
     ],
     "answerIndex": 1,
     "explanation": "If the progress to completion is based on the relationship of\nthe cumulative costs incurred to date to estimated total costs\nat completion, the cumulative amount incurred at 12/31/Year 1\nwas $1,500,000 ($7,500,000 × 20%). At 12/31/Year 2, the\ncumulative amount incurred was $4,800,000 ($8,000,000 ×\n60%). The difference of $3,300,000 ($4,800,000 –\n$1,500,000) equals contract costs incurred during Year 2.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم Cinnabar مدخل التكاليف المتكبدة للاعتراف بإيراد التزام أداء ينفذ على مدى الزمن. وفي السنة 1 أبرمت عقدًا بسعر ثابت لإنشاء مبنى مكاتب مقابل $10 ملايين. وفيما يلي البيانات:\nفي 31 ديسمبر | السنة 1 | السنة 2\nنسبة الإكمال | 20% | 60%\nإجمالي التكاليف المقدرة عند الإكمال | $7,500,000 | $8,000,000\nمجمل الربح التراكمي المعترف به | 500,000 | 1,200,000\nما تكاليف العقد المتكبدة خلال السنة 2؟",
+    "choicesAr": [
+      "$3,200,000",
+      "$3,300,000",
+      "$3,500,000",
+      "$4,800,000"
+    ],
+    "explanationAr": "إذا قيس التقدم بنسبة التكاليف التراكمية إلى إجمالي التكاليف المقدرة عند الإكمال، بلغت التكاليف التراكمية في 12/31 السنة 1 مبلغ $1,500,000 ($7,500,000 × 20%). وفي 12/31 السنة 2 بلغت $4,800,000 ($8,000,000 × 60%). ويمثل الفرق $3,300,000 ($4,800,000 − $1,500,000) تكاليف العقد خلال السنة 2."
   },
   {
     "unit": 5,
@@ -661,7 +917,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The input method based on costs incurred recognizes revenue\nbased on the stage of completion of the contract. The\nprogress toward completion of the project is the calculation of\nratio of the contract costs incurred to date to the estimated\ntotal costs. The percentage-of-completion at year-end on the\ncost-to-cost basis is 35% ($700,000 ÷ $2,000,000). The gross\nprofit for Year 1 is the anticipated gross profit on the contract\ntimes the completion percentage. Thus, profit for Year 1 is\n$350,000 [($3,000,000 – $2,000,000) × 35%].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بدأت شركة عقد إنشاء طويل الأجل في السنة 1 بقيمة $3,000,000. وفيما يلي البيانات في نهاية كل سنة:\nالبند | السنة 1 | السنة 2 | السنة 3\nإجمالي التكلفة المقدرة | $2,000,000 | $2,000,000 | $2,000,000\nالتكلفة المتكبدة | 700,000 | 900,000 | 400,000\nالفواتير | 800,000 | 1,200,000 | 1,000,000\nالمتحصلات | 600,000 | 1,200,000 | 1,200,000\nوفق مدخل التكاليف المتكبدة، ما مجمل ربح السنة 1؟",
+    "choicesAr": [
+      "$(100,000)",
+      "$100,000",
+      "$200,000",
+      "$350,000"
+    ],
+    "explanationAr": "يعترف مدخل التكاليف المتكبدة بالإيراد وفق مرحلة الإكمال. ويقاس التقدم بنسبة التكاليف التراكمية إلى إجمالي التكلفة المقدرة. وتبلغ نسبة الإكمال في نهاية السنة 35% ($700,000 ÷ $2,000,000). ومجمل ربح السنة 1 يساوي إجمالي الربح المتوقع مضروبًا في نسبة الإكمال. لذا يبلغ ربح السنة 1 مبلغ $350,000 [($3,000,000 − $2,000,000) × 35%]."
   },
   {
     "unit": 5,
@@ -678,7 +942,15 @@
     ],
     "answerIndex": 0,
     "explanation": "By the end of Year 1, 35% [$700,000 ÷ ($700,000 +\n$1,300,000)] of total expected costs have been incurred.\nUsing the input method based on costs incurred, 35% of the\nrevenue from the contract is recognized in Year 1. Thus,\n$875,000 ($2,500,000 × 35%) of revenue from this contract is\nrecognized in Year 1.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 يناير من السنة 1 أبرمت Big عقدًا لبناء جسر على أرض العميل مقابل $2,500,000. ويتوقع اكتمال الجسر بنهاية السنة 3. وتحدد Big أن التقدم نحو الإكمال قابل للقياس بشكل معقول باستخدام مدخل التكاليف المتكبدة. وفي بداية العقد قدرت التكلفة الإجمالية بـ$1,700,000. وفيما يلي (1) التكاليف الفعلية لكل سنة، و(2) التكاليف المتوقعة للإكمال، و(3) المبالغ المفوترة للعميل:\nالبند | السنة 1 | السنة 2 | السنة 3\nالتكاليف المتكبدة سنويًا | $700,000 | $500,000 | $800,000\nالتكاليف المتوقعة في السنوات التالية | 1,300,000 | 675,000 | 0\nالمبالغ المفوترة والمحصلة سنويًا | 700,000 | 950,000 | 850,000\nما إيراد العقد المعترف به في قائمة دخل السنة 1؟",
+    "choicesAr": [
+      "$875,000",
+      "$650,000",
+      "$700,000",
+      "$175,000"
+    ],
+    "explanationAr": "بنهاية السنة 1 تكبدت المنشأة 35% [$700,000 ÷ ($700,000 + $1,300,000)] من إجمالي التكاليف المتوقعة. وباستخدام مدخل التكاليف المتكبدة يعترف بـ35% من إيراد العقد في السنة 1. لذلك يعترف بإيراد $875,000 ($2,500,000 × 35%) في السنة 1."
   },
   {
     "unit": 5,
@@ -695,7 +967,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Revenue and gross profit are recognized over the 3 years of\nthe construction period using the input method based on costs\nincurred in measuring the progress toward completion. At the\nend of Year 2, 64% [($700,000 + $500,000) ÷ ($700,000 +\n$500,000 + $675,000)] of expected costs have been incurred.\nAt the end of Year 2, the total expected gross profit from the\ncontract is $625,000 [$2,500,000 – ($700,000 + $500,000 +\n$675,000)]. Thus, the gross profit in the first 2 years of the\ncontract is $400,000 ($625,000 × 64%). In Year 1, gross profit\nof $175,000 [$500,000 total expected gross profit estimated at\nthe end of Year 1 × ($700,000 ÷ $2,000,000) progress of\ncompletion at the end of Year 1] was recognized. Thus, the\ngross profit recognized in Year 2 is $225,000 ($400,000 gross\nprofit for the first 2 years – $175,000 gross profit recognized in\nYear 1).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 يناير من السنة 1 أبرمت Big عقدًا لبناء جسر على أرض العميل مقابل $2,500,000. ويتوقع اكتمال الجسر بنهاية السنة 3. وتحدد Big أن التقدم نحو الإكمال قابل للقياس بشكل معقول باستخدام مدخل التكاليف المتكبدة. وفي بداية العقد قدرت التكلفة الإجمالية بـ$1,700,000. وفيما يلي (1) التكاليف الفعلية لكل سنة، و(2) التكاليف المتوقعة للإكمال، و(3) المبالغ المفوترة للعميل:\nالبند | السنة 1 | السنة 2 | السنة 3\nالتكاليف المتكبدة سنويًا | $700,000 | $500,000 | $800,000\nالتكاليف المتوقعة في السنوات التالية | 1,300,000 | 675,000 | 0\nالمبالغ المفوترة والمحصلة سنويًا | 700,000 | 950,000 | 850,000\nما مجمل ربح العقد المعترف به في قائمة دخل السنة 2؟",
+    "choicesAr": [
+      "$400,000",
+      "$225,000",
+      "$450,000",
+      "$0"
+    ],
+    "explanationAr": "يعترف بالإيراد ومجمل الربح على مدى 3 سنوات الإنشاء باستخدام مدخل التكاليف المتكبدة. وفي نهاية السنة 2 بلغت التكاليف المتكبدة 64% [($700,000 + $500,000) ÷ ($700,000 + $500,000 + $675,000)] من التكاليف المتوقعة. وفي نهاية السنة 2 بلغ إجمالي مجمل الربح المتوقع $625,000 [$2,500,000 − ($700,000 + $500,000 + $675,000)]. لذا بلغ مجمل الربح لأول 2 سنة من العقد $400,000 ($625,000 × 64%). وفي السنة 1 اعترف بمجمل ربح $175,000 [$500,000 إجمالي الربح المتوقع بنهاية السنة 1 × ($700,000 ÷ $2,000,000) نسبة الإكمال بنهاية السنة 1]. لذلك يبلغ مجمل ربح السنة 2 مبلغ $225,000 ($400,000 مجمل الربح لأول 2 سنة − $175,000 المعترف به في السنة 1)."
   },
   {
     "unit": 5,
@@ -712,7 +992,15 @@
     ],
     "answerIndex": 2,
     "explanation": "In this contract, revenue is recognized over time and based on\nthe progress toward completion. The progress toward\ncompletion is measured using the input method based on\ncosts incurred. The construction was completed in Year 3.\nAccordingly, the entire gross profit from the contract of\n$500,000 [$2,500,000 – ($700,000 + $500,000 + $800,000)]\nmust be recognized by the end of Year 3. At the end of Year\n2, the total expected gross profit from the contract was\n$625,000 [$2,500,000 – ($700,000 + $500,000 + $675,000)].\nBy the end of Year 2, 64% [($700,000 + $500,000) ÷\n($700,000 + $500,000 + $675,000)] of the expected contract\ncosts had been incurred. Because the recognized gross profit\nin the first 2 years of the contract was $400,000 ($625,000 ×\n64%), the gross profit recognized in Year 3 is $100,000\n($500,000 – $400,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 يناير من السنة 1 أبرمت Big عقدًا لبناء جسر على أرض العميل مقابل $2,500,000. ويتوقع اكتمال الجسر بنهاية السنة 3. وتحدد Big أن التقدم نحو الإكمال قابل للقياس بشكل معقول باستخدام مدخل التكاليف المتكبدة. وفي بداية العقد قدرت التكلفة الإجمالية بـ$1,700,000. وفيما يلي (1) التكاليف الفعلية لكل سنة، و(2) التكاليف المتوقعة للإكمال، و(3) المبالغ المفوترة للعميل:\nالبند | السنة 1 | السنة 2 | السنة 3\nالتكاليف المتكبدة سنويًا | $700,000 | $500,000 | $800,000\nالتكاليف المتوقعة في السنوات التالية | 1,300,000 | 675,000 | 0\nالمبالغ المفوترة والمحصلة سنويًا | 700,000 | 950,000 | 850,000\nما مجمل ربح العقد المعترف به في قائمة دخل السنة 3؟",
+    "choicesAr": [
+      "$500,000",
+      "$50,000",
+      "$100,000",
+      "$166,667"
+    ],
+    "explanationAr": "يعترف بالإيراد على مدى الزمن حسب التقدم نحو الإكمال، المقاس بمدخل التكاليف المتكبدة. واكتمل الإنشاء في السنة 3. لذلك يجب الاعتراف بإجمالي مجمل ربح العقد $500,000 [$2,500,000 − ($700,000 + $500,000 + $800,000)] بحلول نهاية السنة 3. وفي نهاية السنة 2 بلغ إجمالي مجمل الربح المتوقع $625,000 [$2,500,000 − ($700,000 + $500,000 + $675,000)]. وبنهاية السنة 2 تكبدت المنشأة 64% [($700,000 + $500,000) ÷ ($700,000 + $500,000 + $675,000)] من التكاليف المتوقعة. ولأن مجمل الربح لأول 2 سنة بلغ $400,000 ($625,000 × 64%)، يبلغ مجمل الربح في السنة 3 مبلغ $100,000 ($500,000 − $400,000)."
   },
   {
     "unit": 5,
@@ -729,7 +1017,15 @@
     ],
     "answerIndex": 0,
     "explanation": "In this contract, revenue is recognized over time based on\nprogress toward completion. The progress toward completion\nis measured using the input method based on costs incurred.\nThe construction was completed in Year 3. Accordingly, by the\nend of Year 3, the entire $2,500,000 of revenues should be\nrecognized. At the end of Year 2, 64% [($700,000 + $500,000)\n÷ ($700,000 + $500,000 + $675,000)] of the estimated\nconstruction costs had been incurred. Thus, revenue of\n$900,000 [$2,500,000 × (100% – 64%)] is recognized in Year\n3.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 يناير من السنة 1 أبرمت Big عقدًا لبناء جسر على أرض العميل مقابل $2,500,000. ويتوقع اكتمال الجسر بنهاية السنة 3. وتحدد Big أن التقدم نحو الإكمال قابل للقياس بشكل معقول باستخدام مدخل التكاليف المتكبدة. وفي بداية العقد قدرت التكلفة الإجمالية بـ$1,700,000. وفيما يلي (1) التكاليف الفعلية لكل سنة، و(2) التكاليف المتوقعة للإكمال، و(3) المبالغ المفوترة للعميل:\nالبند | السنة 1 | السنة 2 | السنة 3\nالتكاليف المتكبدة سنويًا | $700,000 | $500,000 | $800,000\nالتكاليف المتوقعة في السنوات التالية | 1,300,000 | 675,000 | 0\nالمبالغ المفوترة والمحصلة سنويًا | 700,000 | 950,000 | 850,000\nما إيراد العقد المعترف به في قائمة دخل السنة 3؟",
+    "choicesAr": [
+      "$900,000",
+      "$850,000",
+      "$2,500,000",
+      "$833,333"
+    ],
+    "explanationAr": "يعترف بالإيراد على مدى الزمن وفق التقدم نحو الإكمال باستخدام مدخل التكاليف المتكبدة. واكتمل الإنشاء في السنة 3. لذلك يجب بحلول نهاية السنة 3 الاعتراف بإجمالي إيراد $2,500,000. وفي نهاية السنة 2 بلغت التكاليف المتكبدة 64% [($700,000 + $500,000) ÷ ($700,000 + $500,000 + $675,000)] من إجمالي التكاليف المقدرة. لذا يعترف بإيراد $900,000 [$2,500,000 × (100% − 64%)] في السنة 3."
   },
   {
     "unit": 5,
@@ -746,7 +1042,15 @@
     ],
     "answerIndex": 2,
     "explanation": "When the outcome of the contract is not reasonably\nmeasurable, but the costs incurred in satisfying the\nperformance obligation are expected to be recovered, revenue\nmust be recognized only to the extent of the costs incurred.\nRevenue recognized is based on a zero profit margin until the\nentity can reasonably measure the outcome of the\nperformance obligation. Because the costs incurred are\nexpected to be recovered, revenue is recognized equal to the\ncosts incurred of $450,000 in Year 1.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 أكتوبر من السنة 1 أبرمت Little عقدًا لإنشاء مصنع على أرض العميل مقابل $1,000,000. ويتوقع اكتماله بنهاية السنة 5. ووفق السياسة المحاسبية يقاس التقدم بمدخل التكاليف المتكبدة. وفي السنة 1 تكبدت Little مبلغ $450,000 وفوترت العميل بمبلغ $600,000. وفي نهاية السنة 1 لم تستطع تقدير إجمالي تكلفة الإنشاء أو التقدم بشكل معقول، لكنها تتوقع استرداد التكاليف المتكبدة. ما إيراد العقد في قائمة دخل السنة 1؟",
+    "choicesAr": [
+      "$150,000",
+      "$600,000",
+      "$450,000",
+      "$0"
+    ],
+    "explanationAr": "عندما يتعذر قياس نتيجة العقد بشكل معقول مع توقع استرداد تكاليف الوفاء بالتزام الأداء، يعترف بالإيراد في حدود التكاليف المتكبدة القابلة للاسترداد. ويكون هامش الربح صفرًا حتى يمكن قياس التقدم بشكل معقول. ولأن التكاليف متوقع استردادها، يعترف بإيراد يعادلها قدره $450,000 في السنة 1."
   },
   {
     "unit": 5,
@@ -797,7 +1101,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The cost-to-cost method provides for the recognition of gross\nprofit based on the relationship between the costs incurred to\ndate and estimated total costs for the completion of the\ncontract. The amount of gross profit (based on the latest\navailable estimated costs) recognized in the second year of a\n4-year contract is calculated as follows: The total anticipated\ngross profit is multiplied by the ratio of the costs incurred to\ndate to the total estimated costs, and the product is reduced\nby previously recognized gross profit. Gross profit previously\nrecognized is therefore used to calculate gross profit to be\nrecognized in the second year. However, amounts billed to\ndate have no effect on the amount of gross profit to be\nrecognized in the second year.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "استخدمت شركة مدخل التكاليف المتكبدة لقياس التقدم نحو إكمال عقد إنشاء مدته 4 سنوات. أي البنود التالية يستخدم لحساب مجمل الربح المعترف به في السنة الثانية؟\nمجمل الربح المعترف به سابقًا | المبالغ المفوترة حتى تاريخه",
+    "choicesAr": [
+      "نعم | نعم",
+      "لا | نعم",
+      "نعم | لا",
+      "لا | لا"
+    ],
+    "explanationAr": "تعتمد طريقة التكلفة إلى التكلفة على العلاقة بين التكاليف المتكبدة حتى تاريخه وإجمالي التكاليف المقدرة لإكمال العقد. ويحسب مجمل الربح في السنة الثانية من عقد مدته 4 سنوات باستخدام أحدث التقديرات: يضرب إجمالي مجمل الربح المتوقع في نسبة التكاليف التراكمية إلى إجمالي التكاليف المقدرة، ثم يطرح مجمل الربح المعترف به سابقًا. لذا يستخدم الربح المعترف به سابقًا في حساب ربح السنة الثانية، بينما لا تؤثر المبالغ المفوترة في حسابه."
   },
   {
     "unit": 5,
@@ -831,7 +1143,15 @@
     ],
     "answerIndex": 1,
     "explanation": "An entity recognizes revenue when (or as) it satisfies each\nperformance obligation in the contract by transferring the\npromised good or service (an asset) to a customer. An asset is\ntransferred when the customer obtains control of that asset.\nWhen the customer simultaneously receives and consumes\nthe benefits from performance as the entity performs, revenue\nis recognized over time.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الحالات التالية قد تؤدي إلى الاعتراف بالإيراد من عقد مع عميل على مدى الزمن؟",
+    "choicesAr": [
+      "يمكن للمنشأة إنفاذ حقها في المقابل عن العمل المنجز حتى تاريخه على أصل له استخدام بديل لديها.",
+      "يتلقى العميل منافع الأداء ويستهلكها بالتزامن مع أداء المنشأة.",
+      "قبل العميل الأصل وللمنشأة حق حالي في المقابل.",
+      "ينشئ أداء المنشأة أصلًا أو يحسنه دون سيطرة العميل عليه أثناء العملية."
+    ],
+    "explanationAr": "تعترف المنشأة بالإيراد عندما أو مع الوفاء بكل التزام أداء بنقل السلعة أو الخدمة الموعودة إلى العميل. وينقل الأصل عندما يحصل العميل على السيطرة عليه. وعندما يتلقى العميل منافع الأداء ويستهلكها بالتزامن مع أداء المنشأة، يعترف بالإيراد على مدى الزمن."
   },
   {
     "unit": 5,
@@ -848,7 +1168,15 @@
     ],
     "answerIndex": 1,
     "explanation": "As soon as an estimated loss on any project becomes\napparent, it must be recognized in full. The total of the costs\nincurred in Year 1 plus estimated costs to complete is\n$6,200,000 ($1,860,000 + $4,340,000). Because this sum\nexceeds the $6 million fixed-price construction contract\namount, a $200,000 loss should be recognized.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم Ailouros مدخل التكاليف المتكبدة لقياس تقدم المشروع. وفي السنة 1 بدأت عقد إنشاء بسعر ثابت $6 ملايين. وأظهرت السجلات للسنة المنتهية في 31 ديسمبر من السنة 1:\nالتكاليف المتكبدة: $1,860,000\nالتكاليف المقدرة للإكمال: 4,340,000\nالذمم المدينة: 600,000\nالمتحصلات: 1,400,000\nما الخسارة الواجب الاعتراف بها في السنة 1؟",
+    "choicesAr": [
+      "$460,000",
+      "$200,000",
+      "$60,000",
+      "$0"
+    ],
+    "explanationAr": "وفق نموذج خسائر عقود الإنشاء المنطبق، يعترف بكامل الخسارة المقدرة عند اتضاحها. ويبلغ مجموع التكاليف المتكبدة في السنة 1 والمقدرة للإكمال $6,200,000 ($1,860,000 + $4,340,000). ولأنه يتجاوز سعر العقد الثابت البالغ $6 ملايين، يعترف بخسارة $200,000."
   },
   {
     "unit": 5,
@@ -865,7 +1193,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Catus cannot reasonably measure the progress toward\nsatisfaction of the performance obligation (contract) but\nexpects to recover the costs incurred. Accordingly, it\nrecognizes revenue from the contracts to the extent of the cost\nincurred (zero profit margin). For Project 1, no gross profit is\nrecognized in Year 1. However, as soon as an estimated loss\non any project becomes apparent, it must be recognized in\nfull. Catus therefore recognizes a loss of $20,000 on Project 2\n($300,000 contract price – ($280,000 + $40,000) estimated\ncontract costs).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فيما يلي بيانات مشروعات الإنشاء طويلة الأجل لشركة Catus التي بدأت في السنة 1:\nالبند | المشروع 1 | المشروع 2\nسعر العقد | $420,000 | $300,000\nالتكاليف المتكبدة خلال السنة 1 | 240,000 | 280,000\nالتكاليف المقدرة للإكمال | 120,000 | 40,000\nالمفوتر للعملاء خلال السنة 1 | 150,000 | 270,000\nالمحصل من العملاء خلال السنة 1 | 90,000 | 250,000\nإذا تعذر على Catus قياس التقدم نحو الإكمال بشكل معقول لكنها تتوقع استرداد التكاليف المتكبدة، فما مجمل الربح أو الخسارة في قائمة دخل السنة 1؟",
+    "choicesAr": [
+      "$(20,000)",
+      "$0",
+      "$40,000",
+      "$420,000"
+    ],
+    "explanationAr": "لا تستطيع Catus قياس التقدم نحو الوفاء بالتزام الأداء بشكل معقول، لكنها تتوقع استرداد التكاليف المتكبدة. لذلك تعترف بالإيراد في حدود التكاليف المتكبدة القابلة للاسترداد (هامش ربح صفري). وبالنسبة للمشروع 1 لا يعترف بمجمل ربح في السنة 1. ومع ذلك يعترف بكامل الخسارة المتوقعة وفق نموذج خسائر عقود الإنشاء المنطبق عند اتضاحها. لذلك تعترف Catus بخسارة $20,000 في المشروع 2 ($300,000 سعر العقد − ($280,000 + $40,000) التكاليف المقدرة للعقد)."
   },
   {
     "unit": 5,
@@ -882,7 +1218,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The input method based on costs incurred provides for the\nrecognition of gross profit based on the relationship between\nthe costs incurred to date and estimated total costs for the\ncompletion of the contract. The total anticipated gross profit is\nmultiplied by the ratio of the costs incurred to date to the total\nestimated costs, and the product is reduced by previously\nrecognized gross profit. At the end of Year 1, Project 1 is 66\n2/3% complete [$240,000 ÷ ($240,000 + $120,000)] and\nProject 2 is 87 1/2% complete [$280,000 ÷ ($280,000 +\n$40,000)]. Each project’s percentage of completion is\nmultiplied by its expected total gross profit. Accordingly, Catus\nrecognizes $40,000 [($420,000 contract price – $240,000\ncosts incurred – $120,000 additional estimated costs) ×\n66 2/3%] of gross profit for Project 1. However, Project 2\nestimates indicate a loss of $20,000 ($300,000 – $280,000 –\n$40,000). Because the full amount of a loss is reported\nimmediately irrespective of the accounting method used, a\ngross profit of $20,000 [$40,000 Project 1 + $(20,000)\nProject 2] is recognized.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فيما يلي بيانات مشروعات الإنشاء طويلة الأجل لشركة Catus التي بدأت في السنة 1:\nالبند | المشروع 1 | المشروع 2\nسعر العقد | $420,000 | $300,000\nالتكاليف المتكبدة خلال السنة 1 | 240,000 | 280,000\nالتكاليف المقدرة للإكمال | 120,000 | 40,000\nالمفوتر للعملاء خلال السنة 1 | 150,000 | 270,000\nالمحصل من العملاء خلال السنة 1 | 90,000 | 250,000\nإذا استخدمت Catus مدخل التكاليف المتكبدة لقياس التقدم نحو الإكمال، فما مجمل الربح أو الخسارة في قائمة دخل السنة 1؟",
+    "choicesAr": [
+      "$(20,000)",
+      "$20,000",
+      "$22,500",
+      "$40,000"
+    ],
+    "explanationAr": "يعتمد مدخل التكاليف المتكبدة على نسبة التكاليف التراكمية إلى إجمالي التكاليف المقدرة لإكمال العقد. ويضرب إجمالي مجمل الربح المتوقع في نسبة التقدم ثم يطرح مجمل الربح المعترف به سابقًا. وفي نهاية السنة 1 بلغ تقدم المشروع 1 نسبة 66 2/3% [$240,000 ÷ ($240,000 + $120,000)] والمشروع 2 نسبة 87 1/2% [$280,000 ÷ ($280,000 + $40,000)]. ويضرب تقدم المشروع المربح في إجمالي مجمل ربحه المتوقع. لذا تعترف Catus بمجمل ربح $40,000 [($420,000 سعر العقد − $240,000 تكاليف متكبدة − $120,000 تكاليف مقدرة إضافية) × 66 2/3%] للمشروع 1. أما المشروع 2 فتشير تقديراته إلى خسارة $20,000 ($300,000 − $280,000 − $40,000). ووفق نموذج خسائر عقود الإنشاء المنطبق يعترف بكامل الخسارة فورًا، لذا يعترف بصافي مجمل ربح $20,000 [$40,000 المشروع 1 + $(20,000) المشروع 2]."
   },
   {
     "unit": 5,
@@ -899,7 +1243,15 @@
     ],
     "answerIndex": 0,
     "explanation": "In Year 1, one-half of the estimated costs of this construction\nproject were incurred [$1,750,000 ÷ ($1,750,000 +\n$1,750,000)]. The company should therefore recognize one-\nhalf of the estimated gross profit in Year 1. At year end, the\nestimated gross profit is $700,000, equal to the contract price\nminus total estimated costs [$4,200,000 – ($1,750,000 +\n$1,750,000)]. In Year 1, $350,000 should be recognized as\ngross profit ($700,000 × 50%).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بدأت Kechara مشروع إنشاء طويل الأجل في السنة 1. وفيما يلي البيانات:\nسعر العقد: $4,200,000\nالتكاليف المتكبدة في السنة 1: 1,750,000\nالتكاليف المقدرة للإكمال: 1,750,000\nفواتير التقدم: 900,000\nالمتحصلات من فواتير التقدم: 800,000\nيستخدم مدخل التكاليف المتكبدة للاعتراف بإيراد التزام أداء ينفذ على مدى الزمن. ما مجمل الربح المعروض في قائمة دخل السنة 1؟",
+    "choicesAr": [
+      "$350,000",
+      "$700,000",
+      "$900,000",
+      "$100,000"
+    ],
+    "explanationAr": "في السنة 1 تكبدت المنشأة نصف التكلفة المقدرة [$1,750,000 ÷ ($1,750,000 + $1,750,000)]. ولذلك تعترف بنصف مجمل الربح المقدر في السنة 1. وفي نهاية السنة يبلغ مجمل الربح المتوقع $700,000، وهو سعر العقد ناقص إجمالي التكلفة المقدرة [$4,200,000 − ($1,750,000 + $1,750,000)]. وفي السنة 1 يعترف بمجمل ربح $350,000 ($700,000 × 50%)."
   },
   {
     "unit": 5,
@@ -916,7 +1268,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Costs incurred through Year 2 equal $297,000 ($105,000 +\n$192,000). Thus, gross profit recognized in Year 1 and Year 2\nis $67,000 ($364,000 – $297,000 cumulative costs). Because\ngross profit of $17,000 was recognized in Year 1 ($122,000 –\n$105,000 of costs), $50,000 ($67,000 – $17,000) should be\nrecognized in Year 2.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تعترف Ashke بإيرادات الإنشاء ومجمل الربح باستخدام مدخل التكاليف المتكبدة لالتزام أداء ينفذ على مدى الزمن. وفي السنة 1 بدأ مشروع طويل الأجل واحد استمر حتى السنة 2. وفيما يلي البيانات:\nالبند | السنة 1 | السنة 2\nالذمم المدينة من عقد الإنشاء | $100,000 | $300,000\nتكاليف الإنشاء السنوية | 105,000 | 192,000\nمجمل الربح والتكاليف المتكبدة تراكميًا | 122,000 | 364,000\nالفواتير الجزئية للعقد | 100,000 | 420,000\nما مجمل الربح المعترف به في السنة 2؟",
+    "choicesAr": [
+      "$50,000",
+      "$108,000",
+      "$120,000",
+      "$228,000"
+    ],
+    "explanationAr": "تبلغ التكاليف المتكبدة حتى السنة 2 مبلغ $297,000 ($105,000 + $192,000). لذا يبلغ مجمل الربح المعترف به في السنة 1 والسنة 2 مبلغ $67,000 ($364,000 − $297,000 التكاليف التراكمية). ولأنه اعترف بمجمل ربح $17,000 في السنة 1 ($122,000 − $105,000 تكلفة)، ينبغي الاعتراف بـ$50,000 ($67,000 − $17,000) في السنة 2."
   },
   {
     "unit": 5,
@@ -933,7 +1293,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A long-lived asset (asset group) is tested for recoverability\nwhenever events or changes in circumstances indicate that its\ncarrying amount may not be recoverable. The carrying amount\nis not recoverable when it exceeds the sum of the\nundiscounted cash flows expected to result from the use and\ndisposition of the asset (asset group). If the carrying amount is\nnot recoverable, an impairment loss is recognized equal to the\nexcess of the carrying amount over the fair value.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "متى يلزم اختبار انخفاض قيمة أصل طويل الأجل (أو مجموعة أصول) تتوقع المنشأة الاحتفاظ به واستخدامه وفق المعايير الأمريكية؟",
+    "choicesAr": [
+      "في تاريخ كل قائمة مركز مالي مرحلية وسنوية.",
+      "في تاريخ القوائم السنوية فقط.",
+      "بصفة دورية.",
+      "عندما تشير أحداث أو تغيرات في الظروف إلى احتمال عدم قابلية القيمة الدفترية للاسترداد."
+    ],
+    "explanationAr": "يختبر الأصل طويل الأجل (أو مجموعة الأصول) للتحقق من قابلية الاسترداد عند وجود مؤشرات إلى احتمال عدم استرداد قيمته الدفترية. وتكون القيمة غير قابلة للاسترداد إذا تجاوزت مجموع التدفقات النقدية غير المخصومة المتوقعة من الاستخدام والاستبعاد. وعندما تفشل في اختبار الاسترداد، تثبت خسارة الانخفاض بمقدار زيادة القيمة الدفترية على القيمة العادلة، إن وجدت."
   },
   {
     "unit": 5,
@@ -950,7 +1318,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The accumulated depreciation was $400,000 {[($1,000,000\nhistorical cost – $100,000 residual value) ÷ 9 years estimated\nuseful life] × 4 years}, so the carrying amount was $600,000\n($1,000,000 – $400,000). Thus, the loss was $65,000\n($600,000 carrying amount – $535,000 sales price).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "اشترت منشأة آلة في 1 يناير من السنة 1 مقابل $1,000,000. وعمرها الإنتاجي المقدر 9 سنوات وقيمتها المتبقية $100,000. وتستخدم القسط الثابت. وفي 31 ديسمبر من السنة 4 بيعت الآلة مقابل $535,000. ما مكسب أو خسارة الاستبعاد الواجب إثباتها؟",
+    "choicesAr": [
+      "مكسب $35,000.",
+      "خسارة $65,000.",
+      "خسارة $365,000.",
+      "خسارة $465,000."
+    ],
+    "explanationAr": "بلغ مجمع الإهلاك $400,000 {[($1,000,000 التكلفة التاريخية − $100,000 القيمة المتبقية) ÷ 9 سنوات العمر المقدر] × 4 سنوات}. لذا بلغت القيمة الدفترية $600,000 ($1,000,000 − $400,000). ومن ثم بلغت الخسارة $65,000 ($600,000 القيمة الدفترية − $535,000 سعر البيع)."
   },
   {
     "unit": 5,
@@ -967,7 +1343,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The selling price minus the carrying amount of the machine\nequals the gain or loss on disposal. The carrying amount\nequals $205,000 ($700,000 historical cost – $495,000\naccumulated depreciation). Thus, the selling price was\n$280,000 ($205,000 + $75,000 gain).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "اشترت منشأة آلة مقابل $700,000 وأهلكتها بالقسط الثابت، وكانت قيمتها المتبقية $40,000. وبيعت الآلة في 31 ديسمبر من السنة 1، وكان مجمع إهلاكها $495,000 في ذلك التاريخ. وأثبتت المنشأة مكسب بيع $75,000 في قائمة دخل السنة المنتهية في 31 ديسمبر من السنة 1. ما سعر بيع الآلة؟",
+    "choicesAr": [
+      "$280,000",
+      "$240,000",
+      "$205,000",
+      "$115,000"
+    ],
+    "explanationAr": "يساوي مكسب أو خسارة الاستبعاد سعر البيع ناقص القيمة الدفترية للآلة. وبلغت القيمة الدفترية $205,000 ($700,000 التكلفة التاريخية − $495,000 مجمع الإهلاك). ولذلك بلغ سعر البيع $280,000 ($205,000 + $75,000 المكسب)."
   },
   {
     "unit": 5,
@@ -984,7 +1368,15 @@
     ],
     "answerIndex": 3,
     "explanation": "An impairment loss is included in income from continuing\noperations before income taxes by a business enterprise\n(income from continuing operations in the statement of\nactivities by a not-for-profit organization). When a subtotal for\n“income from operations” is reported, the impairment loss is\nincluded.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أين تعرض المنشأة التجارية خسارة انخفاض قيمة أصل طويل الأجل (أو مجموعة أصول) محتفظ به للاستخدام وفق المعايير الأمريكية؟",
+    "choicesAr": [
+      "العمليات المتوقفة.",
+      "البنود غير العادية.",
+      "الدخل الشامل الآخر.",
+      "الدخل من العمليات المستمرة."
+    ],
+    "explanationAr": "تدرج خسارة الانخفاض ضمن الدخل من العمليات المستمرة قبل ضرائب الدخل في المنشأة التجارية، وضمن العمليات المستمرة في قائمة الأنشطة للمنشأة غير الهادفة للربح. وإذا عرض مجموع فرعي للدخل التشغيلي، تدرج خسارة الانخفاض ضمنه."
   },
   {
     "unit": 5,
@@ -1001,7 +1393,15 @@
     ],
     "answerIndex": 1,
     "explanation": "A long-lived asset (asset group) is impaired when its carrying\namount is greater than its fair value. However, a loss equal to\nthis excess is recognized for the impairment only when the\ncarrying amount is not recoverable. The carrying amount is\nnot recoverable when it exceeds the sum of the undiscounted\ncash flows expected from the use and disposition of the asset\n(asset group).\nThe asset is impaired because its carrying amount ($20,000)\nexceeds its fair value ($12,000). This loss ($20,000 – $12,000\n= $8,000) is recognized in full because the carrying amount\n($20,000) exceeds the undiscounted cash flows from the\nasset ($15,000). Thus, the carrying amount is reduced to\n$12,000.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "حددت Blake أن إحدى آلاتها تعرضت لانخفاض في القيمة. لكنها تتوقع مواصلة استخدامها لمدة 3 سنوات كاملة أخرى لعدم وجود سوق نشطة لها. وفيما يلي بياناتها في تاريخ تحديد الانخفاض:\nالتكلفة الأصلية: $22,000\nالقيمة الدفترية: 20,000\nالتدفقات النقدية المستقبلية غير المخصومة المتوقعة من الآلة: 15,000\nالقيمة العادلة (المحددة بحساب القيمة الحالية للتدفقات النقدية المستقبلية المتوقعة من الآلة): 12,000\nما القيمة الدفترية للأصل بعد إثبات خسارة الانخفاض وفق المعالجة الأمريكية؟",
+    "choicesAr": [
+      "$0",
+      "$12,000",
+      "$14,000",
+      "$15,000"
+    ],
+    "explanationAr": "تنخفض قيمة الأصل طويل الأجل (أو مجموعة الأصول) عندما تتجاوز قيمته الدفترية قيمته العادلة، لكن إثبات الخسارة في نموذج الأصول المحتفظ بها للاستخدام مشروط بعدم قابلية القيمة الدفترية للاسترداد. وتكون غير قابلة للاسترداد إذا تجاوزت مجموع التدفقات النقدية غير المخصومة المتوقعة من الاستخدام والاستبعاد.\nانخفضت قيمة الأصل لأن قيمته الدفترية ($20,000) تتجاوز قيمته العادلة ($12,000). وتثبت الخسارة كاملة ($20,000 − $12,000 = $8,000) لأن القيمة الدفترية ($20,000) تتجاوز التدفقات النقدية غير المخصومة ($15,000). ولذلك تخفض القيمة الدفترية إلى $12,000."
   },
   {
     "unit": 5,
@@ -1018,7 +1418,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The impairment loss is the difference between the carrying\namount and fair value of the asset ($20,000 – $12,000 =\n$8,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "حددت Blake أن إحدى آلاتها تعرضت لانخفاض في القيمة. لكنها تتوقع مواصلة استخدامها لمدة 3 سنوات كاملة أخرى لعدم وجود سوق نشطة لها. وفيما يلي بياناتها في تاريخ تحديد الانخفاض:\nالتكلفة الأصلية: $22,000\nالقيمة الدفترية: 20,000\nالتدفقات النقدية المستقبلية غير المخصومة المتوقعة من الآلة: 15,000\nالقيمة العادلة (المحددة بحساب القيمة الحالية للتدفقات النقدية المستقبلية المتوقعة من الآلة): 12,000\nما خسارة الانخفاض التي ينبغي أن تثبتها Blake وفق المعالجة الأمريكية؟",
+    "choicesAr": [
+      "$3,000",
+      "$5,000",
+      "$7,000",
+      "$8,000"
+    ],
+    "explanationAr": "بعد تحقق عدم قابلية الأصل للاسترداد، تساوي خسارة الانخفاض الفرق بين القيمة الدفترية والقيمة العادلة ($20,000 − $12,000 = $8,000)."
   },
   {
     "unit": 5,
@@ -1035,7 +1443,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The gain on the sale is the difference between the sale\nproceeds and the carrying amount of the asset (its remaining\nundepreciated cost). Depreciation must be taken up to the\ntime of sale. Assuming that residual value is $0, annual\ndepreciation is $10,000 ($100,000 ÷ 10 years). Thus, the gain\nis $25,000 {$80,000 sale proceeds – [$100,000 historical cost\n– ($10,000 × 4.5 years)]}.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "باعت منشأة أصلًا قابلًا للإهلاك في منتصف السنة الخامسة من عمره الإنتاجي المقدر البالغ 10 سنوات. وبلغت تكلفته الأصلية $100,000 وكان يهلك بالقسط الثابت. وإذا بيع مقابل $80,000، فما مكسب البيع بافتراض عدم وجود قيمة متبقية؟",
+    "choicesAr": [
+      "$20,000",
+      "$25,000",
+      "$30,000",
+      "$35,000"
+    ],
+    "explanationAr": "يساوي مكسب البيع الفرق بين متحصلات البيع والقيمة الدفترية للأصل (التكلفة غير المهلكة المتبقية). ويحتسب الإهلاك حتى تاريخ البيع. وبافتراض أن القيمة المتبقية $0، يبلغ الإهلاك السنوي $10,000 ($100,000 ÷ 10 سنوات). ولذلك يبلغ المكسب $25,000 {$80,000 متحصلات البيع − [$100,000 التكلفة التاريخية − ($10,000 × 4.5 سنوات)]}."
   },
   {
     "unit": 5,
@@ -1052,7 +1468,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A long-lived asset (asset group) is impaired when its carrying\namount is greater than its fair value. However, a loss equal to\nthis excess is recognized for the impairment only when the\ncarrying amount is not recoverable. The carrying amount is\nnot recoverable when it exceeds the sum of the undiscounted\ncash flows expected from the use and disposition of the asset\n(asset group).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لتحديد ما إذا كان ينبغي إثبات انخفاض قيمة أصل ثابت قابل للإهلاك ومحتفظ به للاستخدام وفق المعايير الأمريكية، ما القيمتان المستخدمتان في اختبار قابلية الاسترداد؟",
+    "choicesAr": [
+      "القيمة الدفترية والقيمة الحالية للتدفقات النقدية المستقبلية المتوقعة من الأصل.",
+      "التكلفة الأصلية والقيمة العادلة للأصل.",
+      "القيمة الدفترية والتدفقات النقدية المستقبلية غير المخصومة المتوقعة من الأصل.",
+      "التكلفة الأصلية والقيمة الدفترية للأصل."
+    ],
+    "explanationAr": "تنخفض قيمة الأصل طويل الأجل (أو مجموعة الأصول) عندما تتجاوز قيمته الدفترية قيمته العادلة. لكن إثبات خسارة بهذا الفرق مشروط بعدم قابلية القيمة الدفترية للاسترداد. وتكون غير قابلة للاسترداد إذا تجاوزت مجموع التدفقات النقدية غير المخصومة المتوقعة من استخدام الأصل واستبعاده."
   },
   {
     "unit": 5,
@@ -1069,7 +1493,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Under IFRS, an impairment loss on an asset may be reversed\nin subsequent periods if a change in the estimates used to\nmeasure the recoverable amount has occurred. But an\nimpairment loss recognized for goodwill must not be reversed.\nUnder U.S. GAAP, a previously recognized impairment loss\nmust not be reversed.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية صحيحة بشأن انخفاض قيمة الأصول طويلة الأجل المحتفظ بها للاستخدام في نموذج التكلفة؟",
+    "choicesAr": [
+      "تتطلب المعايير الأمريكية اختبارًا من خطوة واحدة، وتتطلب IFRS اختبارًا من خطوتين.",
+      "يسمح كلا الإطارين بعكس خسارة الانخفاض في الفترات اللاحقة.",
+      "يحظر كلا الإطارين عكس خسارة الانخفاض في الفترات اللاحقة.",
+      "تحظر المعايير الأمريكية عكس خسارة الانخفاض في الفترات اللاحقة، بينما تسمح IFRS به في حالات محددة."
+    ],
+    "explanationAr": "وفق IFRS يمكن عكس خسارة انخفاض أصل في الفترات اللاحقة إذا تغيرت التقديرات المستخدمة في قياس المبلغ القابل للاسترداد، وفي حدود القيمة الدفترية التي كانت ستنتج لولا الانخفاض بعد الإهلاك أو الإطفاء. ولا يجوز عكس خسارة انخفاض الشهرة. أما وفق المعايير الأمريكية فلا تعكس خسارة انخفاض الأصل طويل الأجل المحتفظ به للاستخدام."
   },
   {
     "unit": 5,
@@ -1086,7 +1518,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The recoverable amount of an asset is the higher of its fair\nvalue minus costs to sell and its value in use. Thus, the\nrecoverable amount is $90,000 [$90,000 value in use >\n($100,000 – $15,000) FV minus costs to sell].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تطبق منشأة IFRS. وفي 31 ديسمبر من السنة 1 قدرت البيانات التالية لمبنى مقرها:\nالقيمة العادلة: $100,000\nتكاليف البيع: $15,000\nقيمة الاستخدام: $90,000\nالقيمة المتبقية: $17,000\nصافي القيمة القابلة للتحقق: $82,000\nما المبلغ القابل للاسترداد للمبنى في 31 ديسمبر من السنة 1؟",
+    "choicesAr": [
+      "$85,000",
+      "$90,000",
+      "$100,000",
+      "$82,000"
+    ],
+    "explanationAr": "المبلغ القابل للاسترداد هو الأعلى من القيمة العادلة ناقص تكاليف البيع (التخلص) وقيمة الاستخدام. لذلك يبلغ $90,000 [$90,000 قيمة الاستخدام أكبر من ($100,000 − $15,000) القيمة العادلة ناقص تكاليف البيع]."
   },
   {
     "unit": 5,
@@ -1103,7 +1543,15 @@
     ],
     "answerIndex": 0,
     "explanation": "An impairment loss is recognized when a long-lived asset’s\ncarrying amount exceeds the sum of its undiscounted cash\nflows. Because the sum of the undiscounted cash flows\n($130,000) exceeds the carrying amount ($120,000), the\ncarrying amount is recoverable. Thus, no impairment is\nrecognized.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لدى شركة أصل طويل الأجل محتفظ به للاستخدام بقيمة دفترية $120,000 وتدفقات نقدية مستقبلية متوقعة $130,000 وقيمة حالية لهذه التدفقات $100,000 وقيمة سوقية $105,000. ما خسارة الانخفاض وفق المعايير الأمريكية؟",
+    "choicesAr": [
+      "$0",
+      "$5,000",
+      "$15,000",
+      "$20,000"
+    ],
+    "explanationAr": "يجرى اختبار قابلية الاسترداد بمقارنة القيمة الدفترية للأصل طويل الأجل بمجموع التدفقات النقدية غير المخصومة. ولأن مجموع التدفقات غير المخصومة ($130,000) يتجاوز القيمة الدفترية ($120,000)، فإنها قابلة للاسترداد. لذا لا تثبت خسارة انخفاض."
   },
   {
     "unit": 5,
@@ -1137,7 +1585,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The recoverable amount of an asset is the greater of its fair\nvalue minus cost to sell or value in use. Value in use is the\npresent value of the asset’s expected cash flows. The\nrecognized impairment loss is the excess of the asset’s\ncarrying amount over its recoverable amount.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "وفق IFRS تنخفض قيمة الأصل عندما تتجاوز قيمته الدفترية مبلغه القابل للاسترداد. ما المبلغ القابل للاسترداد؟",
+    "choicesAr": [
+      "الأقل من القيمة العادلة زائد تكاليف البيع أو قيمة الاستخدام.",
+      "الأعلى من القيمة العادلة زائد تكاليف البيع أو قيمة الاستخدام.",
+      "الأقل من القيمة العادلة ناقص تكاليف البيع أو قيمة الاستخدام.",
+      "الأعلى من القيمة العادلة ناقص تكاليف البيع أو قيمة الاستخدام."
+    ],
+    "explanationAr": "المبلغ القابل للاسترداد هو الأعلى من القيمة العادلة ناقص تكاليف البيع (التخلص) وقيمة الاستخدام. وتمثل قيمة الاستخدام القيمة الحالية للتدفقات النقدية المتوقعة من الأصل. وتساوي خسارة الانخفاض المعترف بها مقدار زيادة القيمة الدفترية على المبلغ القابل للاسترداد."
   },
   {
     "unit": 5,
@@ -1154,7 +1610,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The cost of an acquired entity minus the net amount assigned\nto assets acquired and liabilities assumed is goodwill.\nGoodwill is not amortized. However, goodwill is assigned to a\nreporting unit that benefited from the business combination for\nthe purpose of testing impairment. Testing occurs each year at\nthe same time, but different reporting units may be tested at\ndifferent times. Furthermore, additional testing also may be\nindicated. Potential impairment of goodwill is deemed to exist\nonly if the carrying amount (including goodwill) of a reporting\nunit is greater than its fair value. Thus, accounting for goodwill\nis based on the units of the combined entity into which the\nacquired entity was absorbed. A reporting unit is an operating\nsegment or one of its components, that is, one level below an\noperating segment. A component qualifies as a reporting unit\nif (1) it is a business for which discrete financial information is\navailable, and (2) segment management regularly reviews its\noperating results. However, similar components are\naggregated. These provisions, including the determination of\noperating segments, apply even if the reporting entity is not\nrequired to report segment information.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "على أي مستوى ينبغي اختبار انخفاض قيمة الشهرة وفق النموذج العام للمعايير الأمريكية؟",
+    "choicesAr": [
+      "كل أصل طويل الأجل قابل للتحديد.",
+      "كل وحدة تقرير.",
+      "كل وحدة استحواذ.",
+      "المنشأة بأكملها."
+    ],
+    "explanationAr": "تنشأ الشهرة في تجميع الأعمال من الفرق بين المقابل وأي حقوق ذات صلة وصافي المبالغ المخصصة للأصول والالتزامات القابلة للتحديد، وفق شروط القياس المنطبقة. ولا تطفأ الشهرة وفق النموذج الأمريكي العام للشركات العامة. وتخصص لوحدة تقرير استفادت من تجميع الأعمال بغرض اختبار الانخفاض. ويجرى الاختبار سنويًا في الوقت نفسه، مع إمكان اختلاف موعد الاختبار بين الوحدات، وقد يلزم اختبار إضافي عند وجود مؤشرات. ويظهر انخفاض الشهرة عند تجاوز القيمة الدفترية لوحدة التقرير، شاملة الشهرة، قيمتها العادلة، وتحد الخسارة بمبلغ الشهرة المخصصة. وتكون وحدة التقرير قطاعًا تشغيليًا أو مكونًا منه في المستوى الأدنى مباشرة. ويعد المكون وحدة تقرير إذا (1) كان نشاطًا تتاح عنه معلومات مالية منفصلة، و(2) كانت إدارة القطاع تراجع نتائجه التشغيلية بانتظام. وتجمع المكونات المتشابهة وفق الشروط المنطبقة. وتسري هذه الأحكام حتى على المنشآت غير الملزمة بالإفصاح عن القطاعات."
   },
   {
     "unit": 5,
@@ -1171,7 +1635,15 @@
     ],
     "answerIndex": 1,
     "explanation": "An accelerated method reduces the carrying amount of the\nasset more rapidly in the early years of the useful life than\ndoes the straight-line method. Hence, the effect of an early\nsale is to increase the gain or decrease the loss that would\nhave been recognized under the straight-line method.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عند بيع أصل ثابت بعمر إنتاجي مقدر 5 سنوات خلال السنة الثانية، كيف يؤثر استخدام طريقة إهلاك معجل بدلًا من القسط الثابت على مكسب أو خسارة البيع؟\nالمكسب | الخسارة",
+    "choicesAr": [
+      "زيادة | زيادة",
+      "زيادة | انخفاض",
+      "انخفاض | زيادة",
+      "انخفاض | انخفاض"
+    ],
+    "explanationAr": "تخفض طريقة الإهلاك المعجل القيمة الدفترية للأصل بسرعة أكبر خلال السنوات الأولى مقارنة بالقسط الثابت. ولذلك يؤدي البيع المبكر، مع ثبات سعر البيع والعوامل الأخرى، إلى زيادة المكسب أو خفض الخسارة التي كانت ستثبت وفق القسط الثابت."
   },
   {
     "unit": 5,
@@ -1188,7 +1660,15 @@
     ],
     "answerIndex": 1,
     "explanation": "A long-lived asset is impaired when its carrying amount is\ngreater than its fair value. However, a loss equal to this\nexcess is recognized for the impairment only when the\ncarrying amount is not recoverable. The carrying amount is\nnot recoverable when it exceeds the sum of the undiscounted\ncash flows expected from the use and disposition of the asset.\nTesting should occur when events or changes in\ncircumstances indicate that the carrying amount may not be\nrecoverable.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "متى ينبغي اختبار قابلية استرداد أصل طويل الأجل محتفظ به للاستخدام وفق المعايير الأمريكية؟",
+    "choicesAr": [
+      "عند إعداد القوائم المالية الخارجية.",
+      "عندما تشير الأحداث أو التغيرات في الظروف إلى احتمال عدم استرداد قيمته الدفترية.",
+      "عندما تقل قيمته الدفترية عن قيمته العادلة.",
+      "عندما تنخفض قيمته العادلة ويعد الانخفاض دائمًا."
+    ],
+    "explanationAr": "تنخفض قيمة الأصل طويل الأجل عندما تتجاوز قيمته الدفترية قيمته العادلة، لكن إثبات خسارة بهذا الفرق مشروط بعدم قابلية القيمة الدفترية للاسترداد. وتكون غير قابلة للاسترداد إذا تجاوزت مجموع التدفقات النقدية غير المخصومة المتوقعة من الاستخدام والاستبعاد. ويجرى الاختبار عند وجود أحداث أو تغيرات تشير إلى احتمال عدم قابلية الاسترداد."
   },
   {
     "unit": 5,
@@ -1205,7 +1685,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Such guidance applies to the long-lived assets of an entity that\nare to be held and used or disposed of, including those that\nare part of a group with other assets and liabilities not subject\nto such guidance. The unit of accounting for such a long-lived\nasset is the asset group. If a long-lived asset(s) is to be held\nand used, the asset group is the lowest level at which\nidentifiable cash flows are largely independent of those of\nother groups. If the carrying amount of a long-lived asset\n(asset group) is not recoverable, a loss equal to the excess of\nthat carrying amount over the fair value is recognized.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "على أي مما يلي تطبق إرشادات الاعتراف بخسائر انخفاض الأصول طويلة الأجل المحتفظ بها للاستخدام وقياسها وفق المعايير الأمريكية؟",
+    "choicesAr": [
+      "الشهرة.",
+      "مجموعة أصول.",
+      "أداة مالية.",
+      "أي أصل غير ملموس لا يخضع للإطفاء."
+    ],
+    "explanationAr": "تطبق الإرشادات على الأصول طويلة الأجل المحتفظ بها للاستخدام أو التي ستستبعد، مع مراعاة متطلبات كل حالة، بما فيها الأصول التي تعد جزءًا من مجموعة تحتوي أصولًا والتزامات أخرى لا تخضع للإرشادات ذاتها. ووحدة المحاسبة للأصل هي مجموعة الأصول. وبالنسبة للأصل المحتفظ به للاستخدام، تكون المجموعة أدنى مستوى تكون عنده التدفقات النقدية القابلة للتحديد مستقلة بدرجة كبيرة عن تدفقات المجموعات الأخرى. وإذا لم تكن القيمة الدفترية قابلة للاسترداد، تثبت خسارة بمقدار زيادتها على القيمة العادلة، إن وجدت."
   },
   {
     "unit": 5,
@@ -1239,7 +1727,15 @@
     ],
     "answerIndex": 0,
     "explanation": "When an impairment of an intangible asset is recognized, the\nprevious carrying amount of the asset is reduced by the\nimpairment loss. The adjusted carrying amount is the new\naccounting basis. Thus, it cannot be increased subsequently\nfor a change in fair value. This rule applies whether the\nintangible asset has a finite or an indefinite useful life.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بعد إثبات خسارة انخفاض أصل غير ملموس، تصبح قيمته الدفترية المعدلة أساسه المحاسبي الجديد. أي العبارات التالية صحيحة بشأن العكس اللاحق لخسارة الانخفاض المثبتة سابقًا وفق المعايير الأمريكية في الحالة المعروضة؟",
+    "choicesAr": [
+      "يحظر العكس.",
+      "يلزم العكس عندما يعد دائمًا.",
+      "يجب الإفصاح عن العكس في الإيضاحات.",
+      "يشجع العكس دون إلزام."
+    ],
+    "explanationAr": "عند إثبات انخفاض قيمة أصل غير ملموس، تخفض قيمته الدفترية السابقة بمقدار خسارة الانخفاض. وتصبح القيمة الدفترية المعدلة أساس القياس الجديد. ولذلك لا تزاد لاحقًا بسبب تغير القيمة العادلة وفق نموذج الأصول المستخدمة في المعايير الأمريكية. وتسري القاعدة على الأصل غير الملموس ذي العمر المحدد أو غير المحدد."
   },
   {
     "unit": 5,
@@ -1273,6 +1769,14 @@
     ],
     "answerIndex": 0,
     "explanation": "Intangible assets include those with finite useful lives (an\namortized intangible asset) and those with indefinite useful\nlives (a nonamortized intangible asset). An intangible asset\nwith a finite useful life (e.g., a patent) is reviewed for\nimpairment when events or changes in circumstances indicate\nthat its carrying amount may not be recovered. The test for\nimpairment is a two-step test: (1) perform the recoverability\ntest (the carrying amount is not recoverable if it exceeds the\nsum of the undiscounted future cash flows expected from the\nuse and disposition of the asset) and (2) determine the\nimpairment loss for the excess of the carrying amount over the\nfair value. A patent is an intangible asset with a finite useful\nlife, so it is subject to the recoverability test when testing for\nimpairment.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الأصول غير الملموسة التالية يخضع لاختبار قابلية الاسترداد عند اختبار انخفاض القيمة وفق المعايير الأمريكية؟",
+    "choicesAr": [
+      "براءة اختراع.",
+      "الشهرة.",
+      "تكاليف البحث والتطوير لبراءة اختراع.",
+      "علامة تجارية ذات عمر إنتاجي غير محدد."
+    ],
+    "explanationAr": "تشمل الأصول غير الملموسة أصولًا ذات عمر محدد تخضع للإطفاء وأخرى ذات عمر غير محدد لا تطفأ. ويختبر الأصل ذو العمر المحدد، مثل براءة الاختراع، عند وجود مؤشرات إلى احتمال عدم استرداد قيمته الدفترية. ويتكون اختبار الانخفاض من خطوتين: (1) اختبار قابلية الاسترداد، حيث تكون القيمة غير قابلة للاسترداد إذا تجاوزت مجموع التدفقات النقدية المستقبلية غير المخصومة المتوقعة من الاستخدام والاستبعاد، و(2) قياس الخسارة بمقدار زيادة القيمة الدفترية على القيمة العادلة، إن وجدت. وبراءة الاختراع أصل ذو عمر محدد، لذا تخضع لاختبار قابلية الاسترداد."
   }
 ]
