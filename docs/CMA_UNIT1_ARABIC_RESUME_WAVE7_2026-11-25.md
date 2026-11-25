@@ -1,0 +1,3 @@
+# Unit 1 Arabic Wave 7
+
+Nine educational Arabic drafts: §6 Q21–28 and Q30. Unit 1: 202/217 (93.1%); combined imported bank: 1355/2443. Section 6: 25/30 complete; Unit 1 initial review complete, 15 held, zero unreviewed. Q29 p.216 held: the affiliate classification and mandatory fair-value treatment in the explanation require clarification of the applicable definition and measurement exceptions. Q28 clarifies the offset between shares issued for acquisition-related finder fees and the expense. Original source text and keys unchanged; numeric parity and independent calculations checked. Original-page verification pending. Wave 7 added to PR 432 to avoid stacked squash conflicts. Next: Unit 2.

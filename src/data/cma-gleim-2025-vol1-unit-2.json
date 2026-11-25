@@ -31,7 +31,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The company uses the allowance method. Thus, when a\nspecific amount is written off, the entry reduces the allowance\nfor credit losses and reduces accounts receivable. The net\neffect is no change to total current assets. The write-off of a\nparticular account has no effect on expenses, net income, and\ntotal current assets.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم شركة طريقة المخصص للمحاسبة عن الذمم المدينة غير القابلة للتحصيل. وبعد إثبات مصروف خسائر الائتمان المقدر للسنة الحالية، قررت شطب حساب عميل أعلن إفلاسه، قيمته $10,000، خلال السنة نفسها. ما أثر الشطب على صافي دخل السنة وإجمالي الأصول المتداولة على الترتيب؟\nصافي الدخل | إجمالي الأصول المتداولة",
+    "choicesAr": [
+      "انخفاض | انخفاض",
+      "لا أثر | انخفاض",
+      "انخفاض | لا أثر",
+      "لا أثر | لا أثر"
+    ],
+    "explanationAr": "تستخدم الشركة طريقة المخصص؛ لذا عند شطب مبلغ محدد يُخفض مخصص خسائر الائتمان وتُخفض الذمم المدينة بالمبلغ نفسه. ومن ثم لا يتغير إجمالي الأصول المتداولة بالصافي، ولا يؤثر شطب الحساب المحدد في المصروفات أو صافي الدخل أو إجمالي الأصول المتداولة."
   },
   {
     "unit": 2,
@@ -65,7 +73,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Credit loss expense is based on the income statement\napproach. It treats credit loss expense as a function of sales\non account. Thus, it is projected to be $300,000 ($10,000,000\n× 3%). The entry to record credit loss increases the balance of\nthe allowance for credit losses. Total assets decrease by\n$300,000 because the allowance for credit loss account is a\ncontra asset. On the other side of the entry, stockholders’\nequity decreases by the amount of the credit loss expense.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "استنادًا إلى متوسط القطاع، تقدر شركة أن خسائر الائتمان تعادل في المتوسط 3% من المبيعات الآجلة. بلغ رصيد مخصص خسائر الائتمان في بداية السنة 3 مبلغ $140,000. وخلال السنة 3 بلغت المبيعات الآجلة $10,000,000، وتبين تعذر تحصيل حسابات بمبلغ $100,000، كما حُصّل حساب بمبلغ $20,000 سبق شطبه. ما مقدار الزيادة في مخصص خسائر الائتمان التي يتضمنها قيد إثبات مصروف خسائر الائتمان في نهاية السنة 3؟",
+    "choicesAr": [
+      "$300,000",
+      "$260,000",
+      "$240,000",
+      "$160,000"
+    ],
+    "explanationAr": "في هذا التمرين يُستخدم مدخل قائمة الدخل، الذي يقدر مصروف خسائر الائتمان بدلالة المبيعات الآجلة. لذلك يبلغ المصروف المقدر $300,000 ($10,000,000 × 3%). ويزيد قيد الإثبات رصيد مخصص خسائر الائتمان. وتنخفض الأصول الإجمالية بمبلغ $300,000 لأن المخصص حساب مقابل للأصول. وفي الطرف الآخر من القيد تنخفض حقوق المساهمين بمقدار المصروف، قبل الأثر الضريبي. وهذه طريقة تقدير تعليمية؛ يجب أن يحقق المخصص الفعلي متطلبات قياس خسائر الائتمان المتوقعة المنطبقة."
   },
   {
     "unit": 2,
@@ -82,7 +98,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The open trade receivables balance is calculated as follows:\nPrevious ending balance                $300,000\nAdd: Sales to customers (terms net 30) 150,000\nMinus: Collections during period       (200,000)\nOpen trade receivables reported          $250,000",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "جمعت شركة صناعية المعلومات التالية:\n• مبيعات منتجات للعملاء خلال الفترة بشروط سداد صافي 30 يومًا بمبلغ $150,000.\n• مبيعات منتجات لعميل خلال الفترة بموجب ورقة قبض قيمتها $25,000 بشروط خاصة صافي 180 يومًا.\n• رصيد الذمم التجارية في نهاية الفترة السابقة $300,000.\n• تحصيلات الذمم التجارية المفتوحة خلال الفترة $200,000.\n• إيراد إيجار مكتسب ومستحق لم يُحصل بعد من الاتحاد الائتماني للشركة مقابل استخدام مرافقها، بمبلغ $2,000.\nما رصيد الذمم التجارية المفتوحة الواجب عرضه في قائمة المركز المالي للفترة؟",
+    "choicesAr": [
+      "$250,000",
+      "$252,000",
+      "$275,000",
+      "$277,000"
+    ],
+    "explanationAr": "يُحسب رصيد الذمم التجارية المفتوحة كما يلي:\nرصيد نهاية الفترة السابقة: $300,000\nيضاف: مبيعات العملاء (صافي 30 يومًا): 150,000\nيطرح: تحصيلات الفترة: (200,000)\nرصيد الذمم التجارية المفتوحة المعروض: $250,000.\nوتستبعد ورقة القبض وإيراد الإيجار من هذا الرصيد المحدد."
   },
   {
     "unit": 2,
@@ -116,7 +140,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The entity uses the percentage of accounts receivable method\nto estimate the allowance. The year-end balance should be\n$90,000 ($3,000,000 A/R × 3%). Hence, the year-end\nadjustment is $40,000 ($90,000 – $50,000) unadjusted\nbalance.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لدى منشأة الأرصدة التالية قبل تسويات نهاية السنة:\nالمبيعات الآجلة: $10,000,000\nالذمم المدينة: 3,000,000\nمخصص خسائر الائتمان: 50,000\nتستخدم المنشأة نسبة 3% من الذمم المدينة لتحديد مخصص خسائر الائتمان في نهاية السنة. ما مبلغ تسوية المخصص في نهاية السنة؟",
+    "choicesAr": [
+      "$0",
+      "$40,000",
+      "$90,000",
+      "$140,000"
+    ],
+    "explanationAr": "تستخدم المنشأة طريقة النسبة من الذمم المدينة لتقدير المخصص. وينبغي أن يبلغ رصيد نهاية السنة $90,000 ($3,000,000 ذمم مدينة × 3%). وبالتالي تبلغ تسوية نهاية السنة $40,000 ($90,000 − $50,000)، بافتراض أن الرصيد قبل التسوية دائن."
   },
   {
     "unit": 2,
@@ -133,7 +165,15 @@
     ],
     "answerIndex": 0,
     "explanation": "When an account receivable is written off, both accounts\nreceivable and the allowance for credit losses are decreased.\nIf an account previously written off is collected, the account\nmust be reinstated by increasing both accounts receivable and\nthe allowance. The account receivable is then decreased by\nthe amount of cash collected.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عند استخدام طريقة المخصص لإثبات خسائر الائتمان، ما أثر قيد شطب حساب معين؟",
+    "choicesAr": [
+      "يخفض الذمم المدينة ومخصص خسائر الائتمان معًا.",
+      "يخفض الذمم المدينة ويزيد مخصص خسائر الائتمان.",
+      "يزيد مخصص خسائر الائتمان ويخفض صافي الدخل.",
+      "يخفض الذمم المدينة وصافي الدخل معًا."
+    ],
+    "explanationAr": "عند شطب حساب مدين، تنخفض الذمم المدينة ومخصص خسائر الائتمان معًا. وعند تحصيل حساب سبق شطبه، يمكن في أسلوب التسجيل المعروض إعادة إثباته بزيادة الذمم المدينة والمخصص، ثم تخفيض الذمم المدينة بمبلغ النقد المحصل."
   },
   {
     "unit": 2,
@@ -150,7 +190,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The aging schedule determines the balance in the allowance\nfor credit losses. Of the accounts that are no more than 30\ndays old, the amount uncollectible is $3,000 ($60,000 × 5%).\nAccounts that are 31-60 days old and over 60 days old have\nestimated uncollectible balances of $400 ($4,000 × 10%) and\n$1,400 ($2,000 × 70%), respectively. Hence, the amount\nrecorded in the allowance for credit losses is $4,800 ($3,000 +\n$400 + $1,400). The $1,000 balance already in the account is\ndisregarded because the aging schedule determines the\nbalance that should be in the account.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 31 مارس، بلغ الرصيد الدائن غير المعدل لمخصص خسائر الائتمان $1,000. وأظهر تحليل الذمم التجارية في ذلك التاريخ ما يلي:\nعمر الدين | المبلغ | نسبة عدم التحصيل المقدرة\n0-30 يومًا | $60,000 | 5%\n31-60 يومًا | 4,000 | 10%\nأكثر من 60 يومًا | 2,000 | 70%\nما مبلغ مخصص خسائر الائتمان الواجب عرضه في قائمة المركز المالي في 31 مارس؟",
+    "choicesAr": [
+      "$4,800",
+      "$4,000",
+      "$3,800",
+      "$3,000"
+    ],
+    "explanationAr": "يحدد جدول أعمار الذمم الرصيد المطلوب لمخصص خسائر الائتمان. وللذمم التي لا يتجاوز عمرها 30 يومًا يبلغ المبلغ غير القابل للتحصيل $3,000 ($60,000 × 5%). أما الذمم التي يبلغ عمرها 31-60 يومًا والتي يتجاوز عمرها 60 يومًا فتبلغ خسائرها المقدرة على الترتيب $400 ($4,000 × 10%) و$1,400 ($2,000 × 70%). لذلك يبلغ رصيد المخصص المطلوب $4,800 ($3,000 + $400 + $1,400). ولا يُطرح الرصيد القائم البالغ $1,000 من الرصيد المطلوب؛ إذ يحدد جدول الأعمار الرصيد النهائي وليس مبلغ قيد التسوية."
   },
   {
     "unit": 2,
@@ -167,7 +215,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The entry to record credit loss expense under the allowance\nmethod is to record credit loss expense and increase the\nallowance account. When a specific account is then written\noff, both the allowance and accounts receivable are reduced.\nNet income is affected when credit loss expense is\nrecognized, not at the time of the write-off. Because accounts\nreceivable and the allowance account are decreased by the\nsame amount, a write-off of an account also has no effect on\nthe net amount of accounts receivable.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "وفق طريقة المخصص لإثبات خسائر الائتمان، ما أثر قيد شطب حساب غير قابل للتحصيل؟",
+    "choicesAr": [
+      "يزيد مخصص خسائر الائتمان.",
+      "لا يؤثر في مخصص خسائر الائتمان.",
+      "لا يؤثر في صافي الدخل.",
+      "يخفض صافي الدخل."
+    ],
+    "explanationAr": "عند إثبات مصروف خسائر الائتمان وفق طريقة المخصص، يُثبت المصروف ويزداد المخصص. وعند شطب حساب محدد بعد ذلك، تنخفض الذمم المدينة والمخصص معًا. ويتأثر صافي الدخل عند إثبات المصروف، لا عند الشطب مقابل المخصص. ولأن الذمم المدينة والمخصص ينخفضان بالمبلغ نفسه، فلا يؤثر الشطب كذلك في صافي الذمم المدينة."
   },
   {
     "unit": 2,
@@ -184,7 +240,15 @@
     ],
     "answerIndex": 0,
     "explanation": "When credit losses are written off, an entry is made to\ndecrease both the allowance and accounts receivable. The\nbeginning balance in the allowance account is $90,000, the\nending balance is $100,000, and the credit loss expense is\n$16,000. Because write-offs equal the beginning balance, plus\nthe credit loss expense, minus the ending balance, $6,000 of\naccounts must have been written off.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بلغ مخصص خسائر الائتمان لمنشأة $100,000 في نهاية السنة 2 و$90,000 في نهاية السنة 1. وللسنة المنتهية في 31 ديسمبر من السنة 2، أظهرت قائمة دخل المنشأة مصروف خسائر ائتمان قدره $16,000. ما المبلغ الذي أثبتته المنشأة في السنة 2 لشطب خسائر الائتمان الفعلية؟",
+    "choicesAr": [
+      "$6,000",
+      "$10,000",
+      "$16,000",
+      "$26,000"
+    ],
+    "explanationAr": "عند شطب خسائر الائتمان، يُخفض المخصص وتُخفض الذمم المدينة. يبلغ رصيد أول المدة للمخصص $90,000 ورصيد آخر المدة $100,000 ومصروف خسائر الائتمان $16,000. وبافتراض عدم وجود تحصيلات لحسابات مشطوبة أو حركات أخرى، فإن الشطب يساوي رصيد أول المدة مضافًا إليه المصروف مطروحًا منه رصيد آخر المدة، وبالتالي يبلغ الشطب $6,000."
   },
   {
     "unit": 2,
@@ -201,7 +265,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The allowance for credit losses before year-end adjustment is\n$28,000 ($60,000 beginning balance – $36,000 write-offs +\n$4,000 recovered). The balance should be $50,000 ($700,000\nyear-end A/R – $650,000 NRV based on aging). Thus, the\nallowance account and credit loss expense should be adjusted\n$22,000 ($50,000 desired balance – $28,000), which is the\nbalance of the credit loss expense reported on the income\nstatement.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "حددت شركة William صافي القيمة القابلة للتحقق (NRV) لذممها المدينة في 31 ديسمبر استنادًا إلى تحليل أعمار الذمم بمبلغ $650,000. والبيانات الإضافية كما يلي:\nمخصص خسائر الائتمان — 1/1: $60,000\nخسائر الائتمان للحسابات المشطوبة خلال السنة: 36,000\nالحسابات المشطوبة التي استُردت خلال السنة: 4,000\nالذمم المدينة في 12/31: 700,000\nما مصروف خسائر الائتمان لشركة William خلال السنة؟",
+    "choicesAr": [
+      "$10,000",
+      "$22,000",
+      "$30,000",
+      "$42,000"
+    ],
+    "explanationAr": "يبلغ مخصص خسائر الائتمان قبل تسوية نهاية السنة $28,000 ($60,000 رصيد أول المدة − $36,000 شطب + $4,000 استرداد). وينبغي أن يبلغ الرصيد $50,000 ($700,000 ذمم مدينة آخر السنة − $650,000 صافي القيمة القابلة للتحقق وفق تحليل الأعمار). لذلك ينبغي زيادة المخصص ومصروف خسائر الائتمان بمبلغ $22,000 ($50,000 الرصيد المطلوب − $28,000)، وهو المصروف المعروض في قائمة الدخل."
   },
   {
     "unit": 2,

@@ -47,3 +47,27 @@ test("Unit 1 consolidation wave 5 preserves source, answers and numerical parity
  assert.equal(900-(100+200+200+400-200),200);assert.equal(1000000-800000,200000);assert.equal(600000-(850000-350000),100000);
  assert.ok(rows.filter(r=>r.stemAr&&r.choicesAr&&r.explanationAr).length>=185);
 });
+
+const wave6Pins=new Map([[11,[198,3,"bdd1ea4a"]],[12,[199,2,"86a3d15c"]],[14,[201,1,"45a00419"]],[15,[202,3,"66835b1b"]],[16,[203,2,"1881971e"]],[17,[204,3,"537c6488"]],[18,[205,2,"0124cbcb"]],[20,[207,0,"f5690e69"]]]);
+test("Unit 1 consolidation wave 6 preserves source, answers and numerical parity",()=>{
+ for(const [n,[page,index,hash]] of wave6Pins){const r=rows.find(r=>r.section===6&&r.number===n);assert.equal(r.page,page);assert.equal(r.answerIndex,index);assert.equal(r.answerStatus,"source");assert.equal(fingerprint(JSON.stringify([r.stem,r.choices,r.explanation,r.answerIndex,r.page])),hash);assert.equal(validateCmaTranslation({question:{en:r.stem},choices:{en:r.choices},explanation:{en:r.explanation}},{question:r.stemAr,choices:r.choicesAr,explanation:r.explanationAr}).valid,true,String(n));for(const [en,ar] of [[r.stem,r.stemAr],...r.choices.map((c,i)=>[c,r.choicesAr[i]]),[r.explanation,r.explanationAr]])assert.deepEqual(cmaNumericTokens(ar),cmaNumericTokens(en),String(n));}
+ const adapter=read("src/data/cma-questions-gleim-2025-vol1.ts");for(const n of [13,19]){const r=rows.find(r=>r.section===6&&r.number===n);assert.equal(r.stemAr,undefined);assert.ok(adapter.includes('"1.6.'+n+'"'));}
+ assert.equal(1400000-100000*10,400000);assert.equal(4+1,5);assert.equal(600000,Number(rows.find(r=>r.section===6&&r.number===20).choices[0].replace(/[$,]/g,"")));
+ assert.ok(rows.filter(r=>r.stemAr&&r.choicesAr&&r.explanationAr).length>=193);
+});
+
+const wave7Pins=new Map([[21,[208,3,"274f60ed"]],[22,[209,0,"cbf9c68c"]],[23,[210,0,"95546555"]],[24,[211,2,"7173dcfe"]],[25,[212,1,"4f8fe329"]],[26,[213,3,"cde93444"]],[27,[214,3,"7cfd24b1"]],[28,[215,2,"bcfe809f"]],[30,[217,0,"eb908231"]]]);
+test("Unit 1 consolidation wave 7 preserves source, answers and numerical parity",()=>{
+ for(const [n,[page,index,hash]] of wave7Pins){const r=rows.find(r=>r.section===6&&r.number===n);assert.equal(r.page,page);assert.equal(r.answerIndex,index);assert.equal(r.answerStatus,"source");assert.equal(fingerprint(JSON.stringify([r.stem,r.choices,r.explanation,r.answerIndex,r.page])),hash);assert.equal(validateCmaTranslation({question:{en:r.stem},choices:{en:r.choices},explanation:{en:r.explanation}},{question:r.stemAr,choices:r.choicesAr,explanation:r.explanationAr}).valid,true,String(n));for(const [en,ar] of [[r.stem,r.stemAr],...r.choices.map((c,i)=>[c,r.choicesAr[i]]),[r.explanation,r.explanationAr]])assert.deepEqual(cmaNumericTokens(ar),cmaNumericTokens(en),String(n));}
+ const adapter=read("src/data/cma-questions-gleim-2025-vol1.ts");const held=["1.4.23","1.5.16","1.5.17","1.5.39","1.5.41","1.5.54","1.5.59","1.5.64","1.5.65","1.5.66","1.6.6","1.6.9","1.6.13","1.6.19","1.6.29"];for(const r of rows.filter(r=>!r.stemAr)){const id=[r.unit,r.section,r.number].join(".");assert.ok(held.includes(id),id);assert.ok(adapter.includes('"'+id+'"'));}assert.equal(rows.filter(r=>!r.stemAr).length,held.length);
+ assert.equal(450000+200000-100000,550000);assert.equal(2000000+500000+100000,2600000);assert.equal(1000000+250000,1250000);assert.equal(8000000-5000000,3000000);assert.equal(8000000+800000-800000,8000000);assert.equal(rows.filter(r=>r.stemAr&&r.choicesAr&&r.explanationAr).length,202);
+});
+
+const unit2Rows=JSON.parse(read("src/data/cma-gleim-2025-vol1-unit-2.json"));
+const unit2Wave1Pins=new Map([[2,[220,3,"6bd61b9d"]],[4,[223,0,"285481be"]],[5,[224,0,"c29816bf"]],[7,[226,1,"d47733cb"]],[8,[227,0,"7decd2c5"]],[9,[228,0,"a25f9d24"]],[10,[229,2,"1e391dd4"]],[11,[230,0,"92a71e94"]],[12,[231,1,"5a052df2"]]]);
+test("Unit 2 receivables wave 1 preserves source, answers and numerical parity",()=>{
+ for(const [n,[page,index,hash]] of unit2Wave1Pins){const r=unit2Rows.find(r=>r.section===1&&r.number===n);assert.equal(r.page,page);assert.equal(r.answerIndex,index);assert.equal(r.answerStatus,"source");assert.equal(fingerprint(JSON.stringify([r.stem,r.choices,r.explanation,r.answerIndex,r.page])),hash);assert.equal(validateCmaTranslation({question:{en:r.stem},choices:{en:r.choices},explanation:{en:r.explanation}},{question:r.stemAr,choices:r.choicesAr,explanation:r.explanationAr}).valid,true,String(n));for(const [en,ar] of [[r.stem,r.stemAr],...r.choices.map((c,i)=>[c,r.choicesAr[i]]),[r.explanation,r.explanationAr]])assert.deepEqual(cmaNumericTokens(ar),cmaNumericTokens(en),String(n));}
+ const adapter=read("src/data/cma-questions-gleim-2025-vol1.ts");for(const n of [1,3,6]){const r=unit2Rows.find(r=>r.section===1&&r.number===n);assert.equal(r.stemAr,undefined);assert.ok(adapter.includes('"2.1.'+n+'"'));}
+ assert.equal(10000000*.03,300000);assert.equal(300000+150000-200000,250000);assert.equal(3000000*.03-50000,40000);assert.equal(60000*.05+4000*.1+2000*.7,4800);assert.equal(90000+16000-100000,6000);assert.equal((700000-650000)-(60000-36000+4000),22000);
+ assert.ok(unit2Rows.filter(r=>r.stemAr&&r.choicesAr&&r.explanationAr).length>=9);
+});
