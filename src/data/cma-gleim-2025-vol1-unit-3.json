@@ -640,7 +640,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Assuming the fair value option has not been elected,\nunrealized holding gains and losses on available-for-sale debt\nsecurities are reported in other comprehensive income.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية عن الأوراق المالية القابلة للتداول غير صحيحة وفق المعايير الأمريكية؟",
+    "choicesAr": [
+      "تثبت المكاسب والخسائر غير المحققة لمحفظة أوراق حقوق الملكية للمتاجرة في قائمة الدخل.",
+      "تثبت المكاسب والخسائر غير المحققة لمحفظة أوراق الدين المتاحة للبيع في قائمة الدخل.",
+      "تتكون محفظة المحتفظ بها حتى الاستحقاق من أوراق الدين فقط.",
+      "يمكن تحويل أوراق الدين من المحتفظ بها حتى الاستحقاق إلى المتاحة للبيع."
+    ],
+    "explanationAr": "بافتراض عدم اختيار خيار القيمة العادلة، تعرض مكاسب وخسائر الحيازة غير المحققة لأوراق الدين المتاحة للبيع في الدخل الشامل الآخر، مع مراعاة أحكام خسائر الائتمان والتحوط."
   },
   {
     "unit": 3,
@@ -657,7 +665,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Available-for-sale debt securities should be measured at fair\nvalue in the balance sheet. Thus, the bond should be reported\nat its fair value of $945,000 to reflect the unrealized holding\ngain (change in fair value).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 2 يوليو من السنة 4 اشترت Wynn كاستثمار قصير الأجل سندًا لشركة Kean بقيمة اسمية $1 مليون وفائدة 8% مقابل $910,000 بالإضافة إلى الفائدة المستحقة، بعائد 10%. تستحق السندات في 1 يناير من السنة 11 وتدفع الفائدة سنويًا في 1 يناير. وفي 31 ديسمبر من السنة 4 بلغت قيمتها العادلة $945,000. وفي 13 فبراير من السنة 5 باعتها Wynn مقابل $920,000. بأي مبلغ تعرض السند في قائمة المركز المالي في 31 ديسمبر من السنة 4 إذا صنف متاحًا للبيع؟",
+    "choicesAr": [
+      "$910,000",
+      "$920,000",
+      "$945,000",
+      "$950,000"
+    ],
+    "explanationAr": "تقاس أوراق الدين المتاحة للبيع بالقيمة العادلة في قائمة المركز المالي. لذا يعرض السند بقيمته العادلة البالغة $945,000 لتعكس تغير القيمة العادلة ومكسب الحيازة غير المحقق."
   },
   {
     "unit": 3,
@@ -674,7 +690,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Unrealized holding gains and losses on available-for-sale debt\nsecurities, including those classified as current assets, are not\nincluded in earnings but ordinarily are reported in OCI, net of\ntax effects (ignored in this question). At December 31, Year 2,\nOCI should have been debited for $10,000 for the excess of\ncost over fair value to reflect an unrealized holding loss. At\nDecember 31, Year 3, OCI should be credited to reflect a\n$30,000 unrealized holding gain ($120,000 fair value at\n12/31/Year 3 – $90,000 fair value at 12/31/Year 2).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فيما يلي بيانات أوراق الدين المتاحة للبيع لدى Lark:\nالبند | 31 ديسمبر السنة 2 | السنة 3\nالتكلفة | $100,000 | $100,000\nالقيمة العادلة | 90,000 | 120,000\nتعد الفروق بين التكلفة والقيمة العادلة مؤقتة. وقد عولج الانخفاض بشكل صحيح في 31 ديسمبر من السنة 2. مع تجاهل الضرائب، بأي مبلغ يجعل الدخل الشامل الآخر (OCI) دائنًا في 31 ديسمبر من السنة 3؟",
+    "choicesAr": [
+      "$0",
+      "$10,000",
+      "$20,000",
+      "$30,000"
+    ],
+    "explanationAr": "تعرض مكاسب وخسائر الحيازة غير المحققة لأوراق الدين المتاحة للبيع، بما فيها المصنفة أصولًا متداولة، عادةً في الدخل الشامل الآخر بعد الضرائب (المتجاهلة هنا)، لا ضمن الأرباح، بافتراض عدم وجود خسائر ائتمانية. وفي 31 ديسمبر من السنة 2 كان ينبغي جعل الدخل الشامل الآخر مدينًا بمبلغ $10,000 لزيادة التكلفة على القيمة العادلة. وفي 31 ديسمبر من السنة 3 يجعل دائنًا لإثبات مكسب حيازة غير محقق $30,000 ($120,000 القيمة العادلة في 12/31 السنة 3 − $90,000 القيمة العادلة في 12/31 السنة 2)."
   },
   {
     "unit": 3,
@@ -691,7 +715,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Assuming the fair value option has not been elected, held-to-\nmaturity securities are reported at amortized cost, with no\nunrealized gains or losses reported.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بأي أساس تقاس الاستثمارات المصنفة محتفظًا بها حتى الاستحقاق؟",
+    "choicesAr": [
+      "القيمة العادلة، مع إثبات المكاسب والخسائر غير المحققة في صافي الدخل.",
+      "القيمة العادلة، مع إثبات المكاسب والخسائر غير المحققة في الدخل الشامل الآخر.",
+      "تكلفة الاستبدال دون إثبات مكاسب أو خسائر غير محققة.",
+      "التكلفة المطفأة دون إثبات مكاسب أو خسائر حيازة غير محققة."
+    ],
+    "explanationAr": "بافتراض عدم اختيار خيار القيمة العادلة، تعرض الأوراق المحتفظ بها حتى الاستحقاق بالتكلفة المطفأة، دون إثبات تغيرات القيمة العادلة غير المحققة، مع مراعاة مخصص خسائر الائتمان."
   },
   {
     "unit": 3,
@@ -708,7 +740,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Without an election of the fair value option, investments in\ndebt securities that the investor has the ability and positive\nintent to hold until maturity must be classified as held-to-\nmaturity and measured at amortized cost.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "اشترت Kale سندات بخصم من السوق المفتوحة كاستثمار، ولديها النية والقدرة على الاحتفاظ بها حتى الاستحقاق. دون اختيار خيار القيمة العادلة، بأي أساس تحاسب عنها؟",
+    "choicesAr": [
+      "التكلفة.",
+      "التكلفة المطفأة.",
+      "القيمة العادلة.",
+      "الأقل من التكلفة والسوق."
+    ],
+    "explanationAr": "عند عدم اختيار خيار القيمة العادلة، تصنف أوراق الدين التي لدى المستثمر نية مؤكدة وقدرة على الاحتفاظ بها حتى الاستحقاق ضمن المحتفظ بها حتى الاستحقاق، وتقاس بالتكلفة المطفأة، مع مراعاة خسائر الائتمان."
   },
   {
     "unit": 3,
@@ -725,7 +765,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The temporary decline below cost of the fair value of\navailable-for-sale debt securities is recorded in OCI, assuming\nthey are not designated as being hedged in a fair value hedge.\nThus, temporary changes in the valuation of these securities\ndo not flow through net income. A realized gain occurs when\nsecurities are sold at an amount greater than their cost basis.\nRealized gains are included in net income regardless of the\nclassification of the securities.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بالنسبة لأوراق الدين المتاحة للبيع المدرجة ضمن الأصول غير المتداولة، أي البنود التالية يدخل في صافي دخل الفترة؟\nI. خسائر حيازة غير محققة خلال الفترة\nII. مكاسب محققة خلال الفترة\nIII. تغيرات القيمة العادلة خلال الفترة",
+    "choicesAr": [
+      "III فقط.",
+      "II فقط.",
+      "I وII فقط.",
+      "I وII وIII."
+    ],
+    "explanationAr": "يسجل انخفاض القيمة العادلة المؤقت غير المرتبط بالائتمان لأوراق الدين المتاحة للبيع في الدخل الشامل الآخر، بافتراض عدم تخصيصها لتحوط القيمة العادلة. لذلك لا تدخل تغيرات التقييم هذه في صافي الدخل. ويتحقق المكسب عند بيع الأوراق بأكثر من أساس تكلفتها المعدل؛ وتدخل المكاسب المحققة في صافي الدخل بصرف النظر عن التصنيف."
   },
   {
     "unit": 3,
@@ -742,7 +790,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Investments in debt securities must be classified as held-to-\nmaturity and measured at amortized cost in the balance sheet\nif the reporting entity has the positive intent and ability to hold\nthem to maturity. Debt securities that are not expected to be\nsold in the near term and that are not held-to-maturity should\nbe classified as available-for-sale. Available-for-sale debt\nsecurities should be reported at fair value, with unrealized\nholding gains and losses (except those on securities\ndesignated as being hedged in a fair value hedge) excluded\nfrom net income and reported in OCI.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عندما تزيد القيمة العادلة لاستثمار في أوراق الدين على تكلفته المطفأة، كيف تعرض الأوراق التالية في نهاية السنة دون اختيار خيار القيمة العادلة؟\nالمحتفظ بها حتى الاستحقاق | المتاحة للبيع",
+    "choicesAr": [
+      "التكلفة المطفأة | التكلفة المطفأة",
+      "التكلفة المطفأة | القيمة العادلة",
+      "القيمة العادلة | القيمة العادلة",
+      "القيمة العادلة | التكلفة المطفأة"
+    ],
+    "explanationAr": "تصنف أوراق الدين محتفظًا بها حتى الاستحقاق وتقاس بالتكلفة المطفأة إذا كانت للمنشأة نية مؤكدة وقدرة على الاحتفاظ بها حتى الاستحقاق. وتصنف الأوراق غير المحتفظ بها للمتاجرة أو حتى الاستحقاق متاحة للبيع، وتعرض بالقيمة العادلة. وتثبت مكاسب وخسائر الحيازة غير المحققة عادة في الدخل الشامل الآخر، مع مراعاة أحكام الائتمان والتحوط."
   },
   {
     "unit": 3,
@@ -776,7 +832,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Unrealized holding gains and losses on trading debt securities\nmust be recognized in earnings. Unrealized holding gains and\nlosses on available-for-sale debt securities are recognized in\nother comprehensive income.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "هل يعالج الفرق الذي تزيد به القيمة العادلة لورقة دين على تكلفتها في القوائم المالية عند تصنيفها ضمن كل مما يلي؟\nالمتاجرة | المتاحة للبيع",
+    "choicesAr": [
+      "لا | لا",
+      "لا | نعم",
+      "نعم | نعم",
+      "نعم | لا"
+    ],
+    "explanationAr": "تثبت مكاسب وخسائر الحيازة غير المحققة لأوراق الدين للمتاجرة ضمن الأرباح، بينما تثبت مكاسب وخسائر الحيازة غير المحققة لأوراق الدين المتاحة للبيع عادةً ضمن الدخل الشامل الآخر."
   },
   {
     "unit": 3,
@@ -793,7 +857,15 @@
     ],
     "answerIndex": 1,
     "explanation": "When fair value exceeds the carrying amount of held-to-\nmaturity securities, GAAP do not permit recognition of the\nunrealized holding gain. Accordingly, these debt securities\nshould be reported at their carrying amount (amortized cost).\nHowever, fair value accounting applies to available-for-sale\nand trading securities.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عندما تزيد القيمة العادلة لاستثمار في الأوراق المالية على قيمته الدفترية، كيف يعرض كل من الأصلين التاليين في نهاية السنة؟\nالمحتفظ بها حتى الاستحقاق | المتاحة للبيع",
+    "choicesAr": [
+      "القيمة العادلة | القيمة الدفترية",
+      "القيمة الدفترية | القيمة العادلة",
+      "القيمة الدفترية | القيمة الدفترية",
+      "القيمة العادلة | القيمة العادلة"
+    ],
+    "explanationAr": "عندما تزيد القيمة العادلة على القيمة الدفترية لأوراق الدين المحتفظ بها حتى الاستحقاق، لا تثبت مكاسب الحيازة غير المحققة وفق المعايير الأمريكية عند تطبيق التكلفة المطفأة. وتعرض هذه الأوراق بقيمتها الدفترية، بينما تطبق القيمة العادلة على الأوراق المتاحة للبيع والمتاجرة."
   },
   {
     "unit": 3,
@@ -810,7 +882,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The unrealized holding loss $(30,000) on the trading debt\nsecurity (Security A) is included in earnings. Unrealized\nholding gains and losses on available-for-sale debt securities,\nwhether classified as current or noncurrent, are included in\nother comprehensive income until realized. Thus, the net debit\nto other comprehensive income is $30,000 ($45,000 loss on Z\n– $10,000 gain of Y – $5,000 gain on B).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 31 ديسمبر كانت لدى Hull أوراق الدين التالية التي اشترتها خلال السنة الأولى للتشغيل:\nالورقة | التكلفة | القيمة العادلة | مكسب (خسارة) غير محقق\nالأصول المتداولة:\nA | $90,000 | $60,000 | $(30,000)\nB | 15,000 | 20,000 | 5,000\nالإجمالي | $105,000 | $80,000 | $(25,000)\nالأصول غير المتداولة:\nY | $70,000 | $80,000 | $10,000\nZ | 90,000 | 45,000 | (45,000)\nالإجمالي | $160,000 | $125,000 | $(35,000)\nتعد جميع تغيرات القيمة العادلة مؤقتة. وتصنف A للمتاجرة وبقية الأوراق متاحة للبيع. ما المبالغ التي تحمل على الأرباح والدخل الشامل الآخر في 31 ديسمبر؟\nالأرباح | الدخل الشامل الآخر",
+    "choicesAr": [
+      "$(60,000)             $0",
+      "$(30,000)             $(30,000)",
+      "$(25,000)            $(30,000)",
+      "$(25,000)            $0"
+    ],
+    "explanationAr": "تدرج خسارة الحيازة غير المحققة $(30,000) لورقة الدين A للمتاجرة ضمن الأرباح. وتدرج مكاسب وخسائر الحيازة غير المحققة لأوراق الدين المتاحة للبيع، سواء كانت متداولة أو غير متداولة، ضمن الدخل الشامل الآخر عادةً حتى تحققها، بافتراض عدم وجود خسائر ائتمانية أو أثر ضريبي. لذلك يبلغ صافي المبلغ المدين للدخل الشامل الآخر $30,000 ($45,000 خسارة Z − $10,000 مكسب Y − $5,000 مكسب B)."
   },
   {
     "unit": 3,
@@ -827,7 +907,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Fair value accounting applies to both trading and available-for-\nsale debt securities. The difference in treatment is that the\nunrealized holding gains and losses are included in earnings\nfor trading securities and in other comprehensive income for\navailable-for-sale securities, assuming the latter are not\ndesignated as being hedged in a fair value hedge. Thus, these\nsecurities should be reported in the assets section of the\nbalance sheet at their fair values of $320,000 and $450,000,\nrespectively.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بدأت Reed عملياتها في 1 يناير. وفيما يلي بيانات استثماراتها في أوراق الدين في 31 ديسمبر:\nالبند | المتاجرة | المتاحة للبيع\nالتكلفة | $360,000 | $550,000\nالقيمة العادلة | 320,000 | 450,000\nالأقل من التكلفة والقيمة العادلة لكل ورقة | 304,000 | 420,000\nإذا عدت الانخفاضات مؤقتة، فما قيمة الأوراق التي تعرض في قسم الأصول في قائمة المركز المالي في 31 ديسمبر؟\nالمتاجرة | المتاحة للبيع",
+    "choicesAr": [
+      "$360,000          $550,000",
+      "$360,000          $450,000",
+      "$320,000          $450,000",
+      "$304,000          $420,000"
+    ],
+    "explanationAr": "تطبق القيمة العادلة على أوراق الدين للمتاجرة والمتاحة للبيع. ويختلف عرض مكاسب وخسائر الحيازة غير المحققة، فتدخل في الأرباح للمتاجرة وفي الدخل الشامل الآخر للمتاحة للبيع، بافتراض عدم تخصيص الأخيرة لتحوط القيمة العادلة وعدم وجود خسائر ائتمانية. لذا تعرض الأوراق ضمن الأصول بقيمها العادلة $320,000 و$450,000 على الترتيب."
   },
   {
     "unit": 3,
@@ -844,7 +932,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Trading debt securities are bought and held primarily for sale\nin the near term. They are purchased and sold frequently.\nThey are initially recorded at cost but are remeasured at fair\nvalue at each balance sheet date, with the unrealized holding\ngains or losses recognized in earnings.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما تسمية أوراق الدين المحتفظ بها أساسًا للبيع في الأجل القريب لتحقيق دخل من فروق الأسعار قصيرة الأجل؟",
+    "choicesAr": [
+      "أوراق متاحة للبيع.",
+      "عمليات متوقفة.",
+      "أوراق محتفظ بها حتى الاستحقاق.",
+      "أوراق للمتاجرة."
+    ],
+    "explanationAr": "تشترى أوراق الدين للمتاجرة ويحتفظ بها أساسًا للبيع في الأجل القريب. وتتسم عادة بكثرة عمليات الشراء والبيع. وتقاس لاحقًا بالقيمة العادلة في تاريخ كل قائمة مركز مالي مع إثبات مكاسب وخسائر الحيازة غير المحققة في الأرباح."
   },
   {
     "unit": 3,
@@ -861,7 +957,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Unrealized holding gains and losses on trading debt securities\nare included in earnings and are therefore reported in the\nincome statement.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أين تعرض المكاسب والخسائر غير المحققة لأوراق الدين للمتاجرة؟",
+    "choicesAr": [
+      "قائمة المركز المالي.",
+      "قائمة الدخل.",
+      "الإيضاحات المتممة للقوائم المالية.",
+      "قائمة الأرباح المحتجزة."
+    ],
+    "explanationAr": "تدرج مكاسب وخسائر الحيازة غير المحققة لأوراق الدين للمتاجرة ضمن الأرباح؛ لذا تعرض في قائمة الدخل."
   },
   {
     "unit": 3,
@@ -930,7 +1034,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Available-for-sale debt securities are measured at fair value at\neach balance sheet date. Unrealized holding gains and losses\nresulting from the remeasurement to fair value are reported in\nother comprehensive income (OCI).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "استثمرت Long في أوراق مالية قابلة للتداول. وفي نهاية السنة أدرجت تغيرات القيمة العادلة للاستثمار ضمن الدخل الشامل الآخر. كيف تصنف Long الاستثمار وفق التصنيفات الأمريكية؟",
+    "choicesAr": [
+      "أوراق محتفظ بها حتى الاستحقاق.",
+      "أوراق للمتاجرة.",
+      "أوراق حقوق ملكية.",
+      "أوراق دين متاحة للبيع."
+    ],
+    "explanationAr": "تقاس أوراق الدين المتاحة للبيع بالقيمة العادلة في تاريخ كل قائمة مركز مالي. وتدرج مكاسب وخسائر الحيازة غير المحققة الناتجة عن إعادة القياس عادةً ضمن الدخل الشامل الآخر."
   },
   {
     "unit": 3,
@@ -947,7 +1059,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Under U.S. GAAP, trading securities are those held principally\nfor sale in the near term. They are classified as current and\nconsist of debt securities with readily determinable fair values.\nUnrealized holding gains and losses on trading securities are\nreported in earnings. Hence, these securities are reported at\nfair value.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بأي أساس يقاس الاستثمار في أوراق المتاجرة في قائمة المركز المالي؟",
+    "choicesAr": [
+      "تكلفة اقتناء الأصل.",
+      "الدخل المتراكم مطروحًا منه التوزيعات المتراكمة منذ الاقتناء.",
+      "الأقل من التكلفة والسوق.",
+      "القيمة العادلة."
+    ],
+    "explanationAr": "وفق المعايير الأمريكية يحتفظ بأوراق المتاجرة أساسًا للبيع في الأجل القريب، وتصنف عادة ضمن الأصول المتداولة. وتثبت مكاسب وخسائر الحيازة غير المحققة ضمن الأرباح؛ لذا تعرض هذه الأوراق بالقيمة العادلة."
   },
   {
     "unit": 3,
@@ -964,7 +1084,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Under U.S. GAAP, available-for-sale securities are\ninvestments in debt securities. They are measured at fair\nvalue in the balance sheet.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بأي أساس يقاس الاستثمار في الأوراق المتاحة للبيع في قائمة المركز المالي؟",
+    "choicesAr": [
+      "تكلفة اقتناء الأصل.",
+      "الدخل المتراكم مطروحًا منه التوزيعات المتراكمة منذ الاقتناء.",
+      "القيمة العادلة.",
+      "القيمة الاسمية للأوراق."
+    ],
+    "explanationAr": "وفق المعايير الأمريكية تمثل الأوراق المتاحة للبيع استثمارات في أوراق الدين، وتقاس بالقيمة العادلة في قائمة المركز المالي."
   },
   {
     "unit": 3,
@@ -981,7 +1109,15 @@
     ],
     "answerIndex": 1,
     "explanation": "When a security is classified as held-to-maturity, no unrealized\nholding gains or losses are recognized. Thus, unrealized\nholding gains and losses on held-to-maturity securities will not\naffect net income.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "وفق المعايير الأمريكية، أي العبارات التالية تصف أثر إعادة تصنيف ورقة مالية من متاحة للبيع إلى محتفظ بها حتى الاستحقاق؟",
+    "choicesAr": [
+      "يتأثر الدخل الشامل مستقبلًا بالمكاسب والخسائر غير المحققة.",
+      "لا يتأثر صافي الدخل مستقبلًا بالمكاسب والخسائر غير المحققة.",
+      "تتأثر قائمة المركز المالي بالمكاسب والخسائر غير المحققة.",
+      "لا يتغير علاج المكاسب والخسائر غير المحققة."
+    ],
+    "explanationAr": "عندما تصنف ورقة محتفظًا بها حتى الاستحقاق، لا تثبت تغيرات قيمتها العادلة اللاحقة كمكاسب أو خسائر حيازة غير محققة، فلا تؤثر في صافي الدخل بهذه الصفة. ويظل علاج رصيد الدخل الشامل الآخر المتراكم عند التحويل وخسائر الائتمان خاضعًا لقواعده الخاصة."
   },
   {
     "unit": 3,
@@ -998,7 +1134,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Available-for-sale debt securities are measured at fair value in\nthe financial statements. Unrealized holding gains or losses on\ntheir remeasurement to fair value are reported in OCI. On\n12/31/Year 3, the amount reported was $130,000. The\nincrease in the fair value in Year 4 of $30,000 ($160,000 –\n$130,000) is recognized as an unrealized holding gain in Year\n4 OCI. The OCI for the period is closed to accumulated OCI\nthat is reported in the equity section of the balance sheet.\nThus, the unrealized holding gain of $30,000 increases the\naccumulated OCI in Year 4. The statement of changes in\nequity reports the changes in all the equity accounts, including\naccumulated OCI.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فيما يلي بيانات استثمار Ball في أوراق دين متاحة للبيع:\nالتاريخ | التكلفة | القيمة العادلة\n31 ديسمبر السنة 3 | $150,000 | $130,000\n31 ديسمبر السنة 4 | 150,000 | 160,000\nتعد الفروق مؤقتة، وقد عولج الانخفاض بشكل صحيح في 31 ديسمبر من السنة 3. ما الزيادة التي تظهر في قائمة التغيرات في حقوق الملكية للسنة 4، بافتراض تجاهل الضرائب؟",
+    "choicesAr": [
+      "$30,000",
+      "$20,000",
+      "$10,000",
+      "$0"
+    ],
+    "explanationAr": "تقاس أوراق الدين المتاحة للبيع بالقيمة العادلة. وتعرض مكاسب وخسائر الحيازة غير المحققة الناتجة عن إعادة القياس في الدخل الشامل الآخر. وفي 12/31 من السنة 3 بلغ الرصيد المعروض $130,000. وتثبت الزيادة في القيمة العادلة في السنة 4 بمبلغ $30,000 ($160,000 − $130,000) كمكسب غير محقق ضمن الدخل الشامل الآخر للسنة 4. ويقفل الدخل الشامل الآخر للفترة في رصيده المتراكم ضمن حقوق الملكية. ومن ثم يزيد المكسب $30,000 رصيد الدخل الشامل الآخر المتراكم في السنة 4. وتبين قائمة التغيرات في حقوق الملكية التغيرات في جميع حساباتها."
   },
   {
     "unit": 3,
@@ -1015,7 +1159,15 @@
     ],
     "answerIndex": 3,
     "explanation": "An investment in debt securities may be classified as (1)\ntrading (if held for sale in the near term), (2) held-to-maturity (if\nthe holder has the positive intent and ability to hold until the\nmaturity date), or (3) available-for-sale (if not classified as\ntrading or held-to-maturity).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يمكن تصنيف الاستثمارات في أوراق الدين كما يلي وفق المعايير الأمريكية:\nI. أوراق متاحة للبيع\nII. أوراق محتفظ بها حتى الاستحقاق\nIII. أوراق للمتاجرة",
+    "choicesAr": [
+      "I فقط.",
+      "I وII فقط.",
+      "I وIII فقط.",
+      "I وII وIII."
+    ],
+    "explanationAr": "يمكن تصنيف استثمار أوراق الدين إلى (1) المتاجرة إذا احتفظ به للبيع في الأجل القريب، أو (2) المحتفظ به حتى الاستحقاق إذا وجدت النية المؤكدة والقدرة على الاحتفاظ به حتى الاستحقاق، أو (3) المتاح للبيع إذا لم يصنف ضمن الفئتين السابقتين."
   },
   {
     "unit": 3,
@@ -1032,7 +1184,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Debt securities that are bought and held primarily for sale in\nthe near term are classified as trading securities.\nConsequently, the bonds and the short-term notes are trading\nsecurities. They are initially recorded at cost but are\nsubsequently measured at fair value at each balance sheet\ndate. Quoted market prices in active markets are the best\nevidence of fair value. Based on market quotes at year end,\nthe bonds had a fair value of $105,000, and the short-term\nnotes had a fair value of $50,000. The total is $155,000.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في نهاية السنة احتفظت Rim باستثمارات بقصد بيعها في الأجل القريب، تتكون من سندات بقيمة اسمية $100,000 وفائدة 8% وأجل 5 سنوات اشتريت مقابل $92,000، وأوراق دين قصيرة الأجل اشتريت مقابل $35,000. وفي نهاية السنة بلغ سعر السندات في السوق $105,000 والقيمة السوقية للأوراق قصيرة الأجل $50,000. ما قيمة أوراق المتاجرة في قائمة المركز المالي في نهاية السنة؟",
+    "choicesAr": [
+      "$50,000",
+      "$127,000",
+      "$142,000",
+      "$155,000"
+    ],
+    "explanationAr": "تصنف أوراق الدين المشتراة والمحتفظ بها أساسًا للبيع في الأجل القريب ضمن أوراق المتاجرة؛ لذا تصنف السندات والأوراق قصيرة الأجل كذلك. وتقاس لاحقًا بالقيمة العادلة في تاريخ كل قائمة مركز مالي. وتعد الأسعار المعلنة في الأسواق النشطة أفضل دليل عليها. ووفق أسعار نهاية السنة بلغت القيمة العادلة للسندات $105,000 وللأوراق قصيرة الأجل $50,000، بإجمالي $155,000."
   },
   {
     "unit": 3,
@@ -1049,7 +1209,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Debt securities classified as held-to-maturity are measured at\namortized cost if the reporting entity has the positive intent\nand ability to hold them to maturity.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بأي أساس تقاس الاستثمارات المصنفة أوراق دين محتفظًا بها حتى الاستحقاق؟",
+    "choicesAr": [
+      "تكلفة الاقتناء.",
+      "التكلفة المطفأة.",
+      "الأقل من التكلفة والسوق.",
+      "القيمة العادلة."
+    ],
+    "explanationAr": "تقاس أوراق الدين المحتفظ بها حتى الاستحقاق بالتكلفة المطفأة عند وجود النية المؤكدة والقدرة على الاحتفاظ بها حتى الاستحقاق، مع مراعاة مخصص خسائر الائتمان."
   },
   {
     "unit": 3,
@@ -1066,7 +1234,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Unrealized holding gains and losses resulting from the\nremeasurement to fair value of available-for-sale debt\ninvestments are reported in other comprehensive income\n(OCI). Related tax effects are also recognized directly to OCI.\nThus, the net-of-tax unrealized gain of $75,000 [$100,000 × (1\n– 25%)] is recognized in OCI and no entries to net income are\nneeded.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "خلال السنة الحالية حققت Cooley مكسب حيازة غير محقق قدره $100,000 من استثمار دين متاح للبيع. ويبلغ معدل ضريبة الشركات 25%. ما مقدار المكسب الذي يدرج في صافي الدخل والدخل الشامل الآخر في نهاية السنة؟\nصافي الدخل | الدخل الشامل الآخر",
+    "choicesAr": [
+      "$100,000           $0",
+      "$75,000           $25,000",
+      "$25,000           $75,000",
+      "$0                $75,000"
+    ],
+    "explanationAr": "تعرض مكاسب وخسائر الحيازة غير المحققة الناتجة عن إعادة قياس استثمارات الدين المتاحة للبيع بالقيمة العادلة في الدخل الشامل الآخر. كما تثبت الآثار الضريبية المتعلقة بها مباشرة فيه. ومن ثم يثبت صافي المكسب بعد الضريبة $75,000 [$100,000 × (1 − 25%)] في الدخل الشامل الآخر، دون تأثير في صافي الدخل."
   },
   {
     "unit": 3,
@@ -1083,7 +1259,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Unrealized holding gains resulting from the remeasurement to\nfair value of available-for-sale debt investments are reported in\nother comprehensive income (OCI). Related tax effects are\nalso recognized directly to OCI. Thus, no unrealized gain is\nrecognized in the income statement at December 31.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 31 ديسمبر تضمنت أوراق الدين لدى Dodd أوراقًا متاحة للبيع بتكلفة $24,000 وقيمة عادلة $30,000. وبلغ معدل ضريبة الدخل 20%. ما المكسب أو الخسارة غير المحققة الواجب إثباتها في قائمة الدخل في 31 ديسمبر؟",
+    "choicesAr": [
+      "خسارة $6,000.",
+      "$0.",
+      "مكسب $4,800.",
+      "مكسب $6,000."
+    ],
+    "explanationAr": "تعرض مكاسب الحيازة غير المحققة الناتجة عن إعادة قياس استثمارات الدين المتاحة للبيع بالقيمة العادلة في الدخل الشامل الآخر، كما تعرض الآثار الضريبية المتعلقة بها فيه مباشرة. لذا لا يثبت أي مكسب غير محقق في قائمة الدخل في 31 ديسمبر."
   },
   {
     "unit": 3,
