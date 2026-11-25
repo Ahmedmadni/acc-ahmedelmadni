@@ -2193,7 +2193,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Inventory accounted for using LIFO or the retail inventory\nmethod is measured at the LCM. Market is the current cost to\nreplace the inventory, subject to certain limitations. Market\nshould not exceed a ceiling equal to net realizable value\n(NRV) or be less than a floor equal to NRV minus normal profit\nmargin. NRV for stuff is $137 ($145 – $8). NRV minus normal\nprofit margin is $108 ($137 – $29). The current replacement\ncost is below the floor of $108; therefore, the market is $108.\nBecause the historical cost of $106 is lower than the market of\n$108, historical cost should be the basis of valuation for stuff.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم Stockholm طريقة LIFO للمحاسبة عن المخزون. وفيما يلي بيانات الأصناف لكل وحدة:\nالبند | Gear | Stuff | Wickets\nالتكلفة التاريخية | $190.00 | $106.00 | $53.00\nسعر البيع | 217.00 | 145.00 | 73.75\nتكلفة الإكمال والبيع | 19.00 | 8.00 | 2.50\nتكلفة الاستبدال الحالية | 203.00 | 105.00 | 51.00\nهامش الربح العادي | 32.00 | 29.00 | 21.25\nما مبلغ التكلفة الذي ينبغي استخدامه لصنف Stuff في مقارنة التكلفة أو السوق أيهما أقل (LCM)؟",
+    "choicesAr": [
+      "$105",
+      "$106",
+      "$108",
+      "$137"
+    ],
+    "explanationAr": "يقاس مخزون LIFO أو التجزئة بالأقل من التكلفة والسوق وفق المعايير الأمريكية. وتساوي السوق تكلفة الاستبدال الحالية المقيدة بسقف صافي القيمة القابلة للتحقق وحد أدنى هو صافي القيمة القابلة للتحقق مطروحًا منه الربح العادي. يبلغ صافي القيمة القابلة للتحقق لصنف Stuff مبلغ $137 ($145 − $8)، والحد الأدنى $108 ($137 − $29). وتقل تكلفة الاستبدال الحالية عن الحد الأدنى $108؛ لذا تبلغ السوق $108. ولأن التكلفة التاريخية $106 أقل من السوق $108، تستخدم التكلفة التاريخية في القياس."
   },
   {
     "unit": 2,
@@ -2210,7 +2218,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Inventory accounted for using LIFO or retail inventory method\nis measured at the lower of cost or market (LCM). Market is\nthe current cost to replace the inventory, subject to certain\nlimitations. Market should not exceed a ceiling equal to net\nrealizable value (NRV) or be less than a floor equal to NRV\nminus normal profit margin. Net realizable value for wickets is\n$71.25 ($73.75 selling price – $2.50 completion and disposal\ncosts). The net realizable value minus normal profit is $50\n($71.25 net realizable value – $21.25 normal profit margin).\nThe $51 replacement cost falls between the $71.25 ceiling\nand the $50 floor and is the appropriate market value.\nBecause the $51 market value is lower than the $53 historical\ncost, it should be the basis of valuation for the wickets.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم Stockholm طريقة LIFO للمحاسبة عن المخزون. وفيما يلي بيانات الأصناف لكل وحدة:\nالبند | Gear | Stuff | Wickets\nالتكلفة التاريخية | $190.00 | $106.00 | $53.00\nسعر البيع | 217.00 | 145.00 | 73.75\nتكلفة الإكمال والبيع | 19.00 | 8.00 | 2.50\nتكلفة الاستبدال الحالية | 203.00 | 105.00 | 51.00\nهامش الربح العادي | 32.00 | 29.00 | 21.25\nما قيمة السوق التي ينبغي استخدامها لصنف Wickets وفق قاعدة التكلفة أو السوق أيهما أقل؟",
+    "choicesAr": [
+      "$51.00",
+      "$53.00",
+      "$50.00",
+      "$71.25"
+    ],
+    "explanationAr": "يقاس مخزون LIFO أو التجزئة بالأقل من التكلفة والسوق. وتساوي السوق تكلفة الاستبدال الحالية بشرط ألا تتجاوز صافي القيمة القابلة للتحقق وألا تقل عن صافي القيمة القابلة للتحقق مطروحًا منه هامش الربح العادي. ويبلغ صافي القيمة القابلة للتحقق لصنف Wickets مبلغ $71.25 ($73.75 سعر البيع − $2.50 تكاليف الإكمال والتخلص)، والحد الأدنى $50 ($71.25 صافي القيمة القابلة للتحقق − $21.25 الربح العادي). وتقع تكلفة الاستبدال $51 بين السقف $71.25 والحد الأدنى $50؛ لذا تمثل السوق. ولأن السوق $51 أقل من التكلفة التاريخية $53، تستخدم السوق في القياس."
   },
   {
     "unit": 2,
@@ -2227,7 +2243,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Inventory accounted for using LIFO or the retail inventory\nmethod is measured at the lower of cost or market. Market is\nthe current cost to replace inventory, subject to certain\nlimitations. Market should not exceed a ceiling equal to net\nrealizable value (NRV) or be less than a floor equal to NRV\nminus a normal profit margin. Because replacement cost\nexceeds NRV, the ceiling is NRV.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تزيد التكلفة الأصلية لصنف مخزون على تكلفة استبداله، وتزيد تكلفة الاستبدال على صافي القيمة القابلة للتحقق. وفق LCM، بأي قيمة يقاس الصنف عند استخدام طريقة التجزئة؟",
+    "choicesAr": [
+      "التكلفة الأصلية.",
+      "تكلفة الاستبدال.",
+      "صافي القيمة القابلة للتحقق.",
+      "صافي القيمة القابلة للتحقق مطروحًا منه هامش الربح العادي."
+    ],
+    "explanationAr": "وفق المعايير الأمريكية يقاس مخزون LIFO أو التجزئة بالأقل من التكلفة والسوق. والسوق تكلفة الاستبدال الحالية بشرط ألا تتجاوز سقف صافي القيمة القابلة للتحقق وألا تقل عن صافي القيمة القابلة للتحقق مطروحًا منه الربح العادي. ولأن تكلفة الاستبدال تتجاوز صافي القيمة القابلة للتحقق، فإن السقف يمثل السوق، وهو أقل من التكلفة الأصلية."
   },
   {
     "unit": 2,
@@ -2244,7 +2268,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Inventory accounted for using LIFO or the retail inventory\nmethod is measured at the lower of cost or market (LCM).\nInventory accounted for using any other cost method (e.g.,\nFIFO or average cost) is measured at the lower of cost or net\nrealizable value (NRV).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "وفق المعايير الأمريكية، أي طرق تدفق تكلفة المخزون التالية لا تخضع للقياس بالأقل من التكلفة وصافي القيمة القابلة للتحقق؟",
+    "choicesAr": [
+      "الوارد أولًا صادر أولًا (FIFO).",
+      "المتوسط المتحرك.",
+      "الوارد أخيرًا صادر أولًا (LIFO).",
+      "التحديد العيني."
+    ],
+    "explanationAr": "يقاس المخزون المسعر بطريقة LIFO أو التجزئة بالأقل من التكلفة والسوق (LCM)، بينما يقاس المخزون المسعر بالطرق الأخرى مثل FIFO أو المتوسط بالأقل من التكلفة وصافي القيمة القابلة للتحقق (NRV)."
   },
   {
     "unit": 2,
@@ -2261,7 +2293,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Inventory accounted for using the FIFO method (or any cost\nmethod other than LIFO or retail) is measured at the lower of\ncost or net realizable value (NRV). Because the NRV\n($125,000) is lower than the historical cost ($150,000), the\ninventory is reported on the year-end balance sheet at its NRV\nof $125,000.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم شركة طريقة FIFO للمحاسبة عن المخزون. وفيما يلي بيانات نهاية السنة المالية:\nالتكلفة التاريخية: $150,000\nتكلفة الاستبدال الحالية: 120,000\nصافي القيمة القابلة للتحقق: 125,000\nهامش الربح العادي: 15,000\nالقيمة العادلة: 140,000\nما قيمة المخزون الواجب عرضها في قائمة المركز المالي في نهاية السنة؟",
+    "choicesAr": [
+      "$150,000",
+      "$125,000",
+      "$120,000",
+      "$140,000"
+    ],
+    "explanationAr": "يقاس مخزون FIFO (أو طرق التكلفة الأخرى بخلاف LIFO والتجزئة وفق المعايير الأمريكية) بالأقل من التكلفة وصافي القيمة القابلة للتحقق. ولأن صافي القيمة القابلة للتحقق ($125,000) أقل من التكلفة التاريخية ($150,000)، يعرض المخزون بمبلغ $125,000."
   },
   {
     "unit": 2,
@@ -2278,7 +2318,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Inventory accounted for using the FIFO method (or any cost\nmethod other than LIFO or retail) is measured at the lower of\ncost or net realizable value (NRV). NRV is the estimated\nselling price in the ordinary course of business, minus\nreasonably predictable costs of completion, disposal, and\ntransportation. At year-end, the NRV of the inventory of\n$295,000 ($330,000 estimated selling price – $15,000\nestimated completion costs – $20,000 estimated costs of\ndisposal) is lower than its cost of $300,000. Thus, the\ninventory is reported at its NRV of $295,000.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "حددت شركة Lialia تكلفة مخزونها غير المكتمل في نهاية السنة وفق FIFO بمبلغ $300,000. وفيما يلي بيانات المخزون:\nسعر البيع المقدر: $330,000\nتكلفة التخلص المقدرة: 20,000\nهامش الربح العادي: 15%\nتكلفة الاستبدال الحالية: 280,000\nتكاليف الإكمال المقدرة: 15,000\nما قيمة المخزون الواجب عرضها في قائمة المركز المالي في نهاية السنة؟",
+    "choicesAr": [
+      "$295,000",
+      "$280,000",
+      "$300,000",
+      "$330,000"
+    ],
+    "explanationAr": "يقاس مخزون FIFO أو طرق التكلفة الأخرى بخلاف LIFO والتجزئة وفق المعايير الأمريكية بالأقل من التكلفة وصافي القيمة القابلة للتحقق (NRV). وصافي القيمة القابلة للتحقق هو سعر البيع المقدر في النشاط المعتاد مطروحًا منه تكاليف الإكمال والتخلص والنقل المتوقعة بشكل معقول. وفي نهاية السنة يبلغ صافي القيمة القابلة للتحقق $295,000 ($330,000 سعر البيع المقدر − $15,000 تكاليف الإكمال − $20,000 تكاليف التخلص)، وهو أقل من التكلفة $300,000؛ لذا يعرض المخزون بمبلغ $295,000."
   },
   {
     "unit": 2,
@@ -2295,7 +2343,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Inventory accounted for using the average method (or any\ncost method other than LIFO or retail) is measured at the\nlower of cost or net realizable value (NRV). NRV is the\nestimated selling price in the ordinary course of business,\nminus reasonably predictable costs of completion, disposal,\nand transportation. The cost of the inventory of $200,000 is\nlower than its NRV of $205,000 ($215,000 selling price –\n$10,000 estimated cost of disposal). Thus, the inventory is\nreported at its cost and no loss on write-down of inventory is\nrecognized.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "حددت شركة Gail تكلفة مخزونها في 12/31 من السنة 1 وفق المتوسط المتحرك بمبلغ $200,000. وفيما يلي البيانات في نهاية السنة:\nسعر البيع المقدر: $215,000\nتكلفة التخلص المقدرة: 10,000\nهامش الربح العادي: 20,000\nتكلفة الاستبدال الحالية: 190,000\nما خسارة تخفيض قيمة المخزون، إن وجدت، الواجب إثباتها في قائمة دخل السنة 1؟",
+    "choicesAr": [
+      "$10,000",
+      "$15,000",
+      "$20,000",
+      "$0"
+    ],
+    "explanationAr": "يقاس المخزون وفق المتوسط أو طرق التكلفة الأخرى بخلاف LIFO والتجزئة وفق المعايير الأمريكية بالأقل من التكلفة وصافي القيمة القابلة للتحقق (NRV). وصافي القيمة القابلة للتحقق هو سعر البيع المقدر في النشاط المعتاد مطروحًا منه تكاليف الإكمال والتخلص والنقل المتوقعة بشكل معقول. وتقل تكلفة المخزون $200,000 عن صافي القيمة القابلة للتحقق $205,000 ($215,000 سعر البيع − $10,000 تكلفة التخلص). لذا يعرض المخزون بالتكلفة ولا تثبت خسارة تخفيض."
   },
   {
     "unit": 2,
@@ -2312,7 +2368,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Inventory accounted for using the average-cost method (or\nany cost method other than LIFO or retail) is measured at the\nlower of cost or NRV. NRV is the estimated selling price in the\nordinary course of business, minus reasonably predictable\ncosts of completion, disposal, and transportation.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "كيف يقاس المخزون الذي تتم المحاسبة عنه بطريقة متوسط التكلفة في القوائم المالية؟",
+    "choicesAr": [
+      "الأقل من التكلفة والسوق (LCM).",
+      "الأقل من التكلفة والقيمة العادلة مطروحًا منها تكلفة البيع.",
+      "الأقل من التكلفة وصافي القيمة القابلة للتحقق (NRV).",
+      "القيمة العادلة."
+    ],
+    "explanationAr": "يقاس المخزون وفق المتوسط أو أي طريقة تكلفة أخرى بخلاف LIFO والتجزئة في سياق المعايير الأمريكية بالأقل من التكلفة وصافي القيمة القابلة للتحقق. ويعني الأخير سعر البيع المقدر في النشاط المعتاد مطروحًا منه تكاليف الإكمال والتخلص والنقل المتوقعة بشكل معقول."
   },
   {
     "unit": 2,
@@ -2329,7 +2393,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Inventory accounted for using LIFO or the retail inventory\nmethod is measured at the lower of cost or market (LCM).\nMarket is the current cost to replace inventory, subject to\ncertain limitations. Market cannot be greater than a ceiling\nequal to net realizable value (NRV) of $298,000\n($308,000 estimated selling price – $10,000 cost of disposal).\nIt cannot be less than a floor equal to NRV reduced by a\nnormal profit margin of $285,000 ($298,000 NRV – $13,000\nnormal profit margin). Because the current replacement cost\n($280,000) is lower than the floor ($285,000), market is\n$285,000. Thus, under the LIFO method, the inventory is\nreported at $285,000, which is lower than the $300,000 cost.\nInventory accounted for using the FIFO method (or any cost\nmethod other than LIFO or retail) is measured at the lower of\ncost or net realizable value (NRV). Thus, under FIFO method,\nthe inventory is reported at its NRV of $298,000, which is\nlower than the $300,000 cost.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "حددت شركة القيم التالية لمخزون نهاية السنة:\nالتكلفة التاريخية: $300,000\nتكلفة الاستبدال الحالية: 280,000\nسعر البيع: 308,000\nهامش الربح العادي: 13,000\nتكلفة البيع: 10,000\nما قيمة المخزون في قائمة المركز المالي وفق طريقتي التكلفة التاليتين؟\nLIFO | FIFO",
+    "choicesAr": [
+      "$280,000                       $298,000",
+      "$285,000                       $298,000",
+      "$298,000                         $300,000",
+      "$285,000                         $285,000"
+    ],
+    "explanationAr": "يقاس مخزون LIFO أو التجزئة وفق المعايير الأمريكية بالأقل من التكلفة والسوق (LCM). والسوق تكلفة الاستبدال المقيدة بسقف يساوي صافي القيمة القابلة للتحقق $298,000 ($308,000 سعر البيع − $10,000 تكلفة التخلص)، وحد أدنى يساوي صافي القيمة القابلة للتحقق مطروحًا منه هامش الربح العادي $285,000 ($298,000 − $13,000). ولأن تكلفة الاستبدال الحالية ($280,000) أقل من الحد الأدنى ($285,000)، تكون السوق $285,000. لذا يعرض مخزون LIFO بمبلغ $285,000، وهو أقل من التكلفة $300,000. أما مخزون FIFO أو طرق التكلفة الأخرى بخلاف LIFO والتجزئة فيقاس بالأقل من التكلفة وصافي القيمة القابلة للتحقق. لذلك يعرض مخزون FIFO بقيمة $298,000، وهي أقل من التكلفة $300,000."
   },
   {
     "unit": 2,
@@ -2346,7 +2418,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Inventory measured using any cost method other than LIFO or\nretail (e.g., FIFO or average cost) must be measured at the\nlower of cost or NRV. NRV is the estimated selling price in the\nordinary course of business, minus reasonably predictable\ncosts of completion, disposal, and transportation.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تقتضي المبادئ المحاسبية المتعارف عليها الخروج عن التكلفة التاريخية عند انخفاض منفعة المخزون عن تكلفته. ويمكن قياس المخزون وفق بعض طرق تدفق التكلفة بالأقل من التكلفة وصافي القيمة القابلة للتحقق (NRV). ما المقصود بصافي القيمة القابلة للتحقق هنا؟",
+    "choicesAr": [
+      "القيمة العادلة مطروحًا منها تكلفة البيع.",
+      "التكلفة الأصلية مطروحًا منها هامش الربح العادي.",
+      "سعر البيع المقدر مطروحًا منه تكاليف الإكمال والتخلص المقدرة.",
+      "القيمة العادلة مطروحًا منها هامش الربح العادي."
+    ],
+    "explanationAr": "يقاس المخزون باستخدام أي طريقة تكلفة بخلاف LIFO والتجزئة في سياق المعايير الأمريكية، مثل FIFO أو المتوسط، بالأقل من التكلفة وصافي القيمة القابلة للتحقق. ويعني الأخير سعر البيع المقدر في النشاط المعتاد مطروحًا منه تكاليف الإكمال والتخلص والنقل المتوقعة بشكل معقول."
   },
   {
     "unit": 2,
@@ -2363,7 +2443,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Inventory accounted for using LIFO or the retail inventory\nmethod is measured at the lower of cost or market (LCM).\nInventory accounted for using any other cost method (e.g.,\nFIFO, average cost, or specific identification) is measured at\nthe lower of cost or net realizable value (NRV).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "وفق المعايير الأمريكية، أي طرق تدفق تكلفة المخزون التالية تخضع للقياس اللاحق بالأقل من التكلفة والسوق (LCM)؟\nLIFO | FIFO | التجزئة | المتوسط المرجح",
+    "choicesAr": [
+      "نعم | لا | نعم | لا",
+      "نعم | نعم | لا | لا",
+      "لا | نعم | لا | نعم",
+      "لا | لا | نعم | نعم"
+    ],
+    "explanationAr": "يقاس المخزون المسعر بطريقة LIFO أو التجزئة بالأقل من التكلفة والسوق. ويقاس المخزون المسعر بطرق التكلفة الأخرى مثل FIFO أو المتوسط أو التحديد العيني بالأقل من التكلفة وصافي القيمة القابلة للتحقق."
   },
   {
     "unit": 2,
@@ -2380,7 +2468,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Inventory accounted for using a method other than LIFO or\nretail (e.g., FIFO, average cost, or specific identification) is\nmeasured subsequent to acquisition at lower of cost or net\nrealizable value (NRV). NRV equals (1) the estimated selling\nprice in the ordinary course of business minus (2) reasonably\npredictable costs of completion, disposal, and transportation.\nAccordingly, the year-end weighted-average inventory is\nmeasured at the lower of cost ($400,000) or NRV [($450,000\nsales price – $25,000 costs to complete, etc.) = $425,000],\nthat is, the $400,000 historical cost.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تقيس شركة Kusta مخزون نهاية السنة بطريقة المتوسط المرجح. وفيما يلي البيانات ذات الصلة:\nتكاليف الإكمال والتخلص والنقل: $25,000\nسعر البيع المقدر: 450,000\nتكلفة الاستبدال الحالية: 420,000\nهامش الربح العادي: 40,000\nالتكلفة: 400,000\nما مبلغ مخزون آخر المدة في قائمة المركز المالي؟",
+    "choicesAr": [
+      "$400,000",
+      "$420,000",
+      "$425,000",
+      "$450,000"
+    ],
+    "explanationAr": "يقاس المخزون بطرق التكلفة الأخرى بخلاف LIFO والتجزئة وفق المعايير الأمريكية، مثل FIFO أو المتوسط أو التحديد العيني، لاحقًا بالأقل من التكلفة وصافي القيمة القابلة للتحقق (NRV). ويساوي صافي القيمة القابلة للتحقق (1) سعر البيع المقدر في النشاط المعتاد مطروحًا منه (2) تكاليف الإكمال والتخلص والنقل المتوقعة بشكل معقول. لذا يقاس المخزون وفق المتوسط المرجح بالأقل من التكلفة ($400,000) أو صافي القيمة القابلة للتحقق [($450,000 سعر البيع − $25,000 تكاليف الإكمال وغيرها) = $425,000]، أي التكلفة التاريخية $400,000."
   },
   {
     "unit": 2,
@@ -2397,7 +2493,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Under FIFO, inventory is measured at the lower of cost or\nNRV (Estimated selling price in the ordinary course of\nbusiness – Estimated costs of completion and sale). Given\ncost of $100,000 and NRV of $90,000, inventory should be\nreported at $90,000.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "حددت شركة القيم التالية لمخزون نهاية السنة المالية:\nالتكلفة التاريخية: $100,000\nتكلفة الاستبدال الحالية: 70,000\nصافي القيمة القابلة للتحقق: 90,000\nصافي القيمة القابلة للتحقق مطروحًا منه هامش الربح العادي: 85,000\nالقيمة العادلة: 95,000\nإذا استخدمت الشركة طريقة FIFO، فما قيمة المخزون الواجب عرضها في قائمة المركز المالي؟",
+    "choicesAr": [
+      "$70,000",
+      "$85,000",
+      "$90,000",
+      "$95,000"
+    ],
+    "explanationAr": "وفق FIFO يقاس المخزون بالأقل من التكلفة وصافي القيمة القابلة للتحقق (سعر البيع المقدر في النشاط المعتاد مطروحًا منه تكاليف الإكمال والبيع المقدرة). وبما أن التكلفة $100,000 وصافي القيمة القابلة للتحقق $90,000، يعرض المخزون بمبلغ $90,000."
   },
   {
     "unit": 2,
@@ -2414,7 +2518,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Inventory accounted for using LIFO or the retail inventory\nmethod is measured at the lower of cost or market (LCM).\nMarket is the current cost to replace inventory, subject to\ncertain limitations. Market should not (1) exceed a ceiling\nequal to net realizable value (NRV) or (2) be less than a floor\nequal to NRV reduced by an allowance for an approximately\nnormal profit margin. NRV is the estimated selling price in the\nordinary course of business minus reasonably predictable\ncosts of completion and disposal. Thus, NRV (ceiling) equals\n$114,500 ($125,000 selling price – $10,500 cost of\ncompletion). If the normal profit margin equals $37,500\n($125,000 selling price × 30% normal profit margin), the floor\nequals $77,000 ($114,500 NRV – $37,500 normal profit\nmargin). Because the replacement cost of inventory ($75,000)\nis lower than the floor ($77,000), market is $77,000.\nAccordingly, the LIFO inventory must be written down to\nmarket and reported at $77,000 because market is lower than\ncost ($85,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تحتفظ Garcel بمخزون غير مكتمل وفق LIFO بتكلفة $85,000 وقيمة بيع $125,000. وتبلغ تكلفة الإكمال $10,500، وهامش الربح العادي 30% من المبيعات، وتكلفة الاستبدال $75,000. ما قيمة المخزون الواجب عرضها في قائمة المركز المالي؟",
+    "choicesAr": [
+      "$114,500",
+      "$85,000",
+      "$77,000",
+      "$75,000"
+    ],
+    "explanationAr": "يقاس مخزون LIFO أو التجزئة وفق المعايير الأمريكية بالأقل من التكلفة والسوق (LCM). والسوق تكلفة الاستبدال الحالية المقيدة بحيث (1) لا تتجاوز سقف صافي القيمة القابلة للتحقق (NRV)، و(2) لا تقل عن صافي القيمة القابلة للتحقق مطروحًا منه هامش الربح العادي. ويعني صافي القيمة القابلة للتحقق سعر البيع المقدر في النشاط المعتاد مطروحًا منه تكاليف الإكمال والتخلص المتوقعة. لذا يبلغ السقف $114,500 ($125,000 سعر البيع − $10,500 تكلفة الإكمال). وإذا كان هامش الربح العادي $37,500 ($125,000 سعر البيع × 30% هامش الربح)، فإن الحد الأدنى $77,000 ($114,500 صافي القيمة القابلة للتحقق − $37,500 الربح العادي). ولأن تكلفة الاستبدال ($75,000) أقل من الحد الأدنى ($77,000)، تكون السوق $77,000. لذلك يخفض مخزون LIFO ويعرض بمبلغ $77,000 لأن السوق أقل من التكلفة ($85,000)."
   },
   {
     "unit": 2,
@@ -2431,7 +2543,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Under FIFO, inventories are measured at the lower of cost or\nnet realizable value (NRV). NRV is the estimated selling price\nless the estimated costs of completion and disposal. The\ninventory cost is $910. The NRV is $900 ($1,000 – $100). The\nlower of the two is $900. Therefore, the company’s year-end\ninventory balance is $900.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتعلق المعلومات التالية بمخزون شركة في نهاية السنة:\nتكلفة المخزون: $910\nسعر بيع المخزون: $1,000\nهامش الربح العادي: 10% من سعر البيع\nتكلفة الاستبدال الحالية: $740\nتكلفة الإكمال والتخلص: $100\nوفق طريقة FIFO، ما رصيد المخزون في نهاية السنة؟",
+    "choicesAr": [
+      "$740",
+      "$800",
+      "$900",
+      "$910"
+    ],
+    "explanationAr": "وفق FIFO يقاس المخزون بالأقل من التكلفة وصافي القيمة القابلة للتحقق. ويساوي صافي القيمة القابلة للتحقق سعر البيع المقدر مطروحًا منه تكاليف الإكمال والتخلص المقدرة. وتبلغ التكلفة $910، وصافي القيمة القابلة للتحقق $900 ($1,000 − $100). والأقل منهما $900؛ لذا يكون رصيد المخزون في نهاية السنة $900."
   },
   {
     "unit": 2,
