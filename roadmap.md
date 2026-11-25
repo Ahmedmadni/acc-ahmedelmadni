@@ -101,3 +101,5 @@
 - [x] Unit 2 Wave 1: nine receivables and credit loss Arabic drafts (§1 Q2/Q4–5/Q7–12); **9/107 (8.4%)**. Q1 collections/classification assumptions, Q3 allowance debit/credit and measurement wording, Q6 estimated returns presentation held. Continue §1 Q13. See `docs/CMA_UNIT2_ARABIC_WAVE1_2026-11-25.md`.
 
 - [x] Unit 2 Wave 2: eight receivables Arabic drafts (§1 Q13–20); **17/107 (15.9%)**. Section 1 initial review complete: 17 translated, three held. Continue §2 inventory fundamentals. See `docs/CMA_UNIT2_ARABIC_WAVE2_2026-11-25.md`.
+
+- [x] Unit 2 Wave 3: seven inventory fundamentals Arabic drafts (§2 Q2/Q4–9); **24/107 (22.4%)**. Q1 opening/ending inventory label, Q3 freight responsibility, Q10 incorrect explanation subject held. Continue §2 Q11. See `docs/CMA_UNIT2_ARABIC_WAVE3_2026-11-25.md`.
