@@ -602,7 +602,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Every organization faces risks, that is, unforeseen obstacles to\nthe pursuit of its objectives. Risks take many forms and can\noriginate from within or from outside the organization. Risk\nassessment is the process whereby management identifies\nthe organization’s vulnerabilities.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تقييم المخاطر عملية:",
+    "choicesAr": [
+      "مصممة لتحديد الأحداث المحتملة التي قد تؤثر في المنشأة.",
+      "تضع السياسات والإجراءات اللازمة لتحقيق أهداف الرقابة الداخلية.",
+      "تحدد المعلومات وتجمعها في الوقت المناسب.",
+      "تقيّم جودة الرقابة الداخلية على مدار السنة."
+    ],
+    "explanationAr": "تواجه كل منشأة مخاطر، أي عوامل عدم يقين قد تعوق تحقيق أهدافها. وتتخذ المخاطر أشكالًا متعددة وقد تنشأ من داخل المنشأة أو خارجها. وتقييم المخاطر عملية تحدد من خلالها الإدارة مواطن تعرض المنشأة للمخاطر وتحللها."
   },
   {
     "unit": 17,
@@ -636,7 +644,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The five components of internal control described in\nCOSO’s Internal Control -- Integrated Framework are control\nenvironment, risk assessment, control activities, information\nand communication, and monitoring.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي لا يعد أحد مكونات الرقابة الداخلية؟",
+    "choicesAr": [
+      "مخاطر الرقابة.",
+      "المتابعة.",
+      "المعلومات والاتصال.",
+      "بيئة الرقابة."
+    ],
+    "explanationAr": "المكونات الخمسة للرقابة الداخلية وفق إطار COSO المتكامل للرقابة الداخلية هي: بيئة الرقابة، وتقييم المخاطر، والأنشطة الرقابية، والمعلومات والاتصال، والمتابعة. أما مخاطر الرقابة فهي مفهوم مرتبط بمخاطر المراجعة وليست مكونًا مستقلًا في هذا الإطار."
   },
   {
     "unit": 17,
@@ -653,7 +669,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Establishing and maintaining internal control is the\nresponsibility of management. Internal control is intended to\nprovide reasonable assurance that the entity’s objectives are\nachieved. Achievement of these objectives is the basic\nfunction of management.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "على من تقع المسؤولية الأساسية عن إنشاء الرقابة الداخلية والمحافظة عليها؟",
+    "choicesAr": [
+      "المراجع الخارجي.",
+      "الإدارة.",
+      "المراقب المالي.",
+      "أمين الخزانة."
+    ],
+    "explanationAr": "إنشاء الرقابة الداخلية والمحافظة عليها مسؤولية الإدارة. وتهدف الرقابة الداخلية إلى توفير تأكيد معقول بشأن تحقيق أهداف المنشأة. وتحقيق هذه الأهداف وظيفة أساسية للإدارة، مع إشراف المكلفين بالحوكمة."
   },
   {
     "unit": 17,
@@ -670,7 +694,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Inherent risk is the susceptibility of an assertion to a material\nmisstatement in the absence of related controls. This risk is\ngreater for some assertions and related balances or classes\nthan others. For example, complex calculations are more likely\nto be misstated than simple ones, and cash is more likely to\nbe stolen than an inventory of coal. Inherent risk exists\nindependently of the audit.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تنتج بعض أرصدة الحسابات، مثل حسابات المعاشات التقاعدية أو عقود الإيجار، عن حسابات معقدة. ماذا يسمى قابلية هذه الحسابات للتعرض لتحريفات جوهرية قبل مراعاة الضوابط؟",
+    "choicesAr": [
+      "مخاطر المراجعة.",
+      "مخاطر عدم الاكتشاف.",
+      "مخاطر المعاينة.",
+      "المخاطر الملازمة."
+    ],
+    "explanationAr": "المخاطر الملازمة هي قابلية أحد الإقرارات للتعرض لتحريف جوهري في غياب الضوابط ذات الصلة. وتختلف هذه المخاطر بين الإقرارات والأرصدة وفئات المعاملات. فالحسابات المعقدة أكثر عرضة للتحريف من البسيطة، والنقدية أكثر عرضة للسرقة من مخزون الفحم، مثلًا. وتوجد المخاطر الملازمة بصورة مستقلة عن عملية المراجعة."
   },
   {
     "unit": 17,
@@ -687,7 +719,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Human resource policies and practices are a factor in the\ncontrol environment component of internal control. They affect\nthe entity’s ability to employ sufficient competent personnel to\naccomplish its objectives. Policies and practices include those\nfor hiring, orientation, training, evaluating, promoting,\ncompensating, and remedial actions. Although control\nactivities based on the segregation of duties are important to\ninternal control, they do not in themselves promote employee\ncompetence.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تعد كفاءة ونزاهة العاملين المكلفين بتنفيذ الإجراءات المحددة أساسًا لبيئة رقابية سليمة. أي مما يلي ليس عاملًا مباشرًا في توفير موظفين أكفاء؟",
+    "choicesAr": [
+      "الفصل بين الاختصاصات.",
+      "ممارسات التوظيف.",
+      "برامج التدريب.",
+      "تقييمات الأداء."
+    ],
+    "explanationAr": "تعد سياسات الموارد البشرية وممارساتها من عوامل بيئة الرقابة. وتؤثر في قدرة المنشأة على توظيف عدد كاف من العاملين الأكفاء لتحقيق أهدافها. وتشمل التوظيف والتهيئة والتدريب والتقييم والترقية والتعويض والإجراءات التصحيحية. ورغم أهمية الأنشطة الرقابية المبنية على الفصل بين الاختصاصات، فإنها لا تؤدي بذاتها إلى تنمية كفاءة الموظفين."
   },
   {
     "unit": 17,
@@ -704,7 +744,15 @@
     ],
     "answerIndex": 3,
     "explanation": "An organization’s control environment encompasses the\nattitudes and actions of the board of directors and upper\nmanagement regarding the significance of control, i.e., the\n“tone at the top.” One of the components of the control\nenvironment is the assignment of authority and responsibility.\nFor example, management defines key areas of authority and\nresponsibility by placing the information technology, financial\naccounting, and treasury functions under separate officers.\nWhen the management of one department can override the\ninternal controls of another, authority and responsibility have\nnot been properly assigned.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "إذا أتيح لإدارة قسم المبيعات تجاوز نظام الرقابة الداخلية لقسم المحاسبة، ففي أي مما يلي يوجد ضعف رقابي؟",
+    "choicesAr": [
+      "إدارة المخاطر.",
+      "المعلومات والاتصال.",
+      "المتابعة.",
+      "بيئة الرقابة."
+    ],
+    "explanationAr": "تشمل بيئة الرقابة مواقف مجلس الإدارة والإدارة العليا وتصرفاتهم تجاه أهمية الرقابة، أي التوجه الرقابي للإدارة العليا. ومن عناصر هذه البيئة تحديد السلطات والمسؤوليات. فمثلًا، تحدد الإدارة المجالات الرئيسية للسلطة والمسؤولية بإسناد وظائف تقنية المعلومات والمحاسبة المالية والخزانة إلى مسؤولين مختلفين. وإذا استطاعت إدارة قسم تجاوز ضوابط قسم آخر، فهذا يشير في سياق المسألة إلى عدم تحديد السلطات والمسؤوليات بصورة سليمة."
   },
   {
     "unit": 17,
@@ -721,7 +769,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Internal control is designed to provide reasonable assurance\nof the achievement of objectives in the categories of (1)\nreliability of financial reporting, (2) effectiveness and efficiency\nof operations, and (3) compliance with laws and regulations.\nControls relevant to a financial statement audit ordinarily\npertain to the objective of preparing external financial\nstatements that are fairly presented in conformity with GAAP\nor another comprehensive basis of accounting.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "من الاهتمامات الرئيسية لمراجع القوائم المالية التحقق مما إذا كانت الرقابة الداخلية مصممة لتوفير تأكيد معقول بشأن:",
+    "choicesAr": [
+      "تعظيم هوامش الربح وتحسين الكفاءة التشغيلية إلى المستوى الأمثل.",
+      "مراجعة كبير مسؤولي المحاسبة لجميع المعاملات المحاسبية.",
+      "معالجة مشكلات الروح المعنوية في الشركة فورًا وبفعالية.",
+      "موثوقية التقارير المالية."
+    ],
+    "explanationAr": "تصمم الرقابة الداخلية لتوفير تأكيد معقول بشأن تحقيق أهداف الفئات التالية: (1) موثوقية التقارير المالية، (2) فعالية العمليات وكفاءتها، (3) الالتزام بالقوانين واللوائح. وترتبط الضوابط ذات الصلة بمراجعة القوائم المالية عادة بهدف إعداد قوائم مالية خارجية معروضة بعدالة وفق المبادئ المحاسبية المقبولة عمومًا (GAAP) أو أساس محاسبي شامل آخر مناسب."
   },
   {
     "unit": 17,
@@ -738,7 +794,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Senior management’s role is to oversee the establishment,\nadministration, and assessment of the system of risk\nmanagement and control processes. Among the\nresponsibilities of the organization’s line managers is the\nassessment of the control processes in their respective areas.\nInternal auditors provide varying degrees of assurance about\nthe effectiveness of the risk management and control\nprocesses in select activities and functions of the organization.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يؤدي أعضاء مجلس الإدارة والإدارة والمراجعون الخارجيون والداخليون أدوارًا مهمة في إنشاء عمليات رقابية سليمة. ما المسؤولية الأساسية للإدارة العليا؟",
+    "choicesAr": [
+      "الإشراف على إنشاء عمليات الرقابة وإدارتها وتقييمها.",
+      "مراجعة موثوقية المعلومات المالية والتشغيلية وسلامتها.",
+      "ضمان إشراف المراجعين الخارجيين والداخليين على إدارة نظام المخاطر والرقابة.",
+      "تنفيذ الضوابط التي يصممها مجلس الإدارة ومتابعتها."
+    ],
+    "explanationAr": "يتمثل دور الإدارة العليا في الإشراف على إنشاء نظام إدارة المخاطر والعمليات الرقابية وإدارته وتقييمه. ومن مسؤوليات المديرين التنفيذيين للأعمال تقييم العمليات الرقابية في مجالاتهم. ويقدم المراجعون الداخليون درجات متفاوتة من التأكيد بشأن فعالية عمليات إدارة المخاطر والرقابة في أنشطة ووظائف مختارة بالمنشأة."
   },
   {
     "unit": 17,
@@ -755,7 +819,15 @@
     ],
     "answerIndex": 1,
     "explanation": "A system flowchart is a graphic analysis of a data processing\napplication, usually prepared by a systems analyst. It is\ngeneral and stresses flows of data, not computer program\nlogic. A program flowchart is a graphic representation of the\ndetailed steps and logic of an individual computer program.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما أفضل وسيلة لعرض تدفق البيانات ومعالجة المعلومات في نظام، بما يشمل الأجهزة الحاسوبية، بصورة رسومية؟",
+    "choicesAr": [
+      "مخطط تدفق البيانات.",
+      "مخطط انسياب النظام.",
+      "مخطط جانت.",
+      "مخطط انسياب البرنامج."
+    ],
+    "explanationAr": "مخطط انسياب النظام تحليل رسومي لتطبيق معالجة البيانات، يعده عادة محلل النظم. وهو عام ويركز على تدفقات البيانات لا على المنطق البرمجي التفصيلي. أما مخطط انسياب البرنامج فيمثل رسوميًا الخطوات التفصيلية والمنطق الخاص ببرنامج حاسوبي معين."
   },
   {
     "unit": 17,
@@ -772,7 +844,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Officers and employees as well as directors are fiduciaries\nwith regard to the corporation. They owe a duty of loyalty,\ngood faith, and fair dealing when transacting business with or\non behalf of the company. This duty requires full disclosure of\nany personal interest in transactions with the corporation,\navoidance of conflicts of interest and the making of secret\nprofits, and placing the corporate interest ahead of personal\ngain.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي وصف مما يلي أنسب لعضو مجلس إدارة شركة؟",
+    "choicesAr": [
+      "وكيل.",
+      "أمين على مال.",
+      "صاحب واجب ائتماني.",
+      "أصيل."
+    ],
+    "explanationAr": "يقع على أعضاء مجلس الإدارة واجب ائتماني تجاه الشركة، وقد تترتب واجبات مماثلة على المسؤولين والعاملين وفق دورهم والنظام المطبق. ويتضمن واجب الولاء وحسن النية والتعامل العادل عند إجراء المعاملات مع الشركة أو نيابة عنها. ويقتضي الإفصاح عن المصالح الشخصية وتجنب تضارب المصالح والأرباح السرية وتقديم مصلحة الشركة على المنفعة الشخصية."
   },
   {
     "unit": 17,
@@ -789,7 +869,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The COSO model for internal control establishes control\nobjectives for operations, reporting, and compliance.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "الرقابة الداخلية عملية مصممة لتوفير تأكيد معقول بشأن تحقيق الأهداف المتعلقة بما يلي:",
+    "choicesAr": [
+      "التقارير.",
+      "العمليات.",
+      "الالتزام.",
+      "جميع الإجابات صحيحة."
+    ],
+    "explanationAr": "يحدد إطار COSO للرقابة الداخلية أهداف الرقابة المتعلقة بالعمليات والتقارير والالتزام."
   },
   {
     "unit": 17,
@@ -806,7 +894,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The top-down approach to the audit of internal controls over\nfinancial reporting is best described as beginning at the\nfinancial statement level, focusing on entity-level controls (the\n“top”), and working down to significant accounts and\ndisclosures and their relevant assertions (the “bottom”). The\ntop-down approach is also known as the risk-based approach.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي أفضل وصف لنقطة بداية المنهج من أعلى إلى أسفل في مراجعة الرقابة الداخلية على التقارير المالية؟",
+    "choicesAr": [
+      "البدء على مستوى القوائم المالية، والتركيز على ضوابط مستوى المنشأة، ثم الانتقال إلى الحسابات والإفصاحات المهمة والإقرارات ذات الصلة.",
+      "البدء بمقابلة الإدارة العليا وملاحظة تصرفاتها بشأن بيئة الرقابة في المنشأة.",
+      "البدء بضوابط الأصول ومعاملاتها ثم الانتقال إلى ضوابط الالتزامات وحقوق الملكية.",
+      "البدء بتحديد الحسابات والإفصاحات المهمة لكل إقرار يحتمل بصورة معقولة أن يتضمن تحريفًا جوهريًا."
+    ],
+    "explanationAr": "أفضل وصف للمنهج من أعلى إلى أسفل هو البدء على مستوى القوائم المالية، والتركيز على ضوابط مستوى المنشأة (الأعلى)، ثم الانتقال إلى الحسابات والإفصاحات المهمة والإقرارات ذات الصلة (الأسفل). ويعرف هذا المنهج أيضًا بالمنهج القائم على المخاطر."
   },
   {
     "unit": 17,
@@ -823,7 +919,15 @@
     ],
     "answerIndex": 1,
     "explanation": "A flowchart can represent a process using symbols. It is a\nuseful tool for auditors who want to gain an understanding of\ninternal control. The auditors can become familiar with\npayments processing by following the steps in a flowchart,\nwhich enables them to identify missing steps.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يفحص المراجع الخارجي العمليات من حيث الكفاءة والرقابة، وطلب من مدير المحاسبة المشرف على المدفوعات تقديم توثيق للعملية ليتعرف على مسار المدفوعات خلال مراحلها. ما أفضل توثيق يمكن للمدير تقديمه لهذا الغرض؟",
+    "choicesAr": [
+      "مصفوفة تحليلية؛ لأنها تتيح للمراجع رؤية العملية وتحديد الخطوات المفقودة.",
+      "مخطط انسياب؛ لأنه يتيح للمراجع رؤية العملية وتحديد الخطوات المفقودة.",
+      "مصفوفة تحليلية؛ لأنها تعرض المخاطر والضوابط للتأكد من تغطية جميع المخاطر.",
+      "مخطط انسياب؛ لأنه يعرض المخاطر والضوابط للتأكد من تغطية جميع المخاطر."
+    ],
+    "explanationAr": "يمكن لمخطط الانسياب تمثيل العملية باستخدام الرموز، وهو أداة مفيدة للمراجعين لفهم الرقابة الداخلية. ويمكن للمراجع التعرف على معالجة المدفوعات بتتبع خطوات المخطط، مما يساعده على تحديد الخطوات المفقودة."
   },
   {
     "unit": 17,
@@ -858,7 +962,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A systems flowchart is a symbolic representation of the flow of\ndocuments and procedures through a series of steps in the\naccounting process of the client’s organization.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عند توثيق فهم الرقابة الداخلية لدى العميل، يستخدم المراجع المستقل أحيانًا مخطط انسياب النظام. ما أفضل وصف له؟",
+    "choicesAr": [
+      "عرض تصويري لتدفق التعليمات في النظام الحاسوبي الداخلي للعميل.",
+      "رسم يوضح الهيكل الداخلي للتبعية الإدارية في المنشأة.",
+      "رسم بياني لتدفق العمليات يستخدم بدلًا من استبيان الرقابة الداخلية للمراجع.",
+      "تمثيل رمزي لنظام أو سلسلة من العمليات المتتابعة."
+    ],
+    "explanationAr": "مخطط انسياب النظام تمثيل رمزي لتدفق المستندات والإجراءات عبر سلسلة من الخطوات في العملية المحاسبية لمنشأة العميل."
   },
   {
     "unit": 17,
