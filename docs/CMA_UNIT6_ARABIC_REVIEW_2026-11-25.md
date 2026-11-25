@@ -1,0 +1,5 @@
+# Unit 6 initial Arabic review
+
+61 records reviewed; 55 complete educational Arabic drafts (90.2%), six held, zero unreviewed. Combined bank: 1747/2443. Section counts: foundations 17/18; capitals 20/20; guiding principles and content elements 7/9; adoption 11/14. Canonical English text, choices, keys and source pages unchanged. Numerical parity checked; source fingerprints, translation coverage, terminology and review holds tested. Context notes distinguish integrated reports from the reporting process, outputs from outcomes, and independent assurance from publication. Benefits are potential, not guaranteed.
+
+Holds: 6.1.8 truncated answer fragment embedded in stem; 6.3.1 ambiguous use of 'element' versus broader influences in value creation; 6.3.4 source explanation counts nine content elements including general guidance; verify against applicable framework; 6.4.1 stakeholder acceptance depends on context; 6.4.7 greatest challenge is subjective; 6.4.10 multiple plausible benefits and unsupported assumption of lower long-term costs. Original-page and framework-edition verification remain pending. Next Unit 7.
