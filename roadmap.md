@@ -111,3 +111,5 @@
 - [x] Unit 2 Wave 6: 26 additional cost flow Arabic drafts (§3 Q11–32/Q34–37); **66/107 (61.7%)**. Section 3 initial review complete: 34 translated, three held. Q33 retrospective LIFO transition assumption held. Continue §4 subsequent measurement. See `docs/CMA_UNIT2_ARABIC_WAVE6_2026-11-25.md`.
 
 - [x] Unit 2 Wave 7: 28 subsequent measurement drafts (§4 Q1–3/Q5–8/Q10–11/Q13–31); **94/107 (87.9%)**, 13 held, zero unreviewed. Initial review complete; continue Unit 3. See `docs/CMA_UNIT2_ARABIC_WAVE7_2026-11-25.md`.
+
+- [x] Unit 3 complete initial Arabic review: 109/125 (87.2%), 16 held, zero unreviewed across all five sections. See `docs/CMA_UNIT3_ARABIC_REVIEW_2026-11-25.md`. Continue Unit 4 after CI.
