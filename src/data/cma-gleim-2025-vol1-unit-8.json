@@ -499,7 +499,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Under process costing, as with job-order costing, the cost of a\nnormal level of spoilage is left in cost of goods sold; abnormal\nspoilage is recognized separately as a loss.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عند النظر في التالف الطبيعي وغير الطبيعي، ما أفضل معالجة محاسبية للتالف نظريًا في نظام تكاليف المراحل؟",
+    "choicesAr": [
+      "تحمل تكلفة التالف الطبيعي وغير الطبيعي على حساب مصروف مستقل.",
+      "تحمل تكلفة التالف الطبيعي على الوحدات السليمة وتكلفة التالف غير الطبيعي على حساب مصروف مستقل.",
+      "تحمل تكلفة التالف الطبيعي وغير الطبيعي على الوحدات السليمة.",
+      "تحمل تكلفة التالف الطبيعي على حساب مصروف مستقل وتكلفة التالف غير الطبيعي على الوحدات السليمة."
+    ],
+    "explanationAr": "في تكاليف المراحل، كما في تكاليف الأوامر، يحمل التالف الطبيعي على تكلفة الوحدات السليمة المؤهلة، ويثبت ضمن تكلفة المبيعات عند بيعها. أما التالف غير الطبيعي فيثبت بصورة منفصلة كخسارة في الفترة."
   },
   {
     "unit": 8,
@@ -516,7 +524,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Process costing is used for mass production of a standardized\nproduct on a continuous basis. Costs are assigned to large\ngroups of similar items, and average unit costs are calculated.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تصنع شركة علامتين تجاريتين من أسلاك السياج الشائكة لبيعها لتجار الجملة وأصحاب المزارع الكبيرة. ما نظام التكاليف الأنسب لهذه الشركة؟",
+    "choicesAr": [
+      "نظام الكمية الاقتصادية للطلب (EOQ).",
+      "تكاليف الأوامر.",
+      "تكاليف المراحل.",
+      "نظام مخزون التجزئة."
+    ],
+    "explanationAr": "تستخدم تكاليف المراحل للإنتاج الكمي المستمر لمنتج نمطي. وتخصص التكاليف لمجموعات كبيرة من الوحدات المتشابهة، وتحسب متوسطات تكلفة الوحدة."
   },
   {
     "unit": 8,
@@ -533,7 +549,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Job-order costing is used when each end product is unique.\nProcess cost accounting assigns costs to inventoriable goods\nor services. It applies to relatively homogeneous products that\nare mass produced on a continuous basis (e.g., petroleum\nproducts, thread, and computer monitors). A gravel pit\noperation produces homogeneous end products on a\ncontinuous basis that are inventoriable. Thus, it is most likely\nto use process costing",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما طريقة احتساب التكاليف التي يرجح استخدامها في محجر الحصى؟",
+    "choicesAr": [
+      "تكاليف الأوامر.",
+      "تكاليف المراحل.",
+      "تكاليف المراحل حتى نقطة الانفصال ثم تكاليف الأوامر.",
+      "لا شيء من الإجابات صحيح."
+    ],
+    "explanationAr": "تستخدم تكاليف الأوامر عندما يكون كل منتج نهائي متميزًا. أما تكاليف المراحل فتخصص التكاليف للسلع أو الخدمات القابلة للتحميل على المخزون وفق طبيعتها، وتناسب المنتجات المتجانسة نسبيًا التي تنتج بكميات كبيرة وباستمرار، مثل المنتجات البترولية والخيوط وشاشات الحاسوب. وينتج محجر الحصى منتجات متجانسة بصورة مستمرة قابلة للتخزين؛ لذا يرجح استخدام تكاليف المراحل."
   },
   {
     "unit": 8,
@@ -550,7 +574,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Abnormal spoilage is spoilage that is not expected to occur\nunder normal, efficient operating conditions. Because of its\nunusual nature, abnormal spoilage is typically treated as a\nloss in the period in which it is incurred.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "كيف ينبغي معالجة تكلفة التالف غير الطبيعي في نظام تكاليف المراحل؟",
+    "choicesAr": [
+      "توزع نسبيًا بين الوحدات المحولة ومخزون آخر المدة.",
+      "تدرج ضمن تكلفة الوحدات المحولة.",
+      "تعالج كخسارة في فترة تكبدها.",
+      "تتجاهل."
+    ],
+    "explanationAr": "التالف غير الطبيعي هو التالف الذي لا يتوقع حدوثه في ظروف التشغيل العادية الكفؤة. ونظرًا إلى طبيعته غير المعتادة يعالج عادة كخسارة في فترة تكبده."
   },
   {
     "unit": 8,
@@ -567,7 +599,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Under process costing, as with job-order costing, the cost of a\nnormal level of spoilage is left in cost of goods sold. Thus, the\ncost of the period’s normal spoilage must be allocated among\nall the units worked on during the period, both those finished\nand those remaining in work-in-process. Abnormal spoilage is\nrecognized separately as a loss.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تفحص شركة تستخدم تكاليف المراحل منتجاتها عند بلوغ نسبة إتمام 60%. وإذا بلغت نسبة إتمام مخزون الإنتاج تحت التشغيل آخر المدة 80%، فكيف تعالج التالف الطبيعي وغير الطبيعي؟",
+    "choicesAr": [
+      "تضاف تكلفة التالف بنوعيه إلى تكلفة الوحدات السليمة المكتملة خلال الفترة.",
+      "تحمل تكلفة التالف بنوعيه على مصروفات الفترة.",
+      "تضاف تكلفة التالف الطبيعي إلى تكلفة الوحدات السليمة المكتملة خلال الفترة، ويثبت غير الطبيعي كخسارة.",
+      "توزع تكلفة التالف الطبيعي بين الوحدات السليمة المكتملة خلال الفترة ومخزون الإنتاج تحت التشغيل آخر المدة، ويثبت غير الطبيعي كخسارة."
+    ],
+    "explanationAr": "في تكاليف المراحل، كما في تكاليف الأوامر، تحمل تكلفة التالف الطبيعي على الوحدات السليمة التي تجاوزت نقطة الفحص. وفي هذه الحالة يوزع تالف الفترة الطبيعي على الوحدات المكتملة والوحدات المتبقية تحت التشغيل لأنها تجاوزت نقطة الفحص. وتصبح التكلفة جزءًا من تكلفة المبيعات عند البيع. أما التالف غير الطبيعي فيثبت منفصلًا كخسارة."
   },
   {
     "unit": 8,
@@ -601,7 +641,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The cost flow among accounts in process costing is similar to\nthat for job-order costing. Both use the basic general ledger\naccounts, for example, materials control, work-in-process\ncontrol, manufacturing overhead control, finished goods\ncontrol, and cost of goods sold. Consequently, each system\ncredits (decreases) work-in-process control and debits\n(increases) finished goods control when goods are completed.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "هل يسجل اكتمال تصنيع البضاعة كتخفيض لحساب مراقبة الإنتاج تحت التشغيل عند استخدام النظامين التاليين؟\nتكاليف الأوامر | تكاليف المراحل",
+    "choicesAr": [
+      "نعم | لا",
+      "نعم | نعم",
+      "لا | نعم",
+      "لا | لا"
+    ],
+    "explanationAr": "يتشابه تدفق التكاليف بين الحسابات في نظامي تكاليف المراحل والأوامر. ويستخدم كلاهما حسابات الأستاذ العام الأساسية مثل مراقبة المواد والإنتاج تحت التشغيل والتكاليف الصناعية غير المباشرة والإنتاج التام وتكلفة المبيعات. ولذلك يجعل حساب مراقبة الإنتاج تحت التشغيل دائنًا (ينخفض)، وحساب مراقبة الإنتاج التام مدينًا (يزيد) عند اكتمال الإنتاج، أو ينقل إلى المرحلة التالية عند التحويل بين المراحل."
   },
   {
     "unit": 8,
@@ -618,7 +666,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The principal distinction between process costing and job\ncosting is that the latter uses subsidiary WIP and finished\ngoods ledgers to account for separate jobs. However, the\nsame general ledger accounts are used in both systems, and\ncost flow among accounts also is the same. Both systems\nincrease work-in-process (a general ledger account) to record\napplied overhead and other production costs.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في نظام تكاليف المراحل، يسجل تحميل التكاليف الصناعية غير المباشرة عادة كزيادة في:",
+    "choicesAr": [
+      "تكلفة البضاعة المباعة.",
+      "حساب مراقبة مخزون الإنتاج تحت التشغيل.",
+      "حساب مراقبة التكاليف الصناعية غير المباشرة.",
+      "حساب مراقبة مخزون الإنتاج التام."
+    ],
+    "explanationAr": "الفرق الرئيسي بين تكاليف المراحل والأوامر هو أن الأخير يستخدم سجلات فرعية للإنتاج تحت التشغيل والإنتاج التام لمتابعة الأوامر المنفصلة. ومع ذلك تستخدم الحسابات الأساسية نفسها في الأستاذ العام في كلا النظامين ويتشابه تدفق التكاليف. ويزيد حساب الإنتاج تحت التشغيل في كلا النظامين لإثبات التكاليف غير المباشرة المحملة وتكاليف الإنتاج الأخرى."
   },
   {
     "unit": 8,
@@ -635,7 +691,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Process costing is used to assign costs to similar products that\nare mass produced on a continuous basis. Costs are\naccumulated for a cost object consisting of a large number of\nsimilar units of goods or services, work-in-process is stated in\nterms of equivalent units, and unit costs are established based\non the average cost of all units. Process costing, therefore,\ninvolves the calculation of the stage of completion of goods-in-\nprocess, a necessary step in determining the number of\nequivalent units.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يعد عيبًا في نظام تكاليف المراحل مقارنة بتكاليف الأوامر؟",
+    "choicesAr": [
+      "صعوبة تحديد تكلفة البضاعة المباعة عندما تشحن دفعات جزئية قبل اكتمال الأمر.",
+      "صعوبة التأكد من تحميل المواد والأجور على كل أمر محدد بدقة.",
+      "يتطلب حساب درجة إتمام الإنتاج تحت التشغيل واستخدام الوحدات المكافئة.",
+      "ارتفاع تكلفة استخدامه لكثرة الأعمال الكتابية."
+    ],
+    "explanationAr": "تستخدم تكاليف المراحل لتخصيص تكاليف المنتجات المتشابهة التي تنتج بكميات كبيرة بصورة مستمرة. وتجمع التكاليف لغرض تكلفة يتكون من عدد كبير من وحدات السلع أو الخدمات المتشابهة. ويعبر عن الإنتاج تحت التشغيل بوحدات مكافئة وتحدد تكلفة الوحدة على أساس متوسط تكلفة الوحدات. ولذلك يتطلب النظام حساب درجة إتمام الإنتاج تحت التشغيل كخطوة ضرورية لحساب الوحدات المكافئة."
   },
   {
     "unit": 8,
@@ -652,7 +716,15 @@
     ],
     "answerIndex": 0,
     "explanation": "EUP measure the amount of work performed in each\nproduction phase in terms of fully processed units during a\ngiven period. Incomplete units are restated as the equivalent\namount of completed units. The calculation is made separately\nfor direct materials and conversion cost (direct labor and\noverhead).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "إلى ماذا تعادل وحدة مكافئة من المواد المباشرة أو تكاليف التحويل؟",
+    "choicesAr": [
+      "مقدار المواد المباشرة أو تكاليف التحويل اللازم لإتمام وحدة إنتاج واحدة.",
+      "وحدة واحدة من مخزون الإنتاج تحت التشغيل.",
+      "مقدار المواد المباشرة أو تكاليف التحويل اللازم لبدء وحدة إنتاج تحت التشغيل.",
+      "نصف مقدار المواد المباشرة أو تكاليف التحويل لوحدة من مخزون الإنتاج التام، بافتراض نمط إنتاج خطي."
+    ],
+    "explanationAr": "تقيس الوحدات المكافئة للإنتاج (EUP) حجم العمل المنجز في كل مرحلة إنتاجية خلال فترة معينة بما يعادله من وحدات مكتملة. ويعبر عن الوحدات غير المكتملة بعدد مكافئ من الوحدات المكتملة. ويجرى الحساب بصورة منفصلة للمواد المباشرة وتكاليف التحويل (الأجور المباشرة والتكاليف الصناعية غير المباشرة)."
   },
   {
     "unit": 8,
@@ -669,7 +741,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Job-order costing is used when each end product is unique.\nProcess cost accounting assigns costs to inventoriable goods\nor services. It applies to relatively homogeneous products that\nare mass produced on a continuous basis (e.g., petroleum\nproducts, thread, and computer monitors). A gravel pit\noperation produces homogeneous end products on a\ncontinuous basis that are inventoriable. Thus, it is most likely\nto use process costing.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما طريقة احتساب التكاليف التي يرجح استخدامها في محجر الحصى؟",
+    "choicesAr": [
+      "تكاليف الأوامر.",
+      "تكاليف المراحل.",
+      "تكاليف المراحل حتى نقطة الانفصال ثم تكاليف الأوامر.",
+      "لا شيء من الإجابات صحيح."
+    ],
+    "explanationAr": "تستخدم تكاليف الأوامر عندما يكون كل منتج نهائي متميزًا. أما تكاليف المراحل فتخصص التكاليف للسلع أو الخدمات القابلة للتحميل على المخزون وفق طبيعتها، وتناسب المنتجات المتجانسة نسبيًا التي تنتج بكميات كبيرة وباستمرار، مثل المنتجات البترولية والخيوط وشاشات الحاسوب. وينتج محجر الحصى منتجات متجانسة بصورة مستمرة قابلة للتخزين؛ لذا يرجح استخدام تكاليف المراحل."
   },
   {
     "unit": 8,
