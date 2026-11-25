@@ -987,7 +987,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Systems flowcharts provide a visual representation of a series\nof sequential processes, that is, of a flow of documents, data,\nand operations. In many instances a flowchart is preferable to\na questionnaire because a picture is usually more easily\ncomprehended.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "من مزايا استخدام خرائط تدفق النظم لتوثيق معلومات الرقابة الداخلية بدلًا من استبيانات الرقابة الداخلية أن خرائط التدفق:",
+    "choicesAr": [
+      "تبرز نقاط ضعف الرقابة الداخلية بصورة أوضح.",
+      "تقدم تصويرًا مرئيًا لأنشطة العملاء.",
+      "توضح ما إذا كانت الإجراءات الرقابية تعمل بفعالية.",
+      "تقلل الحاجة إلى ملاحظة موظفي العملاء أثناء أداء المهام الروتينية."
+    ],
+    "explanationAr": "تعرض خرائط تدفق النظم سلسلة من العمليات المتتابعة بصورة مرئية، بما يشمل تدفق المستندات والبيانات والعمليات. وفي حالات كثيرة تكون خريطة التدفق أسهل فهمًا من الاستبيان، لكنها لا تثبت فعالية تشغيل الضوابط بمجرد رسمها."
   },
   {
     "unit": 17,
@@ -1004,7 +1012,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Reasonable assurance is provided when cost-effective actions\nare taken to restrict deviations to a tolerable level. This\nimplies, for example, that material errors and improper or\nillegal acts will be prevented or detected and corrected within\na timely period by employees in the normal course of\nperforming their assigned duties. The cost-benefit relationship\nis considered by management during the design of systems.\nThe potential loss associated with any exposure or risk is\nweighed against the cost to control it.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تصمم الضوابط الداخلية لتوفير تأكيد معقول بأن:",
+    "choicesAr": [
+      "الأخطاء الجوهرية أو الغش سيُمنعان أو يُكتشفان ويُصححان في الوقت المناسب على يد الموظفين خلال أداء واجباتهم.",
+      "خطط الإدارة لم يتم تجاوزها بتواطؤ العاملين.",
+      "توجيه إدارة المراجعة الداخلية لأداء الإدارة والإشراف عليه يتحققان باقتصاد وكفاءة.",
+      "عمليات التخطيط والتنظيم والتوجيه لدى الإدارة تخضع لتقييم سليم."
+    ],
+    "explanationAr": "يتحقق التأكيد المعقول باتخاذ إجراءات فعالة من حيث التكلفة تحد من الانحرافات إلى مستوى مقبول. ويشمل ذلك السعي لمنع الأخطاء الجوهرية والتصرفات غير السليمة أو غير القانونية أو اكتشافها وتصحيحها في الوقت المناسب أثناء أداء الموظفين لواجباتهم المعتادة. وتراعي الإدارة عند تصميم النظام العلاقة بين تكلفة الضابط والخسارة المحتملة المرتبطة بالمخاطر. ولا يعني ذلك ضمانًا مطلقًا."
   },
   {
     "unit": 17,
@@ -1021,7 +1037,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Systems flowcharts are overall graphic analyses of the flow of\ndata and the processing steps in an information system.\nAccordingly, they can be used to represent segregation of\nduties and the transfer of data between different segments in\nthe organization.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يراجع المراجع خريطة تدفق النظام ويكيّفها لفهم تدفق المعلومات عند معالجة المقبوضات النقدية. وتعد خريطة التدفق:",
+    "choicesAr": [
+      "تصويرًا لإجراءات رقابية محددة مستخدمة، مثل اختبارات صحة المدخلات ومطابقات رقابة الدفعات.",
+      "دليلًا جيدًا على فرص الفصل بين الواجبات.",
+      "محدثة عمومًا لتعكس تغييرات النظم.",
+      "تصويرًا للمعالجة الحاسوبية فقط دون المعالجة اليدوية."
+    ],
+    "explanationAr": "خرائط تدفق النظم تحليل رسومي شامل لتدفق البيانات وخطوات معالجتها في نظام المعلومات. ولذلك تساعد في تمثيل الفصل بين الواجبات وانتقال البيانات بين الوحدات المختلفة في المنشأة."
   },
   {
     "unit": 17,
@@ -1038,7 +1062,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Human resource policies and practices are part of the control\nenvironment. They relate to hiring, orientation, training,\nevaluating, counseling, promoting, compensating, and\nremedial actions. The control environment is the component\nthat sets the tone of an organization, influencing the control\nconsciousness of its people. It is the foundation for the other\ncomponents. Detection risk is not part of the control\nenvironment. It is the risk that the audit procedures will fail to\ndetect material misstatements. Thus, detection risk is a\nfunction of the effectiveness of the procedures used by the\nauditor.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يعد من عوامل بيئة الرقابة؟\nترتيب الإجابة: مخاطر عدم الاكتشاف؛ سياسات وممارسات شؤون العاملين.",
+    "choicesAr": [
+      "نعم؛ نعم",
+      "نعم؛ لا",
+      "لا؛ نعم",
+      "لا؛ لا"
+    ],
+    "explanationAr": "تعد سياسات وممارسات الموارد البشرية جزءًا من بيئة الرقابة، وتشمل التوظيف والتهيئة والتدريب والتقييم والإرشاد والترقية والتعويضات والإجراءات التصحيحية. وتحدد بيئة الرقابة المناخ العام للمنشأة وتؤثر في وعي العاملين بالرقابة، وهي أساس المكونات الأخرى. أما مخاطر عدم الاكتشاف فليست جزءًا من بيئة الرقابة، بل تعبر عن احتمال عدم اكتشاف إجراءات المراجعة للتحريفات الجوهرية، وترتبط بفعالية إجراءات المراجع."
   },
   {
     "unit": 17,
@@ -1072,7 +1104,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The auditor would be concerned if the decision process were\ndominated by one individual or a small group. In that case,\ncompensating controls, e.g., effective oversight by the audit\ncommittee, reduce risk.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "قد تزيد بعض خصائص الإدارة من قلق المراجع بشأن مخاطر التحريفات الجوهرية. أي الخصائص الآتية أقل احتمالًا لإثارة القلق؟",
+    "choicesAr": [
+      "اتخاذ القرارات التشغيلية والتمويلية بواسطة عدد كبير من الأفراد.",
+      "التزام الإدارة بتوقعات مفرطة في التفاؤل.",
+      "اهتمام الإدارة المفرط بزيادة سعر سهم المنشأة باستخدام ممارسات محاسبية مفرطة في الجرأة.",
+      "اهتمام الإدارة بأساليب غير ملائمة لتخفيض الأرباح لأغراض ضريبية."
+    ],
+    "explanationAr": "يثار قلق المراجع عندما يهيمن فرد واحد أو مجموعة صغيرة على عملية اتخاذ القرار. وفي هذه الحالة قد تخفض الضوابط التعويضية، مثل الإشراف الفعال من لجنة المراجعة، مستوى المخاطر. وتعدد متخذي القرار ليس ضمانًا لسلامة الرقابة لكنه أقل إثارة للقلق مقارنة بالبدائل."
   },
   {
     "unit": 17,
@@ -1089,7 +1129,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Monitoring is a process that assesses the quality of internal\ncontrol over time. It involves assessment by appropriate\npersonnel of the design and operation of controls and the\ntaking of corrective action. Monitoring can be done through\nongoing activities or separate evaluations. Ongoing monitoring\nprocedures are built into the normal recurring activities of an\nentity and include regular management and supervisory\nactivities. Thus, analysis of gross margin data and\ninvestigation of significant deviations is a monitoring process.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لدى سلسلة مطاعم أكثر من 680 مطعمًا. يجب إدخال جميع الطلبات في كل مطعم عبر جهاز إلكتروني يسجل طلبات مقدمي الخدمة ويرسلها إلى المطبخ للتحضير. ويتولى كل مقدم خدمة تحصيل النقد عن طلباته وتسليمه في نهاية الوردية بما يعادل قيمة مبيعات الطلبات المسجلة على رقمه التعريفي. ثم يطابق المدير النقد المحصل يوميًا مع سجل الطلبات المحوسب، ويحقق المطعم فورًا في أي فروق. وقد وضع المقر الرئيسي ضوابط متابعة للكشف عن احتمال عدم تسجيل أحد المطاعم كامل إيراداته وتحويل النقد المقابل إليه. أي مما يلي أفضل مثال لضابط متابعة؟",
+    "choicesAr": [
+      "مطابقة مدير المطعم للنقد المحصل مع طلبات الطعام المسجلة حاسوبيًا.",
+      "إلزام إدخال جميع الطلبات على الحاسوب والفصل بين واجبات مقدمي الخدمة والطهاة.",
+      "إعداد الإدارة تحليلًا تفصيليًا لمجمل هامش الربح لكل فرع والتحقيق في الفروع ذات الهامش الأقل بصورة ملحوظة.",
+      "تحويل النقد إلى المقر الرئيسي يوميًا."
+    ],
+    "explanationAr": "المتابعة عملية لتقييم جودة الرقابة الداخلية بمرور الوقت، وتشمل تقييم تصميم الضوابط وتشغيلها بواسطة أشخاص مناسبين واتخاذ إجراءات تصحيحية. ويمكن أن تتم عبر أنشطة مستمرة أو تقييمات منفصلة. وتندمج المتابعة المستمرة في الأنشطة المعتادة، بما في ذلك الإشراف الإداري. ولذلك يعد تحليل هامش مجمل الربح والتحقيق في الانحرافات المهمة مثالًا للمتابعة في هذا السياق، بخلاف المطابقة اليومية التي تمثل نشاطًا رقابيًا مباشرًا."
   },
   {
     "unit": 17,
@@ -1106,7 +1154,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Inherent risk is the susceptibility of an assertion to material\nmisstatement in the absence of related controls. Some\nassertions and related balances or classes of transactions\nhave greater inherent risk. Thus, cash has a greater inherent\nrisk than less liquid assets.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتكون مخاطر المراجعة من المخاطر الملازمة ومخاطر الرقابة ومخاطر عدم الاكتشاف. أي العبارات الآتية صحيحة؟",
+    "choicesAr": [
+      "النقدية أكثر عرضة للسرقة من مخزون الفحم لأن مخاطرها الملازمة أعلى.",
+      "يمكن خفض خطر عدم منع الرقابة الداخلية للتحريف الجوهري أو اكتشافه في الوقت المناسب إلى الصفر بواسطة ضوابط فعالة.",
+      "مخاطر عدم الاكتشاف دالة في كفاءة إجراء المراجعة.",
+      "يمكن للمراجع تغيير المستويات القائمة للمخاطر الملازمة ومخاطر الرقابة ومخاطر عدم الاكتشاف وفق تقديره."
+    ],
+    "explanationAr": "المخاطر الملازمة هي قابلية أحد الإقرارات للتعرض لتحريف جوهري قبل مراعاة الضوابط ذات الصلة. وتختلف هذه القابلية بين الإقرارات والأرصدة وفئات المعاملات؛ فالنقدية أكثر عرضة للسرقة من الأصول الأقل سيولة. ولا تلغي الضوابط الفعالة مخاطر الرقابة تمامًا."
   },
   {
     "unit": 17,
@@ -1141,7 +1197,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The benefits of internal controls must always exceed the costs\nof implementing them. A system of absolute assurance could\nonly be implemented at prohibitively great expense.\nReasonable assurance is a cost beneficial solution.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتضمن المفاهيم الأساسية للرقابة المحاسبية الداخلية ما يأتي:\n• ألا تتجاوز تكلفة النظام المنافع المتوقع تحقيقها.\n• ألا يعوق الأثر الإجمالي للإجراء الرقابي الكفاءة التشغيلية.\nأي المفاهيم الآتية يعترف بهذين العاملين؟",
+    "choicesAr": [
+      "القيود.",
+      "مسؤولية الإدارة.",
+      "أساليب معالجة البيانات.",
+      "التأكيد المعقول."
+    ],
+    "explanationAr": "ينبغي أن تبرر منافع الرقابة الداخلية تكاليف تنفيذها. وقد يتطلب السعي إلى تأكيد مطلق تكاليف باهظة، فضلًا عن القيود الملازمة للرقابة. لذا يمثل التأكيد المعقول نهجًا يراعي التناسب بين التكلفة والمنفعة دون ضمان مطلق."
   },
   {
     "unit": 17,
@@ -1158,7 +1222,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Risk Assessment in the COSO model is the identification and\nanalysis of relevant risks to achievement of the objectives. It\nforms a basis for determining how the risks should be\nmanaged.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يركز مكون تقييم المخاطر في نموذج COSO على:",
+    "choicesAr": [
+      "تحديد المخاطر في جميع المجالات وتحديد مدى تعرض المنشأة لها.",
+      "توجه الإدارة على جميع المستويات نحو العمليات ومفهوم المخاطر.",
+      "الضوابط التي تعالج مخاطر المنشأة، مثل الموافقات والتوثيق.",
+      "إبلاغ الإدارة في الوقت المناسب بالمعلومات المتعلقة بالمخاطر المحددة."
+    ],
+    "explanationAr": "تقييم المخاطر في نموذج COSO هو تحديد المخاطر المرتبطة بتحقيق الأهداف وتحليلها، ويشكل أساسًا لتحديد كيفية إدارتها."
   },
   {
     "unit": 17,
@@ -1175,7 +1247,15 @@
     ],
     "answerIndex": 0,
     "explanation": "In the COSO framework, the personnel policies and\nprocedures influence the control consciousness of personnel,\nso they are an integral part of an efficient control environment.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات الآتية توضح أهمية سياسات وإجراءات شؤون العاملين على أفضل وجه؟",
+    "choicesAr": [
+      "تمثل جزءًا لا يتجزأ من بيئة رقابية فعالة.",
+      "ينبغي تطبيقها عندما تكون مجدية من حيث التكلفة.",
+      "ينبغي أن تقيم جهة خارجية مدى الالتزام بها.",
+      "ينبغي تطبيقها حيث تم تحديد المخاطر."
+    ],
+    "explanationAr": "في إطار COSO تؤثر سياسات وإجراءات شؤون العاملين في وعيهم بأهمية الرقابة، ولذلك تمثل جزءًا أساسيًا من بيئة رقابية فعالة."
   },
   {
     "unit": 17,
@@ -1192,7 +1272,15 @@
     ],
     "answerIndex": 2,
     "explanation": "COSO broadly defines internal control as a process, effected\nby an entity’s board of directors, management, and other\npersonnel, designed to provide reasonable assurance\nregarding the achievement of objectives in effectiveness and\nefficiency of operations, reliability of financial reporting, and\ncompliance with applicable laws and regulations.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات الآتية بشأن مخاطر الرقابة الداخلية صحيحة؟",
+    "choicesAr": [
+      "يمكن لإنشاء نظام للرقابة الداخلية والمحافظة عليه داخل الشركة أن يلغي مخاطر الرقابة الداخلية.",
+      "تتحمل وظيفة المراجعة الداخلية مسؤولية إنشاء نظام الرقابة الداخلية للشركة والمحافظة عليه.",
+      "تتحمل الإدارة مسؤولية المحافظة على ضوابط توفر تأكيدًا معقولًا بوجود رقابة كافية على أصول المنشأة وسجلاتها.",
+      "تقتصر مسؤولية الإدارة عن مخاطر الرقابة الداخلية على الضوابط التي توفر تأكيدًا بشأن موثوقية التقارير المالية."
+    ],
+    "explanationAr": "يعرّف COSO الرقابة الداخلية بوجه عام بأنها عملية ينفذها مجلس إدارة المنشأة وإدارتها والعاملون الآخرون، وتهدف إلى توفير تأكيد معقول بشأن تحقيق أهداف فعالية العمليات وكفاءتها وموثوقية التقارير المالية والالتزام بالقوانين واللوائح المعمول بها."
   },
   {
     "unit": 17,
@@ -1209,7 +1297,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The risk that there will be a material misstatement, assuming\nno related internal control strategy, is the best example of\ninherent risk. Inherent risk is the susceptibility of one of the\ncompany’s objectives to obstacles arising from the nature of\nthe objective. Inherent risk does not take internal controls into\nconsideration.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات الآتية أفضل مثال للمخاطر الملازمة؟",
+    "choicesAr": [
+      "خطر عدم اكتشاف المراجع تحريفًا جوهريًا في القوائم المالية.",
+      "خطر وقوع تحريف جوهري وعدم منعه.",
+      "خطر إخفاق المراجع في تعديل رأيه بشأن معلومات محرفة جوهريًا.",
+      "خطر وجود تحريف جوهري بافتراض عدم وجود ضوابط داخلية مرتبطة به."
+    ],
+    "explanationAr": "أفضل مثال للمخاطر الملازمة هو احتمال وجود تحريف جوهري قبل مراعاة الضوابط الداخلية ذات الصلة. وهي تنشأ من طبيعة البند أو الإقرار المعني، ولا تدخل فعالية الضوابط الداخلية في تقديرها بوصفها مخاطر ملازمة."
   },
   {
     "unit": 17,

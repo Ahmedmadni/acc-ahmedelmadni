@@ -48,4 +48,5 @@
 - [x] Unit 17 Wave 1: 5 Arabic educational drafts (§1 Q7–9/Q13/Q15), 10 jurisdiction/scope holds, 78 unreviewed. 5/93 (5.4%). See `docs/CMA_UNIT17_ARABIC_WAVE1_2026-11-24.md`.
 - [x] Unit 17 Wave 2: 9 more educational drafts (§1 Q16–17/Q19/Q21/Q23–25/Q27–28), 14/93 (15.1%); governance 14/28, all 28 reviewed. Four new scope holds Q18/20/22/26. See `docs/CMA_UNIT17_ARABIC_WAVE2_2026-11-24.md`.
 - [x] Unit 17 Wave 3: 14 risk/control educational drafts (§2 Q1/Q3–14/Q16); 28/93 (30.1%), §2 14/65; Q2 held for legacy standard/context, Q15 existing reconstructed source hold. 16 total holds, 49 unreviewed. See `docs/CMA_UNIT17_ARABIC_WAVE3_2026-11-25.md`.
+- [x] Unit 17 Wave 4: 12 risk/control educational drafts (§2 Q17–20/Q22–24/Q26–30); 40/93 (43.0%), §2 26/65; Q21 legacy SIAS 1 reference hold and Q25 reconstructed source hold. 18 total holds, 35 unreviewed. See `docs/CMA_UNIT17_ARABIC_WAVE4_2026-11-25.md`.
 - [ ] Revisit governance holds with official statutory scope and original-page checks; continue §2 Q17–65.
