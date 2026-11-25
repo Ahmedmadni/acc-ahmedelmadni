@@ -1644,7 +1644,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Life-cycle costing estimates a product’s revenues and\nexpenses over its expected life cycle. This approach is\nespecially useful when revenues and related costs do not\noccur in the same periods. It emphasizes the need to price\nproducts to cover all costs, not just those for production.\nHence, costs are determined for all value-chain categories:\nupstream (R&D, design), manufacturing, and downstream\n(marketing, distribution, and customer service). The result is to\nhighlight upstream and downstream costs in the cost planning\nprocess that often receive insufficient attention.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية تصف تكاليف دورة حياة المنتج؟",
+    "choicesAr": [
+      "تستخدم أحيانًا أساسًا لتخطيط التكاليف وتسعير المنتجات.",
+      "تشمل تكاليف التصنيع فقط طوال عمر المنتج.",
+      "تشمل فقط تكاليف التصنيع والبيع والتوزيع.",
+      "تركز على فرص خفض التكلفة أثناء دورة التصنيع فقط."
+    ],
+    "explanationAr": "تقدر طريقة تكاليف دورة الحياة إيرادات المنتج ومصروفاته على مدى دورة حياته المتوقعة. وتفيد بصورة خاصة عندما لا تتزامن الإيرادات والتكاليف المرتبطة بها. وتؤكد ضرورة تغطية جميع التكاليف بالتسعير، لا تكاليف الإنتاج وحدها. ولذلك تحدد التكاليف في جميع مراحل سلسلة القيمة: قبل الإنتاج (البحث والتطوير والتصميم)، والتصنيع، وبعد الإنتاج (التسويق والتوزيع وخدمة العملاء). وتبرز بذلك تكاليف ما قبل الإنتاج وما بعده التي قد لا تحظى باهتمام كافٍ عند التخطيط."
   },
   {
     "unit": 8,
@@ -1661,7 +1669,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Value-chain analysis for assessing competitive advantage is\nan integral part of the strategic planning process. Value-chain\nanalysis is a continuous process of gathering, evaluating, and\ncommunicating information for business decision making. A\nvalue chain depicts how customer value accumulates along a\nchain of activities that lead to an end product or service. A\nvalue chain consists of the activities required to research and\ndevelop, design, produce, market, deliver, and support its\nproduct. Extended value-chain analysis expands the view of\nthe parties involved to include those upstream (e.g., suppliers)\nand downstream (e.g., customers).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما المصطلح الذي يصف سلسلة الأنشطة التي تضيف منفعة للعميل إلى المنتج؟",
+    "choicesAr": [
+      "سلسلة القيمة.",
+      "تحليل قيمة العمليات.",
+      "التصنيع المتكامل.",
+      "التكاليف على أساس الأنشطة."
+    ],
+    "explanationAr": "يعد تحليل سلسلة القيمة لتقييم الميزة التنافسية جزءًا من التخطيط الاستراتيجي. وهو عملية مستمرة لجمع المعلومات وتقييمها وإبلاغها لاتخاذ القرارات. وتوضح سلسلة القيمة كيفية تراكم القيمة المقدمة للعميل عبر الأنشطة المؤدية إلى المنتج أو الخدمة النهائية. وتشمل البحث والتطوير والتصميم والإنتاج والتسويق والتسليم ودعم المنتج. ويوسع تحليل سلسلة القيمة الممتدة نطاق الأطراف لتشمل الموردين في المراحل السابقة والعملاء في المراحل اللاحقة."
   },
   {
     "unit": 8,
@@ -1678,7 +1694,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Life-cycle costing takes into account costs incurred at all\nstages of the value-chain, not just manufacturing. The life-\ncycle cost for this product is thus $12,300,000 ($5,000,000 +\n$7,000,000 + $200,000 + $100,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "طلب من شركة تقييم ربحية منتج صنعته وباعته من السنة 7 حتى السنة 10. وكان للمنتج ضمان لمدة 1 سنة من تاريخ البيع. وتظهر السجلات المالية:\nتكاليف البحث والتطوير والتصميم | تكاليف التصنيع والتوزيع | تكاليف الضمان | تكلفة الضمان\nالسنة 5 والسنة 6 | السنة 7–السنة 10 | السنة 7–السنة 10 | السنة 11\n$5,000,000 | $7,000,000 | $200,000 | $100,000\nما تكلفة دورة حياة المنتج؟",
+    "choicesAr": [
+      "$10,000,000",
+      "$12,000,000",
+      "$12,200,000",
+      "$12,300,000"
+    ],
+    "explanationAr": "تراعي طريقة تكاليف دورة الحياة التكاليف المتكبدة في جميع مراحل سلسلة القيمة، لا التصنيع وحده. ولذلك تبلغ تكلفة دورة حياة المنتج $12,300,000 ($5,000,000 + $7,000,000 + $200,000 + $100,000)."
   },
   {
     "unit": 8,
@@ -1695,7 +1719,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The product life cycle has five stages: product development,\nintroduction, growth, maturity, and decline. In the maturity\nstage, sales growth declines and competitors are most\nnumerous.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في أي مرحلة من دورة حياة المنتج يبلغ عدد المنشآت المنافسة ذروته عادة وفق النموذج التقليدي؟",
+    "choicesAr": [
+      "التقديم.",
+      "النمو.",
+      "النضج.",
+      "التراجع."
+    ],
+    "explanationAr": "يتضمن نموذج دورة حياة المنتج خمس مراحل: تطوير المنتج، والتقديم، والنمو، والنضج، والتراجع. وفي مرحلة النضج يتباطأ نمو المبيعات ويبلغ عدد المنافسين ذروته عادة وفق هذا النموذج. وقد تختلف الأسواق الفعلية."
   },
   {
     "unit": 8,
@@ -1712,7 +1744,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Costs incurred before production, such as research and\ndevelopment and product design, are referred to as upstream\ncosts.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "وفق تكاليف دورة حياة المنتج، كيف تصنف تكاليف البحث والتطوير؟",
+    "choicesAr": [
+      "تكاليف ما قبل الإنتاج.",
+      "تكاليف عملية الإنتاج.",
+      "تكاليف ما بعد الإنتاج.",
+      "تكاليف التصنيع."
+    ],
+    "explanationAr": "تسمى التكاليف المتكبدة قبل الإنتاج، مثل البحث والتطوير وتصميم المنتج، تكاليف ما قبل الإنتاج."
   },
   {
     "unit": 8,
@@ -1729,7 +1769,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Whole-life costs include after-purchase costs (operating,\nsupport, repair, and disposal) incurred by customers as well as\nlife-cycle costs (R&D, design, manufacturing, marketing,\ndistribution, and research). Hence, the budgeted unit whole-\nlife cost is $36 [($2,000,000 + $3,000,000 + $1,200,000 +\n$1,000,000) ÷ 200,000 units], and the budgeted unit selling\nprice is $45 ($36 × 125%).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تبلغ دورة الحياة المتوقعة لمنتج شركة 4 سنوات، من البحث والتطوير والتصميم حتى سحبه من السوق. والتكاليف المقدرة:\nتكاليف ما قبل الإنتاج (البحث والتطوير والتصميم) | $2,000,000\nتكاليف التصنيع | 3,000,000\nتكاليف ما بعد الإنتاج (التسويق والتوزيع وخدمة العملاء) | 1,200,000\nتكاليف ما بعد الشراء | 1,000,000\nتخطط الشركة لإنتاج 200,000 وحدة وتسعير المنتج بنسبة 125% من تكلفة العمر الكامل للوحدة. فما سعر بيع الوحدة المقدر؟",
+    "choicesAr": [
+      "$15",
+      "$31",
+      "$36",
+      "$45"
+    ],
+    "explanationAr": "تشمل تكلفة العمر الكامل تكاليف ما بعد الشراء التي يتحملها العميل (التشغيل والدعم والإصلاح والتخلص) بالإضافة إلى تكاليف دورة الحياة (البحث والتطوير والتصميم والتصنيع والتسويق والتوزيع والأنشطة المرتبطة). وتبلغ تكلفة العمر الكامل المقدرة للوحدة $36 [($2,000,000 + $3,000,000 + $1,200,000 + $1,000,000) ÷ 200,000 وحدة]، ولذلك يبلغ سعر بيع الوحدة المقدر $45 ($36 × 125%). وهذه قاعدة التسعير المفترضة في المسألة؛ ولا تعني أن تكاليف العميل كلها مصروفات على الشركة."
   },
   {
     "unit": 8,
@@ -1746,7 +1794,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The question states that “at the ‘highest price,’ R&D costs will\nincrease by $500,000 and design and testing costs by\n$1,000,000. Additionally, at the highest price, fixed customer\nservice costs will rise by $30,000 per year, and variable\ncustomer service costs will rise by $25 per unit.” Since the\nquestion asks for life cycle costs at a unit price of $750 (the\nlowest sales price), $30,000 must be subtracted from the fixed\nmarketing and distribution costs. Fixed customer service costs\nwill rise by $30,000 per year, and variable customer service\ncosts will rise by $25 per unit only at the ‘highest price.’\nAt a unit price of $750, upstream costs equal $3,000,000\n($1,000,000 + $2,000,000). Fixed costs of production and the\nfixed downstream costs equal $15,750,000 [($1,500,000 +\n$1,500,000 + $180,000 – $30,000) × 5 years], and variable\ncosts of production and variable downstream costs equal\n$9,600,000 [8,000 units × ($100 + $100 + $40) × 5 years].\nAccordingly, the life cycle costs at a price of $750 equal\n$28,350,000 ($3,000,000 + $15,750,000 + $9,600,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم شركة Dixon Porter طريقة تكاليف دورة الحياة وتدرس تصنيع منتج دورة حياته 5 سنوات، يتطلب إنفاق $1,000,000 على البحث والتطوير و$2,000,000 على التصميم والاختبار. وفيما يلي التكاليف الثابتة السنوية والمتغيرة للوحدة، ومتوسط المبيعات السنوية المتوقعة عند ثلاثة أسعار بيع:\nأسعار البيع | $750 | $900 | $1,125\nالبند | ثابت سنويًا | متغير للوحدة\nتكاليف الإنتاج | $1,500,000 | $100\nالتسويق والتوزيع | 1,500,000 | 100\nخدمة العملاء | 180,000 | 40\nمتوسط المبيعات السنوية بالوحدات حسب الأسعار المذكورة | 8,000 | 6,000 | 4,800\nعند أعلى سعر تزيد تكاليف البحث والتطوير بمبلغ $500,000 وتكاليف التصميم والاختبار بمبلغ $1,000,000. كما تزيد تكاليف خدمة العملاء الثابتة بمبلغ $30,000 سنويًا والمتغيرة بمبلغ $25 للوحدة. وعند أدنى سعر تنخفض تكاليف التسويق والتوزيع الثابتة بمبلغ $30,000 سنويًا.\nما تكاليف دورة الحياة لدى Dixon Porter عند سعر بيع الوحدة $750؟",
+    "choicesAr": [
+      "$7,620,000",
+      "$8,070,000",
+      "$27,000,000",
+      "$28,350,000"
+    ],
+    "explanationAr": "تنص المسألة على أنه عند أعلى سعر تزيد تكاليف البحث والتطوير بمبلغ $500,000 وتكاليف التصميم والاختبار بمبلغ $1,000,000. كما تزيد تكاليف خدمة العملاء الثابتة بمبلغ $30,000 سنويًا والمتغيرة بمبلغ $25 للوحدة. ولأن المطلوب حساب تكلفة دورة الحياة عند سعر $750 (أدنى سعر)، يطرح $30,000 من تكاليف التسويق والتوزيع الثابتة. ولا تطبق زيادة خدمة العملاء الثابتة $30,000 سنويًا والمتغيرة $25 للوحدة إلا عند أعلى سعر.\nعند سعر $750 تبلغ تكاليف ما قبل الإنتاج $3,000,000 ($1,000,000 + $2,000,000). وتبلغ تكاليف الإنتاج الثابتة وتكاليف ما بعد الإنتاج الثابتة $15,750,000 [($1,500,000 + $1,500,000 + $180,000 − $30,000) × 5 سنوات]. وتبلغ التكاليف المتغيرة للإنتاج وما بعده $9,600,000 [8,000 وحدة × ($100 + $100 + $40) × 5 سنوات].\nومن ثم تبلغ تكلفة دورة الحياة عند سعر $750 مبلغ $28,350,000 ($3,000,000 + $15,750,000 + $9,600,000)."
   },
   {
     "unit": 8,
@@ -1763,7 +1819,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The question states that “At the ‘highest price,’ R&D costs will\nincrease by $500,000 and design and testing costs by\n$1,000,000. Additionally, at the highest price, fixed customer\nservice costs will rise by $30,000 per year, and variable\ncustomer service costs will rise by $25 per unit.” Fixed\ncustomer service costs will rise by $30,000 per year, and\nvariable customer service costs will rise by $25 per unit only at\nthe ‘highest price.’ At a unit price of $900, upstream costs\nequal $3,000,000 ($1,000,000 + $2,000,000). Fixed costs of\nproduction and the fixed downstream costs equal $15,900,000\n[($1,500,000 + $1,500,000 + $180,000) × 5 years], and\nvariable costs of production and the variable downstream\ncosts equal $7,200,000 [6,000 units × ($100 + $100 + $40) × 5\nyears]. Thus, the life cycle costs at a price of $900 equal\n$26,100,000 ($3,000,000 + $15,900,000 + $7,200,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم شركة Dixon Porter طريقة تكاليف دورة الحياة وتدرس تصنيع منتج دورة حياته 5 سنوات، يتطلب إنفاق $1,000,000 على البحث والتطوير و$2,000,000 على التصميم والاختبار. وفيما يلي التكاليف الثابتة السنوية والمتغيرة للوحدة، ومتوسط المبيعات السنوية المتوقعة عند ثلاثة أسعار بيع:\nأسعار البيع | $750 | $900 | $1,125\nالبند | ثابت سنويًا | متغير للوحدة\nتكاليف الإنتاج | $1,500,000 | $100\nالتسويق والتوزيع | 1,500,000 | 100\nخدمة العملاء | 180,000 | 40\nمتوسط المبيعات السنوية بالوحدات حسب الأسعار المذكورة | 8,000 | 6,000 | 4,800\nعند أعلى سعر تزيد تكاليف البحث والتطوير بمبلغ $500,000 وتكاليف التصميم والاختبار بمبلغ $1,000,000. كما تزيد تكاليف خدمة العملاء الثابتة بمبلغ $30,000 سنويًا والمتغيرة بمبلغ $25 للوحدة. وعند أدنى سعر تنخفض تكاليف التسويق والتوزيع الثابتة بمبلغ $30,000 سنويًا.\nما تكاليف دورة الحياة لدى Dixon Porter عند سعر بيع الوحدة $900؟",
+    "choicesAr": [
+      "$18,900,000",
+      "$26,100,000",
+      "$26,910,000",
+      "$28,350,000"
+    ],
+    "explanationAr": "تنص المسألة على أنه عند أعلى سعر تزيد تكاليف البحث والتطوير بمبلغ $500,000 وتكاليف التصميم والاختبار بمبلغ $1,000,000. كما تزيد تكاليف خدمة العملاء الثابتة بمبلغ $30,000 سنويًا والمتغيرة بمبلغ $25 للوحدة. ولا تطبق زيادة خدمة العملاء الثابتة $30,000 سنويًا والمتغيرة $25 للوحدة إلا عند أعلى سعر. وعند سعر $900 تبلغ تكاليف ما قبل الإنتاج $3,000,000 ($1,000,000 + $2,000,000). وتبلغ تكاليف الإنتاج الثابتة وتكاليف ما بعد الإنتاج الثابتة $15,900,000 [($1,500,000 + $1,500,000 + $180,000) × 5 سنوات]. وتبلغ التكاليف المتغيرة للإنتاج وما بعده $7,200,000 [6,000 وحدة × ($100 + $100 + $40) × 5 سنوات]. وبالتالي تبلغ تكلفة دورة الحياة عند سعر $900 مبلغ $26,100,000 ($3,000,000 + $15,900,000 + $7,200,000)."
   },
   {
     "unit": 8,
@@ -1797,7 +1861,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Total life-cycle cost is equal to $3,600,000 [($260,000 +\n$10,000) + ($900,000 + $300,000 + $40,000) + ($900,000 +\n$100,000 + $60,000) + ($900,000 + $50,000 + $80,000)]. This\namount must be recovered over 3 years, with 100,000 units\nper year. Therefore, $1,200,000 of costs must be recovered in\nYear 3, with a per-unit cost of $12. At a 10% mark-up, the total\nprice per unit is $13.20 (110% × $12).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ستطرح شركة منتجًا جديدًا في السنة 1، وعمره المتوقع 3 سنوات. وتتوقع بيع 100,000 وحدة سنويًا. وفيما يلي التكاليف المقدرة:\nالبند | السنة 0 | السنة 1 | السنة 2 | السنة 3\nالبحث والتصميم | $260,000 | $0 | $0 | $0\nالإنتاج | 0 | 900,000 | 900,000 | 900,000\nالتسويق | 10,000 | 300,000 | 100,000 | 50,000\nخدمة العملاء | 0 | 40,000 | 60,000 | 80,000\nإذا استخدمت الشركة تكاليف دورة الحياة لتسعير المنتج وأرادت هامش إضافة بنسبة 10% على التكلفة، فما سعر البيع في السنة 3؟",
+    "choicesAr": [
+      "$13.20",
+      "$12.21",
+      "$11.66",
+      "$9.90"
+    ],
+    "explanationAr": "تبلغ تكلفة دورة الحياة الإجمالية $3,600,000 [($260,000 + $10,000) + ($900,000 + $300,000 + $40,000) + ($900,000 + $100,000 + $60,000) + ($900,000 + $50,000 + $80,000)]. ويسترد المبلغ على مدى 3 سنوات، بمبيعات 100,000 وحدة سنويًا. ومن ثم يلزم استرداد $1,200,000 من التكاليف في السنة 3، وتبلغ التكلفة للوحدة $12. وعند إضافة هامش 10% يبلغ سعر بيع الوحدة $13.20 (110% × $12)."
   },
   {
     "unit": 8,
@@ -1814,7 +1886,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The introduction stage is characterized by slow sales growth\nand lack of profits because of the high expenses of promotion\nand selective distribution to generate awareness of the\nproduct and encourage customers to try it.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في مرحلة تقديم منتج مبتكر، لماذا يكون نمو الأرباح بطيئًا عادة؟",
+    "choicesAr": [
+      "ارتفاع تكاليف ترويج المبيعات.",
+      "شدة المنافسة.",
+      "وجود سوق واسعة.",
+      "توافر البدائل."
+    ],
+    "explanationAr": "تتميز مرحلة التقديم ببطء نمو المبيعات وضعف الأرباح بسبب ارتفاع تكاليف الترويج والتوزيع الانتقائي اللازمين لتعريف العملاء بالمنتج وتشجيعهم على تجربته."
   },
   {
     "unit": 8,
@@ -1848,7 +1928,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The life-cycle costing approach to budgeting estimates a\nproduct’s revenues and expenses over its entire life cycle or\nvalue chain. Costs incurred before production, such as R&D\ncosts, are referred to as upstream costs. Costs incurred after\nproduction, such as marketing and customer service, are\nreferred to as downstream costs.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما المقصود بطريقة تكاليف دورة الحياة؟",
+    "choicesAr": [
+      "عملية فحص جوانب المنتج المختلفة لتحديد فرص تحسين الكفاءة في التكلفة.",
+      "عملية إدارة جميع التكاليف المحددة في سلسلة القيمة.",
+      "طريقة تخفض مصروفات بيع المنتج إلى الحد الأدنى.",
+      "طريقة احتساب تكاليف تركز على العميل."
+    ],
+    "explanationAr": "تقدر طريقة تكاليف دورة الحياة لأغراض الموازنة إيرادات المنتج ومصروفاته طوال دورة حياته أو سلسلة قيمته. وتسمى التكاليف التي تتكبد قبل الإنتاج مثل البحث والتطوير تكاليف ما قبل الإنتاج، أما ما يتكبد بعد الإنتاج مثل التسويق وخدمة العملاء فيسمى تكاليف ما بعد الإنتاج."
   },
   {
     "unit": 8,
@@ -1865,6 +1953,14 @@
     ],
     "answerIndex": 1,
     "explanation": "In the growth stage, sales and profits increase rapidly, cost\nper customer decreases, customers are early adopters, new\ncompetitors enter an expanding market, new product models\nand features are introduced, and promotion spending declines\nor remains stable.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "خلال مرحلة النمو من دورة حياة المنتج، أي مما يلي يحدث عادة؟",
+    "choicesAr": [
+      "تكون جودة المنتجات ضعيفة.",
+      "تطرح نماذج وخصائص جديدة للمنتج.",
+      "تقل الفروق بين المنتجات المتنافسة.",
+      "تصبح جودة المنتجات أكثر تفاوتًا ويقل تمايز المنتجات."
+    ],
+    "explanationAr": "في مرحلة النمو تزداد المبيعات والأرباح بسرعة، وتنخفض التكلفة لكل عميل، ويكون المشترون من المتبنين الأوائل، ويدخل منافسون جدد السوق المتوسعة، وتطرح نماذج وخصائص جديدة، وقد ينخفض الإنفاق الترويجي أو يبقى مستقرًا وفق النموذج التقليدي."
   }
 ]
