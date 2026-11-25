@@ -52,7 +52,7 @@ const records: SourceRecord[] = [
   ...unit10,
 ];
 const topics = new Map(CMA_TOPICS.map((topic) => [topic.id, topic]));
-const pendingUnit1SourceReviews = new Set(["1.4.23","1.5.16","1.5.17","1.5.39","1.5.41","1.5.54","1.5.59","1.5.64","1.5.65","1.5.66","1.6.6","1.6.9","1.6.13","1.6.19","1.6.29"]);
+const pendingUnit1SourceReviews = new Set(["1.4.23","1.5.16","1.5.17","1.5.39","1.5.41","1.5.54","1.5.59","1.5.64","1.5.65","1.5.66","1.6.6","1.6.9","1.6.13","1.6.19","1.6.29","2.1.1","2.1.3","2.1.6"]);
 
 /** Source-language items retain their English text while Arabic translation is reviewed. */
 export const CMA_GLEIM_2025_VOL1_QUESTIONS: CmaLocalQuestion[] = records.map((item) => {
