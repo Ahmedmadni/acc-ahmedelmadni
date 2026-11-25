@@ -14,7 +14,15 @@
     ],
     "answerIndex": 0,
     "explanation": "IR is defined as “a process founded on integrated thinking,\nwhich results in a periodic integrated report by an organization\nabout value creation and preservation in the short, medium,\nand long term.” It is primarily focused on giving holistic\ninformation to the providers of financial capital about how the\nentity creates value over time.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما الغرض الرئيسي من إعداد التقارير المتكاملة (IR)؟",
+    "choicesAr": [
+      "توضيح كيفية خلق الشركة للقيمة على مدى الزمن لمقدمي رأس المال المالي.",
+      "تزويد العملاء بمعلومات شاملة عن الشركة وقيمها.",
+      "الإبلاغ عن الجوانب غير المالية للشركة.",
+      "تلبية متطلبات الجهات التنظيمية."
+    ],
+    "explanationAr": "التقارير المتكاملة عملية تقوم على التفكير المتكامل وتنتج عنها تقارير دورية عن خلق القيمة والمحافظة عليها على المدى القصير والمتوسط والطويل. وتركز أساسًا على تزويد مقدمي رأس المال المالي بمعلومات شاملة عن كيفية خلق المنشأة للقيمة."
   },
   {
     "unit": 6,
@@ -31,7 +39,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Integrated reporting <IR> primarily focuses on giving holistic\ninformation to the providers of financial capital, including the\norganization’s value-creation process in the short, medium,\nand long term.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما الغرض الرئيسي من التقارير المتكاملة؟",
+    "choicesAr": [
+      "إخبار العملاء بصورة شاملة عن المنشأة وقيمها.",
+      "الإبلاغ أساسًا عن الجوانب غير المالية للمنشأة.",
+      "توضيح كيفية خلق المنشأة للقيمة على مدى الزمن لمقدمي رأس المال المالي.",
+      "تلبية متطلبات المؤسسات التنظيمية."
+    ],
+    "explanationAr": "تركز التقارير المتكاملة أساسًا على تزويد مقدمي رأس المال المالي بمعلومات شاملة، تشمل عملية خلق القيمة على المدى القصير والمتوسط والطويل."
   },
   {
     "unit": 6,
@@ -48,7 +64,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The integrated report and the integrated reporting process are\nbased on integrated thinking. However, these processes are\nnot static and will always influence each other.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي لا يصف التفكير المتكامل؟",
+    "choicesAr": [
+      "الخطوة الأخيرة في عملية إعداد التقارير المتكاملة.",
+      "أساس التقارير المتكاملة والتقرير المتكامل.",
+      "وسيلة لفهم العلاقات المتبادلة بين الجوانب المالية وغير المالية للمنشأة.",
+      "عملية لاتخاذ القرارات والإدارة وإعداد التقارير."
+    ],
+    "explanationAr": "يقوم التقرير المتكامل وعملية إعداده على التفكير المتكامل. وهذه العمليات ليست ثابتة، بل تؤثر بعضها في بعض بصورة مستمرة."
   },
   {
     "unit": 6,
@@ -65,7 +89,15 @@
     ],
     "answerIndex": 3,
     "explanation": "As defined by the International Integrated Reporting Council\n(IIRC), IR is “a process founded on integrated thinking, which\nresults in a periodic integrated report by an organization about\nvalue creation and preservation in the short, medium, and long\nterm.”",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما أفضل تعريف لإعداد التقارير المتكاملة (IR)؟",
+    "choicesAr": [
+      "عرض موجز لكيفية إسهام الاستراتيجية والحوكمة والأداء والتوقعات في خلق القيمة على مدى الزمن.",
+      "عملية تحديد وقياس الجوانب غير المالية للشركة.",
+      "دمج التقرير السنوي مع تقارير الاستدامة للشركة.",
+      "عملية تقوم على التفكير المتكامل وتنتج عنها تقارير متكاملة دورية عن خلق القيمة والمحافظة عليها."
+    ],
+    "explanationAr": "وفق تعريف المجلس الدولي للتقارير المتكاملة (IIRC)، هي عملية تقوم على التفكير المتكامل وتؤدي إلى إصدار المنشأة تقريرًا متكاملًا دوريًا عن خلق القيمة والمحافظة عليها على المدى القصير والمتوسط والطويل. ويختلف تعريف العملية عن تعريف التقرير الناتج عنها."
   },
   {
     "unit": 6,
@@ -82,7 +114,15 @@
     ],
     "answerIndex": 3,
     "explanation": "An integrated report is designed to provide a holistic view of a\ncompany by connecting financial and nonfinancial information\nwith the long-term value-creation possibilities of the\norganization.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية تصف التقارير المتكاملة؟",
+    "choicesAr": [
+      "يجب إعدادها وفق المبادئ المحاسبية الأمريكية المتعارف عليها.",
+      "تمثل أساس التفكير المتكامل.",
+      "تبين تراكم التكاليف وقيمة العميل عبر سلسلة الأنشطة المؤدية إلى منتج أو خدمة.",
+      "تتضمن معلومات مالية وغير مالية."
+    ],
+    "explanationAr": "يهدف التقرير المتكامل إلى تقديم رؤية شاملة للشركة تربط المعلومات المالية وغير المالية بقدرتها على خلق القيمة على المدى الطويل."
   },
   {
     "unit": 6,
@@ -99,7 +139,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Integrated thinking is a prerequisite to integrated reporting.\nUnderstanding the mutual influences of financial and\nnonfinancial factors is necessary for integrated reporting about\nthe performance of a company and for making well-informed\ndecisions to create value in the long term. Through integrated\nthinking, a company gains insight into how interdependencies\nbetween financial and nonfinancial factors interact and affect\nvalue creation. Thus, integrated thinking is the basis for the\nexternally communicated integrated report.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما المقصود بالتفكير المتكامل؟",
+    "choicesAr": [
+      "الخطوة الأخيرة في عملية التقارير المتكاملة.",
+      "أساس التقارير المتكاملة والتقرير المتكامل.",
+      "نشاط يؤديه غالبًا قسم متخصص.",
+      "عملية تقتصر أساسًا على الإدارة والحوكمة."
+    ],
+    "explanationAr": "التفكير المتكامل شرط أساسي لإعداد التقارير المتكاملة. ويتيح فهم التأثيرات المتبادلة بين العوامل المالية وغير المالية لتقديم تقارير متكاملة عن الأداء واتخاذ قرارات مدروسة لخلق القيمة على المدى الطويل. وبذلك يصبح التفكير المتكامل أساس التقرير الموجه للأطراف الخارجية."
   },
   {
     "unit": 6,
@@ -116,7 +164,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Integrated reporting is a relatively new concept. The IIRC,\nwhich was established in 2010, issued a principles-based\nframework for integrated reporting in 2013. This framework\nguides companies preparing an integrated report. The\nobjective is to align capital allocation and corporate activity to\ncreate financial well being and sustainable expansion through\nintegrated thinking and integrated reporting. Those earlier\nintegrated reporting standards are now a subset under the\nIFRS Foundation.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية صحيحة بشأن التقارير المتكاملة؟",
+    "choicesAr": [
+      "تنقل استراتيجية الشركة عبر المنشأة وتربط عوامل النجاح الحرجة بمقاييس الأداء.",
+      "أصدرت جهة رئيسية لوضع الأطر إطارًا للتقارير المتكاملة قائمًا على المبادئ.",
+      "الهدف النهائي أن تصبح معيار التقارير للشركات العامة في الولايات المتحدة وحدها.",
+      "عملية التقارير المتكاملة هي أساس التقرير الموجه للخارج."
+    ],
+    "explanationAr": "نشأ مفهوم التقارير المتكاملة في سياق تطور التقارير المؤسسية. تأسس المجلس الدولي للتقارير المتكاملة (IIRC) في 2010، وأصدر إطارًا قائمًا على المبادئ في 2013 لتوجيه إعداد التقرير المتكامل. ويهدف إلى مواءمة تخصيص رأس المال وأنشطة الشركات لتحقيق الرفاه المالي والنمو المستدام من خلال التفكير والتقارير المتكاملة. وأصبح إطار التقارير المتكاملة ضمن مؤسسة IFRS، وهو إطار وليس معيارًا محاسبيًا لإعداد القوائم المالية."
   },
   {
     "unit": 6,
@@ -151,7 +207,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Integrated reporting, integrated thinking, and the integrated\nreport are three distinct concepts. Integrated reporting is a\nprocess founded on integrated thinking, which results in a\nperiodic integrated report by an organization about value\ncreation and preservation. Integrated thinking is a process of\ndecision making, management, and reporting. Integrated\nreports concisely communicate how strategy, governance,\nperformance, and prospects lead to value creation over time.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما العلاقة بين إعداد التقارير المتكاملة والتفكير المتكامل والتقرير المتكامل؟",
+    "choicesAr": [
+      "مراحل متتابعة لإطار التقارير المتكاملة.",
+      "مصطلحات مترادفة.",
+      "مفاهيم متميزة ومترابطة.",
+      "مفاهيم منفصلة وثابتة."
+    ],
+    "explanationAr": "هذه مفاهيم متميزة. فإعداد التقارير المتكاملة عملية تقوم على التفكير المتكامل وتنتج تقريرًا دوريًا عن خلق القيمة والمحافظة عليها. والتفكير المتكامل عملية لاتخاذ القرارات والإدارة وإعداد التقارير. أما التقرير المتكامل فيوضح بإيجاز كيف تسهم الاستراتيجية والحوكمة والأداء والتوقعات في خلق القيمة على مدى الزمن."
   },
   {
     "unit": 6,
@@ -168,7 +232,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The integrated report primarily gives holistic information to the\nproviders of financial capital about the value-creation process\nof the company in the short, medium and long term.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما الهدف الرئيسي للتقرير المتكامل؟",
+    "choicesAr": [
+      "الامتثال لإطار المجلس الدولي للتقارير المتكاملة.",
+      "إبلاغ العملاء بالجوانب المالية وغير المالية للشركة.",
+      "تزويد مقدمي رأس المال المالي بمزيد من المعلومات عن كيفية خلق المنشأة للقيمة على مدى الزمن.",
+      "الإفصاح الكامل عن الأمور المالية لتحسين الشفافية والمساءلة."
+    ],
+    "explanationAr": "يقدم التقرير المتكامل أساسًا معلومات شاملة لمقدمي رأس المال المالي بشأن عملية خلق القيمة على المدى القصير والمتوسط والطويل."
   },
   {
     "unit": 6,
@@ -185,7 +257,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Integrated thinking is a process of decision making,\nmanagement, and reporting. It is based on the connectivity\nand interdependencies among several company-specific\nfactors that affect an organization’s ability to create value over\ntime.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما المقصود بالتفكير المتكامل؟",
+    "choicesAr": [
+      "الخطوة الأخيرة في عملية التقارير المتكاملة.",
+      "عملية توضح كيفية إسهام العوامل المختلفة في خلق القيمة.",
+      "التركيز على كيفية دمج التقرير السنوي مع تقرير الاستدامة.",
+      "عملية لاتخاذ القرارات والإدارة وإعداد التقارير."
+    ],
+    "explanationAr": "التفكير المتكامل عملية لاتخاذ القرارات والإدارة وإعداد التقارير، تقوم على الترابط والاعتماد المتبادل بين عوامل خاصة بالمنشأة تؤثر في قدرتها على خلق القيمة على مدى الزمن."
   },
   {
     "unit": 6,
@@ -202,7 +282,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Integrated thinking is a prerequisite to IR. Understanding the\ninfluences of financial and nonfinancial factors on each other\nis necessary to (1) report in an integrated manner about\nperformance and (2) make well-informed decisions for long-\nterm value creation.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية تصف التفكير المتكامل؟",
+    "choicesAr": [
+      "ينفذ في أقسام مستقلة.",
+      "شرط أساسي لإعداد تقارير متكاملة عن الأداء.",
+      "أساس للقوائم المالية وتقارير المسؤولية الاجتماعية المنشورة منفصلة.",
+      "عرض موجز لكيفية إسهام الاستراتيجية والحوكمة والأداء والتوقعات في خلق القيمة."
+    ],
+    "explanationAr": "التفكير المتكامل شرط أساسي للتقارير المتكاملة. وفهم التأثيرات المتبادلة للعوامل المالية وغير المالية ضروري من أجل (1) إعداد تقارير متكاملة عن الأداء و(2) اتخاذ قرارات مدروسة لخلق القيمة على المدى الطويل."
   },
   {
     "unit": 6,
@@ -219,7 +307,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Through IR, a company communicates implementation of\nstrategies, corporate governance, employee and management\nperformance, and prospects that lead to value creation over\ntime. In the context of the entity’s external environment, IR\ncommunicates how value is created by providing a\ncombination of financial and nonfinancial information. Thus, IR\nenables a company to tell its own unique story of value\ncreation.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ماذا تحقق الشركة من خلال التقارير المتكاملة؟",
+    "choicesAr": [
+      "قد تفصح عن آثار العوامل الخارجية على رؤوس الأموال المملوكة لها.",
+      "تقتصر على القيمة الجوهرية التي تخلقها لنفسها.",
+      "توضح تنفيذ الاستراتيجيات والحوكمة والأداء والتوقعات المؤدية إلى خلق القيمة.",
+      "تدمج تقرير الاستدامة مع تقرير المسؤولية الاجتماعية."
+    ],
+    "explanationAr": "توضح الشركة تنفيذ استراتيجياتها وحوكمتها وأداء الموظفين والإدارة وتوقعاتها المؤدية إلى خلق القيمة بمرور الزمن. وفي سياق بيئتها الخارجية، تدمج المعلومات المالية وغير المالية لتوضيح كيفية خلق القيمة، بما يعبر عن ظروفها الخاصة."
   },
   {
     "unit": 6,
@@ -236,7 +332,15 @@
     ],
     "answerIndex": 0,
     "explanation": "As the proportion of total assets consisting of intangible assets\nhas increased, corporate reporting of this true value has\nbegun to change. Accordingly, integrated thinking and\nreporting have emerged to give providers of financial capital\nintegrated financial and nonfinancial information about how an\nentity creates value over a period of time. Such reporting also\nbenefits other stakeholders (interested parties), e.g.,\nemployees, customers, suppliers, and regulators.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لماذا ظهر مفهوم التقارير المتكاملة؟",
+    "choicesAr": [
+      "لم تعد التقارير المالية التقليدية توفر معلومات غير مالية كافية عن خلق القيمة بصورة متزايدة.",
+      "أصدرت الجهات التنظيمية معايير جديدة تلزم بالإبلاغ عن المعلومات المالية وغير المالية.",
+      "أدت الأزمة المالية في 2008 إلى فقدان الثقة في الشركات.",
+      "انتقد أصحاب المصلحة تقارير الاستدامة التقليدية."
+    ],
+    "explanationAr": "مع تزايد أهمية الأصول غير الملموسة، تطورت التقارير المؤسسية لبيان مصادر القيمة التي لا تعكسها القوائم التقليدية وحدها. وظهر التفكير والتقارير المتكاملة لتزويد مقدمي رأس المال المالي بمعلومات مالية وغير مالية مترابطة عن خلق القيمة عبر الزمن، وتفيد هذه التقارير أيضًا الموظفين والعملاء والموردين والجهات التنظيمية."
   },
   {
     "unit": 6,
@@ -253,7 +357,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The International Integrated Reporting Council (IIRC) was\nestablished in 2010 after the peak of the financial crisis. It\nissued the <IR> Framework in 2013. This principles-based\nframework guides companies preparing an integrated report.\nThe objective is to align capital allocation and corporate\nactivity to create financial well being and sustainable\nexpansion through integrated thinking and integrated\nreporting. Although the IIRC primarily focuses on providers of\nfinancial capital in the private sector, its mission is for IR to\nbecome the corporate reporting standard worldwide for private\nand public companies.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية صحيحة بشأن خلفية إطار التقارير المتكاملة؟",
+    "choicesAr": [
+      "الهدف هو تحقيق الرفاه المالي والنمو المستدام من خلال التفكير المتكامل.",
+      "أصدر معهد المحاسبين الإداريين (IMA) الإطار في 2013.",
+      "تهدف التقارير المتكاملة أساسًا إلى توجيه إفصاحات الشركات العامة وحدها.",
+      "تعني التقارير المتكاملة وضع المعلومات المالية في المستند نفسه مع تقرير الاستدامة أو المسؤولية الاجتماعية."
+    ],
+    "explanationAr": "تأسس المجلس الدولي للتقارير المتكاملة في 2010 بعد ذروة الأزمة المالية وأصدر الإطار في 2013. ويوجه الإطار القائم على المبادئ الشركات في إعداد التقرير المتكامل. ويهدف إلى مواءمة تخصيص رأس المال والأنشطة لتحقيق الرفاه المالي والنمو المستدام من خلال التفكير والتقارير المتكاملة. وكان تركيز المجلس الأساسي على مقدمي رأس المال المالي في القطاع الخاص، مع تطلع تاريخي إلى انتشار التقارير المتكاملة عالميًا في الشركات الخاصة والعامة."
   },
   {
     "unit": 6,
@@ -270,7 +382,15 @@
     ],
     "answerIndex": 2,
     "explanation": "An integrated report gives providers of financial capital more\ninformation about how the entity creates value over time. An\nintegrated report also benefits other stakeholders who are\ninterested in the entity’s effectiveness in creating value. They\ninclude employees, customers, suppliers, communities in\nwhich the entity is located, and regulators.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية تصف التقرير المتكامل؟",
+    "choicesAr": [
+      "يجب إعداده وفق المبادئ المحاسبية الأمريكية المتعارف عليها.",
+      "هو تقرير استدامة لفئات محددة من أصحاب المصلحة.",
+      "يفيد الأطراف المهتمة بخلق القيمة مثل الموظفين والعملاء والموردين والجهات التنظيمية.",
+      "تصدره الشركات الخاصة في الولايات المتحدة وحدها."
+    ],
+    "explanationAr": "يوفر التقرير المتكامل لمقدمي رأس المال المالي معلومات إضافية عن خلق القيمة على مدى الزمن. ويفيد أيضًا أصحاب المصلحة المهتمين بفاعلية المنشأة في خلق القيمة، ومنهم الموظفون والعملاء والموردون والمجتمعات المحلية والجهات التنظيمية."
   },
   {
     "unit": 6,
@@ -287,7 +407,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The framework is principles-based. The integrated report must\nbe adaptable by different companies in different situations.\nAccordingly, the framework contains Guiding Principles that\nare guidelines and cannot always be strictly applied.\nMoreover, the Content Elements are in question form.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية تصف إطار التقارير المتكاملة؟",
+    "choicesAr": [
+      "يجب أن تتبناه الشركات الخاصة.",
+      "قائم على المبادئ.",
+      "يعالج أساسًا احتياجات مقدمي رأس المال المالي في القطاع العام.",
+      "يمكن استخدامه إرشادًا لإعداد القوائم المالية الخارجية."
+    ],
+    "explanationAr": "الإطار قائم على المبادئ، ويتيح تكييف التقرير المتكامل مع ظروف المنشآت المختلفة. وتوجه المبادئ الإرشادية طريقة إعداد التقرير مع الحاجة إلى الحكم المهني في تطبيقها. وتعرض عناصر المحتوى في صورة أسئلة يجيب عنها التقرير."
   },
   {
     "unit": 6,
@@ -304,7 +432,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Integrated thinking is a prerequisite to IR. Understanding the\ninfluences of financial and nonfinancial factors on each other\nis necessary to (1) report in an integrated manner about\nperformance and (2) make well-informed decisions for long-\nterm value creation.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية صحيحة عن خلق القيمة لأغراض التقارير المتكاملة؟",
+    "choicesAr": [
+      "خلق القيمة عملية تقوم على التفكير المتكامل وتنتج تقريرًا متكاملًا.",
+      "فهم تفاعل العوامل المالية وغير المالية يؤثر في قرارات خلق القيمة.",
+      "يوضح التقرير تفاعل الجوانب المالية فقط في عملية خلق القيمة.",
+      "الهدف الرئيسي الإفصاح عن المعلومات المالية لتحسين المساءلة."
+    ],
+    "explanationAr": "التفكير المتكامل شرط أساسي للتقارير المتكاملة. وفهم التأثيرات المتبادلة للعوامل المالية وغير المالية ضروري من أجل (1) إعداد تقارير متكاملة عن الأداء و(2) اتخاذ قرارات مدروسة لخلق القيمة على المدى الطويل."
   },
   {
     "unit": 6,
@@ -321,7 +457,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The value-creation process is the core of the integrated report.\nIt shows how companies create financial and nonfinancial\nvalue over time. This value is created not only for the\ncompany itself but also for others. It is influenced by the\nexternal environment, relations with stakeholders, and various\nresources (e.g., the six capitals).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما المفاهيم الأساسية المحددة في إطار التقارير المتكاملة؟",
+    "choicesAr": [
+      "خلق القيمة وعملية خلق القيمة ورؤوس الأموال الستة.",
+      "أنشطة الأعمال وعملية خلق القيمة والأهمية النسبية.",
+      "رؤوس الأموال الستة ونموذج الأعمال والبيئة الخارجية.",
+      "البيئة الخارجية ونموذج الأعمال والأهمية النسبية."
+    ],
+    "explanationAr": "عملية خلق القيمة هي محور التقرير المتكامل؛ فهي توضح كيفية خلق القيمة المالية وغير المالية عبر الزمن للمنشأة وللآخرين، وتتأثر بالبيئة الخارجية وعلاقات أصحاب المصلحة والموارد المختلفة، ومنها رؤوس الأموال الستة."
   },
   {
     "unit": 6,
@@ -338,7 +482,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The value-creation process is the core of the integrated report,\nshowing how organizations create both financial and\nnonfinancial value over time. This value is created not only for\nthe organization itself, but also for others, and is influenced by\nthe capitals used and affected by the organization.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما المفاهيم الأساسية للتقارير المتكاملة وفق تعريف المجلس الدولي للتقارير المتكاملة؟",
+    "choicesAr": [
+      "رؤوس الأموال الستة وعملية خلق القيمة والأهمية النسبية.",
+      "خلق القيمة وعملية خلق القيمة ورؤوس الأموال الستة.",
+      "رؤوس الأموال الستة وعملية خلق القيمة ونموذج الأعمال.",
+      "البيئة الخارجية ونموذج الأعمال والأهمية النسبية."
+    ],
+    "explanationAr": "عملية خلق القيمة محور التقرير المتكامل، وتوضح كيف تخلق المنشآت قيمة مالية وغير مالية على مدى الزمن، لنفسها وللآخرين، وتتأثر برؤوس الأموال التي تستخدمها المنشأة وتؤثر فيها."
   },
   {
     "unit": 6,
@@ -355,7 +507,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Value is created for the organization and for others.\nExternalities, which are effects on the capitals not owned by\nthe organization, may occur when value is created. However,\nexternalities influence nonfinancial value created by the\norganization and should therefore be included in the\nintegrated report.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية خاطئة بشأن خلق القيمة؟",
+    "choicesAr": [
+      "خلق القيمة أحد المفاهيم الأساسية الثلاثة للتقارير المتكاملة.",
+      "لأن الآثار الخارجية لخلق القيمة لا تؤثر في المنشأة، فلا ينبغي إدراجها في التقرير المتكامل.",
+      "ينبغي إدراج القيمة المخلوقة للآخرين إذا كانت جوهرية.",
+      "تخلق القيمة للمنشأة ولبيئتها الخارجية."
+    ],
+    "explanationAr": "تخلق القيمة للمنشأة وللآخرين. وقد تنشأ آثار خارجية على رؤوس أموال لا تملكها المنشأة. ويمكن لهذه الآثار أن تؤثر في قدرة المنشأة على خلق القيمة، لذا تدرج عندما تكون جوهرية لأغراض التقرير."
   },
   {
     "unit": 6,
@@ -372,7 +532,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Environmental capital is not defined in the <IR> Framework.\nThe correct terminology is natural capital.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي ليس من رؤوس الأموال الستة المحددة في إطار التقارير المتكاملة؟",
+    "choicesAr": [
+      "رأس المال البيئي.",
+      "رأس المال المصنّع.",
+      "رأس المال الاجتماعي والعلاقات.",
+      "رأس المال الفكري."
+    ],
+    "explanationAr": "لا يستخدم الإطار مصطلح رأس المال البيئي ضمن تصنيفاته الستة؛ والمصطلح المعتمد هو رأس المال الطبيعي."
   },
   {
     "unit": 6,
@@ -389,7 +557,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The forms of value created (for the company and for others)\nare closely related. For example, sale of a product results in\nrevenue for the company and some form of value for the\ncustomer, depending on the nature of what was sold. The sale\naffects not only financial capital but also social and\nrelationship capital. Externalities, whether positive or negative,\nalso should be addressed. They are effects on the capitals not\nowned by the company. Accordingly, if the value created is\nmaterial, it should be included in the integrated report,\nregardless of whether it has been created for the company\nitself or for others.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يدرج في التقرير المتكامل؟",
+    "choicesAr": [
+      "رأس المال الاجتماعي والعلاقات دون الآثار الخارجية السلبية.",
+      "رأس المال المالي والمصنّع والفكري فقط.",
+      "القيمة الجوهرية المخلوقة للآخرين والآثار الخارجية الجوهرية.",
+      "القيمة المخلوقة للشركة دون البيئة الخارجية."
+    ],
+    "explanationAr": "ترتبط صور القيمة المخلوقة للشركة وللآخرين ارتباطًا وثيقًا. فبيع المنتج يحقق إيرادًا للشركة وقيمة للعميل بحسب طبيعة المنتج، ويؤثر في رأس المال المالي والاجتماعي والعلاقات. وينبغي تناول الآثار الخارجية الإيجابية والسلبية على رؤوس الأموال غير المملوكة عندما تكون جوهرية. وتدرج القيمة الجوهرية سواء خلقت للشركة نفسها أو للآخرين."
   },
   {
     "unit": 6,
@@ -406,7 +582,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Not all capitals are equally important for every organization.\nSome may be irrelevant to a given company. Moreover, the\nnames of capitals are not standardized, and the integrated\nreport need not be structured based on the capitals.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية خاطئة بشأن رؤوس الأموال؟",
+    "choicesAr": [
+      "قد تنخفض أو ترتفع أو تتحول خلال النشاط العادي.",
+      "يمكن خلق القيمة في أي من رؤوس الأموال الستة وليس بالضرورة قياسها برأس المال المالي.",
+      "لا يلزم تنظيم التقرير المتكامل بحسب رؤوس الأموال الستة.",
+      "ينبغي لكل منشأة تناول رؤوس الأموال الستة جميعها في تقريرها المتكامل."
+    ],
+    "explanationAr": "ليست كل رؤوس الأموال متساوية الأهمية لكل منشأة؛ فقد لا يكون بعضها ذا صلة بها. كما لا يلزم توحيد مسمياتها في التقارير أو تنظيم التقرير بحسب تصنيفاتها."
   },
   {
     "unit": 6,
@@ -423,7 +607,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The value of the capitals may change in form, increase, or\ndecrease as a result of the activities and outputs of the\ncompany in the regular course of business. For example, one\ncapital may need to decrease for another to increase.\nFurthermore, value may be created over different capitals and\nis not necessarily measured in financial terms. Also, value\ncreation is viewed not only as an increase in the total of the\ncapitals but also as preservation of their aggregate value.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "وفق إطار التقارير المتكاملة تعتمد عملية خلق القيمة على مصادر تسمى رؤوس الأموال. أي العبارات التالية صحيحة؟",
+    "choicesAr": [
+      "ينبغي لكل شركة تناول رؤوس الأموال الستة في تقريرها المتكامل.",
+      "تتأثر رؤوس الأموال بالنشاط العادي للشركة.",
+      "تقاس القيمة بالضرورة برأس المال المالي.",
+      "لا تخلق القيمة إلا بزيادة مجموع رؤوس الأموال."
+    ],
+    "explanationAr": "قد تتحول رؤوس الأموال أو تزيد أو تنخفض نتيجة الأنشطة والمخرجات في سير الأعمال العادي. فقد ينخفض أحدها لزيادة آخر. ويمكن خلق القيمة عبر رؤوس أموال مختلفة دون ضرورة قياسها ماليًا. كما يشمل مفهوم القيمة المحافظة عليها، وليس زيادتها فقط."
   },
   {
     "unit": 6,
@@ -440,7 +632,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Outputs are the results of business activities in the form of\nproducts, services, by-products, and waste. Outcomes are the\neffects of outputs on the six capitals. These outcomes relate\ndirectly to the external environment and are not necessarily\ncontrolled by the company.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما الفرق بين مخرجات أنشطة الأعمال والنتائج المترتبة عليها في التقرير المتكامل؟",
+    "choicesAr": [
+      "المخرجات منتجات مادية ومنتجات ثانوية ونفايات، والنتائج آثار غير ملموسة فقط.",
+      "المخرجات منتجات وخدمات، والنتائج هي هذه المخرجات مقيسة ماليًا.",
+      "المخرجات جميع المنتجات، والنتائج آثار خارجية غير مرغوبة كالمنتجات الثانوية والنفايات.",
+      "المخرجات منتجات وخدمات ومنتجات ثانوية ونفايات، والنتائج آثار المخرجات على رؤوس الأموال."
+    ],
+    "explanationAr": "المخرجات هي ما تنتجه أنشطة الأعمال من منتجات وخدمات ومنتجات ثانوية ونفايات. والنتائج هي آثارها على رؤوس الأموال الستة، وقد تكون داخلية أو خارجية وإيجابية أو سلبية، وليست بالضرورة خاضعة بالكامل لسيطرة الشركة."
   },
   {
     "unit": 6,
@@ -457,7 +657,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Intellectual capital is one of the capitals as defined in the\n<IR> Framework. It is the intangible knowledge of the\ncompany, e.g., intellectual property, licenses, software, and\norganizational structure. Human capital also is defined. It\nconsists of employees’ capacities and mindsets, e.g., training\nand loyalty to the company.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي من رؤوس الأموال الستة المحددة في إطار التقارير المتكاملة؟",
+    "choicesAr": [
+      "رأس المال البيئي والسياسي.",
+      "رأس المال المصنّع والبيئي.",
+      "رأس المال المالي وغير المالي.",
+      "رأس المال الفكري والبشري."
+    ],
+    "explanationAr": "رأس المال الفكري هو المعرفة غير الملموسة للشركة مثل الملكية الفكرية والتراخيص والبرمجيات والمعرفة التنظيمية. ورأس المال البشري يشمل قدرات الموظفين وتوجهاتهم مثل التدريب والولاء للمنشأة."
   },
   {
     "unit": 6,
@@ -474,7 +682,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Manufactured capital is every tangible object possessed by\n(available to) a company, whether or not owned. Examples\nare roads and ports.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "وفق إطار التقارير المتكاملة، يمثل رأس المال المصنّع مصدرًا لخلق القيمة. أي العبارات التالية صحيحة بشأنه؟",
+    "choicesAr": [
+      "يتكون من الموارد البيئية المستخدمة.",
+      "يحصل عليه من خلال التمويل.",
+      "لا يشترط أن يكون مملوكًا للشركة.",
+      "يجب عرضه في كل تقرير متكامل."
+    ],
+    "explanationAr": "يشمل رأس المال المصنّع الأشياء المادية المصنّعة المتاحة للشركة لاستخدامها، سواء كانت مملوكة لها أم لا، مثل الطرق والموانئ."
   },
   {
     "unit": 6,
@@ -491,7 +707,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The ever-changing external environment in which a company\noperates includes political conditions, economic conditions,\ntechnological change, societal issues, and environmental\nchallenges.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "قد تؤثر الظروف الاقتصادية في قدرة الشركة على خلق القيمة. ما العامل الذي تمثله؟",
+    "choicesAr": [
+      "الحوكمة.",
+      "البيئة الخارجية.",
+      "الاستراتيجية وتخصيص الموارد.",
+      "الأداء."
+    ],
+    "explanationAr": "تشمل البيئة الخارجية المتغيرة التي تعمل فيها الشركة الظروف السياسية والاقتصادية والتغير التكنولوجي والقضايا المجتمعية والتحديات البيئية."
   },
   {
     "unit": 6,
@@ -508,7 +732,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Value may be created for the organization itself. For example,\nvalue in this context includes financial returns to the providers\nof financial capital. Value also may be created for others. For\nexample, value for others includes goods or services provided\nto individuals. The two forms of value creation are closely\nrelated. When a company sells a product, it creates value for\nitself in the form of revenues and indirectly for the customer.\n(The form of value for the customer depends on the nature of\nthe good or service sold.) This process affects not only the\nfinancial aspect of the company but also its reputation and its\nrelationship with its stakeholders.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي من المفاهيم الأساسية المحددة في إطار التقارير المتكاملة؟",
+    "choicesAr": [
+      "الحوكمة.",
+      "خلق القيمة.",
+      "المبادئ الإرشادية.",
+      "عناصر المحتوى."
+    ],
+    "explanationAr": "قد تخلق القيمة للمنشأة نفسها، مثل العوائد المالية لمقدمي رأس المال، أو للآخرين، مثل السلع والخدمات المقدمة للأفراد. وترتبط الصورتان؛ فبيع المنتج يخلق إيرادًا للشركة وقيمة للعميل تتوقف على طبيعة ما بيع. ويؤثر ذلك في الجانب المالي والسمعة والعلاقات مع أصحاب المصلحة."
   },
   {
     "unit": 6,
@@ -525,7 +757,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Value creation depends on different sources. They are defined\nin the <IR> Framework as the six capitals: financial,\nmanufactured, intellectual, human, social and relationship, and\nnatural. These sources of capital are affected by the regular\ncourse of business. They are increased, decreased, or\ntransformed by the entity’s activities and outputs.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية تصف خلق القيمة؟",
+    "choicesAr": [
+      "لا يتأثر بالآثار الخارجية لأنها لا تدرج في التقرير المتكامل.",
+      "يقاس دائمًا بمصطلحات مالية.",
+      "لا تدرج القيمة المخلوقة للآخرين في التقرير.",
+      "يعتمد على مصادر تتأثر بالنشاط العادي."
+    ],
+    "explanationAr": "يعتمد خلق القيمة على مصادر يحددها الإطار في رؤوس الأموال الستة: المالي، والمصنّع، والفكري، والبشري، والاجتماعي والعلاقات، والطبيعي. وتتأثر هذه المصادر بالنشاط العادي، فتزداد أو تنخفض أو تتحول بفعل أنشطة المنشأة ومخرجاتها."
   },
   {
     "unit": 6,
@@ -542,7 +782,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Natural capital is defined in the IIRC Framework. Natural\ncapital includes the renewable and nonrenewable\nenvironmental resources and processes that are used,\nproduced, or affected by the company. These include land,\nwater, air, minerals, flora, fauna, biodiversity, and ecosystem\nhealth.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي أحد رؤوس الأموال الستة المحددة في إطار التقارير المتكاملة؟",
+    "choicesAr": [
+      "رأس مال المنتجات.",
+      "رأس المال الطبيعي.",
+      "رأس المال المملوك.",
+      "رأس مال حقوق الملكية."
+    ],
+    "explanationAr": "يتضمن رأس المال الطبيعي الموارد والعمليات البيئية المتجددة وغير المتجددة التي تستخدمها الشركة أو تنتجها أو تؤثر فيها، مثل الأرض والمياه والهواء والمعادن والنباتات والحيوانات والتنوع الحيوي وصحة النظم البيئية."
   },
   {
     "unit": 6,
@@ -559,7 +807,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The six capitals provide guidance and exist to assure\nconsideration of the different forms of capital affected by\noperations. Furthermore, all six capitals need not be present in\nevery integrated report, capitals need not be identified by the\nsame names in every integrated report, and an integrated\nreport need not be structured based on the six capitals.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية صحيحة عن رؤوس الأموال في التقرير المتكامل؟",
+    "choicesAr": [
+      "يجب الإفصاح عن تغير قيمتها في ملحق للتقرير.",
+      "لا تتأثر بالنشاط العادي.",
+      "يمكن خلق القيمة في أي من رؤوس الأموال الستة وتقاس دائمًا بالدولار.",
+      "لا يلزم تنظيم التقرير بحسب رؤوس الأموال الستة."
+    ],
+    "explanationAr": "تقدم رؤوس الأموال الستة إطارًا إرشاديًا لمراعاة صور رأس المال التي تتأثر بالعمليات. ولا يلزم إدراجها جميعًا في كل تقرير أو استخدام المسميات نفسها أو تنظيم التقرير وفق تلك التصنيفات."
   },
   {
     "unit": 6,
@@ -576,7 +832,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The elements of the value-creation process are (1) inputs, (2)\nthe business model, (3) business activities, (4) outputs, and\n(5) outcomes. Outcomes are the effects of outputs on the six\ncapitals. The outcomes determine the state for the new inputs.\nIn this sense, the value-creation process is circular.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "النتائج المترتبة على المخرجات عنصر في عملية خلق القيمة. ما المقصود بها؟",
+    "choicesAr": [
+      "مخرجات أنشطة الأعمال.",
+      "آثار تسيطر عليها المنشأة بالضرورة.",
+      "آثار المخرجات على رؤوس الأموال الستة.",
+      "المنتجات أو الخدمات."
+    ],
+    "explanationAr": "تشمل عناصر عملية خلق القيمة (1) المدخلات، و(2) نموذج الأعمال، و(3) الأنشطة، و(4) المخرجات، و(5) النتائج. والنتائج هي آثار المخرجات على رؤوس الأموال الستة، وتحدد حالة المدخلات الجديدة؛ لذا تتسم العملية بالدورية."
   },
   {
     "unit": 6,
@@ -593,7 +857,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The six capitals are affected by the regular course of\nbusiness. They are increased, decreased, or transformed by\nthe activities and outputs of the organization.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "وفق إطار التقارير المتكاملة، بماذا تتأثر رؤوس الأموال الستة؟",
+    "choicesAr": [
+      "نتائج التفاعلات مع العملاء.",
+      "العوائد المالية لمقدمي رأس المال.",
+      "سير النشاط العادي.",
+      "العلاقات مع أصحاب المصلحة."
+    ],
+    "explanationAr": "تتأثر رؤوس الأموال الستة بالنشاط العادي، فتزداد أو تنخفض أو تتحول بسبب أنشطة المنشأة ومخرجاتها."
   },
   {
     "unit": 6,
@@ -610,7 +882,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Natural capital consists of the renewable and nonrenewable\nenvironmental resources and processes that are used,\nproduced, or affected by the company. These resources\ninclude land, air, water, minerals, flora, fauna, biodiversity, and\necosystem health.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "وفق المجلس الدولي للتقارير المتكاملة، يمثل رأس المال الطبيعي مصدرًا لخلق القيمة. ما وصفه؟",
+    "choicesAr": [
+      "غير متجدد.",
+      "يحصل عليه من التمويل.",
+      "يتكون من الموارد البيئية المستخدمة.",
+      "يجب إدراجه في كل تقرير متكامل."
+    ],
+    "explanationAr": "يشمل رأس المال الطبيعي الموارد والعمليات البيئية المتجددة وغير المتجددة التي تستخدمها الشركة أو تنتجها أو تؤثر فيها، ومنها الأرض والهواء والمياه والمعادن والنباتات والحيوانات والتنوع الحيوي وصحة النظم البيئية."
   },
   {
     "unit": 6,
@@ -627,7 +907,15 @@
     ],
     "answerIndex": 1,
     "explanation": "A company should create a proper oversight structure to\nensure the ability of the company to create value. Important\naspects are leadership structure, diversity, strategic decision\nmaking processes, values, ethics, and linkage between\nremuneration and value creation.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "قد يؤثر وجود هيكل رقابي ملائم في قدرة الشركة على خلق القيمة. ما عنصر المحتوى ذي الصلة؟",
+    "choicesAr": [
+      "البيئة الخارجية.",
+      "الحوكمة.",
+      "الاستراتيجية وتخصيص الموارد.",
+      "الأداء."
+    ],
+    "explanationAr": "ينبغي أن تضع الشركة هيكل رقابة مناسبًا لدعم قدرتها على خلق القيمة. وتشمل الجوانب المهمة هيكل القيادة والتنوع وعمليات اتخاذ القرارات الاستراتيجية والقيم والأخلاقيات وربط المكافآت بخلق القيمة."
   },
   {
     "unit": 6,
@@ -644,7 +932,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Intellectual capital is the intangible knowledge of the\norganization. It includes intellectual property (e.g., patents,\ncopyrights, and software) and organizational capital (e.g.,\nsystems, procedures, and protocols).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "جمعت شركة رائدة في صناعة المركبات الكهربائية بيانات تفاعل العملاء أثناء القيادة من خلال برنامج تجريبي لمساعدة السائق. وستستخدم هذه البيانات لتطوير وظائف قيادة ذاتية متقدمة تعتزم تطبيقها قريبًا في طرازها الأكثر شعبية. ما التصنيف الأنسب لنظام جمع بيانات القيادة وتحليلها في التقارير المتكاملة؟",
+    "choicesAr": [
+      "رأس المال البشري.",
+      "رأس المال الفكري.",
+      "رأس المال الطبيعي.",
+      "رأس المال المصنّع."
+    ],
+    "explanationAr": "رأس المال الفكري هو المعرفة غير الملموسة للمنشأة، ويشمل الملكية الفكرية مثل البراءات وحقوق النشر والبرمجيات، ورأس المال التنظيمي مثل الأنظمة والإجراءات والبروتوكولات."
   },
   {
     "unit": 6,
