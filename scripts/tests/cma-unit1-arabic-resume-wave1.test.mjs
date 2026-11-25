@@ -276,7 +276,7 @@ test("Unit 8 ABC initial review preserves English source, keys and numeric parit
 });
 test("Unit 8 ABC independent quality cost and service allocation calculations",()=>{
  assert.equal(12*11.5+17500*.14+25*77,4513);
- assert.equal(4513-27500*.145,525.5);
+ assert.equal(Math.round((4513-27500*.145)*100),52550);
  assert.equal(12*12+17500*.14+30*77,4904);
  assert.equal(4904-30000*.15,404);
  assert.equal(7200000/60000,120);assert.equal(7500000/300000,25);assert.equal((120*36000+25*90000)/36000,182.5);
