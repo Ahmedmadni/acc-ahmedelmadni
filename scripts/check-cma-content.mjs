@@ -633,6 +633,7 @@ const staticArabicVol2 = new Set([
   ...Array.from({length:13},(_,i)=>i+16).filter(n=>![25,26,28].includes(n)).map(n=>"18.2."+n),
   ...Array.from({length:11},(_,i)=>i+29).filter(n=>![33,35,36].includes(n)).map(n=>"18.2."+n),
   ...Array.from({length:21},(_,i)=>i+1).filter(n=>![5,8,11,12,14,17,21].includes(n)).map(n=>"18.3."+n),
+  ...Array.from({length:12},(_,i)=>i+1).filter(n=>![3,6,7,9].includes(n)).map(n=>"19.1."+n),
 ]);
 const vol2QuestionById = new Map(CMA_GLEIM_2025_VOL2_QUESTIONS.map(q=>[q.id,q]));
 for (const [key, original] of vol2Records) {
@@ -899,6 +900,12 @@ for(const [n,page,index,status] of [[5,1195,3,"inferred"],[8,1197,1,"source"],[1
  check(original?.page===page && original.answerIndex===index && original.answerStatus===status && original.stemAr===undefined && original.choicesAr===undefined && original.explanationAr===undefined && mapped?.sourceLayoutReview===true && mapped?.sourceLanguage==="en" && mapped?.sourceArabicStatus===undefined && mapped?.answerIndex===original.answerIndex,"Unit 18 continuity hold: "+n);
 }
 console.log("Unit 18 Wave 10: 115/149 Arabic drafts; control procedures 71/89; systems security 30/39; continuity 14/21; 34 reviewed holds, zero unreviewed.");
+for(const [n,page,index] of [[3,1211,1],[6,1213,3],[7,1214,3],[9,1215,3]]){
+ const original=vol2Records.get("19.1."+n);
+ const mapped=vol2QuestionById.get("cma-gleim-2025-vol2-su19-s1-q"+String(n).padStart(3,"0"));
+ check(original?.page===page && original.answerIndex===index && original.answerStatus==="source" && original.stemAr===undefined && original.choicesAr===undefined && original.explanationAr===undefined && mapped?.sourceLayoutReview===true && mapped?.sourceLanguage==="en" && mapped?.sourceArabicStatus===undefined && mapped?.answerIndex===original.answerIndex,"Unit 19 accounting systems hold: "+n);
+}
+console.log("Unit 19 Wave 1: 8/110 Arabic drafts; accounting systems 8/46; 4 reviewed holds, 98 unreviewed.");
 const unit15ReviewRows=[...vol2Records.entries()].filter(([id])=>id.startsWith("15.")).filter(([id])=>{
  const [,section,n]=id.split(".");
  return vol2QuestionById.get("cma-gleim-2025-vol2-su15-s"+section+"-q"+String(n).padStart(3,"0"))?.sourceLayoutReview===true;

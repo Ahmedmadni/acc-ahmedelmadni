@@ -14,7 +14,15 @@
     ],
     "answerIndex": 2,
     "explanation": "An AIS is a subsystem of a management information system\nthat processes routine financial and transactional data\nrelevant to managerial and financial accounting. The AIS\nsupports operations by collecting and sorting data about\ntransactions. An AIS is concerned not only with external\nparties, but also with the internal activities needed for\nmanagement decision making at all levels. An AIS is best\nsuited to solve problems when reporting requirements are\nwell-defined. A decision support system is a better choice for\nproblems in which decision making is less structured.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات الآتية عن نظام المعلومات المحاسبي (AIS) غير صحيحة؟",
+    "choicesAr": [
+      "يدعم النظام العمليات اليومية بجمع بيانات معاملات المنشأة وتصنيفها.",
+      "تتاح المعلومات الناتجة عن النظام للمستويات الإدارية وفق صلاحياتها لاستخدامها في تخطيط أنشطة المنشأة والرقابة عليها.",
+      "نظام المعلومات المحاسبي هو الأنسب لحل المشكلات التي تتسم بقدر كبير من عدم التأكد ومتطلبات التقارير غير المحددة.",
+      "غالبًا ما يشار إلى نظام المعلومات المحاسبي بوصفه نظامًا لمعالجة المعاملات."
+    ],
+    "explanationAr": "في التصنيف التعليمي التقليدي يعد نظام المعلومات المحاسبي نظامًا فرعيًا ضمن نظام المعلومات الإدارية، يعالج البيانات المالية والمعاملات الروتينية اللازمة للمحاسبة المالية والإدارية. ويدعم العمليات بجمع بيانات المعاملات وتصنيفها، كما يخدم الأطراف الخارجية والقرارات الداخلية. ويناسب بصورة خاصة المتطلبات المحددة بوضوح، بينما تكون نظم دعم القرار أنسب للمشكلات الأقل هيكلة. وقد تتكامل هذه الوظائف في نظام حديث واحد."
   },
   {
     "unit": 19,
@@ -31,7 +39,15 @@
     ],
     "answerIndex": 0,
     "explanation": "A record is a collection of related data items (fields). A field\n(data item) is a group of characters representing one unit of\ninformation.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في نظام مخزون قائم على نظام إدارة قواعد البيانات (DBMS)، يحتوي سجل محفوظ على رقم القطعة واسمها ولونها ووزنها. ماذا تسمى عناصر البيانات الفردية هذه؟",
+    "choicesAr": [
+      "حقول.",
+      "ملفات محفوظة.",
+      "بايتات.",
+      "حالات حدوث."
+    ],
+    "explanationAr": "السجل مجموعة من عناصر البيانات المرتبطة، التي تسمى حقولًا. ويمثل الحقل عنصرًا من المعلومات، مثل رقم الصنف أو اسمه أو وزنه."
   },
   {
     "unit": 19,
@@ -65,7 +81,15 @@
     ],
     "answerIndex": 2,
     "explanation": "An information system transforms raw data into knowledge\nuseful for decision making. A MIS provides information for\nmanagement decisions. An AIS is a subsystem of a MIS and\nprocesses financial and transactional data relevant to\nmanagerial decisions as well as financial accounting.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "كيف يتميز نظام المعلومات المحاسبي (AIS) عن نظام المعلومات الإدارية (MIS)؟",
+    "choicesAr": [
+      "يتعامل النظام المحاسبي مع المعلومات المالية ويتعامل النظام الإداري مع جميع المعلومات الأخرى.",
+      "قد يكون النظام المحاسبي يدويًا أو محوسبًا، بينما يكون النظام الإداري محوسبًا.",
+      "نظام المعلومات المحاسبي نظام فرعي ضمن نظام المعلومات الإدارية.",
+      "يركز النظام المحاسبي على الرقابة ويستخدم النظام الإداري للتخطيط حصريًا."
+    ],
+    "explanationAr": "يحول نظام المعلومات البيانات الخام إلى معلومات مفيدة لاتخاذ القرار. ويوفر نظام المعلومات الإدارية المعلومات اللازمة للقرارات الإدارية. وفي التصنيف المفترض في السؤال، يعد نظام المعلومات المحاسبي نظامًا فرعيًا منه يعالج البيانات المالية والمعاملات اللازمة للقرارات الإدارية والمحاسبة المالية، ولا يلزم أن تتبع جميع المنشآت هذا الهيكل حرفيًا."
   },
   {
     "unit": 19,
@@ -82,7 +106,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Information systems that support routine processes in an\norganization include, among others, the transaction\nprocessing system (TPS). A transaction is a single, discrete\nevent that can be captured by an information system. A TPS\ntherefore captures the fundamental data that reflect the\neconomic life of an organization. A payroll system is one of the\nmost routine processes necessary to conduct the\norganization’s business.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي المصطلحات الآتية يصف نظام الرواتب على أفضل وجه؟",
+    "choicesAr": [
+      "نظام إدارة قواعد البيانات (DBMS).",
+      "نظام معالجة المعاملات (TPS).",
+      "نظام دعم القرار (DSS).",
+      "نظام تخطيط موارد المنشأة (ERP)."
+    ],
+    "explanationAr": "تشمل نظم المعلومات التي تدعم العمليات الروتينية نظام معالجة المعاملات. والمعاملة حدث منفصل يمكن تسجيله في نظام المعلومات. ويجمع هذا النظام البيانات الأساسية التي تعكس النشاط الاقتصادي للمنشأة. وتعد معالجة الرواتب مثالًا على العمليات الدورية الروتينية، وقد تكون جزءًا من نظام تخطيط موارد المنشأة دون أن يتغير تصنيف وظيفة المعالجة نفسها."
   },
   {
     "unit": 19,
@@ -133,7 +165,15 @@
     ],
     "answerIndex": 1,
     "explanation": "A management information system (MIS) provides managers\nwith the information they need for analysis, planning, control,\nand decision making. A transaction processing system (TPS)\nsupports the ongoing routine operations of an organization.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يميز نظام المعلومات الإدارية عن نظام معالجة المعاملات؟",
+    "choicesAr": [
+      "المحافظة على قاعدة بيانات منظمة.",
+      "إمكانية توفير بيانات تدعم اتخاذ القرار.",
+      "أتمتة معالجة المعاملات الروتينية.",
+      "إنتاج تقارير لدعم العمليات."
+    ],
+    "explanationAr": "يوفر نظام المعلومات الإدارية للمديرين المعلومات اللازمة للتحليل والتخطيط والرقابة واتخاذ القرارات. أما الوظيفة الأساسية لنظام معالجة المعاملات فهي دعم العمليات الروتينية المستمرة. وقد يوفر كلاهما بيانات لاتخاذ القرار، لكن النظام الإداري يركز على تحويلها إلى معلومات وتقارير إدارية نافعة."
   },
   {
     "unit": 19,
@@ -167,7 +207,15 @@
     ],
     "answerIndex": 0,
     "explanation": "A management information system (MIS) provides information\nfor management decisions. The MIS must meet the needs of\nthe organization or the cost will exceed any benefit to a\nbusiness.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تمثل نظم المعلومات الإدارية استثمارًا كبيرًا لدى معظم المنشآت. ومن الاهتمامات الأساسية للإدارة أن يكون النظام:",
+    "choicesAr": [
+      "ملبيًا لاحتياجات أعمال المنشأة.",
+      "مستخدمًا لأحدث التقنيات.",
+      "قد يستهلك وقتًا ومالًا أكثر من اللازم أثناء الاختبار.",
+      "مصممًا باستخدام أدوات هندسة البرمجيات بمساعدة الحاسوب (CASE) بدلًا من الطرق التقليدية."
+    ],
+    "explanationAr": "يوفر نظام المعلومات الإدارية المعلومات اللازمة لاتخاذ القرارات. ويجب أن يلبي احتياجات المنشأة حتى تتحقق منافع تبرر تكاليفه. ولا يعد استخدام أحدث التقنيات أو أدوات تطوير بعينها هدفًا مستقلًا عن القيمة التي يقدمها النظام للأعمال."
   },
   {
     "unit": 19,
@@ -184,7 +232,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A MIS is a system that supports routine processes. It typically\nreceives input from a transaction processing system,\naggregates it, then reports it in a format useful to middle\nmanagement in running the business. A MIS is concerned not\nonly with reporting to external parties, but also with the internal\nactivities needed for management decision making. A MIS is\nbest suited to solve problems when reporting requirements are\nwell defined. A decision support system is a better choice for\nproblems in which decision making is less structured.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات الآتية بشأن نظام المعلومات الإدارية (MIS) غير صحيحة؟",
+    "choicesAr": [
+      "يدعم النظام العمليات اليومية بتجميع بيانات معاملات المنشأة وتنسيقها.",
+      "تتاح معلومات النظام للإدارة الوسطى لاستخدامها في الرقابة على أنشطة المنشأة.",
+      "نظام المعلومات الإدارية هو الأنسب لحل المشكلات التي تتسم بقدر كبير من عدم التأكد ومتطلبات التقارير غير المحددة.",
+      "غالبًا ما يتلقى النظام الإداري مدخلات من نظام معالجة المعاملات."
+    ],
+    "explanationAr": "في التصنيف التعليمي التقليدي يدعم نظام المعلومات الإدارية العمليات المنظمة، ويتلقى عادة بيانات من نظام معالجة المعاملات ويجمعها ويعرضها في تقارير مفيدة للإدارة. ويخدم التقارير والقرارات الداخلية، ويناسب المتطلبات المحددة بوضوح، بينما يكون نظام دعم القرار أنسب للمشكلات الأقل هيكلة. وقد تتكامل هذه القدرات في نظم الإدارة الحديثة."
   },
   {
     "unit": 19,
@@ -201,7 +257,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The use of a database system significantly reduces\nredundancy of stored data in a system. Data in a standardized\nform are ideally entered once into integrated files and then\nused for any and all related applications. The database is\nusually built to serve multiple applications. Consequently, the\ndata are independent of particular applications and greater\nflexibility in meeting unanticipated demands is possible. The\ndatabase approach also allows for better access by users and\nfor more rapid updating of information.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما المقصود بقاعدة البيانات؟",
+    "choicesAr": [
+      "وسيلة لا غنى عنها لتخزين مجموعات البيانات الكبيرة.",
+      "مجموعة من الملفات أو البيانات المترابطة.",
+      "نظام يعمل في الوقت الفعلي.",
+      "شبكة من الأجهزة الطرفية للحاسوب."
+    ],
+    "explanationAr": "يقلل نهج قواعد البيانات تكرار البيانات غير الضروري. وتدخل البيانات المعيارية في بنية متكاملة وتستخدمها التطبيقات المرتبطة بها بحسب الحاجة. وتصمم قاعدة البيانات عادة لخدمة تطبيقات متعددة، بما يعزز استقلال البيانات عن التطبيق ومرونة الوصول والتحديث. وقد يستخدم النظام نسخًا احتياطية أو تكرارًا مقصودًا لتحسين الإتاحة والأداء."
   },
   {
     "unit": 19,
