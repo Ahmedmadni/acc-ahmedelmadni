@@ -85,3 +85,19 @@ test("Unit 17 Wave 3: 14 risk/control Arabic drafts and source locks",()=>{
  }
  assert.deepEqual(rows.filter(r=>r.section===2&&r.number<=16&&!r.stemAr).map(r=>r.number),[2,15]);
 });
+
+const wave4=new Map([[17,[1047,1,"54372a05"]],[18,[1048,0,"1e0565f7"]],[19,[1049,1,"5b7162dd"]],[20,[1050,2,"175df1ff"]],[22,[1051,0,"017f836d"]],[23,[1052,2,"51af44a0"]],[24,[1054,0,"8c9fc1d9"]],[26,[1056,3,"cffdf7c2"]],[27,[1057,0,"60857289"]],[28,[1057,0,"51f16249"]],[29,[1058,2,"31510907"]],[30,[1059,3,"c836305e"]]]);
+test("Unit 17 Wave 4: risk/control drafts, source locks and holds",()=>{
+ assert.deepEqual(rows.filter(r=>r.section===2&&r.number>=17&&r.number<=30&&r.stemAr).map(r=>r.number),[...wave4.keys()]);
+ for(const [n,[page,index,hash]] of wave4){
+  const r=q2(n);assert.equal(r.page,page);assert.equal(r.answerIndex,index);assert.equal(r.answerStatus,"source");assert.equal(r.sourceTextStatus,undefined);
+  assert.equal(fingerprint(JSON.stringify([r.stem,r.choices,r.explanation,r.answerIndex,r.page])),hash);
+  assert.equal(validateCmaTranslation({question:{en:r.stem},choices:{en:r.choices},explanation:{en:r.explanation}},{question:r.stemAr,choices:r.choicesAr,explanation:r.explanationAr}).valid,true,String(n));
+  for(const [en,ar] of [[r.stem,r.stemAr],...r.choices.map((c,i)=>[c,r.choicesAr[i]]),[r.explanation,r.explanationAr]])assert.deepEqual(cmaNumericTokens(ar),cmaNumericTokens(en),String(n));
+ }
+ assert.equal(q2(20).choicesAr[q2(20).answerIndex],"لا؛ نعم");assert.ok(q2(20).stemAr.includes("مخاطر عدم الاكتشاف؛ سياسات"));
+ assert.ok(q2(23).choices[q2(23).answerIndex].includes("gross margin"));assert.ok(q2(23).explanationAr.includes("هامش مجمل الربح"));
+ assert.ok(q2(26).choices[q2(26).answerIndex].includes("Reasonable assurance"));assert.ok(q2(30).choices[q2(30).answerIndex].includes("assuming"));
+ const adapter=read("src/data/cma-questions-gleim-2025-vol2.ts");assert.ok(adapter.includes('"17.2.21"'));assert.equal(q2(25).sourceTextStatus,"reconstructed");
+ for(const [n,page,index] of [[21,1051,0],[25,1055,1]]){const held=q2(n);assert.equal(held.page,page);assert.equal(held.answerIndex,index);assert.equal(held.stemAr,undefined);assert.equal(held.choicesAr,undefined);assert.equal(held.explanationAr,undefined);}
+});
