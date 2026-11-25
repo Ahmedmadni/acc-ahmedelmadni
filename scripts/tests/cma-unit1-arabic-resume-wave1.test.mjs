@@ -181,3 +181,20 @@ test("Unit 5 independent construction contract calculations",()=>{
  assert.equal(6000000-1860000-4340000,-200000);
  assert.equal(364000-105000-192000-(122000-105000),50000);
 });
+
+const unit5Wave3Pins=new Map([[1,[610,3,"e459c4d6"]],[2,[611,1,"2a88da07"]],[3,[611,0,"3b86b7ec"]],[4,[612,3,"33821112"]],[5,[614,1,"6d1035fc"]],[6,[615,3,"014dd4c9"]],[7,[615,1,"c30381a4"]],[8,[616,2,"8e3b3eec"]],[9,[617,3,"222aa894"]],[10,[618,1,"b94c1ef5"]],[11,[619,0,"18ccd363"]],[13,[620,3,"307f5412"]],[14,[621,1,"61762406"]],[15,[622,1,"827a29db"]],[16,[623,1,"086fefab"]],[17,[624,1,"1c9617c2"]],[19,[626,0,"ad37afc9"]],[21,[628,0,"1135a5e9"]]]);
+test("Unit 5 impairment and disposal preserves source, answer keys and numerical parity",()=>{
+ for(const [n,[page,index,hash]] of unit5Wave3Pins){const r=unit5Rows.find(r=>r.section===3&&r.number===n);assert.equal(r.page,page);assert.equal(r.answerIndex,index);assert.equal(r.answerStatus,"source");assert.equal(fingerprint(JSON.stringify([r.stem,r.choices,r.explanation,r.answerIndex,r.page])),hash);assert.equal(validateCmaTranslation({question:{en:r.stem},choices:{en:r.choices},explanation:{en:r.explanation}},{question:r.stemAr,choices:r.choicesAr,explanation:r.explanationAr}).valid,true,String(n));for(const [en,ar] of [[r.stem,r.stemAr],...r.choices.map((c,i)=>[c,r.choicesAr[i]]),[r.explanation,r.explanationAr]])assert.deepEqual(cmaNumericTokens(ar),cmaNumericTokens(en),String(n));}
+ const adapter=read("src/data/cma-questions-gleim-2025-vol1.ts");const held=["5.1.5","5.1.7","5.1.12","5.1.15","5.1.18","5.1.19","5.2.24","5.2.25","5.2.27","5.3.12","5.3.18","5.3.20"];assert.deepEqual(unit5Rows.filter(r=>!r.stemAr).map(r=>[r.unit,r.section,r.number].join(".")),held);for(const id of held)assert.ok(adapter.includes('"'+id+'"'),id);
+ assert.equal(unit5Rows.length,75);assert.equal(unit5Rows.filter(r=>r.stemAr&&r.choicesAr&&r.explanationAr).length,63);assert.deepEqual([1,2,3].map(s=>unit5Rows.filter(r=>r.section===s&&r.stemAr).length),[15,30,18]);
+});
+test("Unit 5 independent disposal and impairment calculations",()=>{
+ const usLoss=(carrying,undiscounted,fair)=>carrying>undiscounted?Math.max(0,carrying-fair):0;
+ assert.equal(535000-(1000000-(1000000-100000)/9*4),-65000);
+ assert.equal(700000-495000+75000,280000);
+ assert.equal(usLoss(20000,15000,12000),8000);
+ assert.equal(20000-usLoss(20000,15000,12000),12000);
+ assert.equal(80000-(100000-100000/10*4.5),25000);
+ assert.equal(Math.max(100000-15000,90000),90000);
+ assert.equal(usLoss(120000,130000,105000),0);
+});
