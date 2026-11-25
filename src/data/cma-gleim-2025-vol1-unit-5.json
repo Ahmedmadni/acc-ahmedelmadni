@@ -1101,7 +1101,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The cost-to-cost method provides for the recognition of gross\nprofit based on the relationship between the costs incurred to\ndate and estimated total costs for the completion of the\ncontract. The amount of gross profit (based on the latest\navailable estimated costs) recognized in the second year of a\n4-year contract is calculated as follows: The total anticipated\ngross profit is multiplied by the ratio of the costs incurred to\ndate to the total estimated costs, and the product is reduced\nby previously recognized gross profit. Gross profit previously\nrecognized is therefore used to calculate gross profit to be\nrecognized in the second year. However, amounts billed to\ndate have no effect on the amount of gross profit to be\nrecognized in the second year.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "استخدمت شركة مدخل التكاليف المتكبدة لقياس التقدم نحو إكمال عقد إنشاء مدته 4 سنوات. أي البنود التالية يستخدم لحساب مجمل الربح المعترف به في السنة الثانية؟\nمجمل الربح المعترف به سابقًا | المبالغ المفوترة حتى تاريخه",
+    "choicesAr": [
+      "نعم | نعم",
+      "لا | نعم",
+      "نعم | لا",
+      "لا | لا"
+    ],
+    "explanationAr": "تعتمد طريقة التكلفة إلى التكلفة على العلاقة بين التكاليف المتكبدة حتى تاريخه وإجمالي التكاليف المقدرة لإكمال العقد. ويحسب مجمل الربح في السنة الثانية من عقد مدته 4 سنوات باستخدام أحدث التقديرات: يضرب إجمالي مجمل الربح المتوقع في نسبة التكاليف التراكمية إلى إجمالي التكاليف المقدرة، ثم يطرح مجمل الربح المعترف به سابقًا. لذا يستخدم الربح المعترف به سابقًا في حساب ربح السنة الثانية، بينما لا تؤثر المبالغ المفوترة في حسابه."
   },
   {
     "unit": 5,
@@ -1135,7 +1143,15 @@
     ],
     "answerIndex": 1,
     "explanation": "An entity recognizes revenue when (or as) it satisfies each\nperformance obligation in the contract by transferring the\npromised good or service (an asset) to a customer. An asset is\ntransferred when the customer obtains control of that asset.\nWhen the customer simultaneously receives and consumes\nthe benefits from performance as the entity performs, revenue\nis recognized over time.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الحالات التالية قد تؤدي إلى الاعتراف بالإيراد من عقد مع عميل على مدى الزمن؟",
+    "choicesAr": [
+      "يمكن للمنشأة إنفاذ حقها في المقابل عن العمل المنجز حتى تاريخه على أصل له استخدام بديل لديها.",
+      "يتلقى العميل منافع الأداء ويستهلكها بالتزامن مع أداء المنشأة.",
+      "قبل العميل الأصل وللمنشأة حق حالي في المقابل.",
+      "ينشئ أداء المنشأة أصلًا أو يحسنه دون سيطرة العميل عليه أثناء العملية."
+    ],
+    "explanationAr": "تعترف المنشأة بالإيراد عندما أو مع الوفاء بكل التزام أداء بنقل السلعة أو الخدمة الموعودة إلى العميل. وينقل الأصل عندما يحصل العميل على السيطرة عليه. وعندما يتلقى العميل منافع الأداء ويستهلكها بالتزامن مع أداء المنشأة، يعترف بالإيراد على مدى الزمن."
   },
   {
     "unit": 5,
@@ -1152,7 +1168,15 @@
     ],
     "answerIndex": 1,
     "explanation": "As soon as an estimated loss on any project becomes\napparent, it must be recognized in full. The total of the costs\nincurred in Year 1 plus estimated costs to complete is\n$6,200,000 ($1,860,000 + $4,340,000). Because this sum\nexceeds the $6 million fixed-price construction contract\namount, a $200,000 loss should be recognized.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم Ailouros مدخل التكاليف المتكبدة لقياس تقدم المشروع. وفي السنة 1 بدأت عقد إنشاء بسعر ثابت $6 ملايين. وأظهرت السجلات للسنة المنتهية في 31 ديسمبر من السنة 1:\nالتكاليف المتكبدة: $1,860,000\nالتكاليف المقدرة للإكمال: 4,340,000\nالذمم المدينة: 600,000\nالمتحصلات: 1,400,000\nما الخسارة الواجب الاعتراف بها في السنة 1؟",
+    "choicesAr": [
+      "$460,000",
+      "$200,000",
+      "$60,000",
+      "$0"
+    ],
+    "explanationAr": "وفق نموذج خسائر عقود الإنشاء المنطبق، يعترف بكامل الخسارة المقدرة عند اتضاحها. ويبلغ مجموع التكاليف المتكبدة في السنة 1 والمقدرة للإكمال $6,200,000 ($1,860,000 + $4,340,000). ولأنه يتجاوز سعر العقد الثابت البالغ $6 ملايين، يعترف بخسارة $200,000."
   },
   {
     "unit": 5,
@@ -1169,7 +1193,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Catus cannot reasonably measure the progress toward\nsatisfaction of the performance obligation (contract) but\nexpects to recover the costs incurred. Accordingly, it\nrecognizes revenue from the contracts to the extent of the cost\nincurred (zero profit margin). For Project 1, no gross profit is\nrecognized in Year 1. However, as soon as an estimated loss\non any project becomes apparent, it must be recognized in\nfull. Catus therefore recognizes a loss of $20,000 on Project 2\n($300,000 contract price – ($280,000 + $40,000) estimated\ncontract costs).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فيما يلي بيانات مشروعات الإنشاء طويلة الأجل لشركة Catus التي بدأت في السنة 1:\nالبند | المشروع 1 | المشروع 2\nسعر العقد | $420,000 | $300,000\nالتكاليف المتكبدة خلال السنة 1 | 240,000 | 280,000\nالتكاليف المقدرة للإكمال | 120,000 | 40,000\nالمفوتر للعملاء خلال السنة 1 | 150,000 | 270,000\nالمحصل من العملاء خلال السنة 1 | 90,000 | 250,000\nإذا تعذر على Catus قياس التقدم نحو الإكمال بشكل معقول لكنها تتوقع استرداد التكاليف المتكبدة، فما مجمل الربح أو الخسارة في قائمة دخل السنة 1؟",
+    "choicesAr": [
+      "$(20,000)",
+      "$0",
+      "$40,000",
+      "$420,000"
+    ],
+    "explanationAr": "لا تستطيع Catus قياس التقدم نحو الوفاء بالتزام الأداء بشكل معقول، لكنها تتوقع استرداد التكاليف المتكبدة. لذلك تعترف بالإيراد في حدود التكاليف المتكبدة القابلة للاسترداد (هامش ربح صفري). وبالنسبة للمشروع 1 لا يعترف بمجمل ربح في السنة 1. ومع ذلك يعترف بكامل الخسارة المتوقعة وفق نموذج خسائر عقود الإنشاء المنطبق عند اتضاحها. لذلك تعترف Catus بخسارة $20,000 في المشروع 2 ($300,000 سعر العقد − ($280,000 + $40,000) التكاليف المقدرة للعقد)."
   },
   {
     "unit": 5,
@@ -1186,7 +1218,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The input method based on costs incurred provides for the\nrecognition of gross profit based on the relationship between\nthe costs incurred to date and estimated total costs for the\ncompletion of the contract. The total anticipated gross profit is\nmultiplied by the ratio of the costs incurred to date to the total\nestimated costs, and the product is reduced by previously\nrecognized gross profit. At the end of Year 1, Project 1 is 66\n2/3% complete [$240,000 ÷ ($240,000 + $120,000)] and\nProject 2 is 87 1/2% complete [$280,000 ÷ ($280,000 +\n$40,000)]. Each project’s percentage of completion is\nmultiplied by its expected total gross profit. Accordingly, Catus\nrecognizes $40,000 [($420,000 contract price – $240,000\ncosts incurred – $120,000 additional estimated costs) ×\n66 2/3%] of gross profit for Project 1. However, Project 2\nestimates indicate a loss of $20,000 ($300,000 – $280,000 –\n$40,000). Because the full amount of a loss is reported\nimmediately irrespective of the accounting method used, a\ngross profit of $20,000 [$40,000 Project 1 + $(20,000)\nProject 2] is recognized.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فيما يلي بيانات مشروعات الإنشاء طويلة الأجل لشركة Catus التي بدأت في السنة 1:\nالبند | المشروع 1 | المشروع 2\nسعر العقد | $420,000 | $300,000\nالتكاليف المتكبدة خلال السنة 1 | 240,000 | 280,000\nالتكاليف المقدرة للإكمال | 120,000 | 40,000\nالمفوتر للعملاء خلال السنة 1 | 150,000 | 270,000\nالمحصل من العملاء خلال السنة 1 | 90,000 | 250,000\nإذا استخدمت Catus مدخل التكاليف المتكبدة لقياس التقدم نحو الإكمال، فما مجمل الربح أو الخسارة في قائمة دخل السنة 1؟",
+    "choicesAr": [
+      "$(20,000)",
+      "$20,000",
+      "$22,500",
+      "$40,000"
+    ],
+    "explanationAr": "يعتمد مدخل التكاليف المتكبدة على نسبة التكاليف التراكمية إلى إجمالي التكاليف المقدرة لإكمال العقد. ويضرب إجمالي مجمل الربح المتوقع في نسبة التقدم ثم يطرح مجمل الربح المعترف به سابقًا. وفي نهاية السنة 1 بلغ تقدم المشروع 1 نسبة 66 2/3% [$240,000 ÷ ($240,000 + $120,000)] والمشروع 2 نسبة 87 1/2% [$280,000 ÷ ($280,000 + $40,000)]. ويضرب تقدم المشروع المربح في إجمالي مجمل ربحه المتوقع. لذا تعترف Catus بمجمل ربح $40,000 [($420,000 سعر العقد − $240,000 تكاليف متكبدة − $120,000 تكاليف مقدرة إضافية) × 66 2/3%] للمشروع 1. أما المشروع 2 فتشير تقديراته إلى خسارة $20,000 ($300,000 − $280,000 − $40,000). ووفق نموذج خسائر عقود الإنشاء المنطبق يعترف بكامل الخسارة فورًا، لذا يعترف بصافي مجمل ربح $20,000 [$40,000 المشروع 1 + $(20,000) المشروع 2]."
   },
   {
     "unit": 5,
@@ -1203,7 +1243,15 @@
     ],
     "answerIndex": 0,
     "explanation": "In Year 1, one-half of the estimated costs of this construction\nproject were incurred [$1,750,000 ÷ ($1,750,000 +\n$1,750,000)]. The company should therefore recognize one-\nhalf of the estimated gross profit in Year 1. At year end, the\nestimated gross profit is $700,000, equal to the contract price\nminus total estimated costs [$4,200,000 – ($1,750,000 +\n$1,750,000)]. In Year 1, $350,000 should be recognized as\ngross profit ($700,000 × 50%).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بدأت Kechara مشروع إنشاء طويل الأجل في السنة 1. وفيما يلي البيانات:\nسعر العقد: $4,200,000\nالتكاليف المتكبدة في السنة 1: 1,750,000\nالتكاليف المقدرة للإكمال: 1,750,000\nفواتير التقدم: 900,000\nالمتحصلات من فواتير التقدم: 800,000\nيستخدم مدخل التكاليف المتكبدة للاعتراف بإيراد التزام أداء ينفذ على مدى الزمن. ما مجمل الربح المعروض في قائمة دخل السنة 1؟",
+    "choicesAr": [
+      "$350,000",
+      "$700,000",
+      "$900,000",
+      "$100,000"
+    ],
+    "explanationAr": "في السنة 1 تكبدت المنشأة نصف التكلفة المقدرة [$1,750,000 ÷ ($1,750,000 + $1,750,000)]. ولذلك تعترف بنصف مجمل الربح المقدر في السنة 1. وفي نهاية السنة يبلغ مجمل الربح المتوقع $700,000، وهو سعر العقد ناقص إجمالي التكلفة المقدرة [$4,200,000 − ($1,750,000 + $1,750,000)]. وفي السنة 1 يعترف بمجمل ربح $350,000 ($700,000 × 50%)."
   },
   {
     "unit": 5,
@@ -1220,7 +1268,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Costs incurred through Year 2 equal $297,000 ($105,000 +\n$192,000). Thus, gross profit recognized in Year 1 and Year 2\nis $67,000 ($364,000 – $297,000 cumulative costs). Because\ngross profit of $17,000 was recognized in Year 1 ($122,000 –\n$105,000 of costs), $50,000 ($67,000 – $17,000) should be\nrecognized in Year 2.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تعترف Ashke بإيرادات الإنشاء ومجمل الربح باستخدام مدخل التكاليف المتكبدة لالتزام أداء ينفذ على مدى الزمن. وفي السنة 1 بدأ مشروع طويل الأجل واحد استمر حتى السنة 2. وفيما يلي البيانات:\nالبند | السنة 1 | السنة 2\nالذمم المدينة من عقد الإنشاء | $100,000 | $300,000\nتكاليف الإنشاء السنوية | 105,000 | 192,000\nمجمل الربح والتكاليف المتكبدة تراكميًا | 122,000 | 364,000\nالفواتير الجزئية للعقد | 100,000 | 420,000\nما مجمل الربح المعترف به في السنة 2؟",
+    "choicesAr": [
+      "$50,000",
+      "$108,000",
+      "$120,000",
+      "$228,000"
+    ],
+    "explanationAr": "تبلغ التكاليف المتكبدة حتى السنة 2 مبلغ $297,000 ($105,000 + $192,000). لذا يبلغ مجمل الربح المعترف به في السنة 1 والسنة 2 مبلغ $67,000 ($364,000 − $297,000 التكاليف التراكمية). ولأنه اعترف بمجمل ربح $17,000 في السنة 1 ($122,000 − $105,000 تكلفة)، ينبغي الاعتراف بـ$50,000 ($67,000 − $17,000) في السنة 2."
   },
   {
     "unit": 5,
