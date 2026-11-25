@@ -76,4 +76,5 @@
 - [x] Unit 20 Wave 3: 10 data analytics Arabic drafts (§2 Q1–3/Q5–7/Q9–11/Q15); **30/90 (33.3%)**, 16 reviewed holds, 44 unreviewed. See `docs/CMA_UNIT20_ARABIC_WAVE3_2026-11-25.md`.
 - [x] Unit 20 Wave 4: 7 regression and quality analytics Arabic drafts (§2 Q17/Q20/Q22–24/Q27–28); **37/90 (41.1%)**, 24 reviewed holds, 29 unreviewed. Q16/Q19/Q21 duplicate Unit 12 and remain source-only. See `docs/CMA_UNIT20_ARABIC_WAVE4_2026-11-25.md`.
 - [x] Unit 20 Wave 5: 8 mining and scenario analytics Arabic drafts (§2 Q33/Q35–37/Q39/Q41/Q43/Q45); **45/90 (50%)**, 31 reviewed holds, 14 unreviewed. See `docs/CMA_UNIT20_ARABIC_WAVE5_2026-11-25.md`.
+- [x] Unit 20 Wave 6: 9 exploratory, time-series and mining Arabic drafts (§2 Q47–52/Q54/Q57/Q59); **54/90 (60%)**, all 90 reviewed, 36 held, zero unreviewed. See `docs/CMA_UNIT20_ARABIC_WAVE6_2026-11-25.md`.
 - [ ] Revisit governance holds with official statutory scope and original-page checks; continue §2 Q17–65.

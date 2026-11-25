@@ -1683,7 +1683,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Exploratory data analysis seeks to maximize insight into a\ndata set, uncover an underlying structure, and check for\noutliers and anomalies. The main role of exploratory data\nanalysis is to open-mindedly explore in order to gain some\nnew, often unexpected, insight into the data.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يصف التحليل الاستكشافي للبيانات؟",
+    "choicesAr": [
+      "نادرًا ما يستخدم الأدوات الرسومية لتجنب التحيز الناتج عن التعامل مع أدوات التصور.",
+      "يهدف إلى كشف الأنماط واستخلاص الرؤى من خلال اكتشاف البنية الكامنة للبيانات.",
+      "يستخدم غالبًا بوصفه الخطوة الأخيرة في عملية التحليل لاكتساب رؤى جديدة.",
+      "يضع افتراضات في مرحلة مبكرة غالبًا بحيث يمكن اكتشاف القيم الشاذة قبل الأساليب التقليدية."
+    ],
+    "explanationAr": "يهدف التحليل الاستكشافي إلى تعميق فهم مجموعة البيانات واكتشاف بنيتها وأنماطها والقيم المتطرفة والمشاهدات غير المعتادة. ويستعين بالرسوم والإحصاءات الوصفية لاستكشاف البيانات دون فرض نموذج محدد عليها قبل فهمها. ولا يغني عن اختبار الفرضيات والتحقق من النتائج لاحقًا."
   },
   {
     "unit": 20,
@@ -1700,7 +1708,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Exploratory data analysis is an approach to data analysis that\ndiffers from traditional modeling and analytic techniques by\nencouraging the data itself to reveal its underlying structure\nrather than prematurely applying a hypothesis or statistical\nmethod. It seeks to maximize insight into a data set, uncover\nan underlying structure, identify important variables, check for\noutliers and anomalies, test underlying assumptions, develop\nparsimonious models, and determine optimal factors. This is\nan example of exploratory data analysis.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يحلل مستشار تقرير مبيعات السراويل لشركة A، فاكتشف عدة أنماط مميزة. ولاحظ مجموعة من العملاء يشترون بصورة أساسية نوعًا أو نوعين مختلفين من السراويل خلال السنة. وتمثل هذه الشريحة أكبر شرائح العملاء وتستمر في النمو. وبعد مزيد من التحليل وجد أن مشتريات كل عميل تشمل مقاسات مختلفة، ثم تبين أن هؤلاء العملاء متاجر صغيرة لبيع الملابس بالتجزئة. وبدأ المستشار دراسة كيفية تحسين إدارة سلسلة الإمداد وعلاقات الشركة بهذه الشريحة لزيادة الربحية. ما الوصف الأنسب للأسلوب المستخدم في تحليل المشكلة؟",
+    "choicesAr": [
+      "محاكاة مونت كارلو.",
+      "تحليل الانحدار.",
+      "تحليل الحساسية.",
+      "التحليل الاستكشافي للبيانات."
+    ],
+    "explanationAr": "يسمح التحليل الاستكشافي باكتشاف البنية الكامنة للبيانات بدلًا من فرض فرضية أو نموذج إحصائي قبل فهمها. ويهدف إلى اكتشاف الأنماط والمتغيرات المهمة والقيم الشاذة وفحص الافتراضات وبناء نماذج مناسبة. وفي المثال اكتشف المستشار شريحة العملاء وخصائصها من خلال استكشاف البيانات تدريجيًا، ثم بحث فرص تحسين الربحية المرتبطة بها."
   },
   {
     "unit": 20,
@@ -1717,7 +1733,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A seasonal pattern often exists when a time series is\ninfluenced by seasonal factors (e.g., the quarter of the year,\nthe month, or the day of the week). The swimwear sales rise\nduring May and August (summer months) and fall during\nNovember and February (winter months). Thus, this scenario\nis best described as a seasonal pattern.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يعد محلل تحليلًا للسلاسل الزمنية لمبيعات ملابس السباحة. ولاحظ أنه خلال آخر 3 سنوات ارتفعت المبيعات في مايو وأغسطس وانخفضت في نوفمبر وفبراير. أي الأنماط الآتية يصف الحالة على أفضل وجه؟",
+    "choicesAr": [
+      "نمط غير منتظم.",
+      "نمط دوري.",
+      "نمط زمني متسلسل.",
+      "نمط موسمي."
+    ],
+    "explanationAr": "يظهر النمط الموسمي عندما تتأثر السلسلة الزمنية بعوامل متكررة خلال فترات تقويمية منتظمة، مثل ربع السنة أو الشهر أو يوم الأسبوع. وتكرار ارتفاع مبيعات ملابس السباحة وانخفاضها في الأشهر المذكورة من كل سنة يمثل نمطًا موسميًا، دون اشتراط تفسير ذلك بالفصول المناخية نفسها في جميع البلدان."
   },
   {
     "unit": 20,
@@ -1734,7 +1758,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A cyclical pattern exists when data points show rises and falls\nthat are not of a fixed or seasonal pattern. The duration of\nthese cyclical fluctuations is usually at least a couple of years.\nAn example is business cycles (i.e., expansion, peak,\nrecession, depression), which typically last several years, but\nthe length of the current cycle is never known in advance.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يرجح أن يعكس نمطًا دوريًا؟",
+    "choicesAr": [
+      "ارتفاع حركة المرور في ساعات الصباح والمساء.",
+      "زيادة مبيعات القفازات في الشتاء.",
+      "تأثر البيانات الاقتصادية بالركود.",
+      "ارتفاع أسعار النفط بسبب إضراب عمال النفط."
+    ],
+    "explanationAr": "يتمثل النمط الدوري في ارتفاعات وانخفاضات لا تتكرر بالضرورة وفق فترات تقويمية ثابتة أو موسمية. ومن أمثلته دورات النشاط الاقتصادي، التي قد تشمل التوسع والذروة والانكماش والتعافي وتمتد لسنوات متفاوتة. أما أنماط الازدحام اليومية والمبيعات الشتوية فهي موسمية، والإضراب المفاجئ قد يمثل صدمة غير منتظمة."
   },
   {
     "unit": 20,
@@ -1751,7 +1783,15 @@
     ],
     "answerIndex": 1,
     "explanation": "An irregular pattern exists when random or unplanned factors\noccur. An earthquake is an unplanned factor. Thus, a\ndecrease in the number of tourists due to an earthquake is an\nexample of an irregular pattern.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يرجح أن يعكس نمطًا غير منتظم؟",
+    "choicesAr": [
+      "زيادة الناتج المحلي الإجمالي خلال التوسع الاقتصادي.",
+      "انخفاض عدد السياح بسبب زلزال.",
+      "انخفاض مبيعات المثلجات خلال الشتاء.",
+      "زيادة عدد السياح في عطلات نهاية الأسبوع والإجازات."
+    ],
+    "explanationAr": "ينشأ النمط غير المنتظم عن عوامل عشوائية أو أحداث غير متوقعة لا تتكرر وفق نمط موسمي أو دوري محدد. ولذلك يمثل انخفاض السياحة المرتبط بزلزال مثالًا على صدمة غير منتظمة في السلسلة الزمنية."
   },
   {
     "unit": 20,
@@ -1768,7 +1808,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Time series analysis is the process of projecting future trends\nbased on past experience. Benefits of time series analysis\ninclude analyzing current results against activity in the past to\ndetermine trend shifts.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يصف تحليل السلاسل الزمنية؟",
+    "choicesAr": [
+      "يستخدم التجربة والخطأ لتحديد أثر تغير الافتراضات على النتائج.",
+      "يحلل النتائج الحالية مقارنة بالنشاط السابق لتحديد التحولات في الاتجاهات.",
+      "يستطلع آراء الخبراء ويلخصها ويعيد الملخصات إليهم دون كشف هويات المشاركين لبعضهم.",
+      "يساعد في تحديد مدى تمثيل العينة للمجتمع."
+    ],
+    "explanationAr": "يدرس تحليل السلاسل الزمنية المشاهدات المرتبة زمنيًا لاكتشاف الاتجاهات والموسمية والدورات والتغيرات في السلوك، وقد يستخدم للتنبؤ. وتساعد مقارنة النتائج الحالية بالبيانات التاريخية على تحديد التحولات، مع مراعاة أن الأنماط الماضية لا تضمن النتائج المستقبلية."
   },
   {
     "unit": 20,
@@ -1802,7 +1850,15 @@
     ],
     "answerIndex": 2,
     "explanation": "SQL is a language used to access and manipulate data within\nrelational database management systems. Queries are\nconstructed and executed using a set of commands to create,\nupdate, and retrieve information.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما الهدف من لغة الاستعلامات المهيكلة (SQL)؟",
+    "choicesAr": [
+      "تقييم هيكل قاعدة البيانات وتوثيقه.",
+      "تنظيف البيانات غير الصحيحة أو الناقصة أو المكررة قبل تحميلها إلى قاعدة البيانات.",
+      "إنشاء البيانات وتحديثها واسترجاعها وإدارتها داخل قاعدة البيانات.",
+      "توفير معلومات تفصيلية عن حجم كل عنصر بيانات وصيغته واستخدامه ومعناه وملكيته."
+    ],
+    "explanationAr": "تستخدم SQL للوصول إلى البيانات والتعامل معها في نظم إدارة قواعد البيانات العلائقية. وتتيح أوامرها إنشاء هياكل البيانات وإدراج السجلات وتحديثها واسترجاعها وإدارتها وفق الصلاحيات. وقد تستخدم أيضًا في إجراءات التنظيف والتحقق، لكن ذلك لا يحصر غرض اللغة."
   },
   {
     "unit": 20,
@@ -1853,7 +1909,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Data mining is the search for unexpected relationships among\ndata. The classic example of the use of data mining was the\ndiscovery by convenience stores that diapers and beer often\nappeared on the same sales transaction in the late evening.\nThus, identifying a previously unknown pattern (i.e., the\nunexpected higher claims by customers presumed to be low-\nrisk) is an example of data mining.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لاحظت شركة تأمين محلية ارتفاعًا حادًا في المطالبات خلال السنوات الأخيرة، ولم يتمكن قسما الاكتواريا والرقابة على المخاطر من تفسيره. وللبحث عن السبب، جمعت الشركة بيانات ديموغرافية ومعلومات عن العملاء، واكتشفت أن النساء المتزوجات بعمر 50 سنة فأكثر، ممن افترضت الشركة سابقًا انخفاض مخاطرهن، قدمن مطالبات أكثر من المتوقع. أي نوع من التحليل يمثل هذا المثال؟",
+    "choicesAr": [
+      "التحليل التنبؤي.",
+      "تحليل التنقيب عن البيانات.",
+      "تحليل ماذا لو.",
+      "تحليل الحساسية."
+    ],
+    "explanationAr": "يبحث التنقيب عن البيانات عن العلاقات والأنماط غير المتوقعة في البيانات. وفي المثال اكتشفت الشركة نمطًا لم يكن معروفًا لها بشأن ارتفاع المطالبات لدى شريحة معينة مقارنة بتوقعاتها. وهذا اكتشاف ارتباط، وليس إثباتًا لسبب الارتفاع أو مبررًا لاتخاذ قرارات تمييزية. ويلزم التحقق من جودة البيانات والعوامل المربكة والضوابط النظامية والعدالة قبل استخدام النتائج."
   },
   {
     "unit": 20,
@@ -1887,6 +1951,14 @@
     ],
     "answerIndex": 3,
     "explanation": "The data mining process includes the tasks from anomaly\ndetection to the presentation of data. Activities after the\npresentation of data, such as developing plans based on the\npresented data, are not part of in the data mining process.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لدى شركة ثلاثة أقسام إنتاج: A وB وC. ومن بيانات الإنتاج اكتشف مدير القسم A أن معدل العيوب للشهر الحالي أعلى من المتوقع بنسبة 6%. ولتحديد سبب الانحراف طلب مساعدة محاسب الإدارة، الذي جمع معلومات الإنتاج وبنى نموذجًا وحدد العلاقات بين معدلات العيوب والمتغيرات المختلفة. وبعد ملاحظة ارتفاع معدلات العيوب أيضًا في القسمين B وC، طبق المحاسب النموذج عليهما لدراسة قابلية تعميم العلاقات. ثم لخص النتائج وعرضها على الإدارة العليا التي وضعت خططًا للحد من المشكلة.\nأي المراحل الآتية لا تدخل ضمن عملية التنقيب عن البيانات بالمعنى التحليلي المستخدم في السؤال؟",
+    "choicesAr": [
+      "اكتشاف أن معدل العيوب أعلى من المتوقع بنسبة 6%.",
+      "تطبيق النموذج على أقسام إنتاج أخرى.",
+      "عرض النتائج على الإدارة العليا.",
+      "وضع خطط للحد من المشكلة."
+    ],
+    "explanationAr": "وفق نطاق السؤال تشمل عملية التنقيب عن البيانات اكتشاف المشاهدات غير المعتادة ودراسة العلاقات وتقييم قابلية تعميمها وعرض النتائج. أما وضع خطة عمل استنادًا إلى النتائج فهو مرحلة اتخاذ القرار والتحسين بعد التحليل. وقد تتضمن دورة مشروع تحليل البيانات الأوسع تنفيذ الحلول ومتابعتها."
   }
 ]
