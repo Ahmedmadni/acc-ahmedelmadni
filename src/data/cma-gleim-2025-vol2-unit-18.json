@@ -2998,7 +2998,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A Trojan horse is a computer program that appears friendly,\nfor example, a game, but that actually contains an application\ndestructive to the computer system.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي برنامج حاسوبي يبدو مشروعًا لكنه ينفذ نشاطًا غير مشروع عند تشغيله؟",
+    "choicesAr": [
+      "فيروس خداعي.",
+      "زاحف ويب.",
+      "حصان طروادة.",
+      "تطبيق واسع التأثير."
+    ],
+    "explanationAr": "حصان طروادة برنامج يبدو مألوفًا أو مفيدًا، مثل لعبة، لكنه يخفي وظائف ضارة قد تلحق الضرر بالنظام أو تنتهك سرية البيانات."
   },
   {
     "unit": 18,
@@ -3015,7 +3023,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Firewalls separate an internal network from an external\nnetwork (such as the Internet) and prevent passage of specific\ntypes of traffic.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يستخدم لأمن الإنترنت بخلاف تأمين نقل البيانات عبر خطوط اتصال مخصصة وآمنة؟",
+    "choicesAr": [
+      "جدران الحماية.",
+      "إعداد الخرائط.",
+      "المحاكاة المتوازية.",
+      "ضوابط التزامن."
+    ],
+    "explanationAr": "تفصل جدران الحماية بين الشبكات الداخلية والخارجية، مثل الإنترنت، وتمنع مرور أنواع محددة من حركة البيانات بحسب قواعد معتمدة. وهي لا تغني وحدها عن تشفير الاتصالات أو المصادقة."
   },
   {
     "unit": 18,
@@ -3032,7 +3048,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The most effective preventive measure against unauthorized\ninterception of data is encryption. Encryption technology\nconverts data into a code. Unauthorized users may still be\nable to access the data, but without the encryption key, they\nwill be unable to decode the information. Encryption\ntechnology may be either hardware or software based.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تخشى إدارة شركة التنصت على البيانات الحاسوبية وتريد المحافظة على سرية معلوماتها أثناء نقلها. ما الوسيلة التي ينبغي استخدامها؟",
+    "choicesAr": [
+      "تشفير البيانات.",
+      "أنظمة معاودة الاتصال.",
+      "إجراءات تأكيد استلام الرسائل.",
+      "رموز كلمات المرور."
+    ],
+    "explanationAr": "التشفير وسيلة لحماية سرية البيانات عند اعتراضها؛ إذ يحول البيانات إلى صيغة غير مقروءة دون مفتاح مناسب. وقد يتمكن غير المخولين من اعتراض البيانات المشفرة، لكن التشفير السليم وإدارة المفاتيح بصورة آمنة يحدان من إمكانية قراءتها. ويمكن تطبيق التشفير بواسطة الأجهزة أو البرمجيات."
   },
   {
     "unit": 18,
@@ -3049,7 +3073,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The offsite location where an organization’s computer backup\nfiles are kept must be temperature and humidity controlled and\nguarded against intrusion just as the main processing center\nis. Just as important, it must be geographically remote enough\nfrom the site of the organization’s main operations that it\nwould not be affected by the same natural disaster. It does an\norganization no good to have sound backup procedures if the\nfiles are not accessible or have been destroyed.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يضعف بدرجة أكبر فعالية الاحتفاظ بالملفات لحمايتها من فقد الملفات الرئيسية أو تلفها؟",
+    "choicesAr": [
+      "استخدام الأشرطة المغناطيسية.",
+      "عدم كفاية التهوية.",
+      "تخزين جميع الملفات في موقع واحد.",
+      "عدم تشفير البيانات."
+    ],
+    "explanationAr": "ينبغي حماية موقع حفظ النسخ الاحتياطية خارج المقر من الدخول غير المصرح به والظروف البيئية الضارة، بما يتناسب مع وسيط التخزين. ومن المهم أن يكون بعيدًا جغرافيًا بما يكفي لتقليل خطر تأثره بالكوارث نفسها التي تصيب الموقع الرئيسي. فلا تحقق النسخ الاحتياطية هدفها إذا تلفت أو تعذر الوصول إليها. كما ينبغي اختبار الاستعادة دوريًا."
   },
   {
     "unit": 18,
@@ -3083,7 +3115,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Encryption technology converts data into code. Unauthorized\nusers may still be able to access the data but, without the\nencryption key, they will be unable to decode the information.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يمكن نقل البيانات السرية عبر الإنترنت بصورة آمنة باستخدام:",
+    "choicesAr": [
+      "كلمات مرور تستخدم مرة واحدة.",
+      "جدران الحماية.",
+      "التشفير.",
+      "التوقيعات الرقمية."
+    ],
+    "explanationAr": "يحول التشفير البيانات إلى صيغة غير مقروءة دون المفتاح المناسب. وقد يتمكن غير المخولين من اعتراض البيانات، لكن استخدام تشفير موثوق وإدارة سليمة للمفاتيح يحميان سريتها. وتخدم التوقيعات الرقمية أساسًا سلامة البيانات والتحقق من مصدرها، ولا توفر السرية وحدها."
   },
   {
     "unit": 18,
@@ -3100,7 +3140,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Software from recognized sources should be tested in\nquarantine (for example, in a test/development machine or a\nstand-alone personal computer) because even vendor-\nsupplied software may be infected with viruses. The software\nshould be run with a vaccine program and tested for the\nexistence of logic bombs, etc.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "اقتصر مديرو شركة منتجات استهلاكية على شراء برمجيات الحواسيب الشخصية من موردين معروفين، ومنعوا الموظفين من تثبيت برمجيات غير معتمدة. ما الإجراء الإضافي الذي ينبغي تطبيقه للحد من احتمال الإصابة بالفيروسات؟",
+    "choicesAr": [
+      "استعادة الأنظمة المصابة باستخدام إصدارات معتمدة.",
+      "إعادة ترجمة البرامج المصابة من النسخ الاحتياطية للشيفرة المصدرية.",
+      "وضع إجراءات للرقابة على تغييرات البرامج.",
+      "اختبار جميع البرمجيات الجديدة على حاسوب مستقل."
+    ],
+    "explanationAr": "ينبغي فحص البرمجيات الجديدة حتى لو وردت من مصادر معروفة، باستخدام بيئة اختبار معزولة عن الإنتاج وأدوات حماية مناسبة. فقد تتعرض برمجيات الموردين للاختراق أيضًا. ويساعد الاختبار والتحقق من مصدر البرمجيات وسلامتها على الحد من المخاطر دون ضمان اكتشاف جميع التهديدات."
   },
   {
     "unit": 18,
@@ -3134,7 +3182,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Passwords, user account numbers, and other information may\nbe stolen using techniques such as Trojan horses, IP\nspoofing, and packet sniffers. Spoofing is identity\nmisrepresentation in cyberspace, for example, by using a false\nwebsite to obtain information about visitors.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "انتحال الهوية (Spoofing) أحد الأنشطة التي قد تستخدم في الهجمات الإلكترونية. ماذا يعني؟",
+    "choicesAr": [
+      "تجربة عدد كبير من تركيبات الحروف والأرقام للوصول إلى شبكة.",
+      "التنصت على معلومات يرسلها مستخدم إلى الحاسوب المضيف لموقع إلكتروني.",
+      "الوصول إلى حزم البيانات المتدفقة عبر شبكة.",
+      "تمثيل هوية مزيفة في الفضاء الإلكتروني."
+    ],
+    "explanationAr": "يعني انتحال الهوية تقديم هوية أو مصدر مزيف في البيئة الرقمية، مثل موقع يوهم الزائر بأنه تابع لجهة موثوقة. وقد يستهدف ذلك الحصول على بيانات سرية. وتختلف هذه الفكرة عن مجرد اعتراض حركة البيانات، وتساعد المصادقة والتحقق من هوية المصدر على تقليل مخاطرها."
   },
   {
     "unit": 18,
@@ -3151,7 +3207,15 @@
     ],
     "answerIndex": 0,
     "explanation": "A denial-of-service (DoS) attack is an attempt to overload a\nsystem (e.g., a network or web server) with false messages so\nthat it cannot function (a system crash). A distributed DoS\nattack comes from multiple sources, for example, the\nmachines of innocent parties infected by Trojan horses. When\nactivated, these programs send messages to the target and\nleave the connection open. A DoS may establish as many\nnetwork connections as possible to exclude other users,\noverload primary memory, or corrupt file systems.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتخذ الهجمات على شبكات الحاسوب أشكالًا متعددة. أي منها قد يستغل أجهزة أطراف غير مشاركة في الهجوم بعد إصابتها ببرمجيات خبيثة؟",
+    "choicesAr": [
+      "هجوم حجب الخدمة الموزع.",
+      "هجوم الوسيط.",
+      "هجوم التخمين بالقوة الغاشمة.",
+      "هجوم كسر كلمات المرور."
+    ],
+    "explanationAr": "يستهدف هجوم حجب الخدمة (DoS) تعطيل إتاحة النظام للمستخدمين الشرعيين. ويتميز حجب الخدمة الموزع (DDoS) بصدور حركة الهجوم من مصادر متعددة، قد تشمل أجهزة مخترقة. ويتمثل الخطر الرقابي في تعطل الخدمة واستمرارية الأعمال، مما يستلزم ضوابط للرصد والاستجابة والمرونة التشغيلية."
   },
   {
     "unit": 18,
@@ -3202,7 +3266,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The operating system is the “mind” of the computer. It\nmanages the communications between the different hardware\ncomponents making up the system and manages the flow of\ndata into and out of the system. Before any processing can be\ndone, it must be up and running.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عند محاولة استعادة مرافق الحوسبة في موقع بديل بعد كارثة، أي مما يلي ينبغي استعادته أولًا ضمن الترتيب التقني المفترض؟",
+    "choicesAr": [
+      "نظام التشغيل المباشر عبر الشبكة.",
+      "نظام معالجة الدفعات.",
+      "نظام التشغيل.",
+      "نظام دعم القرارات."
+    ],
+    "explanationAr": "يدير نظام التشغيل موارد الأجهزة والاتصال بين مكوناتها وتدفق البيانات. وفي البيئة التقليدية المفترضة، يجب أن يكون نظام التشغيل جاهزًا قبل تشغيل التطبيقات التي تعتمد عليه. وفي النظم الحديثة يحدد ترتيب الاستعادة وفق الاعتماديات الفنية، بما فيها البنية التحتية والهوية والشبكة."
   },
   {
     "unit": 18,
@@ -3236,7 +3308,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Encryption technology converts data into a code.\nUnauthorized users may still be able to access the data;\nhowever, without the encryption key, they cannot decode the\ndata. Encryption would thus be the best control in order to\nensure that the company’s data are protected in the event\nthey are intercepted.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "طُلب من مدير تقنية المعلومات في شركة ضمان حماية بياناتها عند اعتراضها أثناء النقل. ما أفضل ضابط من البدائل الآتية؟",
+    "choicesAr": [
+      "ترتيب الرسائل تسلسليًا.",
+      "التشفير.",
+      "خوارزميات التحقق الذاتي.",
+      "خطوط اتصال مخصصة."
+    ],
+    "explanationAr": "يحول التشفير البيانات إلى صيغة لا يمكن قراءتها بصورة مفهومة دون مفتاح مناسب. وإذا اعترض طرف غير مخول البيانات، فإن التشفير القوي والإدارة السليمة للمفاتيح يوفران حماية لسرية البيانات. لذا يعد التشفير أفضل البدائل في هذه المسألة."
   },
   {
     "unit": 18,
@@ -3253,7 +3333,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The theft of confidential information is one of the biggest risks\nthat comes along with using the Internet. Therefore, many\ncontrols have been created to mitigate this risk, such as\npasswords and encryption.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستعد شركة طيران لإنشاء موقع إلكتروني لتلقي حجوزات الرحلات ومدفوعات التذاكر. أي مما يلي يوضح على أفضل وجه أحد المخاطر الملازمة لاستخدام الإنترنت؟",
+    "choicesAr": [
+      "الاعتماد على مقدمي خدمات الإنترنت.",
+      "إمكانية اعتراض المعلومات السرية.",
+      "عدم توحيد صيغ البيانات عادةً.",
+      "محدودية الضوابط المتاحة للحد من المخاطر."
+    ],
+    "explanationAr": "يمثل اعتراض المعلومات السرية خطرًا مهمًا في المعاملات عبر الإنترنت، خصوصًا عندما تتضمن بيانات شخصية ومدفوعات. وقد تخفف ضوابط مثل التشفير والمصادقة وإدارة الوصول هذا الخطر، دون إزالته بالكامل. كما أن الاعتماد على مزودي الخدمة يمثل خطرًا تشغيليًا منفصلًا."
   },
   {
     "unit": 18,
@@ -3287,7 +3375,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Encryption converts data into code so that unauthorized users\ncannot read the data without using an encryption key.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ماذا يسمى تحويل البيانات الإلكترونية باستخدام خوارزمية بحيث لا تكون مقروءة للأشخاص غير المخولين؟",
+    "choicesAr": [
+      "جدار حماية.",
+      "دودة حاسوبية.",
+      "فيروس.",
+      "تشفير."
+    ],
+    "explanationAr": "يحول التشفير البيانات إلى صيغة مشفرة لا يمكن قراءتها بصورة مفهومة دون مفتاح مناسب، عند استخدام خوارزمية سليمة وتنفيذ آمن."
   },
   {
     "unit": 18,
@@ -3304,7 +3400,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Business continuity planning is the continuation of business by\nother means during the period in which computer processing\nis unavailable or less than normal. A company creates a\nbusiness continuity plan to prepare for disasters.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتبع شركة خطة لمواصلة أعمالها إذا تأثر موقع العمل بكارثة. ما الاسم الأكثر احتمالًا لهذه الخطة؟",
+    "choicesAr": [
+      "تخطيط الاتصالات أثناء الأزمات.",
+      "تخطيط الإتاحة المستمرة.",
+      "تخطيط استمرارية الأعمال.",
+      "التخطيط الاستراتيجي."
+    ],
+    "explanationAr": "يهدف تخطيط استمرارية الأعمال إلى استمرار الأنشطة ذات الأولوية بوسائل بديلة أثناء الاضطرابات، بما في ذلك تعطل نظم المعلومات أو انخفاض قدرتها التشغيلية. وتعد خطة التعافي من الكوارث جزءًا تقنيًا داعمًا لاستمرارية الأعمال، التي تشمل أيضًا الأشخاص والعمليات والموردين والمرافق."
   },
   {
     "unit": 18,
@@ -3321,7 +3425,15 @@
     ],
     "answerIndex": 1,
     "explanation": "A firewall is a combination of hardware and software that\nseparates an internal network from an external network, such\nas the Internet, and prevents passage of specific types of\ntraffic. The chief information technology officer set up a control\nto prevent unauthorized external access to its client’s network,\nwhich is indicative of a firewall.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "طبق مسؤول تقنية المعلومات تقنية للحد من الوصول الخارجي غير المصرح به إلى شبكة العميل. ما التقنية الأرجح من بين البدائل؟",
+    "choicesAr": [
+      "تشفير البيانات.",
+      "جدار حماية.",
+      "المفتاح العام.",
+      "المفتاح الخاص."
+    ],
+    "explanationAr": "جدار الحماية ضابط شبكي ينفذ قواعد مرور البيانات بين الشبكات، وقد يكون برمجيًا أو ماديًا أو خدمة سحابية. ويساعد على تقييد الاتصالات الخارجية غير المصرح بها بحسب القواعد، لكنه لا يغني عن المصادقة وضوابط الوصول الأخرى."
   },
   {
     "unit": 18,
