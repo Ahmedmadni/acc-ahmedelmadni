@@ -627,6 +627,7 @@ const staticArabicVol2 = new Set([
   ...Array.from({length:15},(_,i)=>i+15).filter(n=>![17,21,24].includes(n)).map(n=>"18.1."+n),
   ...Array.from({length:15},(_,i)=>i+30).filter(n=>![35,43,44].includes(n)).map(n=>"18.1."+n),
   ...Array.from({length:15},(_,i)=>i+45).filter(n=>![46,55].includes(n)).map(n=>"18.1."+n),
+  ...Array.from({length:15},(_,i)=>i+60).filter(n=>![63,64,65,68,72,74].includes(n)).map(n=>"18.1."+n),
 ]);
 const vol2QuestionById = new Map(CMA_GLEIM_2025_VOL2_QUESTIONS.map(q=>[q.id,q]));
 for (const [key, original] of vol2Records) {
@@ -877,12 +878,12 @@ for(const [n,page,index] of [[2,1034,0],[15,1045,3],[21,1051,0],[25,1055,1],[37,
   "Unit 17 risk/control reference or source hold must remain unscored: "+n);
 }
 console.log("Unit 17 Wave 6: 71/93 Arabic drafts; governance 14/28, risk/control 57/65; 22 held, zero unreviewed.");
-for(const [n,page,index] of [[1,1088,0],[10,1096,3],[17,1101,0],[21,1105,3],[24,1108,1],[35,1116,0],[43,1124,3],[44,1125,3],[46,1127,0],[55,1135,2]]){
+for(const [n,page,index] of [[1,1088,0],[10,1096,3],[17,1101,0],[21,1105,3],[24,1108,1],[35,1116,0],[43,1124,3],[44,1125,3],[46,1127,0],[55,1135,2],[63,1141,1],[64,1142,2],[65,1143,1],[68,1145,3],[72,1148,0],[74,1150,3]]){
  const original=vol2Records.get("18.1."+n);
  const mapped=vol2QuestionById.get("cma-gleim-2025-vol2-su18-s1-q"+String(n).padStart(3,"0"));
  check(original?.page===page && original.answerIndex===index && original.stemAr===undefined && original.choicesAr===undefined && original.explanationAr===undefined && mapped?.sourceLayoutReview===true && mapped?.sourceLanguage==="en" && mapped?.sourceArabicStatus===undefined && mapped?.answerIndex===original.answerIndex,"Unit 18 control classification/accrual review hold: "+n);
 }
-console.log("Unit 18 Wave 4: 49/149 Arabic drafts; control procedures 49/89; 10 reviewed holds, 90 unreviewed.");
+console.log("Unit 18 Wave 5: 58/149 Arabic drafts; control procedures 58/89; 16 reviewed holds, 75 unreviewed.");
 const unit15ReviewRows=[...vol2Records.entries()].filter(([id])=>id.startsWith("15.")).filter(([id])=>{
  const [,section,n]=id.split(".");
  return vol2QuestionById.get("cma-gleim-2025-vol2-su15-s"+section+"-q"+String(n).padStart(3,"0"))?.sourceLayoutReview===true;
