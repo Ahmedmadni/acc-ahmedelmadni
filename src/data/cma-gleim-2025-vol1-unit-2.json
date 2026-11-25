@@ -290,7 +290,15 @@
     ],
     "answerIndex": 1,
     "explanation": "When credit loss expense is estimated on the basis of net\ncredit sales, credit loss expense is directly associated with a\nrevenue of the period (net credit sales). Thus, credit loss\nexpense is $20,000 ($1,000,000 credit sales × 2%).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تقدر شركة Ward مصروف خسائر الائتمان بنسبة 2% من المبيعات الآجلة. وبلغت مبيعاتها الآجلة خلال السنة الحالية $1 مليون. وخلال السنة شطبت خسائر ائتمانية بمبلغ $18,000. وكان رصيد مخصص خسائر الائتمان $15,000 في 1 يناير. ما مصروف خسائر الائتمان الواجب عرضه في قائمة الدخل في 31 ديسمبر؟",
+    "choicesAr": [
+      "$23,000",
+      "$20,000",
+      "$18,000",
+      "$17,000"
+    ],
+    "explanationAr": "عند تقدير المصروف على أساس صافي المبيعات الآجلة في هذا التمرين، يرتبط المصروف مباشرة بإيرادات الفترة من المبيعات الآجلة. وبالتالي يبلغ مصروف خسائر الائتمان $20,000 ($1,000,000 مبيعات آجلة × 2%). ويجب في التطبيق العملي أن يتوافق قياس المخصص مع متطلبات الخسائر الائتمانية المتوقعة المنطبقة."
   },
   {
     "unit": 2,
@@ -307,7 +315,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The aging schedule determines the allowance for credit losses\nbased on year-end accounts receivable, their age, and their\nestimated collectibility. This year-end amount is $18,000\n[($240,000 × 1%) + ($180,000 × 2%) + ($200,000 × 6%)].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتعلق المعلومات التالية بالذمم المدينة لشركة Eire في 31 ديسمبر من السنة 2:\nأيام التأخر | المبلغ | نسبة عدم التحصيل المقدرة\n0 - 60 | $240,000 | 1%\n61 - 120 | 180,000 | 2%\nأكثر من 120 | 200,000 | 6%\nالإجمالي | $620,000\nخلال السنة 2، شطبت Eire ذممًا بقيمة $14,000 واستردت مبلغ $8,000 سبق شطبه في سنوات سابقة. وبلغ مخصص خسائر الائتمان في 31 ديسمبر من السنة 1 مبلغ $44,000. وفق طريقة أعمار الذمم، ما المخصص الواجب عرضه في 31 ديسمبر من السنة 2؟",
+    "choicesAr": [
+      "$18,000",
+      "$20,000",
+      "$26,000",
+      "$38,000"
+    ],
+    "explanationAr": "يحدد جدول أعمار الذمم مخصص خسائر الائتمان استنادًا إلى الذمم المدينة في نهاية السنة وأعمارها ونسب تحصيلها المقدرة. ويبلغ الرصيد المطلوب في نهاية السنة $18,000 [($240,000 × 1%) + ($180,000 × 2%) + ($200,000 × 6%)]."
   },
   {
     "unit": 2,
@@ -324,7 +340,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The allowance for credit losses at year end should have a\nbalance of $60,000. This amount is equal to the $2,000,000 of\naccounts receivable multiplied by the 3% that is estimated to\nbecome uncollectible.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "استُخرجت أرصدة الحسابات التالية من سجلات شركة Pika في 31 ديسمبر:\nالذمم المدينة: $2,000,000\nمخصص خسائر الائتمان: 16,000\nصافي المبيعات الآجلة: $6,000,000\nتقدر الشركة أن 3% من إجمالي الذمم المدينة لن يكون قابلًا للتحصيل. ما الرصيد المطلوب لمخصص خسائر الائتمان بعد التسوية في 31 ديسمبر؟",
+    "choicesAr": [
+      "$180,000",
+      "$164,000",
+      "$44,000",
+      "$60,000"
+    ],
+    "explanationAr": "ينبغي أن يبلغ رصيد المخصص في نهاية السنة $60,000، وهو حاصل ضرب الذمم المدينة البالغة $2,000,000 في نسبة عدم التحصيل المقدرة البالغة 3%."
   },
   {
     "unit": 2,
@@ -341,7 +365,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The NRV of accounts receivable is equal to the $850,000\ngross accounts receivable minus the $64,000 estimate of\ncredit losses. The $50,000 balance in the allowance is not\nused because it is an unadjusted balance.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "كشف تحليل أعمار الذمم المدينة لشركة Hom في 31 ديسمبر عن البيانات التالية:\nالذمم المدينة: $850,000\nمخصص خسائر الائتمان حسب الدفاتر: 50,000\nالمبالغ المقدرة غير القابلة للتحصيل: 64,000\nما صافي القيمة القابلة للتحقق (NRV) للذمم المدينة في 31 ديسمبر؟",
+    "choicesAr": [
+      "$836,000",
+      "$800,000",
+      "$786,000",
+      "$736,000"
+    ],
+    "explanationAr": "يساوي صافي القيمة القابلة للتحقق للذمم المدينة إجمالي الذمم البالغ $850,000 مطروحًا منه خسائر الائتمان المقدرة البالغة $64,000. ولا يُستخدم رصيد المخصص البالغ $50,000 لأنه رصيد قبل التسوية."
   },
   {
     "unit": 2,
@@ -358,7 +390,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The beginning balance of the allowance for credit losses was\n$12,000. The account was decreased $48,000 when the\nuncollectible accounts were written off. Thus, the entry for\ncredit loss expense must be $86,000 if the ending balance is\n$50,000.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بلغ رصيد مخصص خسائر الائتمان لشركة Rue مبلغ $12,000 في 31 ديسمبر من السنة 1. وخلال السنة 2 شطبت الشركة حسابات غير قابلة للتحصيل بمبلغ $48,000. وأشار تحليل أعمار الذمم إلى ضرورة وجود مخصص بقيمة $50,000 في 31 ديسمبر من السنة 2. ما مصروف خسائر الائتمان الواجب عرضه عن السنة 2؟",
+    "choicesAr": [
+      "$48,000",
+      "$50,000",
+      "$60,000",
+      "$86,000"
+    ],
+    "explanationAr": "بلغ رصيد أول المدة للمخصص $12,000، وانخفض الحساب بمبلغ $48,000 عند شطب الذمم غير القابلة للتحصيل. لذلك يجب أن يبلغ قيد مصروف خسائر الائتمان $86,000 للوصول إلى رصيد آخر المدة البالغ $50,000، بافتراض أن رصيد أول المدة دائن ولا توجد حركات أخرى."
   },
   {
     "unit": 2,
@@ -375,7 +415,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Under the balance sheet approach, the ending balance of the\nallowance for credit losses is a percentage of the ending\nbalance of accounts receivable. The uncollectible accounts\nidentified by the aging schedule at year end reflect the total\nrequired ending balance of the allowance. Since the company\ndetermined that $50,000 of the December 31, Year 2,\nreceivables may be uncollectible, this is the ending balance of\nthe allowance for credit losses.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 31 ديسمبر من السنة 1، بلغ رصيد مخصص خسائر الائتمان لشركة Gasp مبلغ $30,000. وخلال السنة 2 شطبت الشركة حسابات غير قابلة للتحصيل بمبلغ $45,000. وفي 31 ديسمبر من السنة 2، أشار تحليل أعمار الذمم إلى أن مبلغ $50,000 من الذمم القائمة في 31 ديسمبر من السنة 2 قد يتعذر تحصيله. ما مبلغ المخصص الواجب عرضه في قائمة المركز المالي في 31 ديسمبر من السنة 2؟",
+    "choicesAr": [
+      "$20,000",
+      "$25,000",
+      "$35,000",
+      "$50,000"
+    ],
+    "explanationAr": "وفق مدخل قائمة المركز المالي، يُحدد رصيد نهاية المدة لمخصص خسائر الائتمان بناءً على الذمم المدينة القائمة ونسب عدم التحصيل المقدرة. وتمثل الخسائر المحددة بجدول الأعمار إجمالي الرصيد المطلوب للمخصص. وبما أن الشركة قدرت أن مبلغ $50,000 من ذمم 31 ديسمبر من السنة 2 قد يتعذر تحصيله، فإنه يمثل رصيد المخصص في نهاية المدة."
   },
   {
     "unit": 2,
@@ -392,7 +440,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The Year 2 ending balance for allowance for credit losses is\n$24,000 ($300,000 × 8%). The write-off of a particular bad\ndebt has no effect on credit loss expense. It is recognized as a\ndecrease in the balance of allowance for credit losses.\nTherefore, the credit loss expense in Year 2 of $34,000 can be\ncalculated as follows:\n1/1/Year 2 allowance for credit losses    $30,000\nAccounts written off                        (40,000)\nCredit loss expense                         34,000\n12/31/Year 2 allowance for credit losses $24,000",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في نهاية السنة 1، بلغ رصيد مخصص خسائر الائتمان لشركة Boller مبلغ $30,000. وخلال السنة 2 شطبت الشركة ذممًا مدينة بمبلغ $40,000. وفي نهاية السنة 2 بلغ رصيد الذمم المدينة $300,000، وقدرت الشركة أن 8% منها لن يكون قابلًا للتحصيل. ما مصروف خسائر الائتمان الواجب عرضه في قائمة دخل السنة 2؟",
+    "choicesAr": [
+      "$64,000",
+      "$34,000",
+      "$24,000",
+      "$14,000"
+    ],
+    "explanationAr": "يبلغ رصيد مخصص خسائر الائتمان المطلوب في نهاية السنة 2 مبلغ $24,000 ($300,000 × 8%). ولا يؤثر شطب حساب معين في المصروف مباشرةً، بل يخفض رصيد المخصص. ولذلك يُحسب مصروف خسائر الائتمان في السنة 2 البالغ $34,000 كما يلي، بافتراض عدم وجود حركات أخرى:\nمخصص خسائر الائتمان في 1/1 من السنة 2: $30,000\nالحسابات المشطوبة: (40,000)\nمصروف خسائر الائتمان: 34,000\nمخصص خسائر الائتمان في 12/31 من السنة 2: $24,000."
   },
   {
     "unit": 2,
@@ -409,7 +465,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Factoring is a transfer of receivables to a third party (a factor)\nwho assumes the responsibility of collection. Factoring\ndiscounts receivables on a nonrecourse, notification basis. If a\nsale is without recourse, the transferee (the factor) assumes\nthe risks and rewards of collection. The factor retained 10% of\nthe receivables ($80,000 × 10% = $8,000) as a reserve (an\nallowance for returns) and charged a 5% commission on the\ngross receivables ($80,000 × 5% = $4,000). Accordingly, the\ntransferor received $68,000 ($80,000 – $8,000 – $4,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 أبريل، حولت شركة Aloe ذممًا مدينة بقيمة $80,000 إلى شركة تخصيم دون حق الرجوع. واحتجزت شركة التخصيم 10% من الذمم كمخصص لمردودات المبيعات، وفرضت عمولة قدرها 5% على إجمالي الذمم المحولة. ما المبلغ النقدي الذي تسلمته Aloe من عملية التخصيم؟",
+    "choicesAr": [
+      "$68,000",
+      "$68,400",
+      "$72,000",
+      "$76,000"
+    ],
+    "explanationAr": "التخصيم هو تحويل الذمم المدينة إلى طرف ثالث يتولى تحصيلها. وفي العملية المعروضة يتم التحويل دون حق الرجوع، ويتحمل المحال إليه مخاطر التحصيل وفق شروط العقد. ولا يكفي عدم حق الرجوع وحده لإثبات البيع المحاسبي؛ إذ يلزم تحقق شروط إلغاء الاعتراف. احتجزت شركة التخصيم 10% من الذمم ($80,000 × 10% = $8,000) احتياطيًا لمردودات المبيعات، وفرضت عمولة بنسبة 5% على إجمالي الذمم ($80,000 × 5% = $4,000). لذا تسلم المحيل نقدًا قدره $68,000 ($80,000 − $8,000 − $4,000)."
   },
   {
     "unit": 2,

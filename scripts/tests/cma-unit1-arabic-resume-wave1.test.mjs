@@ -71,3 +71,10 @@ test("Unit 2 receivables wave 1 preserves source, answers and numerical parity",
  assert.equal(10000000*.03,300000);assert.equal(300000+150000-200000,250000);assert.equal(3000000*.03-50000,40000);assert.equal(60000*.05+4000*.1+2000*.7,4800);assert.equal(90000+16000-100000,6000);assert.equal((700000-650000)-(60000-36000+4000),22000);
  assert.ok(unit2Rows.filter(r=>r.stemAr&&r.choicesAr&&r.explanationAr).length>=9);
 });
+
+const unit2Wave2Pins=new Map([[13,[232,1,"af741387"]],[14,[233,0,"10c5330f"]],[15,[234,3,"976480e7"]],[16,[235,2,"a7204f36"]],[17,[236,3,"508434df"]],[18,[237,3,"37c2a549"]],[19,[238,1,"16060baf"]],[20,[239,0,"b953499a"]]]);
+test("Unit 2 receivables wave 2 preserves source, answers and numerical parity",()=>{
+ for(const [n,[page,index,hash]] of unit2Wave2Pins){const r=unit2Rows.find(r=>r.section===1&&r.number===n);assert.equal(r.page,page);assert.equal(r.answerIndex,index);assert.equal(r.answerStatus,"source");assert.equal(fingerprint(JSON.stringify([r.stem,r.choices,r.explanation,r.answerIndex,r.page])),hash);assert.equal(validateCmaTranslation({question:{en:r.stem},choices:{en:r.choices},explanation:{en:r.explanation}},{question:r.stemAr,choices:r.choicesAr,explanation:r.explanationAr}).valid,true,String(n));for(const [en,ar] of [[r.stem,r.stemAr],...r.choices.map((c,i)=>[c,r.choicesAr[i]]),[r.explanation,r.explanationAr]])assert.deepEqual(cmaNumericTokens(ar),cmaNumericTokens(en),String(n));}
+ assert.equal(1000000*.02,20000);assert.equal(240000*.01+180000*.02+200000*.06,18000);assert.equal(2000000*.03,60000);assert.equal(850000-64000,786000);assert.equal(50000-(12000-48000),86000);assert.equal(50000,Number(unit2Rows.find(r=>r.section===1&&r.number===18).choices[3].replace(/[$,]/g,"")));assert.equal(300000*.08-(30000-40000),34000);assert.equal(80000*(1-.10-.05),68000);
+ assert.equal(unit2Rows.filter(r=>r.section===1).length,20);assert.ok(unit2Rows.filter(r=>r.section===1&&r.stemAr).length>=17);
+});
