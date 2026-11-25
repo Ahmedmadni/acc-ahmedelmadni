@@ -117,3 +117,5 @@
 - [x] Unit 4 initial Arabic review: 71/86 (82.6%), 15 held, zero unreviewed across contingencies, leases, income taxes and bonds. See `docs/CMA_UNIT4_ARABIC_REVIEW_2026-11-25.md`. Continue Unit 5 after CI.
 
 - [x] Unit 5 Wave 1: 15/21 revenue contracts drafts; six held; Unit 5 15/75 (20%). Corrected Unit 4 §4 Q14 rounding mismatch in regression: exact result 10,328.80; nearest available option 10,328, ordinary rounded value 10,329. Continue §2 over-time recognition. See `docs/CMA_UNIT5_ARABIC_WAVE1_2026-11-25.md`.
+
+- [x] Unit 5 Wave 2: 30/33 over-time revenue drafts, three held; Unit 5 45/75 (60%), nine held, 21 unreviewed. Continue §3 impairment and disposal. See `docs/CMA_UNIT5_ARABIC_WAVE2_2026-11-25.md`.
