@@ -756,7 +756,15 @@
     ],
     "answerIndex": 1,
     "explanation": "A fixed cost remains constant regardless of production. Thus,\nthe shipping costs would be categorized as fixed costs since\nthey will remain constant regardless of the units shipped in a\nyear.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تفاوض المراقب المالي لمتجر إلكتروني على عقد مدته 5 سنوات مع شركة شحن لدفع المبالغ السنوية التالية مقابل توصيل السلع بغض النظر عن الكمية:\nالسنة 1 | €1,000,000\nالسنة 2 | 1,000,000\nالسنة 3 | 1,500,000\nالسنة 4 | 1,500,000\nالسنة 5 | 2,000,000\nما نوع هذه النفقات؟",
+    "choicesAr": [
+      "مختلطة.",
+      "ثابتة.",
+      "متغيرة.",
+      "منتج ثانوي."
+    ],
+    "explanationAr": "تظل التكلفة الثابتة مستقلة عن حجم النشاط ضمن المدى الملائم خلال الفترة المحددة. وتصنف تكاليف الشحن هنا ثابتة لأنها لا تتغير بتغير عدد الوحدات المشحونة خلال السنة، رغم تغير المبلغ التعاقدي بين السنوات."
   },
   {
     "unit": 7,
@@ -773,7 +781,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Direct materials unit costs are strictly variable at $2 ($200,000\n÷ 100,000 units). Similarly, direct labor has a variable unit cost\nof $1 ($100,000 ÷ 100,000 units). The $200,000 of\nmanufacturing overhead for 100,000 units is 50% variable.\nThe variable unit cost is $1. Selling costs are $100,000 fixed\nand $50,000 variable for production of 100,000 units, and the\nvariable unit selling expenses is $0.50 ($50,000 ÷\n100,000 units). The total unit variable cost is therefore $4.50\n($2 + $1 + $1 + $0.50). Fixed costs are $200,000. At a\nproduction level of 110,000 units, variable costs are $495,000\n(110,000 units × $4.50). Thus, total costs are $695,000\n($495,000 + $200,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتضمن تكاليف منشأة لإنتاج 100,000 وحدة خلال السنة ما يلي:\nالمواد المباشرة | $200,000\nالأجور المباشرة | 100,000\nالتكاليف الصناعية غير المباشرة | 200,000\nمصروفات البيع والإدارة | 150,000\nجميع التكاليف متغيرة باستثناء $100,000 من التكاليف الصناعية غير المباشرة و$100,000 من مصروفات البيع والإدارة. ما إجمالي تكلفة إنتاج وبيع 110,000 وحدة خلال السنة؟",
+    "choicesAr": [
+      "$650,000",
+      "$715,000",
+      "$695,000",
+      "$540,000"
+    ],
+    "explanationAr": "تبلغ تكلفة المواد المباشرة المتغيرة للوحدة $2 ($200,000 ÷ 100,000 وحدة)، والأجور المباشرة المتغيرة للوحدة $1 ($100,000 ÷ 100,000 وحدة). ومن التكاليف الصناعية غير المباشرة البالغة $200,000 عند إنتاج 100,000 وحدة، تعد نسبة 50% متغيرة؛ أي $1 لكل وحدة. وتبلغ تكاليف البيع والإدارة الثابتة $100,000 والمتغيرة $50,000 عند إنتاج 100,000 وحدة، أي $0.50 للوحدة ($50,000 ÷ 100,000 وحدة). وبذلك تبلغ التكلفة المتغيرة للوحدة $4.50 ($2 + $1 + $1 + $0.50)، والثابتة الإجمالية $200,000. وعند إنتاج 110,000 وحدة تبلغ التكاليف المتغيرة $495,000 (110,000 × $4.50)، والإجمالية $695,000 ($495,000 + $200,000)، بافتراض البقاء ضمن المدى الملائم."
   },
   {
     "unit": 7,
@@ -790,7 +806,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The relevant range is the range of activity over which unit\nvariable costs and total fixed costs are constant. The\nincremental cost of one additional unit of production will be\nequal to the variable cost.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية صحيحة بشأن المدى الملائم للنشاط؟",
+    "choicesAr": [
+      "لا تتغير التكاليف المتغيرة الإجمالية.",
+      "لا تتغير التكاليف الثابتة الإجمالية.",
+      "تقع التكاليف الثابتة الفعلية عادة خارج المدى الملائم.",
+      "لا يمكن تغيير المدى الملائم بعد تحديده."
+    ],
+    "explanationAr": "المدى الملائم هو نطاق النشاط الذي تظل فيه التكلفة المتغيرة للوحدة والتكاليف الثابتة الإجمالية ثابتتين وفق النموذج الخطي. وتساوي التكلفة الإضافية لوحدة إنتاج واحدة التكلفة المتغيرة للوحدة إذا بقي النشاط داخل هذا النطاق."
   },
   {
     "unit": 7,
@@ -807,7 +831,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Fixed costs remain unchanged within the relevant range for a\ngiven period despite fluctuations in activity, but per unit fixed\ncosts do change as the level of activity changes. Thus, fixed\ncosts are fixed in total but vary per unit as activity changes.\nTotal variable costs vary directly with activity. They are fixed\nper unit, but vary in total.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما الفرق بين التكاليف المتغيرة والثابتة؟",
+    "choicesAr": [
+      "تتقلب التكلفة المتغيرة للوحدة بينما تظل التكلفة الثابتة للوحدة ثابتة.",
+      "تظل التكلفة المتغيرة للوحدة ثابتة ضمن المدى الملائم بينما تتغير التكلفة الثابتة للوحدة.",
+      "تتغير التكاليف المتغيرة إجمالًا ضمن المدى الملائم وتثبت على المدى الطويل، بينما لا تتغير التكاليف الثابتة مطلقًا.",
+      "تتغير التكلفة المتغيرة للوحدة بمقادير متفاوتة والثابتة للوحدة بمقادير متساوية."
+    ],
+    "explanationAr": "تظل التكاليف الثابتة الإجمالية دون تغير ضمن المدى الملائم خلال فترة محددة رغم تقلب حجم النشاط، لكن نصيب الوحدة منها يتغير. أما التكاليف المتغيرة الإجمالية فتتغير طرديًا مع النشاط بينما تظل تكلفة الوحدة المتغيرة ثابتة ضمن النموذج الخطي."
   },
   {
     "unit": 7,
@@ -824,7 +856,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The formula is for an annual period. Thus, the first step is to\ndivide the $7,200 of fixed costs by 12 months to arrive at\nmonthly fixed costs of $600. Variable costs will be $.60 per\nunit, or $12,000 for 20,000 units. The total expected expenses\nare therefore $12,600 ($600 + $12,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم شركة معادلة الموازنة السنوية التالية لمصروف الكهرباء في ورشتها:\nالمصروف = $7,200 + (الوحدات المنتجة × $0.60)\nإذا توقعت الإدارة إنتاج 20,000 وحدة في فبراير، فما المصروف المتوقع لذلك الشهر لأغراض تقييم الأداء؟",
+    "choicesAr": [
+      "$7,200",
+      "$12,000",
+      "$12,600",
+      "$19,200"
+    ],
+    "explanationAr": "تخص المعادلة فترة سنوية. لذلك تقسم التكاليف الثابتة $7,200 على 12 شهرًا للحصول على تكلفة ثابتة شهرية $600. وتبلغ التكلفة المتغيرة $.60 للوحدة، أي $12,000 عند إنتاج 20,000 وحدة. ويبلغ إجمالي المصروف المتوقع $12,600 ($600 + $12,000)."
   },
   {
     "unit": 7,
@@ -841,7 +881,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Total variable cost changes when changes in the activity level\noccur within the relevant range. The cost per unit for a variable\ncost is constant for all activity levels within the relevant range.\nThus, if the activity volume increases within the relevant\nrange, total variable costs will increase. A fixed cost does not\nchange when volume changes occur in the activity level within\nthe relevant range. If the activity volume increases within the\nrelevant range, total fixed costs will remain unchanged.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يجمع مصنع تجميع تكاليفه الصناعية غير المباشرة المتغيرة والثابتة في مجمع تكلفة واحد، ثم يحملها على الإنتاج تحت التشغيل باستخدام أساس تحميل واحد. وتريد الإدارة تقدير التكاليف الصناعية غير المباشرة الإجمالية لمستويات مختلفة من أساس التحميل باستخدام معادلة الموازنة المرنة. إذا زاد النشاط ضمن المدى الملائم، فما العلاقة الصحيحة؟",
+    "choicesAr": [
+      "تظل التكلفة المتغيرة للوحدة ثابتة وتنخفض التكاليف الثابتة الإجمالية.",
+      "تظل التكلفة المتغيرة للوحدة ثابتة وتزيد التكاليف الثابتة الإجمالية.",
+      "تظل التكلفة المتغيرة للوحدة والتكاليف الثابتة الإجمالية ثابتتين.",
+      "تزيد التكلفة المتغيرة للوحدة وتظل التكاليف الثابتة الإجمالية ثابتة."
+    ],
+    "explanationAr": "تتغير التكلفة المتغيرة الإجمالية مع تغير النشاط ضمن المدى الملائم، بينما تظل التكلفة المتغيرة للوحدة ثابتة. وبالتالي تزيد التكلفة المتغيرة الإجمالية مع زيادة النشاط، في حين تظل التكاليف الثابتة الإجمالية دون تغير."
   },
   {
     "unit": 7,
@@ -858,7 +906,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Variable costs vary directly with the level of production. As\nproduction increases or decreases, material cost increases or\ndecreases, usually in a direct relationship.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي أفضل مثال على تكلفة متغيرة؟",
+    "choicesAr": [
+      "راتب رئيس الشركة.",
+      "تكلفة المواد الخام.",
+      "أعباء الفائدة.",
+      "ضرائب العقار."
+    ],
+    "explanationAr": "تتغير التكاليف المتغيرة طرديًا مع مستوى الإنتاج. ومع زيادة الإنتاج أو انخفاضه تزيد تكلفة المواد أو تنخفض عادة بصورة تناسبية ضمن المدى الملائم."
   },
   {
     "unit": 7,
@@ -875,7 +931,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A fixed cost is one that remains unchanged within the relevant\nrange for a given period despite fluctuations in activity. Such\nitems as rent, property taxes, depreciation, and supervisory\nsalaries are normally fixed costs because they do not vary\nwith changes in production. Power costs, however, are at\nleast partially variable because they increase as usage\nincreases.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي فئات التكاليف التالية لا تعد على الأرجح عنصرًا من التكاليف الصناعية غير المباشرة الثابتة؟",
+    "choicesAr": [
+      "الإيجار.",
+      "ضرائب العقار.",
+      "الإهلاك.",
+      "الطاقة الكهربائية."
+    ],
+    "explanationAr": "تظل التكلفة الثابتة دون تغير خلال فترة محددة وضمن المدى الملائم رغم تقلب النشاط. ويعد الإيجار وضرائب العقار والإهلاك الزمني ورواتب المشرفين عادة تكاليف ثابتة. أما تكلفة الطاقة فتتضمن غالبًا عنصرًا متغيرًا لأنها تزيد مع زيادة الاستخدام."
   },
   {
     "unit": 7,
@@ -909,7 +973,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The maintenance cost is a mixed cost containing both fixed\nand variable elements. To calculate the monthly total fixed\ncosts, divide the annual amount by 12.\nMonthly fixed maintenance       $6,000 ÷ 12         = $ 500\ncosts:\nVariable maintenance costs:     30,000 ×          =    21,000\n$0.70/hour\nTotal maintenance costs                               $21,500",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم شركة معادلة تكاليف الصيانة السنوية التالية:\nإجمالي التكلفة = $6,000 + $0.70 لكل ساعة تشغيل آلة.\nتستند موازنة الشهر الحالي إلى 30,000 ساعة تشغيل مخططة. ما تكلفة الصيانة الشهرية في الموازنة؟",
+    "choicesAr": [
+      "$20,500",
+      "$21,000",
+      "$21,500",
+      "$27,000"
+    ],
+    "explanationAr": "تكلفة الصيانة مختلطة تتضمن عنصرين ثابتًا ومتغيرًا. ولحساب التكلفة الثابتة الشهرية يقسم المبلغ السنوي على 12.\nتكلفة الصيانة الثابتة الشهرية: $6,000 ÷ 12 = $500\nتكلفة الصيانة المتغيرة: 30,000 × = 21,000؛ سعر الساعة $0.70\nإجمالي تكلفة الصيانة: $21,500."
   },
   {
     "unit": 7,
@@ -926,7 +998,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Fixed cost (FC) is $200,000, the amount at which the total\ncost (TC) line crosses the y-axis (when no warehouses are in\noperation). The total variable cost (VC) of operating 10\nwarehouses is $1,500,000 ($1,700,000 TC - $200,000 FC), so\nthe variable cost per warehouse is $150,000 ($1,500,000 ÷\n10). Y (TC) is therefore equal to $200,000 (FC) plus\n$150,000X (VC).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أعدت الإدارة رسمًا بيانيًا لإجمالي تكاليف تشغيل المستودعات الفرعية في أنحاء البلاد. ويقطع خط التكلفة المحور الرأسي عند $200,000. ويبلغ إجمالي تكلفة تشغيل فرع واحد $350,000، وتشغيل عشرة فروع $1,700,000. ما معادلة الموازنة المرنة لتقدير التكاليف عند مستويات النشاط المختلفة وفق عدد المستودعات العاملة؟",
+    "choicesAr": [
+      "Y = $200,000 + $150,000X",
+      "Y = $200,000 + $170,000X",
+      "Y = $350,000 + $200,000X",
+      "Y = $350,000 + $150,000X"
+    ],
+    "explanationAr": "التكلفة الثابتة (FC) هي $200,000، نقطة تقاطع خط التكلفة الإجمالية (TC) مع المحور الرأسي عند عدم تشغيل أي مستودع. وتبلغ التكلفة المتغيرة الإجمالية (VC) لتشغيل 10 مستودعات $1,500,000 ($1,700,000 إجمالي التكلفة − $200,000 الثابتة). لذا تبلغ التكلفة المتغيرة لكل مستودع $150,000 ($1,500,000 ÷ 10). ومن ثم تساوي Y إجمالي التكلفة: $200,000 ثابتة + $150,000X متغيرة، حيث X عدد المستودعات."
   },
   {
     "unit": 7,
@@ -943,7 +1023,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Sales salaries will increase by exactly 5%. The per-unit\ncommission amount will remain constant, but sales\ncommissions in total are expected to increase by 10%. Thus,\ntotal sales salaries and commissions will increase somewhere\nbetween 5% and 10%.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تدفع شركة لكل موظف مبيعات راتبًا وعمولة عن كل وحدة مباعة. وتخطط للسنة القادمة لزيادة الرواتب جميعها بنسبة 5% مع إبقاء عمولة الوحدة دون تغيير. وتتوقع زيادة حجم المبيعات بنسبة 10% نتيجة ارتفاع الطلب. كيف سيتغير مجموع الرواتب والعمولات؟",
+    "choicesAr": [
+      "يزيد بنسبة 5% أو أقل.",
+      "يزيد بأكثر من 5% وأقل من 10%.",
+      "يزيد بنسبة 10%.",
+      "يزيد بأكثر من 10%."
+    ],
+    "explanationAr": "تزيد الرواتب بنسبة 5% بالضبط، وتظل عمولة الوحدة ثابتة بينما يتوقع زيادة إجمالي العمولات بنسبة 10%. لذا تكون نسبة زيادة المجموع متوسطًا مرجحًا بين 5% و10%، بافتراض ثبات عدد الموظفين ووجود كلا العنصرين."
   },
   {
     "unit": 7,
@@ -960,7 +1048,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Fixed costs per unit decrease within the relevant range of\nactivity as production increases because more units are\navailable to absorb the constant amount of total fixed costs.\nUnit variable costs are assumed to remain the same per unit\nover the relevant range.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يتوقع ارتفاع الإنتاج ضمن المدى الملائم. ما الأثر المتوقع على كل مما يلي؟\nالتكلفة الثابتة للوحدة | التكلفة المتغيرة للوحدة",
+    "choicesAr": [
+      "زيادة | زيادة",
+      "زيادة | دون تغيير",
+      "انخفاض | انخفاض",
+      "انخفاض | دون تغيير"
+    ],
+    "explanationAr": "تنخفض التكلفة الثابتة للوحدة مع زيادة الإنتاج ضمن المدى الملائم لأن عددًا أكبر من الوحدات يتحمل المبلغ الثابت الإجمالي نفسه. ويفترض أن التكلفة المتغيرة للوحدة تظل ثابتة ضمن هذا النطاق."
   },
   {
     "unit": 7,
@@ -994,7 +1090,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Variable cost per unit remains constant in the short run\nregardless of the level of production. This is in contrast with\nvariable costs in total, which vary directly and proportionally\nwith changes in volume.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يشير إلى تكلفة تظل دون تغير عند انخفاض حجم النشاط ضمن المدى الملائم؟",
+    "choicesAr": [
+      "متوسط تكلفة الوحدة.",
+      "التكلفة المتغيرة للوحدة.",
+      "التكلفة الثابتة للوحدة.",
+      "التكاليف المتغيرة الإجمالية."
+    ],
+    "explanationAr": "تظل التكلفة المتغيرة للوحدة ثابتة في الأجل القصير ضمن المدى الملائم، بخلاف التكاليف المتغيرة الإجمالية التي تتغير مباشرة وبصورة تناسبية مع حجم النشاط."
   },
   {
     "unit": 7,
