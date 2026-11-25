@@ -632,6 +632,7 @@ const staticArabicVol2 = new Set([
   ...Array.from({length:15},(_,i)=>i+1).filter(n=>![4,10,15].includes(n)).map(n=>"18.2."+n),
   ...Array.from({length:13},(_,i)=>i+16).filter(n=>![25,26,28].includes(n)).map(n=>"18.2."+n),
   ...Array.from({length:11},(_,i)=>i+29).filter(n=>![33,35,36].includes(n)).map(n=>"18.2."+n),
+  ...Array.from({length:21},(_,i)=>i+1).filter(n=>![5,8,11,12,14,17,21].includes(n)).map(n=>"18.3."+n),
 ]);
 const vol2QuestionById = new Map(CMA_GLEIM_2025_VOL2_QUESTIONS.map(q=>[q.id,q]));
 for (const [key, original] of vol2Records) {
@@ -892,7 +893,12 @@ for(const [n,page,index,status] of [[4,1164,2,"inferred"],[10,1169,1,"source"],[
  const mapped=vol2QuestionById.get("cma-gleim-2025-vol2-su18-s2-q"+String(n).padStart(3,"0"));
  check(original?.page===page && original.answerIndex===index && original.answerStatus===status && original.stemAr===undefined && original.choicesAr===undefined && original.explanationAr===undefined && mapped?.sourceLayoutReview===true && mapped?.sourceLanguage==="en" && mapped?.sourceArabicStatus===undefined && mapped?.answerIndex===original.answerIndex,"Unit 18 systems security hold: "+n);
 }
-console.log("Unit 18 Wave 9: 101/149 Arabic drafts; control procedures 71/89; systems security 30/39; 27 reviewed holds, 21 unreviewed.");
+for(const [n,page,index,status] of [[5,1195,3,"inferred"],[8,1197,1,"source"],[11,1200,3,"source"],[12,1201,2,"source"],[14,1202,3,"source"],[17,1205,1,"source"],[21,1207,3,"source"]]){
+ const original=vol2Records.get("18.3."+n);
+ const mapped=vol2QuestionById.get("cma-gleim-2025-vol2-su18-s3-q"+String(n).padStart(3,"0"));
+ check(original?.page===page && original.answerIndex===index && original.answerStatus===status && original.stemAr===undefined && original.choicesAr===undefined && original.explanationAr===undefined && mapped?.sourceLayoutReview===true && mapped?.sourceLanguage==="en" && mapped?.sourceArabicStatus===undefined && mapped?.answerIndex===original.answerIndex,"Unit 18 continuity hold: "+n);
+}
+console.log("Unit 18 Wave 10: 115/149 Arabic drafts; control procedures 71/89; systems security 30/39; continuity 14/21; 34 reviewed holds, zero unreviewed.");
 const unit15ReviewRows=[...vol2Records.entries()].filter(([id])=>id.startsWith("15.")).filter(([id])=>{
  const [,section,n]=id.split(".");
  return vol2QuestionById.get("cma-gleim-2025-vol2-su15-s"+section+"-q"+String(n).padStart(3,"0"))?.sourceLayoutReview===true;
