@@ -1036,7 +1036,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Regression analysis is used to find an equation for the linear\nrelationship among variables. The behavior of the dependent\nvariable is explained in terms of one or more independent\nvariables. Regression analysis often is used to estimate a\ndependent variable (such as cost) given a known independent\nvariable (such as production).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما الوظيفة التي تؤديها معادلة الانحدار؟",
+    "choicesAr": [
+      "تقدير المتغير التابع أو المتغيرات التابعة.",
+      "تضمين عوامل خارج المدى الملائم.",
+      "الاعتماد على دالة الهدف ودوال القيود.",
+      "تقدير المتغير المستقل."
+    ],
+    "explanationAr": "يستخدم الانحدار لتقدير العلاقة بين المتغيرات. وفي الانحدار الخطي يفسر سلوك المتغير التابع باستخدام متغير مستقل أو عدة متغيرات مستقلة. ومن تطبيقاته تقدير التكلفة المتوقعة عند مستوى إنتاج معلوم، مع مراعاة نطاق البيانات وافتراضات النموذج."
   },
   {
     "unit": 20,
@@ -1053,7 +1061,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Improved accuracy of forecasts may often be achieved by\nregressing the dependent variable on more than one\nindependent variable. The usual multiple regression equation\nis linear and is in the following form when y is the dependent\nvariable; a is the y-axis intercept; x1, x2, etc., are the\nindependent variables; b1, b2, etc., are the coefficients of the\nindependent variables; and e is the error term:\ny = a + b1x1 + b2x2 + ... + e",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بماذا يختلف الانحدار المتعدد عن الانحدار البسيط؟",
+    "choicesAr": [
+      "يوفر حدًا ثابتًا مقدرًا.",
+      "يتضمن عددًا أكبر من المتغيرات التابعة.",
+      "يتيح حساب معامل التحديد.",
+      "يتضمن عددًا أكبر من المتغيرات المستقلة."
+    ],
+    "explanationAr": "يستخدم الانحدار المتعدد عدة متغيرات مستقلة لتفسير المتغير التابع، وقد يحسن دقة التقدير إذا كانت المتغيرات مناسبة. في النموذج الخطي يمثل y المتغير التابع وa الجزء الثابت، وتمثل x1 وx2 وغيرها المتغيرات المستقلة، بينما تمثل b1 وb2 وغيرها معاملات الانحدار، ويمثل e حد الخطأ:\ny = a + b1x1 + b2x2 + ... + e"
   },
   {
     "unit": 20,
@@ -1087,7 +1103,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Simple regression uses the algebraic formula for a straight\nline, y = a + bx, where x is the independent variable. Multiple\nregression is used when there is more than one independent\nvariable. Multiple regression allows a firm to identify many\nfactors (independent variables) and to weight each one\naccording to its influences on the overall outcome (y = a +\nb1x1 + b2x2 + b3x3 + etc.).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في تقدير التكلفة، يختلف الانحدار البسيط عن الانحدار المتعدد في أن الانحدار البسيط يستخدم فقط:",
+    "choicesAr": [
+      "متغيرًا تابعًا واحدًا، بينما يستخدم الانحدار المتعدد جميع البيانات المتاحة لتقدير دالة التكلفة.",
+      "المتغيرات التابعة، بينما يمكن للانحدار المتعدد استخدام المتغيرات التابعة والمستقلة معًا.",
+      "متغيرًا مستقلًا واحدًا، بينما يستخدم الانحدار المتعدد أكثر من متغير مستقل.",
+      "متغيرًا تابعًا واحدًا، بينما يستخدم الانحدار المتعدد أكثر من متغير تابع."
+    ],
+    "explanationAr": "تأخذ معادلة الانحدار الخطي البسيط الشكل y = a + bx، حيث x هو المتغير المستقل. ويستخدم الانحدار المتعدد أكثر من متغير مستقل، ويقدر معاملًا لكل عامل لتفسير أثره في الناتج مع ثبات العوامل الأخرى، وفق النموذج:\ny = a + b1x1 + b2x2 + b3x3 + ...\nولا تثبت المعاملات السببية بمجرد تقديرها."
   },
   {
     "unit": 20,
@@ -1104,7 +1128,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Substituting the given data into the regression equation results\nin a budgeted cost of $3,746 (rounded to the nearest dollar).\ny = a + bx\ny = 684.65 + 7.2884(420)\ny = $3,746",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عند إعداد خطة الربح السنوية للعام القادم، ترغب شركة فاين في تحديد نمط سلوك تكاليف الصيانة باستخدام الانحدار الخطي وفق المعادلة y = a + bx. وكانت نتائج التحليل:\na = 684.65\nb = 7.2884\nاستنادًا إلى هذه البيانات، ما تكلفة الصيانة المقدرة في الموازنة لشهر يتضمن 420 ساعة صيانة، مقربة إلى أقرب دولار؟",
+    "choicesAr": [
+      "$3,780",
+      "$3,600",
+      "$3,790",
+      "$3,746"
+    ],
+    "explanationAr": "بالتعويض عن المعطيات في معادلة الانحدار، تبلغ تكلفة الصيانة المقدرة $3,746 بعد التقريب لأقرب دولار:\ny = a + bx\ny = 684.65 + 7.2884(420)\ny ≈ $3,746"
   },
   {
     "unit": 20,
@@ -1121,7 +1153,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The letter x in the standard regression equation is the\nindependent variable. For example, in a regression to\ndetermine the total cost of production, x equals units\nproduced.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما الوصف الأنسب للرمز x في معادلة الانحدار المعتادة؟",
+    "choicesAr": [
+      "متغير مستقل.",
+      "متغير تابع.",
+      "معامل ثابت.",
+      "معامل التحديد."
+    ],
+    "explanationAr": "يمثل x المتغير المستقل في معادلة الانحدار المعتادة. ففي نموذج تقدير إجمالي تكلفة الإنتاج يمكن أن يمثل x عدد الوحدات المنتجة، وهو متغير تفسيري تستخدم قيمته لتقدير التكلفة."
   },
   {
     "unit": 20,
@@ -1138,7 +1178,15 @@
     ],
     "answerIndex": 3,
     "explanation": "In the standard regression equation, b represents the slope of\nthe regression line. For example, in a cost determination\nregression, y equals total costs, b is the variable cost per unit,\nx is the number of units produced, and a is fixed cost.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في معادلة الانحدار المعتادة y = a + bx، ما الوصف الأنسب للرمز b؟",
+    "choicesAr": [
+      "متغير مستقل.",
+      "متغير تابع.",
+      "نقطة التقاطع مع محور Y.",
+      "ميل خط الانحدار."
+    ],
+    "explanationAr": "يمثل b ميل خط الانحدار. ففي نموذج خطي لتقدير التكلفة، يمثل y إجمالي التكلفة المقدرة، وb التكلفة المتغيرة المقدرة لكل وحدة، وx عدد الوحدات المنتجة، وa الجزء الثابت المقدر من التكلفة ضمن نطاق النموذج."
   },
   {
     "unit": 20,
@@ -1155,7 +1203,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Unstructured data refers to information that is not organized in\na pre-defined manner (e.g., text-heavy facts, dates, numbers,\nand images).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يصف البيانات غير المهيكلة على أفضل وجه؟",
+    "choicesAr": [
+      "بيانات ذات مستوى مرتفع من التنظيم.",
+      "بيانات مخزنة بصورة منهجية باستخدام علامات تنظم التسلسل الهرمي للسجلات والحقول.",
+      "معلومات غير منظمة وفق مخطط محدد مسبقًا، مثل المحتوى النصي الحر الذي قد يتضمن تواريخ وأرقامًا وصورًا.",
+      "بيانات تتوافق مع تنظيم نماذج قواعد البيانات العلائقية."
+    ],
+    "explanationAr": "تشير البيانات غير المهيكلة إلى معلومات لا تتبع مخططًا ثابتًا محددًا مسبقًا، مثل النصوص الحرة والصور. وقد تشتمل على تواريخ وأرقام، لكن وجود هذه العناصر لا يجعل البيانات غير مهيكلة بحد ذاته؛ فالعبرة بكيفية تنظيمها."
   },
   {
     "unit": 20,
@@ -1172,7 +1228,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Big data is often characterized by the “4 Vs” - volume, variety,\nvelocity, and veracity. Thus, uniformity is not a characteristic of\nbig data.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "جميع ما يأتي يمثل خصائص للبيانات الضخمة ما عدا:",
+    "choicesAr": [
+      "الحجم.",
+      "التنوع.",
+      "السرعة.",
+      "التجانس."
+    ],
+    "explanationAr": "توصف البيانات الضخمة غالبًا باستخدام الخصائص المعروفة باسم 4 Vs: الحجم والتنوع والسرعة وموثوقية البيانات. لذلك لا يعد التجانس إحدى هذه الخصائص، مع إمكان احتواء مجموعات البيانات الضخمة على بيانات متجانسة."
   },
   {
     "unit": 20,
@@ -1223,7 +1287,15 @@
     ],
     "answerIndex": 0,
     "explanation": "A fishbone diagram (also called a cause-and-effect diagram or\nan Ishikawa diagram) is used in total quality management for\nprocess improvement. It is useful in studying causation (why\nthe actual and desired situations differ). This format organizes\nthe analysis of causation and helps to identify possible\ninteractions among causes.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تلقت شركة مصنعة لقطع غيار السيارات شكاوى من العملاء بشأن تراجع الجودة. وبعد مراجعة أولية تبين للإدارة أن المشكلة لا ترجع إلى مصدر واحد. ما الأداة الأنسب لتنظيم عملية تحديد الأسباب المحتملة للمشكلة بصورة شاملة؟",
+    "choicesAr": [
+      "مخطط عظمة السمكة.",
+      "المدرج التكراري.",
+      "مخطط باريتو.",
+      "خرائط الرقابة الإحصائية."
+    ],
+    "explanationAr": "يستخدم مخطط عظمة السمكة، المعروف أيضًا بمخطط السبب والأثر أو إيشيكاوا، في إدارة الجودة الشاملة وتحسين العمليات. وينظم الأسباب المحتملة والعلاقات بينها، ويساعد على توجيه التحقيق في الفجوة بين الأداء الفعلي والمطلوب. ولا يثبت الأسباب الجذرية دون التحقق بالأدلة."
   },
   {
     "unit": 20,
@@ -1240,7 +1312,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The histogram displays a continuous frequency distribution of\nthe independent variable in the form of a bar graph. The y axis\nis the quantity of purchase orders and the x axis is the\npurchase order amount. The histogram would best display the\nquantity of purchase orders by dollar value.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يحلل مدير المشتريات الجديد أوامر الشراء في المنشأة. أي التحليلات الآتية يناسب عرضه باستخدام مدرج تكراري؟",
+    "choicesAr": [
+      "أصدرت المنشأة 10,000 أمر شراء في العام الماضي. رتب عدد الأوامر لكل مورد ترتيبًا تنازليًا.",
+      "متوسط المدة من إصدار أمر الشراء إلى استلام البضاعة 7 أيام. راجع آخر 2,000 أمر شراء، وارسم المدة لكل أمر باستخدام 10 أيام حدًا أعلى للرقابة و4 أيام حدًا أدنى.",
+      "اشترت المنشأة مخزونًا بقيمة 27 مليون دولار أمريكي في العام الماضي. وزع عدد أوامر الشراء حسب فئات القيمة بفاصل 500 دولار أمريكي بين الفئات.",
+      "حدد ونظم أسباب خروج متوسط مدة تنفيذ أوامر الشراء عن حدود الرقابة البالغة 4-10 أيام."
+    ],
+    "explanationAr": "يعرض المدرج التكراري توزيع تكرارات القيم العددية ضمن فئات باستخدام أعمدة متجاورة. يمثل المحور y عدد أوامر الشراء، ويمثل المحور x فئات قيم الأوامر. ولذلك يناسب عرض عدد أوامر الشراء الواقع ضمن كل فئة من القيم النقدية."
   },
   {
     "unit": 20,
