@@ -87,3 +87,5 @@
 - [x] Unit 1 resumed Wave 1: seven cash flow Arabic drafts (§5 Q34–38/Q40/Q42), 155/217 complete Arabic, five additional source-review holds. See `docs/CMA_UNIT1_ARABIC_RESUME_WAVE1_2026-11-25.md`.
 
 - [x] Unit 1 resumed Wave 2: ten cash flow Arabic drafts (§5 Q43–52), **165/217 (76.0%)**. US GAAP context and note receivable loan assumption documented. Original-page validation pending; continue Q53. See `docs/CMA_UNIT1_ARABIC_RESUME_WAVE2_2026-11-25.md`.
+
+- [x] Unit 1 resumed Wave 3: nine cash flow Arabic drafts (§5 Q53/Q55–58/Q60–63), **174/217 (80.2%)**. Q54 historical excess tax benefit classification and Q59 malformed table held. Original-page verification pending; continue Q64. See `docs/CMA_UNIT1_ARABIC_RESUME_WAVE3_2026-11-25.md`.
