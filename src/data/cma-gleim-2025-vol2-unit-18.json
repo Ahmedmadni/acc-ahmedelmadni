@@ -2747,7 +2747,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A virus is a computer program that propagates itself from one\ncomputer to another without the user’s knowledge. Many\ntypes of viruses are malicious and can cause great\ninconvenience and even loss of data to the user. A common\nway of spreading a virus is by email attachments or\ndownloads from other networks.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "سعيًا للمحافظة على قدرتها التنافسية والاستجابة للعملاء، ربطت شركة شبكاتها الحاسوبية الداخلية بشبكات خارجية عبر حاسوب مضيف. أي مما يلي يعد خطرًا مهمًا لهذه الممارسة؟",
+    "choicesAr": [
+      "قد لا تخضع الملفات المرفوعة لفحوص التحقق المناسبة.",
+      "قد لا تكون البيانات المحملة إلى الحواسيب الشخصية حديثة بما يكفي.",
+      "قد تتسلل الفيروسات إلى نظام أو أكثر من أنظمة الشركة.",
+      "قد ترتفع تكاليف صيانة البرمجيات على الحواسيب الشخصية."
+    ],
+    "explanationAr": "يمكن أن تتكاثر الفيروسات الحاسوبية بإصابة البرامج أو الملفات المضيفة وتنتقل إلى أجهزة أخرى. وقد تتسبب البرمجيات الخبيثة في تعطيل العمل أو فقد البيانات. ومن مسارات الانتقال المحتملة مرفقات البريد الإلكتروني والملفات المحملة من الشبكات الأخرى. وتساعد الضوابط متعددة الطبقات، مثل تقييد الوصول وفحص الملفات وتحديث الأنظمة، على الحد من المخاطر."
   },
   {
     "unit": 18,
@@ -2764,7 +2772,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The effects of computer viruses range from harmless\nmessages to complete destruction of all data within the\nsystem. A symptom of a virus would be the unexplained loss\nof or change to data.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يعد مؤشرًا محتملًا على وجود فيروس حاسوبي؟",
+    "choicesAr": [
+      "ارتفاعات متكررة في الجهد الكهربائي تتسبب في تلف الأجهزة.",
+      "فقدان البيانات أو تغيرها دون تفسير.",
+      "عدم كفاية خطط النسخ الاحتياطي والتعافي والطوارئ.",
+      "انتهاكات عديدة لحقوق النشر بسبب الاستخدام غير المصرح به للبرمجيات المشتراة."
+    ],
+    "explanationAr": "تتراوح آثار الفيروسات الحاسوبية بين رسائل غير ضارة وتلف واسع للبيانات. وقد يكون فقد البيانات أو تغيرها دون تفسير مؤشرًا على إصابة محتملة، لكنه لا يثبت وجود فيروس؛ إذ قد تنتج الأعراض نفسها عن أعطال أو أخطاء أو أسباب أخرى تستلزم التحقيق."
   },
   {
     "unit": 18,
@@ -2781,7 +2797,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The internal auditor can examine whether terminated\nemployees continue to access the network by finding\nemployees who are listed on the database access lists but\nhave been removed from current payroll lists.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يقيّم المراجعون الداخليون في شركة ضوابط الوصول إلى الشبكة. ما أفضل مصدر للأدلة من بين البدائل للتحقق من عدم استمرار صلاحيات وصول الموظفين الذين انتهت خدماتهم؟",
+    "choicesAr": [
+      "مناقشة إجراءات إزالة كلمات المرور مع مسؤول قاعدة البيانات.",
+      "مراجعة برنامج التحكم في الوصول للتحقق من استخدام أحدث إصدار.",
+      "مراجعة سجلات الحاسوب للتحقق من محاولات الوصول.",
+      "مطابقة قوائم الرواتب الحالية مع قوائم صلاحيات الوصول إلى قاعدة البيانات."
+    ],
+    "explanationAr": "يمكن للمراجع مقارنة قوائم صلاحيات الوصول بقوائم الموظفين الحاليين لتحديد الحسابات التي بقيت مخولة رغم انتهاء خدمة أصحابها. ومن بين البدائل توفر المطابقة دليلًا مباشرًا على الصلاحيات القائمة، وليس مجرد محاولات استخدامها. عمليًا ينبغي الاعتماد أيضًا على سجل الموارد البشرية المعتمد للموظفين والمنتهية خدماتهم، وحصر صلاحيات الشبكة والتطبيقات والحسابات الخارجية، لأن كشف الرواتب وقائمة قاعدة البيانات وحدهما لا يغطيان جميع الحسابات."
   },
   {
     "unit": 18,
@@ -2798,7 +2822,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Preventive controls are designed to prevent errors before they\noccur. Detective and corrective controls attempt to identify and\ncorrect errors. Preventive controls are usually more cost\nbeneficial than detective or corrective controls. Allowing only\nauthorized software from known sources to be used on the\nsystem is a preventive measure. The authorized software from\nknown sources is expected to be free of viruses.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما أفضل إجراء وقائي من بين البدائل للحد من خطر الفيروسات الحاسوبية؟",
+    "choicesAr": [
+      "مقارنة البرمجيات المستخدمة بالإصدارات المعتمدة منها.",
+      "تشغيل برامج إزالة الفيروسات دوريًا على النظام.",
+      "السماح باستخدام البرمجيات المعتمدة من مصادر معروفة فقط.",
+      "إعداد خطة للتعافي من الإصابة بفيروس واختبارها."
+    ],
+    "explanationAr": "تهدف الرقابة الوقائية إلى الحد من وقوع الأخطاء أو الحوادث مسبقًا، بينما تستهدف الضوابط الكاشفة والتصحيحية اكتشافها ومعالجتها. ويعد قصر تشغيل البرمجيات على البرامج المعتمدة من مصادر معروفة تدبيرًا وقائيًا مناسبًا ضمن البدائل. لكن المصدر المعروف لا يضمن خلو البرنامج من البرمجيات الخبيثة، ولذلك ينبغي التحقق من سلامة البرامج وتحديثها وتطبيق ضوابط أمنية مكملة وفق المخاطر والتكلفة."
   },
   {
     "unit": 18,
@@ -2832,7 +2864,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Antivirus software designed to identify and remove known\nviruses is sometimes known as a vaccine. A vaccine works\nonly for known viruses and may not be effective for variants of\nthose viruses or new viruses.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ثبتت منشأة برامج مكافحة الفيروسات على جميع حواسيبها الشخصية. وصممت البرامج لمنع الإصابات الأولية وإيقاف محاولات التكاثر واكتشاف الإصابات بعد حدوثها وتحديد مكونات النظام المتأثرة وإزالة الفيروسات منها. ما الخطر الرئيس للاعتماد على هذه البرامج؟",
+    "choicesAr": [
+      "قد لا تكتشف بعض الفيروسات.",
+      "قد تزيد تعقيد تثبيت البرمجيات بدرجة كبيرة.",
+      "قد تتداخل مع عمليات النظام.",
+      "قد تستهلك قدرًا كبيرًا من موارد النظام."
+    ],
+    "explanationAr": "قد تعتمد بعض وسائل مكافحة الفيروسات على بصمات أو أنماط معروفة للكشف عن البرمجيات الخبيثة وإزالتها، مما يحد من قدرتها على اكتشاف الفيروسات الجديدة أو المتحورة. وتستخدم الحلول الحديثة أيضًا التحليل السلوكي ووسائل كشف أخرى، لكنها لا تضمن اكتشاف كل تهديد. لذلك يلزم تحديث الحماية والجمع بينها وبين ضوابط وقائية وكاشفة أخرى."
   },
   {
     "unit": 18,
@@ -2883,7 +2923,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Ransomware is a type of malware that threatens to publish the\nvictim’s data or prevents users from accessing their system or\npersonal files and demands ransom payment in order to\nregain access.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "حدد نوع الهجوم السيبراني الأكثر ارتباطًا بابتزاز فرد أو منشأة.",
+    "choicesAr": [
+      "برمجيات الفدية.",
+      "التصيد الاحتيالي.",
+      "قرصنة البرمجيات.",
+      "الاختراق."
+    ],
+    "explanationAr": "برمجيات الفدية نوع من البرمجيات الخبيثة قد يمنع الوصول إلى النظام أو الملفات أو يصاحبه تهديد بنشر البيانات المسروقة، ويطلب المهاجم فدية مقابل استعادة الوصول أو عدم نشر البيانات. ولا يضمن دفع الفدية استعادة البيانات."
   },
   {
     "unit": 18,
@@ -2900,7 +2948,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Processing controls provide reasonable assurance that (1) all\ndata submitted for processing are processed and (2) only\napproved data are processed. These controls are built into the\napplication code by programmers during the systems\ndevelopment process. A transaction log would keep track of all\ntransactions that occurred and make sure that they were\nproperly processed.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يُرجح تصنيفه ضمن ضوابط المعالجة في تطبيق محاسبي للمنشأة؟",
+    "choicesAr": [
+      "اختبار الصلاحية.",
+      "سجل المعاملات.",
+      "التخزين المؤقت في قائمة انتظار المعالجة (Spooling).",
+      "رقم التحقق."
+    ],
+    "explanationAr": "توفر ضوابط المعالجة تأكيدًا معقولًا بأن (1) جميع البيانات المقدمة للمعالجة تعالج، و(2) البيانات المعتمدة فقط تعالج. وتدمج هذه الضوابط في التطبيق خلال تطوير النظام. ويمكن استخدام سجل المعاملات لتتبع عمليات المعالجة والتحقق من اكتمالها وسلامتها. ولا يكفي وجود السجل وحده؛ إذ ينبغي مراجعته أو مطابقته وحمايته من التعديل غير المصرح به."
   },
   {
     "unit": 18,
@@ -2917,7 +2973,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Developing unique account numbers for each user will allow\nmanagement to restrict specific users to specific types of\naccess. Only authorized personnel will be able to view certain\ndata.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الوسائل الآتية هي الأنسب من بين البدائل لقصر الوصول إلى برامج الحاسوب وقواعد البيانات على الأشخاص المخولين؟",
+    "choicesAr": [
+      "إجراء تدريب على منع التسلل.",
+      "توفير بطاقات تعريف ملونة للموظفين.",
+      "استخدام أجهزة كشف إلكترونية.",
+      "تخصيص معرف حساب فريد لكل مستخدم."
+    ],
+    "explanationAr": "تتيح معرفات الحسابات الفريدة للإدارة ربط كل مستخدم بصلاحيات محددة وتمييز عملياته في سجلات التدقيق. لكن المعرف وحده لا يمنع الوصول غير المصرح به؛ بل يجب ربطه بمصادقة مناسبة وتفويض قائم على الدور أو الصلاحيات المطلوبة وإنفاذ تلك القيود فعليًا."
   },
   {
     "unit": 18,
