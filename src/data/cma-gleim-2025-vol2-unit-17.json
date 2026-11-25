@@ -1322,7 +1322,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The control environment is a set of standards, processes, and\nstructures that pervasively affects the system of internal\ncontrol. A principle that relates to the control environment is an\norganizational commitment to integrity and ethical values by\n(1) setting the tone at the top, (2) establishing standards of\nconduct, (3) evaluating the performance of individuals and\nteams based on the established standards of conduct, and (4)\ncorrecting deviations in a timely and consistent manner.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الخصائص الآتية المتعلقة ببيئة الرقابة في المنشأة يدل على الالتزام برقابة داخلية قوية على أفضل وجه؟",
+    "choicesAr": [
+      "تتحكم مجموعة صغيرة من كبار التنفيذيين في القرارات.",
+      "تُظهر الإدارة استقلالها عن مجلس الإدارة وتمارس الإشراف على الرقابة الداخلية.",
+      "يُقيّم أداء الأفراد والفرق بناءً على معايير السلوك المعتمدة.",
+      "يتألف المجلس من كبار المديرين السابقين للمنشأة ممن يتمتعون بالكفاءة والخبرة."
+    ],
+    "explanationAr": "بيئة الرقابة مجموعة من المعايير والعمليات والهياكل التي تؤثر في نظام الرقابة الداخلية ككل. ومن مبادئها التزام المنشأة بالنزاهة والقيم الأخلاقية من خلال: (1) ترسيخ القدوة من الإدارة العليا، (2) وضع معايير السلوك، (3) تقييم أداء الأفراد والفرق وفق المعايير المعتمدة، و(4) تصحيح الانحرافات في الوقت المناسب وبصورة متسقة."
   },
   {
     "unit": 17,
@@ -1339,7 +1347,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Flowcharts are graphical representations of the step-by-step\nprogression of transactions, including document (information)\npreparation, authorization, flow, storage, etc. Flowcharting\nallows the internal auditor to analyze a system and to identify\nthe strengths and weaknesses of the purported internal\ncontrols and the appropriate areas of audit emphasis.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي أساليب تقييم الرقابة الداخلية أثناء المراجعة الأولية يوفر للمراجع أفضل تصور مرئي للنظام ووسيلة لتحليل العمليات المعقدة؟",
+    "choicesAr": [
+      "أسلوب خرائط التدفق.",
+      "أسلوب الاستبيانات.",
+      "أسلوب المصفوفات.",
+      "أسلوب الوصف السردي التفصيلي."
+    ],
+    "explanationAr": "خرائط التدفق تمثيل رسومي لتتابع المعاملات خطوة بخطوة، بما في ذلك إعداد المستندات والمعلومات واعتمادها وتدفقها وحفظها. وتساعد المراجع الداخلي على تحليل النظام وتحديد نقاط القوة والضعف في الضوابط المفترضة والمجالات التي تستحق التركيز في المراجعة."
   },
   {
     "unit": 17,
@@ -1356,7 +1372,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Flowcharting is the representation of a process using pictorial\nsymbols. A document flowchart would be an effective way to\nvisualize how the document (a copy of a shipping order) flows\nthrough various departments.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يتولى موظفو إدخال البيانات تحويل جميع معلومات الشحن في المصنع إلى سجلات محوسبة. ويبدأ تدفق المعلومات بإرسال قسم الشحن نسخة من أمر الشحن إلى موظفي إدخال البيانات. ثم يمسح أحد موظفي الإدخال معلومات الأمر ضوئيًا إلى جهاز محمول لتخزين البيانات. ويطابق موظفو التحقق السجل المحوسب مع أوامر الشحن الأصلية. وبعد مراجعة دفعة من الملفات وتصحيحها عند الحاجة، تُحمّل المعلومات إلى الحاسوب المركزي للشركة في المقر الرئيسي. ما الوسيلة الأكثر فعالية لتصور هذه الأنشطة وفهمها؟",
+    "choicesAr": [
+      "خريطة تدفق البرنامج.",
+      "جدول القرارات.",
+      "خريطة تدفق المستندات.",
+      "مخطط جانت."
+    ],
+    "explanationAr": "تمثل خرائط التدفق العمليات باستخدام رموز تصويرية. وتناسب خريطة تدفق المستندات تصور انتقال المستند، وهو نسخة أمر الشحن في هذه الحالة، عبر الأقسام المختلفة."
   },
   {
     "unit": 17,
@@ -1373,7 +1397,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Management makes certain assertions about the financial\nstatements (existence, rights and obligations, etc.). The goal\nof an audit is to assess the fair presentation of the financial\nstatements. The auditor’s consideration of the client’s system\nof internal control is a means to that end.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما الاعتبار الأساسي للمراجع الخارجي عند تقييم سياسات وإجراءات هيكل الرقابة الداخلية للشركة؟ هل هذه السياسات والإجراءات:",
+    "choicesAr": [
+      "تمنع تجاوز الإدارة للضوابط.",
+      "ترتبط ببيئة الرقابة.",
+      "تعكس فلسفة الإدارة وأسلوبها التشغيلي.",
+      "تؤثر في إقرارات القوائم المالية."
+    ],
+    "explanationAr": "تقدم الإدارة إقرارات معينة بشأن القوائم المالية، مثل الوجود والحقوق والالتزامات. وتهدف المراجعة إلى تقييم العرض العادل للقوائم المالية. وتعد دراسة المراجع لنظام الرقابة الداخلية لدى العميل وسيلة لتحقيق هذا الهدف."
   },
   {
     "unit": 17,
@@ -1390,7 +1422,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The top-down or risk-based approach to the audit of internal\ncontrol over financial reporting directs audit resources toward\nthose areas of the financial statements where misstatements\nare more apt to occur. This approach requires auditors to\nidentify the key day-to-day risks faced by a business, consider\nthe impact these risks could have on the financial statements,\nand plan their audit procedures accordingly. The order in\nwhich such procedures take place is not prescribed.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "جميع العبارات الآتية بشأن المنهج من أعلى إلى أسفل، أو المنهج القائم على المخاطر، في مراجعة الرقابة الداخلية على التقارير المالية صحيحة ما عدا:",
+    "choicesAr": [
+      "يحدد الترتيب الذي ستُنفذ به إجراءات المراجعة.",
+      "يبدأ المنهج على مستوى القوائم المالية.",
+      "يركز على الضوابط على مستوى المنشأة قبل الانتقال إلى الحسابات والإفصاحات المهمة.",
+      "ينبغي أن يركز المراجع على الحسابات والإفصاحات التي تنطوي على احتمال معقول للتحريف."
+    ],
+    "explanationAr": "يوجه المنهج من أعلى إلى أسفل أو القائم على المخاطر موارد مراجعة الرقابة الداخلية على التقارير المالية إلى المجالات الأكثر عرضة للتحريف. ويتطلب تحديد المخاطر التشغيلية الرئيسية التي تواجه المنشأة والنظر في أثرها المحتمل على القوائم المالية وتخطيط إجراءات المراجعة وفقًا لذلك. ولا يفرض المنهج ترتيبًا زمنيًا محددًا لتنفيذ الإجراءات."
   },
   {
     "unit": 17,
@@ -1407,7 +1447,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The COSO control environment is a set of standards,\nprocesses, and structures that pervasively affects the system\nof internal control. This includes five principles: (1)\ncommitment to integrity and ethical values; (2) a board\nindependent from management that exercises oversight for\ninternal control; (3) management establishes, with board\noversight, structures, reporting lines, and appropriate\nauthorities and responsibilities; (4) a commitment to attract,\ndevelop, and retain competent individuals in alignment with\nobjectives; and (5) the organization holds individuals\naccountable for their internal control responsibilities. Thus,\nhiring competent people and providing them with training falls\nunder the control environment component of COSO’s internal\ncontrol framework.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "وضعت شركة سياسات تؤكد توظيف أشخاص أكفاء وتقديم التدريب المهني لهم. مع أي مكون من المكونات الخمسة الرئيسية لإطار COSO للرقابة الداخلية تتوافق هذه السياسات بدرجة أكبر؟",
+    "choicesAr": [
+      "تقييم المخاطر.",
+      "بيئة الرقابة.",
+      "المتابعة.",
+      "المعلومات والاتصال."
+    ],
+    "explanationAr": "بيئة الرقابة وفق COSO مجموعة من المعايير والعمليات والهياكل التي تؤثر في نظام الرقابة الداخلية ككل. وتتضمن خمسة مبادئ: (1) الالتزام بالنزاهة والقيم الأخلاقية؛ (2) استقلال مجلس الإدارة عن الإدارة وممارسته الإشراف على الرقابة الداخلية؛ (3) وضع الإدارة للهياكل وخطوط التقارير والصلاحيات والمسؤوليات الملائمة تحت إشراف المجلس؛ (4) الالتزام باستقطاب الأكفاء وتطويرهم والاحتفاظ بهم بما يتوافق مع الأهداف؛ (5) مساءلة الأفراد عن مسؤولياتهم الرقابية. لذلك يقع توظيف الأكفاء وتدريبهم ضمن بيئة الرقابة."
   },
   {
     "unit": 17,
@@ -1441,7 +1489,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Audit risk is the risk that the external auditor may unknowingly\nfail to modify his or her opinion on financial statements that\nare materially misstated. Its elements are control risk, inherent\nrisk, and detection risk. For internal auditing, the overall audit\nrisk extends not only to financial statements but also to\nunwitting failure to uncover material errors or weaknesses in\nthe operations audited. There may be several different\nreasons for the failure, and these may be in risk categories\nsuch as sampling risk, detection risk, or control risk.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عند تنفيذ مراجعة داخلية، ما أفضل وصف لمخاطر المراجعة في سياق هذه المسألة؟ احتمال أن المراجع:",
+    "choicesAr": [
+      "قد لا يختار المستندات التي تتضمن أخطاء ضمن الفحص.",
+      "قد لا يستطيع تقييم نشاط بشكل سليم بسبب ضعف ضوابطه المحاسبية الداخلية.",
+      "قد يخفق في اكتشاف خطأ أو ضعف مهم أثناء الفحص.",
+      "قد لا يمتلك الخبرة الكافية لمراجعة نشاط معين."
+    ],
+    "explanationAr": "في مراجعة القوائم المالية تتمثل مخاطر المراجعة في إبداء المراجع الخارجي رأيًا غير مناسب دون علمه بوجود تحريف جوهري، وترتبط بالمخاطر الملازمة ومخاطر الرقابة ومخاطر عدم الاكتشاف. وفي سياق المراجعة الداخلية الوارد في السؤال يمتد المفهوم إلى الإخفاق غير المقصود في اكتشاف أخطاء أو نقاط ضعف مهمة في العمليات محل المراجعة. وقد يرجع ذلك إلى أسباب متعددة، مثل مخاطر المعاينة أو عدم الاكتشاف أو الرقابة."
   },
   {
     "unit": 17,
@@ -1458,7 +1514,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Internal auditors determine whether senior management and\nthe board have a clear understanding that information\nreliability and integrity is a management responsibility.\nInformation reliability and integrity includes accuracy,\ncompleteness, and security.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "من يتحمل المسؤولية عن موثوقية وسلامة جميع المعلومات المهمة للمنشأة بغض النظر عن وسائط تخزينها؟",
+    "choicesAr": [
+      "المساهمون.",
+      "قسم تقنية المعلومات.",
+      "الإدارة.",
+      "جميع الموظفين."
+    ],
+    "explanationAr": "يتحقق المراجعون الداخليون من إدراك الإدارة العليا ومجلس الإدارة أن موثوقية المعلومات وسلامتها مسؤولية إدارية. وتشمل هذه المسؤولية دقة المعلومات واكتمالها وأمنها، حتى عند تفويض المهام التنفيذية إلى قسم تقنية المعلومات أو الموظفين."
   },
   {
     "unit": 17,
@@ -1475,7 +1539,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Five principles relate to the control environment. The\nprinciples are as follows: (1) the organization demonstrates a\ncommitment to integrity and ethical values; (2) the board\ndemonstrates independence from management and exercises\noversight of internal control; (3) management establishes\nstructures, reporting lines, and authorities and responsibilities;\n(4) the organization demonstrates a commitment to attract,\ndevelop, and retain competent individuals in alignment with\nobjectives; and (5) the organization holds individuals\naccountable for their internal control responsibilities.\nTherefore, integrity and ethical values, assignment of\nauthority, and human resource practices are factors\nconsidered in the control environment.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العوامل الآتية تدخل ضمن بيئة الرقابة في المنشأة؟",
+    "choicesAr": [
+      "الهيكل التنظيمي وفلسفة الإدارة والمتابعة.",
+      "النزاهة والقيم الأخلاقية وتحديد الصلاحيات وممارسات الموارد البشرية.",
+      "كفاءة العاملين والفصل بين الواجبات وتقييم مخاطر الغش.",
+      "تقييم المخاطر وتحديد المسؤولية وممارسات الموارد البشرية."
+    ],
+    "explanationAr": "ترتبط خمسة مبادئ ببيئة الرقابة: (1) إظهار المنشأة التزامها بالنزاهة والقيم الأخلاقية؛ (2) استقلال مجلس الإدارة عن الإدارة وممارسته الإشراف على الرقابة الداخلية؛ (3) وضع الإدارة للهياكل وخطوط التقارير والصلاحيات والمسؤوليات؛ (4) الالتزام باستقطاب الأكفاء وتطويرهم والاحتفاظ بهم بما يتوافق مع الأهداف؛ (5) مساءلة الأفراد عن مسؤوليات الرقابة الداخلية. لذلك تعد النزاهة والقيم الأخلاقية وتحديد الصلاحيات وممارسات الموارد البشرية من عوامل بيئة الرقابة."
   },
   {
     "unit": 17,
@@ -1492,7 +1564,15 @@
     ],
     "answerIndex": 2,
     "explanation": "According to the COSO model for internal control, the control\nenvironment reflects the attitude and actions of the board and\nmanagement regarding the significance of control within the\norganization.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مكونات الرقابة يعكس توجهات مجلس الإدارة والإدارة وتصرفاتهما بشأن أهمية الرقابة داخل المنشأة؟",
+    "choicesAr": [
+      "تقييم المخاطر.",
+      "الأنشطة الرقابية.",
+      "بيئة الرقابة.",
+      "المتابعة."
+    ],
+    "explanationAr": "وفق نموذج COSO للرقابة الداخلية، تعكس بيئة الرقابة توجهات مجلس الإدارة والإدارة وتصرفاتهما تجاه أهمية الرقابة داخل المنشأة."
   },
   {
     "unit": 17,
@@ -1509,7 +1589,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The COSO model for internal control describes control\nactivities as the policies and procedures helping to ensure that\nmanagement directives are executed and actions are taken to\naddress risks to achievement of objectives.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما أفضل وصف للسياسات والإجراءات التي تساعد على ضمان تنفيذ توجيهات الإدارة واتخاذ إجراءات لمعالجة المخاطر التي تهدد تحقيق الأهداف؟",
+    "choicesAr": [
+      "عمليات تقييم المخاطر.",
+      "بيئات الرقابة.",
+      "الأنشطة الرقابية.",
+      "أنشطة المتابعة."
+    ],
+    "explanationAr": "يصف نموذج COSO للرقابة الداخلية الأنشطة الرقابية بأنها السياسات والإجراءات التي تساعد على ضمان تنفيذ توجيهات الإدارة واتخاذ إجراءات لمعالجة المخاطر التي تهدد تحقيق الأهداف."
   },
   {
     "unit": 17,
@@ -1543,7 +1631,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Monitoring is a process that assesses the quality of internal\ncontrol performance over time to ensure that controls continue\nto meet the needs of the organization. The organization\nevaluates and communicates control deficiencies based on\nwhat is found when monitoring. Monitoring should be used to\nensure internal controls are designed and operating\neffectively, not as a tool to assign blame to management.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات الآتية المتعلقة بالرقابة الداخلية غير صحيحة؟",
+    "choicesAr": [
+      "بيئة الرقابة أساس جميع المكونات الأخرى للرقابة الداخلية، وتوفر الانضباط والهيكل.",
+      "الأنشطة الرقابية هي السياسات والإجراءات التي تساعد على ضمان تنفيذ توجيهات الإدارة.",
+      "المتابعة عملية لمعاقبة المديرين على أوجه الإخفاق في الرقابة الداخلية.",
+      "تقييم المخاطر هو تحديد المنشأة للمخاطر المرتبطة بتحقيق أهدافها وتحليلها."
+    ],
+    "explanationAr": "المتابعة عملية لتقييم جودة أداء الرقابة الداخلية بمرور الوقت للتأكد من استمرار ملاءمتها لاحتياجات المنشأة. وتقيّم المنشأة أوجه القصور الرقابي وتبلغ عنها بناءً على نتائج المتابعة. وتهدف المتابعة إلى التأكد من فعالية تصميم الضوابط وتشغيلها وتصحيح أوجه القصور، لا إلى إلقاء اللوم على الإدارة."
   },
   {
     "unit": 17,
@@ -1560,7 +1656,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Although the need for attorneys itself does not raise any red\nflags, the fact that not all committees have access to attorneys\nmay indicate a reason for concern. Such a policy may grant\nthose committees with access an unintended amount of\nauthority or power, which may lead to fraudulent acts.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي النتائج الآتية التي توصل إليها المراجع يُرجح أن تكون إشارة تحذير بشأن بيئة الرقابة الداخلية للشركة؟",
+    "choicesAr": [
+      "لدى الشركة لجنة مراجعة مستقلة قائمة.",
+      "يقتصر الوصول إلى المحامين الخارجيين على لجان محددة من مجلس الإدارة.",
+      "منصب الرئيس التنفيذي منفصل عن منصب رئيس مجلس الإدارة.",
+      "لا تختار لجنة الترشيحات التابعة للمجلس إلا أعضاء مستقلين."
+    ],
+    "explanationAr": "الحاجة إلى المحامين ليست بذاتها إشارة تحذير، لكن قصر الوصول إليهم على لجان محددة قد يدعو إلى دراسة توزيع الصلاحيات واستقلال الإشراف، إذ قد يمنح تلك اللجان سلطة غير مقصودة. وهذه إشارة تستدعي التحقق من أسباب السياسة وترتيبات الوصول إلى المشورة القانونية، وليست دليلًا قائمًا بذاته على الغش."
   },
   {
     "unit": 17,
