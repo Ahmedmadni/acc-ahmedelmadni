@@ -2446,7 +2446,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Segregation of duties is important in any environment in which\ncontrol is a concern. In particular, programmers and computer\noperators should be kept separate because programmers\nhave the ability to modify programs, files, and controls. Thus,\nthey should not be allowed to also operate the computer.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في بيئة نظم المعلومات التي تستخدم الحواسيب المركزية، بين أي الوظيفتين الآتيتين يكون الفصل بين الواجبات أكثر أهمية؟",
+    "choicesAr": [
+      "المبرمجون وقادة المشاريع.",
+      "المبرمجون ومحللو النظم.",
+      "المبرمجون والمستخدمون.",
+      "المبرمجون ومشغلو الحاسوب."
+    ],
+    "explanationAr": "الفصل بين الواجبات مهم في البيئات التي تتطلب رقابة. وفي نموذج الحاسوب المركزي ينبغي فصل المبرمجين عن مشغلي الحاسوب لأن المبرمجين يستطيعون تعديل البرامج والملفات والضوابط. ويحد فصل تطوير البرامج عن تشغيلها في بيئة الإنتاج من التغييرات غير المعتمدة."
   },
   {
     "unit": 18,
@@ -2463,7 +2471,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Logical controls are used to determine whether a code\nnumber is compatible with the use to be made of the\ninformation requested. For example, a user may be authorized\nto enter only certain kinds of transaction data, to gain access\nonly to certain information, to have access to but not update\nfiles, or to use the system only during certain hours.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم شركة نظامًا حاسوبيًا متصلًا بأجهزة طرفية في جميع الأقسام التشغيلية للاستعلام عن البيانات وتحديثها. ويحتاج كثير من الموظفين إلى استخدام هذه الأجهزة. ما الضابط الذي ينبغي تطبيقه لمنع الموظف من إجراء تغيير غير مصرح به في سجلات لا تتعلق بوظيفته؟",
+    "choicesAr": [
+      "تقييد الوصول المادي إلى الأجهزة الطرفية.",
+      "إنشاء رموز مستخدمين وكلمات مرور.",
+      "استخدام اختبارات صلاحية البيانات.",
+      "تطبيق ضوابط الوصول المنطقي على المعاملات أو الاستعلامات التي يدخلها المستخدم."
+    ],
+    "explanationAr": "تحدد ضوابط الوصول المنطقي مدى توافق صلاحيات هوية المستخدم مع الاستخدام المطلوب. فقد يسمح للمستخدم بإدخال أنواع محددة من المعاملات أو الوصول إلى معلومات معينة أو قراءة ملفات دون تحديثها أو استخدام النظام خلال أوقات محددة. وتختلف المصادقة على الهوية عن التفويض بتنفيذ العمليات وفق مبدأ الحد الأدنى من الصلاحيات."
   },
   {
     "unit": 18,
@@ -2480,7 +2496,15 @@
     ],
     "answerIndex": 1,
     "explanation": "In validity tests, values entered into the system are compared\nagainst master files of valid data. In this case, a master file of\nall zip codes recognized in the U.S. is held in memory and\neach time a clerk enters data in the zip code field, the clerk’s\nentry is compared to the list of valid values. If the zip code\nentered does not match any entry in the master file, data entry\nis halted and the clerk is advised to reenter the data.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أدخل موظف رمزًا بريديًا غير موجود عند تسجيل عنوان الفوترة لعميل جديد في قاعدة بيانات الشركة المحوسبة، فأعيدت فاتورة الشهر الأول إلى الشركة. أي الضوابط الآتية يُرجح أن يكشف الخطأ عند الإدخال؟",
+    "choicesAr": [
+      "اختبار الحدود.",
+      "اختبار الصلاحية.",
+      "اختبار التكافؤ.",
+      "اختبار عدد السجلات."
+    ],
+    "explanationAr": "تقارن اختبارات الصلاحية القيم المدخلة بالملفات المرجعية التي تحتوي على القيم المعتمدة. وفي هذه المسألة يقارن النظام الرمز البريدي المدخل بقائمة الرموز البريدية الصحيحة في الولايات المتحدة. وإذا لم يوجد تطابق، يرفض النظام الإدخال ويطلب تصحيحه. ويلزم تحديث القائمة المرجعية، كما أن وجود الرمز في القائمة لا يثبت وحده صحة عنوان العميل."
   },
   {
     "unit": 18,
@@ -2497,7 +2521,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Segregation of duties is a general control that is vital in a\ncomputerized environment. Some segregation of duties\ncommon in noncomputerized environments may not be\nfeasible in a computer environment. However, certain tasks\nshould not be combined. Systems analysts, for example,\nshould be separate from programmers and computer\noperators. Programmers design, write, test, and document\nspecific programs required by the system developed by the\nanalysts. Both programmers and analysts may be able to\nmodify programs, data files, and controls and should therefore\nhave no access to computer equipment and files or to copies\nof programs used in production. Operators should not be\nassigned programming duties or responsibility for systems\ndesign and should have no opportunity to make changes in\nprograms and systems.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عند تنظيم وظيفة نظم المعلومات، أي أوجه الفصل بين الواجبات الآتية هو الأهم؟",
+    "choicesAr": [
+      "عدم السماح لأمين مكتبة البيانات بالمساعدة في عمليات معالجة البيانات.",
+      "ضمان عدم وصول المسؤولين عن برمجة النظام إلى عمليات معالجة البيانات في بيئة الإنتاج دون ضوابط مستقلة.",
+      "وجود مسؤول مستقل عن المعلومات على أعلى مستوى تنظيمي خارج الوظيفة المحاسبية.",
+      "تخصيص مبرمجين لصيانة البرامج الخدمية يختلفون عن مبرمجي التطبيقات."
+    ],
+    "explanationAr": "الفصل بين الواجبات ضابط عام مهم في البيئة المحوسبة. وقد يتعذر تطبيق بعض صور الفصل التقليدية، لكن ينبغي فصل المهام غير المتوافقة. وفي النموذج التقليدي يفصل محللو النظم عن المبرمجين والمشغلين؛ ويصمم المبرمجون البرامج ويكتبونها ويختبرونها ويوثقونها. ولأن المطورين والمحللين قد يتمكنون من تعديل البرامج والبيانات والضوابط، ينبغي منع الوصول غير الخاضع للرقابة إلى برامج وبيانات الإنتاج. ولا ينبغي أن يتمكن المشغلون من تغيير البرامج والنظم دون اعتماد. وفي البيئات الحديثة يحقق الهدف بفصل الصلاحيات والمراجعة المستقلة والنشر المعتمد."
   },
   {
     "unit": 18,
@@ -2514,7 +2546,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Check digits, limit checks, field checks, and sign tests are all\nexamples of input controls.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "من الضوابط المهمة في نظم المعلومات المحاسبية الآلية أرقام التحقق واختبارات الحدود وفحوص الحقول واختبارات الإشارة. كيف تصنف هذه الضوابط؟",
+    "choicesAr": [
+      "ضوابط التحقق من المجاميع الرقابية.",
+      "جمع أرقام التعريف (Hash Totals).",
+      "ضوابط التحقق من صلاحية الوصول إلى البيانات.",
+      "ضوابط المدخلات."
+    ],
+    "explanationAr": "تعد أرقام التحقق واختبارات الحدود وفحوص الحقول واختبارات الإشارة أمثلة لضوابط المدخلات التي تتحقق من صحة البيانات قبل قبولها للمعالجة."
   },
   {
     "unit": 18,
@@ -2531,7 +2571,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Viruses are computer programs that propagate themselves\nfrom one computer to another without the user’s knowledge.\nTrojan horses are voluntarily installed on a computer by the\nuser because they are masquerading as programs the user\nwants. The Trojan horse contains codes that allow a hacker to\nlater take over the computer or retrieve sensitive data from the\ncomputer.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يختلف الفيروس الحاسوبي عن برنامج حصان طروادة في أن الفيروس يستطيع:",
+    "choicesAr": [
+      "إفساد البيانات.",
+      "تعديل تعليمات البرمجة.",
+      "نسخ نفسه.",
+      "حذف الملفات القابلة للتنفيذ."
+    ],
+    "explanationAr": "الخاصية المميزة للفيروس الحاسوبي هي قدرته على نسخ نفسه بإصابة ملفات أو برامج مضيفة، وقد ينتشر إلى أجهزة أخرى. أما حصان طروادة فيتخفى في هيئة برنامج يبدو مشروعًا أو مرغوبًا وقد ينفذ وظائف ضارة مثل الوصول غير المصرح به إلى البيانات. ولا يشترط أن يثبت المستخدم البرنامج عمدًا، كما قد تجمع البرمجيات الخبيثة بين أكثر من سلوك."
   },
   {
     "unit": 18,
@@ -2548,7 +2596,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The payroll distribution log containing a schedule of when\nchecks and reports are prepared with the names of individuals\nwho are to receive the report is an output control. Receiving\nchecks and reports are outputs, so the schedule of the\nreceipts of the reports is an output control.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الإجراءات الآتية يعمل أساسًا كضابط مخرجات في معالجة رواتب الشركة؟",
+    "choicesAr": [
+      "تخصيص رقم فريد لكل دفعة من سجلات الوقت وتسجيله في سجل الدفعات.",
+      "إجراء تطبيق الرواتب اختبار حدود لإخضاع أي معاملة تتضمن أكثر من 80 ساعة عمل للمراجعة قبل المعالجة.",
+      "تخصيص تسميات داخلية وخارجية لملفات الرواتب يفحصها التطبيق قبل المعالجة.",
+      "احتواء سجل توزيع الرواتب على جدول مواعيد إعداد الشيكات والتقارير وأسماء الأشخاص المخولين باستلامها."
+    ],
+    "explanationAr": "يعد سجل توزيع الرواتب الذي يحدد مواعيد إعداد الشيكات والتقارير وأسماء مستلميها ضابط مخرجات، لأن الشيكات والتقارير نواتج للمعالجة، ويساعد السجل على تنظيم تسليمها إلى الأشخاص المخولين والتحقق من التوزيع."
   },
   {
     "unit": 18,
@@ -2565,7 +2621,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Physical controls limit physical access and environmental\ndamage to computer equipment and important documents. In\norder to protect access to hardware, the director should\nconsider limitation of physical access, since hardware is a\ntangible object.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يراجع مدير مركز بيانات الشركة الضوابط المتعلقة بالوصول إلى الأجهزة في مركز البيانات الواقع خارج المقر. أي الضوابط الآتية ينبغي النظر فيه أولًا لحماية الوصول إلى الأجهزة؟",
+    "choicesAr": [
+      "تقييد الوصول المادي.",
+      "ضوابط الوصول المنطقي.",
+      "الضوابط التطبيقية.",
+      "ضوابط المصادقة."
+    ],
+    "explanationAr": "تحد الضوابط المادية من الوصول الفعلي إلى أجهزة الحاسوب والمستندات المهمة ومن الأضرار البيئية. وبما أن الأجهزة أصول ملموسة، فإن تقييد الوصول المادي هو الضابط الأكثر مباشرة ضمن البدائل. ويمكن أن تدعم المصادقة على الهوية تنفيذ ضوابط الدخول المادي."
   },
   {
     "unit": 18,
@@ -2582,7 +2646,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Input controls provide reasonable assurance that data\nsubmitted for processing are (1) authorized, (2) complete, and\n(3) accurate. If the company had an input control that looked\nfor unreasonable amounts, it would have flagged the 400 as\nan unreasonable number before the data were processed into\nthe system. The input control would not have allowed this\namount.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "راجع محاسب الرواتب أحدث سجلات الرواتب واكتشف أن الشركة دفعت لأحد الموظفين عن 400 ساعة بدلًا من 40 ساعة عن طريق الخطأ. ما أفضل ضابط من البدائل لمنع خطأ مماثل؟",
+    "choicesAr": [
+      "ضابط معالجة يبرز المبلغ المرتفع بصورة غير معتادة.",
+      "ضابط معاملات ينشئ تقرير أخطاء.",
+      "ضابط مدخلات يتحقق من القيم غير المعقولة.",
+      "ضابط مخرجات يمنع طباعة شيك يتجاوز مبلغًا معينًا."
+    ],
+    "explanationAr": "توفر ضوابط المدخلات تأكيدًا معقولًا بأن البيانات المقدمة للمعالجة (1) معتمدة، (2) كاملة، (3) دقيقة. ولو استخدمت الشركة ضابط مدخلات يتحقق من القيم غير المعقولة، لأمكن للنظام الإشارة إلى 400 بوصفها قيمة غير معقولة قبل المعالجة ومنع قبولها وفق الحد المقرر، أو إحالتها لاعتماد استثناء مستقل."
   },
   {
     "unit": 18,
@@ -2633,7 +2705,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Physical controls limit physical access and environmental\ndamage to computer equipment and important documents.\nPhysical access can be accomplished through the use of a\nbiometric identification system.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أنهت شركة إنشاء منشأة حاسوبية جديدة. أي الإجراءات الآتية هو الأكثر مباشرة من بين البدائل للحد من الدخول غير المصرح به إلى المنشأة؟",
+    "choicesAr": [
+      "تشفير البيانات.",
+      "برامج التحكم في الوصول المنطقي.",
+      "ضوابط المدخلات.",
+      "نظام التحقق من الهوية بالقياسات الحيوية."
+    ],
+    "explanationAr": "تحد الضوابط المادية من الوصول الفعلي والأضرار البيئية التي قد تلحق بالأجهزة والمستندات المهمة. ويمكن استخدام القياسات الحيوية للتحقق من هوية الداخل ضمن نظام تقييد الدخول المادي. وتظل فعالية هذا النظام مرتبطة بتصميمه وضوابطه المكملة وحماية بيانات القياسات الحيوية."
   },
   {
     "unit": 18,
