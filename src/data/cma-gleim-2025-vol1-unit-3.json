@@ -1718,7 +1718,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Under the revaluation model, if the fair value of an item of\nproperty, plant, and equipment can be reliably measured, it\nmust be carried subsequent to initial recognition at a revalued\namount. This amount is fair value at the date of the revaluation\nminus any subsequent accumulated depreciation and\nimpairment losses. The revaluation model is permitted by\nIFRS, not U.S. GAAP.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "وفق IFRS ونموذج إعادة التقييم، بأي مبلغ يقاس بند من العقارات والآلات والمعدات؟",
+    "choicesAr": [
+      "التكلفة ناقص مجمع الإهلاك.",
+      "التكلفة ناقص القيمة المتبقية.",
+      "القيمة العادلة ناقص أي مجمع إهلاك وخسائر انخفاض قيمة لاحقة.",
+      "الأقل من التكلفة وصافي القيمة القابلة للتحقق."
+    ],
+    "explanationAr": "وفق نموذج إعادة التقييم، إذا أمكن قياس القيمة العادلة للأصل بموثوقية، يعرض بعد الاعتراف الأولي بمبلغ إعادة التقييم، وهو القيمة العادلة في تاريخ إعادة التقييم مطروحًا منها مجمع الإهلاك وخسائر انخفاض القيمة اللاحقة. وتسمح IFRS بهذا النموذج بخلاف القاعدة العامة للمعايير الأمريكية."
   },
   {
     "unit": 3,
@@ -1735,7 +1743,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The amount to be recorded as the acquisition cost of a\nmachine includes all costs necessary to prepare it for its\nintended use. Thus, the cost of a machine used in the\nmanufacturing operations of a company includes the cost of\ntesting and preparing the machine for use and the shipping\ncosts. The acquisition cost is $155,000 ($125,000 + $20,000 +\n$10,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "اشترت شركة آلة لعمليات التصنيع بتكلفة $125,000 ودفعت شحنًا $20,000، وأنفقت $10,000 إضافية لاختبار الآلة وتجهيزها للاستخدام. ما تكلفة الآلة المسجلة؟",
+    "choicesAr": [
+      "$155,000",
+      "$145,000",
+      "$135,000",
+      "$125,000"
+    ],
+    "explanationAr": "تشمل تكلفة اقتناء الآلة جميع التكاليف الضرورية لجعلها جاهزة للاستخدام المقصود، ومنها الاختبار والتجهيز والشحن. وتبلغ تكلفة الاقتناء $155,000 ($125,000 + $20,000 + $10,000)."
   },
   {
     "unit": 3,
@@ -1752,7 +1768,15 @@
     ],
     "answerIndex": 1,
     "explanation": "An entity may choose either the cost model or the fair value\nmodel as its accounting policy. But it must apply that policy to\nall of its investment property. Under the cost model,\ninvestment property is carried at its cost minus any\naccumulated depreciation and impairment losses. Under the\nfair value model, investment property is measured at fair\nvalue, and gain or loss from a change in its fair value is\nrecognized immediately in profit or loss.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "وفق IFRS، أي سياسة محاسبية يمكن للمنشأة تطبيقها على العقارات الاستثمارية بعد الاعتراف الأولي؟",
+    "choicesAr": [
+      "نموذج التكلفة أو إعادة التقييم.",
+      "نموذج التكلفة أو القيمة العادلة.",
+      "نموذج القيمة العادلة فقط.",
+      "نموذج القيمة العادلة أو إعادة التقييم."
+    ],
+    "explanationAr": "يجوز للمنشأة اختيار نموذج التكلفة أو القيمة العادلة سياسةً محاسبية، وتطبق السياسة بصفة عامة على عقاراتها الاستثمارية مع مراعاة الاستثناءات المحددة. ووفق نموذج التكلفة تعرض العقارات بالتكلفة ناقص مجمع الإهلاك وخسائر الانخفاض. ووفق نموذج القيمة العادلة تقاس بالقيمة العادلة وتثبت مكاسب أو خسائر تغيرها فورًا في الربح أو الخسارة."
   },
   {
     "unit": 3,
@@ -1769,7 +1793,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A betterment (improvement) occurs when a replacement asset\nis substituted for an existing asset, and the result is increased\nproductivity, capacity, or expected useful life. If the\nimprovement benefits future periods, it should be capitalized.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "هل تعد نفقة تركيب نظام كهربائي محسن نفقة رأسمالية أم إيرادية؟\nنفقة رأسمالية | نفقة إيرادية",
+    "choicesAr": [
+      "لا | نعم",
+      "لا | لا",
+      "نعم | لا",
+      "نعم | نعم"
+    ],
+    "explanationAr": "يحدث التحسين عندما يحل أصل بديل محل أصل قائم وينتج عن ذلك زيادة الإنتاجية أو الطاقة أو العمر الإنتاجي المتوقع. فإذا حقق التحسين منافع للفترات المستقبلية واستوفى شروط الاعتراف، ترسمل تكلفته."
   },
   {
     "unit": 3,
@@ -1786,7 +1818,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The assets purchased that are capitalized as property, plant,\nand equipment (PPE) are the computer equipment and\nautomobile. Therefore, PPE is $310,000 ($280,000 +\n$30,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بدأت منشأة العمل في 1 يناير وأنفقت $900,000 في الشهر الأول على البنود التالية:\nحملة إعلانات يناير: $40,000\nمعدات حاسوب: 280,000\nوثيقة تأمين لمدة 12 شهرًا: 120,000\nإيجار مبنى يناير: 60,000\nرواتب يناير: 340,000\nمستلزمات مكتبية: 10,000\nسيارة: 30,000\nمرافق يناير: 20,000\nالإجمالي: $900,000\nما إجمالي المدفوعات النقدية التي ترسمل ضمن العقارات والآلات والمعدات؟",
+    "choicesAr": [
+      "$80,000",
+      "$310,000",
+      "$370,000",
+      "$440,000"
+    ],
+    "explanationAr": "الأصول المشتراة التي ترسمل ضمن العقارات والآلات والمعدات هي معدات الحاسوب والسيارة. لذلك تبلغ الأصول $310,000 ($280,000 + $30,000)."
   },
   {
     "unit": 3,
@@ -1803,7 +1843,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Depreciation is the process of systematically and rationally\nallocating the depreciable cost of a tangible capital asset over\nits expected useful life. Estimated useful life is an estimated\nperiod over which services or economic benefits are expected\nto be obtained by the asset. Thus, the amusement park should\ndepreciate its asset over a 15-year life since that is the period\nover which it is expected to be used.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ركبت مدينة ملاهٍ Majesty لعبة جديدة. ورغم أن متوسط عمرها 40 سنة، تتوقع الشركة استمرار شعبيتها 15 سنة، وبعدها ستفكك وتستبدل بلعبة أخرى. ويتوقف الإقبال على الاقتصاد المحلي الذي يصعب التنبؤ به. ما طريقة الإهلاك الأنسب؟",
+    "choicesAr": [
+      "الرصيد المتناقص.",
+      "القسط الثابت بعمر 15 سنة.",
+      "القسط الثابت بعمر 40 سنة.",
+      "وحدات الإنتاج."
+    ],
+    "explanationAr": "الإهلاك تخصيص منتظم ومنطقي للتكلفة القابلة للإهلاك على العمر الإنتاجي المتوقع للأصل الملموس. ويمثل العمر الإنتاجي الفترة المتوقع الحصول خلالها على الخدمات أو المنافع الاقتصادية. لذا تهلك مدينة الملاهي الأصل على مدى 15 سنة، وهي فترة الاستخدام المتوقعة، ويكون القسط الثابت مناسبًا عند عدم إمكان تقدير نمط آخر بموثوقية."
   },
   {
     "unit": 3,
@@ -1820,7 +1868,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The costs needed to bring the asset to the condition and\nlocation necessary for its intended use must be capitalized to\nthe initial cost of the asset. Therefore, freight-in cost\nassociated with the purchase of machinery should be\ncapitalized, and interest costs incurred from a loan taken to\nfinance the purchase should be expensed as incurred.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "اشترت منشأة آلات جديدة من مورد قبل نهاية السنة ودفعت تكاليف الشحن، واقترضت من بنك لتمويل الشراء. ما المعالجة المحاسبية الصحيحة لتكاليف الشحن والفوائد المتعلقة بالشراء؟",
+    "choicesAr": [
+      "تحميل الشحن والفوائد فورًا على المصروفات.",
+      "رسملة الشحن والفوائد ضمن العقارات والآلات والمعدات.",
+      "رسملة الفوائد وتحميل الشحن فورًا على المصروفات.",
+      "رسملة الشحن وتحميل الفوائد فورًا على المصروفات."
+    ],
+    "explanationAr": "ترسمل التكاليف اللازمة لجعل الأصل في الموقع والحالة الضروريين لاستخدامه المقصود. لذلك ترسمل تكاليف شحن الآلات، وتحمل فوائد القرض على المصروفات عند تكبدها بافتراض أن الآلات المشتراة جاهزة للاستخدام ولا تمثل أصلًا مؤهلًا لرسملة تكاليف الاقتراض."
   },
   {
     "unit": 3,
@@ -1837,7 +1893,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The capitalized costs of the building are the costs that are\nnecessary for the purchase or construction of the building and\nthat will result in future economic benefits. These include the\npurchase price, the costs of renovating and preparing the\nstructure for its expected use, the expenses of excavating the\nsite to build the foundation, the cost of construction, and the\ninterest costs incurred during construction of a building for the\nentity’s own use. The purchase price of the land, the cost of\nrazing the old building, and the title insurance and legal fees to\npurchase the land are capitalized as the cost of the land, not\nthe building. The initial cost of the building is $1,945,000\n($1,850,000 new building construction costs + $95,000\narchitect’s fees).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "اشترت Pine أرضًا بمبلغ $450,000 لتكون موقع مصنع. وهدم مبنى قائم قبل بدء الإنشاء. المعلومات الإضافية:\nتكلفة هدم المبنى القديم: $60,000\nتأمين الملكية والأتعاب القانونية لشراء الأرض: 30,000\nأتعاب المعماري: 95,000\nتكلفة بناء المبنى الجديد: 1,850,000\nما التكلفة التي ترسملها Pine للمبنى المكتمل؟",
+    "choicesAr": [
+      "$2,005,000",
+      "$1,975,000",
+      "$1,945,000",
+      "$1,910,000"
+    ],
+    "explanationAr": "تشمل تكلفة المبنى التكاليف اللازمة لشرائه أو تشييده التي تحقق منافع مستقبلية، ومنها سعر الشراء، وتجهيز الهيكل، وحفر الأساسات، والإنشاء، والفوائد المؤهلة أثناء الإنشاء للاستخدام الذاتي. وفي سياق السؤال ترسمل تكلفة شراء الأرض وهدم المبنى القديم وتأمين الملكية وأتعاب شراء الأرض ضمن الأرض لا المبنى. وتبلغ التكلفة الأولية للمبنى $1,945,000 ($1,850,000 إنشاء + $95,000 أتعاب المعماري)."
   },
   {
     "unit": 3,
@@ -1854,7 +1918,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Repair and maintenance costs are incurred to maintain plant\nassets in operating condition. The continuing, frequent, and\nlow-cost repairs and the replacement of a broken gear meet\nthe definition of repairs and maintenance expense.\nAccordingly, the amount that should be charged to repairs and\nmaintenance is $80,000 ($70,000 + $10,000). The renovation\ncost increased the quality of production during the expected\nuseful life of the group of machines. This $100,000 cost\nshould be capitalized.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "خلال السنة تكبدت Murdock النفقات التالية المتعلقة بآلات ومعدات المصنع:\n• تجديد آلات بمبلغ $100,000 لزيادة كفاءة الإنتاج خلال عمرها المتبقي 5 سنوات. اكتمل المشروع في 31 ديسمبر.\n• إصلاحات مستمرة ومتكررة منخفضة التكلفة بمبلغ $70,000.\n• استبدال ترس مكسور في آلة بتكلفة $10,000.\nما إجمالي المصروف المحمل على الإصلاح والصيانة خلال السنة؟",
+    "choicesAr": [
+      "$70,000",
+      "$80,000",
+      "$170,000",
+      "$180,000"
+    ],
+    "explanationAr": "تهدف تكاليف الإصلاح والصيانة إلى إبقاء الأصول في حالة تشغيل. وتعد الإصلاحات المتكررة منخفضة التكلفة واستبدال الترس المكسور صيانة عادية في هذا السؤال، لا استبدال مكون رأسمالي جوهري. لذلك يبلغ مصروف الإصلاح والصيانة $80,000 ($70,000 + $10,000). أما التجديد الذي حسن الإنتاج خلال العمر المتوقع للآلات فتبلغ تكلفته $100,000 وترسمل."
   },
   {
     "unit": 3,
@@ -1871,7 +1943,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Expenditures that increase the quality or quantity of a\nmachine’s output should be capitalized whether or not its\nuseful life is extended. Thus, the amount of the cost to be\ncapitalized equals $320,000 ($168,000 + $72,000 + $52,000 +\n$28,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 2 نوفمبر تكبدت Corley التكاليف التالية لإحدى آلات الطباعة:\nشراء ملحق للترتيب والتدبيس: $168,000\nتركيب الملحق: 72,000\nقطع غيار لعمرة الآلة: 52,000\nأجور وتكاليف غير مباشرة للعمرة: 28,000\nأدت العمرة إلى زيادة جوهرية في الإنتاج. ولم يزد الملحق أو العمرة العمر الإنتاجي المقدر. ما إجمالي التكاليف التي ترسمل؟",
+    "choicesAr": [
+      "$0",
+      "$168,000",
+      "$240,000",
+      "$320,000"
+    ],
+    "explanationAr": "ترسمل النفقات التي تزيد جودة إنتاج الآلة أو كميته عند تحقق شروط الاعتراف، سواء طال العمر الإنتاجي أم لا. لذا يبلغ المبلغ المرسمل $320,000 ($168,000 + $72,000 + $52,000 + $28,000)."
   },
   {
     "unit": 3,
@@ -1888,7 +1968,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The gain (loss) on disposal of the machine is calculated as the\ndifference between the proceeds received and the carrying\namount of the machine on the transaction date. The carrying\namount of the machine on July 1, Year 10, is $4,500 [$90,000\ndepreciable base of the machine × (0.5 years of remaining\nuseful life ÷ 10 years total useful life)]. Therefore, the gain on\ndisposal is $500 ($5,000 – $4,500).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "اشترت Ott آلة بتكلفة أصلية $90,000 في 2 يناير من السنة 1، وعمر مقدر 10 سنوات دون قيمة متبقية. وتستخدم القسط الثابت. وفي 1 يوليو من السنة 10 باعت الآلة مقابل $5,000. ما مكسب أو خسارة الاستبعاد؟",
+    "choicesAr": [
+      "خسارة $500.",
+      "مكسب $500.",
+      "خسارة $4,500.",
+      "مكسب $4,500."
+    ],
+    "explanationAr": "يحسب مكسب أو خسارة الاستبعاد بالفرق بين المتحصلات والقيمة الدفترية في تاريخ المعاملة. وتبلغ القيمة الدفترية في 1 يوليو من السنة 10 مبلغ $4,500 [$90,000 أساس الإهلاك × (0.5 سنة متبقية ÷ 10 سنوات إجمالي العمر)]، وفق افتراض نصف السنة. لذا يبلغ مكسب الاستبعاد $500 ($5,000 − $4,500)."
   },
   {
     "unit": 3,
@@ -1905,7 +1993,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Under IFRS, measurement of PPE subsequent to initial\nrecognition may be at fair value at the revaluation date (minus\nsubsequent depreciation and impairment losses). The\nassumption is that the PPE can be reliably measured. If an\nitem of PPE is revalued, every item in its class also should be\nrevalued.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "وفق IFRS، عند اختيار نموذج إعادة التقييم لقياس العقارات والآلات والمعدات، أي العبارات التالية صحيحة؟",
+    "choicesAr": [
+      "عند إعادة تقييم أصل، يعاد تقييم كامل الفئة التي ينتمي إليها.",
+      "يمكن إعادة تقييم أصول فردية فقط ضمن الفئة التي ينتمي إليها الأصل.",
+      "يجب إعادة التقييم كل 3 سنوات على الأقل.",
+      "تثبت زيادات القيمة الدفترية الناتجة عن أول إعادة تقييم ضمن الربح أو الخسارة."
+    ],
+    "explanationAr": "وفق IFRS يمكن قياس العقارات والآلات والمعدات بعد الاعتراف الأولي بالقيمة العادلة في تاريخ إعادة التقييم ناقص الإهلاك وخسائر الانخفاض اللاحقة، بافتراض إمكان قياس القيمة العادلة بموثوقية. وعند إعادة تقييم بند، يعاد تقييم كامل فئته."
   },
   {
     "unit": 3,
@@ -1922,7 +2018,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Under U.S. GAAP, items of PPE cannot be carried above their\nhistorical cost. They are carried at historical cost minus\naccumulated depreciation and impairment losses.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية خاطئة بشأن العقارات والآلات والمعدات وفق نماذج القياس اللاحق المعتادة؟",
+    "choicesAr": [
+      "وفق المعايير الأمريكية، يجوز قياس الأصل بمبلغ أعلى من تكلفته التاريخية بإعادة التقييم.",
+      "وفق IFRS، يجوز قياس الأصل بمبلغ أعلى من تكلفته التاريخية.",
+      "وفق IFRS، يجوز قياس الأصل بقيمته العادلة عند إعادة التقييم.",
+      "وفق المعايير الأمريكية، يجوز قياس الأصل بتكلفته التاريخية."
+    ],
+    "explanationAr": "لا يسمح النموذج الأمريكي العام بإعادة تقييم هذه الأصول إلى مبلغ أعلى من تكلفتها التاريخية؛ بل تعرض بالتكلفة التاريخية مطروحًا منها مجمع الإهلاك وخسائر الانخفاض."
   },
   {
     "unit": 3,
@@ -1939,7 +2043,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Any indication that an asset may be impaired requires the\nentity to estimate its recoverable amount. The recoverable\namount is the higher of an asset’s fair value minus costs to\nsell and its value in use. Value in use is the present value of\nestimated future cash flows expected from (1) continuing use\nof an asset and (2) its disposal at the end of its useful life. Fair\nvalue minus costs to sell is the amount obtainable from the\nsale of an asset in an arm’s length transaction between\nknowledgeable, willing parties, minus costs of disposal.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "وفق IFRS، ما المبلغ القابل للاسترداد للأصل؟",
+    "choicesAr": [
+      "الأعلى من قيمة الاستخدام والقيمة العادلة ناقص تكاليف التخلص.",
+      "سعر البيع المقدر في النشاط المعتاد ناقص تكاليف الإكمال والبيع المقدرة.",
+      "القيمة الحالية للتدفقات النقدية المستقبلية المتوقعة من الأصل.",
+      "المبلغ الممكن الحصول عليه من بيع الأصل بمعاملة مستقلة بين أطراف مطلعة وراغبة ناقص تكاليف التخلص."
+    ],
+    "explanationAr": "عند وجود مؤشر انخفاض في القيمة تقدر المنشأة المبلغ القابل للاسترداد، وهو الأعلى من القيمة العادلة ناقص تكاليف التخلص وقيمة الاستخدام. وتمثل قيمة الاستخدام القيمة الحالية للتدفقات المقدرة من (1) استمرار استخدام الأصل و(2) التخلص منه في نهاية عمره. وتمثل القيمة العادلة ناقص تكاليف التخلص سعر البيع في معاملة منظمة بين مشاركي السوق في تاريخ القياس ناقص تكاليف التخلص."
   },
   {
     "unit": 3,
@@ -1956,7 +2068,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Under IFRS, an impairment test is a one-step test. The\ncarrying amount of an asset is compared with its recoverable\namount. An impairment loss is recognized for the excess of\nthe carrying amount over the recoverable amount. The\nrecoverable amount is the greater of an asset’s (1) fair value\nminus cost to sell or (2) value in use (i.e., the present value of\nan asset’s expected cash flows).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تجري شركة اختبار انخفاض قيمة أحد أصولها طويلة الأجل. تتطلب IFRS، بخلاف نموذج المعايير الأمريكية للأصول المحتفظ بها للاستخدام، مقارنة القيمة الدفترية للأصل بماذا؟",
+    "choicesAr": [
+      "القيمة العادلة.",
+      "سعر الشراء.",
+      "المبلغ القابل للاسترداد.",
+      "التدفقات النقدية المستقبلية غير المخصومة."
+    ],
+    "explanationAr": "وفق IFRS تقارن القيمة الدفترية بالمبلغ القابل للاسترداد مباشرةً، وتثبت خسارة الانخفاض بمقدار زيادة القيمة الدفترية عليه. والمبلغ القابل للاسترداد هو الأكبر من (1) القيمة العادلة ناقص تكاليف التخلص أو (2) قيمة الاستخدام، أي القيمة الحالية للتدفقات النقدية المتوقعة."
   },
   {
     "unit": 3,
@@ -1973,7 +2093,15 @@
     ],
     "answerIndex": 1,
     "explanation": "In accounting, depreciation is the systematic and rational\nallocation of the cost of the productive capacity of a fixed\nasset to the accounting periods the asset benefits. The asset’s\nhistorical cost minus expected salvage value is the basis for\nthe allocation.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما المقصود بإهلاك أصل من أصول المصنع؟",
+    "choicesAr": [
+      "تقييم الأصل لأغراض قائمة المركز المالي.",
+      "تخصيص تكلفة الأصل على فترات استخدامه.",
+      "تجميع أموال لاستبدال الأصل.",
+      "تقييم الأصل وفق بيانات تكلفة الاستبدال الحالية."
+    ],
+    "explanationAr": "الإهلاك تخصيص منتظم ومنطقي لتكلفة القدرة الإنتاجية للأصل الثابت على الفترات التي تستفيد منه. ويستند التخصيص إلى التكلفة التاريخية مطروحًا منها القيمة المتبقية المقدرة في نموذج التكلفة."
   },
   {
     "unit": 3,
@@ -1990,7 +2118,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Under the activity method, depreciation is a function of use,\nnot the passage of time. If the estimated activity level (stated,\nfor example, in units of production) is higher in the later years\nof the asset’s useful life, depreciation expense will be higher.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "وفق أي طرق الإهلاك التالية يمكن أن يرتفع مصروف الإهلاك في السنوات المتأخرة من العمر الإنتاجي؟",
+    "choicesAr": [
+      "القسط الثابت.",
+      "طريقة النشاط القائمة على وحدات الإنتاج.",
+      "مجموع أرقام السنوات.",
+      "الرصيد المتناقص."
+    ],
+    "explanationAr": "وفق طريقة النشاط يعتمد الإهلاك على الاستخدام لا مرور الزمن. فإذا ارتفع مستوى النشاط المقدر، مثل وحدات الإنتاج، في السنوات المتأخرة من العمر الإنتاجي، ارتفع مصروف الإهلاك فيها."
   },
   {
     "unit": 3,
