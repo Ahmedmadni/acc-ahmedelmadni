@@ -32,7 +32,7 @@ import { getCmaUnit17SourceReview } from "@/lib/cma-unit17-source-review";
 import { getCmaUnit18SourceReview } from "@/lib/cma-unit18-source-review";
 import { getCmaUnit19SourceReview } from "@/lib/cma-unit19-source-review";
 import { getCmaUnit20SourceReview } from "@/lib/cma-unit20-source-review";
-import { isCmaScorableQuestion, splitCmaQuizSourceReview } from "@/lib/cma-source-review.shared";
+import { isCmaScorableQuestion, splitCmaQuizSourceReview, summarizeCmaReview } from "@/lib/cma-source-review.shared";
 import type { CmaStudyUnit } from "@/data/cma-topics";
 
 const BUILT_IN_QUESTIONS: ExamQuestion[] = (() => {
@@ -81,9 +81,7 @@ export function ExamPrep({ lang }: { lang: Lang }) {
   const [local, setLocal] = useState<ExamQuestion[]>([]);
   const [mode, setMode] = useState<"quiz" | "upload">("quiz");
   const [current, setCurrent] = useState(0);
-  const [selected, setSelected] = useState<number | null>(null);
-  const [revealed, setRevealed] = useState(false);
-  const [score, setScore] = useState({ correct: 0, total: 0 });
+  const [attempts, setAttempts] = useState<Record<string, number>>({});
   const [includeSourceReview, setIncludeSourceReview] = useState(false);
   const [signedIn, setSignedIn] = useState(false);
   const [isAdmin, setIsAdmin] = useState(false);
@@ -153,8 +151,9 @@ export function ExamPrep({ lang }: { lang: Lang }) {
   const allQuestions = useMemo(() => {
     const map = new Map<string, ExamQuestion>();
     for (const q of BUILT_IN_QUESTIONS) map.set(q.id, q);
-    for (const q of remote) map.set(q.id, q);
-    for (const q of local) map.set(q.id, q);
+    // Imported or cached records must not override built-in source holds or keys.
+    for (const q of remote) if (!map.has(q.id)) map.set(q.id, q);
+    for (const q of local) if (!map.has(q.id)) map.set(q.id, q);
     return Array.from(map.values());
   }, [remote, local]);
 
@@ -185,6 +184,10 @@ export function ExamPrep({ lang }: { lang: Lang }) {
     [matchingPool, includeSourceReview, track],
   );
   const q = pool[current];
+  const selected = q ? attempts[q.id] ?? null : null;
+  const revealed = selected !== null;
+  const summary = useMemo(() => summarizeCmaReview(pool, attempts), [pool, attempts]);
+  const score = { correct: summary.correct, total: summary.answered };
 
   // Clamp current when pool changes
   useEffect(() => {
@@ -192,35 +195,24 @@ export function ExamPrep({ lang }: { lang: Lang }) {
   }, [pool.length, current]);
 
   function next() {
-    setSelected(null);
-    setRevealed(false);
     setCurrent((c) => (c + 1) % Math.max(pool.length, 1));
   }
   function prev() {
-    setSelected(null);
-    setRevealed(false);
     setCurrent((c) => (c - 1 + pool.length) % Math.max(pool.length, 1));
   }
   function pick(i: number) {
-    if (revealed || !q) return;
-    setSelected(i);
-    setRevealed(true);
-    const correct = i === q.answerIndex;
-    if (isCmaScorableQuestion(q))
-      setScore((s) => ({ correct: s.correct + (correct ? 1 : 0), total: s.total + 1 }));
+    if (revealed || !q || !Number.isInteger(i) || i < 0 || i >= q.choices.en.length) return;
+    setAttempts(previous => Object.hasOwn(previous, q.id) ? previous : { ...previous, [q.id]: i });
   }
   function resetScore() {
-    setScore({ correct: 0, total: 0 });
+    setAttempts({});
     setCurrent(0);
-    setSelected(null);
-    setRevealed(false);
   }
 
   function changeTrack(t: ExamTrack) {
+    if (track === t) return;
     setTrack(t);
-    setCurrent(0);
-    setSelected(null);
-    setRevealed(false);
+    resetScore();
   }
 
   async function handleFile(file: File) {
@@ -581,10 +573,13 @@ export function ExamPrep({ lang }: { lang: Lang }) {
                   const isCorrect = i === q.answerIndex;
                   const isPicked = i === selected;
                   let cls = "border-[#d7aa52]/20 bg-white/[0.03] hover:border-[#d7aa52]/50";
-                  if (revealed && isCorrect)
+                  const scorable = isCmaScorableQuestion(q);
+                  if (revealed && scorable && isCorrect)
                     cls = "border-emerald-400/60 bg-emerald-500/10 text-emerald-100";
-                  else if (revealed && isPicked && !isCorrect)
+                  else if (revealed && scorable && isPicked && !isCorrect)
                     cls = "border-red-400/60 bg-red-500/10 text-red-100";
+                  else if (revealed && !scorable && (isPicked || isCorrect))
+                    cls = "border-amber-400/60 bg-amber-500/10 text-amber-100";
                   return (
                     <button
                       key={i}
@@ -601,10 +596,10 @@ export function ExamPrep({ lang }: { lang: Lang }) {
                       >
                         {c}
                       </span>
-                      {revealed && isCorrect && (
+                      {revealed && scorable && isCorrect && (
                         <CheckCircle2 className="size-4 shrink-0 text-emerald-300" />
                       )}
-                      {revealed && isPicked && !isCorrect && (
+                      {revealed && scorable && isPicked && !isCorrect && (
                         <XCircle className="size-4 shrink-0 text-red-300" />
                       )}
                     </button>
