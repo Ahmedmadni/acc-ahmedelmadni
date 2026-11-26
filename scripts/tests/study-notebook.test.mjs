@@ -1245,3 +1245,23 @@ test("Linked journal PDF snapshots show whole-entry totals and fail safely witho
   assert.match(app,/journalGroupId: undefined, journalPart: undefined/);
   assert.match(source,/journalContextPages: readonly NotebookPage\[\] = pages/);
 });
+
+test("Notebook flushes latest committed edits on navigation and mobile backgrounding", async () => {
+  const source = await readFile("src/components/library/StudyNotebook.tsx","utf8");
+  const start = source.indexOf("// The delayed autosave");
+  assert.ok(start > 0);
+  const end = source.indexOf("}, [hydrated, storageWritable]);",start);
+  assert.ok(end > start);
+  const lifecycle = source.slice(start,end);
+  assert.match(source.slice(start-100,start),/if \(!hydrated \|\| !storageWritable\) return;/);
+  assert.match(lifecycle,/JSON\.stringify\(latest\.current\)/);
+  assert.match(lifecycle,/document\.visibilityState === "hidden"/);
+  assert.match(lifecycle,/window\.addEventListener\("pagehide", onPageHide\)/);
+  assert.match(lifecycle,/window\.removeEventListener\("pagehide", onPageHide\)/);
+  assert.match(lifecycle,/document\.addEventListener\("visibilitychange", onVisibilityChange\)/);
+  assert.match(lifecycle,/document\.removeEventListener\("visibilitychange", onVisibilityChange\)/);
+  assert.match(lifecycle,/setSaveError\(!flush\(\)\)/);
+  const update = source.slice(source.indexOf("function updatePage("),source.indexOf("function undoInk("));
+  assert.match(update,/page\.id === current\.id/);
+  assert.doesNotMatch(update,/page\.id === \(prior\.activePage/);
+});
