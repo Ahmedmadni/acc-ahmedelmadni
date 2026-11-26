@@ -338,3 +338,22 @@ test("Unit 9 independent overhead rate and reconciliation computations",()=>{
  assert.equal(8000+2000+8000+2000*.2+140*117,34780);
  assert.equal(1120000+133000*1120000/(128000+272000+1120000),1218000);
 });
+
+const unit9Wave3Pins=new Map([[19,[973,1,"80c91873"]],[20,[974,0,"1981995f"]],[21,[975,3,"e1ec229b"]],[22,[976,3,"fe7b7e03"]],[25,[980,3,"e20c96df"]],[26,[981,1,"5f37af4d"]],[27,[982,1,"2e80c2cd"]],[28,[984,1,"547f3ee6"]],[29,[985,2,"aefd3f46"]],[30,[986,0,"0f487edb"]],[31,[987,1,"7b69ac1e"]],[32,[988,1,"b3ae7a70"]],[33,[990,1,"3c7cd577"]],[35,[992,1,"7e2ba636"]]]);
+test("Unit 9 overhead allocation final section review preserves source, keys and numerical parity",()=>{
+ for(const [n,[page,index,hash]] of unit9Wave3Pins){const r=unit9Rows.find(r=>r.section===2&&r.number===n);assert.equal(r.page,page);assert.equal(r.answerIndex,index);assert.equal(r.answerStatus,"source");assert.equal(fingerprint(JSON.stringify([r.stem,r.choices,r.explanation,r.answerIndex,r.page])),hash);assert.equal(validateCmaTranslation({question:{en:r.stem},choices:{en:r.choices},explanation:{en:r.explanation}},{question:r.stemAr,choices:r.choicesAr,explanation:r.explanationAr}).valid,true,String(n));for(const [en,ar] of [[r.stem,r.stemAr],...r.choices.map((c,i)=>[c,r.choicesAr[i]]),[r.explanation,r.explanationAr]])assert.deepEqual(cmaNumericTokens(ar),cmaNumericTokens(en),String(n));}
+ const adapter=read("src/data/cma-questions-gleim-2025-vol1.ts");const held=["9.2.10","9.2.23","9.2.24","9.2.34"];assert.deepEqual(unit9Rows.filter(r=>r.section===2&&!r.stemAr).map(r=>[r.unit,r.section,r.number].join(".")),held);for(const id of held)assert.ok(adapter.includes('"'+id+'"'),id);
+ assert.equal(unit9Rows.filter(r=>r.section===2).length,35);assert.equal(unit9Rows.filter(r=>r.section===2&&r.stemAr&&r.choicesAr&&r.explanationAr).length,31);assert.ok(unit9Rows.filter(r=>r.stemAr&&r.choicesAr&&r.explanationAr).length>=62);
+});
+test("Unit 9 independent departmental rates and overhead proration",()=>{
+ assert.equal((5000000+7000000)/250000,48);
+ assert.equal(Math.round((4.30*1000-1000-1500)/450*150000),600000);
+ assert.equal(8625*12/460+16120*3/620,303);
+ assert.equal(8690*10/440,197.5);
+ assert.equal(70000/(50000/5)*20,140);
+ assert.equal(Math.round((1000+10000+12000)/11000*100),209);
+ assert.equal(5000000/500000*.5+7000000/1400000*1.5,12.5);
+ assert.equal(136000-13000+5000*123000/(123000+14000+13000),127100);
+ assert.equal(2250000-90000*890000/(890000+100000+10000),2169900);
+ assert.equal(30000*50000/(100000+50000+250000),3750);
+});
