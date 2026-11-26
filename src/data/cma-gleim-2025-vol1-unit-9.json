@@ -1887,7 +1887,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The single-rate method combines fixed and variable costs.\nHowever, dual rates are preferable because they allow\nvariable costs to be allocated on a different basis from fixed\ncosts.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عند تخصيص تكاليف الأقسام الخدمية لأقسام الإنتاج، ما الطريقة التي لا تراعي اختلاف أنماط سلوك التكلفة؟",
+    "choicesAr": [
+      "الطريقة التدرجية.",
+      "الطريقة التبادلية.",
+      "الطريقة المباشرة.",
+      "طريقة المعدل الواحد."
+    ],
+    "explanationAr": "تجمع طريقة المعدل الواحد التكاليف الثابتة والمتغيرة في معدل واحد. أما طريقة المعدلين فتتيح تخصيص التكاليف المتغيرة على أساس مختلف عن أساس تخصيص التكاليف الثابتة."
   },
   {
     "unit": 9,
@@ -1989,7 +1997,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Service department costs are indirect costs allocated to\nproduction departments to better determine overhead rates\nwhen the measurement of full (absorption) costs is desired.\nOverhead should be charged to production on some equitable\nbasis to provide information useful for such purposes as\nallocation of resources, pricing, measurement of profits, and\ncost reimbursement.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لماذا يلزم تخصيص تكاليف الأقسام الخدمية لأقسام الإنتاج؟",
+    "choicesAr": [
+      "الرقابة على التكاليف.",
+      "تنسيق نشاط الإنتاج.",
+      "تحديد معدلات تحميل التكاليف غير المباشرة.",
+      "تعظيم الكفاءة."
+    ],
+    "explanationAr": "تكاليف الأقسام الخدمية تكاليف غير مباشرة تخصص لأقسام الإنتاج لتحسين تحديد معدلات التحميل عند قياس التكلفة الكلية وفق نظام التكاليف الاستيعابية. ويجب تحميل الإنتاج على أساس عادل لتوفير معلومات مفيدة لتخصيص الموارد والتسعير وقياس الأرباح واسترداد التكاليف."
   },
   {
     "unit": 9,
@@ -2006,7 +2022,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The three major methods of allocating service department\ncosts, in order of increasing sophistication, are the direct\nmethod, the step-down method, and the reciprocal (or\nsimultaneous-equations) method. The direct method is the\nsimplest. It involves allocating all service department costs to\nproduction departments without recognizing any service\nprovided by one service department to another. The step-\ndown method is a sequential process that allocates service\ncosts among service as well as production departments.\nHowever, once a department’s costs have been allocated, no\nadditional allocations are made back to that department. The\nreciprocal method uses simultaneous equations to recognize\nmutual services. The latter method is the most complex.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "توجد عدة طرق لتخصيص تكاليف الأقسام الخدمية لأقسام الإنتاج. ما الطريقة التي تعترف بالخدمة المقدمة من قسم خدمي إلى آخر دون الاعتراف بالخدمات المتبادلة في الاتجاهين؟",
+    "choicesAr": [
+      "الطريقة المباشرة.",
+      "الطريقة المتغيرة.",
+      "الطريقة التبادلية.",
+      "الطريقة التدرجية."
+    ],
+    "explanationAr": "الطرق الرئيسية مرتبة حسب التعقيد هي المباشرة ثم التدرجية ثم التبادلية (المعادلات المتزامنة). تخصص المباشرة تكاليف الخدمات لأقسام الإنتاج فقط دون الاعتراف بالخدمات بين الأقسام الخدمية. أما التدرجية فتخصص التكاليف بالتتابع إلى الأقسام الخدمية والإنتاجية، ولا تعيد التخصيص إلى قسم سبق إقفاله. وتعترف التبادلية بالخدمات المتبادلة باستخدام معادلات متزامنة، وهي الأكثر تعقيدًا."
   },
   {
     "unit": 9,
@@ -2023,7 +2047,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The reciprocal method uses simultaneous equations to\nallocate each service department’s costs. It allocates costs by\nexplicitly including the mutual services rendered among all\ndepartments. When service departments render services to\neach other, the use of the direct method or the step-down\nmethod would not be theoretically accurate. Accordingly, in\nsuch situations, the reciprocal method would result in the most\naccurate allocation.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لدى شركة صناعية كبيرة قسمان خدميان وقسمان إنتاجيان. يقدم كل قسم خدمي خدمات للقسم الخدمي الآخر ولقسمي الإنتاج. أي الطرق التالية تحقق أدق تخصيص لتكاليف الأقسام الخدمية لأقسام الإنتاج؟",
+    "choicesAr": [
+      "طريقة التخصيص المباشر.",
+      "طريقة التخصيص التدرجي.",
+      "طريقة التخصيص الخطي.",
+      "طريقة التخصيص التبادلي."
+    ],
+    "explanationAr": "تستخدم الطريقة التبادلية معادلات متزامنة لتخصيص تكاليف كل قسم خدمي، مع الاعتراف الصريح بالخدمات المتبادلة بين الأقسام. وعندما تتبادل الأقسام الخدمية الخدمات، لا تعكس الطريقة المباشرة أو التدرجية كامل هذه العلاقات؛ لذا تكون الطريقة التبادلية أدق من الناحية النظرية."
   },
   {
     "unit": 9,
@@ -2040,7 +2072,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The cause-and-effect criterion seeks a relationship between\ncost and the cost objective (for example, an operating division)\nsuch that changes in total costs can be predicted based on\nactivities of the cost objective. Thus, the number of employees\nin an operating division is likely to correlate with incurrence of\ncosts by the personnel department.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تخصص شركة التكاليف العامة غير المباشرة للمركز الرئيسي على قطاعات التشغيل، وتستخدم معيار السبب والنتيجة لاختيار أسس التخصيص. أي أساس يناسب تخصيص تكاليف إدارة شؤون الموظفين على القطاعات وفق هذا المعيار؟",
+    "choicesAr": [
+      "عدد الموظفين في كل قطاع.",
+      "مساحة كل قطاع بالقدم المربع.",
+      "إجمالي سنوات خدمة موظفي كل قطاع.",
+      "إجمالي القيمة الدفترية لأصول القطاع المحددة."
+    ],
+    "explanationAr": "يبحث معيار السبب والنتيجة عن علاقة بين التكلفة وموضوع التكلفة، مثل قطاع التشغيل، بحيث يمكن توقع تغير التكلفة من تغير النشاط. ومن المرجح أن يرتبط عدد موظفي القطاع بتكاليف إدارة شؤون الموظفين."
   },
   {
     "unit": 9,
@@ -2057,7 +2097,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The reciprocal method uses simultaneous equations to\nallocate costs by explicitly recognizing the mutual services\nrendered among all departments. Because it acknowledges all\nsources of cost, it should be used when management is using\nthe results of allocations to make decisions on pricing\nproducts.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لدى مكتب محاسبة قسمان: الاستشارات الإدارية (MCS) والاستشارات الضريبية (TAS). ويستفيدان من قسمين خدميين: برمجة الحاسب (CP) وتشغيل الحاسب (CO). وفيما يلي نسب استخدام خدمات كل قسم خلال فترة نموذجية:\nالقسم المستفيد | CP | CO | MCS | TAS\nخدمات CP | -- | 30% | 50% | 20%\nخدمات CO | 25% | -- | 45% | 30%\nيسعر المكتب خدماته الاستشارية الإدارية والضريبية بناءً على التكلفة المقدرة لتقديمها. ما أنسب طريقة لتخصيص تكاليف الأقسام الخدمية؟",
+    "choicesAr": [
+      "طريقة الوحدات المادية.",
+      "الطريقة التدرجية.",
+      "طريقة صافي القيمة القابلة للتحقق المقدرة.",
+      "الطريقة التبادلية."
+    ],
+    "explanationAr": "تستخدم الطريقة التبادلية معادلات متزامنة وتعترف صراحة بالخدمات المتبادلة بين الأقسام. وبما أنها تعكس مصادر التكلفة المتبادلة، فهي مناسبة عندما تستخدم الإدارة نتائج التخصيص في قرارات التسعير."
   },
   {
     "unit": 9,
@@ -2074,7 +2122,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The dual-rate method of allocating costs from one department\nto another involves classifying the costs to be allocated into\ntwo pools, one variable and one fixed.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عند تخصيص التكاليف من قسم إلى آخر، يمكن استخدام طريقة المعدلين. متى تكون هذه الطريقة أكثر فائدة؟",
+    "choicesAr": [
+      "عند تخصيص مجمعين أو أكثر من مجمعات التكلفة.",
+      "عند تخصيص تكاليف قسمين أو أكثر.",
+      "عند إنتاج منتجين أو أكثر.",
+      "عند فصل التكاليف إلى مجمع فرعي متغير وآخر ثابت."
+    ],
+    "explanationAr": "تعتمد طريقة المعدلين على تصنيف التكاليف المخصصة إلى مجمعين، أحدهما للتكاليف المتغيرة والآخر للتكاليف الثابتة."
   },
   {
     "unit": 9,
@@ -2091,7 +2147,15 @@
     ],
     "answerIndex": 0,
     "explanation": "When a user is forced to bear a realistic cost for a service, the\nuser is less likely to use an excessive amount of that service.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تصنع شركة أثاث منتجات فولاذية متعددة. لديها أقسام إنتاج للتصنيع والتجميع والتشطيب، وأقسام خدمية للصيانة ومناولة المواد والتصميم. لا تخصص الشركة حاليًا تكاليف الأقسام الخدمية لأقسام الإنتاج. ويرى محاسب التكاليف الجديد ضرورة إعداد معدلات لتحميل أقسام الإنتاج مقابل الخدمات المطلوبة. إذا اعتمدت الشركة هذه السياسة، فأي سلوك يصبح الأقل احتمالًا لدى مديري أقسام الإنتاج؟",
+    "choicesAr": [
+      "طلب قدر مفرط من الخدمات.",
+      "استبدال الأنظمة القديمة وغير الكفؤة.",
+      "الامتناع عن استخدام الخدمات غير الضرورية.",
+      "التحفيز على ضبط التكاليف."
+    ],
+    "explanationAr": "عندما يتحمل المستخدم تكلفة واقعية للخدمة التي يطلبها، يقل احتمال إفراطه في استخدامها."
   },
   {
     "unit": 9,
@@ -2108,7 +2172,15 @@
     ],
     "answerIndex": 0,
     "explanation": "With the direct and reciprocal methods, the order of allocation\nis irrelevant. However, under the step-down method, some\nservice department cost is allocated to other service\ndepartments before allocation to the operating departments.\nThese first allocations change the proportions of the total\nconstituted by each department.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لدى شركة قسمان خدميان وثلاثة أقسام تشغيلية. عند تخصيص تكاليف الأقسام الخدمية إلى أقسام التشغيل، أي من الطرق التالية (المباشرة والتدرجية والتبادلية) ينتج عنها مبلغ تخصيص ثابت لكل قسم تشغيل بصرف النظر عن ترتيب تخصيص الأقسام الخدمية؟",
+    "choicesAr": [
+      "المباشرة والتبادلية فقط.",
+      "التدرجية والتبادلية فقط.",
+      "المباشرة والتدرجية فقط.",
+      "المباشرة فقط."
+    ],
+    "explanationAr": "لا يؤثر ترتيب التخصيص في نتائج الطريقتين المباشرة والتبادلية. أما التدرجية فتخصص جزءًا من تكاليف الأقسام الخدمية إلى أقسام خدمية أخرى قبل تخصيصها لأقسام التشغيل، مما يغير أرصدة المجمعات ونسب التخصيص عند تغيير الترتيب."
   },
   {
     "unit": 9,
@@ -2125,7 +2197,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The reciprocal method is the most complex and the most\ntheoretically sound of the three service department allocation\nmethods. The reciprocal method recognizes services rendered\nby all service departments to each other as well as to the\nproduction departments.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لدى شركة ويلكوكس الصناعية قسمان للدعم، نظم المعلومات وشؤون الموظفين، وقسمان للتصنيع، التشغيل بالآلات والتجميع. يقدم قسما الدعم خدمات لبعضهما وللقسمين الإنتاجيين. وتشير دراسات الشركة إلى أن شؤون الموظفين يدعم عددًا أكبر من الأقسام مقارنة بنظم المعلومات. إذا استخدمت الشركة الطريقة التبادلية، فأي تخصيص يحدث؟ تخصص تكاليف:",
+    "choicesAr": [
+      "قسم التجميع إلى نظم المعلومات وشؤون الموظفين.",
+      "قسم نظم المعلومات إلى التشغيل بالآلات، وتكاليف التشغيل بالآلات إلى التجميع.",
+      "قسم شؤون الموظفين إلى نظم المعلومات وحده.",
+      "قسم نظم المعلومات إلى شؤون الموظفين والتشغيل بالآلات والتجميع."
+    ],
+    "explanationAr": "الطريقة التبادلية هي الأكثر تعقيدًا والأدق نظريًا بين طرق تخصيص تكاليف الأقسام الخدمية. وهي تعترف بالخدمات التي تقدمها الأقسام الخدمية لبعضها وكذلك لأقسام الإنتاج."
   },
   {
     "unit": 9,
@@ -2142,7 +2222,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The step or step-down method allocates some of the costs of\nservices rendered by service departments to each other. The\nstep method derives its name from the procedure involved:\nThe service departments are allocated in order, from the one\nthat provides the most service to other service departments\ndown to the one that provides the least. Since Personnel\nprovides more services than Information Systems, Personnel\nwill be allocated to Information Systems, but not the other way\naround.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لدى شركة ويلكوكس الصناعية قسمان للدعم، نظم المعلومات وشؤون الموظفين، وقسمان للتصنيع، التشغيل بالآلات والتجميع. يقدم قسما الدعم خدمات لبعضهما وللقسمين الإنتاجيين. وتشير دراسات الشركة إلى أن شؤون الموظفين يدعم عددًا أكبر من الأقسام مقارنة بنظم المعلومات. إذا استخدمت الشركة الطريقة التدرجية، فأي تخصيص مما يلي لا يحدث؟ يخصص جزء من تكاليف:",
+    "choicesAr": [
+      "شؤون الموظفين إلى نظم المعلومات.",
+      "نظم المعلومات إلى شؤون الموظفين.",
+      "شؤون الموظفين إلى التجميع.",
+      "شؤون الموظفين إلى التجميع والتشغيل بالآلات."
+    ],
+    "explanationAr": "تعترف الطريقة التدرجية ببعض الخدمات بين الأقسام الخدمية، ويبدأ التخصيص وفق ترتيب محدد، غالبًا من القسم الذي يقدم أكبر قدر من الخدمة للأقسام الخدمية الأخرى. ووفق ترتيب المسألة يبدأ التخصيص بشؤون الموظفين ثم نظم المعلومات، فيخصص الأول للثاني دون تخصيص عكسي بعد إقفال الأول."
   },
   {
     "unit": 9,
@@ -2159,7 +2247,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The direct method of service department allocation is the\nsimplest. Service department costs are allocated directly to the\nproducing departments without regard for services rendered\nby service departments to each other. Service department\ncosts are allocated to production departments based on an\nallocation base appropriate to each service department’s\nfunction.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لدى شركة ويلكوكس الصناعية قسمان للدعم، نظم المعلومات وشؤون الموظفين، وقسمان للتصنيع، التشغيل بالآلات والتجميع. يقدم قسما الدعم خدمات لبعضهما وللقسمين الإنتاجيين. وتشير دراسات الشركة إلى أن شؤون الموظفين يدعم عددًا أكبر من الأقسام مقارنة بنظم المعلومات. إذا استخدمت الشركة الطريقة المباشرة، فأي تخصيص يحدث؟ يخصص جزء من تكاليف:",
+    "choicesAr": [
+      "شؤون الموظفين إلى نظم المعلومات.",
+      "التشغيل بالآلات إلى نظم المعلومات.",
+      "نظم المعلومات إلى التجميع.",
+      "التجميع إلى التشغيل بالآلات."
+    ],
+    "explanationAr": "الطريقة المباشرة أبسط الطرق؛ تخصص تكاليف الأقسام الخدمية مباشرة لأقسام الإنتاج دون الاعتراف بالخدمات بين الأقسام الخدمية. ويحدد أساس التخصيص بما يناسب طبيعة وظيفة القسم الخدمي."
   },
   {
     "unit": 9,
@@ -2176,7 +2272,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The reciprocal method is the most complex and the most\ntheoretically sound of the three service department allocation\nmethods. The reciprocal method recognizes services rendered\nby all service departments to each other as well as to the\nproduction departments.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لدى شركة أربعة أقسام للدعم: الصيانة والطاقة والموارد البشرية والشؤون القانونية، وثلاثة أقسام تشغيلية. تقدم أقسام الدعم خدمات لأقسام التشغيل ولأقسام الدعم الأخرى. أي طريقة تعكس الخدمات المتبادلة بين أقسام الدعم بأفضل صورة؟",
+    "choicesAr": [
+      "طريقة التخصيص المباشر.",
+      "طريقة التخصيص بمعدلين.",
+      "طريقة التخصيص التدرجي.",
+      "طريقة التخصيص التبادلي."
+    ],
+    "explanationAr": "الطريقة التبادلية أكثر طرق تخصيص تكاليف الأقسام الخدمية تعقيدًا ودقة من الناحية النظرية، إذ تعترف بالخدمات بين جميع الأقسام الخدمية وكذلك الخدمات المقدمة لأقسام الإنتاج."
   },
   {
     "unit": 9,
@@ -2193,7 +2297,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The reciprocal cost of a service department incorporates the\ncost of other service departments’ service. Therefore, Data\nProcessing has a reciprocal cost of $70,000, plus the allocable\nportion of Human Resources cost used. This is best\nrepresented by either of the following equations: $70,000 +\n[Fully Reciprocated Cost of Human Resources × (3,000 ÷\n16,200)] or $70,000 + {[$400,000 + (Fully Reciprocated Cost\nof Data Processing × 12.77%)] × (3,000 ÷ 16,200)}.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لدى شركة قسمان خدميان وتخطط لاستخدام الطريقة التبادلية لتخصيص تكاليفهما. جمعت البيانات التالية للتحليل:\nالتكاليف غير المباشرة المقدرة\nالموارد البشرية $400,000\nمعالجة البيانات 70,000\nالتشغيل بالآلات 225,000\nالتجميع 125,000\nالخدمات المقدمة | ساعات العمل\nمن الموارد البشرية إلى:\nمعالجة البيانات 3,000\nالتشغيل بالآلات 5,000\nالتجميع 8,200\nمن معالجة البيانات إلى:\nالموارد البشرية 600\nالتشغيل بالآلات 3,500\nالتجميع 600\nأي معادلة تمثل التكلفة التبادلية الكاملة لقسم معالجة البيانات؟",
+    "choicesAr": [
+      "$70,000 + [(600 ÷ 4,700) × $400,000]",
+      "$70,000 + [التكلفة التبادلية الكاملة للموارد البشرية × (3,000 ÷ 16,200)]",
+      "$70,000 × (600 ÷ 4,700) + $350,000 × (3,000 ÷ 16,200)",
+      "$400,000 + [(600 ÷ 16,200) × $70,000]"
+    ],
+    "explanationAr": "تتضمن التكلفة التبادلية لقسم خدمي نصيبه من خدمات الأقسام الخدمية الأخرى. ولذلك تبلغ تكلفة معالجة البيانات $70,000 مضافًا إليها نصيبها من تكلفة الموارد البشرية، وتمثل بالمعادلتين المتكافئتين تقريبًا: $70,000 + [التكلفة التبادلية الكاملة للموارد البشرية × (3,000 ÷ 16,200)]، أو $70,000 + {[$400,000 + (التكلفة التبادلية الكاملة لمعالجة البيانات × 12.77%)] × (3,000 ÷ 16,200)}؛ النسبة الأخيرة مقربة."
   },
   {
     "unit": 9,
@@ -2227,7 +2339,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Under the step-down method, the service departments are\nallocated in order, from the one that provides the most service\nto other service departments down to the one that provides\nthe least service. Thus, the order in which service department\ncosts are allocated is important.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تقوم شركة كبيرة بتخصيص تكاليف الأقسام الخدمية على الأقسام المولدة للإيرادات. في أي طريقة تخصيص يتغير المبلغ المخصص لكل قسم مولد للإيراد عند تغيير ترتيب تخصيص تكاليف الأقسام الخدمية؟",
+    "choicesAr": [
+      "الطريقة التدرجية.",
+      "الطريقة المباشرة.",
+      "الطريقة التبادلية.",
+      "طريقة التكاليف على أساس الأنشطة."
+    ],
+    "explanationAr": "في الطريقة التدرجية يتم تخصيص الأقسام الخدمية وفق ترتيب محدد، غالبًا من القسم الذي يقدم أكبر قدر من الخدمة للأقسام الخدمية الأخرى إلى الأقل. لذلك يؤثر ترتيب التخصيص في النتائج."
   },
   {
     "unit": 9,
@@ -2244,7 +2364,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Department B is budgeted to use 66 2/3% of total production\n(2,400,000 ÷ 3,600,000), so it should be allocated fixed costs\nof $66,667 ($100,000 × 66 2/3%). The variable cost allocation\nis $72,000 (2,400,000 pages × $.03 per page), and the total\nallocated is therefore $138,667 ($66,667 + $72,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يقدم قسم التصوير في شركة لونغستريت خدمات النسخ للقسمين A وB، وأعد موازنته للسنة القادمة باستخدام البيانات التالية:\nالتكاليف الثابتة $100,000\nالطاقة المتاحة 4,000,000 صفحة\nالاستخدام المقدر:\nالقسم A: 1,200,000 صفحة\nالقسم B: 2,400,000 صفحة\nالتكلفة المتغيرة $0.03 للصفحة\nإذا استخدمت الشركة طريقة المعدل الواحد على أساس الاستخدام المقدر، فما تكلفة التصوير المخصصة للقسم B خلال سنة الموازنة؟",
+    "choicesAr": [
+      "$72,000",
+      "$122,000",
+      "$132,000",
+      "$138,667"
+    ],
+    "explanationAr": "يتوقع أن يستخدم القسم B نسبة 66 2/3% من إجمالي النشاط (2,400,000 ÷ 3,600,000)، فيخصص له من التكاليف الثابتة $66,667 ($100,000 × 66 2/3%). وتبلغ التكلفة المتغيرة المخصصة $72,000 (2,400,000 صفحة × $.03 للصفحة). وإجمالي المخصص $138,667 ($66,667 + $72,000)."
   },
   {
     "unit": 9,
@@ -2261,7 +2389,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Based on budgeted usage, Department A should be allocated\n33 1/3% [1,200,000 pages ÷ (1,200,000 pages + 2,400,000\npages)] of fixed costs, or $33,333 ($100,000 × 33 1/3%). The\nvariable costs are allocated at $.03 per unit for 1,400,000\npages, or $42,000. The sum of the fixed and variable\nelements is $75,333.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يقدم قسم التصوير في شركة لونغستريت خدمات النسخ للقسمين A وB، وأعد موازنته للسنة القادمة باستخدام البيانات التالية:\nالتكاليف الثابتة $100,000\nالطاقة المتاحة 4,000,000 صفحة\nالاستخدام المقدر:\nالقسم A: 1,200,000 صفحة\nالقسم B: 2,400,000 صفحة\nالتكلفة المتغيرة $0.03 للصفحة\nإذا استخدمت الشركة طريقة المعدلين بحيث تخصص التكاليف الثابتة على أساس الاستخدام المقدر والمتغيرة على أساس الاستخدام الفعلي، فما التكلفة المخصصة للقسم A إذا بلغ الاستخدام الفعلي للقسم A مقدار 1,400,000 صفحة وللقسم B مقدار 2,100,000 صفحة؟",
+    "choicesAr": [
+      "$42,000",
+      "$72,000",
+      "$75,333",
+      "$82,000"
+    ],
+    "explanationAr": "وفق الاستخدام المقدر، يخصص للقسم A نسبة 33 1/3% [1,200,000 صفحة ÷ (1,200,000 صفحة + 2,400,000 صفحة)] من التكاليف الثابتة، أي $33,333 ($100,000 × 33 1/3%). وتخصص التكاليف المتغيرة بمعدل $.03 للوحدة لعدد 1,400,000 صفحة، أي $42,000. ويبلغ إجمالي الثابت والمتغير $75,333."
   },
   {
     "unit": 9,
@@ -2278,7 +2414,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The direct method allocates service department costs directly\nto the producing departments without recognition of services\nprovided among the service departments. Hence, no service\ncost is allocated to the Tool Department because it is a\nservice department.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لدى شركة M&P Tool ثلاثة أقسام خدمية تدعم الإنتاج. فيما يلي التكاليف غير المباشرة المقدرة للسنة المقبلة:\nالقسم الخدمي | التكاليف المقدرة | عدد الموظفين\nالاستلام | $25,000 | 2\nالإصلاح | 35,000 | 2\nالأدوات | 10,000 | 1\nأقسام الإنتاج | عدد الموظفين\nالتجميع | 25\nالربط بالمسامير | 12\nيدعم قسم الإصلاح أكبر عدد من الأقسام، يليه قسم الأدوات. تخصص التكاليف على أساس عدد الموظفين. إذا استخدمت الشركة الطريقة المباشرة، فما المبلغ المخصص من تكاليف قسم الإصلاح إلى قسم الأدوات؟",
+    "choicesAr": [
+      "$0",
+      "$875",
+      "$7,000",
+      "$11,667"
+    ],
+    "explanationAr": "تخصص الطريقة المباشرة تكاليف الأقسام الخدمية لأقسام الإنتاج مباشرة دون الاعتراف بالخدمات المقدمة بين الأقسام الخدمية. لذلك لا يخصص أي مبلغ لقسم الأدوات لأنه قسم خدمي."
   },
   {
     "unit": 9,
@@ -2295,7 +2439,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Under the step-down method, service costs are allocated to all\ndepartments. However, no reciprocal allocations among\nservice departments are performed. The process usually\nbegins with the department that provides the greatest\npercentage of its services to other service departments. Thus,\nthe Repair Department is the logical starting point. Given that\nservice costs are allocated to each department (service or\nproduction) on the basis of its proportion of employees\n(excluding employees in the allocating department), the\nallocation of the Repair Department’s overhead to the Tool\nDepartment is $875 {[1 employee ÷ (1 + 2 + 25 + 12)] ×\n$35,000}.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لدى شركة M&P Tool ثلاثة أقسام خدمية تدعم الإنتاج. فيما يلي التكاليف غير المباشرة المقدرة للسنة المقبلة:\nالقسم الخدمي | التكاليف المقدرة | عدد الموظفين\nالاستلام | $25,000 | 2\nالإصلاح | 35,000 | 2\nالأدوات | 10,000 | 1\nأقسام الإنتاج | عدد الموظفين\nالتجميع | 25\nالربط بالمسامير | 12\nيدعم قسم الإصلاح أكبر عدد من الأقسام، يليه قسم الأدوات. تخصص التكاليف على أساس عدد الموظفين. باستخدام الطريقة التدرجية، ما المبلغ المخصص من الإصلاح إلى الأدوات؟",
+    "choicesAr": [
+      "$0",
+      "$875",
+      "$7,000",
+      "$11,667"
+    ],
+    "explanationAr": "تخصص الطريقة التدرجية تكاليف الخدمات للأقسام المستفيدة دون تخصيص عكسي للأقسام الخدمية المقفلة. تبدأ العملية عادة بالقسم الذي يقدم النسبة الأكبر من خدماته للأقسام الخدمية الأخرى. وفي المسألة يبدأ التخصيص بقسم الإصلاح. ولأن التخصيص يعتمد على نسبة الموظفين في كل قسم مستفيد مع استبعاد موظفي القسم المخصص، فإن نصيب قسم الأدوات يبلغ $875 {[1 موظف ÷ (1 + 2 + 25 + 12)] × $35,000}."
   },
   {
     "unit": 9,
@@ -2346,7 +2498,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The direct method of service department allocation is the\nsimplest. Service department costs are allocated directly to the\nproducing departments without regard for services rendered\nby service departments to each other. Service department\ncosts are allocated to production departments based on an\nallocation base appropriate to each service department’s\nfunction. The appropriate allocation base for the Systems\nDepartment is computer usage hours. Thus, the denominator\nfor allocating Systems will be the total computer hours used by\nthe production departments (3,600 + 1,800 + 2,700 = 8,100).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لدى شركة Logo قسمان خدميان (النظم والمرافق) يدعمان ثلاثة أقسام إنتاجية (التشغيل بالآلات والتجميع والتشطيب). تخصص تكاليف النظم على أساس ساعات استخدام الحاسب وتكاليف المرافق على أساس المساحة بالقدم المربع (بالآلاف). البيانات كما يلي:\nالقسم | التكاليف غير المباشرة | ساعات الحاسب | المساحة\nالنظم | $200,000 | 300 | 1,000\nالمرافق | 100,000 | 900 | 600\nالتشغيل بالآلات | 400,000 | 3,600 | 2,000\nالتجميع | 550,000 | 1,800 | 3,000\nالتشطيب | 620,000 | 2,700 | 5,000\nالإجمالي | | 9,300 | 11,600\nباستخدام الطريقة المباشرة، على أي عدد من الساعات تقسم تكاليف قسم النظم لتحديد معدل تخصيصها؟",
+    "choicesAr": [
+      "1,200 ساعة.",
+      "8,100 ساعة.",
+      "9,000 ساعة.",
+      "9,300 ساعة."
+    ],
+    "explanationAr": "الطريقة المباشرة أبسط طرق تخصيص تكاليف الأقسام الخدمية، إذ تحملها مباشرة على أقسام الإنتاج دون الاعتراف بالخدمات بين الأقسام الخدمية. ويختار أساس تخصيص ملائم لوظيفة القسم. أساس تخصيص النظم هو ساعات استخدام الحاسب، لذا يقتصر المقام على مجموع ساعات أقسام الإنتاج (3,600 + 1,800 + 2,700 = 8,100)."
   },
   {
     "unit": 9,
@@ -2431,7 +2591,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Using the step-down method, the first step is to allocate the\n$6,300,000 from Maintenance to the other three departments\nbased on the 20,000 maintenance hours worked for the other\nthree departments (4,000 + 6,000 + 10,000). Thus, 20% (4,000\n÷ 20,000) of the overhead cost, or $1,260,000, would be\nallocated to Information Systems. Another 30% (6,000 ÷\n20,000), or $1,890,000, would go to Machining, while the\nremaining 50% (10,000 ÷ 20,000), or $3,150,000, would go to\nAssembly. With the addition of $1,260,000 in the previous step,\nthe total for Information Systems becomes $2,712,150\n($1,452,150 + $1,260,000). The amount of $2,712,150 will be\nallocated to the other two departments at an 8/9 to 1/9 ratio\n(4,000 hours ÷ 4,500 hours to 500 hours ÷ 4,500 hours).\nMultiplying $2,712,150 by 8/9 equals $2,410,800 for\nMachining. Multiplying $2,712,150 by 1/9 equals $301,350 for\nAssembly. Adding all of the elements of cost together for each\nof the two operating departments results in $8,300,800\n($4,000,000 + $1,890,000 + $2,410,800) for Machining and\n$5,451,350 ($2,000,000 + $3,150,000 + $301,350) for\nAssembly.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لدى شركة قسمان للدعم، الصيانة ونظم المعلومات، وقسمان للتشغيل، التشغيل بالآلات والتجميع. فيما يلي التكاليف غير المباشرة لكل قسم:\nالبند | الصيانة | نظم المعلومات | التشغيل بالآلات | التجميع\nالتكاليف غير المباشرة | $6,300,000 | $1,452,150 | $4,000,000 | $2,000,000\nساعات الصيانة | - | 4,000 | 6,000 | 10,000\nساعات نظم المعلومات | 500 | - | 4,000 | 500\nباستخدام الطريقة التدرجية، ما إجمالي التكاليف غير المباشرة لكل قسم تشغيل؟\nالتشغيل بالآلات | التجميع",
+    "choicesAr": [
+      "$8,300,800 $5,451,350",
+      "$7,653,300 $6,098,850",
+      "$8,187,025 $5,565,125",
+      "$5,451,350 $8,300,800"
+    ],
+    "explanationAr": "تبدأ الطريقة التدرجية في هذه المسألة بتخصيص $6,300,000 من الصيانة إلى الأقسام الأخرى على أساس 20,000 ساعة صيانة (4,000 + 6,000 + 10,000). فتخصص نسبة 20% (4,000 ÷ 20,000)، أي $1,260,000 لنظم المعلومات، ونسبة 30% (6,000 ÷ 20,000)، أي $1,890,000 للتشغيل بالآلات، ونسبة 50% (10,000 ÷ 20,000)، أي $3,150,000 للتجميع. وبإضافة $1,260,000 من الخطوة السابقة تصبح تكلفة نظم المعلومات $2,712,150 ($1,452,150 + $1,260,000). ويخصص مبلغ $2,712,150 للقسمين بنسبة 8/9 إلى 1/9 (4,000 ساعة ÷ 4,500 ساعة إلى 500 ساعة ÷ 4,500 ساعة). ينتج عن ضرب $2,712,150 في 8/9 مبلغ $2,410,800 للتشغيل بالآلات، وضرب $2,712,150 في 1/9 مبلغ $301,350 للتجميع. ويبلغ إجمالي تكاليف التشغيل بالآلات $8,300,800 ($4,000,000 + $1,890,000 + $2,410,800)، والتجميع $5,451,350 ($2,000,000 + $3,150,000 + $301,350)."
   },
   {
     "unit": 9,
@@ -2448,6 +2616,14 @@
     ],
     "answerIndex": 2,
     "explanation": "Under the direct method, service department costs are\nallocated directly to the producing departments without regard\nfor services rendered by service departments to each other.\nThus, the $200,000 costs of the IT department must be\nallocated between operating departments X and Y. IT\ndepartment costs are allocated based on the budgeted IT\nhours for the department. Department Y is budgeted\n300 hours out of 750 total hours budgeted to operating\ndepartments, or 40%. Thus, the IT costs allocated to\nDepartment Y will equal $80,000 ($200,000 × 40%).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لدى شركة قسمان خدميان هما الموارد البشرية (HR) وتقنية المعلومات (IT). تخصص تكاليف الموارد البشرية البالغة $150,000 على أساس عدد الموظفين، وتكاليف تقنية المعلومات البالغة $200,000 على أساس ساعات الخدمة. وتبلغ تكاليف قسمي التشغيل X وY مبلغ $250,000 و$180,000 على التوالي. وفيما يلي البيانات المقدرة:\nالبند | HR | IT | X | Y\nالتكاليف المقدرة | $150,000 | $200,000 | $250,000 | $180,000\nساعات تقنية المعلومات المقدرة | لا ينطبق | 400 | 450 | 300\nعدد الموظفين | 20 | لا ينطبق | 120 | 90\nوفق الطريقة المباشرة، ما مقدار تكاليف تقنية المعلومات المخصصة للقسم Y؟",
+    "choicesAr": [
+      "$85,714",
+      "$83,721",
+      "$80,000",
+      "$52,174"
+    ],
+    "explanationAr": "تخصص الطريقة المباشرة تكاليف الأقسام الخدمية مباشرة لأقسام الإنتاج دون مراعاة الخدمات المتبادلة بين الأقسام الخدمية. لذا توزع تكاليف تقنية المعلومات البالغة $200,000 على قسمي التشغيل X وY على أساس ساعات الخدمة المقدرة. ويستخدم القسم Y عدد 300 ساعة من إجمالي 750 ساعة مقدرة لقسمي التشغيل، أي 40%. فيبلغ نصيبه $80,000 ($200,000 × 40%)."
   }
 ]
