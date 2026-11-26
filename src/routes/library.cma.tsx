@@ -11,6 +11,7 @@ import {
   XCircle,
 } from "lucide-react";
 import { CMA_LOCAL_QUESTIONS } from "@/data/cma-question-bank";
+import { indexCmaQuestionsByTopic } from "@/lib/cma-topic-index.shared";
 import { CMA_PART2_PRACTICE_SOURCES } from "@/data/cma-part2-practice-sources";
 import { CmaTranslatedQuestion } from "@/components/library/CmaTranslatedQuestion";
 import { CmaReadableText } from "@/components/library/CmaReadableText";
@@ -41,6 +42,8 @@ import {
   type CmaStudyUnit,
 } from "@/data/cma-topics";
 import { useLibLang } from "@/routes/library";
+
+const questionsByTopic = indexCmaQuestionsByTopic(CMA_LOCAL_QUESTIONS);
 
 const bilingualQuestionCount = CMA_LOCAL_QUESTIONS.filter((q) =>
   !q.id.startsWith("cma-gleim-2025-") && q.sourceLanguage !== "en",
@@ -144,7 +147,7 @@ function CmaPage() {
       : CMA_PART1_BEGINNER_NOTES[selected.id]
     : null;
   const questions = selected
-    ? CMA_LOCAL_QUESTIONS.filter((item) => item.topicId === selected.id)
+    ? (questionsByTopic.get(selected.id) ?? [])
     : [];
 
   return (
@@ -366,7 +369,7 @@ function CmaPage() {
           ) : (
             <div className="grid gap-4 md:grid-cols-2">
               {filtered.map((item) => {
-                const count = CMA_LOCAL_QUESTIONS.filter((q) => q.topicId === item.id).length;
+                const count = (questionsByTopic.get(item.id)?.length ?? 0);
                 return (
                   <article
                     key={item.id}

@@ -105,3 +105,20 @@ test("Part 2 provisional source comparisons never count toward performance", asy
   assert.ok(component.includes("Provisional source key:"));
   assert.ok(component.includes("scorable && <CmaAnswerSupport"));
 });
+
+test("CMA topic index preserves source order and isolates topic lookups", async () => {
+  const { indexCmaQuestionsByTopic } = await import("../../src/lib/cma-topic-index.shared.ts");
+  const questions = [
+    { id: "1", topicId: "a" }, { id: "2", topicId: "b" }, { id: "3", topicId: "a" },
+  ];
+  const index = indexCmaQuestionsByTopic(questions);
+  assert.deepEqual(index.get("a"), [questions[0], questions[2]]);
+  assert.deepEqual(index.get("b"), [questions[1]]);
+  assert.equal(index.get("missing"), undefined);
+  assert.equal(indexCmaQuestionsByTopic([]).size, 0);
+  const source = read("src/routes/library.cma.tsx");
+  assert.ok(source.includes("indexCmaQuestionsByTopic(CMA_LOCAL_QUESTIONS)"));
+  assert.ok(source.includes("questionsByTopic.get(selected.id)"));
+  assert.ok(source.includes("questionsByTopic.get(item.id)?.length"));
+  assert.doesNotMatch(source, /CMA_LOCAL_QUESTIONS\.filter\(\(q\) => q\.topicId === item\.id\)/);
+});
