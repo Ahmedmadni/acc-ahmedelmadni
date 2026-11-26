@@ -77,6 +77,6 @@ export const CMA_GLEIM_2025_VOL1_QUESTIONS: CmaLocalQuestion[] = records.map((it
     sourcePage: item.page,
     answerStatus: item.answerStatus === "inferred" ? "inferred" : "source",
     sourceTextStatus: item.sourceTextStatus,
-    sourceLayoutReview: pendingUnit1SourceReviews.has(`${item.unit}.${item.section}.${item.number}`) || undefined,
+    sourceLayoutReview: item.sourceTextStatus === "table-reflowed" || item.sourceTextStatus === "reconstructed" || item.answerStatus === "inferred" || pendingUnit1SourceReviews.has(`${item.unit}.${item.section}.${item.number}`) || undefined,
   };
 });
