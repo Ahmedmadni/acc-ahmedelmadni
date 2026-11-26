@@ -48,19 +48,19 @@ export const CMA_PART1_FINAL_WORKED: Record<string, NonNullable<CmaBeginnerNote[
   },
   "su3-debt-securities": {
     "scenario": {
-      "ar": "اشترت شركة سندًا بقيمة 100,000 بفائدة سنوية 5%، وظل السند قائمًا سنة كاملة. احسب الكوبون السنوي، بافتراض ثبات الأصل وعدم وجود خصم أو علاوة.",
-      "en": "A bond has face amount 100,000 and a 5% annual coupon, held for a full year. Find coupon cash flow assuming no changes in principal or premium/discount."
+      "ar": "اشترت شركة سندًا قيمته الاسمية 100,000 بفائدة تعاقدية سنوية 5%، واحتفظت به سنة كاملة. احسب الكوبون النقدي السنوي، بافتراض ثبات القيمة الاسمية.",
+      "en": "An investor holds a bond with face amount 100,000 and a 5% annual coupon for a full year. Find annual coupon cash flow assuming unchanged face amount."
     },
     "steps": {
       "ar": [
         "القيمة الاسمية = 100,000.",
         "الفائدة التعاقدية = 100,000 × 5%.",
-        "الكوبون النقدي السنوي = 5,000؛ ولا يعني ذلك أن كل السندات لها نفس مصروف الفائدة الفعلي."
+        "الكوبون النقدي السنوي = 5,000؛ وقد يختلف إيراد الفائدة وفق معدل الفائدة الفعلي عند وجود علاوة أو خصم."
       ],
       "en": [
         "Bond face amount = 100,000.",
         "Contractual coupon = 100,000 × 5%.",
-        "Annual coupon cash flow = 5,000; effective-interest expense can differ for other bond prices."
+        "Annual coupon cash flow = 5,000; effective-interest income may differ when the bond is purchased at a premium or discount."
       ]
     },
     "takeaway": {
@@ -224,8 +224,8 @@ export const CMA_PART1_FINAL_WORKED: Record<string, NonNullable<CmaBeginnerNote[
   },
   "su10-erp-outsourcing": {
     "scenario": {
-      "ar": "قسم رواتب يكلف الشركة 80,000 سنويًا. يعرض مورد خارجي الخدمة بـ65,000، لكن سيبقى لدى الشركة إشراف وتكاليف انتقال قدرها 10,000 سنويًا. ما الوفر المبدئي؟",
-      "en": "Internal payroll processing costs 80,000 annually. An outsourcer charges 65,000, plus continuing oversight and transition expense of 10,000 per year. Find preliminary savings."
+      "ar": "قسم رواتب يكلف الشركة 80,000 سنويًا، بافتراض إمكانية تجنب هذا المبلغ بالكامل. يعرض مورد خارجي الخدمة بـ65,000، مع تكاليف إشراف وانتقال محسوبة على أساس سنوي قدرها 10,000. ما الوفر المبدئي؟",
+      "en": "Internal payroll processing costs 80,000 annually, all assumed avoidable. An outsourcer charges 65,000 annually, plus oversight and annualized transition costs of 10,000. Find preliminary annual savings."
     },
     "steps": {
       "ar": [
@@ -620,17 +620,17 @@ export const CMA_PART1_FINAL_WORKED: Record<string, NonNullable<CmaBeginnerNote[
   },
   "su19-accounting-systems": {
     "scenario": {
-      "ar": "أصدر النظام فاتورة خدمات آجلة بـ5,000 ثم حصّلها بعد أسبوع. ما الحركة الأساسية على حساب العملاء؟",
-      "en": "An accounting system issues a credit service invoice of 5,000 and receives payment one week later. What happens to receivables?"
+      "ar": "قدمت شركة خدمة مستوفية لشروط الاعتراف بالإيراد وأصدرت فاتورة آجلة بقيمة 5,000، ثم حصلت المبلغ بعد أسبوع. ما أثر العمليتين على الذمم المدينة؟",
+      "en": "A company provides a service satisfying the revenue recognition criteria, issues a credit invoice of 5,000, and receives payment one week later. What happens to receivables?"
     },
     "steps": {
       "ar": [
-        "عند الفوترة المستحقة: مدين العملاء 5,000 ودائن الإيراد 5,000 وفق شروط الاعتراف.",
+        "عند الاعتراف بالإيراد وإصدار الفاتورة: من حـ/ الذمم المدينة 5,000 إلى حـ/ الإيرادات 5,000.",
         "عند التحصيل: مدين النقد 5,000 ودائن العملاء 5,000.",
         "رصيد العملاء الخاص بالفاتورة يعود للصفر دون تسجيل إيراد جديد."
       ],
       "en": [
-        "On qualified billing: debit receivables 5,000 and credit revenue 5,000.",
+        "On revenue recognition and billing: debit receivables 5,000 and credit revenue 5,000.",
         "On collection: debit cash 5,000 and credit receivables 5,000.",
         "The invoice's receivable clears without recording revenue again."
       ]
