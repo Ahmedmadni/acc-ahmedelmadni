@@ -357,3 +357,27 @@ test("Unit 9 independent departmental rates and overhead proration",()=>{
  assert.equal(2250000-90000*890000/(890000+100000+10000),2169900);
  assert.equal(30000*50000/(100000+50000+250000),3750);
 });
+
+const unit9Wave4Pins=new Map([[2,[994,3,"1eb3a90e"]],[8,[1001,2,"27733848"]],[9,[1002,3,"a8065bed"]],[10,[1003,3,"7f503d79"]],[11,[1004,0,"6cd61784"]],[12,[1005,3,"68714326"]],[13,[1006,3,"694867fe"]],[14,[1007,0,"e39b5c88"]],[15,[1008,0,"a4fa09be"]],[16,[1009,3,"7180d183"]],[17,[1010,1,"3865aef8"]],[18,[1011,2,"2dd6b622"]],[19,[1012,3,"487955f4"]],[20,[1013,1,"3c2c38de"]],[22,[1016,0,"dae5abc5"]],[23,[1017,3,"02d1deac"]],[24,[1018,2,"af8f131d"]],[25,[1019,0,"b587651b"]],[26,[1020,1,"a15e6631"]],[29,[1025,1,"2ade7916"]],[34,[1036,0,"ec2d3e7c"]],[35,[1038,2,"c526a140"]]]);
+test("Unit 9 service departments preserve source, keys, numeric parity and holds",()=>{
+ for(const [n,[page,index,hash]] of unit9Wave4Pins){const r=unit9Rows.find(r=>r.section===3&&r.number===n);assert.equal(r.page,page);assert.equal(r.answerIndex,index);assert.equal(r.answerStatus,"source");assert.equal(fingerprint(JSON.stringify([r.stem,r.choices,r.explanation,r.answerIndex,r.page])),hash);assert.equal(validateCmaTranslation({question:{en:r.stem},choices:{en:r.choices},explanation:{en:r.explanation}},{question:r.stemAr,choices:r.choicesAr,explanation:r.explanationAr}).valid,true,String(n));for(const [en,ar] of [[r.stem,r.stemAr],...r.choices.map((c,i)=>[c,r.choicesAr[i]]),[r.explanation,r.explanationAr]])assert.deepEqual(cmaNumericTokens(ar),cmaNumericTokens(en),String(n));}
+ const adapter=read("src/data/cma-questions-gleim-2025-vol1.ts");
+ const held=["9.3.1","9.3.3","9.3.4","9.3.5","9.3.6","9.3.7","9.3.21","9.3.27","9.3.28","9.3.30","9.3.31","9.3.32","9.3.33"];assert.deepEqual(unit9Rows.filter(r=>r.section===3&&!r.stemAr).map(r=>[r.unit,r.section,r.number].join(".")),held);for(const id of held)assert.ok(adapter.includes('"'+id+'"'),id);
+ assert.equal(unit9Rows.filter(r=>r.section===3).length,35);assert.equal(unit9Rows.filter(r=>r.section===3&&r.stemAr&&r.choicesAr&&r.explanationAr).length,22);assert.ok(unit9Rows.filter(r=>r.stemAr&&r.choicesAr&&r.explanationAr).length>=84);
+});
+test("Unit 9 independent direct, dual rate and step-down calculations",()=>{
+ assert.equal(Math.round(100000*2400000/3600000+2400000*.03),138667);
+ assert.equal(Math.round(100000*1200000/3600000+1400000*.03),75333);
+ assert.equal(35000/(1+2+25+12),875);
+ assert.equal(3600+1800+2700,8100);
+ const maintenance=6300000, information=1452150+maintenance*4000/20000;
+ const machining=4000000+maintenance*6000/20000+information*4000/4500;
+ const assembly=2000000+maintenance*10000/20000+information*500/4500;
+ assert.equal(machining,8300800);assert.equal(assembly,5451350);
+ assert.equal(machining+assembly,6300000+1452150+4000000+2000000);
+ assert.equal(200000*300/(450+300),80000);
+ const hr=400000,dp=70000,a=600/4700,b=3000/16200;
+ const fullHr=(hr+a*dp)/(1-a*b), fullDp=dp+b*fullHr;
+ assert.ok(Math.abs(fullHr-(hr+a*fullDp))<1e-8);
+ assert.ok(Math.abs(fullDp-(dp+b*fullHr))<1e-8);
+});
