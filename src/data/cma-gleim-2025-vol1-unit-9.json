@@ -99,7 +99,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Joint costs are useful for inventory costing when two or more\nidentifiable products emerge from a common production\nprocess. The joint costs of production must be allocated on\nsome basis, such as relative sales value.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في أي الأغراض التالية تفيد التكاليف المشتركة؟",
+    "choicesAr": [
+      "تحديد سعر بيع المنتج.",
+      "تحديد ما إذا كان ينبغي الاستمرار في إنتاج صنف.",
+      "تقييم الإدارة باستخدام تقارير المسؤولية.",
+      "تحديد تكلفة المخزون للأغراض المحاسبية."
+    ],
+    "explanationAr": "تفيد التكاليف المشتركة في احتساب تكلفة المخزون عندما ينشأ منتجان متميزان أو أكثر عن عملية إنتاج مشتركة. وتخصص تكاليف الإنتاج المشتركة على أساس مناسب، مثل قيم البيع النسبية. ولا تعد التكاليف المشتركة المتكبدة أساسًا لاتخاذ قرار المعالجة الإضافية."
   },
   {
     "unit": 9,
@@ -150,7 +158,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Joint costs are most often assigned on the basis of relative\nsales values or net realizable values. Basing allocations on\nphysical quantities, such as pounds, gallons, etc., is usually\nnot desirable because the costs assigned may have no\nrelationship to value. When large items have low selling prices\nand small items have high selling prices, the large items might\nalways sell at a loss when physical quantities are used to\nallocate joint costs.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما العيب الرئيسي لاستخدام طريقة الكميات المادية في تخصيص التكاليف المشتركة؟",
+    "choicesAr": [
+      "قد لا ترتبط التكاليف المحملة على المخزون بقيمته.",
+      "قد يصعب قياس الكميات المادية.",
+      "تؤثر تكاليف المعالجة الإضافية في أساس التخصيص.",
+      "لا ينبغي تقسيم التكاليف المشتركة على أساس الوحدة بحكم تعريفها."
+    ],
+    "explanationAr": "غالبًا تخصص التكاليف المشتركة على أساس قيم البيع النسبية أو صافي القيم القابلة للتحقق. وقد يكون تخصيصها بحسب الكميات المادية، مثل الأرطال أو الجالونات، غير مناسب لأن التكلفة المخصصة قد لا ترتبط بالقيمة. فإذا كانت المنتجات كبيرة الحجم منخفضة السعر والصغيرة مرتفعة السعر، فقد يظهر بيع المنتجات الكبيرة بخسارة بسبب التخصيص المادي، دون أن يعني ذلك بالضرورة أنها غير مجدية اقتصاديًا."
   },
   {
     "unit": 9,
@@ -167,7 +183,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Total joint production costs incurred were $9,000,000\n($4,000,000 + $2,000,000 + $3,000,000). The total physical\noutput was 660,000 barrels (300,000 barrels of Grade One +\n240,000 barrels of Grade Two + 120,000 barrels of Grade\nThree). Thus, on a physical output basis, Grade Two should\nbe allocated $3,273,000 [(240,000 ÷ 660,000) × $9,000,000].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "شركة Travis Petroleum صغيرة تشتري النفط الخام وتصنع منه ثلاثة منتجات وسيطة تختلف في الدرجة فقط: Grade One وGrade Two وGrade Three. ولم يوجد مخزون إنتاج تام أو تحت التشغيل في 1 نوفمبر. وفيما يلي تكاليف إنتاج نوفمبر، بافتراض أن التكاليف القابلة للفصل غير جوهرية:\nالنفط الخام المشترى والمدخل للإنتاج | $4,000,000\nالأجور المباشرة والتكاليف المرتبطة | 2,000,000\nالتكاليف الصناعية غير المباشرة | 3,000,000\nبيانات الإنتاج والمبيعات:\nالبند | Grade One | Grade Two | Grade Three\nالبراميل المنتجة | 300,000 | 240,000 | 120,000\nالبراميل المباعة | 80,000 | 120,000 | 120,000\nسعر بيع البرميل | $30 | $40 | $50\nما نصيب Grade Two من تكاليف الإنتاج المشتركة على أساس كمية الإنتاج المادية، مقربًا إلى أقرب ألف دولار؟",
+    "choicesAr": [
+      "$3,273,000",
+      "$3,375,000",
+      "$1,636,000",
+      "$3,512,000"
+    ],
+    "explanationAr": "بلغ إجمالي تكاليف الإنتاج المشتركة $9,000,000 ($4,000,000 + $2,000,000 + $3,000,000). وبلغ إجمالي الإنتاج المادي 660,000 برميل (300,000 برميل من Grade One + 240,000 برميل من Grade Two + 120,000 برميل من Grade Three). وعلى أساس كمية الإنتاج يخصص لـ Grade Two مبلغ $3,273,000 [(240,000 ÷ 660,000) × $9,000,000] بعد التقريب."
   },
   {
     "unit": 9,
@@ -184,7 +208,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Total joint production costs incurred were $9,000,000\n($4,000,000 + $2,000,000 + $3,000,000). The sales values of\nthe three products are as follows:\nGrade One (300,000 barrels × $30)                   $ 9,000,000\nGrade Two (240,000 barrels × $40)                     9,600,000\nGrade Three (120,000 barrels × $50)                   6,000,000\nTotal sales value                               $24,600,000\nConsequently, Grade One should be assigned joint costs of\n$3,293,000 [($9,000,000 ÷ $24,600,000) × $9,000,000].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "شركة Travis Petroleum صغيرة تشتري النفط الخام وتصنع منه ثلاثة منتجات وسيطة تختلف في الدرجة فقط: Grade One وGrade Two وGrade Three. ولم يوجد مخزون إنتاج تام أو تحت التشغيل في 1 نوفمبر. وفيما يلي تكاليف إنتاج نوفمبر، بافتراض أن التكاليف القابلة للفصل غير جوهرية:\nالنفط الخام المشترى والمدخل للإنتاج | $4,000,000\nالأجور المباشرة والتكاليف المرتبطة | 2,000,000\nالتكاليف الصناعية غير المباشرة | 3,000,000\nبيانات الإنتاج والمبيعات:\nالبند | Grade One | Grade Two | Grade Three\nالبراميل المنتجة | 300,000 | 240,000 | 120,000\nالبراميل المباعة | 80,000 | 120,000 | 120,000\nسعر بيع البرميل | $30 | $40 | $50\nما نصيب Grade One من تكاليف الإنتاج المشتركة على أساس قيم بيع الإنتاج النسبية، مقربًا إلى أقرب ألف دولار؟",
+    "choicesAr": [
+      "$3,512,000",
+      "$3,293,000",
+      "$1,636,000",
+      "$4,091,000"
+    ],
+    "explanationAr": "بلغ إجمالي تكاليف الإنتاج المشتركة $9,000,000 ($4,000,000 + $2,000,000 + $3,000,000). وفيما يلي قيم بيع المنتجات الثلاثة:\nGrade One (300,000 برميل × $30) | $9,000,000\nGrade Two (240,000 برميل × $40) | 9,600,000\nGrade Three (120,000 برميل × $50) | 6,000,000\nإجمالي قيمة البيع | $24,600,000\nلذلك يخصص لـ Grade One مبلغ $3,293,000 [($9,000,000 ÷ $24,600,000) × $9,000,000] بعد التقريب."
   },
   {
     "unit": 9,
@@ -201,7 +233,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Total joint production costs incurred were $9,000,000\n($4,000,000 + $2,000,000 + $3,000,000). The sales values of\nthe three products are as follows:\nGrade One (300,000 barrels × $30)                   $ 9,000,000\nGrade Two (240,000 barrels × $40)                     9,600,000\nGrade Three (120,000 barrels × $50)                   6,000,000\nTotal sales value                                 $24,600,000\nAccordingly, costs assigned to Grade Two on a relative sales\nvalue basis (rounded) equal $3,512,000 [($4,000,000 +\n$3,000,000 + $2,000,000) × ($9,600,000 ÷ $24,600,000)].\nThus, the value of the ending inventory of Grade Two should\nbe $1,756,000 [120,000 barrels in EI × ($3,512,000 ÷ 240,000\nbarrels produced)].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "شركة Travis Petroleum صغيرة تشتري النفط الخام وتصنع منه ثلاثة منتجات وسيطة تختلف في الدرجة فقط: Grade One وGrade Two وGrade Three. ولم يوجد مخزون إنتاج تام أو تحت التشغيل في 1 نوفمبر. وفيما يلي تكاليف إنتاج نوفمبر، بافتراض أن التكاليف القابلة للفصل غير جوهرية:\nالنفط الخام المشترى والمدخل للإنتاج | $4,000,000\nالأجور المباشرة والتكاليف المرتبطة | 2,000,000\nالتكاليف الصناعية غير المباشرة | 3,000,000\nبيانات الإنتاج والمبيعات:\nالبند | Grade One | Grade Two | Grade Three\nالبراميل المنتجة | 300,000 | 240,000 | 120,000\nالبراميل المباعة | 80,000 | 120,000 | 120,000\nسعر بيع البرميل | $30 | $40 | $50\nعلى أساس قيم بيع الإنتاج النسبية، ما تكلفة مخزون آخر المدة من Grade Two؟",
+    "choicesAr": [
+      "$3,512,000",
+      "$1,756,000",
+      "$1,636,000",
+      "$3,375,000"
+    ],
+    "explanationAr": "بلغ إجمالي تكاليف الإنتاج المشتركة $9,000,000 ($4,000,000 + $2,000,000 + $3,000,000). وفيما يلي قيم البيع:\nGrade One (300,000 برميل × $30) | $9,000,000\nGrade Two (240,000 برميل × $40) | 9,600,000\nGrade Three (120,000 برميل × $50) | 6,000,000\nإجمالي قيمة البيع | $24,600,000\nتبلغ التكاليف المخصصة لـ Grade Two على أساس قيم البيع النسبية (بعد التقريب) $3,512,000 [($4,000,000 + $3,000,000 + $2,000,000) × ($9,600,000 ÷ $24,600,000)]. ومن ثم تبلغ قيمة مخزون آخر المدة $1,756,000 [120,000 برميل في المخزون × ($3,512,000 ÷ 240,000 برميل منتج)]."
   },
   {
     "unit": 9,
@@ -218,7 +258,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Total sales value at split-off is $800,000 [(2,500 × $100) +\n(5,000 × $80) + (7,500 × $20)]. Product S accounts for 50%\n(5,000 × $80 = $400,000) of the sales value and therefore\n$360,000 ($720,000 × 50%) of the joint costs. The total cost of\nProduct S is $510,000 ($360,000 allocated costs + $150,000\ndifferential costs).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم Pickett Manufacturing عملية إنتاج مشتركة ينتج عنها ثلاثة منتجات عند نقطة الانفصال. وبلغت تكاليف الإنتاج المشتركة في أبريل $720,000. وفيما يلي بيانات المنتجات:\nالبند | R | S | T\nالوحدات المنتجة | 2,500 | 5,000 | 7,500\nالوحدات المباعة | 2,000 | 6,000 | 7,000\nسعر البيع عند نقطة الانفصال | $100 | $80 | $20\nسعر البيع بعد المعالجة الإضافية | $150 | $115 | $30\nتكاليف المعالجة بعد الانفصال | $150,000 | $150,000 | $100,000\nافترض أن المنتجات الثلاثة رئيسية ويمكن بيعها عند نقطة الانفصال أو معالجتها إضافيًا بحسب الجدوى الاقتصادية. ما التكلفة الإجمالية للمنتج S في أبريل إذا خصصت التكاليف المشتركة على أساس قيمة البيع عند الانفصال؟",
+    "choicesAr": [
+      "$375,000",
+      "$390,000",
+      "$510,000",
+      "$571,463"
+    ],
+    "explanationAr": "إجمالي قيمة البيع عند الانفصال $800,000 [(2,500 × $100) + (5,000 × $80) + (7,500 × $20)]. ويمثل S نسبة 50% (5,000 × $80 = $400,000) من قيمة البيع، ومن ثم يتحمل $360,000 ($720,000 × 50%) من التكاليف المشتركة. وتبلغ تكلفته الإجمالية $510,000 ($360,000 تكاليف مخصصة + $150,000 تكاليف تفاضلية للمعالجة الإضافية)."
   },
   {
     "unit": 9,
@@ -235,7 +283,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The net realizable value (NRV) method is an appropriate\nmethod of allocation when products cannot be sold at split-off.\nFurther processing of R, which is salable at split-off, is not\neconomical because the cost of $150,000 exceeds the benefit\n[2,500 units × ($150 – $100) = $125,000]. Thus, R’s NRV is\n$250,000 (2,500 units × $100 price at split-off). However, S\nand T must be processed further. S’s NRV is $425,000 [(5,000\nunits × $115) – $150,000], and T’s NRV is $125,000 [(7,500\nunits × $30) – $100,000]. Given that the NRV of T is a\nreduction of joint cost, the total joint cost to be allocated is\ntherefore $595,000 ($720,000 – $125,000 NRV of T).\nAccordingly, based on the NRV method, the joint cost\nallocated to R is $220,370 {[$250,000 R’s NRV ÷ ($250,000\nR’s NRV + $425,000 S’s NRV)] × $595,000 allocable joint\ncost}. Because further processing of R is uneconomical, the\ntotal cost of R is $220,370.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم Pickett Manufacturing عملية إنتاج مشتركة ينتج عنها ثلاثة منتجات عند نقطة الانفصال. وبلغت تكاليف الإنتاج المشتركة في أبريل $720,000. وفيما يلي بيانات المنتجات:\nالبند | R | S | T\nالوحدات المنتجة | 2,500 | 5,000 | 7,500\nالوحدات المباعة | 2,000 | 6,000 | 7,000\nسعر البيع عند نقطة الانفصال | $100 | $80 | $20\nسعر البيع بعد المعالجة الإضافية | $150 | $115 | $30\nتكاليف المعالجة بعد الانفصال | $150,000 | $150,000 | $100,000\nافترض أن المنتج T منتج ثانوي، وأن الشركة تعالجه بصافي القيمة القابلة للتحقق تخفيضًا للتكاليف المشتركة. وافترض أيضًا أن S وT يحتاجان إلى معالجة إضافية قبل البيع. ما التكلفة الإجمالية للمنتج R في أبريل عند تخصيص التكاليف المشتركة بحسب صافي القيم القابلة للتحقق؟",
+    "choicesAr": [
+      "$220,370",
+      "$370,370",
+      "$374,630",
+      "$595,000"
+    ],
+    "explanationAr": "تصلح طريقة صافي القيمة القابلة للتحقق (NRV) عندما يتعذر بيع المنتجات عند نقطة الانفصال. ولا تجدي معالجة R الإضافية، إذ يمكن بيعه عند الانفصال وتزيد تكلفة المعالجة $150,000 على منفعتها [2,500 وحدة × ($150 − $100) = $125,000]. ومن ثم تبلغ قيمته الصافية $250,000 (2,500 وحدة × $100 سعر الانفصال). أما S وT فيلزم معالجتهما إضافيًا. وتبلغ القيمة الصافية لـ S مبلغ $425,000 [(5,000 وحدة × $115) − $150,000] ولـ T مبلغ $125,000 [(7,500 وحدة × $30) − $100,000]. وبخصم القيمة الصافية لـ T يصبح إجمالي التكلفة المشتركة القابلة للتخصيص $595,000 ($720,000 − $125,000). وباستخدام NRV يخصص لـ R مبلغ $220,370 {[$250,000 قيمة R ÷ ($250,000 قيمة R + $425,000 قيمة S)] × $595,000 تكاليف مشتركة قابلة للتخصيص}. ولأن معالجته الإضافية غير مجدية، تبلغ تكلفته الإجمالية $220,370."
   },
   {
     "unit": 9,
@@ -252,7 +308,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Joint products are common products created from processing\na single input (e.g., gasoline, diesel fuel, and kerosene). Joint\nproducts have common costs until they reach the split-off\npoint. Joint costing assigns common costs to joint products.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما أفضل وصف لتحميل تكاليف المواد الخام على المنتجات النهائية الرئيسية الناتجة عن تكرير برميل نفط خام؟",
+    "choicesAr": [
+      "التكاليف غير المباشرة.",
+      "التكاليف المشتركة.",
+      "التكاليف التفاضلية.",
+      "التكاليف الإضافية."
+    ],
+    "explanationAr": "المنتجات المشتركة منتجات تنتج من معالجة مدخل مشترك، مثل البنزين والديزل والكيروسين. وتشترك في التكاليف حتى نقطة الانفصال. وتخصص طريقة التكاليف المشتركة هذه التكاليف للمنتجات المشتركة."
   },
   {
     "unit": 9,
@@ -269,7 +333,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The joint cost to be allocated is $2,400,000 [$2,520,000 total\njoint cost – (60,000 pounds of the by-product) × $2].\nAccordingly, the joint cost to be allocated to the Second Main\nProduct on a physical-volume basis is $1,500,000 {[150,000\npounds ÷ (90,000 pounds + 150,000 pounds) × $2,400,000]}.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تنتج شركة منتجين رئيسيين ومنتجًا ثانويًا من عملية مشتركة. وتظل نسبة كميات المخرجات إلى مدخلات المواد المباشرة مستقرة شهريًا. وتستخدم طريقة الحجم المادي لتخصيص تكاليف الإنتاج المشتركة للمنتجين الرئيسيين، بعد خصم صافي القيمة القابلة للتحقق للمنتج الثانوي. وتكبدت خلال الشهر تكاليف إنتاج مشتركة $2,520,000. ولا يمكن تسويق المنتجين الرئيسيين عند الانفصال، لذا تجب معالجتهما إضافيًا.\nالبند | الرئيسي الأول | الرئيسي الثاني | الثانوي\nالإنتاج الشهري بالرطل | 90,000 | 150,000 | 60,000\nسعر بيع الرطل | $30 | $14 | $2\nتكاليف المعالجة القابلة للفصل | $540,000 | $660,000 | —\nما التكلفة المشتركة المخصصة للمنتج الرئيسي الثاني باستخدام الحجم المادي؟",
+    "choicesAr": [
+      "$1,200,000",
+      "$1,260,000",
+      "$1,500,000",
+      "$1,575,000"
+    ],
+    "explanationAr": "تبلغ التكلفة المشتركة القابلة للتخصيص $2,400,000 [$2,520,000 إجمالي التكلفة المشتركة − (60,000 رطل من المنتج الثانوي) × $2]، بافتراض عدم وجود تكاليف إضافية للمنتج الثانوي. ومن ثم يبلغ نصيب المنتج الرئيسي الثاني $1,500,000 {[150,000 رطل ÷ (90,000 رطل + 150,000 رطل)] × $2,400,000}."
   },
   {
     "unit": 9,
@@ -286,7 +358,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Because of the relatively small sales value, a cost-effective\nallocation method is used for by-products. The net realizable\nvalue of by-products is usually deducted from the cost of the\nmain products.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تنتج شركة ثلاثة منتجات مشتركة رئيسية ومنتجًا ثانويًا. وقيمة البيع النسبية للثانوي منخفضة للغاية مقارنة بالرئيسية. ما المعالجة المحاسبية المفضلة لصافي قيمته القابلة للتحقق؟",
+    "choicesAr": [
+      "إضافته إلى إيرادات المنتجات الأخرى وتوزيعه بحسب صافي قيمها القابلة للتحقق.",
+      "إثباته إيرادًا في فترة البيع.",
+      "خصمه من التكلفة المشتركة القابلة للتخصيص للمنتجات الرئيسية الثلاثة.",
+      "اعتباره قيمة صافية مستقلة لتخصيص جزء من التكاليف المشتركة عليه."
+    ],
+    "explanationAr": "نظرًا إلى انخفاض قيمة البيع النسبية، تستخدم عادة طريقة تخصيص اقتصادية للمنتجات الثانوية، ويخصم صافي قيمتها القابلة للتحقق من تكلفة المنتجات الرئيسية."
   },
   {
     "unit": 9,
@@ -303,7 +383,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Joint products must be valued for external financial reporting\npurposes based on the full (absorption) cost of the product.\nAny common costs attributable to the joint production process\nmust therefore be allocated on a systematic and rational\nbasis.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما الغرض الأساسي من تخصيص التكاليف المشتركة للمنتجات المشتركة؟",
+    "choicesAr": [
+      "تحديد سعر بيع المنتج الثانوي.",
+      "تحديد ما إذا كان ينبغي إيقاف أحد المنتجات المشتركة.",
+      "تحديد الانحراف بين التكاليف المشتركة المقدرة والفعلية.",
+      "تحديد تكلفة مخزون المنتجات المشتركة لأغراض التقارير المالية."
+    ],
+    "explanationAr": "تقاس المنتجات المشتركة لأغراض التقارير المالية الخارجية على أساس تكلفة المنتج الكلية المؤهلة. ولذلك يجب تخصيص التكاليف المشتركة المرتبطة بعملية الإنتاج المشتركة على أساس منتظم ومنطقي."
   },
   {
     "unit": 9,
@@ -320,7 +408,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A by-product is one of relatively small total value. The first\nquestion that must be answered in regard to by-products is:\nDo the benefits of further processing and bringing them to\nmarket exceed the costs; that is, is the incremental revenue\nworth the effort? Market price determines this. The same can\nessentially be said for the main products of the production\nprocess.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "على ماذا يعتمد التمييز بين المنتجات المشتركة والمنتجات الثانوية بدرجة كبيرة؟",
+    "choicesAr": [
+      "التكاليف التاريخية.",
+      "التكاليف الأولية.",
+      "القيمة السوقية.",
+      "قيمة الخردة."
+    ],
+    "explanationAr": "المنتج الثانوي منتج ذو قيمة إجمالية منخفضة نسبيًا. وعند النظر في معالجته وتسويقه ينبغي مقارنة الإيراد الإضافي بالتكلفة الإضافية، ويتأثر القرار بسعر السوق. وينطبق تحليل الجدوى الإضافية كذلك على المنتجات الرئيسية."
   },
   {
     "unit": 9,
@@ -337,7 +433,15 @@
     ],
     "answerIndex": 0,
     "explanation": "If production results in joint products, the primary factor that\ndistinguishes a joint product from a by-product is the relative\ntotal sales value of the products.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في عملية إنتاج مشتركة، ما العامل الأساسي للتمييز بين المنتج المشترك والمنتج الثانوي؟",
+    "choicesAr": [
+      "إجمالي قيم البيع النسبية للمنتجات.",
+      "إجمالي الأحجام النسبية للمنتجات.",
+      "سهولة بيع المنتجات نسبيًا.",
+      "الطريقة المحاسبية لتخصيص التكاليف المشتركة."
+    ],
+    "explanationAr": "العامل الأساسي للتمييز بين المنتج المشترك والمنتج الثانوي هو إجمالي قيمة البيع النسبية للمنتجات."
   },
   {
     "unit": 9,
@@ -354,7 +458,15 @@
     ],
     "answerIndex": 2,
     "explanation": "No “separable production cost method” is recognized for\nallocating joint costs. The nature of the problem is such that all\ncosts are joint and cannot be separated.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي ليس من طرق تخصيص التكاليف المشتركة للمنتجات المشتركة؟",
+    "choicesAr": [
+      "طريقة الكميات المادية.",
+      "طريقة صافي القيمة القابلة للتحقق.",
+      "طريقة تكاليف الإنتاج القابلة للفصل.",
+      "طريقة إجمالي القيمة السوقية."
+    ],
+    "explanationAr": "لا توجد طريقة مستقلة معروفة باسم طريقة تكاليف الإنتاج القابلة للفصل لتخصيص التكاليف المشتركة. فهذه التكاليف مشتركة بطبيعتها ولا يمكن تتبعها مباشرة إلى منتجات منفردة قبل الانفصال."
   },
   {
     "unit": 9,
@@ -422,7 +534,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The physical quantity (unit) method is the simplest; it allocates\njoint production costs to each product based on their relative\nproportions of the measure selected. Using this method\nresults in a an identical unit cost for each separable product.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تصنع شركة عدة منتجات تنشأ من عملية مشتركة وتنفصل عند نقطة الانفصال. أي طرق تخصيص التكاليف المشتركة تؤدي إلى تحميل تكلفة وحدة متماثلة لكل منتج، عند استخدام وحدة مادية مشتركة للقياس؟",
+    "choicesAr": [
+      "طريقة صافي القيمة القابلة للتحقق.",
+      "طريقة قيمة البيع عند الانفصال.",
+      "طريقة الكميات المادية.",
+      "طريقة النسبة الثابتة لمجمل الربح."
+    ],
+    "explanationAr": "تعد طريقة الكميات المادية أبسط الطرق، وتخصص تكاليف الإنتاج المشتركة على المنتجات بحسب نسبها من المقياس المختار. وباستخدام وحدة مادية مشتركة للقياس تكون التكلفة المشتركة المخصصة لكل وحدة مادية متماثلة."
   },
   {
     "unit": 9,
@@ -439,7 +559,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The sales value at split-off method is based on the relative\nsales values of the separate costs at split-off. Gross margin\npercentage is calculated as the difference between sales price\nand cost divided by sales price. Since each joint product\nreceives the amount of separate cost proportional to its sales\nvalue, the gross margin percentage calculation will be the\nsame. For instance, if there are two products whose sales\nprices are $40 and $60, respectively, the joint product costs\nallocated will also be in a 2:3 ratio, e.g., $10 and $15.\n1. The first product will have a gross margin percentage\nof the following:\n2. ($40 – $10) ÷ $40 = 75%\n3. The second product will also have a gross margin\npercentage of the following:\n4. ($60 – $15) ÷ $60 = 75%",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "إذا بيعت جميع المنتجات المشتركة عند نقطة الانفصال وحقق مجموعها ربحًا، فأي طرق تخصيص التكاليف المشتركة تحقق نسبة مجمل ربح متماثلة لكل منتج؟",
+    "choicesAr": [
+      "طريقة قيمة البيع عند نقطة الانفصال.",
+      "طريقة المقاييس المادية باستخدام حجم المبيعات.",
+      "طريقة المقاييس المادية باستخدام حجم الإنتاج.",
+      "طريقة المقاييس المادية باستخدام الوزن."
+    ],
+    "explanationAr": "تعتمد طريقة قيمة البيع عند الانفصال على القيم النسبية للمنتجات المنفصلة. وتحسب نسبة مجمل الربح بقسمة الفرق بين سعر البيع والتكلفة على سعر البيع. ولأن نصيب كل منتج من التكلفة المشتركة يتناسب مع قيمة بيعه، تتساوى نسب مجمل الربح. فمثلًا إذا كان سعرا بيع منتجين $40 و$60 على الترتيب، تخصص التكلفة المشتركة بنسبة 2:3، مثل $10 و$15.\n1. نسبة مجمل ربح المنتج الأول تحسب كالآتي:\n2. ($40 − $10) ÷ $40 = 75%\n3. نسبة مجمل ربح المنتج الثاني تحسب كالآتي:\n4. ($60 − $15) ÷ $60 = 75%."
   },
   {
     "unit": 9,
@@ -456,7 +584,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Product 1     Product 2\nNumber of units                            5,000           10,000\nPrice per unit                           ×    $8         ×    $10\nFinal sales price                       $40,000          $100,000\nSeparable costs                         (10,000)          (30,000)\nNet realizable value                    $30,000          $ 70,000\nThis yields a total net realizable value (NRV) for the entire\nproduction run of $100,000 ($30,000 Product 1 + $70,000\nProduct 2). The next step is to allocate the total joint costs of\n$60,000 based on the proportion of the total NRV represented\nby each product: Product 1 = $60,000 × ($30,000 ÷ $100,000)\n= $18,000. Product 2 = $60,000 × ($70,000 ÷ $100,000) =\n$42,000. The cost per unit of Product 1 is therefore $2\n($10,000 ÷ 5,000 units) separable costs + $3.60 ($18,000 ÷\n5,000 units) joint cost = $5.60.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تصنع شركة منتجين يتكبدان تكاليف مشتركة $60,000. وتبلغ التكلفة الإضافية $10,000 لإنتاج 5,000 وحدة من المنتج 1، و$30,000 لإنتاج 10,000 وحدة من المنتج 2. ويباع المنتج 1 بسعر $8 للوحدة والمنتج 2 بسعر $10 للوحدة. باستخدام صافي القيمة القابلة للتحقق لتخصيص التكاليف المشتركة، فما تكلفة وحدة المنتج 1؟",
+    "choicesAr": [
+      "$3.60",
+      "$5.43",
+      "$5.60",
+      "$6.00"
+    ],
+    "explanationAr": "البند | المنتج 1 | المنتج 2\nعدد الوحدات | 5,000 | 10,000\nسعر الوحدة | × $8 | × $10\nقيمة البيع النهائية | $40,000 | $100,000\nالتكاليف القابلة للفصل | (10,000) | (30,000)\nصافي القيمة القابلة للتحقق | $30,000 | $70,000\nإجمالي صافي القيمة القابلة للتحقق $100,000 ($30,000 للمنتج 1 + $70,000 للمنتج 2). ثم تخصص التكاليف المشتركة $60,000 بحسب نسبة صافي قيمة كل منتج:\nالمنتج 1 = $60,000 × ($30,000 ÷ $100,000) = $18,000.\nالمنتج 2 = $60,000 × ($70,000 ÷ $100,000) = $42,000.\nتكلفة وحدة المنتج 1 = $2 ($10,000 ÷ 5,000 وحدة) تكاليف قابلة للفصل + $3.60 ($18,000 ÷ 5,000 وحدة) تكاليف مشتركة = $5.60."
   },
   {
     "unit": 9,
@@ -490,7 +626,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The sales-value at split-off method is based on the relative\nsales values of separate products at split-off. Given that Alpha\nhas an $8 selling price, the sales value at the split-off is\n$80,000. Beta has a $20 selling price; thus, the sales value at\nsplit-off is $100,000. The 1,000 pounds of Omega has a split-\noff value of $6 per unit, or $6,000. Assuming that Omega is\ninventoried and treated as a reduction of joint costs, the\nallocable joint cost is $180,000 ($186,000 – $6,000). The total\nsales value of the main products is $180,000. The allocation to\nAlpha is $80,000 [($80,000 ÷ $180,000) × $180,000].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تنتج شركة منتجات متزامنة من عملية تكرير تكلفتها $186,000. ويبلغ سعر بيع المنتجين المشتركين Alpha وBeta عند الانفصال $8 و$20 للرطل على الترتيب، قبل تكبد تكاليف معالجة إضافية قدرها $4 للرطل من كل منتج. ويباع المنتج الثانوي Omega عند الانفصال مقابل $6 للرطل. وفيما يلي الإنتاج:\nAlpha | 10,000 رطل\nBeta | 5,000 رطل\nOmega | 1,000 رطل\nبافتراض إثبات Omega ضمن المخزون، فما التكلفة المشتركة المخصصة لـ Alpha بطريقة قيمة البيع عند الانفصال؟",
+    "choicesAr": [
+      "$72,000",
+      "$80,000",
+      "$82,666",
+      "$100,000"
+    ],
+    "explanationAr": "تعتمد طريقة قيمة البيع عند الانفصال على قيم البيع النسبية للمنتجات المنفصلة. وبما أن سعر Alpha يبلغ $8 فإن قيمة بيعه عند الانفصال $80,000. ويبلغ سعر Beta مقدار $20 فتبلغ قيمة بيعه $100,000. ويبلغ إنتاج Omega مقدار 1,000 رطل وقيمته عند الانفصال $6 للوحدة، أي $6,000. وبافتراض إثبات Omega في المخزون وخصم قيمته من التكاليف المشتركة، تبلغ التكلفة القابلة للتخصيص $180,000 ($186,000 − $6,000). وإجمالي قيمة بيع المنتجات الرئيسية $180,000. ويخصص لـ Alpha مبلغ $80,000 [($80,000 ÷ $180,000) × $180,000]."
   },
   {
     "unit": 9,
