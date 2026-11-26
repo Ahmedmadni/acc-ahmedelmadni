@@ -137,3 +137,5 @@
 - [x] Unit 8 Wave 3: 29 additional Arabic drafts; initial review complete, 67/84 (79.8%), 17 held, zero unreviewed. Fixed floating-point cents comparison from Wave 2 CI. See `docs/CMA_UNIT8_ARABIC_WAVE3_2026-11-25.md`. Continue Unit 9 after CI.
 
 - [x] Unit 9 Wave 1: joint products and by-products initial review complete, 31/45 drafts, 14 held; Unit 9 31/115 (27.0%), 70 unreviewed. See `docs/CMA_UNIT9_ARABIC_WAVE1_2026-11-26.md`. Continue §2 overhead allocation.
+
+- [x] Unit 9 Wave 2: overhead allocation §2 Q1–18 initial review: 17 additional drafts, one held; 48/115 (41.7%), 15 held, 52 unreviewed. See `docs/CMA_UNIT9_ARABIC_WAVE2_2026-11-26.md`. Continue §2 Q19.
