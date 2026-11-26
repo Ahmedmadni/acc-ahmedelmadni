@@ -12,7 +12,7 @@ export function splitCmaFormulaText(text: string): CmaFormulaSegment[] {
     const raw = match[0];
     const trimmed = raw.trim();
     // A leading or trailing full stop is prose punctuation, not a decimal.
-    const expression = trimmed.replace(/^[.,]+|[.,]+$/gu, "");
+    const expression = trimmed.replace(/^[.,]+|[.,]+$/gu, "").replace(/^[=≈]\s*/u, "");
     const numbers = expression.match(numberPattern) ?? [];
     if (numbers.length < 2 || !/[×÷=≈−+]/u.test(expression)) continue;
     if (!/^[($€£+−0-9٠-٩۰-۹]/u.test(expression) || !/[0-9٠-٩۰-۹%٪)²³⁰¹⁴⁵⁶⁷⁸⁹]$/u.test(expression)) continue;
