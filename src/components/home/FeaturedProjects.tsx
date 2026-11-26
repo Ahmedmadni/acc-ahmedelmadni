@@ -5,62 +5,29 @@ import { useMotionSafe } from "@/lib/motion";
 import type { Lang } from "@/lib/i18n";
 import { featuredProjects, type FeaturedProject } from "@/data/featured-projects";
 
-const SHOT_W = 380;
-const SHOT_H = 238; // 16:10
-const MAX_RETRIES = 4;
-
-const shotUrl = (url: string, w: number, h: number, cb?: number) =>
-  `https://s.wordpress.com/mshots/v1/${url}?w=${w}&h=${h}${cb ? `&cb=${cb}` : ""}`;
+const SHOT_W = 760;
+const SHOT_H = 475; // 16:10
 
 const hostOf = (url: string) => new URL(url).hostname.replace(/^www\./, "");
 
-/** Live website screenshot via WordPress mShots, with shimmer + smart retry. */
-function ProjectShot({ url, alt }: { url: string; alt: string }) {
-  const [attempt, setAttempt] = useState(0);
-  const [cb, setCb] = useState<number | undefined>(undefined);
-  const [status, setStatus] = useState<"loading" | "ready" | "failed">("loading");
-  const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
+/** Fixed screenshot of each project, with a shimmer while it loads. */
+function ProjectShot({ src, url, alt }: { src?: string; url: string; alt: string }) {
+  const [status, setStatus] = useState<"loading" | "ready" | "failed">(src ? "loading" : "failed");
   const imgRef = useRef<HTMLImageElement>(null);
-
-  useEffect(() => () => {
-    if (timer.current) clearTimeout(timer.current);
-  }, []);
-
-  const retry = () => {
-    if (attempt >= MAX_RETRIES) {
-      setStatus("failed");
-      return;
-    }
-    timer.current = setTimeout(() => {
-      setAttempt((a) => a + 1);
-      setCb(Date.now());
-    }, 2500 + attempt * 1500);
-  };
-
-  const inspect = (img: HTMLImageElement) => {
-    // mShots serves a temporary grey placeholder (not 16:10, under 600px) while rendering.
-    const ratio = img.naturalWidth / Math.max(img.naturalHeight, 1);
-    const isPlaceholder =
-      Math.abs(ratio - 1.6) > 0.08 ||
-      (img.currentSrc.includes(`w=${SHOT_W * 2}`) && img.naturalWidth < 600);
-    if (isPlaceholder) retry();
-    else setStatus("ready");
-  };
 
   // Images can finish loading before hydration attaches onLoad.
   useEffect(() => {
     const img = imgRef.current;
-    if (img?.complete && img.naturalWidth > 0) inspect(img);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [cb]);
+    if (img?.complete && img.naturalWidth > 0) setStatus("ready");
+  }, []);
 
   return (
     <div className="relative aspect-[16/10] overflow-hidden bg-surface/10">
       {status !== "ready" && (
-        <div className="works-shimmer absolute inset-0" aria-hidden="true">
+        <div className={`absolute inset-0 ${status === "loading" ? "works-shimmer" : ""}`} aria-hidden="true">
           {status === "failed" && (
             <div className="flex h-full flex-col items-center justify-center gap-2 text-surface/60">
-              <Globe className="size-6" />
+              <Globe className="size-6 text-brand" />
               <span className="font-mono text-[11px]" dir="ltr">
                 {hostOf(url)}
               </span>
@@ -68,20 +35,18 @@ function ProjectShot({ url, alt }: { url: string; alt: string }) {
           )}
         </div>
       )}
-      {status !== "failed" && (
+      {src && status !== "failed" && (
         <img
           ref={imgRef}
-          key={cb ?? 0}
-          src={shotUrl(url, SHOT_W, SHOT_H, cb)}
-          srcSet={`${shotUrl(url, SHOT_W, SHOT_H, cb)} 1x, ${shotUrl(url, SHOT_W * 2, SHOT_H * 2, cb)} 2x`}
+          src={src}
           alt={alt}
           width={SHOT_W}
           height={SHOT_H}
           loading="lazy"
           decoding="async"
           draggable={false}
-          onLoad={(e) => inspect(e.currentTarget)}
-          onError={retry}
+          onLoad={() => setStatus("ready")}
+          onError={() => setStatus("failed")}
           className={`h-full w-full object-cover object-top transition-[opacity,transform] duration-700 ease-out group-hover:scale-110 motion-reduce:group-hover:scale-100 ${
             status === "ready" ? "opacity-100" : "opacity-0"
           }`}
@@ -116,7 +81,7 @@ function ProjectCard({ project, ar, hidden }: { project: FeaturedProject; ar: bo
         </span>
       </div>
       <div className="relative">
-        <ProjectShot url={project.url} alt={ar ? `لقطة من موقع ${title}` : `Screenshot of ${title}`} />
+        <ProjectShot src={project.shot} url={project.url} alt={ar ? `لقطة من موقع ${title}` : `Screenshot of ${title}`} />
         <span className="absolute start-3 top-3 rounded-full border border-brand/40 bg-ink/75 px-2.5 py-1 text-[11px] font-medium text-brand backdrop-blur-md">
           {ar ? project.categoryAr : project.categoryEn}
         </span>
