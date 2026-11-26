@@ -303,13 +303,16 @@ export async function exportStudyNotebookPdf(
   document.body.appendChild(printRoot);
 
   try {
-    if (document.fonts?.ready) await document.fonts.ready;
     for (let index = 0; index < pages.length; index++) {
       const page = pages[index];
       const [width, height] = STUDY_NOTEBOOK_PDF_MM[page.size];
       const node = buildNotebookPrintablePageDom(page, journalReviews);
       printRoot.appendChild(node);
       try {
+        // Trigger layout after mounting this page so its actual Arabic/Latin
+        // font families are requested before measuring overflow or rasterizing.
+        node.getBoundingClientRect();
+        if (document.fonts?.ready) await document.fonts.ready;
         // We cannot trust bitmap clipping to preserve the learner's notes.
         // Refuse a PDF with hidden paragraphs or table rows. The on-page
         // continuation action moves only overflowing rich text to a new sheet.
@@ -319,7 +322,27 @@ export async function exportStudyNotebookPdf(
         }
         // Local raster assets must finish loading before the snapshot.
         await Promise.all(Array.from(node.querySelectorAll("img")).map(async img => {
-          if (typeof img.decode === "function") await img.decode();
+          if (typeof img.decode === "function") {
+            await img.decode();
+          } else if (!img.complete) {
+            await new Promise<void>((resolve, reject) => {
+              const timer = window.setTimeout(() => finish(new Error("Notebook image loading timed out.")), 15000);
+              const finish = (error?: Error) => {
+                window.clearTimeout(timer);
+                img.removeEventListener("load", onLoad);
+                img.removeEventListener("error", onError);
+                if (error) reject(error); else resolve();
+              };
+              const onLoad = () => finish();
+              const onError = () => finish(new Error("Notebook image could not be loaded."));
+              img.addEventListener("load", onLoad);
+              img.addEventListener("error", onError);
+              if (img.complete) {
+                if (img.naturalWidth > 0) onLoad(); else onError();
+              }
+            });
+          }
+          if (!img.naturalWidth) throw new Error("Notebook image is unavailable.");
         }));
         const canvas = await html2canvas(node, {
           backgroundColor: null,
@@ -335,8 +358,14 @@ export async function exportStudyNotebookPdf(
             if (clonedRoot) clonedRoot.style.left = "0px";
           },
         });
-        if (index > 0) pdf.addPage([width, height], "portrait");
-        pdf.addImage(canvas.toDataURL("image/jpeg", .92), "JPEG", 0, 0, width, height);
+        try {
+          if (index > 0) pdf.addPage([width, height], "portrait");
+          pdf.addImage(canvas.toDataURL("image/jpeg", .92), "JPEG", 0, 0, width, height);
+        } finally {
+          // Release the raster backing store before rendering the next sheet.
+          canvas.width = 0;
+          canvas.height = 0;
+        }
       } finally {
         node.remove();
       }
