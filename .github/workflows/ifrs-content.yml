@@ -96,6 +96,8 @@ jobs:
         run: node --test scripts/tests/cma-online-bank.test.mjs
       - name: Part 2 intake audit self-test
         run: node scripts/audit-cma-part2-intake.mjs --self-test
+      - name: CMA formula direction regression
+        run: node --test scripts/tests/cma-formula-text.test.mjs
       - name: Public CV download contract
         run: npm run cv:check
       - name: Portfolio operations and navigation contracts
