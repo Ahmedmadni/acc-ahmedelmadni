@@ -24,6 +24,7 @@ import { extractExamQuestions } from "@/lib/exam.functions";
 import { IFRS_LOCAL_QUESTIONS } from "@/data/ifrs-question-bank";
 import { CMA_LOCAL_QUESTIONS } from "@/data/cma-question-bank";
 import { CmaTranslatedQuestion } from "@/components/library/CmaTranslatedQuestion";
+import { CmaReadableText } from "@/components/library/CmaReadableText";
 import { getCmaUnit14SourceReview } from "@/lib/cma-unit14-source-review";
 import { getCmaUnit15SourceReview } from "@/lib/cma-unit15-source-review";
 import { getCmaUnit16SourceReview } from "@/lib/cma-unit16-source-review";
@@ -571,12 +572,10 @@ export function ExamPrep({ lang }: { lang: Lang }) {
                     : "The source PDF omits a choice; an independently written practice distractor has been marked for review."}
                 </p>
               )}
-              <h3
-                dir={view.direction}
-                className="mb-4 whitespace-pre-wrap text-base font-extrabold text-[var(--fg)] md:text-lg"
-              >
-                {view.question}
-              </h3>
+              <div role="heading" aria-level={3} className="mb-4 text-base font-extrabold text-[var(--fg)] md:text-lg">
+                <CmaReadableText text={view.question} direction={view.direction}
+                  allowTables={q.sourceArabicStatus === "draft" && view.direction === "rtl" && !q.sourceLayoutReview} />
+              </div>
               <div className="space-y-2">
                 {view.choices.map((c, i) => {
                   const isCorrect = i === q.answerIndex;
@@ -598,7 +597,7 @@ export function ExamPrep({ lang }: { lang: Lang }) {
                       </span>
                       <span
                         dir={view.direction}
-                        className="flex-1 whitespace-pre-wrap"
+                        className="min-w-0 flex-1 whitespace-pre-wrap [overflow-wrap:anywhere]"
                       >
                         {c}
                       </span>
@@ -625,12 +624,9 @@ export function ExamPrep({ lang }: { lang: Lang }) {
                       <div className="mb-1 text-[11px] font-bold uppercase tracking-wider text-[#f3d28a]">
                         {lang === "ar" ? "الشرح" : "Explanation"}
                       </div>
-                      <p
-                        dir={view.direction}
-                        className="whitespace-pre-wrap text-sm leading-relaxed text-[var(--fg-soft)]"
-                      >
-                        {view.explanation}
-                      </p>
+                      <CmaReadableText text={view.explanation} direction={view.direction}
+                        allowTables={q.sourceArabicStatus === "draft" && view.direction === "rtl" && !q.sourceLayoutReview}
+                        className="text-sm leading-relaxed text-[var(--fg-soft)]" />
                       {q.sourceLayoutReview && (
                         <p role="status" className="mt-3 text-xs font-bold text-amber-200">
                           {lang === "ar"

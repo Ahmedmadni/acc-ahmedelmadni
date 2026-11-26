@@ -13,6 +13,7 @@ import {
 import { CMA_LOCAL_QUESTIONS } from "@/data/cma-question-bank";
 import { CMA_PART2_PRACTICE_SOURCES } from "@/data/cma-part2-practice-sources";
 import { CmaTranslatedQuestion } from "@/components/library/CmaTranslatedQuestion";
+import { CmaReadableText } from "@/components/library/CmaReadableText";
 import { getCmaUnit14SourceReview } from "@/lib/cma-unit14-source-review";
 import { getCmaUnit15SourceReview } from "@/lib/cma-unit15-source-review";
 import { getCmaUnit16SourceReview } from "@/lib/cma-unit16-source-review";
@@ -734,12 +735,9 @@ function CmaPage() {
                         : "The source PDF omits a choice; an independently written practice distractor has been marked for review."}
                     </p>
                   )}
-                  <p
-                    dir={view.direction}
-                    className="mt-3 whitespace-pre-wrap text-sm font-bold leading-7"
-                  >
-                    {view.question}
-                  </p>
+                  <CmaReadableText text={view.question} direction={view.direction}
+                    allowTables={q.sourceArabicStatus === "draft" && view.direction === "rtl" && !q.sourceLayoutReview}
+                    className="mt-3 text-sm font-bold leading-7" />
                   <div className="mt-4 grid gap-2 sm:grid-cols-2">
                     {view.choices.map((choice, choiceIndex) => {
                       const revealed = answers[q.id] !== undefined;
@@ -782,12 +780,9 @@ function CmaPage() {
                             ? answers[q.id] === q.answerIndex ? "إجابة صحيحة" : "إجابة غير صحيحة"
                             : answers[q.id] === q.answerIndex ? "Correct" : "Incorrect"}
                       </span>
-                      <p
-                        dir={view.direction}
-                        className="mt-2 whitespace-pre-wrap"
-                      >
-                        {view.explanation}
-                      </p>
+                      <CmaReadableText text={view.explanation} direction={view.direction}
+                        allowTables={q.sourceArabicStatus === "draft" && view.direction === "rtl" && !q.sourceLayoutReview}
+                        className="mt-2" />
                       {q.sourceLayoutReview && (
                         <p role="status" className="mt-2 text-xs font-bold text-amber-900">
                           {lang === "ar"
