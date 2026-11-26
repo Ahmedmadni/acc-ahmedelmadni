@@ -1283,3 +1283,10 @@ test("PDF rasterization waits for mounted-page fonts and loaded images, then rel
   assert.match(source,/canvas\.height = 0/);
   assert.match(source,/node\.remove\(\)/);
 });
+
+test("Tablet split view caps the notebook width to preserve room for the lesson", async () => {
+  const source = await readFile("src/routes/library.tsx","utf8");
+  assert.ok(source.includes('minmax(0, 1fr) min(${notebookWidth}px, 42vw)'));
+  assert.match(source,/className="min-w-0" data-study-main/);
+  assert.match(source,/min-w-0 items-center justify-between gap-2/);
+});
