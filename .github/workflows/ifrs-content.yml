@@ -94,6 +94,8 @@ jobs:
         run: node --test scripts/tests/cma-translation-browser.test.mjs
       - name: CMA on-site Part 2 bank regression tests
         run: node --test scripts/tests/cma-online-bank.test.mjs
+      - name: CMA readable table layout regression
+        run: node --test scripts/tests/cma-text-layout.test.mjs
       - name: Part 2 intake audit self-test
         run: node scripts/audit-cma-part2-intake.mjs --self-test
       - name: Public CV download contract
