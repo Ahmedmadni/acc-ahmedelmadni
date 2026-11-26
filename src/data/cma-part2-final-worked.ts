@@ -180,17 +180,17 @@ export const CMA_PART2_FINAL_WORKED: Record<string, NonNullable<CmaBeginnerNote[
   },
   "p2-su6-derivatives": {
     "scenario": {
-      "ar": "اشتريت خيار شراء Call بسعر تنفيذ 100 وعلاوة 6 للسهم. سعر الأصل عند الانتهاء 120. ما العائد الصافي للسهم قبل الرسوم؟",
-      "en": "You buy a call option with strike 100 and premium 6 per share. Underlying price at expiry is 120. Find net payoff per share before fees."
+      "ar": "اشتريت خيار شراء Call بسعر تنفيذ 100 وعلاوة 6 للسهم. سعر الأصل عند الانتهاء 120. ما صافي الربح للسهم قبل الرسوم، دون مراعاة القيمة الزمنية للنقود؟",
+      "en": "You buy a call option with strike 100 and premium 6 per share. Underlying price at expiry is 120. Find net profit per share before fees, ignoring time value of money."
     },
     "steps": {
       "ar": [
-        "قيمة ممارسة الخيار عند الانتهاء = 120 − 100 = 20.",
+        "القيمة الجوهرية لخيار الشراء عند الانتهاء = الأكبر بين الصفر و(120 − 100) = 20.",
         "اطرح العلاوة المدفوعة = 20 − 6.",
         "الربح الصافي النظري = 14 للسهم قبل الرسوم."
       ],
       "en": [
-        "Call intrinsic payoff at expiry = 120 − 100 = 20.",
+        "Call intrinsic value at expiry = max(0, 120 − 100) = 20.",
         "Subtract premium initially paid: 20 − 6.",
         "Net gain = 14 per share before fees."
       ]
@@ -268,8 +268,8 @@ export const CMA_PART2_FINAL_WORKED: Record<string, NonNullable<CmaBeginnerNote[
   },
   "p2-su8-mergers": {
     "scenario": {
-      "ar": "قيمة شركة مستهدفة مستقلة 2,000,000، والقيمة الحالية لمنافع الدمج المتوقعة 400,000، وتكاليف الدمج 100,000. كم أقصى قيمة اقتصادية للمشتري وفق الافتراضات؟",
-      "en": "A target's stand-alone value is 2,000,000, synergy PV is 400,000 and integration cost PV is 100,000. Find maximum economic value to buyer under assumptions."
+      "ar": "قيمة شركة مستهدفة مستقلة 2,000,000، والقيمة الحالية لمنافع الدمج المتوقعة 400,000، والقيمة الحالية لتكاليف الدمج 100,000. ما الحد الأقصى للقيمة الاقتصادية للمشتري وفق الافتراضات وعلى أساس تقييم موحد؟",
+      "en": "A target's stand-alone value is 2,000,000, synergy PV is 400,000 and integration cost PV is 100,000, all on a consistent valuation basis. Find maximum economic value to the buyer under these assumptions."
     },
     "steps": {
       "ar": [
@@ -334,19 +334,19 @@ export const CMA_PART2_FINAL_WORKED: Record<string, NonNullable<CmaBeginnerNote[
   },
   "p2-su8-fx-effects": {
     "scenario": {
-      "ar": "شركة عملتها الوظيفية الريال ولها ذمة مدينة 20,000 دولار. سُجلت عند 3.75 ريال للدولار وسُددت عند 3.80. ما فرق العملة المحقق؟",
-      "en": "A SAR-functional company has a USD 20,000 receivable, initially recognized at SAR 3.75 per USD and settled at 3.80. Find realized FX difference."
+      "ar": "شركة عملتها الوظيفية الريال ولها ذمة مدينة 20,000 دولار. سُجلت عند 3.75 ريال للدولار وسُددت عند 3.80 دون إعادة تقييم سابقة. ما ربح فرق العملة عند التحصيل؟",
+      "en": "A SAR-functional company has a USD 20,000 receivable initially recognized at SAR 3.75 per USD and settled at 3.80, without any intervening remeasurement. Find the FX gain on settlement."
     },
     "steps": {
       "ar": [
         "القيمة الأولية للذمة = 20,000 × 3.75 = 75,000 ريال.",
         "النقد عند التحصيل = 20,000 × 3.80 = 76,000 ريال.",
-        "فرق العملة المحقق = 1,000 ريال ربح، قبل الرسوم وأي إعادة تقييم سابقة."
+        "فرق العملة عند التحصيل = 1,000 ريال ربح قبل الرسوم؛ إذا سبق تسجيل فرق تقييم، يقاس ربح فترة التحصيل مقارنة بالقيمة الدفترية الأخيرة."
       ],
       "en": [
         "Initial receivable = 20,000 × 3.75 = SAR 75,000.",
         "Settlement cash = 20,000 × 3.80 = SAR 76,000.",
-        "Realized FX gain = SAR 1,000 before fees and earlier remeasurements."
+        "Settlement FX gain = SAR 1,000 before fees; if previously remeasured, the settlement-period gain is measured against the latest carrying amount."
       ]
     },
     "takeaway": {
