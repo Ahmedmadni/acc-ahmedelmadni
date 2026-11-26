@@ -207,6 +207,15 @@ export function CmaTranslatedQuestion({
       explanation: "",
     });
   }, [question.id]);
+  // Compare a stored Arabic draft with its original without changing the
+  // surrounding page language, answer order, or the active quiz question.
+  const [originalDraftKey, setOriginalDraftKey] = useState<string | null>(null);
+  const draftKey = `${question.id}:${cmaSourceHash(question)}`;
+  const canCompareDraft = question.track === "CMA" &&
+    question.sourceArabicStatus === "draft" && lang === "ar" &&
+    question.sourceLanguage !== "en";
+  const showDraftOriginal = canCompareDraft && originalDraftKey === draftKey;
+  const displayLang = showDraftOriginal ? "en" : lang;
   const translated = Boolean(eligible && state.translation && !state.showOriginal);
   const source = translated ? state.translation : null;
   const external = allowExternalTranslation ? getCmaExternalTranslation(question, revealExplanation) : null;
@@ -226,13 +235,13 @@ export function CmaTranslatedQuestion({
     }
   }
 
-  const visibleArabic = lang === "ar" &&
+  const visibleArabic = displayLang === "ar" &&
     (translated || /[\u0600-\u06ff]/.test(question.question.ar));
 
   const view: View = {
-    question: source?.question ?? question.question[lang],
-    choices: source?.choices ?? question.choices[lang],
-    explanation: source?.explanation ?? question.explanation[lang],
+    question: source?.question ?? question.question[displayLang],
+    choices: source?.choices ?? question.choices[displayLang],
+    explanation: source?.explanation ?? question.explanation[displayLang],
     direction: visibleArabic ? "rtl" : "ltr",
     translated,
     control: eligible ? (
@@ -373,10 +382,20 @@ export function CmaTranslatedQuestion({
           </span>
         )}
       </div>
-    ) : question.sourceArabicStatus === "draft" && lang === "ar" ? (
-      <p role="note" className={`mt-2 text-xs leading-6 ${dark ? "text-amber-200" : "text-amber-900"}`}>
-        ترجمة عربية تعليمية أولية من ملفات الموقع؛ يلزم مراجعة المصطلحات والجدول مقابل المصدر الأصلي قبل الاعتماد المهني.
-      </p>
+    ) : canCompareDraft ? (
+      <div className="mt-2 flex flex-wrap items-center gap-2">
+        <button type="button" aria-pressed={showDraftOriginal}
+          onClick={() => setOriginalDraftKey(showDraftOriginal ? null : draftKey)}
+          className={`inline-flex min-h-11 items-center gap-2 rounded-lg border px-3 py-1.5 text-xs font-semibold ${dark ? "border-[#f3d28a]/40 text-[#f3d28a]" : "border-[#A88765]/40 text-[#76543F]"}`}>
+          <Languages className="size-4" aria-hidden="true" />
+          {showDraftOriginal ? "عرض المسودة العربية" : "مقارنة بالنص الإنجليزي الأصلي"}
+        </button>
+        <p role="note" className={`text-xs leading-6 ${dark ? "text-amber-200" : "text-amber-900"}`}>
+          {showDraftOriginal
+            ? "يعرض النص الإنجليزي المستورد؛ لا يعني ذلك اعتماد المصدر أو إزالة أي تحذير للمراجعة."
+            : "ترجمة عربية تعليمية أولية من ملفات الموقع؛ يلزم مراجعة المصطلحات والجدول مقابل المصدر الأصلي قبل الاعتماد المهني."}
+        </p>
+      </div>
     ) : null,
   };
 
