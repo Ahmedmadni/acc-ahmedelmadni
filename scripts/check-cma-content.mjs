@@ -119,16 +119,17 @@ check(Object.keys(CMA_DOMAIN_GLOSSARY).length === domainSet.size,
   "Expected bilingual terminology for all 12 CMA exam domains");
 for (const domainId of domainSet) {
   const terms = CMA_DOMAIN_GLOSSARY[domainId];
-  check(terms?.length === 4, `Expected four key terms for domain ${domainId}`);
-  check(new Set(terms.map((t) => t.en.toLowerCase())).size === 4,
-    `Duplicate glossary terms in domain ${domainId}`);
+  check(terms?.length >= 6, "Expected at least six key terms for domain "+domainId);
+  check(new Set(terms.map(t => t.en.trim().toLowerCase())).size === terms.length, "Duplicate English glossary terms in "+domainId);
+  check(new Set(terms.map(t => t.ar.trim())).size === terms.length, "Duplicate Arabic glossary terms in "+domainId);
   for (const term of terms) {
     check(term.ar.length > 3 && term.en.length > 3 &&
       term.meaningAr.length > 35 && term.meaningEn.length > 35,
     `Unclear bilingual glossary entry in ${domainId}`);
   }
 }
-console.log("Validated 48 bilingual glossary terms across all 12 CMA domains");
+const glossaryCount = Object.values(CMA_DOMAIN_GLOSSARY).reduce((sum, terms) => sum + terms.length, 0);
+console.log("Validated "+glossaryCount+" bilingual glossary terms across all 12 CMA domains");
 
 const editorialEntries = Object.entries(CMA_EDITORIAL_CLARIFICATIONS);
 check(editorialEntries.length === 18, "Expected 18 targeted editorial clarifications");

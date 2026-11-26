@@ -32,6 +32,18 @@ export const CMA_DOMAIN_GLOSSARY: Record<CmaDomain, CmaGlossaryTerm[]> = {
       "en": "Fair value",
       "meaningAr": "مقياس قيمة وفق افتراضات المشاركين في السوق؛ ليس مرادفًا للتكلفة التاريخية.",
       "meaningEn": "A market-participant-based valuation measure, not the same as historical cost."
+    },
+    {
+      "ar": "الانخفاض في القيمة",
+      "en": "Impairment",
+      "meaningAr": "انخفاض القيمة المحاسبية للأصل عندما تتجاوز قيمته الدفترية الحد القابل للاسترداد وفق المعيار المنطبق.",
+      "meaningEn": "A write-down when an asset's carrying amount exceeds the recoverable limit under the applicable accounting framework."
+    },
+    {
+      "ar": "صافي القيمة القابلة للتحقق",
+      "en": "Net realizable value (NRV)",
+      "meaningAr": "سعر البيع المقدر للمخزون في النشاط المعتاد ناقص تكاليف الإتمام والبيع المقدرة.",
+      "meaningEn": "Estimated ordinary-course selling price of inventory less estimated completion and selling costs."
     }
   ],
   "planning-budgeting": [
@@ -58,6 +70,18 @@ export const CMA_DOMAIN_GLOSSARY: Record<CmaDomain, CmaGlossaryTerm[]> = {
       "en": "Cash collections",
       "meaningAr": "النقد المتوقع قبضه من العملاء خلال فترة، وقد يختلف عن مبيعات تلك الفترة.",
       "meaningEn": "Customer cash expected in a period, which can differ from sales recognized in that period."
+    },
+    {
+      "ar": "الموازنة الرئيسية",
+      "en": "Master budget",
+      "meaningAr": "مجموعة مترابطة من الموازنات التشغيلية والمالية التي تعبر عن خطة المنشأة للفترة.",
+      "meaningEn": "An integrated set of operating and financial budgets reflecting the organization's plan for the period."
+    },
+    {
+      "ar": "الموازنة النقدية",
+      "en": "Cash budget",
+      "meaningAr": "تقدير المقبوضات والمدفوعات النقدية ورصيد النقد والاحتياجات التمويلية خلال فترة محددة.",
+      "meaningEn": "A forecast of cash receipts, disbursements, balances and financing needs over a specified period."
     }
   ],
   "performance-mgmt": [
@@ -84,6 +108,18 @@ export const CMA_DOMAIN_GLOSSARY: Record<CmaDomain, CmaGlossaryTerm[]> = {
       "en": "Controllable cost",
       "meaningAr": "تكلفة يستطيع مدير معين التأثير فيها بدرجة معقولة ضمن صلاحياته.",
       "meaningEn": "A cost that a particular manager can materially influence within their authority."
+    },
+    {
+      "ar": "الدخل المتبقي",
+      "en": "Residual income",
+      "meaningAr": "الدخل التشغيلي المحدد ناقص تكلفة رأسمالية محسوبة على قاعدة الاستثمار وفق معدل العائد المطلوب.",
+      "meaningEn": "Defined operating income less a capital charge based on invested assets and a required rate of return."
+    },
+    {
+      "ar": "انحراف الكفاءة",
+      "en": "Efficiency variance",
+      "meaningAr": "أثر اختلاف كمية المدخلات الفعلية عن الكمية المعيارية المسموح بها للإنتاج الفعلي، مقومًا بالسعر أو المعدل المعياري.",
+      "meaningEn": "The effect of actual input quantity differing from the standard quantity allowed for actual output, valued at the standard rate."
     }
   ],
   "cost-mgmt": [
@@ -110,11 +146,23 @@ export const CMA_DOMAIN_GLOSSARY: Record<CmaDomain, CmaGlossaryTerm[]> = {
       "en": "Applied overhead",
       "meaningAr": "نصيب من المصاريف الصناعية غير المباشرة يُخصص للإنتاج بمعدل تحميل.",
       "meaningEn": "Indirect manufacturing cost assigned to output using an application rate."
+    },
+    {
+      "ar": "التصنيع في الوقت المحدد",
+      "en": "Just-in-time (JIT)",
+      "meaningAr": "نظام سحب يهدف إلى توريد المواد والإنتاج عند الحاجة وتقليل المخزون مع ضبط مخاطر التوريد والجودة.",
+      "meaningEn": "A pull system that times procurement and production to actual needs while reducing inventory and managing supply and quality risks."
+    },
+    {
+      "ar": "التكاليف على أساس الأنشطة",
+      "en": "Activity-based costing (ABC)",
+      "meaningAr": "منهج يحمّل تكاليف الموارد على الأنشطة ثم على أغراض التكلفة وفق مسببات تعكس استهلاكها.",
+      "meaningEn": "A method assigning resource costs to activities and then to cost objects using drivers reflecting consumption."
     }
   ],
   "internal-controls": [
     {
-      "ar": "فصل الصلاحيات",
+      "ar": "الفصل بين المهام (فصل الصلاحيات)",
       "en": "Segregation of duties",
       "meaningAr": "توزيع إنشاء العملية واعتمادها وتنفيذها ومراجعتها على أشخاص مختلفين قدر الإمكان.",
       "meaningEn": "Separating initiation, authorization, custody and review among appropriate roles."
@@ -136,6 +184,18 @@ export const CMA_DOMAIN_GLOSSARY: Record<CmaDomain, CmaGlossaryTerm[]> = {
       "en": "Audit trail",
       "meaningAr": "سجل يبين من أدخل أو غيّر بيانات المعاملة ومتى وكيف.",
       "meaningEn": "A traceable history of who entered or changed transaction data and when."
+    },
+    {
+      "ar": "رقابة تصحيحية",
+      "en": "Corrective control",
+      "meaningAr": "إجراء لمعالجة أثر خلل اكتشف بالفعل والحد من تكراره، مثل تصحيح السجلات ومعالجة السبب.",
+      "meaningEn": "A control that addresses an identified problem and mitigates its recurrence, such as correcting records and remediating causes."
+    },
+    {
+      "ar": "تأكيد معقول",
+      "en": "Reasonable assurance",
+      "meaningAr": "مستوى مرتفع من الثقة في تحقيق أهداف الرقابة دون ضمان مطلق بسبب القيود الملازمة لأي نظام.",
+      "meaningEn": "A high but not absolute level of confidence in achieving control objectives given inherent limitations."
     }
   ],
   "technology-analytics": [
@@ -162,6 +222,18 @@ export const CMA_DOMAIN_GLOSSARY: Record<CmaDomain, CmaGlossaryTerm[]> = {
       "en": "Automation",
       "meaningAr": "تنفيذ خطوات متكررة بواسطة نظام، مع ضرورة اختبار المدخلات والاستثناءات.",
       "meaningEn": "Using a system for repeatable tasks while validating inputs and exceptions."
+    },
+    {
+      "ar": "تخطيط موارد المنشأة",
+      "en": "Enterprise resource planning (ERP)",
+      "meaningAr": "منصة تدمج عمليات المنشأة وبياناتها عبر نظم مترابطة؛ نجاحها يعتمد على جودة البيانات والتنفيذ والرقابة.",
+      "meaningEn": "An integrated platform connecting organizational processes and data; its success depends on implementation, data quality and controls."
+    },
+    {
+      "ar": "التحليلات التنبؤية",
+      "en": "Predictive analytics",
+      "meaningAr": "استخدام البيانات والنماذج لتقدير نتائج مستقبلية محتملة دون ضمان تحققها أو إثبات السببية.",
+      "meaningEn": "Use of data and models to estimate possible future outcomes without guaranteeing them or establishing causation."
     }
   ],
   "financial-statement-analysis": [
@@ -188,6 +260,18 @@ export const CMA_DOMAIN_GLOSSARY: Record<CmaDomain, CmaGlossaryTerm[]> = {
       "en": "Earnings quality",
       "meaningAr": "مدى استدامة الربح وارتباطه بالتشغيل والتحصيل وتقديرات المحاسبة.",
       "meaningEn": "How sustainable earnings are and how they relate to operations, cash and estimates."
+    },
+    {
+      "ar": "رأس المال العامل",
+      "en": "Working capital",
+      "meaningAr": "الأصول المتداولة ناقص الالتزامات المتداولة؛ لا يمثل بالضرورة نقدًا متاحًا بالكامل.",
+      "meaningEn": "Current assets less current liabilities; it does not necessarily represent immediately available cash."
+    },
+    {
+      "ar": "معدل دوران المخزون",
+      "en": "Inventory turnover",
+      "meaningAr": "تكلفة المبيعات مقسومة على متوسط المخزون للفترة؛ يفسر في ضوء الصناعة وسياسة المخزون.",
+      "meaningEn": "Cost of goods sold divided by average inventory for the period, interpreted in its industry and inventory-policy context."
     }
   ],
   "corporate-finance": [
@@ -214,14 +298,26 @@ export const CMA_DOMAIN_GLOSSARY: Record<CmaDomain, CmaGlossaryTerm[]> = {
       "en": "Hedging",
       "meaningAr": "إجراء لتقليل أثر تغير غير مرغوب في سعر أو عملة أو فائدة.",
       "meaningEn": "An action to reduce unwanted exposure to price, currency or interest-rate changes."
+    },
+    {
+      "ar": "المتوسط المرجح لتكلفة رأس المال",
+      "en": "Weighted average cost of capital (WACC)",
+      "meaningAr": "متوسط تكلفة مصادر التمويل بأوزانها المناسبة، مع مراعاة الأثر الضريبي للدين عند انطباقه.",
+      "meaningEn": "Weighted average cost of financing sources, reflecting the tax effect of debt where applicable."
+    },
+    {
+      "ar": "الرافعة المالية",
+      "en": "Financial leverage",
+      "meaningAr": "استخدام التمويل ذي التكلفة الثابتة بما قد يضخم عوائد المساهمين أو خسائرهم ويزيد المخاطر.",
+      "meaningEn": "Use of fixed-charge financing that can amplify shareholder returns or losses and increase risk."
     }
   ],
   "decision-analysis": [
     {
       "ar": "هامش المساهمة",
       "en": "Contribution margin",
-      "meaningAr": "سعر البيع ناقص التكلفة المتغيرة؛ يساهم أولًا في تغطية الثابت ثم الربح.",
-      "meaningEn": "Sales less variable costs, available to cover fixed costs and then profit."
+      "meaningAr": "المبيعات ناقص التكاليف المتغيرة، أو سعر بيع الوحدة ناقص تكلفتها المتغيرة عند القياس للوحدة؛ يساهم الهامش في تغطية الثابت ثم الربح.",
+      "meaningEn": "Sales less variable costs, or unit selling price less unit variable cost when measured per unit; available to cover fixed costs and then profit."
     },
     {
       "ar": "تكلفة الفرصة البديلة",
@@ -240,6 +336,18 @@ export const CMA_DOMAIN_GLOSSARY: Record<CmaDomain, CmaGlossaryTerm[]> = {
       "en": "Relevant cost",
       "meaningAr": "تكلفة مستقبلية تختلف بين البدائل المقارنة.",
       "meaningEn": "A future cost that differs between the alternatives being compared."
+    },
+    {
+      "ar": "نقطة التعادل",
+      "en": "Break-even point",
+      "meaningAr": "مستوى النشاط الذي تتساوى عنده الإيرادات والتكاليف الكلية وفق افتراضات التحليل.",
+      "meaningEn": "The activity level at which total revenue equals total costs under the assumptions of the analysis."
+    },
+    {
+      "ar": "التكلفة التفاضلية",
+      "en": "Differential cost",
+      "meaningAr": "الفرق في التكلفة بين بديلين؛ لا تكون التكلفة ذات صلة بالقرار إلا إذا كانت مستقبلية ومختلفة.",
+      "meaningEn": "The cost difference between alternatives; decision relevance requires a future cost that differs between them."
     }
   ],
   "risk-mgmt": [
@@ -264,16 +372,28 @@ export const CMA_DOMAIN_GLOSSARY: Record<CmaDomain, CmaGlossaryTerm[]> = {
     {
       "ar": "الخسارة المتوقعة",
       "en": "Expected loss",
-      "meaningAr": "حاصل ترجيح النتائج المحتملة باحتمالاتها، ولا يعني خسارة مؤكدة.",
-      "meaningEn": "A probability-weighted estimate of outcomes, not a guaranteed loss."
+      "meaningAr": "متوسط الخسائر المحتملة المرجح باحتمالات حدوثها؛ لا يعني خسارة مؤكدة.",
+      "meaningEn": "A probability-weighted average of possible loss amounts, not a guaranteed loss."
+    },
+    {
+      "ar": "تقييم المخاطر",
+      "en": "Risk assessment",
+      "meaningAr": "تحديد المخاطر وتحليل احتمالها وأثرها وتقييمها بالنسبة للأهداف ومعايير المخاطر.",
+      "meaningEn": "Identification, analysis and evaluation of risks in relation to objectives and risk criteria."
+    },
+    {
+      "ar": "تحليل الحساسية",
+      "en": "Sensitivity analysis",
+      "meaningAr": "تغيير افتراض أو مدخل مع تثبيت الباقي غالبًا لمعرفة أثره على النتيجة دون تقدير احتمال وقوعه بالضرورة.",
+      "meaningEn": "Varying an assumption or input, often holding others constant, to examine its effect without necessarily assigning probabilities."
     }
   ],
   "investment-decisions": [
     {
       "ar": "صافي القيمة الحالية",
       "en": "Net present value (NPV)",
-      "meaningAr": "القيمة الحالية للتدفقات المتوقعة ناقص الاستثمار الأولي والتكاليف ذات الصلة.",
-      "meaningEn": "Present value of expected cash flows less the relevant investment outlays."
+      "meaningAr": "مجموع القيم الحالية لصافي التدفقات النقدية الإضافية للمشروع بما فيها الاستثمار الأولي والتدفقات اللاحقة، دون تكرار خصم التكلفة.",
+      "meaningEn": "The sum of discounted incremental project cash flows, including initial investment and subsequent flows, without double-counting outlays."
     },
     {
       "ar": "معدل الخصم",
@@ -292,6 +412,18 @@ export const CMA_DOMAIN_GLOSSARY: Record<CmaDomain, CmaGlossaryTerm[]> = {
       "en": "Terminal cash flow",
       "meaningAr": "المبالغ النقدية عند نهاية المشروع مثل بيع الأصل واسترداد رأس المال العامل.",
       "meaningEn": "End-of-project cash such as salvage proceeds and recovery of working capital."
+    },
+    {
+      "ar": "فترة الاسترداد",
+      "en": "Payback period",
+      "meaningAr": "المدة اللازمة لاسترداد الاستثمار من صافي التدفقات النقدية؛ الصيغة العادية لا تخصم التدفقات.",
+      "meaningEn": "Time needed to recover an investment through net cash flows; ordinary payback does not discount those flows."
+    },
+    {
+      "ar": "مؤشر الربحية",
+      "en": "Profitability index",
+      "meaningAr": "نسبة القيمة الحالية للتدفقات النقدية الداخلة المستقبلية إلى الاستثمار الأولي في الحالة البسيطة ذات الاستثمار الواحد.",
+      "meaningEn": "Ratio of present value of future cash inflows to initial investment in the simple single-outlay case."
     }
   ],
   "professional-ethics": [
@@ -318,6 +450,18 @@ export const CMA_DOMAIN_GLOSSARY: Record<CmaDomain, CmaGlossaryTerm[]> = {
       "en": "Conflict of interest",
       "meaningAr": "مصلحة شخصية قد تؤثر في الحكم أو القرار المهني أو مظهر استقلاله.",
       "meaningEn": "A personal interest that may affect professional judgment or its perceived impartiality."
+    },
+    {
+      "ar": "الكفاءة المهنية",
+      "en": "Professional competence",
+      "meaningAr": "المحافظة على المعرفة والمهارات وتقديم العمل وفق المعايير المناسبة مع بيان حدود الخبرة عند الحاجة.",
+      "meaningEn": "Maintaining knowledge and skills and performing work to appropriate standards while disclosing relevant limitations."
+    },
+    {
+      "ar": "الموضوعية",
+      "en": "Objectivity",
+      "meaningAr": "تجنب التحيز وتأثير المصالح غير الملائمة عند تقييم الأدلة واتخاذ الأحكام المهنية.",
+      "meaningEn": "Avoiding bias and improper influence when evaluating evidence and exercising professional judgment."
     }
   ]
 };
