@@ -1588,3 +1588,16 @@ test("Exam practice counts unique attempts, preserves source keys and resets on 
   assert.match(source,/setTrack\(t\);\s*resetScore\(\);/);
   assert.ok(source.includes("revealed && scorable && isCorrect"));
 });
+
+test("Topic practice uses neutral feedback and Volume 2 explicitly holds inferred answers", async () => {
+  const { readFile } = await import("node:fs/promises");
+  const source = await readFile("src/routes/library.cma.tsx","utf8");
+  assert.ok(source.includes("const scorable = isCmaScorableQuestion(q)"));
+  assert.ok(source.includes("const correct = revealed && scorable"));
+  assert.ok(source.includes("const wrong = revealed && scorable"));
+  assert.ok(source.includes("const provisional = revealed && !scorable"));
+  assert.ok(source.includes("!isCmaScorableQuestion(q) ? ("));
+  assert.ok(source.includes("isCmaScorableQuestion(q) && <CmaAnswerSupport"));
+  const adapter = await readFile("src/data/cma-questions-gleim-2025-vol2.ts","utf8");
+  assert.ok(adapter.includes('sourceLayoutReview: item.answerStatus === "inferred" ||'));
+});
