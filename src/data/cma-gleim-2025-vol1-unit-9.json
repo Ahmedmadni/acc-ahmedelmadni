@@ -1469,7 +1469,15 @@
     ],
     "answerIndex": 1,
     "explanation": "If costs are fixed within the relevant range, they remain\nconstant at $560,000. Additionally, variable overhead costs\nper hour remain constant in the relevant range.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أعدت شركة موازنة التكاليف الصناعية غير المباشرة عند الطاقة العادية على أساس ساعات الآلات. تبلغ التكاليف المتغيرة $180,000 والثابتة $560,000. إذا عملت الشركة بمستوى نشاط أقل قليلًا، فماذا تتوقع؟",
+    "choicesAr": [
+      "إجمالي تكاليف ثابتة $560,000 وانخفاض معدل التكاليف المتغيرة لكل ساعة.",
+      "إجمالي تكاليف ثابتة $560,000 وثبات معدل التكاليف المتغيرة لكل ساعة.",
+      "إجمالي تكاليف ثابتة $560,000 وارتفاع معدل التكاليف المتغيرة لكل ساعة.",
+      "إجمالي تكاليف متغيرة أقل من $180,000 وانخفاض معدلها لكل ساعة."
+    ],
+    "explanationAr": "تظل التكاليف الثابتة ضمن المدى الملائم للنشاط عند $560,000. ويظل معدل التكاليف الصناعية غير المباشرة المتغيرة لكل ساعة ثابتًا ضمن ذلك المدى، بينما يتغير إجماليها تبعًا للنشاط."
   },
   {
     "unit": 9,
@@ -1486,7 +1494,15 @@
     ],
     "answerIndex": 0,
     "explanation": "In labor-intensive industries, direct labor hours are an\nappropriate driver. The “hand-crafted” rocking chairs industry\nis a labor-intensive industry; thus, direct labor hours is the\nmost appropriate allocation base.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تنتج شركة تشكيلة متنوعة من الكراسي الهزازة المصنوعة يدويًا. ما أساس التخصيص الأنسب لرواتب مشرفي الإنتاج على المنتجات؟",
+    "choicesAr": [
+      "ساعات العمل المباشر.",
+      "ساعات الآلات.",
+      "عدد المنتجات.",
+      "قيمة المبيعات."
+    ],
+    "explanationAr": "تعد ساعات العمل المباشر أساسًا مناسبًا في الصناعات كثيفة العمل. وتصنيع الكراسي يدويًا يعتمد أساسًا على العمل البشري، لذا تعد ساعات العمل المباشر الخيار الأنسب بين البدائل، إذا كانت تعكس استهلاك خدمات الإشراف."
   },
   {
     "unit": 9,
@@ -1503,7 +1519,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Since the controller is using only a single cost pool and single\ncost driver for all overhead costs, the overhead rate being\nused is most likely a single corporate-wide rate.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تصنع شركة عدة منتجات وتبيعها، وتصنع جميعها في المنشأة نفسها. قرر المراقب المالي تجميع كل التكاليف الصناعية غير المباشرة المقدرة للمنشأة في مجمع واحد، ثم تخصيصها للمنتجات على أساس ساعات العمل المباشر التي يستهلكها كل منتج. ما نوع معدل التحميل المستخدم على الأرجح؟",
+    "choicesAr": [
+      "معدل خاص بالقسم.",
+      "معدل متغير.",
+      "معدل ثابت.",
+      "معدل موحد على مستوى المنشأة."
+    ],
+    "explanationAr": "لأن المراقب المالي يستخدم مجمع تكلفة واحدًا ومسبب تكلفة واحدًا لجميع التكاليف الصناعية غير المباشرة، فإن معدل التحميل المستخدم هو على الأرجح معدل موحد على مستوى المنشأة."
   },
   {
     "unit": 9,
@@ -1520,7 +1544,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Costs should realistically be allocated on the basis of some\ncost driver. A cost driver should capture a cause-and-effect\nrelationship between the level of the driver and the level of the\ncost being allocated. In other words, costs should be allocated\non the basis of what causes the costs to occur. It is unlikely\nthat supervisory salaries would ever be a cost driver.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يعد أقل ملاءمة كأساس لتخصيص التكاليف في الظروف المعتادة؟",
+    "choicesAr": [
+      "ساعات الآلات.",
+      "ساعات العمل المباشر.",
+      "مساحة المنشأة بالأقدام المربعة.",
+      "رواتب المشرفين."
+    ],
+    "explanationAr": "ينبغي تخصيص التكاليف وفق مسبب يعكس قدر الإمكان علاقة السبب والنتيجة بين مستوى النشاط والتكلفة المراد تخصيصها. ورواتب المشرفين ليست عادة مقياسًا مباشرًا لاستهلاك الأنشطة في الحالة العامة، بخلاف الساعات أو المساحة عندما ترتبط بالتكلفة المعنية. وقد يختلف الاختيار إذا أثبتت بيانات المنشأة علاقة سببية ملائمة."
   },
   {
     "unit": 9,
@@ -1571,7 +1603,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Total indirect costs are $12,000,000 ($5,000,000 +\n$7,000,000). The appropriate allocation base is direct labor\nhours, since this more closely matches activity level than does\nindirect labor or the combination of the two. The budgeted\nindirect cost rate is thus $48 per direct labor hour\n($12,000,000 ÷ 250,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "احسب معدل تحميل التكاليف غير المباشرة المقدر في نظام التكاليف العادية باستخدام بيانات الموازنة التالية:\nإجمالي ساعات العمل المباشر: 250,000\nإجمالي ساعات العمل غير المباشر: 50,000\nالتكاليف المباشرة: $10,000,000\nالتكاليف غير المباشرة المرتبطة بالعمل: 5,000,000\nالتكاليف غير المباشرة غير المرتبطة بالعمل: 7,000,000",
+    "choicesAr": [
+      "$20",
+      "$28",
+      "$40",
+      "$48"
+    ],
+    "explanationAr": "إجمالي التكاليف غير المباشرة $12,000,000 ($5,000,000 + $7,000,000). وبافتراض أن ساعات العمل المباشر تعكس مستوى النشاط بصورة أفضل من ساعات العمل غير المباشر أو الجمع بينهما، يكون معدل التحميل المقدر $48 لكل ساعة عمل مباشر ($12,000,000 ÷ 250,000)."
   },
   {
     "unit": 9,
@@ -1588,7 +1628,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The results from the production run of 1,000 units allow the\ncompany to calculate its per-unit costs for materials ($1,000 ÷\n1,000 units = $1.00) and labor ($1,500 ÷ 1,000 units = $1.50).\nOverhead can then be derived as follows:\nTotal cost per unit                        $4.30\nLess: Direct materials                     (1.00)\nLess: Direct labor                         (1.50)\nOverhead per unit                        $1.80\nThe number of machine hours required to manufacture a\nsingle unit is .45 (450 hours ÷ 1,000 units). Therefore, $1.80\nrepresents 45% of the cost of a machine hour ($1.80 ÷ .45 =\n$4.00). Since 150,000 hours were budgeted, total budgeted\noverhead for the year was $600,000 (150,000 hours × $4.00\nper hour).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم شركة طباعة نظام تكاليف أوامر التشغيل وتحمل التكاليف الصناعية غير المباشرة على أساس ساعات الآلات. وقدرت ساعات الآلات السنوية بـ150,000 ساعة. وخلال السنة اكتمل أمر إنتاج 1,000 وحدة وتكبد الآتي:\nالمواد المباشرة $1,000\nالعمل المباشر 1,500\nالتكاليف غير المباشرة الفعلية 1,980\nساعات الآلات 450\nحسب المحاسب تكلفة مخزون هذا الأمر بمبلغ $4.30 للوحدة. فما إجمالي التكاليف الصناعية غير المباشرة المقدرة للسنة؟",
+    "choicesAr": [
+      "$577,500",
+      "$600,000",
+      "$645,000",
+      "$660,000"
+    ],
+    "explanationAr": "تتيح دفعة الإنتاج المكونة من 1,000 وحدة حساب تكلفة المواد للوحدة ($1,000 ÷ 1,000 وحدة = $1.00) والعمل ($1,500 ÷ 1,000 وحدة = $1.50).\nوتحسب التكاليف غير المباشرة المحملة للوحدة كما يلي:\nإجمالي تكلفة الوحدة $4.30\nيطرح: المواد المباشرة (1.00)\nيطرح: العمل المباشر (1.50)\nالتكاليف غير المباشرة للوحدة $1.80\nعدد ساعات الآلات للوحدة .45 (450 ساعة ÷ 1,000 وحدة). لذلك يمثل $1.80 نسبة 45% من معدل التحميل لكل ساعة آلة ($1.80 ÷ .45 = $4.00). وبما أن الساعات المقدرة 150,000، فإن إجمالي التكاليف المقدرة للسنة $600,000 (150,000 ساعة × $4.00 للساعة)."
   },
   {
     "unit": 9,
@@ -1605,7 +1653,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The departmental overhead allocations are determined by the\nproportion of the total driver expended by each department on\nthis job, as follows:\nTooling:            $8,625 × (12 ÷ 460)         =   $225\nFabricating:        $16,120 × (3 ÷ 620)         =      78\nTotal                                              $303",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يحدد محاسب التكاليف معدلات تحميل خاصة بقسمي تجهيز الأدوات والتصنيع. وفيما يلي بيانات الموازنة وأحد أوامر التشغيل:\nالبند | تجهيز الأدوات | التصنيع\nالمستلزمات | $850 | $200\nرواتب المشرفين | 1,500 | 2,000\nالعمل غير المباشر | 1,200 | 4,880\nالإهلاك | 1,000 | 5,500\nالإصلاحات | 4,075 | 3,540\nإجمالي التكاليف غير المباشرة المقدرة | $8,625 | $16,120\nإجمالي ساعات العمل المباشر | 460 | 620\nساعات العمل المباشر للأمر 231 | 12 | 3\nباستخدام معدلات التحميل الخاصة بالأقسام، ما إجمالي التكاليف غير المباشرة المحملة على الأمر 231 في القسمين؟",
+    "choicesAr": [
+      "$225",
+      "$303",
+      "$537",
+      "$671"
+    ],
+    "explanationAr": "تحدد التكاليف المحملة بحسب نسبة استهلاك الأمر من إجمالي مسبب التكلفة في كل قسم:\nتجهيز الأدوات: $8,625 × (12 ÷ 460) = $225\nالتصنيع: $16,120 × (3 ÷ 620) = 78\nالإجمالي $303."
   },
   {
     "unit": 9,
@@ -1622,7 +1678,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The departmental overhead allocations are determined by the\nproportion of the total driver expended by each department on\nthis job. Tooling’s allocation is $197.50 [$8,690 × (10 ÷ 440)].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يعد محاسب التكاليف في شركة صناعية تقريرًا إداريًا يتضمن تخصيص التكاليف الصناعية غير المباشرة. وفيما يلي بيانات الموازنة وأحد أوامر التشغيل:\nالبند | تجهيز الأدوات | التصنيع\nالمستلزمات | $690 | $80\nرواتب المشرفين | 1,400 | 1,800\nالعمل غير المباشر | 1,000 | 4,000\nالإهلاك | 1,200 | 5,200\nالإصلاحات | 4,400 | 3,000\nإجمالي التكاليف غير المباشرة المقدرة | $8,690 | $14,080\nإجمالي ساعات العمل المباشر | 440 | 640\nساعات العمل المباشر للأمر 231 | 10 | 2\nباستخدام معدلات الأقسام على أساس ساعات العمل المباشر، ما التكاليف المحملة على الأمر 231 في قسم تجهيز الأدوات؟",
+    "choicesAr": [
+      "$44.00",
+      "$197.50",
+      "$241.50",
+      "$501.00"
+    ],
+    "explanationAr": "تحدد التكاليف المحملة بحسب نسبة استهلاك الأمر من إجمالي مسبب التكلفة في القسم. ويبلغ المبلغ المحمل في قسم تجهيز الأدوات $197.50 [$8,690 × (10 ÷ 440)]."
   },
   {
     "unit": 9,
@@ -1639,7 +1703,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Direct labor hours budgeted for next year are 10,000 ($50,000\ntotal ÷ $5 per hour). Factory overhead is applied at the rate of\n$7 per direct labor hour ($70,000 ÷ 10,000 hours). A job\nincurring 20 hours of direct labor will thus be charged with\n$140 of overhead ($7 per direct labor hour × 20 hours).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتوقع شركة تكبد $70,000 من التكاليف الصناعية غير المباشرة و$60,000 من التكاليف العمومية والإدارية في السنة التالية. ويتوقع أن تبلغ تكلفة العمل المباشر عند $5 للساعة إجمالًا $50,000. إذا حملت التكاليف الصناعية غير المباشرة لكل ساعة عمل مباشر، فكم يحمل على أمر يتطلب 20 ساعة عمل مباشر؟",
+    "choicesAr": [
+      "$28",
+      "$120",
+      "$140",
+      "$260"
+    ],
+    "explanationAr": "ساعات العمل المباشر المقدرة للسنة التالية 10,000 ($50,000 الإجمالي ÷ $5 للساعة). ومعدل التحميل $7 لكل ساعة عمل مباشر ($70,000 ÷ 10,000 ساعة). لذا يحمل على أمر يتطلب 20 ساعة مبلغ $140 ($7 لكل ساعة × 20 ساعة)."
   },
   {
     "unit": 9,
@@ -1656,7 +1728,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Variable overhead consists of those inputs to the production\nprocess that (1) vary with the level of production and (2)\ncannot be practicably traced to end products. In the\ncorporation’s case, these include indirect materials ($1,000),\nindirect labor ($10,000), and utilities ($12,000), for a total of\n$23,000. Dividing this amount by the number of units\nscheduled for production yields a variable overhead\napplication rate of $2.09 ($23,000 ÷ 11,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "باستخدام بيانات الموازنة التالية لشركة تنتج منتجًا واحدًا، احسب معدل التحميل المحدد مسبقًا للتكاليف الصناعية غير المباشرة المتغيرة:\nالوحدات المزمع إنتاجها 11,000\nالوحدات المزمع بيعها 10,000\nمواد غير مباشرة تتغير مع الإنتاج $1,000\nعمل غير مباشر يتغير مع الإنتاج 10,000\nراتب مشرف المصنع بصرف النظر عن الإنتاج 20,000\nإهلاك مبنى المصنع ومعداته 30,000\nمرافق تشغيل آلات المصنع 12,000\nإنارة أمن المصنع 2,000\nمصروفات البيع والعمومية والإدارية 5,000",
+    "choicesAr": [
+      "$2.09",
+      "$2.30",
+      "$4.73",
+      "$5.20"
+    ],
+    "explanationAr": "تتكون التكاليف غير المباشرة المتغيرة من مدخلات الإنتاج التي (1) تتغير مع مستوى الإنتاج و(2) لا يمكن تتبعها إلى المنتجات النهائية بصورة عملية. وتشمل في الحالة المعروضة المواد غير المباشرة ($1,000) والعمل غير المباشر ($10,000) ومرافق تشغيل الآلات ($12,000)، بإجمالي $23,000. وبقسمة الإجمالي على الوحدات المخطط إنتاجها نحصل على معدل تحميل $2.09 ($23,000 ÷ 11,000)."
   },
   {
     "unit": 9,
@@ -1673,7 +1753,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The allocation rate for Department 1 is $10/machine hour\n($5,000,000 ÷ 500,000 machine hours). The allocation rate for\nDepartment 2 is $5/labor hour ($7,000,000 ÷ 1,400,000 labor\nhours). Therefore, a product that requires 0.5 machine hours\nin Department 1 and 1.5 hours of labor in Department 2 will\nhave a budgeted overhead cost of $12.50 [(0.5 × $10) + (1.5 ×\n$5)].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم شركة معدلات خاصة بالأقسام لتحميل التكاليف غير المباشرة على منتجيها. وفيما يلي بيانات الموازنة للسنة التالية:\nالبند | القسم 1 | القسم 2\nالتكاليف الصناعية غير المباشرة | $5,000,000 | $7,000,000\nمسبب التكلفة | ساعات الآلات | ساعات العمل\nساعات الآلات | 500,000 | 120,000\nساعات العمل | 100,000 | 1,400,000\nتتوقع الشركة إنتاج 400,000 وحدة من المنتج A خلال السنة. وتحتاج كل وحدة إلى 0.5 ساعة آلة في القسم 1 و1.5 ساعة عمل في القسم 2. ما تكلفة التكاليف الصناعية غير المباشرة المقدرة لكل وحدة من A؟",
+    "choicesAr": [
+      "$11.03",
+      "$12.50",
+      "$12.73",
+      "$15.00"
+    ],
+    "explanationAr": "معدل التحميل للقسم 1 هو $10 لكل ساعة آلة ($5,000,000 ÷ 500,000 ساعة آلة). ومعدل القسم 2 هو $5 لكل ساعة عمل ($7,000,000 ÷ 1,400,000 ساعة عمل). ولذلك فإن المنتج الذي يتطلب 0.5 ساعة آلة في القسم 1 و1.5 ساعة عمل في القسم 2 تبلغ تكلفته غير المباشرة المقدرة $12.50 [(0.5 × $10) + (1.5 × $5)]."
   },
   {
     "unit": 9,
@@ -1690,7 +1778,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Cost of goods sold before proration is calculated by\nsubtracting the ending balance of finished goods inventory\nfrom cost of goods available for sale to achieve $123,000\n($136,000 – $13,000). Manufacturing overhead was\nunderapplied by $5,000 ($55,000 actual – $50,000 applied).\nThat excess $5,000 is prorated among the ending balance of\nwork-in-process, the ending balance of finished goods, and\ncost of goods sold. The amount prorated to cost of goods sold\nis $4,100 {$5,000 × [$123,000 cost of goods sold ÷\n($123,000 cost of goods sold + $14,000 ending balance work-\nin-process + 13,000 ending balance finished goods)]}. The\ncost of goods sold after proration would total $127,100\n($123,000 + $4,100).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فيما يلي نتائج شركة للسنة الماضية:\nتكلفة البضاعة المتاحة للبيع $136,000\nرصيد آخر المدة للمواد الخام 6,000\nرصيد آخر المدة للإنتاج تحت التشغيل 14,000\nرصيد آخر المدة للإنتاج التام 13,000\nالتكاليف الصناعية غير المباشرة المحملة 50,000\nالتكاليف الصناعية غير المباشرة الفعلية 55,000\nإذا وزعت الشركة فرق التحميل بالزيادة أو النقص في نهاية السنة نسبيًا، فما تكلفة المبيعات بعد التوزيع؟",
+    "choicesAr": [
+      "$140,150",
+      "$127,100",
+      "$126,950",
+      "$118,900"
+    ],
+    "explanationAr": "تحسب تكلفة المبيعات قبل التوزيع بطرح مخزون الإنتاج التام آخر المدة من تكلفة البضاعة المتاحة للبيع، فتبلغ $123,000 ($136,000 − $13,000). وقد بلغ نقص التحميل $5,000 ($55,000 فعلي − $50,000 محمل). ويوزع مبلغ $5,000 على الإنتاج تحت التشغيل والإنتاج التام وتكلفة المبيعات وفق أرصدتها في هذه المسألة. ويبلغ نصيب تكلفة المبيعات $4,100 {$5,000 × [$123,000 تكلفة المبيعات ÷ ($123,000 تكلفة المبيعات + $14,000 إنتاج تحت التشغيل + 13,000 إنتاج تام)]}. وبذلك تبلغ تكلفة المبيعات بعد التوزيع $127,100 ($123,000 + $4,100)."
   },
   {
     "unit": 9,
@@ -1707,7 +1803,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The most accurate method of prorating overapplied or\nunderapplied overhead prorates based on the allocated\noverhead in each balance. Cost of goods sold after proration\nof the overapplied overhead would be $2,169,900\n{$2,250,000 cost of goods sold before proration – 90,000 ×\n[$890,000 overhead in cost of goods sold ÷\n($890,000 overhead in cost of goods sold +\n$100,000 overhead in finished goods + $10,000 overhead in\nwork-in-process)]}.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فيما يلي أرصدة حسابات شركة في نهاية السنة:\nالحساب | الرصيد قبل التسوية | التكاليف غير المباشرة المحملة ضمن الرصيد\nمخزون المواد المباشرة | $100,000 | $0\nمخزون الإنتاج تحت التشغيل | 25,000 | 10,000\nمخزون الإنتاج التام | 225,000 | 100,000\nتكلفة المبيعات | 2,250,000 | 890,000\nإذا بلغ التحميل الزائد $90,000 واستخدمت الشركة أدق أساس لتوزيع فرق التحميل، فما رصيد تكلفة المبيعات بعد التسوية؟",
+    "choicesAr": [
+      "$2,169,000",
+      "$2,169,900",
+      "$2,172,115",
+      "$2,330,100"
+    ],
+    "explanationAr": "تعتمد الطريقة الأدق في هذا المثال على توزيع فرق التحميل بنسبة التكاليف غير المباشرة المحملة الموجودة ضمن كل رصيد. وتصبح تكلفة المبيعات بعد تسوية التحميل الزائد $2,169,900 {$2,250,000 تكلفة المبيعات قبل التسوية − 90,000 × [$890,000 تكاليف محملة في تكلفة المبيعات ÷ ($890,000 تكاليف محملة في تكلفة المبيعات + $100,000 في الإنتاج التام + $10,000 في الإنتاج تحت التشغيل)]}."
   },
   {
     "unit": 9,
@@ -1741,7 +1845,15 @@
     ],
     "answerIndex": 1,
     "explanation": "A material overhead variance should be allocated\nproportionately to work-in-process, finished goods, and cost of\ngoods sold. The applied overhead totaled $400,000,\nconsisting of $100,000 in work-in-process, $50,000 in finished\ngoods, and $250,000 in cost of goods sold. Since finished\ngoods accounts for 12.5% ($50,000 ÷ $400,000) of the total, it\nshould absorb 12.5% of the $30,000 overhead variance, or\n$3,750 (12.5% × $30,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لدى شركة الأرصدة التالية للتكاليف الصناعية غير المباشرة الثابتة المحملة في نهاية السنة:\nمخزون الإنتاج تحت التشغيل $100,000\nمخزون الإنتاج التام 50,000\nتكلفة المبيعات 250,000\nوتظهر الشركة نقصًا جوهريًا في تحميل التكاليف الثابتة قدره $30,000. بافتراض أن الفرق قابل للتوزيع على المخزون وتكلفة المبيعات، فأي حساب يجب تحميله بالمبلغ الصحيح؟",
+    "choicesAr": [
+      "مخزون الإنتاج تحت التشغيل بمبلغ $18,750.",
+      "مخزون الإنتاج التام بمبلغ $3,750.",
+      "تكلفة المبيعات بمبلغ $7,500.",
+      "تكلفة المبيعات بمبلغ $30,000."
+    ],
+    "explanationAr": "يوزع فرق التحميل الجوهري القابل للتوزيع على الإنتاج تحت التشغيل والإنتاج التام وتكلفة المبيعات نسبيًا. ويبلغ إجمالي التكاليف المحملة $400,000، منها $100,000 في الإنتاج تحت التشغيل و$50,000 في الإنتاج التام و$250,000 في تكلفة المبيعات. ويمثل الإنتاج التام 12.5% ($50,000 ÷ $400,000) من الإجمالي، فيتحمل 12.5% من فرق التحميل البالغ $30,000، أي $3,750 (12.5% × $30,000). ولا تنطبق هذه المعالجة تلقائيًا على التكاليف الثابتة غير المخصصة بسبب انخفاض الإنتاج غير الطبيعي."
   },
   {
     "unit": 9,
