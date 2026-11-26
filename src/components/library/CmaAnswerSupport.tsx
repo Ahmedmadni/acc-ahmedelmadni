@@ -45,7 +45,7 @@ export function CmaAnswerSupport({
   const [expanded, setExpanded] = useState(!isCorrect && Boolean(verifiedWalkthrough));
   const precisionNote = SOURCE_PRECISION_NOTES[question.id];
 
-  if (!verifiedWalkthrough && !note) return null;
+  if (!verifiedWalkthrough && !note && !precisionNote) return null;
 
   return (
     <>
@@ -54,7 +54,7 @@ export function CmaAnswerSupport({
           {precisionNote[lang]}
         </p>
       )}
-      <details
+      {(verifiedWalkthrough || note) && <details
       className="mt-4 rounded-xl border border-[#A88765]/30 bg-white p-4 text-[#40382F]"
       dir={lang === "ar" ? "rtl" : "ltr"}
       open={expanded}
@@ -101,7 +101,7 @@ export function CmaAnswerSupport({
           )}
         </>
       )}
-      </details>
+      </details>}
     </>
   );
 }
