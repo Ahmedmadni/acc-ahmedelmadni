@@ -163,7 +163,7 @@ export const CMA_GLEIM_2025_VOL2_QUESTIONS: CmaLocalQuestion[] = records.map((it
     sourcePage: item.page,
     answerStatus: item.answerStatus === "inferred" ? "inferred" : "source",
     sourceTextStatus: item.sourceTextStatus,
-    sourceLayoutReview: item.sourceTextStatus === "table-reflowed" || item.sourceTextStatus === "reconstructed" || pendingSourceLayouts.has(`${item.unit}.${item.section}.${item.number}`) || pendingAnswerRoundingReviews.has(`${item.unit}.${item.section}.${item.number}`) || pendingAnswerConsistencyReviews.has(`${item.unit}.${item.section}.${item.number}`) || pendingStandaloneContextReviews.has(`${item.unit}.${item.section}.${item.number}`),
+    sourceLayoutReview: item.answerStatus === "inferred" || item.sourceTextStatus === "table-reflowed" || item.sourceTextStatus === "reconstructed" || pendingSourceLayouts.has(`${item.unit}.${item.section}.${item.number}`) || pendingAnswerRoundingReviews.has(`${item.unit}.${item.section}.${item.number}`) || pendingAnswerConsistencyReviews.has(`${item.unit}.${item.section}.${item.number}`) || pendingStandaloneContextReviews.has(`${item.unit}.${item.section}.${item.number}`),
     sourceArabicStatus: hasArabic ? "draft" : undefined,
   };
 });
