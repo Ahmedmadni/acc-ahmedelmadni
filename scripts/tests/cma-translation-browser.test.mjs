@@ -131,9 +131,23 @@ test("unsupported-device CMA translation stays editable in-page without a paid o
 
 test("Arabic presentation uses RTL when source has Arabic text, without changing the original scoring", () => {
   const component = fs.readFileSync(path.resolve(root, "src/components/library/CmaTranslatedQuestion.tsx"), "utf8");
-  assert.match(component, /const visibleArabic = lang === "ar"/);
+  assert.match(component, /const visibleArabic = displayLang === "ar"/);
   assert.match(component, /direction: visibleArabic \? "rtl" : "ltr"/);
   const page = fs.readFileSync(path.resolve(root, "src/routes/library.cma.tsx"), "utf8");
   assert.match(page, /choiceIndex === q\.answerIndex/);
   assert.match(page, /<CmaTranslatedQuestion/);
+});
+
+test("stored Arabic drafts can show the original for one question without changing scoring or review status", () => {
+  const component = fs.readFileSync(path.resolve(root, "src/components/library/CmaTranslatedQuestion.tsx"), "utf8");
+  assert.match(component, /question\.sourceArabicStatus === "draft"/);
+  assert.match(component, /originalDraftKey === draftKey/);
+  assert.match(component, /const displayLang = showDraftOriginal \? "en" : lang/);
+  for (const field of ["question","choices","explanation"]) {
+    assert.ok(component.includes("question."+field+"[displayLang]"));
+  }
+  assert.match(component, /aria-pressed=\{showDraftOriginal\}/);
+  assert.match(component, /مقارنة بالنص الإنجليزي الأصلي/);
+  assert.doesNotMatch(component, /question\.answerIndex\s*=|question\.sourceLayoutReview\s*=/);
+  assert.match(component, /لا يعني ذلك اعتماد المصدر أو إزالة أي تحذير للمراجعة/);
 });
