@@ -324,3 +324,17 @@ test("Unit 9 independent joint cost allocation and further processing calculatio
  assert.equal(78000-450000*60000/750000-12000,30000);
  assert.equal(Math.round(140000/.7),200000);assert.equal(600000*200000/250000,480000);assert.equal(Math.round(500000*240000/495000),242424);
 });
+
+const unit9Wave2Pins=new Map([[1,[956,2,"7f521f5b"]],[2,[957,0,"d1a9ed4f"]],[3,[957,3,"2472b1c7"]],[4,[958,3,"15362ff2"]],[5,[959,3,"7f45f83f"]],[6,[960,1,"70f478cf"]],[7,[962,0,"8ab75094"]],[8,[963,2,"c448e0d2"]],[9,[964,2,"23941b5e"]],[11,[967,0,"a7869a1d"]],[12,[968,3,"b8f3bc50"]],[13,[969,1,"65d963c6"]],[14,[969,0,"db91f164"]],[15,[970,2,"631fa9a3"]],[16,[971,1,"36390a31"]],[17,[972,2,"ff393648"]],[18,[973,2,"3bef61ad"]]]);
+test("Unit 9 overhead allocation wave 2 preserves source, keys and numerical parity",()=>{
+ for(const [n,[page,index,hash]] of unit9Wave2Pins){const r=unit9Rows.find(r=>r.section===2&&r.number===n);assert.equal(r.page,page);assert.equal(r.answerIndex,index);assert.equal(r.answerStatus,"source");assert.equal(fingerprint(JSON.stringify([r.stem,r.choices,r.explanation,r.answerIndex,r.page])),hash);assert.equal(validateCmaTranslation({question:{en:r.stem},choices:{en:r.choices},explanation:{en:r.explanation}},{question:r.stemAr,choices:r.choicesAr,explanation:r.explanationAr}).valid,true,String(n));for(const [en,ar] of [[r.stem,r.stemAr],...r.choices.map((c,i)=>[c,r.choicesAr[i]]),[r.explanation,r.explanationAr]])assert.deepEqual(cmaNumericTokens(ar),cmaNumericTokens(en),String(n));}
+ const adapter=read("src/data/cma-questions-gleim-2025-vol1.ts");const held=["9.2.10"];assert.deepEqual(unit9Rows.filter(r=>r.section===2&&r.number<=18&&!r.stemAr).map(r=>[r.unit,r.section,r.number].join(".")),held);for(const id of held)assert.ok(adapter.includes('"'+id+'"'),id);
+ assert.equal(unit9Rows.length,115);const translated=unit9Rows.filter(r=>r.stemAr&&r.choicesAr&&r.explanationAr);assert.ok(translated.length>=48);assert.equal(new Set(translated.map(r=>JSON.stringify([r.stem,r.choices]))).size,translated.length);
+});
+test("Unit 9 independent overhead rate and reconciliation computations",()=>{
+ assert.equal(448000/320000,1.4);
+ assert.equal(Math.round(345000*448000/320000-459000),24000);
+ assert.equal(48000*(100000/50000)*(250000/100000),240000);
+ assert.equal(8000+2000+8000+2000*.2+140*117,34780);
+ assert.equal(1120000+133000*1120000/(128000+272000+1120000),1218000);
+});
