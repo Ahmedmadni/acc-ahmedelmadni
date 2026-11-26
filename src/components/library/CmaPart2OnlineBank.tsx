@@ -4,6 +4,7 @@ import { CMA_LOCAL_QUESTIONS } from "@/data/cma-question-bank";
 import { CMA_DOMAINS, CMA_TOPICS, type CmaDomain, type CmaStudyUnit } from "@/data/cma-topics";
 import { CmaTranslatedQuestion } from "@/components/library/CmaTranslatedQuestion";
 import { CmaAnswerSupport } from "@/components/library/CmaAnswerSupport";
+import { isCmaScorableQuestion, summarizeCmaReview } from "@/lib/cma-source-review.shared";
 
 type Language = "ar" | "en";
 
@@ -53,8 +54,7 @@ export function CmaPart2OnlineBank({ lang, studyUnit }: { lang: Language; studyU
   const actualPage = Math.min(page, pageCount);
   const start = (actualPage - 1) * PAGE_SIZE;
   const shown = filtered.slice(start, start + PAGE_SIZE);
-  const answered = filtered.filter((item) => answers[item.id] !== undefined).length;
-  const correct = filtered.filter((item) => answers[item.id] === item.answerIndex).length;
+  const { answered, correct, provisional } = summarizeCmaReview(filtered, answers);
 
   return (
     <section
@@ -134,6 +134,7 @@ export function CmaPart2OnlineBank({ lang, studyUnit }: { lang: Language; studyU
         <span>
           {lang === "ar" ? "تمت الإجابة" : "Answered"}: {answered} ·
           {" "}{lang === "ar" ? "صحيحة" : "Correct"}: {correct}
+          {provisional > 0 && <span> · {lang === "ar" ? "مراجعة دون درجات" : "Unscored review"}: {provisional}</span>}
         </span>
       </div>
 
@@ -145,6 +146,7 @@ export function CmaPart2OnlineBank({ lang, studyUnit }: { lang: Language; studyU
         <div className="mt-4 space-y-4">
           {shown.map((question, index) => {
             const chosen = answers[question.id];
+            const scorable = isCmaScorableQuestion(question);
             const topic = topicById.get(question.topicId);
             return (
               <CmaTranslatedQuestion key={question.id} question={question} lang={lang} revealExplanation={chosen !== undefined}>
@@ -181,8 +183,9 @@ export function CmaPart2OnlineBank({ lang, studyUnit }: { lang: Language; studyU
                     <div className="mt-4 grid gap-2 sm:grid-cols-2">
                       {view.choices.map((choice, option) => {
                         const revealed = chosen !== undefined;
-                        const right = revealed && question.answerIndex === option;
-                        const wrong = revealed && chosen === option && !right;
+                        const right = scorable && revealed && question.answerIndex === option;
+                        const wrong = scorable && revealed && chosen === option && !right;
+                        const provisionalChoice = !scorable && revealed && (chosen === option || question.answerIndex === option);
                         return (
                           <button
                             key={option}
@@ -190,7 +193,7 @@ export function CmaPart2OnlineBank({ lang, studyUnit }: { lang: Language; studyU
                             disabled={revealed}
                             aria-pressed={chosen === option}
                             onClick={() => setAnswers((previous) => ({ ...previous, [question.id]: option }))}
-                            className={`min-h-11 rounded-xl border px-4 py-3 text-start text-sm leading-6 focus-visible:outline-2 focus-visible:outline-[#A88765] ${right ? "border-emerald-600 bg-emerald-50 text-emerald-900" : wrong ? "border-red-500 bg-red-50 text-red-900" : "border-[#A88765]/25 hover:border-[#A88765]"}`}
+                            className={`min-h-11 rounded-xl border px-4 py-3 text-start text-sm leading-6 focus-visible:outline-2 focus-visible:outline-[#A88765] ${right ? "border-emerald-600 bg-emerald-50 text-emerald-900" : wrong ? "border-red-500 bg-red-50 text-red-900" : provisionalChoice ? "border-amber-500 bg-amber-50 text-amber-950" : "border-[#A88765]/25 hover:border-[#A88765]"}`}
                           >
                             <span dir={view.direction} className="whitespace-pre-wrap">
                               {String.fromCharCode(65 + option)}. {choice}
@@ -202,15 +205,15 @@ export function CmaPart2OnlineBank({ lang, studyUnit }: { lang: Language; studyU
                     {chosen !== undefined && (
                       <div role="status" className="mt-4 rounded-xl bg-[#F5F1EB] p-4 text-sm leading-7">
                         <div className="flex items-center gap-2 font-bold">
-                          {chosen === question.answerIndex
+                          {scorable && (chosen === question.answerIndex
                             ? <CheckCircle2 className="size-4 text-emerald-700" />
-                            : <XCircle className="size-4 text-red-700" />}
-                          {lang === "ar"
-                            ? `الإجابة الصحيحة: ${String.fromCharCode(65 + question.answerIndex)}`
-                            : `Correct answer: ${String.fromCharCode(65 + question.answerIndex)}`}
+                            : <XCircle className="size-4 text-red-700" />)}
+                          {scorable
+                            ? (lang === "ar" ? `الإجابة الصحيحة: ${String.fromCharCode(65 + question.answerIndex)}` : `Correct answer: ${String.fromCharCode(65 + question.answerIndex)}`)
+                            : (lang === "ar" ? `مفتاح المصدر قيد المراجعة: ${String.fromCharCode(65 + question.answerIndex)} — دون درجات` : `Provisional source key: ${String.fromCharCode(65 + question.answerIndex)} — unscored`)}
                         </div>
                         <p className="mt-2 whitespace-pre-wrap" dir={view.direction}>{view.explanation}</p>
-                        <CmaAnswerSupport question={question} lang={lang} isCorrect={chosen === question.answerIndex} />
+                        {scorable && <CmaAnswerSupport question={question} lang={lang} isCorrect={chosen === question.answerIndex} />}
                         <button
                           type="button"
                           onClick={() => setAnswers((previous) => {
