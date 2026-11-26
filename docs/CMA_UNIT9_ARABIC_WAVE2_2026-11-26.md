@@ -1,0 +1,3 @@
+# Unit 9 Wave 2
+
+17 new educational Arabic drafts in section 2, Q1–9 and Q11–18. Unit 9: 48/115 (41.7%), 15 held, 52 unreviewed. Overall imported bank: 1977/2443. All original English, keys and previous translations preserved; numerical parity checked. Added independent overhead rate, standard hours, multiple allocation bases and underapplied overhead reconciliation tests. Explained relevant range, capacity for internal versus external reporting, and proportional balance allocation assumption. Q10 held because source table and narrative are severely interleaved. Original-page verification pending. Next section 2 Q19–35.
