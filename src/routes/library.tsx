@@ -174,7 +174,7 @@ function LibraryLayout() {
                 transition={{ type: "spring", stiffness: 260, damping: 30 }}
                 className="sticky top-0 z-40 border-b border-[#A88765]/20 bg-[#151412]/85 backdrop-blur-xl"
               >
-                <div className="w-full px-4 sm:px-8 lg:px-16 flex h-16  items-center justify-between">
+                <div className="flex h-16 w-full min-w-0 items-center justify-between gap-2 px-3 sm:px-8 lg:px-16">
                   <Link
                     to="/"
                     className="inline-flex items-center gap-2 rounded-full border border-[#A88765]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#c9a986] transition-all hover:bg-[#A88765]/15"
@@ -183,7 +183,7 @@ function LibraryLayout() {
                     {lang === "ar" ? "الرئيسية" : "Home"}
                     <Home className="size-3.5" />
                   </Link>
-                  <h1 className="text-sm font-extrabold tracking-wide text-[#c9a986]">
+                  <h1 className="min-w-0 text-center text-xs font-extrabold leading-tight text-[#c9a986] sm:text-sm sm:tracking-wide">
                     {lang === "ar" ? "المكتبة المحاسبية" : "Accounting Library"}
                   </h1>
                   <button
@@ -210,14 +210,14 @@ function LibraryLayout() {
                 transition={{ duration: 0.25 }}
                 className="w-full px-4 sm:px-8 lg:px-16 mt-6 "
               >
-                <div className="flex flex-wrap items-center justify-center gap-1.5 rounded-full border border-[#A88765]/20 bg-[#1C1B19] p-1.5 backdrop-blur-xl sm:w-fit sm:mx-auto">
+                <div className="flex min-w-0 flex-wrap items-center justify-center gap-1.5 rounded-2xl border border-[#A88765]/20 bg-[#1C1B19] p-1.5 backdrop-blur-xl sm:mx-auto sm:w-fit sm:rounded-full">
                   {tabs.map(({ id, ar, en, Icon, to }) => {
                     const active = current === id;
                     return (
                       <Link
                         key={id}
                         to={to}
-                        className={`inline-flex items-center gap-2 rounded-full px-4 sm:px-5 py-2 text-xs font-bold transition-all ${
+                        className={`inline-flex min-h-10 max-w-full items-center gap-2 rounded-full px-3 sm:px-5 py-2 text-xs font-bold transition-all ${
                           active
                             ? "bg-gradient-to-br from-[#c2a079] to-[#7c6045] text-[#1C1B19] shadow-lg shadow-[#4A3023]/30"
                             : "text-[#D8D1C8] hover:text-[#c9a986]"
@@ -240,7 +240,7 @@ function LibraryLayout() {
             className={studySection ? "min-[900px]:grid min-[900px]:items-start" : ""}
             style={studySection ? {
               gridTemplateColumns: notebookOpen
-                ? `minmax(0, 1fr) ${notebookWidth}px`
+                ? `minmax(0, 1fr) min(${notebookWidth}px, 42vw)`
                 : "minmax(0, 1fr)",
             } : undefined}
           >
