@@ -1,0 +1,52 @@
+name: CMA browser acceptance
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'scripts/browser/cma-acceptance.mjs'
+      - '.github/workflows/cma-browser-acceptance.yml'
+      - 'src/routes/library*.tsx'
+      - 'src/components/library/**'
+      - 'src/lib/study-notebook*'
+      - 'src/lib/library-study-language*'
+permissions:
+  contents: read
+jobs:
+  chromium-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      CI: "true"
+      VITE_SUPABASE_URL: http://127.0.0.1:54321
+      VITE_SUPABASE_PUBLISHABLE_KEY: smoke-test-only
+      SUPABASE_URL: http://127.0.0.1:54321
+      SUPABASE_PUBLISHABLE_KEY: smoke-test-only
+      CMA_SMOKE_URL: http://127.0.0.1:4173
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci
+      - name: Install isolated browser test dependency
+        run: npm install --no-save --package-lock=false playwright@1.56.1
+      - run: npx playwright install --with-deps chromium
+      - name: Start local app and run browser acceptance
+        run: |
+          mkdir -p artifacts/cma-browser
+          npm run dev -- --host 127.0.0.1 --port 4173 --strictPort > artifacts/cma-browser/server.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill "$SERVER_PID" 2>/dev/null || true' EXIT
+          for attempt in $(seq 1 90); do
+            if curl -fsS --max-time 5 "$CMA_SMOKE_URL/library/cma" -o /dev/null; then break; fi
+            if ! kill -0 "$SERVER_PID" 2>/dev/null; then cat artifacts/cma-browser/server.log; exit 1; fi
+            sleep 2
+          done
+          curl -fsS --max-time 20 "$CMA_SMOKE_URL/library/cma" -o /dev/null
+          node scripts/browser/cma-acceptance.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: cma-browser-acceptance
+          path: artifacts/cma-browser/
+          retention-days: 7
