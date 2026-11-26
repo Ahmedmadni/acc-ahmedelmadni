@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { CmaFormulaText } from "@/components/library/CmaFormulaText";
 import type { CmaLocalQuestion } from "@/data/cma-question-bank";
 import { CMA_ANSWER_WALKTHROUGHS } from "@/data/cma-answer-walkthroughs";
 import { CMA_PART1_BEGINNER_NOTES } from "@/data/cma-part1-beginner-notes";
@@ -77,7 +78,7 @@ export function CmaAnswerSupport({
           </p>
           <ol className="mt-3 list-decimal space-y-3 ps-6 text-sm leading-8">
             {verifiedWalkthrough.steps[lang].map((step, index) => (
-              <li key={index}>{step}</li>
+              <li key={index}><CmaFormulaText text={step} /></li>
             ))}
           </ol>
         </>
@@ -92,7 +93,7 @@ export function CmaAnswerSupport({
               <p className="mt-2 text-sm leading-8">{note.example.scenario[lang]}</p>
               <ol className="mt-3 list-decimal space-y-2 ps-6 text-sm leading-8">
                 {note.example.steps[lang].map((step, index) => (
-                  <li key={index}>{step}</li>
+                  <li key={index}><CmaFormulaText text={step} /></li>
                 ))}
               </ol>
               <p className="mt-3 text-sm font-semibold leading-8">{note.example.takeaway[lang]}</p>
