@@ -2,12 +2,37 @@
 
 - [x] Add bilingual accounting + vibe-coding expertise section; verified Arabic/English, service link, reduced motion and desktop/tablet/mobile presentation.
 
+# CMA release readiness — 26 November 2026
+
+**Current baseline:** 20/20 Part 1 study units initially reviewed; 2,067/2,443 complete Arabic educational drafts (84.6%), 376 English-first records awaiting source resolution. The latter count is not the total scoring-hold count: some translated records are also held. Generate the current machine-readable inventory with `node scripts/check-cma-content.mjs --source-review-queue`. The 3,771-record repository bank is not a count of licensed or independently certified public questions.
+
+### Completed on main
+
+- [x] Preserve English-first study, optional Arabic, original keys, translation provenance and source-review exclusions (#445–449).
+- [x] Expand bilingual glossary to 72 terms across 12 domains (#450).
+- [x] Clarify six teaching examples and independently recompute 23 example results in content validation (#451).
+- [x] Conservative rendering of explicit Arabic numeric tables and left-to-right calculations (#452–453).
+- [x] Notebook lifecycle saving, page-targeted edits, PDF font/image readiness and responsive split layout (#454, #456).
+- [x] Indexed topic lookup, unique exam attempts, track-specific scores and protection of built-in records (#457–458).
+
+### Remaining acceptance gates
+
+- [ ] Complete and merge #459 after all checks pass: neutral provisional lesson feedback and explicit inferred-key hold in Volume 2.
+- [ ] Verify actual published deployment corresponds to accepted main commit; do not infer deployment from a merged PR.
+- [ ] Run real-browser checks at phone (360px), tablet (768/900/1024px), desktop (1440px) widths, Arabic/English and portrait/landscape: lesson selection, tables, formulas, notebook dock, exam navigation and focus mode.
+- [ ] Verify notebook touch/stylus, page changes, backgrounding/reload, backup restore and PDF output with Arabic text, images, ink and journal tables. Confirm failed exports do not silently omit content.
+- [ ] Measure loading and interaction performance using browser traces; record device/browser and actual timings rather than claiming a speed gain from code changes alone.
+- [ ] Obtain authorized original source pages and verify publication/translation rights. Resolve each source hold individually with documented evidence; until then preserve keys, review warnings and scoring exclusions. No visual certification claimed.
+- [ ] Prepare final handover with accepted commit, passing CI, outstanding source/rights and device gates. Keep the fallback task restricted to actionable work; avoid repetitive no-change modifications.
+
+Historical wave entries below remain as an audit trail; their interim counts and next-step notes are not the current plan.
+
 # CMA Arabic translation
 
 - [x] Import the two supplied IMA 2020 sample PDFs, exclude duplicate MCQs, and add essay cases with source answers.
 - [x] Verify source-answer integrity, duplicate exclusion, and display in the CMA library and exam tool.
 
-- [ ] Translate remaining 153 of 217 Unit 1 questions; blocked by AI credit exhaustion. 64 complete translations are saved in source records.
+- [x] Unit 1 initial localization review completed: 202/217 complete Arabic drafts, 15 held pending source resolution.
 - [ ] Validate saved translations and verify library and exam-training display.
 - [x] Unit 14 Wave 16: 160/175 complete repository-contained Arabic educational drafts (91.4%). The original English and answer keys remain unchanged.
 - [x] Unit 14 reviewer ledger: 25 review-only questions documented with bilingual reasons and original PDF pages (15 English-first, 10 translated drafts still unscored).
@@ -78,10 +103,10 @@
 - [x] Unit 20 Wave 5: 8 mining and scenario analytics Arabic drafts (§2 Q33/Q35–37/Q39/Q41/Q43/Q45); **45/90 (50%)**, 31 reviewed holds, 14 unreviewed. See `docs/CMA_UNIT20_ARABIC_WAVE5_2026-11-25.md`.
 - [x] Unit 20 Wave 6: 9 exploratory, time-series and mining Arabic drafts (§2 Q47–52/Q54/Q57/Q59); **54/90 (60%)**, all 90 reviewed, 36 held, zero unreviewed. See `docs/CMA_UNIT20_ARABIC_WAVE6_2026-11-25.md`.
 - [x] Unit 20 bilingual review ledger: 36 page-specific reasons in library and ExamPrep, including three duplicates, two missing charts and one inferred key. See `docs/CMA_UNIT20_SOURCE_REVIEW_2026-11-25.md`.
-- [ ] Revisit governance holds with official statutory scope and original-page checks; continue §2 Q17–65.
+- [ ] Revisit governance holds with official statutory scope and original-page checks; initial §2 review is complete.
 
 - [x] Audit all 20 imported Part 1 units: 1301/2443 complete static Arabic records; add CI coverage regression check. See `docs/CMA_PART1_SOURCE_COVERAGE_2026-11-25.md`.
-- [ ] Resume Volume 1 localization: review remaining Unit 1 English-only records, then Units 2–10; preserve keys, check duplicates across both volumes and quarantine source ambiguities.
+- [x] Complete initial review of Volume 1 Units 1–10; retain unresolved English-first records and original keys.
 - [ ] Resolve review holds against authorized original pages; distinguish Arabic drafts from verified translations and scored eligibility.
 
 - [x] Unit 1 resumed Wave 1: seven cash flow Arabic drafts (§5 Q34–38/Q40/Q42), 155/217 complete Arabic, five additional source-review holds. See `docs/CMA_UNIT1_ARABIC_RESUME_WAVE1_2026-11-25.md`.
