@@ -1568,3 +1568,23 @@ test("CMA Unit 14 wave 13: two-column production, labor and collection drafts ke
     assert.equal(q.explanationAr,undefined,`Held ${id}`);
   }
 });
+
+test("Exam practice counts unique attempts, preserves source keys and resets on track change", async () => {
+  const { readFile } = await import("node:fs/promises");
+  const { summarizeCmaReview } = await import("../../src/lib/cma-source-review.shared.ts");
+  const questions = [
+    {id:"first",answerIndex:0},
+    {id:"second",answerIndex:1},
+    {id:"held",answerIndex:0,sourceLayoutReview:true},
+  ];
+  assert.deepEqual(summarizeCmaReview(questions,{first:0,second:0,held:0}),{answered:2,correct:1,provisional:1});
+  assert.deepEqual(summarizeCmaReview(questions.slice(1),{first:0,held:0}),{answered:0,correct:0,provisional:1});
+  const source = await readFile("src/components/tools/ExamPrep.tsx","utf8");
+  assert.ok(source.includes("summarizeCmaReview(pool, attempts)"));
+  assert.ok(source.includes("Object.hasOwn(previous, q.id) ? previous"));
+  assert.ok(source.includes("const selected = q ? attempts[q.id] ?? null : null"));
+  assert.ok(source.includes("for (const q of remote) if (!map.has(q.id))"));
+  assert.ok(source.includes("for (const q of local) if (!map.has(q.id))"));
+  assert.match(source,/setTrack\(t\);\s*resetScore\(\);/);
+  assert.ok(source.includes("revealed && scorable && isCorrect"));
+});
