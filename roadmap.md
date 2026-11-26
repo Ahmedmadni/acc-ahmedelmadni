@@ -17,8 +17,9 @@
 
 ### Remaining acceptance gates
 
-- [ ] Complete and merge #459 after all checks pass: neutral provisional lesson feedback and explicit inferred-key hold in Volume 2.
-- [ ] Verify actual published deployment corresponds to accepted main commit; do not infer deployment from a merged PR.
+- [x] #459 merged after successful Accounting content and build validation (run 45803452416); neutral provisional lesson feedback and explicit inferred-key hold in Volume 2.
+- [x] Verify Lovable project synchronization: on 26 November 2026 the project was ready and its latest commit matched main (`31c9731c67f530332c98363fbb12e8c9562f6116`).
+- [ ] Verify actual published deployment corresponds to accepted main commit. The publicly indexed CMA page was a week-old cached snapshot showing 244 Arabic source questions; it cannot prove present production coverage. Project synchronization alone does not certify deployment. No additional publish was triggered while source-publication rights remain unverified.
 - [ ] Run real-browser checks at phone (360px), tablet (768/900/1024px), desktop (1440px) widths, Arabic/English and portrait/landscape: lesson selection, tables, formulas, notebook dock, exam navigation and focus mode.
 - [ ] Verify notebook touch/stylus, page changes, backgrounding/reload, backup restore and PDF output with Arabic text, images, ink and journal tables. Confirm failed exports do not silently omit content.
 - [ ] Measure loading and interaction performance using browser traces; record device/browser and actual timings rather than claiming a speed gain from code changes alone.
