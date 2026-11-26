@@ -248,6 +248,44 @@ check(new Set([...Object.keys(CMA_PART2_EXTENDED_WORKED), ...Object.keys(CMA_PAR
   "Part 2 supplementary examples must cover separate topics");
 console.log(`Validated ${part1WorkedCount} CMA Part 1 and 56 Part 2 fully illustrated lessons, one bilingual case per topic`);
 
+// Independently recompute selected site-authored worked examples; check both
+// displayed languages, not just the presence of an example on each topic.
+const workedCalculationCases = [
+  ["su1-income-comprehensive", 80000+10000, 90000],
+  ["su3-equity-securities", 54000-50000, 4000],
+  ["su3-debt-securities", 100000*0.05, 5000],
+  ["su4-contingencies-warranties", 1000*0.04*200, 8000],
+  ["su10-erp-outsourcing", 80000-65000-10000, 5000],
+  ["su12-learning-curve", 4*10*0.8**2, 25.6],
+  ["su14-other-operating-budgets", 400*2*20, 16000],
+  ["su15-overhead-variance", 102000-100000, 2000],
+  ["su16-cost-revenue-profit", 100000-75000, 25000],
+  ["p2-su2-reported-profit", 120000-20000*(1-0.25), 105000],
+  ["p2-su4-stock", 500000-350000-100000, 50000],
+  ["p2-su4-dividends", 100000+30000-15000, 115000],
+  ["p2-su5-portfolio", (0.6*0.1+0.4*0.02)*100, 6.8],
+  ["p2-su6-new-capital", 300000/0.6, 500000],
+  ["p2-su6-derivatives", Math.max(0,120-100)-6, 14],
+  ["p2-su7-working-capital", 350000-220000, 130000],
+  ["p2-su7-cash", Math.max(0,20000-(30000+100000-115000)), 5000],
+  ["p2-su7-marketable", 100000*0.05*3/12, 1250],
+  ["p2-su8-mergers", 2000000+400000-100000, 2300000],
+  ["p2-su8-fx-risk", 100000*4.1, 410000],
+  ["p2-su8-fx-effects", 20000*(3.8-3.75), 1000],
+  ["p2-su13-risk-real-options", 100000*0.6-50000*0.4, 40000],
+  ["p2-su13-integrated-decisions", Math.round((-120000+50000/1.1+100000/1.1**2)/100)*100, 8100],
+];
+for (const [id, computed, expected] of workedCalculationCases) {
+  check(Math.abs(computed-expected)<1e-6, "Independent example arithmetic mismatch: "+id);
+  const note = id.startsWith("p2-") ? CMA_PART2_BEGINNER_NOTES[id] : CMA_PART1_BEGINNER_NOTES[id];
+  const resultToken = expected.toLocaleString("en-US",{maximumFractionDigits:4});
+  for (const lang of ["ar","en"]) {
+    const numericTokens = note?.example?.steps?.[lang]?.join(" ").match(/\d+(?:,\d{3})*(?:\.\d+)?/g) ?? [];
+    check(numericTokens.includes(resultToken), "Worked example result missing in "+lang+": "+id);
+  }
+}
+console.log("Independently recomputed "+workedCalculationCases.length+" bilingual worked-example results");
+
 check(CMA_GLEIM_2025_VOL1_QUESTIONS.length === 1060, "Expected all 1,060 questions from Volume 1");
 check(CMA_GLEIM_2025_VOL2_QUESTIONS.length === 1383, "Expected all 1,383 questions from Volume 2");
 check(CMA_LOCAL_QUESTIONS.length === 3771, "Expected 860 bilingual originals + 80 Part 2 English independent + 2,443 Part 1 publisher + 369 ICMA 2024 Part 2 publisher + 19 IMA 2020 sample questions");
