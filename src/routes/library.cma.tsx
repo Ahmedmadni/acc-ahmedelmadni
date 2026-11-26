@@ -22,6 +22,7 @@ import { getCmaUnit18SourceReview } from "@/lib/cma-unit18-source-review";
 import { getCmaUnit19SourceReview } from "@/lib/cma-unit19-source-review";
 import { getCmaUnit20SourceReview } from "@/lib/cma-unit20-source-review";
 import { CmaAnswerSupport } from "@/components/library/CmaAnswerSupport";
+import { CmaFormulaText } from "@/components/library/CmaFormulaText";
 import { CmaPart2OnlineBank } from "@/components/library/CmaPart2OnlineBank";
 import { CMA_STUDY_UNIT_CASES, CMA_TOPIC_GUIDES } from "@/data/cma-guides";
 import { CMA_PART2_BEGINNER_NOTES } from "@/data/cma-part2-beginner-notes";
@@ -500,7 +501,7 @@ function CmaPage() {
                         </p>
                         <ol className="mt-4 list-decimal space-y-2 ps-6 text-sm leading-8 text-[#40382F]">
                           {beginnerNote.example.steps[lang].map((step, index) => (
-                            <li key={index}>{step}</li>
+                            <li key={index}><CmaFormulaText text={step} /></li>
                           ))}
                         </ol>
                         <p className="mt-4 border-t border-[#A88765]/25 pt-3 text-sm font-semibold leading-8 text-[#604831]">
