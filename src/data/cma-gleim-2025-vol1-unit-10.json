@@ -14,7 +14,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Receiving departments are often eliminated with a JIT system\nso receiving reports are not needed. Also, the quantity\nreceived should be exactly equal to immediate production\nneeds.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "غالبًا ما تدعم فعالية نظام الإنتاج في الوقت المحدد (JIT) بإلغاء بعض الإجراءات الرقابية التقليدية. أي إجراء يمكن عادة الاستغناء عنه في هذا النظام؟",
+    "choicesAr": [
+      "إعداد تقارير استلام ورقية.",
+      "اعتماد مستند الصرف قبل سداد الحسابات الدائنة.",
+      "اشتراط توقيعين على الشيكات الكبيرة.",
+      "إغلاق أبواب مناطق الإنتاج."
+    ],
+    "explanationAr": "قد تستغني المنشأة عن قسم الاستلام التقليدي وتقاريره الورقية في نظام JIT، إذ يفترض أن الكميات الواردة تتوافق مع احتياجات الإنتاج الفورية. ولا يعني ذلك إلغاء إثبات الاستلام أو التحقق من الكميات؛ يمكن استخدام بدائل إلكترونية ورقابة ملائمة."
   },
   {
     "unit": 10,
@@ -31,7 +39,15 @@
     ],
     "answerIndex": 2,
     "explanation": "JIT manufacturing is a pull system; items are pulled through\nproduction by current demand, not pushed through by\nanticipated demand as in traditional manufacturing setups.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستند ممارسات التصنيع في الوقت المحدد (JIT) جزئيًا إلى أي اعتقاد؟",
+    "choicesAr": [
+      "ارتفاع المخزون يوفر مرونة أكبر في جدولة الإنتاج.",
+      "محاولة خفض المخزون إلى مستوى منخفض باستمرار قد تسبب حالات ذعر.",
+      "ينبغي سحب السلع عبر عملية الإنتاج لا دفعها.",
+      "تعزيز الرقابة في المستودع المركزي يزيد إنتاجية مناطق الإنتاج بدرجة كبيرة."
+    ],
+    "explanationAr": "التصنيع في الوقت المحدد نظام سحب؛ إذ تسحب المنتجات عبر مراحل الإنتاج وفق الطلب الحالي بدلًا من دفعها وفق الطلب المتوقع كما في النظم التقليدية."
   },
   {
     "unit": 10,
@@ -48,7 +64,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Under a JIT system, the quality of parts provided by suppliers\nis verified by use of statistical controls rather than inspection\nof incoming goods. Storage, counting, and inspection are\neliminated in an effort to perform only value-adding work.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي من إجراءات الرقابة الداخلية التالية لا يستغنى عنه عادة عند تطبيق نظام المخزون في الوقت المحدد (JIT)؟",
+    "choicesAr": [
+      "نظام متطور لتتبع المخزون.",
+      "رصيف استلام مركزي.",
+      "الأساليب الإحصائية لضمان الجودة.",
+      "تقرير استلام ورقي."
+    ],
+    "explanationAr": "تستخدم الرقابة الإحصائية للتحقق من جودة أجزاء الموردين في نظام JIT بدلًا من الاعتماد على الفحص التقليدي لكل شحنة. ويهدف النظام إلى خفض أعمال التخزين والعد والفحص غير المضيفة للقيمة دون إلغاء الرقابة اللازمة."
   },
   {
     "unit": 10,
@@ -65,7 +89,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Lean manufacturing, or lean processes, expands the concept\nof just-in-time. The central focus is on accomplishing more\nwith less resources.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بأي مفهوم يرتبط الإنتاج في الوقت المحدد أيضًا؟",
+    "choicesAr": [
+      "كايزن (التحسين المستمر).",
+      "التصنيع الرشيق.",
+      "الإدارة على أساس الأنشطة.",
+      "التكاليف بالتسجيل العكسي."
+    ],
+    "explanationAr": "يوسع التصنيع الرشيق مفهوم الإنتاج في الوقت المحدد ليشمل موارد وعمليات أخرى؛ ويتمثل هدفه الأساسي في تحقيق نتائج أكبر بموارد أقل. والمفهومان مرتبطان لكن التصنيع الرشيق أوسع نطاقًا."
   },
   {
     "unit": 10,
@@ -82,7 +114,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The objective of JIT is to reduce carrying costs by eliminating\ninventories and increasing the deliveries made by suppliers.\nIdeally, shipments of raw materials are received just in time to\nbe incorporated into the manufacturing process. The focus of\nquality control under JIT is the prevention of quality problems.\nQuality control is shifted to the supplier. JIT companies\ntypically do not inspect incoming goods; the assumption is that\nreceived goods are of perfect quality. Suppliers are limited to\nthose who guarantee perfect quality and prompt delivery.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما الأثر الذي غالبًا ما تواجهه الشركات التي تطبق نظام الشراء في الوقت المحدد (JIT)؟",
+    "choicesAr": [
+      "انخفاض عدد الموردين.",
+      "انخفاض عدد الشحنات من الموردين.",
+      "زيادة الحاجة إلى فحص السلع عند وصولها.",
+      "انخفاض الحاجة إلى الربط بنظام الطلبات الإلكتروني للمورد."
+    ],
+    "explanationAr": "يهدف JIT إلى تقليل تكاليف الاحتفاظ بالمخزون من خلال تقليله وزيادة تكرار التوريد. وتصل المواد في الوقت المناسب للإنتاج، مع التركيز على منع مشكلات الجودة لدى المورد. لذلك تختار المنشأة عادة عددًا محدودًا من الموردين الموثوقين القادرين على تقديم جودة عالية وتسليم منتظم."
   },
   {
     "unit": 10,
@@ -99,7 +139,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Nonvalue-adding activities are those that do not add to\ncustomer value or satisfy an organizational need. Inventory\nactivities are inherently nonvalue-adding. Thus, a system,\nsuch as JIT, that promotes lean production and reduces\ninventory and its attendant procedures (storage, handling,\netc.) also reduces nonvalue-adding activities.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما إحدى الفوائد المعتادة لنظام المواد الخام في الوقت المحدد؟",
+    "choicesAr": [
+      "إلغاء العمليات غير المضيفة للقيمة.",
+      "زيادة عدد الموردين لضمان تنافس العطاءات.",
+      "تعظيم كمية التوريد المعتادة لتقليل مستندات كل شحنة.",
+      "خفض عدد الشحنات اللازمة لاستمرار الإنتاج."
+    ],
+    "explanationAr": "الأنشطة غير المضيفة للقيمة لا تضيف قيمة للعميل ولا تلبي حاجة تنظيمية. ويخفض النظام الرشيق مثل JIT المخزون والأنشطة المرتبطة به، كالتخزين والمناولة، وبذلك يقلل الأنشطة غير المضيفة للقيمة."
   },
   {
     "unit": 10,
@@ -116,7 +164,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A JIT system is intended to minimize inventory. Inventory\nshould be delivered or produced just in time to be used. Thus,\nJIT increases inventory turnover (Cost of sales ÷ Average\ninventory) and decreases inventory as a percentage of total\nassets.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "انتقلت شركة من التصنيع التقليدي إلى التصنيع في الوقت المحدد. ما الأثر المتوقع في دوران المخزون ونسبة المخزون إلى إجمالي الأصول في الميزانية؟\nدوران المخزون | نسبة المخزون",
+    "choicesAr": [
+      "انخفاض | انخفاض",
+      "انخفاض | ارتفاع",
+      "ارتفاع | انخفاض",
+      "ارتفاع | ارتفاع"
+    ],
+    "explanationAr": "يهدف JIT إلى تقليل المخزون بحيث ينتج أو يستلم عند الحاجة. ومع ثبات العوامل الأخرى يرتفع معدل دوران المخزون (تكلفة المبيعات ÷ متوسط المخزون) وتنخفض نسبة المخزون إلى إجمالي الأصول."
   },
   {
     "unit": 10,
@@ -133,7 +189,15 @@
     ],
     "answerIndex": 1,
     "explanation": "A JIT system is intended to minimize inventory. Thus, if\ninventory carrying costs are increasing, a JIT system becomes\nmore cost effective. Moreover, purchases are more frequent in\na JIT system. Accordingly, a decreasing cost per purchase\norder is conducive to switching to a JIT system.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي اتجاه في تكاليف الشراء والاحتفاظ بالمخزون يشجع أكثر على التحول من نظام الطلب التقليدي إلى نظام الوقت المحدد؟\nتكلفة أمر الشراء | تكلفة الاحتفاظ بوحدة المخزون",
+    "choicesAr": [
+      "ارتفاع | ارتفاع",
+      "انخفاض | ارتفاع",
+      "انخفاض | انخفاض",
+      "ارتفاع | انخفاض"
+    ],
+    "explanationAr": "يقلل JIT المخزون، ولذلك فإن ارتفاع تكلفة الاحتفاظ به يزيد جاذبية النظام. كما أن تكرار الشراء يزيد، فيصبح انخفاض تكلفة أمر الشراء عاملًا مشجعًا للتحول."
   },
   {
     "unit": 10,
@@ -150,7 +214,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The objective of a JIT system is to reduce carrying costs by\neliminating inventories and increasing the deliveries made by\nsuppliers. Ideally, shipments are received just in time to be\nincorporated into the manufacturing process. This system\nincreases the risk of stockout costs because the inventory\nbuffer is reduced or eliminated.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تسعى شركة صناعية إلى تطبيق سياسة شراء في الوقت المحدد (JIT) بالتفاوض مع الموردين الرئيسيين على أوامر شراء طويلة الأجل تحقق توريدات متكررة لكميات أصغر من المواد الخام. إذا نجحت السياسة في تقليل إجمالي تكاليف المخزون، فما التركيبة الأكثر احتمالًا للتغيرات؟\nفئة التكلفة المرتفعة | فئة التكلفة المنخفضة",
+    "choicesAr": [
+      "تكاليف الشراء | تكاليف نفاد المخزون",
+      "تكاليف الشراء | تكاليف الجودة",
+      "تكاليف الجودة | تكاليف إصدار الطلبات",
+      "تكاليف نفاد المخزون | تكاليف الاحتفاظ بالمخزون"
+    ],
+    "explanationAr": "يهدف JIT إلى تقليل تكاليف الاحتفاظ بالمخزون عبر تخفيضه وزيادة تكرار التوريد. وتصل الشحنات عند الحاجة للإنتاج، لكن انخفاض مخزون الأمان يزيد خطر تكاليف نفاد المخزون."
   },
   {
     "unit": 10,
@@ -167,7 +239,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Since every worker in a manufacturing cell must be able to\noperate every piece of machinery in the cell, reduced training\ncosts do not necessarily accompany the deployment of lean\nproduction.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي ليس من فوائد الإنتاج الرشيق؟",
+    "choicesAr": [
+      "انخفاض وقت إعداد الآلات.",
+      "انخفاض تكاليف الدعم المركزي.",
+      "انخفاض تكاليف التدريب.",
+      "تحسن التسليم في الموعد."
+    ],
+    "explanationAr": "يحتاج العامل في خلية التصنيع إلى القدرة على تشغيل المعدات المتعددة في الخلية، ولذلك لا يلزم أن تنخفض تكاليف التدريب عند تطبيق الإنتاج الرشيق."
   },
   {
     "unit": 10,
@@ -201,7 +281,15 @@
     ],
     "answerIndex": 0,
     "explanation": "To implement a JIT inventory or lean production system, the\nfactory is reorganized around what are called manufacturing\ncells. In a cellular layout, each cell is a miniature\nmanufacturing plant. Cells are sets of machines, often\ngrouped in semicircles, that produce a given product or\nproduct family. Because of the free flow of materials in cellular\nmanufacturing, it has the ability to produce products just in\ntime.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بأي نظام يرتبط مفهوم خلية العمل؟",
+    "choicesAr": [
+      "نظام الإنتاج في الوقت المحدد.",
+      "تخطيط احتياجات المواد.",
+      "تكاليف الإنجاز.",
+      "تخطيط موارد المنشأة."
+    ],
+    "explanationAr": "لتطبيق JIT أو الإنتاج الرشيق يمكن إعادة تنظيم المصنع إلى خلايا تصنيع. تمثل كل خلية مصنعًا مصغرًا يضم مجموعة آلات، قد ترتب في شكل نصف دائرة لإنتاج منتج أو عائلة منتجات. ويساعد التدفق السلس للمواد على الإنتاج في الوقت المناسب."
   },
   {
     "unit": 10,
@@ -218,7 +306,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Production setup costs and times per lot are reduced by a JIT\nproduction system. However, because smaller lots are used,\ntotal setup costs are not necessarily lower using a JIT\nproduction system.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي ليس فائدة متوقعة بالضرورة من تطبيق نظام الإنتاج في الوقت المحدد (JIT)؟",
+    "choicesAr": [
+      "انخفاض إجمالي تكاليف التخزين.",
+      "انخفاض إجمالي تكاليف إعداد الآلات.",
+      "انخفاض زمن التصنيع.",
+      "انخفاض إجمالي تكاليف إعادة التشغيل."
+    ],
+    "explanationAr": "يخفض JIT تكلفة ووقت إعداد الآلات لكل دفعة، لكن استخدام دفعات أصغر قد يزيد عدد مرات الإعداد، لذا لا يلزم انخفاض إجمالي تكاليف الإعداد."
   },
   {
     "unit": 10,
@@ -235,7 +331,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Packaging labor should not increase with a just-in-time\nsystem. The new system should only impact the different\nfacets of direct material costs, not labor costs. The company\ndoes not need to consider a possible change in labor costs.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تدرس شركة تطبيق نظام الوقت المحدد على مشتريات مواد التعبئة. وأظهر التحليل إمكانية خفض تكاليف الاحتفاظ بالمخزون بمبلغ $5,000 شهريًا. قبل القرار ينبغي مراعاة احتمال تغير التكاليف التالية باستثناء زيادة تكلفة:",
+    "choicesAr": [
+      "إصدار الطلبات.",
+      "عمالة التعبئة.",
+      "مواد التعبئة.",
+      "نفاد المخزون."
+    ],
+    "explanationAr": "وفق افتراض المسألة، يقتصر التغيير على شراء مواد التعبئة ولا يؤثر في عملية التعبئة نفسها؛ ولذلك لا يتوقع تغير تكلفة عمالة التعبئة. عمليًا يجب مراجعة أي أثر فعلي للتغيير على العمل قبل اتخاذ القرار."
   },
   {
     "unit": 10,
@@ -252,7 +356,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The use of a just-in-time production system generally involves\ndeveloping relationships with a minimum number of suppliers\nthat reliably deliver high-quality products.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "طبقت شركة مؤخرًا نظامي الإنتاج والشراء في الوقت المحدد. إذا كانت تجربتها مماثلة للشركات الأخرى، فما الأثر المرجح؟",
+    "choicesAr": [
+      "تقليل عدد الموردين الذين تتعامل معهم.",
+      "زيادة حجم كل طلب مواد خام.",
+      "زيادة الاستثمار النقدي في مخزون الإنتاج التام.",
+      "تقليل الاعتماد على أوامر المبيعات لبدء دفعات الإنتاج."
+    ],
+    "explanationAr": "يتضمن نظام الإنتاج في الوقت المحدد عادة بناء علاقات مع عدد محدود من الموردين القادرين على توريد منتجات عالية الجودة في الوقت المطلوب بصورة موثوقة."
   },
   {
     "unit": 10,
@@ -269,7 +381,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A company’s demand for its products is unaffected by its\ninventory management method.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تخطط شركة لتطبيق نظام إدارة المخزون في الوقت المحدد (JIT). أي مما يلي ليس فائدة متوقعة مباشرة من التطبيق؟",
+    "choicesAr": [
+      "انخفاض الاستثمار في المخزون.",
+      "انخفاض التقادم وغيره من تكاليف الاحتفاظ.",
+      "ارتفاع دوران المخزون.",
+      "زيادة الطلب."
+    ],
+    "explanationAr": "لا يؤدي تغيير أسلوب إدارة المخزون بحد ذاته إلى زيادة الطلب على منتجات الشركة بصورة مؤكدة؛ فالطلب يتأثر بعوامل السوق، وقد تتغير مبيعات الشركة بصورة غير مباشرة إذا تحسنت الخدمة."
   },
   {
     "unit": 10,
@@ -286,7 +406,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Since there is no safety stock with a JIT system, minor defects\nwill immediately halt production.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي ليس من فوائد التصنيع في الوقت المحدد؟",
+    "choicesAr": [
+      "يمكنه تقليل المخزون بدرجة كبيرة.",
+      "يساعد على إنتاج منتج أعلى جودة في وقت أقل.",
+      "يسمح بعيوب طفيفة دون توقف العمليات.",
+      "يساعد على التخلص من تكاليف إعادة التشغيل."
+    ],
+    "explanationAr": "عند غياب مخزون الأمان في النموذج المثالي لنظام JIT، قد يؤدي حتى العيب البسيط إلى توقف الإنتاج، ولذلك تشدد المنشأة على منع العيوب ومعالجة أسبابها."
   },
   {
     "unit": 10,
@@ -303,7 +431,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The just-in-time (JIT) model views inventory as a liability and\nlimits output to the demand of the subsequent operation.\nReductions in inventory levels result in less money invested in\nidle assets; reduction of storage space requirements; and\nlower inventory taxes, pilferage, and obsolescence risks.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما اسم نظام الإنتاج الذي لا تنتج فيه الوحدة إلا عندما تحتاج إليها المرحلة التالية في خط الإنتاج؟",
+    "choicesAr": [
+      "نظام الإنتاج في الوقت المحدد.",
+      "نظام التسجيل العكسي للتكاليف.",
+      "نظام باريتو.",
+      "نظام تخطيط احتياجات المواد."
+    ],
+    "explanationAr": "ينظر نموذج الإنتاج في الوقت المحدد (JIT) إلى المخزون باعتباره عبئًا تشغيليًا لا التزامًا محاسبيًا، ويقيد الإنتاج بطلب العملية التالية. ويخفض المخزون الأموال المجمدة ومساحة التخزين ومخاطر الضرائب والسرقة والتقادم."
   },
   {
     "unit": 10,
@@ -320,7 +456,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A just-in-time (JIT) inventory management system limits the\noutput of each manufacturing operation to the demand of the\nnext operation. Shipment of raw materials from vendors are\nscheduled to arrive “just in time” to be used in the production\nprocess. Inventory storage is considered a nonvalue-adding\nactivity, and raw materials on hand are thus kept to a\nminimum.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما تقنية إدارة المخزون التي تهدف إلى تقليل الاستثمار فيه من خلال وصول المواد عند الحاجة إلى استخدامها؟",
+    "choicesAr": [
+      "نموذج كمية الطلب الاقتصادية (EOQ).",
+      "تخطيط احتياجات المواد (MRP).",
+      "الوارد أولًا يصرف أولًا (FIFO).",
+      "الوقت المحدد (JIT)."
+    ],
+    "explanationAr": "يقيد نظام JIT إنتاج كل مرحلة بطلب المرحلة التالية. وتجدول شحنات المواد الخام من الموردين بحيث تصل في الوقت المناسب للاستخدام، ويعد التخزين نشاطًا غير مضيف للقيمة، فتخفض المواد الخام المحتفظ بها إلى الحد الأدنى."
   },
   {
     "unit": 10,
@@ -337,7 +481,15 @@
     ],
     "answerIndex": 2,
     "explanation": "JIT is a pull system. Items are pulled through production by\ncurrent demand, not pushed through by anticipated demand.\nThe goal is to have materials arrive just in time for production\n(or sales).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "جميع ما يلي من خصائص نظام المخزون في الوقت المحدد (JIT) باستثناء:",
+    "choicesAr": [
+      "انخفاض عدد الموردين.",
+      "زيادة عدد الشحنات.",
+      "نظام إنتاج بالدفع.",
+      "انخفاض مستويات المخزون."
+    ],
+    "explanationAr": "JIT نظام سحب؛ تتحرك المنتجات وفق الطلب الحالي وليس الطلب المتوقع. والهدف وصول المواد عند الحاجة إليها للإنتاج أو البيع."
   },
   {
     "unit": 10,
@@ -354,7 +506,15 @@
     ],
     "answerIndex": 3,
     "explanation": "JIT necessitates a high focus on quality. Because the\ncompany has no excess inventory, stopping production and\nwaiting for delivery of a part to replace a defect is costly. A JIT\nsystem generally has fewer defects and a higher level of\nquality. Zero defects and zero machine breakdowns are the\nultimate goals.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي ميزة لنظام المخزون في الوقت المحدد (JIT)؟",
+    "choicesAr": [
+      "انخفاض حالات نفاد المخزون.",
+      "انخفاض إجمالي تكاليف إعداد الآلات.",
+      "انخفاض الاعتماد على الموردين.",
+      "انخفاض العيوب."
+    ],
+    "explanationAr": "يتطلب JIT اهتمامًا كبيرًا بالجودة، لأن غياب المخزون الزائد يجعل توقف الإنتاج لانتظار بديل للجزء المعيب مكلفًا. لذلك يستهدف النظام تقليل العيوب ورفع الجودة وصولًا إلى عدم وجود عيوب أو أعطال."
   },
   {
     "unit": 10,
@@ -371,7 +531,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Lean manufacturing principles are (1) value, (2) value stream,\n(3) flow and pull, (4) empowerment, and (5) perfection. Value\nidentifies features that are valuable to the customer. Value\nstream identifies processes that add value and removing (if\npossible) those that do not.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بأي مبدأ يتميز التصنيع الرشيق؟",
+    "choicesAr": [
+      "تمييز العمليات المضيفة للقيمة عن غير المضيفة للقيمة.",
+      "تعظيم كفاءة الإنتاج بالدفع وفق الطلب المتوقع.",
+      "حصر قرارات التصنيع في الإدارة العليا.",
+      "التركيز حصريًا على خفض التكلفة بتقليل عدد الموظفين."
+    ],
+    "explanationAr": "تتضمن مبادئ التصنيع الرشيق وفق تصنيف المسألة (1) القيمة، (2) تدفق القيمة، (3) التدفق والسحب، (4) التمكين، و(5) الإتقان. تحدد القيمة ما يهم العميل، ويحدد تدفق القيمة العمليات التي تضيف قيمة ويستهدف إزالة غير المضيفة حيثما أمكن."
   },
   {
     "unit": 10,
@@ -388,7 +556,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Just-in-time (JIT) is a pull system. Items are pulled through\nproduction by current demand, not pushed through by\nanticipated demand. Other features of JIT include (1) low\ninventory levels, (2) a decreased number of suppliers, and (3)\nmore frequent deliveries of smaller batches.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتعامل شركة صناعية مع موردين فقط وتطلب المخزون في دفعات صغيرة. ما النظام الأكثر احتمالًا لاستخدامها؟",
+    "choicesAr": [
+      "تخطيط احتياجات المواد.",
+      "الوقت المحدد.",
+      "تخطيط موارد المنشأة.",
+      "إدارة أداء المنشأة."
+    ],
+    "explanationAr": "الوقت المحدد (JIT) نظام سحب وفق الطلب الحالي لا دفع وفق الطلب المتوقع. وتشمل خصائصه (1) انخفاض مستويات المخزون، (2) انخفاض عدد الموردين، و(3) زيادة تكرار توريد الدفعات الصغيرة."
   },
   {
     "unit": 10,
@@ -405,7 +581,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Lot sizes based on immediate needs are a characteristic of a\nJIT system. Lot sizes based on formulas are characteristic of a\ntraditional inventory management system.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مقارنة بين نظام الوقت المحدد (JIT) ونظام إدارة المخزون التقليدي ليست دقيقة؟",
+    "choicesAr": [
+      "زمن التوريد في النظام التقليدي أطول منه في JIT.",
+      "في النظام التقليدي يحتفظ بالمخزون المتوقع لتحقيق منفعة، بينما يستهدف JIT تجنب المخزون غير الضروري.",
+      "يتسامح النظام التقليدي مع بعض الفاقد، بينما يسعى JIT إلى انعدام العيوب.",
+      "في النظام التقليدي تحدد الدفعة وفق الحاجة الفورية، بينما تحدد في JIT وفق المعادلات."
+    ],
+    "explanationAr": "تحديد حجم الدفعة حسب الحاجة الفورية من خصائص JIT، أما استخدام المعادلات لتحديد حجم الدفعة فمن خصائص إدارة المخزون التقليدية."
   },
   {
     "unit": 10,
@@ -422,7 +606,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The core focus of lean manufacturing is to accomplish more\nwith less. Lean manufacturing expands the JIT concept of\nminimizing inventory to other resources.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بأي مما يلي يرتبط نظام المخزون في الوقت المحدد (JIT) ارتباطًا وثيقًا؟",
+    "choicesAr": [
+      "التصنيع الرشيق.",
+      "التحسين المستمر.",
+      "الإدارة على أساس الأنشطة.",
+      "نظرية القيود."
+    ],
+    "explanationAr": "يركز التصنيع الرشيق على تحقيق المزيد بموارد أقل، ويوسع مفهوم JIT الخاص بتقليل المخزون ليشمل الموارد الأخرى."
   },
   {
     "unit": 10,
@@ -439,7 +631,15 @@
     ],
     "answerIndex": 0,
     "explanation": "JIT results in frequent deliveries of smaller lot sizes. Thus,\ncertain internal controls may be eliminated. Sophisticated\ninventory control systems and control personnel are less likely\nto be needed.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "اعتمدت شركة مؤخرًا نظام إدارة المخزون في الوقت المحدد (JIT). ما الأثر التشغيلي الأكثر احتمالًا؟",
+    "choicesAr": [
+      "تكرار التوريد يقلل الحاجة إلى بعض نظم الرقابة التقليدية المعقدة على المخزون.",
+      "صغر الدفعات يستلزم موظفين إضافيين للتحقق من العدد والجودة.",
+      "تحتاج إدارة المشتريات إلى بناء علاقات مع عدد أكبر من الموردين.",
+      "تحتاج الشركة إلى مساحة تخزين أكبر للاحتفاظ بمواد زائدة."
+    ],
+    "explanationAr": "يؤدي JIT إلى توريد دفعات صغيرة بصورة متكررة، وقد يقلل الحاجة إلى بعض إجراءات الرقابة التقليدية المتعلقة بالمخزون والموظفين القائمين عليها. ولا يعني ذلك أن التتبع الإلكتروني والرقابة على الاستلام والجودة غير ضرورية."
   },
   {
     "unit": 10,
