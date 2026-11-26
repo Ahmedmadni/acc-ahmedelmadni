@@ -86,3 +86,22 @@ test("ICMA 2024 Part 2 official retired bank is published and credited, without 
   assert.match(onlineUI, /sourceLayoutReview/);
   assert.match(onlineUI, /ICMA © 2024/);
 });
+
+test("Part 2 provisional source comparisons never count toward performance", async () => {
+  const { summarizeCmaReview } = await import("../../src/lib/cma-source-review.shared.ts");
+  const questions = [
+    { id: "a", answerIndex: 0 },
+    { id: "b", answerIndex: 2, sourceLayoutReview: false },
+    { id: "c", answerIndex: 1, sourceLayoutReview: true },
+    { id: "d", answerIndex: 3, sourceLayoutReview: true },
+    { id: "e", answerIndex: 0 },
+  ];
+  assert.deepEqual(summarizeCmaReview(questions, { a: 0, b: 1, c: 1, d: 0 }), { answered: 2, correct: 1, provisional: 2 });
+  assert.deepEqual(summarizeCmaReview(questions, {}), { answered: 0, correct: 0, provisional: 0 });
+  assert.deepEqual(summarizeCmaReview(questions.slice(2), { c: 1 }), { answered: 0, correct: 0, provisional: 1 });
+  const component = read("src/components/library/CmaPart2OnlineBank.tsx");
+  assert.ok(component.includes("summarizeCmaReview(filtered, answers)"));
+  assert.ok(component.includes("scorable && revealed"));
+  assert.ok(component.includes("Provisional source key:"));
+  assert.ok(component.includes("scorable && <CmaAnswerSupport"));
+});
