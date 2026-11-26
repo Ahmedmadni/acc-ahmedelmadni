@@ -74,6 +74,7 @@ export const CMA_GLEIM_2025_VOL1_QUESTIONS: CmaLocalQuestion[] = records.map((it
     answerIndex: item.answerIndex,
     explanation: { ar: ar ? item.explanationAr! : item.explanation, en: item.explanation },
     sourceLanguage: ar ? undefined : "en",
+    sourceArabicStatus: ar ? "draft" : undefined,
     sourcePage: item.page,
     answerStatus: item.answerStatus === "inferred" ? "inferred" : "source",
     sourceTextStatus: item.sourceTextStatus,

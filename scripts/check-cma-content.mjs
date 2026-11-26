@@ -52,6 +52,8 @@ for (const [volume, questions] of [[1,CMA_GLEIM_2025_VOL1_QUESTIONS],[2,CMA_GLEI
   let englishOnly=0, gated=0, translatedGated=0, inferred=0, layout=0;
   for (const q of questions) {
     const missingArabic=q.sourceLanguage === "en";
+    check(q.sourceArabicStatus === (missingArabic ? undefined : "draft"),
+      "Imported Arabic draft review status missing or misleading: "+q.id);
     const inferredAnswer=q.answerStatus === "inferred";
     const reconstructed=q.sourceTextStatus === "reconstructed" || q.sourceTextStatus === "table-reflowed";
     const held=q.sourceLayoutReview === true;
