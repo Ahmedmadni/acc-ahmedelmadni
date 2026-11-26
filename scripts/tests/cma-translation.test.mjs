@@ -1599,5 +1599,5 @@ test("Topic practice uses neutral feedback and Volume 2 explicitly holds inferre
   assert.ok(source.includes("!isCmaScorableQuestion(q) ? ("));
   assert.ok(source.includes("isCmaScorableQuestion(q) && <CmaAnswerSupport"));
   const adapter = await readFile("src/data/cma-questions-gleim-2025-vol2.ts","utf8");
-  assert.ok(adapter.includes('sourceLayoutReview: item.answerStatus === "inferred" ||'));
+  assert.match(adapter, /sourceLayoutReview:[^\n]*item\.answerStatus === "inferred"/);
 });
