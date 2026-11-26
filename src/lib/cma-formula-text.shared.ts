@@ -24,7 +24,7 @@ export function splitCmaFormulaText(text: string): CmaFormulaSegment[] {
       if (depth < 0) balanced = false;
     }
     if (!balanced || depth !== 0) continue;
-    const start = match.index + raw.indexOf(expression);
+    const start = (match.index ?? 0) + raw.indexOf(expression);
     if (start > cursor) segments.push({ text: text.slice(cursor, start), math: false });
     segments.push({ text: expression, math: true });
     cursor = start + expression.length;
