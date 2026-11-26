@@ -1601,3 +1601,12 @@ test("Topic practice uses neutral feedback and Volume 2 explicitly holds inferre
   const adapter = await readFile("src/data/cma-questions-gleim-2025-vol2.ts","utf8");
   assert.match(adapter, /sourceLayoutReview:[^\n]*item\.answerStatus === "inferred"/);
 });
+
+test("Source precision notices render independently from optional teaching support", async () => {
+  const { readFile } = await import("node:fs/promises");
+  const source = await readFile("src/components/library/CmaAnswerSupport.tsx","utf8");
+  assert.ok(source.includes("if (!verifiedWalkthrough && !note && !precisionNote) return null;"));
+  assert.ok(source.includes("{precisionNote && ("));
+  assert.ok(source.includes("{(verifiedWalkthrough || note) && <details"));
+  assert.ok(source.indexOf("{precisionNote && (") < source.indexOf("{(verifiedWalkthrough || note) && <details"));
+});
