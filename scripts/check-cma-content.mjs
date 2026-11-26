@@ -42,6 +42,50 @@ const { CMA_TOPIC_GUIDES, CMA_STUDY_UNIT_CASES } = readDataFile("cma-guides");
 const { CMA_LOCAL_QUESTIONS } = readDataFile("cma-question-bank");
 const { CMA_GLEIM_2025_VOL1_QUESTIONS } = readDataFile("cma-questions-gleim-2025-vol1");
 const { CMA_GLEIM_2025_VOL2_QUESTIONS } = readDataFile("cma-questions-gleim-2025-vol2");
+
+// Inventory of unresolved source-review records, derived from the actual
+// mapped questions (not merely the list of untranslated rows). The queue
+// intentionally contains metadata only; no publisher question text or keys.
+const reviewQueue = [];
+const reviewSummary = [];
+for (const [volume, questions] of [[1,CMA_GLEIM_2025_VOL1_QUESTIONS],[2,CMA_GLEIM_2025_VOL2_QUESTIONS]]) {
+  let englishOnly=0, gated=0, translatedGated=0, inferred=0, layout=0;
+  for (const q of questions) {
+    const missingArabic=q.sourceLanguage === "en";
+    const inferredAnswer=q.answerStatus === "inferred";
+    const reconstructed=q.sourceTextStatus === "reconstructed" || q.sourceTextStatus === "table-reflowed";
+    const held=q.sourceLayoutReview === true;
+    if (missingArabic) englishOnly++;
+    if (inferredAnswer) inferred++;
+    if (reconstructed) layout++;
+    if (held) gated++;
+    if (held && !missingArabic) translatedGated++;
+    // This imported bank's outstanding initial-review records are quarantined.
+    // A missing translation alone is not a universal scoring rule for other banks.
+    check(!(missingArabic || inferredAnswer || reconstructed) || held,
+      "Unresolved imported source record escaped review gate: "+q.id);
+    if (!held) continue;
+    const reasons=[];
+    if (missingArabic) reasons.push("arabic-incomplete");
+    if (inferredAnswer) reasons.push("inferred-answer");
+    if (reconstructed) reasons.push(q.sourceTextStatus);
+    reasons.push("source-review-gate");
+    check(Number.isInteger(q.sourcePage) && q.sourcePage>0,
+      "Source review needs a page locator: "+q.id);
+    reviewQueue.push({volume,unit:q.studyUnit,id:q.id,page:q.sourcePage,
+      arabicComplete:!missingArabic,answerStatus:q.answerStatus,reasons});
+  }
+  reviewSummary.push({volume,total:questions.length,englishOnly,gated,translatedGated,inferred,layout});
+}
+check(new Set(reviewQueue.map(q=>q.id)).size===reviewQueue.length,"Duplicate source-review queue IDs");
+reviewQueue.sort((a,b)=>a.volume-b.volume || a.page-b.page || a.id.localeCompare(b.id));
+if (process.argv.includes("--source-review-queue")) {
+  console.log(JSON.stringify({scope:"Imported Gleim 2025 records; not visual certification",
+    summary:reviewSummary,records:reviewQueue},null,2));
+  process.exit(0);
+}
+console.log("Validated source-review gates: "+reviewQueue.length+" imported records, including translated holds");
+
 const { CMA_PART2_QUESTIONS_1_7 } = readDataFile("cma-part2-questions-1-7");
 const { CMA_PART2_PRACTICE_1_7 } = readDataFile("cma-part2-practice-1-7");
 const { CMA_PART2_DEEP_DIVE_1_7 } = readDataFile("cma-part2-deep-dive-1-7");
