@@ -93,6 +93,9 @@ const ServicesEditorial = lazy(() =>
 const AboutMe = lazy(() =>
   import("@/components/home/AboutMe").then((m) => ({ default: m.AboutMe })),
 );
+const FeaturedProjects = lazy(() =>
+  import("@/components/home/FeaturedProjects").then((m) => ({ default: m.FeaturedProjects })),
+);
 const DigitalExpertise = lazy(() =>
   import("@/components/home/DigitalExpertise").then((m) => ({ default: m.DigitalExpertise })),
 );
@@ -514,6 +517,9 @@ function Index() {
         </Suspense>
         <Suspense fallback={null}>
           <DigitalExpertise lang={lang} />
+        </Suspense>
+        <Suspense fallback={null}>
+          <FeaturedProjects lang={lang} />
         </Suspense>
         <StickyOutgoingLayer>
           <Suspense fallback={null}>

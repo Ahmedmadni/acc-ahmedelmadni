@@ -56,6 +56,9 @@
   --color-brand: var(--brand);
   --color-brand-strong: var(--brand-strong);
   --color-hairline: var(--hairline);
+  --color-window-close: var(--window-close);
+  --color-window-min: var(--window-min);
+  --color-window-max: var(--window-max);
 }
 
 :root {
@@ -114,6 +117,9 @@
   --brand: var(--efl-bronze);
   --brand-strong: var(--efl-brown);
   --hairline: var(--efl-border);
+  --window-close: #e0675b;
+  --window-min: #d9a84f;
+  --window-max: #79a86a;
   --focus: var(--efl-bronze);
 
   /* Typography — families & fluid scale */
@@ -1346,4 +1352,45 @@ img {
 }
 @media print {
   .study-notebook-paper { box-shadow: none !important; }
+}
+
+/* Featured projects showcase — dual marquee on desktop, snap slider on touch. */
+.works-marquee {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  padding: 0.25rem 1.25rem 0.75rem;
+  -webkit-overflow-scrolling: touch;
+}
+.works-marquee::-webkit-scrollbar { display: none; }
+.works-track { display: flex; gap: 1.25rem; width: max-content; }
+.works-dup { display: none; }
+.works-shimmer {
+  background: linear-gradient(100deg,
+    color-mix(in oklab, var(--surface) 6%, transparent) 30%,
+    color-mix(in oklab, var(--surface) 14%, transparent) 50%,
+    color-mix(in oklab, var(--surface) 6%, transparent) 70%);
+  background-size: 200% 100%;
+  animation: works-shimmer 1.6s linear infinite;
+}
+.works-card:hover { box-shadow: 0 24px 50px -28px color-mix(in oklab, var(--brand) 55%, transparent); }
+@keyframes works-shimmer { from { background-position: 150% 0; } to { background-position: -50% 0; } }
+@keyframes works-marquee-x { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@media (min-width: 1024px) and (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .works-marquee {
+    direction: ltr;
+    overflow: hidden;
+    scroll-snap-type: none;
+    padding: 0.5rem 0 1rem;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  }
+  .works-dup { display: contents; }
+  .works-track { animation: works-marquee-x 70s linear infinite; padding-inline-end: 1.25rem; }
+  .works-track--reverse { animation-direction: reverse; }
+  .works-marquee:hover .works-track,
+  .works-marquee:focus-within .works-track { animation-play-state: paused; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .works-shimmer { animation: none; }
 }

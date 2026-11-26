@@ -173,3 +173,5 @@ Historical wave entries below remain as an audit trail; their interim counts and
 - [x] Unit 10: initial review complete, 54/59 Arabic drafts (91.5%), five held, zero unreviewed. All 20 units now have initial coverage; original-page verification pending. See `docs/CMA_UNIT10_ARABIC_REVIEW_2026-11-26.md`.
 
 - [x] Add machine-readable source-review queue (`node scripts/check-cma-content.mjs --source-review-queue`), covering English-first and translated-but-held records, with page locators, answer provenance, and layout flags. Enforce review gates in the normal CMA content checks. Align Volume 1 reconstructed/inferred records with the existing quarantine policy. Original-page verification remains pending; no question content or answer keys changed.
+
+- [x] Homepage "Featured work" showcase (14 projects, dual marquee, live screenshots) under the digital-expertise section.
