@@ -129,3 +129,9 @@
 - [x] Unit 7 Wave 2: 28 new drafts; §3 7/9 initially reviewed and §4 Q1–23 21/23 initially reviewed. Unit 7 83/131 (63.4%), nine held, 39 unreviewed. Continue §4 Q24. See `docs/CMA_UNIT7_ARABIC_WAVE2_2026-11-25.md`.
 
 - [x] Unit 7 Wave 3: 32 additional Arabic drafts, seven holds; initial review complete 115/131 (87.8%), 16 held, zero unreviewed. See `docs/CMA_UNIT7_ARABIC_WAVE3_2026-11-25.md`. Continue Unit 8 after CI.
+
+- [x] Unit 8 Wave 1: 26 Arabic drafts across job-order and process costing, six holds, 52 unreviewed; 26/84 (31.0%). See `docs/CMA_UNIT8_ARABIC_WAVE1_2026-11-25.md`. Continue §3 activity-based costing.
+
+- [x] Unit 8 Wave 2: 13 new ABC drafts; held four ABC records and duplicate §2 Q11 after integrity check. Unit 8 now 38/84 (45.2%), 11 held, 35 unreviewed. See `docs/CMA_UNIT8_ARABIC_WAVE2_2026-11-25.md`. Continue §3 Q18.
+
+- [x] Unit 8 Wave 3: 29 additional Arabic drafts; initial review complete, 67/84 (79.8%), 17 held, zero unreviewed. Fixed floating-point cents comparison from Wave 2 CI. See `docs/CMA_UNIT8_ARABIC_WAVE3_2026-11-25.md`. Continue Unit 9 after CI.

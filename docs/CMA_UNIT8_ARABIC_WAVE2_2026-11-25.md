@@ -1,0 +1,3 @@
+# Unit 8 Wave 2
+
+13 new educational Arabic drafts in section 3 Q3–14 and Q17. The prior CI failed because 8.2.11 repeats the identical English stem and options of 8.2.3. Retained both canonical source records, removed only the redundant Arabic draft from 8.2.11 and placed it on the existing source-review gate. Section 2 corrected to 9/11 Arabic drafts. Unit 8 now 38/84 (45.2%), 11 held, 35 unreviewed; combined 1900/2443. English source and keys unchanged; numerical parity and independent quality/service allocation calculations checked. New ABC holds: 8.3.1 conflicting labor-hour totals and interleaved table; 8.3.2 interleaved source table; 8.3.15 and 8.3.16 split numbers in source tables. Original page verification pending. Next §3 Q18–38.
