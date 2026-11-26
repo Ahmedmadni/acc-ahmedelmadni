@@ -15,6 +15,7 @@ import { indexCmaQuestionsByTopic } from "@/lib/cma-topic-index.shared";
 import { CMA_PART2_PRACTICE_SOURCES } from "@/data/cma-part2-practice-sources";
 import { CmaTranslatedQuestion } from "@/components/library/CmaTranslatedQuestion";
 import { CmaReadableText } from "@/components/library/CmaReadableText";
+import { isCmaScorableQuestion } from "@/lib/cma-source-review.shared";
 import { getCmaUnit14SourceReview } from "@/lib/cma-unit14-source-review";
 import { getCmaUnit15SourceReview } from "@/lib/cma-unit15-source-review";
 import { getCmaUnit16SourceReview } from "@/lib/cma-unit16-source-review";
@@ -745,8 +746,10 @@ function CmaPage() {
                   <div className="mt-4 grid gap-2 sm:grid-cols-2">
                     {view.choices.map((choice, choiceIndex) => {
                       const revealed = answers[q.id] !== undefined;
-                      const correct = revealed && choiceIndex === q.answerIndex;
-                      const wrong = revealed && choiceIndex === answers[q.id] && !correct;
+                      const scorable = isCmaScorableQuestion(q);
+                      const correct = revealed && scorable && choiceIndex === q.answerIndex;
+                      const wrong = revealed && scorable && choiceIndex === answers[q.id] && !correct;
+                      const provisional = revealed && !scorable && (choiceIndex === q.answerIndex || choiceIndex === answers[q.id]);
                       return (
                         <button
                           key={choiceIndex}
@@ -755,7 +758,7 @@ function CmaPage() {
                           onClick={() =>
                             setAnswers((previous) => ({ ...previous, [q.id]: choiceIndex }))
                           }
-                          className={`min-h-11 rounded-xl border px-4 py-3 text-start text-sm leading-6 transition focus-visible:outline-2 focus-visible:outline-[#A88765] ${correct ? "border-emerald-600 bg-emerald-50 text-emerald-900" : wrong ? "border-red-500 bg-red-50 text-red-900" : "border-[#A88765]/25 hover:border-[#A88765] disabled:opacity-70"}`}
+                          className={`min-h-11 rounded-xl border px-4 py-3 text-start text-sm leading-6 transition focus-visible:outline-2 focus-visible:outline-[#A88765] ${correct ? "border-emerald-600 bg-emerald-50 text-emerald-900" : wrong ? "border-red-500 bg-red-50 text-red-900" : provisional ? "border-amber-500 bg-amber-50 text-amber-900" : "border-[#A88765]/25 hover:border-[#A88765] disabled:opacity-70"}`}
                         >
                           <span
                             dir={view.direction}
@@ -773,7 +776,9 @@ function CmaPage() {
                       className="mt-4 rounded-xl bg-[#F5F1EB] p-4 text-sm leading-7"
                     >
                       <span className="inline-flex items-center gap-2 font-bold">
-                        {answers[q.id] === q.answerIndex ? (
+                        {!isCmaScorableQuestion(q) ? (
+                          <CircleHelp className="size-4 text-amber-700" />
+                        ) : answers[q.id] === q.answerIndex ? (
                           <CheckCircle2 className="size-4 text-emerald-700" />
                         ) : (
                           <XCircle className="size-4 text-red-700" />
@@ -794,7 +799,7 @@ function CmaPage() {
                             : "Provisional comparison only: source data, layout or answer key still needs review. This is not a scored result."}
                         </p>
                       )}
-                      <CmaAnswerSupport question={q} lang={lang} isCorrect={answers[q.id] === q.answerIndex} />
+                      {isCmaScorableQuestion(q) && <CmaAnswerSupport question={q} lang={lang} isCorrect={answers[q.id] === q.answerIndex} />}
                       {q.answerStatus === "inferred" && (
                         <p className="mt-2 text-xs text-[#76543F]">
                           {lang === "ar"
