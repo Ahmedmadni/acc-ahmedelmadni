@@ -143,3 +143,5 @@
 - [x] Unit 9 Wave 3: §2 Q19–35 reviewed, 14 additional drafts and three holds; §2 31/35; Unit 9 62/115 (53.9%), 18 held, 35 unreviewed. See `docs/CMA_UNIT9_ARABIC_WAVE3_2026-11-26.md`. Continue §3 service department allocation.
 
 - [x] Unit 9 Wave 4: §3 service department allocation initial review complete: 22/35 Arabic drafts, 13 held; Unit 9 84/115 (73.0%), 31 held, zero unreviewed. See `docs/CMA_UNIT9_ARABIC_WAVE4_2026-11-26.md`. Continue Unit 10 after CI.
+
+- [x] Unit 10: initial review complete, 54/59 Arabic drafts (91.5%), five held, zero unreviewed. All 20 units now have initial coverage; original-page verification pending. See `docs/CMA_UNIT10_ARABIC_REVIEW_2026-11-26.md`.

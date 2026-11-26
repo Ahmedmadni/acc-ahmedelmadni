@@ -381,3 +381,18 @@ test("Unit 9 independent direct, dual rate and step-down calculations",()=>{
  assert.ok(Math.abs(fullHr-(hr+a*fullDp))<1e-8);
  assert.ok(Math.abs(fullDp-(dp+b*fullHr))<1e-8);
 });
+
+const unit10Rows=JSON.parse(read("src/data/cma-gleim-2025-vol1-unit-10.json"));
+const unit10Pins=[[[1,1],[1041,0,"5f677291"]],[[1,2],[1042,2,"7ef3cdb4"]],[[1,3],[1043,2,"58f19658"]],[[1,4],[1043,1,"69a59511"]],[[1,5],[1044,0,"61348daf"]],[[1,6],[1044,0,"11b4966f"]],[[1,7],[1045,2,"f4f3a507"]],[[1,8],[1046,1,"4f17ab0f"]],[[1,9],[1047,3,"f742cb42"]],[[1,10],[1048,2,"78306084"]],[[1,12],[1049,0,"6b013a8e"]],[[1,13],[1050,1,"9f487885"]],[[1,14],[1051,1,"cac76f4f"]],[[1,15],[1051,0,"433bfe51"]],[[1,16],[1052,3,"9b7fbe71"]],[[1,17],[1053,2,"efe07f21"]],[[1,18],[1053,0,"5cfc162d"]],[[1,19],[1054,3,"55475d9a"]],[[1,20],[1054,2,"444ada96"]],[[1,21],[1055,3,"b2b3536c"]],[[1,22],[1056,0,"f531aa67"]],[[1,23],[1057,1,"0867463e"]],[[1,24],[1057,3,"62724523"]],[[1,25],[1058,0,"bc614e6f"]],[[1,26],[1059,0,"75c67116"]],[[2,1],[1060,0,"9d4ab71f"]],[[2,3],[1062,3,"525a4b16"]],[[2,4],[1062,0,"6c7808ec"]],[[2,5],[1063,3,"b4573146"]],[[2,6],[1064,3,"488edb84"]],[[2,7],[1064,0,"e37d4fd8"]],[[2,8],[1065,3,"9c53bce3"]],[[2,9],[1065,2,"877623d5"]],[[2,11],[1067,1,"97a2f21b"]],[[2,12],[1069,3,"fcd89b78"]],[[2,13],[1069,1,"db1b8eda"]],[[2,14],[1070,1,"6fdcf03e"]],[[2,15],[1071,2,"b50b45ea"]],[[2,16],[1072,1,"3d154ab1"]],[[2,17],[1073,3,"c8b48ec3"]],[[2,18],[1074,1,"22900ac2"]],[[2,19],[1074,3,"f315afc6"]],[[2,20],[1075,2,"8b8b5869"]],[[2,21],[1076,3,"86e4422a"]],[[3,1],[1078,2,"a2063fc1"]],[[3,2],[1078,3,"36a792df"]],[[3,3],[1079,0,"e1d1a907"]],[[3,5],[1080,2,"f4e33b5a"]],[[3,6],[1081,3,"b19eb15f"]],[[3,7],[1082,0,"f2aeffd6"]],[[3,8],[1082,2,"3632fbc7"]],[[3,10],[1084,1,"919510ce"]],[[3,11],[1084,2,"acd97cf0"]],[[3,12],[1085,1,"385ac4ee"]]];
+test("Unit 10 Arabic drafts preserve source, answer keys, numbers and held records",()=>{
+ for(const [[section,n],[page,index,hash]] of unit10Pins){const r=unit10Rows.find(r=>r.section===section&&r.number===n);assert.equal(r.page,page);assert.equal(r.answerIndex,index);assert.equal(r.answerStatus,"source");assert.equal(fingerprint(JSON.stringify([r.stem,r.choices,r.explanation,r.answerIndex,r.page])),hash);assert.equal(validateCmaTranslation({question:{en:r.stem},choices:{en:r.choices},explanation:{en:r.explanation}},{question:r.stemAr,choices:r.choicesAr,explanation:r.explanationAr}).valid,true,section+"."+n);}
+ const adapter=read("src/data/cma-questions-gleim-2025-vol1.ts");
+ const held=["10.1.11","10.2.2","10.2.10","10.3.4","10.3.9"];assert.deepEqual(unit10Rows.filter(r=>!r.stemAr).map(r=>[r.unit,r.section,r.number].join(".")),held);for(const id of held)assert.ok(adapter.includes('"'+id+'"'),id);
+ assert.equal(unit10Rows.length,59);assert.equal(unit10Rows.filter(r=>r.stemAr&&r.choicesAr&&r.explanationAr).length,54);
+});
+test("Unit 10 independent MRP and capacity calculations",()=>{
+ assert.equal((100*3-15)*4-80,1060);
+ const fixed=80000, theoretical=10000, practical=theoretical*.8;
+ assert.equal(fixed/theoretical,8);assert.equal(fixed/practical,10);
+ assert.ok(fixed/theoretical<fixed/practical);
+});

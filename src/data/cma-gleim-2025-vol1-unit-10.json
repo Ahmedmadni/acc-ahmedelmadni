@@ -14,7 +14,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Receiving departments are often eliminated with a JIT system\nso receiving reports are not needed. Also, the quantity\nreceived should be exactly equal to immediate production\nneeds.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "غالبًا ما تدعم فعالية نظام الإنتاج في الوقت المحدد (JIT) بإلغاء بعض الإجراءات الرقابية التقليدية. أي إجراء يمكن عادة الاستغناء عنه في هذا النظام؟",
+    "choicesAr": [
+      "إعداد تقارير استلام ورقية.",
+      "اعتماد مستند الصرف قبل سداد الحسابات الدائنة.",
+      "اشتراط توقيعين على الشيكات الكبيرة.",
+      "إغلاق أبواب مناطق الإنتاج."
+    ],
+    "explanationAr": "قد تستغني المنشأة عن قسم الاستلام التقليدي وتقاريره الورقية في نظام JIT، إذ يفترض أن الكميات الواردة تتوافق مع احتياجات الإنتاج الفورية. ولا يعني ذلك إلغاء إثبات الاستلام أو التحقق من الكميات؛ يمكن استخدام بدائل إلكترونية ورقابة ملائمة."
   },
   {
     "unit": 10,
@@ -31,7 +39,15 @@
     ],
     "answerIndex": 2,
     "explanation": "JIT manufacturing is a pull system; items are pulled through\nproduction by current demand, not pushed through by\nanticipated demand as in traditional manufacturing setups.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستند ممارسات التصنيع في الوقت المحدد (JIT) جزئيًا إلى أي اعتقاد؟",
+    "choicesAr": [
+      "ارتفاع المخزون يوفر مرونة أكبر في جدولة الإنتاج.",
+      "محاولة خفض المخزون إلى مستوى منخفض باستمرار قد تسبب حالات ذعر.",
+      "ينبغي سحب السلع عبر عملية الإنتاج لا دفعها.",
+      "تعزيز الرقابة في المستودع المركزي يزيد إنتاجية مناطق الإنتاج بدرجة كبيرة."
+    ],
+    "explanationAr": "التصنيع في الوقت المحدد نظام سحب؛ إذ تسحب المنتجات عبر مراحل الإنتاج وفق الطلب الحالي بدلًا من دفعها وفق الطلب المتوقع كما في النظم التقليدية."
   },
   {
     "unit": 10,
@@ -48,7 +64,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Under a JIT system, the quality of parts provided by suppliers\nis verified by use of statistical controls rather than inspection\nof incoming goods. Storage, counting, and inspection are\neliminated in an effort to perform only value-adding work.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي من إجراءات الرقابة الداخلية التالية لا يستغنى عنه عادة عند تطبيق نظام المخزون في الوقت المحدد (JIT)؟",
+    "choicesAr": [
+      "نظام متطور لتتبع المخزون.",
+      "رصيف استلام مركزي.",
+      "الأساليب الإحصائية لضمان الجودة.",
+      "تقرير استلام ورقي."
+    ],
+    "explanationAr": "تستخدم الرقابة الإحصائية للتحقق من جودة أجزاء الموردين في نظام JIT بدلًا من الاعتماد على الفحص التقليدي لكل شحنة. ويهدف النظام إلى خفض أعمال التخزين والعد والفحص غير المضيفة للقيمة دون إلغاء الرقابة اللازمة."
   },
   {
     "unit": 10,
@@ -65,7 +89,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Lean manufacturing, or lean processes, expands the concept\nof just-in-time. The central focus is on accomplishing more\nwith less resources.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بأي مفهوم يرتبط الإنتاج في الوقت المحدد أيضًا؟",
+    "choicesAr": [
+      "كايزن (التحسين المستمر).",
+      "التصنيع الرشيق.",
+      "الإدارة على أساس الأنشطة.",
+      "التكاليف بالتسجيل العكسي."
+    ],
+    "explanationAr": "يوسع التصنيع الرشيق مفهوم الإنتاج في الوقت المحدد ليشمل موارد وعمليات أخرى؛ ويتمثل هدفه الأساسي في تحقيق نتائج أكبر بموارد أقل. والمفهومان مرتبطان لكن التصنيع الرشيق أوسع نطاقًا."
   },
   {
     "unit": 10,
@@ -82,7 +114,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The objective of JIT is to reduce carrying costs by eliminating\ninventories and increasing the deliveries made by suppliers.\nIdeally, shipments of raw materials are received just in time to\nbe incorporated into the manufacturing process. The focus of\nquality control under JIT is the prevention of quality problems.\nQuality control is shifted to the supplier. JIT companies\ntypically do not inspect incoming goods; the assumption is that\nreceived goods are of perfect quality. Suppliers are limited to\nthose who guarantee perfect quality and prompt delivery.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما الأثر الذي غالبًا ما تواجهه الشركات التي تطبق نظام الشراء في الوقت المحدد (JIT)؟",
+    "choicesAr": [
+      "انخفاض عدد الموردين.",
+      "انخفاض عدد الشحنات من الموردين.",
+      "زيادة الحاجة إلى فحص السلع عند وصولها.",
+      "انخفاض الحاجة إلى الربط بنظام الطلبات الإلكتروني للمورد."
+    ],
+    "explanationAr": "يهدف JIT إلى تقليل تكاليف الاحتفاظ بالمخزون من خلال تقليله وزيادة تكرار التوريد. وتصل المواد في الوقت المناسب للإنتاج، مع التركيز على منع مشكلات الجودة لدى المورد. لذلك تختار المنشأة عادة عددًا محدودًا من الموردين الموثوقين القادرين على تقديم جودة عالية وتسليم منتظم."
   },
   {
     "unit": 10,
@@ -99,7 +139,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Nonvalue-adding activities are those that do not add to\ncustomer value or satisfy an organizational need. Inventory\nactivities are inherently nonvalue-adding. Thus, a system,\nsuch as JIT, that promotes lean production and reduces\ninventory and its attendant procedures (storage, handling,\netc.) also reduces nonvalue-adding activities.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما إحدى الفوائد المعتادة لنظام المواد الخام في الوقت المحدد؟",
+    "choicesAr": [
+      "إلغاء العمليات غير المضيفة للقيمة.",
+      "زيادة عدد الموردين لضمان تنافس العطاءات.",
+      "تعظيم كمية التوريد المعتادة لتقليل مستندات كل شحنة.",
+      "خفض عدد الشحنات اللازمة لاستمرار الإنتاج."
+    ],
+    "explanationAr": "الأنشطة غير المضيفة للقيمة لا تضيف قيمة للعميل ولا تلبي حاجة تنظيمية. ويخفض النظام الرشيق مثل JIT المخزون والأنشطة المرتبطة به، كالتخزين والمناولة، وبذلك يقلل الأنشطة غير المضيفة للقيمة."
   },
   {
     "unit": 10,
@@ -116,7 +164,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A JIT system is intended to minimize inventory. Inventory\nshould be delivered or produced just in time to be used. Thus,\nJIT increases inventory turnover (Cost of sales ÷ Average\ninventory) and decreases inventory as a percentage of total\nassets.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "انتقلت شركة من التصنيع التقليدي إلى التصنيع في الوقت المحدد. ما الأثر المتوقع في دوران المخزون ونسبة المخزون إلى إجمالي الأصول في الميزانية؟\nدوران المخزون | نسبة المخزون",
+    "choicesAr": [
+      "انخفاض | انخفاض",
+      "انخفاض | ارتفاع",
+      "ارتفاع | انخفاض",
+      "ارتفاع | ارتفاع"
+    ],
+    "explanationAr": "يهدف JIT إلى تقليل المخزون بحيث ينتج أو يستلم عند الحاجة. ومع ثبات العوامل الأخرى يرتفع معدل دوران المخزون (تكلفة المبيعات ÷ متوسط المخزون) وتنخفض نسبة المخزون إلى إجمالي الأصول."
   },
   {
     "unit": 10,
@@ -133,7 +189,15 @@
     ],
     "answerIndex": 1,
     "explanation": "A JIT system is intended to minimize inventory. Thus, if\ninventory carrying costs are increasing, a JIT system becomes\nmore cost effective. Moreover, purchases are more frequent in\na JIT system. Accordingly, a decreasing cost per purchase\norder is conducive to switching to a JIT system.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي اتجاه في تكاليف الشراء والاحتفاظ بالمخزون يشجع أكثر على التحول من نظام الطلب التقليدي إلى نظام الوقت المحدد؟\nتكلفة أمر الشراء | تكلفة الاحتفاظ بوحدة المخزون",
+    "choicesAr": [
+      "ارتفاع | ارتفاع",
+      "انخفاض | ارتفاع",
+      "انخفاض | انخفاض",
+      "ارتفاع | انخفاض"
+    ],
+    "explanationAr": "يقلل JIT المخزون، ولذلك فإن ارتفاع تكلفة الاحتفاظ به يزيد جاذبية النظام. كما أن تكرار الشراء يزيد، فيصبح انخفاض تكلفة أمر الشراء عاملًا مشجعًا للتحول."
   },
   {
     "unit": 10,
@@ -150,7 +214,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The objective of a JIT system is to reduce carrying costs by\neliminating inventories and increasing the deliveries made by\nsuppliers. Ideally, shipments are received just in time to be\nincorporated into the manufacturing process. This system\nincreases the risk of stockout costs because the inventory\nbuffer is reduced or eliminated.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تسعى شركة صناعية إلى تطبيق سياسة شراء في الوقت المحدد (JIT) بالتفاوض مع الموردين الرئيسيين على أوامر شراء طويلة الأجل تحقق توريدات متكررة لكميات أصغر من المواد الخام. إذا نجحت السياسة في تقليل إجمالي تكاليف المخزون، فما التركيبة الأكثر احتمالًا للتغيرات؟\nفئة التكلفة المرتفعة | فئة التكلفة المنخفضة",
+    "choicesAr": [
+      "تكاليف الشراء | تكاليف نفاد المخزون",
+      "تكاليف الشراء | تكاليف الجودة",
+      "تكاليف الجودة | تكاليف إصدار الطلبات",
+      "تكاليف نفاد المخزون | تكاليف الاحتفاظ بالمخزون"
+    ],
+    "explanationAr": "يهدف JIT إلى تقليل تكاليف الاحتفاظ بالمخزون عبر تخفيضه وزيادة تكرار التوريد. وتصل الشحنات عند الحاجة للإنتاج، لكن انخفاض مخزون الأمان يزيد خطر تكاليف نفاد المخزون."
   },
   {
     "unit": 10,
@@ -167,7 +239,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Since every worker in a manufacturing cell must be able to\noperate every piece of machinery in the cell, reduced training\ncosts do not necessarily accompany the deployment of lean\nproduction.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي ليس من فوائد الإنتاج الرشيق؟",
+    "choicesAr": [
+      "انخفاض وقت إعداد الآلات.",
+      "انخفاض تكاليف الدعم المركزي.",
+      "انخفاض تكاليف التدريب.",
+      "تحسن التسليم في الموعد."
+    ],
+    "explanationAr": "يحتاج العامل في خلية التصنيع إلى القدرة على تشغيل المعدات المتعددة في الخلية، ولذلك لا يلزم أن تنخفض تكاليف التدريب عند تطبيق الإنتاج الرشيق."
   },
   {
     "unit": 10,
@@ -201,7 +281,15 @@
     ],
     "answerIndex": 0,
     "explanation": "To implement a JIT inventory or lean production system, the\nfactory is reorganized around what are called manufacturing\ncells. In a cellular layout, each cell is a miniature\nmanufacturing plant. Cells are sets of machines, often\ngrouped in semicircles, that produce a given product or\nproduct family. Because of the free flow of materials in cellular\nmanufacturing, it has the ability to produce products just in\ntime.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بأي نظام يرتبط مفهوم خلية العمل؟",
+    "choicesAr": [
+      "نظام الإنتاج في الوقت المحدد.",
+      "تخطيط احتياجات المواد.",
+      "تكاليف الإنجاز.",
+      "تخطيط موارد المنشأة."
+    ],
+    "explanationAr": "لتطبيق JIT أو الإنتاج الرشيق يمكن إعادة تنظيم المصنع إلى خلايا تصنيع. تمثل كل خلية مصنعًا مصغرًا يضم مجموعة آلات، قد ترتب في شكل نصف دائرة لإنتاج منتج أو عائلة منتجات. ويساعد التدفق السلس للمواد على الإنتاج في الوقت المناسب."
   },
   {
     "unit": 10,
@@ -218,7 +306,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Production setup costs and times per lot are reduced by a JIT\nproduction system. However, because smaller lots are used,\ntotal setup costs are not necessarily lower using a JIT\nproduction system.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي ليس فائدة متوقعة بالضرورة من تطبيق نظام الإنتاج في الوقت المحدد (JIT)؟",
+    "choicesAr": [
+      "انخفاض إجمالي تكاليف التخزين.",
+      "انخفاض إجمالي تكاليف إعداد الآلات.",
+      "انخفاض زمن التصنيع.",
+      "انخفاض إجمالي تكاليف إعادة التشغيل."
+    ],
+    "explanationAr": "يخفض JIT تكلفة ووقت إعداد الآلات لكل دفعة، لكن استخدام دفعات أصغر قد يزيد عدد مرات الإعداد، لذا لا يلزم انخفاض إجمالي تكاليف الإعداد."
   },
   {
     "unit": 10,
@@ -235,7 +331,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Packaging labor should not increase with a just-in-time\nsystem. The new system should only impact the different\nfacets of direct material costs, not labor costs. The company\ndoes not need to consider a possible change in labor costs.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تدرس شركة تطبيق نظام الوقت المحدد على مشتريات مواد التعبئة. وأظهر التحليل إمكانية خفض تكاليف الاحتفاظ بالمخزون بمبلغ $5,000 شهريًا. قبل القرار ينبغي مراعاة احتمال تغير التكاليف التالية باستثناء زيادة تكلفة:",
+    "choicesAr": [
+      "إصدار الطلبات.",
+      "عمالة التعبئة.",
+      "مواد التعبئة.",
+      "نفاد المخزون."
+    ],
+    "explanationAr": "وفق افتراض المسألة، يقتصر التغيير على شراء مواد التعبئة ولا يؤثر في عملية التعبئة نفسها؛ ولذلك لا يتوقع تغير تكلفة عمالة التعبئة. عمليًا يجب مراجعة أي أثر فعلي للتغيير على العمل قبل اتخاذ القرار."
   },
   {
     "unit": 10,
@@ -252,7 +356,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The use of a just-in-time production system generally involves\ndeveloping relationships with a minimum number of suppliers\nthat reliably deliver high-quality products.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "طبقت شركة مؤخرًا نظامي الإنتاج والشراء في الوقت المحدد. إذا كانت تجربتها مماثلة للشركات الأخرى، فما الأثر المرجح؟",
+    "choicesAr": [
+      "تقليل عدد الموردين الذين تتعامل معهم.",
+      "زيادة حجم كل طلب مواد خام.",
+      "زيادة الاستثمار النقدي في مخزون الإنتاج التام.",
+      "تقليل الاعتماد على أوامر المبيعات لبدء دفعات الإنتاج."
+    ],
+    "explanationAr": "يتضمن نظام الإنتاج في الوقت المحدد عادة بناء علاقات مع عدد محدود من الموردين القادرين على توريد منتجات عالية الجودة في الوقت المطلوب بصورة موثوقة."
   },
   {
     "unit": 10,
@@ -269,7 +381,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A company’s demand for its products is unaffected by its\ninventory management method.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تخطط شركة لتطبيق نظام إدارة المخزون في الوقت المحدد (JIT). أي مما يلي ليس فائدة متوقعة مباشرة من التطبيق؟",
+    "choicesAr": [
+      "انخفاض الاستثمار في المخزون.",
+      "انخفاض التقادم وغيره من تكاليف الاحتفاظ.",
+      "ارتفاع دوران المخزون.",
+      "زيادة الطلب."
+    ],
+    "explanationAr": "لا يؤدي تغيير أسلوب إدارة المخزون بحد ذاته إلى زيادة الطلب على منتجات الشركة بصورة مؤكدة؛ فالطلب يتأثر بعوامل السوق، وقد تتغير مبيعات الشركة بصورة غير مباشرة إذا تحسنت الخدمة."
   },
   {
     "unit": 10,
@@ -286,7 +406,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Since there is no safety stock with a JIT system, minor defects\nwill immediately halt production.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي ليس من فوائد التصنيع في الوقت المحدد؟",
+    "choicesAr": [
+      "يمكنه تقليل المخزون بدرجة كبيرة.",
+      "يساعد على إنتاج منتج أعلى جودة في وقت أقل.",
+      "يسمح بعيوب طفيفة دون توقف العمليات.",
+      "يساعد على التخلص من تكاليف إعادة التشغيل."
+    ],
+    "explanationAr": "عند غياب مخزون الأمان في النموذج المثالي لنظام JIT، قد يؤدي حتى العيب البسيط إلى توقف الإنتاج، ولذلك تشدد المنشأة على منع العيوب ومعالجة أسبابها."
   },
   {
     "unit": 10,
@@ -303,7 +431,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The just-in-time (JIT) model views inventory as a liability and\nlimits output to the demand of the subsequent operation.\nReductions in inventory levels result in less money invested in\nidle assets; reduction of storage space requirements; and\nlower inventory taxes, pilferage, and obsolescence risks.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما اسم نظام الإنتاج الذي لا تنتج فيه الوحدة إلا عندما تحتاج إليها المرحلة التالية في خط الإنتاج؟",
+    "choicesAr": [
+      "نظام الإنتاج في الوقت المحدد.",
+      "نظام التسجيل العكسي للتكاليف.",
+      "نظام باريتو.",
+      "نظام تخطيط احتياجات المواد."
+    ],
+    "explanationAr": "ينظر نموذج الإنتاج في الوقت المحدد (JIT) إلى المخزون باعتباره عبئًا تشغيليًا لا التزامًا محاسبيًا، ويقيد الإنتاج بطلب العملية التالية. ويخفض المخزون الأموال المجمدة ومساحة التخزين ومخاطر الضرائب والسرقة والتقادم."
   },
   {
     "unit": 10,
@@ -320,7 +456,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A just-in-time (JIT) inventory management system limits the\noutput of each manufacturing operation to the demand of the\nnext operation. Shipment of raw materials from vendors are\nscheduled to arrive “just in time” to be used in the production\nprocess. Inventory storage is considered a nonvalue-adding\nactivity, and raw materials on hand are thus kept to a\nminimum.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما تقنية إدارة المخزون التي تهدف إلى تقليل الاستثمار فيه من خلال وصول المواد عند الحاجة إلى استخدامها؟",
+    "choicesAr": [
+      "نموذج كمية الطلب الاقتصادية (EOQ).",
+      "تخطيط احتياجات المواد (MRP).",
+      "الوارد أولًا يصرف أولًا (FIFO).",
+      "الوقت المحدد (JIT)."
+    ],
+    "explanationAr": "يقيد نظام JIT إنتاج كل مرحلة بطلب المرحلة التالية. وتجدول شحنات المواد الخام من الموردين بحيث تصل في الوقت المناسب للاستخدام، ويعد التخزين نشاطًا غير مضيف للقيمة، فتخفض المواد الخام المحتفظ بها إلى الحد الأدنى."
   },
   {
     "unit": 10,
@@ -337,7 +481,15 @@
     ],
     "answerIndex": 2,
     "explanation": "JIT is a pull system. Items are pulled through production by\ncurrent demand, not pushed through by anticipated demand.\nThe goal is to have materials arrive just in time for production\n(or sales).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "جميع ما يلي من خصائص نظام المخزون في الوقت المحدد (JIT) باستثناء:",
+    "choicesAr": [
+      "انخفاض عدد الموردين.",
+      "زيادة عدد الشحنات.",
+      "نظام إنتاج بالدفع.",
+      "انخفاض مستويات المخزون."
+    ],
+    "explanationAr": "JIT نظام سحب؛ تتحرك المنتجات وفق الطلب الحالي وليس الطلب المتوقع. والهدف وصول المواد عند الحاجة إليها للإنتاج أو البيع."
   },
   {
     "unit": 10,
@@ -354,7 +506,15 @@
     ],
     "answerIndex": 3,
     "explanation": "JIT necessitates a high focus on quality. Because the\ncompany has no excess inventory, stopping production and\nwaiting for delivery of a part to replace a defect is costly. A JIT\nsystem generally has fewer defects and a higher level of\nquality. Zero defects and zero machine breakdowns are the\nultimate goals.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي ميزة لنظام المخزون في الوقت المحدد (JIT)؟",
+    "choicesAr": [
+      "انخفاض حالات نفاد المخزون.",
+      "انخفاض إجمالي تكاليف إعداد الآلات.",
+      "انخفاض الاعتماد على الموردين.",
+      "انخفاض العيوب."
+    ],
+    "explanationAr": "يتطلب JIT اهتمامًا كبيرًا بالجودة، لأن غياب المخزون الزائد يجعل توقف الإنتاج لانتظار بديل للجزء المعيب مكلفًا. لذلك يستهدف النظام تقليل العيوب ورفع الجودة وصولًا إلى عدم وجود عيوب أو أعطال."
   },
   {
     "unit": 10,
@@ -371,7 +531,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Lean manufacturing principles are (1) value, (2) value stream,\n(3) flow and pull, (4) empowerment, and (5) perfection. Value\nidentifies features that are valuable to the customer. Value\nstream identifies processes that add value and removing (if\npossible) those that do not.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بأي مبدأ يتميز التصنيع الرشيق؟",
+    "choicesAr": [
+      "تمييز العمليات المضيفة للقيمة عن غير المضيفة للقيمة.",
+      "تعظيم كفاءة الإنتاج بالدفع وفق الطلب المتوقع.",
+      "حصر قرارات التصنيع في الإدارة العليا.",
+      "التركيز حصريًا على خفض التكلفة بتقليل عدد الموظفين."
+    ],
+    "explanationAr": "تتضمن مبادئ التصنيع الرشيق وفق تصنيف المسألة (1) القيمة، (2) تدفق القيمة، (3) التدفق والسحب، (4) التمكين، و(5) الإتقان. تحدد القيمة ما يهم العميل، ويحدد تدفق القيمة العمليات التي تضيف قيمة ويستهدف إزالة غير المضيفة حيثما أمكن."
   },
   {
     "unit": 10,
@@ -388,7 +556,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Just-in-time (JIT) is a pull system. Items are pulled through\nproduction by current demand, not pushed through by\nanticipated demand. Other features of JIT include (1) low\ninventory levels, (2) a decreased number of suppliers, and (3)\nmore frequent deliveries of smaller batches.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتعامل شركة صناعية مع موردين فقط وتطلب المخزون في دفعات صغيرة. ما النظام الأكثر احتمالًا لاستخدامها؟",
+    "choicesAr": [
+      "تخطيط احتياجات المواد.",
+      "الوقت المحدد.",
+      "تخطيط موارد المنشأة.",
+      "إدارة أداء المنشأة."
+    ],
+    "explanationAr": "الوقت المحدد (JIT) نظام سحب وفق الطلب الحالي لا دفع وفق الطلب المتوقع. وتشمل خصائصه (1) انخفاض مستويات المخزون، (2) انخفاض عدد الموردين، و(3) زيادة تكرار توريد الدفعات الصغيرة."
   },
   {
     "unit": 10,
@@ -405,7 +581,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Lot sizes based on immediate needs are a characteristic of a\nJIT system. Lot sizes based on formulas are characteristic of a\ntraditional inventory management system.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مقارنة بين نظام الوقت المحدد (JIT) ونظام إدارة المخزون التقليدي ليست دقيقة؟",
+    "choicesAr": [
+      "زمن التوريد في النظام التقليدي أطول منه في JIT.",
+      "في النظام التقليدي يحتفظ بالمخزون المتوقع لتحقيق منفعة، بينما يستهدف JIT تجنب المخزون غير الضروري.",
+      "يتسامح النظام التقليدي مع بعض الفاقد، بينما يسعى JIT إلى انعدام العيوب.",
+      "في النظام التقليدي تحدد الدفعة وفق الحاجة الفورية، بينما تحدد في JIT وفق المعادلات."
+    ],
+    "explanationAr": "تحديد حجم الدفعة حسب الحاجة الفورية من خصائص JIT، أما استخدام المعادلات لتحديد حجم الدفعة فمن خصائص إدارة المخزون التقليدية."
   },
   {
     "unit": 10,
@@ -422,7 +606,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The core focus of lean manufacturing is to accomplish more\nwith less. Lean manufacturing expands the JIT concept of\nminimizing inventory to other resources.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بأي مما يلي يرتبط نظام المخزون في الوقت المحدد (JIT) ارتباطًا وثيقًا؟",
+    "choicesAr": [
+      "التصنيع الرشيق.",
+      "التحسين المستمر.",
+      "الإدارة على أساس الأنشطة.",
+      "نظرية القيود."
+    ],
+    "explanationAr": "يركز التصنيع الرشيق على تحقيق المزيد بموارد أقل، ويوسع مفهوم JIT الخاص بتقليل المخزون ليشمل الموارد الأخرى."
   },
   {
     "unit": 10,
@@ -439,7 +631,15 @@
     ],
     "answerIndex": 0,
     "explanation": "JIT results in frequent deliveries of smaller lot sizes. Thus,\ncertain internal controls may be eliminated. Sophisticated\ninventory control systems and control personnel are less likely\nto be needed.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "اعتمدت شركة مؤخرًا نظام إدارة المخزون في الوقت المحدد (JIT). ما الأثر التشغيلي الأكثر احتمالًا؟",
+    "choicesAr": [
+      "تكرار التوريد يقلل الحاجة إلى بعض نظم الرقابة التقليدية المعقدة على المخزون.",
+      "صغر الدفعات يستلزم موظفين إضافيين للتحقق من العدد والجودة.",
+      "تحتاج إدارة المشتريات إلى بناء علاقات مع عدد أكبر من الموردين.",
+      "تحتاج الشركة إلى مساحة تخزين أكبر للاحتفاظ بمواد زائدة."
+    ],
+    "explanationAr": "يؤدي JIT إلى توريد دفعات صغيرة بصورة متكررة، وقد يقلل الحاجة إلى بعض إجراءات الرقابة التقليدية المتعلقة بالمخزون والموظفين القائمين عليها. ولا يعني ذلك أن التتبع الإلكتروني والرقابة على الاستلام والجودة غير ضرورية."
   },
   {
     "unit": 10,
@@ -456,7 +656,15 @@
     ],
     "answerIndex": 0,
     "explanation": "MRP is a push system, that is, the demand for raw materials is\ndriven by the forecasted demand for the final product, which\ncan be programmed into the computer. This is in contrast with\njust-in-time manufacturing, which is a pull system, meaning\nitems are pulled through production by current demand, not\npushed through by anticipated demand.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "على خلاف التصنيع في الوقت المحدد، يعد تخطيط احتياجات المواد (MRP) أي نوع من النظم؟",
+    "choicesAr": [
+      "نظام دفع.",
+      "نظام سحب.",
+      "نظام آلي.",
+      "نظام يدوي."
+    ],
+    "explanationAr": "يعد MRP نظام دفع؛ إذ يتحدد الطلب على المواد الخام وفق الطلب المتوقع على المنتج النهائي المسجل في النظام الحاسوبي. أما التصنيع في الوقت المحدد فهو نظام سحب وفق الطلب الحالي وليس المتوقع."
   },
   {
     "unit": 10,
@@ -490,7 +698,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Firms may gain a competitive advantage by outsourcing those\nactivities which can be performed more efficiently, and thus at\nlower cost, by outside providers. Doing this allows the\ncompany to expend its effort on those activities which it\nperforms comparatively well, referred to as its core\ncompetencies.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما أحد أسباب الاستعانة بمصادر خارجية لكي تتمكن المنشأة من التركيز على؟",
+    "choicesAr": [
+      "عملائها.",
+      "مورديها.",
+      "الأنشطة غير المتميزة.",
+      "كفاءاتها الأساسية."
+    ],
+    "explanationAr": "قد تحقق المنشأة ميزة تنافسية بإسناد الأنشطة التي يؤديها مقدمو الخدمات الخارجيون بكفاءة أعلى وتكلفة أقل إليهم، مما يسمح لها بتوجيه جهودها إلى الأنشطة التي تتفوق في أدائها، أي كفاءاتها الأساسية."
   },
   {
     "unit": 10,
@@ -507,7 +723,15 @@
     ],
     "answerIndex": 0,
     "explanation": "ERP is a software platform designed to integrate enterprise-\nwide information systems by creating one database linked to\nall of an organization’s applications and subsystems to share\ndata and coordinate their activities. ERP is used to plan and\nmaintain records of resources including finances, labor\ncapabilities and capacity, materials, and property.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما الذي تدمجه نظم تخطيط موارد المنشأة (ERP)؟",
+    "choicesAr": [
+      "المعلومات المالية وغير المالية الناتجة عن عمليات أعمال المنشأة.",
+      "المعلومات المالية بين المنشآت المختلفة فقط.",
+      "النظم المالية ونظم الموارد البشرية فقط.",
+      "المعلومات المالية وغير المالية الناتجة عن العمليات المحاسبية فقط."
+    ],
+    "explanationAr": "ERP منصة برمجية تدمج نظم المعلومات على مستوى المنشأة عبر قاعدة بيانات مشتركة مرتبطة بتطبيقاتها وأنظمتها الفرعية لتبادل البيانات وتنسيق الأنشطة، وتستخدم لتخطيط الموارد وتسجيلها بما فيها المالية وقدرات العمالة والمواد والممتلكات."
   },
   {
     "unit": 10,
@@ -524,7 +748,15 @@
     ],
     "answerIndex": 3,
     "explanation": "An advantage of an ERP system is the elimination of data\nredundancy through the use of a central database. In\nprinciple, information about an item of data is stored once, and\nall functions have access to it. Thus, when the item (such as a\nprice) is updated, the change is effectively made for all\nfunctions. The result is reliability (data integrity).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما إحدى المزايا الأساسية لنظام تخطيط موارد المنشأة (ERP)؟",
+    "choicesAr": [
+      "اعتماد البرامج على البيانات.",
+      "تكرار البيانات.",
+      "تحديث البيانات بصورة منفصلة لكل وظيفة.",
+      "مركزية البيانات."
+    ],
+    "explanationAr": "يحد نظام ERP من تكرار البيانات باستخدام قاعدة بيانات مركزية؛ فمن حيث المبدأ تخزن المعلومة مرة واحدة وتتاح للوظائف المعنية. وعند تحديثها مثل السعر ينعكس التغيير على جميع الوظائف، مما يدعم سلامة البيانات واتساقها."
   },
   {
     "unit": 10,
@@ -541,7 +773,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Among the benefits of MRP are reduced idle time, lower setup\ncosts, lower inventory carrying costs, and increased flexibility\nin responding to market changes.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما إحدى النتائج التي قد يحققها تخطيط احتياجات المواد (MRP)؟",
+    "choicesAr": [
+      "فترات توقف أطول.",
+      "مرونة أقل في الاستجابة للعملاء.",
+      "زيادة تكاليف الاحتفاظ بالمخزون.",
+      "انخفاض تكاليف إعداد الآلات."
+    ],
+    "explanationAr": "تشمل فوائد MRP المحتملة تقليل فترات التوقف وتكاليف الإعداد وتكاليف الاحتفاظ بالمخزون، وزيادة المرونة في الاستجابة لتغيرات السوق."
   },
   {
     "unit": 10,
@@ -558,7 +798,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The yearly/quarterly/monthly numbers and styles of finished\ngoods called for in the demand forecasts included in the\noperational plans must be turned into specific dates for\ncompletion and availability for shipment to the customer. This\nis the task of the master production schedule (MPS).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما المفهوم التصنيعي الذي يربط توقعات الطلب بتواريخ محددة لإتمام الإنتاج؟",
+    "choicesAr": [
+      "الجدول الرئيسي للإنتاج.",
+      "تخطيط احتياجات المواد.",
+      "تخطيط موارد التصنيع.",
+      "قائمة مكونات المنتج."
+    ],
+    "explanationAr": "يجب تحويل كميات وأنواع المنتجات التامة المطلوبة سنويًا أو ربع سنويًا أو شهريًا في توقعات الطلب بالخطة التشغيلية إلى تواريخ محددة للإتمام والإتاحة للشحن إلى العميل. وهذه وظيفة الجدول الرئيسي للإنتاج (MPS)."
   },
   {
     "unit": 10,
@@ -575,7 +823,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Outsourcing results in a loss of control over the outsourced\nfunction.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي ليس فائدة معتادة للاستعانة بمصادر خارجية؟",
+    "choicesAr": [
+      "انخفاض التكاليف.",
+      "الوصول إلى التكنولوجيا.",
+      "تجنب مخاطر التقادم.",
+      "زيادة السيطرة على وظيفة ضرورية."
+    ],
+    "explanationAr": "قد تؤدي الاستعانة بمصادر خارجية إلى انخفاض السيطرة المباشرة على الوظيفة المسندة إلى مقدم الخدمة."
   },
   {
     "unit": 10,
@@ -592,7 +848,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The three basic goals of MRP are the right part in the right\nquantity at the right time.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي ليس هدفًا لتخطيط احتياجات المواد؟",
+    "choicesAr": [
+      "المكون المناسب.",
+      "الكمية المناسبة.",
+      "العميل المناسب.",
+      "الوقت المناسب."
+    ],
+    "explanationAr": "الأهداف الأساسية لتخطيط احتياجات المواد هي توفير المكون المناسب بالكمية المناسبة وفي الوقت المناسب."
   },
   {
     "unit": 10,
@@ -626,7 +890,15 @@
     ],
     "answerIndex": 1,
     "explanation": "To produce 100 wreaths, 300 feet of pine ribbon are needed\n(3 feet per wreath). Beginning inventory already includes\n15 feet, so 285 feet need to be produced (300 – 15). To\nproduce 285 feet of pine ribbon, 1,140 TRX units are needed\n(4 units of TRX × 285 feet of pine ribbon). Beginning inventory\nalready includes 80 units, so 1,060 units of TRX need to be\npurchased (1,140 – 80).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تحتاج منشأة إلى إنتاج 100 إكليل في نوفمبر لتلبية طلب العملاء، وتبلغ طاقتها الإنتاجية 120 إكليلًا. وفيما يلي قائمة المكونات:\nالمادة | الكمية | مخزون 1 نوفمبر\nالإطار | 1 | 100\nشريط الصنوبر | 3 أقدام | 15 قدمًا\nأكواز الصنوبر | 6 | 24\nلإنتاج 1 قدم من شريط الصنوبر تحتاج المنشأة إلى 4 وحدات من TRX و2 وحدة من RBX. وفي 1 نوفمبر لديها 80 وحدة من TRX و110 وحدات من RBX. باستخدام تخطيط احتياجات المواد، كم وحدة من TRX ينبغي شراؤها في نوفمبر لإتمام الطلبات؟",
+    "choicesAr": [
+      "1,020",
+      "1,060",
+      "1,200",
+      "1,360"
+    ],
+    "explanationAr": "لإنتاج 100 إكليل يلزم 300 قدم من شريط الصنوبر (3 أقدام لكل إكليل). ويتوافر في أول المدة 15 قدمًا، لذا يلزم إنتاج 285 قدمًا (300 − 15). ولإنتاج 285 قدمًا يلزم 1,140 وحدة من TRX (4 وحدات × 285 قدمًا). ويتوافر في أول المدة 80 وحدة؛ لذا يجب شراء 1,060 وحدة (1,140 − 80)."
   },
   {
     "unit": 10,
@@ -643,7 +915,15 @@
     ],
     "answerIndex": 3,
     "explanation": "An enterprise resource planning system allows a company to\ndetermine what hiring decisions might need to be made or\nwhether a company should invest in new capital assets. It also\nimproves productivity, increases efficiencies, decreases costs,\nand streamlines processes.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما إحدى مزايا نظام تخطيط موارد المنشأة؟",
+    "choicesAr": [
+      "يمكن عادة تركيبه لدى منشآت من جميع الأحجام.",
+      "يمكن تخصيصه بسهولة لتلبية احتياجات المنشأة الفريدة.",
+      "شموليته تقلل مقاومة التغيير.",
+      "تطبيقه يحسن عمليات الأعمال."
+    ],
+    "explanationAr": "يساعد ERP المنشأة على تحديد احتياجات التوظيف والاستثمار في الأصول الرأسمالية. وقد يؤدي تطبيقه الناجح إلى تحسين الإنتاجية والكفاءة وخفض التكاليف وتبسيط العمليات."
   },
   {
     "unit": 10,
@@ -660,7 +940,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Enterprise resource planning (ERP) connects all functional\nfinancial and nonfinancial subsystems (e.g., human resources,\nthe financial accounting system, production, marketing,\ndistribution, purchasing, receiving, order processing, shipping,\netc.). ERP also connects the organization with its suppliers\nand customers. Thus, ERP facilitates demand analysis and\nmaterials requirements planning.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يعد خاصية لنظام تخطيط موارد المنشأة؟",
+    "choicesAr": [
+      "يتيح للشركات الاستجابة السريعة لتغيرات السوق.",
+      "يتيح تكامل إدارة سلسلة الإمداد مع النظام الفرعي للمحاسبة المالية.",
+      "ينشئ قاعدة بيانات لامركزية تجمع البيانات وتغذي التطبيقات.",
+      "يقدم للعملاء منتجات وخدمات متفوقة."
+    ],
+    "explanationAr": "يربط ERP الأنظمة الفرعية المالية وغير المالية مثل الموارد البشرية والمحاسبة والإنتاج والتسويق والتوزيع والمشتريات والاستلام ومعالجة الطلبات والشحن. كما يتيح الربط بالموردين والعملاء، ويسهل تحليل الطلب وتخطيط احتياجات المواد."
   },
   {
     "unit": 10,
@@ -677,7 +965,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Materials requirements planning (MRP) is a system that\ntranslates a production schedule into requirements for each\ncomponent needed to meet the schedule. It is usually\nimplemented in the form of a computer-based information\nsystem designed to plan and control raw materials used in\nproduction. It assumes that forecasted demand is reasonably\naccurate and that suppliers can deliver based upon this\naccurate schedule. MRP is a centralized push-through\nsystem; output based on forecasted demand is pushed\nthrough to the next department or to inventory.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم شركة نظام تخطيط يركز أولًا على كمية وتوقيت الطلب على المنتجات التامة ثم يحدد الطلب المشتق على المواد الخام والمكونات والتجميعات الفرعية في مراحل الإنتاج السابقة. ما هذا النظام؟",
+    "choicesAr": [
+      "نموذج كمية الطلب الاقتصادية.",
+      "تخطيط احتياجات المواد.",
+      "البرمجة الخطية.",
+      "الشراء في الوقت المحدد."
+    ],
+    "explanationAr": "يحول تخطيط احتياجات المواد (MRP) جدول الإنتاج إلى احتياجات من كل مكون لتنفيذ الجدول. ويطبق عادة من خلال نظام معلومات حاسوبي لتخطيط المواد الخام والرقابة عليها، بافتراض دقة معقولة للتوقعات وقدرة الموردين على الالتزام بالجدول. وهو نظام دفع مركزي ينقل الإنتاج وفق الطلب المتوقع إلى القسم التالي أو المخزون."
   },
   {
     "unit": 10,
@@ -694,7 +990,15 @@
     ],
     "answerIndex": 2,
     "explanation": "MRP is a push system. The demand for materials is driven by\nforecasted demand programmed into the IT system. In effect,\nschedules are created of when inventory items are needed in\nthe production departments.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يميز نظام تخطيط احتياجات المواد (MRP)؟",
+    "choicesAr": [
+      "تتحرك المواد عبر الإنتاج عندما يحفز الطلب الحالي الحاجة إلى وحدات جديدة.",
+      "يسلم الموردون المواد عندما يحفز طلب العملاء أمر شراء.",
+      "تتحرك المواد وفق جدول حاسوبي يتوافق مع الطلب المتوقع.",
+      "يركز الموردون على التوريد المتكرر بدفعات صغيرة مع استهداف انعدام العيوب."
+    ],
+    "explanationAr": "MRP نظام دفع؛ إذ يتحدد الطلب على المواد وفق الطلب المتوقع المبرمج في نظام المعلومات، وتوضع جداول تحدد موعد الحاجة إلى بنود المخزون في أقسام الإنتاج."
   },
   {
     "unit": 10,
@@ -711,7 +1015,15 @@
     ],
     "answerIndex": 1,
     "explanation": "A traditional ERP system shares data with, and coordinates,\nactivities of subsystems. It creates one database linked to all\napplications. Accordingly, software connects financial and\nnonfinancial systems (accounting, human resources,\nproduction, marketing, distribution, purchasing, receiving,\netc.). It also connects the company to suppliers and\ncustomers.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما التعريف الأدق لنظام تخطيط موارد المنشأة التقليدي (ERP)؟",
+    "choicesAr": [
+      "نظام مغلق الحلقة يدمج جميع جوانب التصنيع مثل الإنتاج والمبيعات والمخزون والجداول والتدفقات النقدية.",
+      "منصة برمجية تدمج النظم الفرعية الوظيفية المالية وغير المالية وتربط الشركة بمورديها وعملائها.",
+      "نظام برمجي يساعد على التخطيط والتنبؤ وإعداد الموازنات ومراقبة الأداء والتقرير عنه.",
+      "عملية لإدارة علاقات العملاء باستخدام تحليل البيانات وتمكين الموظفين."
+    ],
+    "explanationAr": "يشارك ERP البيانات وينسق أنشطة النظم الفرعية باستخدام قاعدة بيانات مشتركة مرتبطة بالتطبيقات، فيربط نظم المحاسبة والموارد البشرية والإنتاج والتسويق والتوزيع والمشتريات والاستلام وغيرها، كما يربط الشركة بمورديها وعملائها."
   },
   {
     "unit": 10,
@@ -728,7 +1040,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Among the benefits of a current-generation ERP system\ninclude (1) lower inventory costs, (2) greater productivity, (3)\nenhanced decision making, (4) elimination of data\nredundancy, (5) integration of global operations, (6) more\neffective supply chain management, and (7) increased\ncustomer satisfaction. Disadvantages include the challenge of\nimplementing a complex system that may take years and cost\nmillions of dollars.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي لا يعد فائدة لنظام تخطيط موارد المنشأة (ERP)؟",
+    "choicesAr": [
+      "تحسين اتخاذ القرارات.",
+      "إزالة تكرار البيانات.",
+      "تكامل العمليات العالمية.",
+      "سهولة التطبيق."
+    ],
+    "explanationAr": "تشمل فوائد ERP الحديث المحتملة (1) انخفاض تكاليف المخزون، (2) زيادة الإنتاجية، (3) تحسين القرارات، (4) إزالة تكرار البيانات، (5) تكامل العمليات العالمية، (6) زيادة فعالية إدارة سلسلة الإمداد، و(7) زيادة رضا العملاء. ومن عيوبه صعوبة تنفيذ نظام معقد قد يستغرق سنوات ويتكلف مبالغ كبيرة."
   },
   {
     "unit": 10,
@@ -745,7 +1065,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Outsourcing is management or daily execution of an entire\nbusiness function by a third-party service provider. Benefits of\noutsourcing include (1) reliable service, (2) reduced costs, (3)\navoidance of the risk of obsolescence, and (4) access to\ntechnology. Limitations include dependence on an outside\nparty and loss of control over a necessary function.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "جميع ما يلي من فوائد الاستعانة بمصادر خارجية باستثناء:",
+    "choicesAr": [
+      "انخفاض التكاليف.",
+      "زيادة السيطرة.",
+      "خدمة موثوقة.",
+      "الوصول إلى التكنولوجيا."
+    ],
+    "explanationAr": "الاستعانة بمصادر خارجية هي إسناد إدارة وظيفة أو تنفيذها اليومي إلى مقدم خدمة خارجي. وتشمل فوائدها المحتملة (1) موثوقية الخدمة، (2) خفض التكلفة، (3) تجنب مخاطر التقادم، و(4) الوصول إلى التكنولوجيا. ومن قيودها الاعتماد على طرف خارجي وانخفاض السيطرة المباشرة على الوظيفة."
   },
   {
     "unit": 10,
@@ -762,7 +1090,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Outsourcing is the management of a business function by a\nthird party that enables a company to focus on its core\nbusiness rather than be concerned about marginal activities.\nBack-office functions, including payroll, typically are\noutsourced. Companies do not need full-time staff to manage\na process that is only done weekly, biweekly, or monthly.\nHiring an outside firm that specializes in payroll processing is\nmore efficient. However, core competencies should not be\noutsourced.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي وظيفة أعمال تستعان فيها عادة بمصادر خارجية؟",
+    "choicesAr": [
+      "خدمة العملاء.",
+      "مراقبة الجودة.",
+      "التخطيط الاستراتيجي.",
+      "الرواتب."
+    ],
+    "explanationAr": "يتيح إسناد الوظائف لطرف خارجي التركيز على الأنشطة الأساسية بدلًا من الأنشطة المساندة. ومن الوظائف التي قد تسند خارجيًا معالجة الرواتب؛ فقد يكون مقدم الخدمة المتخصص أكثر كفاءة في تنفيذها دوريًا أسبوعيًا أو كل أسبوعين أو شهريًا. أما الكفاءات الأساسية فينبغي حمايتها وعدم إسنادها دون تقييم المخاطر."
   },
   {
     "unit": 10,
@@ -779,7 +1115,15 @@
     ],
     "answerIndex": 2,
     "explanation": "An ERP system is software that connects financial and\nnonfinancial systems (accounting, human resources,\nproduction, marketing, distribution, purchasing, receiving,\netc.). It also connects the company with suppliers and\ncustomers. Benefits of an ERP system include (1) lower\ninventory costs, (2) higher productivity, (3) enhanced decision\nmaking, (4) elimination of data redundancy, (5) integration of\nglobal operations, (6) more effective supply chain\nmanagement, and (7) increased customer satisfaction.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يشعر المدير المالي بالقلق بشأن تنسيق نظم المعلومات وجودة البيانات. توجد نظم منفصلة للمحاسبة والموارد البشرية وعلاقات العملاء والمشتريات وإدارة المخزون، مما أدى إلى ضعف الاتصال بين الأقسام وعدم كفاءة سلسلة الإمداد وتكرار البيانات وارتفاع نسبة العملاء غير الراضين. ما النظام الأنسب لمعالجة هذه المشكلات؟",
+    "choicesAr": [
+      "الوقت المحدد (JIT).",
+      "تخطيط احتياجات المواد (MRP).",
+      "تخطيط موارد المنشأة (ERP).",
+      "إدارة أداء المنشأة (EPM)."
+    ],
+    "explanationAr": "يربط ERP النظم المالية وغير المالية مثل المحاسبة والموارد البشرية والإنتاج والتسويق والتوزيع والمشتريات والاستلام، كما يربط المنشأة بالموردين والعملاء. وتشمل فوائده المحتملة (1) خفض تكاليف المخزون، (2) رفع الإنتاجية، (3) تحسين القرارات، (4) إزالة تكرار البيانات، (5) تكامل العمليات العالمية، (6) تحسين إدارة سلسلة الإمداد، و(7) زيادة رضا العملاء."
   },
   {
     "unit": 10,
@@ -796,7 +1140,15 @@
     ],
     "answerIndex": 3,
     "explanation": "An ERP system is software that connects financial and\nnonfinancial systems. Benefits of an ERP system include (1)\nlower inventory costs, (2) higher productivity, (3) enhanced\ndecision making, and (4) elimination of data redundancy\nresulting in centralization of data and protection of data\nintegrity. Disadvantages include complexity, cost, and\nemployee resistance.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "جميع ما يلي من تحديات تطبيق نظام تخطيط موارد المنشأة (ERP) باستثناء:",
+    "choicesAr": [
+      "التعقيد.",
+      "التكلفة.",
+      "مقاومة الموظفين.",
+      "سلامة البيانات."
+    ],
+    "explanationAr": "ERP برنامج يربط النظم المالية وغير المالية. وتشمل فوائده المحتملة (1) خفض تكاليف المخزون، (2) رفع الإنتاجية، (3) تحسين القرارات، و(4) إزالة تكرار البيانات بما يدعم مركزيتها وسلامتها. أما التعقيد والتكلفة ومقاومة الموظفين فمن تحديات التطبيق."
   },
   {
     "unit": 10,
@@ -813,7 +1165,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Practical capacity is the maximum level at which output is\nproduced efficiently, with an allowance for unavoidable\ninterruptions, for example, for holidays and scheduled\nmaintenance. Because this level will be higher than expected\ncapacity, its use will ordinarily result in underapplied fixed\nfactory overhead.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما اسم الحد الأعلى للإنتاج الكفء للمنشأة في ظل مواردها الحالية؟",
+    "choicesAr": [
+      "الطاقة الفائضة.",
+      "طاقة زمن الدورة.",
+      "الطاقة العملية.",
+      "الطاقة النظرية."
+    ],
+    "explanationAr": "الطاقة العملية هي أقصى مستوى إنتاج كفء بعد مراعاة التوقفات التي لا يمكن تجنبها، مثل العطلات والصيانة المجدولة. ولأنها قد تتجاوز النشاط المتوقع، فقد يؤدي استخدامها كأساس للتحميل إلى نقص تحميل التكاليف الصناعية غير المباشرة الثابتة."
   },
   {
     "unit": 10,
@@ -830,7 +1190,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Using practical capacity results in fixed overhead being higher\nper unit because the total costs are allocated over fewer units.\nThus, theoretical capacity will result in a lower inventory value\nper unit.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تبلغ الطاقة العملية لشركة 80% من طاقتها النظرية، وتقفل أي فروق تحميل في تكلفة المبيعات نهاية السنة. إذا استخدمت الطاقة النظرية لحساب معدل التكاليف الصناعية الثابتة المقدرة بدلًا من الطاقة العملية، فما الأثر المتوقع؟",
+    "choicesAr": [
+      "ارتفاع إجمالي التكاليف الثابتة المقدرة.",
+      "انخفاض سعر البيع.",
+      "ارتفاع الدخل.",
+      "انخفاض الأصول."
+    ],
+    "explanationAr": "يؤدي استخدام الطاقة العملية إلى ارتفاع نصيب الوحدة من التكاليف الثابتة لأن الإجمالي يوزع على وحدات أقل. لذا ينتج عن استخدام الطاقة النظرية انخفاض قيمة المخزون لكل وحدة، وبالتالي انخفاض الأصول إذا كان هناك مخزون آخر المدة، مع مراعاة قواعد التقارير الخارجية."
   },
   {
     "unit": 10,
@@ -847,7 +1215,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Normal capacity is defined as the average level of output that\ncan be completed over a period of time.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مصطلح يصف متوسط مستوى الإنتاج الممكن إنجازه على مدى فترة زمنية؟",
+    "choicesAr": [
+      "الطاقة العادية.",
+      "الطاقة العملية.",
+      "الطاقة النظرية.",
+      "الطاقة المثالية."
+    ],
+    "explanationAr": "الطاقة العادية هي متوسط مستوى الإنتاج الممكن تحقيقه خلال فترة زمنية، مع مراعاة الظروف المعتادة."
   },
   {
     "unit": 10,
@@ -881,7 +1257,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Practical capacity is the highest level of output that can\nreasonably be attained, taking into account both planned and\nunplanned downtime (e.g., set-up costs, maintenance,\nbreakdowns, etc.) and expected waste.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يدرس مدير إنتاج في مصنع مستويات مختلفة من الطاقة عند إعداد موازنة الإنتاج السنوية. ويعتمد الموازنة على أقصى إنتاج يمكن تحقيقه بصورة معقولة مع مراعاة التوقفات المتوقعة وغير المتوقعة والفاقد المتوقع. ما مستوى الطاقة المستخدم؟",
+    "choicesAr": [
+      "الطاقة العادية.",
+      "الطاقة النظرية.",
+      "الطاقة العملية.",
+      "الطاقة المثالية."
+    ],
+    "explanationAr": "الطاقة العملية أعلى مستوى إنتاج يمكن تحقيقه بصورة معقولة بعد مراعاة التوقفات المخططة وغير المخططة، مثل إعداد الآلات والصيانة والأعطال، والفاقد المتوقع."
   },
   {
     "unit": 10,
@@ -898,7 +1282,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Budgeting and planning based on theoretical capacity is not\nrecommended because it is not reasonable to assume zero\ndowntime (i.e., no maintenance) and zero waste.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يستعد مدير إنتاج لإعداد موازنة الإنتاج للسنة المالية التالية. أي مستويات الطاقة أقل ملاءمة لإعداد موازنة فعالة؟",
+    "choicesAr": [
+      "متوسط الطاقة طويل الأجل.",
+      "الطاقة العادية.",
+      "الطاقة العملية.",
+      "الطاقة النظرية."
+    ],
+    "explanationAr": "لا يوصى عادة بإعداد الموازنة التشغيلية على أساس الطاقة النظرية؛ إذ لا يعد افتراض انعدام التوقفات مثل الصيانة وانعدام الفاقد افتراضًا واقعيًا."
   },
   {
     "unit": 10,
@@ -915,7 +1307,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Excess capacity has a cost. Having excess capacity means\nthat a company will either have to charge higher prices for its\nproducts or report lower income on its financial statements.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي عبارة عن إدارة الطاقة الإنتاجية غير صحيحة؟",
+    "choicesAr": [
+      "الطاقة الفائضة لا تترتب عليها تكلفة فرصة بديلة.",
+      "قد يترتب على الإنتاج بكامل الطاقة تكاليف فرصة بديلة إضافية.",
+      "تخطيط الطاقة جزء من عملية إعداد الموازنة الرأسمالية.",
+      "تخطيط الطاقة عنصر من التخطيط الاستراتيجي."
+    ],
+    "explanationAr": "للطاقة الفائضة تكلفة؛ فقد تتحمل الشركة موارد غير مستغلة وتضطر إلى قبول دخل أقل أو محاولة استرداد التكاليف عبر التسعير. وقد تكون للأموال والموارد المعطلة استخدامات بديلة، مع أن الاحتفاظ ببعض الطاقة الاحتياطية قد يكون مبررًا."
   },
   {
     "unit": 10,
@@ -932,7 +1332,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Theoretical capacity is the optimal level of output that can be\ncompleted with zero downtime (e.g., no repairs, maintenance,\netc.) and zero waste.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لفهم إمكانات معدات الإنتاج، تعد مديرة إنتاج موازنة على افتراض تشغيل الآلات طوال الوقت دون حاجة إلى صيانة أو توقف. أي مستوى من الطاقة يمثل أساس الموازنة؟",
+    "choicesAr": [
+      "الطاقة العادية.",
+      "الطاقة العملية.",
+      "الطاقة النظرية.",
+      "متوسط الطاقة طويل الأجل."
+    ],
+    "explanationAr": "الطاقة النظرية هي أقصى إنتاج مثالي ممكن دون توقفات مثل الإصلاح والصيانة ودون فاقد."
   },
   {
     "unit": 10,
@@ -966,7 +1374,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Excess capacity has a cost. The entity must either charge a\nhigher price for products to recoup the fixed costs or report\nlower net income.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "كيف يمكن أن تؤثر إدارة الطاقة الإنتاجية في تسعير المنتجات؟",
+    "choicesAr": [
+      "إنشاء طاقة فائضة يخفض تكلفة الفرصة البديلة ويؤدي إلى أسعار أقل.",
+      "قد تحتاج شركة ذات طاقة فائضة إلى رفع سعر المنتج أو قبول صافي دخل أقل.",
+      "الاستثمارات الرأسمالية الجديدة تزيد الطاقة وتخفض التكاليف الثابتة وتزيد الكفاءة وتخفض السعر.",
+      "لا يؤثر تخطيط الطاقة في التسعير لأن السعر ينبغي أن يعتمد على الطلب دون اعتبار للتكاليف."
+    ],
+    "explanationAr": "تترتب على الطاقة الفائضة تكلفة. ومع ثبات الظروف قد تحاول المنشأة رفع السعر لاسترداد التكاليف الثابتة أو تقبل صافي دخل أقل. وعمليًا تتوقف إمكانية رفع السعر على السوق، كما يمكن إعادة توظيف الطاقة أو خفضها."
   },
   {
     "unit": 10,
@@ -983,7 +1399,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Capacity management strives to ensure a company\nmaximizes its production output by having the appropriate\nlevel of resources. It is an element of strategic planning\nclosely related to capital budgeting because it is influenced by\ncapital investment decisions. Maximizing value creation\nbegins with understanding the nature and capabilities of the\nentity’s resources, e.g., whether capacity is excessive or\nsufficient.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي عبارة عن إدارة الطاقة الإنتاجية صحيحة؟",
+    "choicesAr": [
+      "لا تكلفة للطاقة الفائضة لأنها أصل في الميزانية.",
+      "يوصى بإعداد الموازنة على أساس الطاقة النظرية لأنها تضع أهدافًا طموحة.",
+      "إدارة الطاقة عنصر من التخطيط الاستراتيجي وترتبط بالموازنة الرأسمالية.",
+      "ينبغي دائمًا التخلص من الطاقة الفائضة بغض النظر عن تغيرات السوق."
+    ],
+    "explanationAr": "تهدف إدارة الطاقة إلى مواءمة الموارد مع الإنتاج المطلوب، وهي عنصر من التخطيط الاستراتيجي يرتبط بالموازنة الرأسمالية لتأثرها بقرارات الاستثمار. ويبدأ تعظيم القيمة بفهم طبيعة الموارد وقدراتها وتحديد ما إذا كانت الطاقة زائدة أم كافية."
   },
   {
     "unit": 10,
@@ -1000,6 +1424,14 @@
     ],
     "answerIndex": 1,
     "explanation": "Capacity management is an element of strategic planning\nclosely related to capital budgeting because it affects\ndecisions on capital investment. Excess or lack of capacity\nresults in costs. When planning capacity investments, the\nestimated costs of unused capacity (e.g., capabilities that may\nbe physical, human, technological, or financial) are balanced\nagainst the estimated opportunity costs of lack of capacity\n(e.g., loss of profits and customer loyalty).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ضمن التخطيط الاستراتيجي السنوي، يعمل الفريق المالي مع الإدارة العليا لإعداد موازنة رأسمالية لمدة 5 سنوات. وأعد الفريق تقييمًا للطاقة لتحديد الاحتياجات الرأسمالية لتحقيق الأهداف. يوضح المدير المالي أن زيادة الطاقة أو نقصها يؤديان إلى تكاليف يجب تقديرها. أي عبارة تصف هذا المفهوم؟",
+    "choicesAr": [
+      "يجب تقليل التكاليف الثابتة وتعظيم التكاليف المتغيرة.",
+      "يجب مقارنة تكلفة الطاقة غير المستغلة بتكلفة الفرصة البديلة لنقص الطاقة.",
+      "ينبغي تحليل الحساسية عند مستويات مختلفة من الطاقة وطلب العملاء.",
+      "ينبغي التحفظ في الاستثمار الرأسمالي لأن نقص الطاقة أقل تكلفة من زيادتها."
+    ],
+    "explanationAr": "إدارة الطاقة عنصر من التخطيط الاستراتيجي يرتبط بالموازنة الرأسمالية لتأثيره في قرارات الاستثمار. ولكل من الطاقة الزائدة والناقصة تكلفة؛ لذا توازن المنشأة عند التخطيط بين تكلفة الموارد المادية أو البشرية أو التقنية أو المالية غير المستغلة وتكلفة الفرصة البديلة لنقص الطاقة، مثل فقد الأرباح وولاء العملاء."
   }
 ]
