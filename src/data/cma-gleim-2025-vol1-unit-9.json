@@ -1027,7 +1027,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The most important factor in budgeting manufacturing\noverhead is production volume. Many overhead items have\nvariable costs, and those that are fixed with a relevant range\nof output may increase if production exceeds that range. The\nother essential consideration is management’s judgment with\nrespect to the nature and amount of costs to be incurred and\nexpectations for production volume. Because overhead is\napplied based on predetermined rates, accurate judgment is\nimportant.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما العاملان الأنسب لإعداد موازنة التكاليف الصناعية غير المباشرة؟",
+    "choicesAr": [
+      "ساعات الآلات وحجم الإنتاج.",
+      "الحكم الإداري وهامش المساهمة.",
+      "الحكم الإداري وحجم الإنتاج.",
+      "الحكم الإداري وقيمة المبيعات."
+    ],
+    "explanationAr": "حجم الإنتاج من أهم عوامل إعداد الموازنة؛ فكثير من التكاليف الصناعية غير المباشرة متغير، وقد ترتفع التكاليف الثابتة عند تجاوز المدى الملائم للنشاط. كما يلزم الحكم الإداري لتقدير طبيعة التكاليف ومبالغها وحجم الإنتاج المتوقع، لأن التحميل يتم باستخدام معدلات محددة مسبقًا."
   },
   {
     "unit": 9,
@@ -1044,7 +1052,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Practical capacity is based on realistic, attainable levels of\nproduction and input efficiency and is the most appropriate\ndenominator level to use in selecting an overhead application\nrate.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عند تحديد معدلات تحميل التكاليف الصناعية غير المباشرة للسنة التالية، ترغب شركة في التركيز على الطاقة الإنتاجية بدلًا من الطلب على منتجاتها. ما مستوى النشاط الأنسب في مقام المعدل؟",
+    "choicesAr": [
+      "الطاقة العملية.",
+      "الطاقة القصوى.",
+      "الطاقة العادية.",
+      "طاقة الموازنة الشاملة (النشاط السنوي المتوقع)."
+    ],
+    "explanationAr": "تستند الطاقة العملية إلى مستويات إنتاج وكفاءة قابلة للتحقيق في ظروف العمل الواقعية، بعد مراعاة التوقفات الطبيعية. ولذلك تناسب هدف تحديد معدل يستند إلى الطاقة المتاحة بدلًا من الطلب المتوقع. وقد تختلف قاعدة الطاقة المطلوبة لأغراض تقييم المخزون في التقارير الخارجية."
   },
   {
     "unit": 9,
@@ -1061,7 +1077,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Overapplied or underapplied overhead should be disposed of\nat the end of an accounting period by transferring the balance\neither to cost of goods sold (if the amount is not material) or to\ncost of goods sold, finished goods inventory, and work-in-\nprocess inventory. Theoretically, the allocation is preferred,\nbut, because the amount is usually immaterial, the entire\nbalance is often transferred directly to cost of goods sold.\nThus, the entry depends upon the significance of the amount.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "على ماذا يتوقف اختيار طريقة تسوية التكاليف الصناعية غير المباشرة المحملة بالزيادة أو بالنقص؟",
+    "choicesAr": [
+      "تسويتها مع تكلفة المبيعات فقط.",
+      "تسويتها مع مخزون الإنتاج التام فقط.",
+      "توزيعها على تكلفة المبيعات ومخزون الإنتاج التام فقط.",
+      "الأهمية النسبية للمبلغ."
+    ],
+    "explanationAr": "في نهاية الفترة يسوى فرق التحميل عادة مع تكلفة المبيعات إذا كان غير جوهري. وإذا كان جوهريًا، يوزع على تكلفة المبيعات ومخزون الإنتاج التام وتحت التشغيل وفق أساس مناسب يعكس التكاليف المحملة فيها. ويظل ذلك خاضعًا لمعالجة أسباب الفرق، مثل تكاليف الطاقة غير المستغلة غير القابلة للرسملة."
   },
   {
     "unit": 9,
@@ -1078,7 +1102,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Allocating overhead on the basis of the number of units\nproduced is usually not appropriate. Costs should be allocated\non the basis of some plausible relationship between the cost\nobject and the incurrence of the cost, preferably cause and\neffect. The fixed portion of overhead costs is incurred\nregardless of the level of production. When multiple products\nare involved, the number of units of production may bear no\nrelationship to the incurrence of the allocated cost. If overhead\nis correlated with machine hours but different products require\ndifferent quantities of that input, the result may be an illogical\nallocation. However, if a firm manufactures only one product,\nthis allocation method may be acceptable because all costs\nare to be charged to the single product.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "متى تكون وحدات الإنتاج أساسًا مناسبًا لتحميل التكاليف الصناعية غير المباشرة؟",
+    "choicesAr": [
+      "عند تصنيع منتجات متعددة شديدة الاختلاف.",
+      "عندما تكون تكاليف العمل المباشر منخفضة.",
+      "عندما تكون تكاليف المواد المباشرة كبيرة مقارنة بالعمل المباشر.",
+      "عند تصنيع منتج واحد فقط."
+    ],
+    "explanationAr": "لا يناسب عدد الوحدات أساس التحميل عادة عندما تختلف المنتجات في استهلاك الموارد. وينبغي اختيار أساس له علاقة معقولة بالتكلفة، ويفضل علاقة السبب والنتيجة. فالجزء الثابت من التكاليف لا يتغير ضمن المدى الملائم، وقد تتطلب المنتجات المختلفة ساعات آلات متفاوتة، مما يجعل التوزيع على أساس الوحدات غير منطقي. أما عند تصنيع منتج متجانس واحد فيمكن قبول هذا الأساس لأن جميع التكاليف تخصه."
   },
   {
     "unit": 9,
@@ -1095,7 +1127,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Overhead is usually assigned to products based on a\npredetermined rate or rates. The activity base for overhead\nallocation should have a high degree of correlation with the\nincurrence of overhead. Given only one cost driver, one\noverhead application rate is sufficient. If products differ in the\nresources consumed in individual departments, multiple rates\nare preferable.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "متى تستخدم عادة معدلات تحميل خاصة بكل قسم بدلًا من معدل موحد للمنشأة؟",
+    "choicesAr": [
+      "عندما ترغب الشركة في اعتماد نظام التكاليف المعيارية.",
+      "عندما تكون كل عمليات التصنيع آلية بدرجة كبيرة.",
+      "عندما تكون التكاليف الصناعية غير المباشرة أكبر عنصر في تكلفة المنتج.",
+      "عندما تختلف المنتجات في الموارد التي تستهلكها من الأقسام المختلفة."
+    ],
+    "explanationAr": "تحمل التكاليف الصناعية غير المباشرة عادة باستخدام معدل أو عدة معدلات محددة مسبقًا. وينبغي أن يرتبط أساس النشاط بتكبد تلك التكاليف بدرجة كبيرة. وقد يكفي معدل واحد إذا وجد مسبب متجانس للتكلفة، بينما تفضل معدلات متعددة إذا تفاوت استهلاك المنتجات لموارد الأقسام."
   },
   {
     "unit": 9,
@@ -1112,7 +1152,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The company applies overhead to products on the basis of\ndirect labor cost. The rate is 1.4 ($448,000 budgeted OH ÷\n$320,000 budgeted DL cost). Thus, $483,000 ($345,000\nactual DL cost × 1.4) of overhead was applied, of which\n$24,000 ($483,000 – $459,000 actual OH) was overapplied.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم شركة نظام تكاليف أوامر التشغيل وتحمل التكاليف الصناعية غير المباشرة على أساس تكلفة العمل المباشر. وكان أمر التشغيل 75 هو الوحيد تحت التشغيل في 1 يناير، وتكاليفه في ذلك التاريخ: مواد مباشرة $40,000؛ عمل مباشر $80,000؛ تكاليف صناعية غير مباشرة $120,000. وفيما يلي تكاليف مختارة خلال السنة:\nتكاليف قابلة للتتبع للأوامر:\nمواد مباشرة $178,000\nعمل مباشر 345,000\nالإجمالي $523,000\nتكاليف غير قابلة للتتبع:\nمواد ومستلزمات المصنع $46,000\nعمل غير مباشر 235,000\nصيانة المصنع 73,000\nإهلاك معدات المصنع 29,000\nتكاليف مصنع أخرى 76,000\nالإجمالي $459,000\nتضمنت خطة الأرباح السنوية عملًا مباشرًا مقدرًا بـ$320,000 وتكاليف صناعية غير مباشرة مقدرة بـ$448,000. بافتراض عدم وجود إنتاج تحت التشغيل في 31 ديسمبر، ما فرق التحميل للسنة؟",
+    "choicesAr": [
+      "تحميل زائد $11,000.",
+      "تحميل زائد $24,000.",
+      "تحميل ناقص $11,000.",
+      "تحميل ناقص $24,000."
+    ],
+    "explanationAr": "تحمل الشركة التكاليف الصناعية غير المباشرة على أساس تكلفة العمل المباشر. ومعدل التحميل 1.4 ($448,000 تكاليف غير مباشرة مقدرة ÷ $320,000 عمل مباشر مقدر). ولذلك بلغ المحمل $483,000 ($345,000 عمل مباشر فعلي × 1.4)، أي تحميل زائد قدره $24,000 ($483,000 المحمل − $459,000 الفعلي)."
   },
   {
     "unit": 9,
@@ -1129,7 +1177,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The company’s application rate for overhead is $2.50 per\nmachine hour ($250,000 budgeted total ÷ 100,000 estimated\nmachine hours), and each unit of output is estimated to\nrequire 2 machine hours (100,000 estimated machine hours ÷\n50,000 units budgeted output). Under a standard cost system,\nthe amount of overhead applied during the year was therefore\n$240,000 (48,000 units actual output × $2.50 per machine\nhour application rate × 2 machine hours standard per unit).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تحمل شركة التكاليف الصناعية غير المباشرة على أساس ساعات الآلات. في بداية السنة قدرت التكاليف بـ$250,000، وتوقعت استخدام 100,000 ساعة آلة لإنتاج 50,000 وحدة. وخلال السنة أنتجت 48,000 وحدة باستخدام 97,000 ساعة آلة. وبلغت التكاليف الفعلية $252,000. وفق نظام التكاليف المعيارية، ما مبلغ التكاليف الصناعية غير المباشرة المحملة خلال السنة؟",
+    "choicesAr": [
+      "$240,000",
+      "$242,500",
+      "$250,000",
+      "$252,000"
+    ],
+    "explanationAr": "معدل التحميل $2.50 لكل ساعة آلة ($250,000 إجمالي مقدر ÷ 100,000 ساعة مقدرة)، وتحتاج الوحدة معياريًا إلى 2 ساعة آلة (100,000 ساعة مقدرة ÷ 50,000 وحدة إنتاج مخططة). لذلك يبلغ المبلغ المحمل وفق نظام التكاليف المعيارية $240,000 (48,000 وحدة فعلية × $2.50 معدل التحميل لكل ساعة × 2 ساعة معيارية للوحدة)."
   },
   {
     "unit": 9,
@@ -1146,7 +1202,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The total cost charged to the production run is calculated as\nfollows:\nDirect labor                                                     $ 8,000\nDirect materials                                                   2,000\nManufacturing overhead:\n$8,000 of direct labor × 100%                =      $ 8,000\n$2,000 of direct materials × 20%             =          400\n140 machine hours × $117                     =       16,380       24,780\nTotal charged to production                                      $34,780",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تخصص منشأة صناعية التكاليف غير المباشرة لأوامر التشغيل باستخدام تكلفة العمل المباشر والمواد المباشرة وساعات الآلات. ومعدلات التحميل للسنة:\n100% من العمل المباشر\n20% من المواد المباشرة\n$117 لكل ساعة آلة\nتكبدت دفعة إنتاج التكاليف التالية:\nعمل مباشر $8,000\nمواد مباشرة $2,000\nواستخدمت 140 ساعة آلة. ما إجمالي تكلفة الدفعة؟",
+    "choicesAr": [
+      "$18,000.",
+      "$18,400.",
+      "$34,780.",
+      "لا توجد إجابة صحيحة."
+    ],
+    "explanationAr": "تحسب تكلفة الدفعة كما يلي:\nالعمل المباشر $8,000\nالمواد المباشرة 2,000\nالتكاليف الصناعية غير المباشرة:\n$8,000 عمل مباشر × 100% = $8,000\n$2,000 مواد مباشرة × 20% = 400\n140 ساعة آلة × $117 = 16,380؛ الإجمالي 24,780\nإجمالي تكلفة الإنتاج $34,780."
   },
   {
     "unit": 9,
@@ -1163,7 +1227,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Given the amounts involved, $133,000 is material; thus, over-\nor underapplied overhead should be allocated to all work-in-\nprocess, finished goods, and cost of goods sold. The\nproportion of the total of these three accounts represented by\ncost of goods sold is 73.68% [$1,120,000 ÷ ($128,000 +\n$272,000 + $1,120,000)]. The amount of underapplied\noverhead assigned to cost of goods sold is thus $98,000\n($133,000 × 73.68%), making the total reported amount of\ncost of goods sold $1,218,000 ($1,120,000 + $98,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أظهرت مراجعة سجلات نهاية السنة لشركة ما يلي:\nالمواد الخام $80,000\nالإنتاج تحت التشغيل 128,000\nالإنتاج التام 272,000\nتكلفة المبيعات 1,120,000\nبلغ نقص تحميل التكاليف الصناعية غير المباشرة $133,000. استنادًا إلى المعلومات، ما تكلفة المبيعات الأنسب؟",
+    "choicesAr": [
+      "$987,000",
+      "$1,213,100",
+      "$1,218,000",
+      "$1,253,000"
+    ],
+    "explanationAr": "في هذه المسألة يعد مبلغ $133,000 جوهريًا، ويُفترض توزيعه نسبيًا على أرصدة الإنتاج تحت التشغيل والإنتاج التام وتكلفة المبيعات. وتمثل تكلفة المبيعات 73.68% [$1,120,000 ÷ ($128,000 + $272,000 + $1,120,000)] من الأرصدة المعنية. ويبلغ نصيبها من نقص التحميل $98,000 ($133,000 × 73.68%)، فتصبح تكلفة المبيعات $1,218,000 ($1,120,000 + $98,000). وفي التطبيق قد يكون التوزيع على أساس التكاليف غير المباشرة المحملة في كل حساب أدق، إذا توفرت البيانات."
   },
   {
     "unit": 9,
@@ -1197,7 +1269,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The overhead application rate is established at the beginning\nof each year to determine how much overhead to accumulate\nfor each job throughout the period. The estimated annual\noverhead costs are divided by the annual activity level or\ncapacity in terms of units to arrive at the desired rate.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما البسط في معادلة معدل التحميل المحدد مسبقًا للتكاليف الصناعية غير المباشرة؟",
+    "choicesAr": [
+      "التكاليف الصناعية غير المباشرة المقدرة.",
+      "التكاليف الصناعية غير المباشرة الفعلية.",
+      "مستوى النشاط المقدر.",
+      "مستوى النشاط الفعلي."
+    ],
+    "explanationAr": "يحدد المعدل في بداية السنة لتحديد التكاليف غير المباشرة التي تحمل على كل أمر تشغيل خلال الفترة. وتقسم التكاليف السنوية المقدرة على مستوى النشاط السنوي أو الطاقة المحددة بوحدات القياس المناسبة."
   },
   {
     "unit": 9,
@@ -1214,7 +1294,15 @@
     ],
     "answerIndex": 3,
     "explanation": "In labor-intensive industries, overhead is usually allocated on\nthe basis of labor time. However, if more overhead is incurred\nby the more highly skilled and paid employees, the overhead\nrate should be based upon direct labor cost rather than direct\nlabor hours.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في صناعة كثيفة العمل، يتسبب الموظفون الأعلى مهارة وأجرًا في تكبد تكاليف غير مباشرة أكبر، مثل الخدمات والدعم والمعدات الأعلى تكلفة. ما أساس التحميل الأنسب على الأرجح؟",
+    "choicesAr": [
+      "ساعات العمل المباشر.",
+      "تكلفة المواد المباشرة.",
+      "ساعات الآلات.",
+      "تكلفة العمل المباشر."
+    ],
+    "explanationAr": "في الصناعات كثيفة العمل قد تخصص التكاليف غير المباشرة وفق ساعات العمل. لكن إذا ارتبط ارتفاع التكاليف غير المباشرة بارتفاع مهارة الموظفين وأجورهم، فقد تكون تكلفة العمل المباشر أساسًا أنسب من عدد ساعات العمل المباشر، وفق العلاقة الموضحة في المسألة."
   },
   {
     "unit": 9,
@@ -1231,7 +1319,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Annual overhead application rates smooth seasonal variability\nof overhead costs and activity levels. If overhead were applied\nto the product as incurred, the overhead rate per unit in most\ncases would vary considerably from week to week or month to\nmonth. The purpose of an annual overhead application rate is\nto simulate constant overhead throughout the year.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما الغرض من استخدام معدلات تحميل سنوية للتكاليف الصناعية غير المباشرة؟",
+    "choicesAr": [
+      "إعداد موازنة التكاليف غير المباشرة.",
+      "تخفيف أثر التقلبات الموسمية في التكاليف غير المباشرة.",
+      "محاكاة التقلب الموسمي في مستويات النشاط.",
+      "معاملة التكاليف الصناعية غير المباشرة كتكاليف فترة."
+    ],
+    "explanationAr": "تخفف المعدلات السنوية أثر التقلبات الموسمية في التكاليف ومستويات النشاط على تكلفة المنتج المحملة. فلو استخدمت معدلات فعلية قصيرة الأجل لتغير المعدل لكل وحدة من أسبوع أو شهر لآخر. والغرض تثبيت معدل التحميل خلال السنة، وليس افتراض ثبات التكاليف الفعلية."
   },
   {
     "unit": 9,
@@ -1248,7 +1344,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The activity base for overhead allocation should have a high\ncorrelation with the incurrence of overhead. Thus, the\nactivities of various departments are usually more appropriate\nas activity bases than corporate-wide activities, particularly\nwhen products and production activities are not\nhomogeneous.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "متى تفضل عادة معدلات تحميل التكاليف غير المباشرة حسب الأقسام على معدل موحد للمنشأة؟",
+    "choicesAr": [
+      "عندما تكون أنشطة الأقسام المختلفة غير متجانسة.",
+      "عندما تخصص تكاليف أقسام خدمية عديدة للأقسام المختلفة.",
+      "عندما تتطلب جميع المنتجات المارة بالأقسام جهدًا صناعيًا متماثلًا في كل قسم.",
+      "عندما تكون معظم التكاليف ثابتة وكل الأقسام آلية بدرجة كبيرة."
+    ],
+    "explanationAr": "ينبغي أن يرتبط أساس التحميل ارتباطًا قويًا بتكبد التكاليف الصناعية غير المباشرة. ولذلك قد تكون أنشطة الأقسام المختلفة أساسًا أنسب من نشاط المنشأة ككل، خصوصًا عندما لا تتجانس المنتجات والأنشطة الإنتاجية."
   },
   {
     "unit": 9,
@@ -1265,7 +1369,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Normal costing can provide more timely information about job\nand product costs, and it can helpfully smooth product costs\nthroughout a period, but it cannot in and of itself improve the\naccuracy of costing.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي ليس ميزة متأصلة في نظام التكاليف العادية مقارنة بنظام التكاليف الفعلية؟",
+    "choicesAr": [
+      "توفير تكلفة الأوامر والمنتجات في وقت أسرع.",
+      "تخفيف تقلب تكاليف المنتجات خلال الفترة.",
+      "تحسين دقة تحديد تكلفة الأوامر والمنتجات بالضرورة.",
+      "طريقة أقل تكلفة لتحميل التكاليف غير المباشرة على الأوامر أو المنتجات."
+    ],
+    "explanationAr": "يتيح نظام التكاليف العادية معلومات أسرع عن تكاليف الأوامر والمنتجات، ويخفف تقلبها خلال الفترة باستخدام معدلات تحميل محددة مسبقًا. لكنه لا يحسن دقة التكلفة تلقائيًا؛ إذ تعتمد الدقة على جودة التقديرات وأساس التحميل."
   },
   {
     "unit": 9,
@@ -1282,7 +1394,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The company’s overhead rate will almost certainly increase\nbecause of all the new equipment that must be depreciated.\nAlso, this heavy investment in new machinery will make it\nmore difficult to quickly cut costs during economic downturns.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم شركة ساعات العمل المباشر لتحميل التكاليف الصناعية غير المباشرة. ونفذت برنامج تحديث شامل منذ 2 سنة، وأعادت هندسة عمليات التصنيع واشترت معدات آلية عديدة وأنهت خدمة 60% من عمال المصنع غير المنتمين للنقابة. أي العبارات التالية تنطبق على وضعها؟\nI. من المرجح ارتفاع معدل التحميل.\nII. يبدو استخدام ساعات العمل المباشر مناسبًا.\nIII. ستفقد الشركة القدرة على تحديد انحرافات العمل بشكل صحيح.\nIV. من المرجح انخفاض قدرتها على خفض التكاليف سريعًا عند الركود.",
+    "choicesAr": [
+      "I وII وIII وIV.",
+      "I وIV فقط.",
+      "II وIV فقط.",
+      "I وIII فقط."
+    ],
+    "explanationAr": "من المرجح ارتفاع معدل التحميل بسبب إهلاك المعدات الجديدة وانخفاض ساعات العمل المباشر التي تشكل أساس التحميل. كما أن الاستثمار الكبير في الآلات يجعل خفض التكاليف الثابتة بسرعة عند الركود أكثر صعوبة. ولا يعني ذلك فقد القدرة على حساب انحرافات العمل، وقد يستلزم تغيير أساس التحميل."
   },
   {
     "unit": 9,
@@ -1299,7 +1419,15 @@
     ],
     "answerIndex": 2,
     "explanation": "All the cost objects gathered in a cost pool should be similar\nenough that a single allocation base can be selected that will\naccurately allocate the costs in the pool.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما المعيار الأهم لدقة تخصيص التكاليف؟",
+    "choicesAr": [
+      "استخدام طريقة تخصيص بسيطة.",
+      "تخصيص التكاليف الثابتة والمتغيرة بالأساس نفسه.",
+      "استخدام مجمعات تكلفة متجانسة.",
+      "استخدام عدة مسببات لكل مجمع تكلفة."
+    ],
+    "explanationAr": "ينبغي أن تكون عناصر التكلفة المجمعة في كل مجمع متشابهة بدرجة تسمح باختيار أساس تخصيص واحد يعكس كيفية استهلاكها ويوزعها بدقة نسبية. وتجانس المجمعات أهم من مجرد تبسيط الطريقة."
   },
   {
     "unit": 9,
@@ -1316,7 +1444,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A cost allocation base is the common denominator for\nsystematically correlating indirect costs and a cost object. The\ncost driver of the indirect costs is ordinarily the allocation\nbase. In a capital-intensive manufacturer, machine hours are\nthe best allocation base to use.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تعتمد منشأة كثيفة رأس المال تصنع معدات إنشائية كبيرة على آلات متخصصة يديرها عدد قليل من العمال ذوي المهارات العالية. ما أساس التخصيص الأنسب لتحديد معدل تحميل التكاليف غير المباشرة؟",
+    "choicesAr": [
+      "قيمة المبيعات.",
+      "تكلفة العمل المباشر.",
+      "ساعات الآلات.",
+      "ساعات العمل المباشر."
+    ],
+    "explanationAr": "أساس تخصيص التكلفة مقياس مشترك لربط التكاليف غير المباشرة بأغراض التكلفة بصورة منتظمة. ويكون مسبب التكلفة غالبًا أساس التخصيص الأنسب. وفي الحالة المعروضة تعتمد المنشأة على الآلات، فتعد ساعات الآلات الخيار الأنسب إذا كانت تعكس استهلاك الموارد."
   },
   {
     "unit": 9,
