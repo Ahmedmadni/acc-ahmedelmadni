@@ -1265,3 +1265,21 @@ test("Notebook flushes latest committed edits on navigation and mobile backgroun
   assert.match(update,/page\.id === current\.id/);
   assert.doesNotMatch(update,/page\.id === \(prior\.activePage/);
 });
+
+test("PDF rasterization waits for mounted-page fonts and loaded images, then releases each canvas", async () => {
+  const source = await readFile("src/lib/study-notebook-pdf.ts","utf8");
+  const mount = source.indexOf("printRoot.appendChild(node)");
+  const layout = source.indexOf("node.getBoundingClientRect()",mount);
+  const fonts = source.indexOf("await document.fonts.ready",layout);
+  const measure = source.indexOf("content.scrollHeight > content.clientHeight",fonts);
+  const decode = source.indexOf("await img.decode()",measure);
+  const raster = source.indexOf("await html2canvas(node",decode);
+  const release = source.indexOf("canvas.width = 0",raster);
+  assert.ok(mount >= 0 && mount < layout && layout < fonts && fonts < measure &&
+    measure < decode && decode < raster && raster < release);
+  assert.match(source,/else if \(!img\.complete\)/);
+  assert.match(source,/img\.removeEventListener\("load", onLoad\)/);
+  assert.match(source,/if \(!img\.naturalWidth\) throw/);
+  assert.match(source,/canvas\.height = 0/);
+  assert.match(source,/node\.remove\(\)/);
+});
