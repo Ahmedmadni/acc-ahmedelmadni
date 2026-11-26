@@ -145,3 +145,5 @@
 - [x] Unit 9 Wave 4: §3 service department allocation initial review complete: 22/35 Arabic drafts, 13 held; Unit 9 84/115 (73.0%), 31 held, zero unreviewed. See `docs/CMA_UNIT9_ARABIC_WAVE4_2026-11-26.md`. Continue Unit 10 after CI.
 
 - [x] Unit 10: initial review complete, 54/59 Arabic drafts (91.5%), five held, zero unreviewed. All 20 units now have initial coverage; original-page verification pending. See `docs/CMA_UNIT10_ARABIC_REVIEW_2026-11-26.md`.
+
+- [x] Add machine-readable source-review queue (`node scripts/check-cma-content.mjs --source-review-queue`), covering English-first and translated-but-held records, with page locators, answer provenance, and layout flags. Enforce review gates in the normal CMA content checks. Align Volume 1 reconstructed/inferred records with the existing quarantine policy. Original-page verification remains pending; no question content or answer keys changed.
