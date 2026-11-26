@@ -1036,9 +1036,29 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
   }, [hydrated, store, storageWritable]);
 
   useEffect(() => {
+    if (!hydrated || !storageWritable) return;
+    // The delayed autosave is not guaranteed to run when a mobile browser
+    // backgrounds the tab or the user navigates away immediately after editing.
+    const flush = () => {
+      try {
+        localStorage.setItem(NOTEBOOK_STORAGE_KEY, JSON.stringify(latest.current));
+        return true;
+      } catch {
+        return false;
+      }
+    };
+    const onPageHide = () => { flush(); };
+    const onVisibilityChange = () => {
+      if (document.visibilityState === "hidden") {
+        setSaveError(!flush());
+      }
+    };
+    window.addEventListener("pagehide", onPageHide);
+    document.addEventListener("visibilitychange", onVisibilityChange);
     return () => {
-      if (!hydrated || !storageWritable) return;
-      try { localStorage.setItem(NOTEBOOK_STORAGE_KEY, JSON.stringify(latest.current)); } catch { /* export remains available */ }
+      window.removeEventListener("pagehide", onPageHide);
+      document.removeEventListener("visibilitychange", onVisibilityChange);
+      flush();
     };
   }, [hydrated, storageWritable]);
 
@@ -1072,7 +1092,7 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
     setStore((prior) => ({
       ...prior,
       pages: { ...prior.pages, [section]: prior.pages[section].map((page) =>
-        page.id === (prior.activePage[section] || current.id)
+        page.id === current.id
           ? { ...page, ...change, updatedAt } : page) },
     }));
   }
